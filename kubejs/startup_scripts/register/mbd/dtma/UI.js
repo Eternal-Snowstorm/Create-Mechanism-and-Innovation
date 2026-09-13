@@ -8,14 +8,14 @@
 //
 // 机器定义 (trait / 贴图 / 多方块形状) 仍然在 Machine.js, 那是启动期注册的, 改完要重启。
 
-const DTA = "dimensionally_transcendent_mechanism_accelerator"
+const DTMA = "dimensionally_transcendent_mechanism_accelerator"
 
-MBDUI.register(`cmi:${DTA}`, (machine) => {
+MBDUI.register(`cmi:${DTMA}`, (machine) => {
 	return UISpec.create(machine, 176, 166, (ui) => {
 		ui.background("ldlib:textures/gui/background.png")
 			.title(8, 6, 160)
-			.slot(`${DTA}_input_item_slot`, 40, 42)
-			.slot(`${DTA}_output_item_slot`, 114, 42)
+			.slot(`${DTMA}_input_item_slot`, 40, 42)
+			.slot(`${DTMA}_output_item_slot`, 114, 42)
 			.progressBar(79, 42)
 	})
 })
