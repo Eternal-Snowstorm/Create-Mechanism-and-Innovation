@@ -113,11 +113,8 @@ function registryDtma(event) {
 		return infoInstance
 	})
 
-	// 纯代码机器 uiCreator 为 null, createUI 会先调它再 post MachineUIEvent -> 必须先注入占位,
-	// 真正的界面由 server_scripts/.../dtma/OpenUI.js 的 onUI setRoot 接管
-	MBDHelpers.setPrivateField(definition, "uiCreator", (machine) => {
-		return new WidgetGroup(0, 0, 176, 166)
-	})
+	// 界面不在这里 —— 见 startup_scripts/register/mbd/dtma/UI.js 的 MBDUI.register(...)。
+	// MBDUI 会在注册期结束后自动挂 uiCreator, 而且每次开界面现查工厂 -> 改界面 reload 就有。
 
 	MBDRegistries.MACHINE_DEFINITIONS.register(Cmi.loadResource(dtma), definition)
 }
@@ -157,7 +154,7 @@ function registryDtmaBus(event) {
 
 	input.partSettings(() => {
 		let proxy = new ConfigPartSettings$ProxyCapability()
-		MBDStartupUtils.setPrivateField(proxy, MBDStartupUtils.traitNameFilter, `${dtma}_input`)
+		MBDHelpers.setPrivateField(proxy, MBDHelpers.traitNameFilter, `${dtma}_input`)
 		proxy.capabilityIO()
 			.setFrontIO(IO.IN)
 
@@ -198,7 +195,7 @@ function registryDtmaBus(event) {
 
 	output.partSettings(() => {
 		let proxy = new ConfigPartSettings$ProxyCapability()
-		MBDStartupUtils.setPrivateField(proxy, MBDStartupUtils.traitNameFilter, `${dtma}_output`)
+		MBDHelpers.setPrivateField(proxy, MBDHelpers.traitNameFilter, `${dtma}_output`)
 		proxy.capabilityIO()
 			.setFrontIO(IO.OUT)
 

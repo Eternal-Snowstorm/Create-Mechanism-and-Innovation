@@ -12,7 +12,7 @@ a52918a500ff421180a1cbd1a0cabee712134ec4	mods/architectury-9.2.14-forge.jar	http
 2acee24454af859988a691f0506271a465f68f7b	mods/athena-forge-1.20.1-3.1.2.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/athena-forge-1.20.1-3.1.2.jar
 76d6b2d0f2a3c9842587ad20666ba419cd8c1efa	mods/AttributeFix-Forge-1.20.1-21.0.5.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/AttributeFix-Forge-1.20.1-21.0.5.jar
 0eb5c3935eb4a2bcafa67e762054956be5f41f38	mods/auratip-forge-1.20.1-1.1.1-beta.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/auratip-forge-1.20.1-1.1.1-beta.jar
-d22394596e9f845c0a9a6e45575dbfbfec6b25d9	mods/balm-forge-1.20.1-7.3.42.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/balm-forge-1.20.1-7.3.42.jar
+4248e3b8fb20e9b6432d2225325c605f4ad7b211	mods/balm-forge-1.20.1-7.3.43.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/9.13-update-mods/balm-forge-1.20.1-7.3.43.jar
 d3cd12e2f08415fb072f8ea7572bd60b9b0d9042	mods/BCLib-20.0.13.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/BCLib-20.0.13.jar
 8e4fe2cd85c08c24ab363b47a63d1c872fc3cc1e	mods/betterfpsdist-1.20.1-6.0.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/betterfpsdist-1.20.1-6.0.jar
 7cec406c736997eea5c7be0e88f625d64313e362	mods/biomespy-1.3.3-all.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/biomespy-1.3.3-all.jar
@@ -25,10 +25,13 @@ c65d07748acc57ceb45d53b3964368b84f34d54f	mods/cloth-config-11.1.136-forge.jar	ht
 6f7c0056fece31bf393df450d79482810ed444af	mods/cofh_core-1.20.1-11.0.2.56.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/cofh_core-1.20.1-11.0.2.56.jar
 4622cf120fd3eb82972dc6634d6a5910d04e3c91	mods/collective-1.20.1-8.39.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/collective-1.20.1-8.39.jar
 386458190144b431ac0a7151785bb639cdff2a62	mods/colorwheel_patcher-forge-1.0.5+mc1.20.1.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/colorwheel_patcher-forge-1.0.5+mc1.20.1.jar
+bb9435231ac7e907698c0e305aa5078400da2084	mods/colorwheel-forge-1.3.0-beta3+mc1.20.1.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/9.13-update-mods/colorwheel-forge-1.3.0-beta3+mc1.20.1.jar
+0ffc4cc183cccede7145ae1cdb002f8269330567	mods/compressedengineering-1.4.10.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/9.13-update-mods/compressedengineering-1.4.10.jar
 065c2d287a52f52fc8d33d780192325ee6f4b6ae	mods/configured-forge-1.20.1-2.2.3.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/configured-forge-1.20.1-2.2.3.jar
 80bd5223cd8984dc1038cb9f2d1cb6b97f31998a	mods/constructionwand-1.20.1-2.11.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/constructionwand-1.20.1-2.11.jar
 f6d3cdd3ec68c5590cf5b2e89c38dbf031824bfd	mods/Controlling-forge-1.20.1-12.0.2.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/Controlling-forge-1.20.1-12.0.2.jar
 939d4ca4ac42b93c05a5fb92e629fb8cff060dc9	mods/copycats-3.0.10+mc.1.20.1-forge.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/copycats-3.0.10+mc.1.20.1-forge.jar
+49d69bf7ff7282bc4815dee7d07165435a073bc8	mods/craftingstationjei-1.20.1-Forge-2.2.0.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/9.13-update-mods/craftingstationjei-1.20.1-Forge-2.2.0.jar
 e3906e1b5cc33ad9ff930fc65b316564a3059fbf	mods/createbetterfps-1.20.1-1.1.2.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/createbetterfps-1.20.1-1.1.2.jar
 3bebfb40c2d232ac69214126012dd28106c3a917	mods/bigcontraptions-1.0.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/bigcontraptions-1.0.jar
 0b086193c1df819730ca6c06d5de3c7a8ed3b4f3	mods/create_central_kitchen-1.20.1-for-create-6.0.8-1.5.1.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/create_central_kitchen-1.20.1-for-create-6.0.8-1.5.1.jar
@@ -62,6 +65,7 @@ db51d129cef4ad8da10f02b325db3b48666fd854	mods/EdenRing-20.0.2.jar	https://gitee.
 bb2fa8f3e493af16af9160d049f96c614a1faf2f	mods/embeddium-0.3.31+mc1.20.1.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/embeddium-0.3.31+mc1.20.1.jar
 b818f6d792b79f4ec116c89704e70292bd6f72b5	mods/entityculling-forge-1.10.5-mc1.20.1.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/entityculling-forge-1.10.5-mc1.20.1.jar
 2a667cf12d598060271afeb3a83b5fec7594297c	mods/EventJS-1.20.1-1.4.3.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/EventJS-1.20.1-1.4.3.jar
+5943b86d5455753f40267c9fab3d83ea58ad6408	mods/ExtendedAE-1.20-1.4.20-forge.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/9.13-update-mods/ExtendedAE-1.20-1.4.20-forge.jar
 23b7544ab3ebd1ab9c88255434ff9dc7f217766b	mods/ExplorersCompass-1.20.1-1.4.0-forge.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/ExplorersCompass-1.20.1-1.4.0-forge.jar
 57e35383648a1d8fb5198ffb6a8e160333832d59	mods/extendedae_plus-1.6.2.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/extendedae_plus-1.6.2.jar
 025499c74e1e9305fa931b44c3832f43b1925ec7	mods/ExtremeSoundMuffler-3.51-forge-1.20.1.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/ExtremeSoundMuffler-3.51-forge-1.20.1.jar
@@ -90,16 +94,18 @@ a50de2b05daa2481ca7886e4425b2c66c3946b8c	mods/GoProne-forge-1.20.1-3.1.1.jar	htt
 9526c49043b9f72997759869f2ad146d83b619fb	mods/hotai-1.0.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/hotai-1.0.jar
 d551ff55814cfb01403b812459ee5a02b020d87b	mods/Iceberg-1.20.1-forge-1.1.25.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/Iceberg-1.20.1-forge-1.1.25.jar
 9eacd407b7dea636d375dc47335d92f616484ea2	mods/ImmediatelyFast-Forge-1.5.5+1.20.4.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/ImmediatelyFast-Forge-1.5.5+1.20.4.jar
-e0fcdfe54114d49b53b50514e5e2a2255a396f3f	mods/immersive_aircraft-1.4.1+1.20.1-forge.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/immersive_aircraft-1.4.1+1.20.1-forge.jar
+dceb59fc5dbfa30625bfa56256480708e0c58419	mods/immersive_aircraft-1.5.0+1.20.1-forge.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/9.13-update-mods/immersive_aircraft-1.5.0+1.20.1-forge.jar
 b6e403e0e5be1802268be366ad1a7791f07fb793	mods/ImmersiveEngineering-1.20.1-10.2.0-183.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/ImmersiveEngineering-1.20.1-10.2.0-183.jar
 acae8554a8cd9c5088ef581fcae71d3ceecb555b	mods/immersivefixes-1.6.1.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/immersivefixes-1.6.1.jar
 b66280cebb97cada77bd2f94bead864bf492e6a9	mods/ImmersiveIndustry-1.20.1-0.2.4.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/ImmersiveIndustry-1.20.1-0.2.4.jar
+f1e375ce040ead55f9ac35cf7350d6f1082148db	mods/immersive_machinery-0.2.1+1.20.1-forge.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/9.13-update-mods/immersive_machinery-0.2.1+1.20.1-forge.jar
 5f291f96a2cb7001978529ab9944769ed1433af3	mods/Industrial Platform-1.20.1-1.8.0.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/Industrial Platform-1.20.1-1.8.0.jar
 55a7f032c59489eca96069a7841601de2ff97590	mods/item-filters-forge-2001.1.0-build.59.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/item-filters-forge-2001.1.0-build.59.jar
 c4339eb3ef0c4728cb511efe60726653a35c7a0d	mods/JadeAddons-1.20.1-Forge-5.5.1.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/JadeAddons-1.20.1-Forge-5.5.1.jar
 d08e64e66521d69e083c8525f1fc507f1c202384	mods/Jade-1.20.1-Forge-11.13.3.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/Jade-1.20.1-Forge-11.13.3.jar
 ea6930c226929c0f65c0d5a3f74b63ea4e0958bd	mods/JavaScriptJS-2001-1.0.3.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/JavaScriptJS-2001-1.0.3.jar
 0aa9c598105938ee0be35f1c1b31ab5d936b0ef6	mods/jeiintegration_1.20.1-10.0.0.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/jeiintegration_1.20.1-10.0.0.jar
+3bbb49d85ee2f6a236f279816a62f0501d032db3	mods/jei-1.20.1-forge-15.59.0.210.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/9.13-update-mods/jei-1.20.1-forge-15.59.0.210.jar
 a2d05f0e70ac59ea44f44642f94c0f99f4e80417	mods/jupiter-2.3.7-1.20.1-forge.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/jupiter-2.3.7-1.20.1-forge.jar
 7792b3b92e0a91e7ca9b54446590bb0466ff98e6	mods/jecharacters-1.20.1-forge-4.6.11.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/jecharacters-1.20.1-forge-4.6.11.jar
 b059217831d8c8f16ccda3df97c5eca676e9418a	mods/kaleidoscope_compat-2.6.5-forge+mc1.20.1.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/kaleidoscope_compat-2.6.5-forge+mc1.20.1.jar
@@ -155,11 +161,12 @@ cc24a959278990277483fe200286e3307d7f6d7e	mods/OneEnoughItem-1.0.8.jar	https://gi
 7616deeb511132de1c071a47bd6811b8e7a8d7e0	mods/Paintings-forge-1.20.1-11.0.0.2.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/Paintings-forge-1.20.1-11.0.0.2.jar
 d4614507d6e4c7cb464bba5eca891978272062ef	mods/Patchouli-1.20.1-85-FORGE.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/Patchouli-1.20.1-85-FORGE.jar
 a3a7008e07a27b3c831af7e4c82fbbc10a4da328	mods/Paxi-1.20-Forge-4.0.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/Paxi-1.20-Forge-4.0.jar
+35b125834f152d7ad1a37c84c39c45c5e3dbbeab	mods/pipez_optimizer-1.0.4-1.20.1.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/9.13-update-mods/pipez_optimizer-1.0.4-1.20.1.jar
 1c32e2fff406f1e8ee6b0689eca257f6bc28e4c7	mods/pipez-forge-1.20.1-1.2.26.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/pipez-forge-1.20.1-1.2.26.jar
 e85f53de2e582a79ce25ff1df1e7b5b5fc08440f	mods/Placebo-1.20.1-8.6.3.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/Placebo-1.20.1-8.6.3.jar
 16808f94a41d45d8e986b4e4ea6b02ba57fa058a	mods/player-animation-lib-forge-1.0.2-rc1+1.20.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/player-animation-lib-forge-1.0.2-rc1+1.20.jar
 bf49919adc9e9109196762ff20030f823790e2db	mods/polylib-forge-2000.0.3-build.143.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/polylib-forge-2000.0.3-build.143.jar
-e4afd6f512cc06311320357ed974cee586e031c3	mods/polymorph-forge-0.49.10+1.20.1.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/polymorph-forge-0.49.10+1.20.1.jar
+4f464a183a2df82978c3f6cf55e714bde694af68	mods/polymorph-forge-0.49.11+1.20.1.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/9.13-update-mods/polymorph-forge-0.49.11+1.20.1.jar
 4617a4de40edda9a480ea0c33ba03e97d4a3ae1a	mods/polyeng-forge-0.1.1-1.20.1.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/polyeng-forge-0.1.1-1.20.1.jar
 cc92fde0f6b4d6678092f674c45d4259cdd82718	mods/powerful_dummy-20-0.0.9.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/powerful_dummy-20-0.0.9.jar
 aff030e4fadb788201599e5cfff325f171b5028f	mods/powerfuljs-1.6.1.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/powerfuljs-1.6.1.jar
@@ -176,6 +183,7 @@ ed5a23ec30c90fd06b3f1d8140614028e1fafaee	mods/Searchables-forge-1.20.1-1.0.3.jar
 9eab28baff36942e1c924489e34753df10f40208	mods/OctoLib-FORGE-0.5.0.1+1.20.1.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/OctoLib-FORGE-0.5.0.1+1.20.1.jar
 c6a8b553bc95a39b16af4d272c8afccf6df55d70	mods/smartercontraptionstorage-1.20.1-6.0.0-1.4.5.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/smartercontraptionstorage-1.20.1-6.0.0-1.4.5.jar
 3fd79132dba444bd109b5de4ad75dee06a48e130	mods/smoothboot(reloaded)-mc1.20.1-0.0.4.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/smoothboot(reloaded)-mc1.20.1-0.0.4.jar
+9be2c9c53e063890b90bc6b24cce3fc96f7cfa47	mods/sophisticatedbackpacks-1.20.1-3.26.3.2157.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/9.13-update-mods/sophisticatedbackpacks-1.20.1-3.26.3.2157.jar
 68f35e2930bff5f30340419257b38962df2e0983	mods/sophisticatedcore-1.20.1-1.5.1.2335.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/sophisticatedcore-1.20.1-1.5.1.2335.jar
 76ddd1881eae5cbaf58ecf844bd94f8b6a327fe3	mods/SophisticatedSorter-forge-1.20.1-1.1.0-hotfix.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/SophisticatedSorter-forge-1.20.1-1.1.0-hotfix.jar
 f7fa1fd0c633b10f98d7f0f97766b95aac1a2dc0	mods/solcarrot-1.20.1-1.15.1.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/solcarrot-1.20.1-1.15.1.jar
@@ -198,7 +206,6 @@ db1df2e61e410ebe099c331a71372a48e6bfd8de	mods/TconPlanner-1.20.1-forge-1.8.0.jar
 013680b29aac6438a970fe713342f2f61658c4e8	mods/Torcherino-forge-1.20.1-20.0.0.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/Torcherino-forge-1.20.1-20.0.0.jar
 ac5a20b5a2fd9ed7d6e9a0c033f53307947e5f3f	mods/TreeChop-1.20.1-forge-0.19.0-fixed.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/TreeChop-1.20.1-forge-0.19.0-fixed.jar
 397dc912e94bb651bc8dcc193c0f77ed38bead17	mods/treetap-1.20.1-0.5.0.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/treetap-1.20.1-0.5.0.jar
-66dcf238979a20a6f018e7bbe4a633a99ac5d8e2	mods/tsmodify-0.93-all.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/tsmodify-0.93-all.jar
 d24732304e2ce77399ee301daa3edbc5a09ed872	mods/TES-forge-1.20.1-1.6.1.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/TES-forge-1.20.1-1.6.1.jar
 cc24a258a264969d617bea604386dd39011d3daa	mods/UntranslatedItems-forge-1.20.1-1.21.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/UntranslatedItems-forge-1.20.1-1.21.jar
 7ffdf848dc8578db309fd54c08f05ddc1ddbd45a	mods/uti_afac-1.1.6+1.20.1-forge.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/uti_afac-1.1.6+1.20.1-forge.jar
@@ -206,5 +213,7 @@ cc24a258a264969d617bea604386dd39011d3daa	mods/UntranslatedItems-forge-1.20.1-1.2
 118c9980f3e3499d935382b8a920902d7d649aa6	mods/vintageimprovements-1.20.1-0.3.7.8.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/vintageimprovements-1.20.1-0.3.7.8.jar
 ca49a4163794cc0f94a31a17f6956be11979db53	mods/vintage_kubejs-1.20.1-1.0.0rc-2.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/vintage_kubejs-1.20.1-1.0.0rc-2.jar
 6a46259eb5cbf8d37697a20dfe7238ed180e4602	mods/WunderLib-20.0.1.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/WunderLib-20.0.1.jar
+718a4339f6dad3a56b6e7243e62febfb643b7151	mods/xaerominimap-forge-1.20.1-26.5.0.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/9.13-update-mods/xaerominimap-forge-1.20.1-26.5.0.jar
+4906476a6a0a7e64772db17b3e707fdd4bbbc0fb	mods/xaeroworldmap-forge-1.20.1-1.46.0.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/9.13-update-mods/xaeroworldmap-forge-1.20.1-1.46.0.jar
 216bdc20b75723c4cdca48d8ccb8b4652fcb4765	mods/CrosshairBobbing-1.10.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/CrosshairBobbing-1.10.jar
 af584b690f5646c6032002b58abc4591beed3833	mods/YungsApi-1.20-Forge-4.0.6.jar	https://gitee.com/eternalsnowstorm/mechanism-and-innovation/releases/download/ts-test/YungsApi-1.20-Forge-4.0.6.jar

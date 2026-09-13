@@ -38,7 +38,7 @@ MBDMachineEvents.onStructureFormed(($) => {
 	 */
 	let machine = event.getMachine()
 
-	if (!MBDUtils.isMachine(machine, "cmi:electronic_blast_furnace")) {
+	if (!MBDHelpers.isMachine(machine, "cmi:electronic_blast_furnace")) {
 		return
 	}
 
@@ -61,7 +61,7 @@ MBDMachineEvents.onRecipeWorking(($) => {
 	 */
 	let machine = event.getMachine()
 
-	if (!MBDUtils.isMachine(machine, "cmi:electronic_blast_furnace")) {
+	if (!MBDHelpers.isMachine(machine, "cmi:electronic_blast_furnace")) {
 		return
 	}
 
@@ -76,7 +76,7 @@ MBDMachineEvents.onBeforeRecipeWorking(($) => {
 	 */
 	let machine = event.getMachine()
 
-	if (!MBDUtils.isMachine(machine, "cmi:electronic_blast_furnace")) {
+	if (!MBDHelpers.isMachine(machine, "cmi:electronic_blast_furnace")) {
 		return
 	}
 

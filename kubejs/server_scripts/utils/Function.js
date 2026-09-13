@@ -417,37 +417,6 @@ function useEmiId(id) {
 	return ResourceLocation.tryParse(id)
 }
 
-const MBDUtils = {
-	/**
-	 * 创建流体标签配料
-	 *
-	 * @param {Special.FluidTag} tag 
-	 * @param {number} amount
-	 * @param {Internal.CompoundTag_} [nbt]
-	 * @returns 
-	 */
-	withFluidTag(tag, amount, nbt) {
-		amount = amount == null ? 1000 : amount
-
-		if (nbt == null) {
-			return $MBDFluidIngredient.ofTagId(tag, amount)
-		}
-
-		return $MBDFluidIngredient.ofTagId(tag, amount, nbt)
-	},
-	/**
-	 * 
-	 * @param {Internal.MBDMachine_} machine 
-	 * @param {ResourceLocation_} name 
-	 */
-	isMachine(machine, name) {
-		let definition = machine.getDefinition()
-		let id = definition.id()
-
-		return id.equals(name)
-	}
-}
-
 const NativeEvent = {
 	/**
 	  * 

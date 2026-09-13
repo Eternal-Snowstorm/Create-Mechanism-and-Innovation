@@ -9,7 +9,7 @@ MBDMachineEvents.onBeforeRecipeWorking(($) => {
 	let event = $.getEvent()
 	let machine = event.getMachine()
 
-	if (!MBDUtils.isMachine(machine, "cmi:electrolyzer")) {
+	if (!MBDHelpers.isMachine(machine, "cmi:electrolyzer")) {
 		return
 	}
 
@@ -31,7 +31,7 @@ MBDMachineEvents.onRecipeWorking(($) => {
 
 	const DAMAGE_NBT_NAME = "graphDmg"
 
-	if (!MBDUtils.isMachine(machine, "cmi:electrolyzer")) {
+	if (!MBDHelpers.isMachine(machine, "cmi:electrolyzer")) {
 		return
 	}
 
