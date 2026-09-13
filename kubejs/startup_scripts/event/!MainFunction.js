@@ -13,7 +13,7 @@ let NativeEvent = {
 	}
 }
 
-let MBDStartupUtils = {
+const MBDStartupUtils = {
 	traitNameFilter: "traitNameFilter",
 	/**
 	 * 设置 Java 对象的 private 字段。

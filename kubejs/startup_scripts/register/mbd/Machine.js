@@ -68,7 +68,7 @@ function registryDtma(event) {
 			.setFrontIO(IO.OUT)
 
 		let setting = ConfigMachineSettings.builder()
-		setting.hasUI(false)
+		setting.hasUI(true)
 		setting.traitDefinitions([
 			inputItem,
 			outputItem,
@@ -85,7 +85,7 @@ function registryDtma(event) {
 
 	builder.multiblockSettings(() => {
 		return ConfigMultiblockSettings.builder()
-			.showUIOnlyFormed(true)
+			.showUIOnlyFormed(false)
 			.build()
 	})
 
@@ -111,6 +111,12 @@ function registryDtma(event) {
 		JavaArray.set(infoInstance, 0, info)
 
 		return infoInstance
+	})
+
+	// 纯代码机器 uiCreator 为 null, createUI 会先调它再 post MachineUIEvent -> 必须先注入占位,
+	// 真正的界面由 server_scripts/.../dtma/OpenUI.js 的 onUI setRoot 接管
+	MBDHelpers.setPrivateField(definition, "uiCreator", (machine) => {
+		return new WidgetGroup(0, 0, 176, 166)
 	})
 
 	MBDRegistries.MACHINE_DEFINITIONS.register(Cmi.loadResource(dtma), definition)
@@ -192,7 +198,7 @@ function registryDtmaBus(event) {
 
 	output.partSettings(() => {
 		let proxy = new ConfigPartSettings$ProxyCapability()
-		MBDStartupUtils.setPrivateField(proxy, MBDStartupUtils.traitNameFilter, "output")
+		MBDStartupUtils.setPrivateField(proxy, MBDStartupUtils.traitNameFilter, `${dtma}_output`)
 		proxy.capabilityIO()
 			.setFrontIO(IO.OUT)
 

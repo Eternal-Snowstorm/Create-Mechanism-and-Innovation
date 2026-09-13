@@ -174,7 +174,7 @@ function makeType(type, registryName, clazz) {
 	}
 }
 
-let MekType = {
+const MekType = {
 	Slurry: makeType(
 		"slurry",
 		$MekanismAPI.SLURRY_REGISTRY_NAME,
@@ -210,7 +210,7 @@ function makeOf(type) {
 	}
 }
 
-let IEIngredient = {
+const IEIngredient = {
 	/**
 	 * 
 	 * @param {Internal.ItemStack_} input 
@@ -246,7 +246,7 @@ let IEIngredient = {
 	}
 }
 
-let SmeltingRecipes = {
+const SmeltingRecipes = {
 	/**
 	 * 添加熔炼配方: 熔炉+高炉+烟熏
 	 *
@@ -417,7 +417,7 @@ function useEmiId(id) {
 	return ResourceLocation.tryParse(id)
 }
 
-let MBDUtils = {
+const MBDUtils = {
 	/**
 	 * 创建流体标签配料
 	 *
