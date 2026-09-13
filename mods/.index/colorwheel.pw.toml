@@ -1,0 +1,33 @@
+filename = 'colorwheel-forge-1.3.0-beta3+mc1.20.1.jar'
+name = 'Colorwheel'
+side = ''
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'beta'
+x-prismlauncher-version-number = '1.3.0-beta3+mc1.20.1-forge'
+
+[download]
+hash = 'bb9435231ac7e907698c0e305aa5078400da2084'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 8845412
+project-id = 1254143
+
+[[x-prismlauncher-dependencies]]
+addonId = '1285475'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '965702'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '328085'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '581495'
+type = 'REQUIRED'

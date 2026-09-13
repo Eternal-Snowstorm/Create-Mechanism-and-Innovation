@@ -1,18 +1,18 @@
-filename = 'polymorph-forge-0.49.11+1.20.1.jar'
-name = 'Polymorph'
+filename = 'jei-1.20.1-forge-15.59.0.210.jar'
+name = 'Just Enough Items'
 side = 'server'
 x-prismlauncher-dependencies = []
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'beta'
-x-prismlauncher-version-number = 'polymorph-forge-0.49.11+1.20.1.jar'
+x-prismlauncher-version-number = '15.59.0.210 for Forge 1.20.1'
 
 [download]
-hash = '4f464a183a2df82978c3f6cf55e714bde694af68'
+hash = '3bbb49d85ee2f6a236f279816a62f0501d032db3'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 8854504
-project-id = 388800
+file-id = 8851009
+project-id = 238222
