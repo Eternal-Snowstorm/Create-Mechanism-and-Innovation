@@ -13,7 +13,7 @@ const DTMA = "dimensionally_transcendent_mechanism_accelerator"
 MBDUI.register(`cmi:${DTMA}`, (machine) => {
 	return UISpec.create(machine, 176, 166, (ui) => {
 		ui.background("ldlib:textures/gui/background.png")
-			.title(8, 6, 160)
+			.title(8, 6, 160, 40)
 			.slot(`${DTMA}_input_item_slot`, 40, 42)
 			.slot(`${DTMA}_output_item_slot`, 114, 42)
 			.progressBar(79, 42)

@@ -50,7 +50,7 @@ ServerEvents.recipes((event) => {
 		.inputItems("2x cmi:electrolized_redstone")
 		.inputFluids([
 			Fluid.of("cmi:ionized_entro_solution", 100),
-			MBDHelpers.withFluidTag("forge:sodium", 100)
+			MBDFluidIngredient.ofTagId("forge:sodium", 100)
 		])
 		.outputItems("4x cmi:sodium_reducing_agent")
 		.duration(20 * 2)
@@ -111,7 +111,7 @@ ServerEvents.recipes((event) => {
 	cmi.chemical_reactor()
 		.inputFluids([
 			Fluid.of("cmi:molten_silicon_containing_compound", 50),
-			MBDHelpers.withFluidTag("cmi:delta_unstable_solution", 50),
+			MBDFluidIngredient.ofTagId("cmi:delta_unstable_solution", 50),
 			Fluid.of("cmi:pure_crystal_source", 50)
 		])
 		.outputItems("4x cmi:entro_compound")

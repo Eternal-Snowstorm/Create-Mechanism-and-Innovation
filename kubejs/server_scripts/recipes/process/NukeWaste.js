@@ -83,7 +83,7 @@ ServerEvents.recipes((event) => {
 	cmi.chemical_reactor()
 		.inputFluids([
 			Fluid.of("cmi:plutonium_containing_solution", 100),
-			MBDHelpers.withFluidTag("forge:molten_uranium", 180)
+			MBDFluidIngredient.ofTagId("forge:molten_uranium", 180)
 		])
 		.outputItems("immersiveengineering:raw_uranium")
 		.outputFluids([

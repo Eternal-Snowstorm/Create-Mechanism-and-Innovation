@@ -31,7 +31,7 @@ ServerEvents.recipes((event) => {
 	// 水晶蚀刻溶液
 	cmi.chemical_reactor()
 		.inputFluids([
-			MBDHelpers.withFluidTag("forge:sulfuric_acid", 1000),
+			MBDFluidIngredient.ofTagId("forge:sulfuric_acid", 1000),
 			Fluid.of("cmi:hydrochloric_acid", 1000)
 		])
 		.inputItems("4x #forge:gems/fluorite")

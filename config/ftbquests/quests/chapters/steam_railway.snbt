@@ -870,7 +870,7 @@
 						value: "cmi:steam_upgrades"
 					}
 				}
-				title: "Any #cmi:steam_upgrades"
+				title: "蒸汽升级组件"
 				type: "item"
 			}]
 			title: "升级太麻烦?"

@@ -5,7 +5,7 @@ ServerEvents.recipes((event) => {
 	cmi.electrolyzer()
 		.outputGases("100x mekanism:chlorine")
 		.outputGases("100x mekanism:sodium")
-		.inputFluids(MBDHelpers.withFluidTag("forge:brine", 1000))
+		.inputFluids(MBDFluidIngredient.ofTagId("forge:brine", 1000))
 		.duration(20)
 		.perTick((recipe) => {
 			recipe.inputFE(1000)
@@ -15,8 +15,7 @@ ServerEvents.recipes((event) => {
 	cmi.electrolyzer()
 		.outputGases("500x mekanism:hydrogen")
 		.outputGases("1000x mekanism:oxygen")
-		.inputFluids(MBDHelpers.withFluidTag("minecraft:water", 1000))
-		// .inputFluids(MBDHelpers.withFluidTag("minecraft:lava", 1000))
+		.inputFluids(MBDFluidIngredient.ofTagId("minecraft:water", 1000))
 		.duration(20)
 		.perTick((recipe) => {
 			recipe.inputFE(1000)
@@ -26,7 +25,7 @@ ServerEvents.recipes((event) => {
 	cmi.electrolyzer()
 		.outputGases("500x mekanismgenerators:deuterium")
 		.outputGases("1000x mekanism:oxygen")
-		.inputFluids(MBDHelpers.withFluidTag("forge:heavy_water", 1000))
+		.inputFluids(MBDFluidIngredient.ofTagId("forge:heavy_water", 1000))
 		.duration(20)
 		.perTick((recipe) => {
 			recipe.inputFE(1000)
@@ -48,28 +47,28 @@ ServerEvents.recipes((event) => {
 	// 钢齿轮镀铬
 	cmi.electrolyzer()
 		.inputItems("#forge:gears/steel")
-		.inputFluids(MBDHelpers.withFluidTag("cmi:plating_solution", 1000))
+		.inputFluids(MBDFluidIngredient.ofTagId("cmi:plating_solution", 1000))
 		.outputItems("cmi:chromeplated_steel_gear")
 		.outputFluids(Fluid.of("mekanism:sulfuric_acid", 500))
 		.duration(20 * 5)
 
 	// 电解红石
 	cmi.electrolyzer()
-		.inputFluids(MBDHelpers.withFluidTag("forge:redstone_acid", 1000))
+		.inputFluids(MBDFluidIngredient.ofTagId("forge:redstone_acid", 1000))
 		.outputItems("cmi:electrolized_redstone")
 		.duration(20 * 5)
 		.id("immersiveindustry:electrolyzer/redstone_acid")
 
 	// 氯
 	cmi.electrolyzer()
-		.inputFluids(MBDHelpers.withFluidTag("forge:brine", 500))
+		.inputFluids(MBDFluidIngredient.ofTagId("forge:brine", 500))
 		.outputFluids(Fluid.of("mekanism:chlorine", 100))
 		.outputItems("mekanism:salt")
 		.duration(20 * 5)
 
 	// 含锂电解液
 	cmi.electrolyzer()
-		.inputFluids(MBDHelpers.withFluidTag("cmi:waste_brine", 200))
+		.inputFluids(MBDFluidIngredient.ofTagId("cmi:waste_brine", 200))
 		.outputFluids(Fluid.of("cmi:lithium_containing_electrolyte", 100))
 		.outputItems("mekanism:salt")
 		.duration(20 * 5)
