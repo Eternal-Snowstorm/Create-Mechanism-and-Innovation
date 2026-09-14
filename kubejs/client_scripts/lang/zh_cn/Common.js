@@ -130,6 +130,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addStructureLang("ore_node.quartz_node", "石英矿物节点")
 	addStructureLang("ore_node.cobalt_node", "钴矿物节点")
 	addStructureLang("ore_node.vanadium_node", "钒矿物节点")
+	addStructureLang("ore_node.osmium_node", "锇矿物节点")
 
 	addMusicDiscLang("mechanism", "Mechanism", "DontkillBelalus")
 
@@ -147,4 +148,5 @@ ClientEvents.lang("zh_cn", (event) => {
 	addDepositLang("quartz", "石英")
 	addDepositLang("cobalt", "钴")
 	addDepositLang("vanadium", "钒")
+	addDepositLang("osmium", "锇")
 })

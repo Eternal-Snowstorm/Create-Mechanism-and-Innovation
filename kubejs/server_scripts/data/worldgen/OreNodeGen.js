@@ -326,6 +326,10 @@ ServerEvents.highPriorityData((event) => {
 	addNodeGen("cobalt")
 		.nether(40)
 
+	// 锇矿点
+	addNodeGen("osmium")
+		.nether(80)
+
 	let structureSet = {
 		structures: structures,
 		placement: {

@@ -186,7 +186,7 @@ ServerEvents.recipes((event) => {
 			this.builder.id(id)
 		}
 	}
-	new MiningRecipe("cmi:coal_deposit_block")
+	new MiningRecipe("create_rns:coal_deposit_block")
 		.defaultItem(["cmi:deposit_dust"])
 		.overclockItem(5.0E-4, ["cmi:deposit_dust", "mekanism:dust_coal"])
 		.overclockItem(0.5, ["mekanism:dust_coal"])
@@ -195,8 +195,8 @@ ServerEvents.recipes((event) => {
 		.faintShatterItem(1, ["minecraft:cobblestone", "minecraft:tuff", "minecraft:calcite", "create:limestone", "cmi:deposit_dust"])
 		.shatterItem(0.3, ["minecraft:coal", "minecraft:coal_ore", "minecraft:deepslate_coal_ore"])
 		.faintStabilizeItem(0.15, ["mekanism:dust_coal", "minecraft:amethyst_shard", "tconstruct:earth_slime_crystal"])
-		.stabilizeItem(0.06, ["immersiveengineering:dust_coke"])
-		.build()
+		.stabilizeItem(0.06, ["minecraft:diamond"])
+		.build("create_rns:coal_deposit_block")
 
 	new MiningRecipe("create_rns:redstone_deposit_block")
 		.defaultItem(["cmi:deposit_dust"])
@@ -354,8 +354,8 @@ ServerEvents.recipes((event) => {
 		.resonanceItem(0.2, ["thermal:raw_silver", "create:crushed_raw_silver"])
 		.faintShatterItem(1, ["minecraft:cobblestone", "minecraft:tuff", "minecraft:calcite", "create:limestone", "cmi:deposit_dust"])
 		.shatterItem(0.3, ["minecraft:mud", "thermal:silver_ore", "thermal:deepslate_silver_ore"])
-		.faintStabilizeItem(0.15, ["cmi:peat", "minecraft:amethyst_shard", "tconstruct:earth_slime_crystal"])
-		.stabilizeItem(0.06, ["cmi:peat_block"])
+		.faintStabilizeItem(0.15, ["cmi:dirty_etrium_dust", "minecraft:amethyst_shard", "tconstruct:earth_slime_crystal"])
+		.stabilizeItem(0.06, ["cmi:raw_etrium"])
 		.build("create_rns:silver_deposit_block")
 
 	new MiningRecipe("create_rns:uranium_deposit_block")

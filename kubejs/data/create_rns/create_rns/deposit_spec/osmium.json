@@ -1,0 +1,6 @@
+{
+	"scanner_icon_item": "mekanism:raw_osmium",
+	"dimension": "minecraft:the_nether",
+	"map_icon_item": "mekanism:raw_osmium",
+	"structure": "cmi:ore_node/osmium_node"
+}
