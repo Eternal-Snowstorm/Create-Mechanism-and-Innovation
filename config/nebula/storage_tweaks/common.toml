@@ -19,7 +19,8 @@
 
 	#Functional Storage Drawer Upgrade settings
 	[general.drawer_upgrade]
-		#Whether a drawer can only accept upgrades of the same item type at once
+		#Whether a drawer can only accept storage upgrades of the same item type at once
+		#Does not affect utility upgrades
 		#type: boolean
 		#default: true
 		same_upgrade_only_enabled = true
