@@ -1,19 +1,19 @@
-filename = 'fzzy_config-0.7.6+1.20.1+forge.jar'
+filename = 'fzzy_config-0.7.7+1.20.1+forge.jar'
 name = 'Fzzy Config'
-side = ''
+side = 'server'
 x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'fzzy_config-0.7.6+1.20.1+forge'
+x-prismlauncher-version-number = 'fzzy_config-0.7.7+1.20.1+forge'
 
 [download]
-hash = '2e9ca1c5f028c251e1bc18b9ebaa06d401c8e624'
+hash = '1a4f550dea4fb6316a96591dc46a463ee1f6602b'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 7568893
+file-id = 8883366
 project-id = 1005914
 
 [[x-prismlauncher-dependencies]]
