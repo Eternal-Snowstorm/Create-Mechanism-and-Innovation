@@ -1,21 +1,12 @@
-/*
- * 原本计划实现线圈等级越高, 配方并行数越高的机制,
- * 但由于目前还有一些问题没搞明白,
- * 相关代码似乎并没有正常生效.
- * 现在的并行是固定在16并行
- *
- * 如果有玩家知道该如何解决, 欢迎帮忙指点一下
- */
-
 let $ProxyPartBlockEntity =
 	Java.loadClass("com.lowdragmc.mbd2.api.blockentity.ProxyPartBlockEntity")
 
 const NEED_COIL_COUNT = 24
 
 const COILS = {
-	LV: Block.getBlock("immersiveengineering:coil_lv"),
-	MV: Block.getBlock("immersiveengineering:coil_mv"),
-	HV: Block.getBlock("immersiveengineering:coil_hv")
+	LV: Block.getBlock("cmi:copper_coil"),
+	MV: Block.getBlock("cmi:electrum_coil"),
+	HV: Block.getBlock("cmi:steel_coil")
 }
 
 const COIL_RATIO = Object.freeze({
@@ -68,7 +59,7 @@ MBDMachineEvents.onRecipeWorking(($) => {
 	levelMultiplierModify(machine)
 })
 
-MBDMachineEvents.onBeforeRecipeWorking(($) => {
+MBDMachineEvents.onBeforeRecipeModify(($) => {
 	let event = $.getEvent()
 
 	/**

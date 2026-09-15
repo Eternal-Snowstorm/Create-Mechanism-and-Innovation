@@ -323,6 +323,7 @@ StartupEvents.registry("item", (event) => {
 	// 寒霜蛋糕胚
 	addItem("frost_cake_base")
 		.texture(Cmi.loadResource("item/material/frost_cake_base"))
+		.tag("create:upright_on_belt")
 
 	// 羊皮纸
 	addItem("parchment")

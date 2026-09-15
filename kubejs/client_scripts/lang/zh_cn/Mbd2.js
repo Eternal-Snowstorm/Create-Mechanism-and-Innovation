@@ -41,8 +41,8 @@ ClientEvents.lang("zh_cn", (event) => {
 	if (!FestivalUtils.isAprilFoolsDay()) {
 		addMBDLang("electronic_blast_furnace", "炖屎炉")
 	} else {
-		addMBDLang("electrolyzer", "三相电解机")
+		addMBDLang("electronic_blast_furnace", "电力高炉")
 	}
-	addMBDLang("electronic_blast_furnace", "电力高炉")
+	addMBDLang("electrolyzer", "三相电解机")
 	addMBDLang("dimensionally_transcendent_mechanism_accelerator", "超维度等离子构件催生器(WIP)")
 })

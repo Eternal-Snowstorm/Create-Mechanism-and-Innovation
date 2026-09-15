@@ -77,6 +77,19 @@ ServerEvents.highPriorityData((event) => {
 		"cmi:coal_deposit_block"
 	], "create_rns:coal_deposit_block")
 
+	// 线圈
+	addUnification("copper_coil", [
+		"immersiveengineering:coil_lv"
+	], "cmi:copper_coil")
+
+	addUnification("electrum_coil", [
+		"immersiveengineering:coil_mv"
+	], "cmi:electrum_coil")
+
+	addUnification("steel_coil", [
+		"immersiveengineering:coil_hv"
+	], "cmi:steel_coil")
+
 	/**
 	 * 
 	 * @param {string} name
@@ -98,7 +111,14 @@ ServerEvents.highPriorityData((event) => {
 				resultBlock: result
 			}
 		]
+		let itemUnification = [
+			{
+				matchItems: blocks,
+				resultItems: result
+			}
+		]
 
 		event.addJson(`oeb:replacements/${name}.json`, blockUnification)
+		event.addJson(`oei:replacements/${name}.json`, itemUnification)
 	}
 })

@@ -56,6 +56,10 @@ function proxyMelting(event) {
 		let id = recipe.getId()
 		let ingredientJson = json.get("ingredient")
 
+		if (id.includes("cluster")) {
+			return
+		}
+
 		let builder = cmi.electronic_blast_furnace()
 
 		addIngredient(builder, ingredientJson, id)
