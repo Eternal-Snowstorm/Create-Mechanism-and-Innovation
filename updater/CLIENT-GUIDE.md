@@ -81,7 +81,9 @@ bash updater/update-from-gitee.sh
      |---|---|---|
      | CurseForge 官方 CDN | `https://edge.forgecdn.net/files/<id>/...` | 绝大多数 mod |
      | Modrinth CDN | `https://cdn.modrinth.com/...` | 少数 Modrinth 来源的 mod |
-     | Gitee Release 附件 | `https://gitee.com/.../releases/download/...` | 仅少数没有公开直链的 mod |
+
+     > 下载地址由开发端从 `mods/.index` 里的 `file-id` / `url` **现算**,
+     > 不经任何中转服务器, 也不需要你配置任何 API key。
 
    - 每个文件下载后都会做 **sha1 校验**,校验通过才会替换到位(下载写入的是
      `.download` 临时文件,不会破坏正在使用的 jar)。
