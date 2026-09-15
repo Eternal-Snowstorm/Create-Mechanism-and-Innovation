@@ -147,7 +147,7 @@
 
 ### 日常更新
 
-`updater/` 内提供跨平台脚本, 把 [Gitee 镜像仓库](https://gitee.com/eternalsnowstorm/mechanism-and-innovation)的内容同步到本地并按 `update.json` 校验 / 补全 mods:
+`updater/` 内提供跨平台脚本, 把 [Gitee 镜像仓库](https://gitee.com/eternalsnowstorm/mechanism-and-innovation)的内容同步到本地, 再按 `updater/update.tsv` 清单从**第三方直链**(CurseForge / Modrinth CDN)下载 / 校验 mods(个别下载失败会自动恢复旧版本并写日志到 `updater/logs/`):
 
 ```bat
 :: Windows(首次)

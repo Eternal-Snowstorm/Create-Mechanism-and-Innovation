@@ -185,7 +185,8 @@ ship with the pack — don't ask, just bring it along.
 
 `updater/` ships cross-platform scripts that sync the
 [Gitee mirror repository](https://gitee.com/eternalsnowstorm/mechanism-and-innovation) down to your machine, then
-verify and fill in mods against `update.json`:
+download/verify mods from **third-party direct links** (CurseForge / Modrinth CDN) per `updater/update.tsv`
+(a failed download restores that mod's previous jar and writes a log to `updater/logs/`):
 
 ```bat
 :: Windows (first time)

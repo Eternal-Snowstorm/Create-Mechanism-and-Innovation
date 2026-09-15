@@ -158,3 +158,5 @@ CMI Dev.json
 
 # Developer tools (private, not shipped with pack)
 updater/dev/
+updater/logs/
+updater/.rollback/
