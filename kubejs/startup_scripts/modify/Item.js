@@ -146,7 +146,8 @@ ItemEvents.modification((event) => {
 
 			if (item.isEdible()) {
 				modify.setFoodProperties((builder) => {
-					builder.alwaysEdible()
+					modify.getFoodProperties()
+						.canAlwaysEat()
 				})
 			}
 		})
