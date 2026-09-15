@@ -1,21 +1,13 @@
-let $BlockItem =
-	Java.loadClass("net.minecraft.world.item.BlockItem")
-
 ServerEvents.highPriorityData((event) => {
 	// 焦煤
 	addUnification("coal_coke", [
-		"#forge:coal_coke"
+		"#forge:gems/sulfur"
 	], "thermal:coal_coke")
 
 	// 硫磺
 	addUnification("sulfur", [
-		"#forge:gems/sulfur"
+		"#forge:coal_coke"
 	], "thermal:sulfur")
-
-	// 硫磺
-	addUnification("sulfur_block", [
-		"#forge:storage_blocks/sulfur"
-	], "thermal:sulfur_block")
 
 	// 硝酸盐
 	addUnification("niter_dust", [
@@ -177,10 +169,9 @@ ServerEvents.highPriorityData((event) => {
 
 	/**
 	 * 
-	 * @param {string} name 
-	 * @param {Special.Item | Special.ItemTag | (Special.Item | Special.ItemTag)[]} items 
-	 * @param {Special.Item} result 
-	 * @returns 
+	 * @param {string} name
+	 * @param {Special.Item | Special.ItemTags | (Special.Item | Special.ItemTags)[]} items
+	 * @param {Special.Item} result
 	 */
 	function addUnification(name, items, result) {
 		if (items === null) {
@@ -188,89 +179,16 @@ ServerEvents.highPriorityData((event) => {
 		}
 
 		if (result === null) {
-			console.error(`Item ${result} cannot be null`)
+			console.error(`Result ${result} cannot be null`)
 		}
 
-		// Item.exists 查不到的物品返回的是 minecraft:air
-		if (!Item.exists(result)) {
-			console.error(`Item ${result} does not exist`)
-			return
-		}
-
-		// 没装的物品跳过, 标签留给 OEI 自己解析
-		let matchItems = items.filter((item) => {
-			if (item.startsWith("#")) {
-				return true
+		let itemUnification = [
+			{
+				matchItems: items,
+				resultItems: result
 			}
-
-			if (!Item.exists(item)) {
-				console.warn(`Item ${item} does not exist`)
-				return false
-			}
-
-			return true
-		})
-
-		if (matchItems.length === 0) {
-			return
-		}
-
-		let itemUnification = {
-			matchItems: matchItems,
-			resultItems: result
-		}
+		]
 
 		event.addJson(`oei:replacements/${name}.json`, itemUnification)
-
-		// 方块物品顺带统一方块形态, 普通物品自动过滤
-		addBlockUnification(name, matchItems, result)
-	}
-
-	/** 
-	 * 
-	 * @param {string} name 
-	 * @param {(Special.Item | Special.ItemTag)[]} items 
-	 * @param {Special.Item} result 
-	 * @returns 
-	 */
-	function addBlockUnification(name, items, result) {
-		let resultBlock = getBlock(result)
-
-		if (resultBlock === null) {
-			return
-		}
-
-		let matchBlock = items.map((item) => item.startsWith("#") ? item : getBlock(item)).filter((block) => block !== null)
-
-		if (matchBlock.length === 0) {
-			return
-		}
-
-		let blockUnification = {
-			matchBlock: matchBlock,
-			resultBlock: resultBlock
-		}
-
-		event.addJson(`oeb:replacements/${name}_block.json`, blockUnification)
-	}
-
-	/**
-	 * 方块物品返回方块 id, 不是方块物品则返回 null
-	 * 
-	 * @param {Special.Item} item 
-	 * @returns {string}
-	 */
-	function getBlock(item) {
-		if (item.startsWith("#") || !Item.exists(item)) {
-			return null
-		}
-
-		let type = Item.getItem(item)
-
-		if (!(type instanceof $BlockItem)) {
-			return null
-		}
-
-		return Block.getId(type.getBlock()).toString()
 	}
 })

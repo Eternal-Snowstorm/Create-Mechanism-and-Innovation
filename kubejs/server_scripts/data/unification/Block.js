@@ -79,10 +79,9 @@ ServerEvents.highPriorityData((event) => {
 
 	/**
 	 * 
-	 * @param {string} name 
-	 * @param {Special.Block | Special.BlockTag | (Special.Block | Special.BlockTag)[]} blocks 
-	 * @param {Special.Block} result 
-	 * @returns 
+	 * @param {string} name
+	 * @param {Special.Block | Special.BlockTags | (Special.Block | Special.BlockTags)[]} blocks
+	 * @param {Special.Block} result
 	 */
 	function addUnification(name, blocks, result) {
 		if (blocks === null) {
@@ -90,115 +89,16 @@ ServerEvents.highPriorityData((event) => {
 		}
 
 		if (result === null) {
-			console.error(`Block ${result} cannot be null`)
+			console.error(`Result ${result} cannot be null`)
 		}
 
-		// Block.getBlock 查不到的方块返回的是 minecraft:air, 拿 id 回环比对来判断
-		if (getBlock(result) === null) {
-			console.error(`Block ${result} does not exist`)
-			return
-		}
-
-		// 没装的方块跳过, 标签留给 OEB 自己解析
-		let matchBlock = blocks.filter((block) => {
-			if (block.startsWith("#")) {
-				return true
+		let blockUnification = [
+			{
+				matchBlock: blocks,
+				resultBlock: result
 			}
-
-			if (getBlock(block) === null) {
-				console.warn(`Block ${block} does not exist`)
-				return false
-			}
-
-			return true
-		})
-
-		if (matchBlock.length === 0) {
-			return
-		}
-
-		let blockUnification = {
-			matchBlock: matchBlock,
-			resultBlock: result
-		}
+		]
 
 		event.addJson(`oeb:replacements/${name}.json`, blockUnification)
-
-		// 顺带统一方块的物品形态, 没有物品形态的方块自动过滤
-		addItemUnification(name, matchBlock, result)
-	}
-
-	/** 
-	 * 
-	 * @param {string} name 
-	 * @param {(Special.Block | Special.BlockTag)[]} blocks 
-	 * @param {Special.Block} result 
-	 * @returns 
-	 */
-	function addItemUnification(name, blocks, result) {
-		let resultItem = getItem(result)
-
-		if (resultItem === null) {
-			return
-		}
-
-		let matchItem = blocks.map((block) => block.startsWith("#") ? block : getItem(block)).filter((item) => item !== null)
-
-		if (matchItem.length === 0) {
-			return
-		}
-
-		let itemUnification = {
-			matchItems: matchItem,
-			resultItems: resultItem
-		}
-
-		event.addJson(`oei:replacements/${name}.json`, itemUnification)
-	}
-
-	/**
-	 * 存在的方块返回方块本身, 不存在则返回 null
-	 * 
-	 * @param {Special.Block} block 
-	 * @returns {Internal.Block}
-	 */
-	function getBlock(block) {
-		if (block.startsWith("#")) {
-			return null
-		}
-
-		let type = Block.getBlock(block)
-
-		if (type === null || Block.getId(type).toString() !== block) {
-			return null
-		}
-
-		return type
-	}
-
-	/**
-	 * 方块的物品形态, 没有物品形态则返回 null
-	 * 
-	 * @param {Special.Block} block 
-	 * @returns {string}
-	 */
-	function getItem(block) {
-		if (block === "minecraft:air") {
-			return "minecraft:air"
-		}
-
-		let type = getBlock(block)
-
-		if (type === null) {
-			return null
-		}
-
-		let item = Item.getId(type.asItem()).toString()
-
-		if (item === "minecraft:air") {
-			return null
-		}
-
-		return item
 	}
 })
