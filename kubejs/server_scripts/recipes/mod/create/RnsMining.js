@@ -370,6 +370,18 @@ ServerEvents.recipes((event) => {
 		.stabilizeItem(0.06, ["alexscaves:sulfur_cluster"])
 		.build("create_rns:uranium_deposit_block")
 
+	new MiningRecipe("create_rns:osmium_deposit_block")
+		.defaultItem(["cmi:deposit_dust"])
+		.overclockItem(0.3, ["cmi:deposit_dust", "mekanism:dirty_dust_osmium"])
+		.overclockItem(0.5, ["thermal_extra:osmium_ore_chunk"])
+		.faintResonanceItem(0.05, ["thermal_extra:osmium_ore_chunk", "cmi:dirty_vanadium_dust"])
+		.resonanceItem(0.2, ["mekanism:raw_osmium", "create:crushed_raw_osmium"])
+		.faintShatterItem(1, ["minecraft:cobblestone", "minecraft:tuff", "minecraft:calcite", "create:limestone", "cmi:deposit_dust"])
+		.shatterItem(0.3, ["cmi:nether_osmium_ore", "mekanism:osmium_ore","mekanism:deepslate_osmium_ore"])
+		.faintStabilizeItem(0.15, ["mekanism:dust_fluorite", "minecraft:amethyst_shard", "tconstruct:earth_slime_crystal"])
+		.stabilizeItem(0.06, ["mekanism:fluorite_gem"])
+		.build("create_rns:osmium_deposit_block")
+
 	new MiningRecipe("cmi:aluminum_deposit_block")
 		.defaultItem(["cmi:deposit_dust"])
 		.overclockItem(0.3, ["cmi:deposit_dust", "cmi:dirty_aluminum_dust"])
