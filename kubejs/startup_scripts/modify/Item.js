@@ -143,13 +143,6 @@ ItemEvents.modification((event) => {
 			if (item.getMaxStackSize() <= 16 && item.getMaxStackSize() !== 1) {
 				modify.setMaxStackSize(64)
 			}
-
-			if (item.isEdible()) {
-				modify.setFoodProperties((builder) => {
-					modify.getFoodProperties()
-						.canAlwaysEat()
-				})
-			}
 		})
 	})
 })
