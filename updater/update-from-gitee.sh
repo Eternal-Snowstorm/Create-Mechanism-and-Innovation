@@ -25,9 +25,13 @@ git fetch gitee
 echo "正在应用更新到本客户端..."
 git reset --hard "gitee/$BRANCH"
 
-echo "正在从 CurseForge 同步 mods..."
+echo "正在按更新清单下载 / 校验 mods(第三方直链)..."
 if ! bash "$(dirname "$0")/mods-sync.sh"; then
-  echo "[错误] mods 同步失败, 可重新运行本脚本重试。"
+  echo
+  echo "[提示] 本次有部分 mod 没能更新成功。"
+  echo "       失败的 mod 已自动恢复为旧版本, 游戏仍可正常启动。"
+  echo "       请把 updater/logs/ 目录下最新的那个日志文件发送给开发者, 以便排查;"
+  echo "       也可以直接重新运行本脚本重试(只会重新下载失败的那几个 mod)。"
   exit 1
 fi
 
