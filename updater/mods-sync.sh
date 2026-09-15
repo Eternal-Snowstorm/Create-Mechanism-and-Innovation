@@ -13,7 +13,6 @@
 #    4) 按清单里的第三方直链下载"缺失或 sha1 不符"的 jar:
 #         mods/xxx.jar <- https://edge.forgecdn.net/...  (CurseForge CDN)
 #                      或 https://cdn.modrinth.com/...   (Modrinth CDN)
-#                      或 Gitee Release 附件(无直链 mod 的兜底)
 #    5) 任一 mod 下载失败 -> 把它被替换掉的旧版本从备份恢复回原位,
 #       使该 mod 回到"上一个可用版本", 游戏仍能正常启动
 #    6) 全过程写入 updater/logs/update-<时间戳>.log;
