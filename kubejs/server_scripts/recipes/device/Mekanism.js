@@ -2,66 +2,48 @@ ServerEvents.recipes((event) => {
 	let { neoecoae, thermal_extra } = event.getRecipes()
 
 	// 热力蒸馏装置
-	thermal_extra.component_assembly(
+	thermal_extra.component_assembly("mekanism:thermal_evaporation_block", [
+		"mekanism:dynamic_tank",
+		"#forge:plates/steel",
+		"#forge:plates/constantan"
+	]).id("mekanism:thermal_evaporation/block")
+
+	thermal_extra.component_assembly("mekanism:thermal_evaporation_controller", [
 		"mekanism:thermal_evaporation_block",
-		[
-			"mekanism:dynamic_tank",
-			"#forge:plates/steel",
-			"#forge:plates/constantan"
-		]
-	).id("mekanism:thermal_evaporation/block")
+		Mechanisms.THERMAL.COM,
+		"ae2:semi_dark_monitor"
+	]).id("mekanism:thermal_evaporation/controller")
 
-	thermal_extra.component_assembly(
-		"mekanism:thermal_evaporation_controller",
-		[
-			"mekanism:thermal_evaporation_block",
-			Mechanisms.THERMAL.COM,
-			"ae2:semi_dark_monitor"
-		]
-	).id("mekanism:thermal_evaporation/controller")
-
-	thermal_extra.component_assembly(
-		"mekanism:thermal_evaporation_valve",
-		[
-			"mekanism:dynamic_valve",
-			"#forge:plates/steel",
-			"#forge:plates/constantan"
-		]
-	).id("mekanism:thermal_evaporation/valve")
+	thermal_extra.component_assembly("mekanism:thermal_evaporation_valve", [
+		"mekanism:dynamic_valve",
+		"#forge:plates/steel",
+		"#forge:plates/constantan"
+	]).id("mekanism:thermal_evaporation/valve")
 
 	// 三相电解机
-	thermal_extra.component_assembly(
-		"cmi:electrolyzer",
-		[
-			Mechanisms.HEAVY.COM,
-			Casing.STEEL,
-			"#forge:plates/aluminum",
-			"immersiveengineering:component_electronic_adv"
-		]
-	)
+	thermal_extra.component_assembly("cmi:electrolyzer", [
+		Mechanisms.HEAVY.COM,
+		Casing.STEEL,
+		"#forge:plates/aluminum",
+		"immersiveengineering:component_electronic_adv"
+	])
 
 	// 冶金灌注机
-	thermal_extra.component_assembly(
-		"mekanism:metallurgic_infuser",
-		[
-			Mechanisms.IRON.COM,
-			Casing.STAINLESS_STEEL,
-			"#forge:gears/chromeplated_steel",
-			"cmi:blitz_unit"
-		]
-	).id("mekanism:metallurgic_infuser")
+	thermal_extra.component_assembly("mekanism:metallurgic_infuser", [
+		Mechanisms.IRON.COM,
+		Casing.STEEL,
+		"#forge:gears/chromeplated_steel",
+		"cmi:blitz_unit"
+	]).id("mekanism:metallurgic_infuser")
 
 	// 集成工作站
-	thermal_extra.component_assembly(
-		"neoecoae:integrated_working_station",
-		[
-			"thermal_extra:component_assembly",
-			"ae2:molecular_assembler",
-			Casing.STAINLESS_STEEL,
-			"mekanism:basic_control_circuit",
-			Fluid.of("cmi:molten_etrium", 90)
-		]
-	)
+	thermal_extra.component_assembly("neoecoae:integrated_working_station", [
+		"thermal_extra:component_assembly",
+		"ae2:molecular_assembler",
+		Casing.STAINLESS_STEEL,
+		"mekanism:basic_control_circuit",
+		Fluid.of("cmi:molten_etrium", 90)
+	])
 
 	neoecoae.integrated_working_station()
 		.itemOutput("2x mekanism:steel_casing")
@@ -203,5 +185,5 @@ ServerEvents.recipes((event) => {
 		]).id("mekanismgenerators:saturating_condenser")
 
 	// 富集仓
-	
+
 })
