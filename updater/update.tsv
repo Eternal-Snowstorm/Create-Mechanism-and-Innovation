@@ -85,7 +85,7 @@ c49023f5d471aa1ba7fc624d2565fe9e82b7117e	mods/ftb-teams-forge-2001.3.2.jar	https
 8a3c74b6a5e285ec755097a76a97a469f2490726	mods/ftbxaerocompat-forge-1.1.3.jar	https://edge.forgecdn.net/files/7655/63/ftbxaerocompat-forge-1.1.3.jar	curseforge:1357724	
 b332ab56810a70d95a8b1ef196c0b1ae87933247	mods/FunctionalStorageJS-1.3.jar	https://edge.forgecdn.net/files/8807/502/FunctionalStorageJS-1.3.jar	curseforge:1649716	
 e651d29acc8f7d56c124a75afa6ff0d0ecea4854	mods/functionalstorage-1.20.1-1.2.14.jar	https://edge.forgecdn.net/files/8412/552/functionalstorage-1.20.1-1.2.14.jar	curseforge:556861	
-2e9ca1c5f028c251e1bc18b9ebaa06d401c8e624	mods/fzzy_config-0.7.6+1.20.1+forge.jar	https://edge.forgecdn.net/files/7568/893/fzzy_config-0.7.6%2B1.20.1%2Bforge.jar	curseforge:1005914	
+1a4f550dea4fb6316a96591dc46a463ee1f6602b	mods/fzzy_config-0.7.7+1.20.1+forge.jar	https://edge.forgecdn.net/files/8883/366/fzzy_config-0.7.7%2B1.20.1%2Bforge.jar	curseforge:1005914	mods/fzzy_config-0.7.6+1.20.1+forge.jar
 81982cc287f80ffabb2fd36d22cc95e4255c739d	mods/geckolib-forge-1.20.1-4.8.4.jar	https://edge.forgecdn.net/files/8285/794/geckolib-forge-1.20.1-4.8.4.jar	curseforge:388172	
 abd3c369756db290c14bf8facbca212b1e960b97	mods/gbf-1.0.2.jar	https://edge.forgecdn.net/files/8448/863/gbf-1.0.2.jar	curseforge:1455983	
 c7534db3248adfcf39a6158b423dfc9bfc99a378	mods/Glodium-1.20-1.5-forge.jar	https://edge.forgecdn.net/files/5226/922/Glodium-1.20-1.5-forge.jar	curseforge:957920	
@@ -105,8 +105,6 @@ c4339eb3ef0c4728cb511efe60726653a35c7a0d	mods/JadeAddons-1.20.1-Forge-5.5.1.jar	
 d08e64e66521d69e083c8525f1fc507f1c202384	mods/Jade-1.20.1-Forge-11.13.3.jar	https://edge.forgecdn.net/files/8479/276/Jade-1.20.1-Forge-11.13.3.jar	curseforge:324717	
 ea6930c226929c0f65c0d5a3f74b63ea4e0958bd	mods/JavaScriptJS-2001-1.0.3.jar	https://edge.forgecdn.net/files/6837/807/JavaScriptJS-2001-1.0.3.jar	curseforge:1238318	
 0aa9c598105938ee0be35f1c1b31ab5d936b0ef6	mods/jeiintegration_1.20.1-10.0.0.jar	https://edge.forgecdn.net/files/4999/754/jeiintegration_1.20.1-10.0.0.jar	curseforge:265917	
-f54caa33a63d699722b56e4b540adce74e5106fa	mods/jei_plus_plus-1.0.5-1.20.1.jar	https://edge.forgecdn.net/files/8870/204/jei_plus_plus-1.0.5-1.20.1.jar	curseforge:1645653	
-a8c34dd424cf2d939bf28649809060342279480f	mods/jei-1.20.1-forge-15.59.0.211.jar	https://edge.forgecdn.net/files/8879/628/jei-1.20.1-forge-15.59.0.211.jar	curseforge:238222	mods/jei-1.20.1-forge-15.59.0.210.jar
 a2d05f0e70ac59ea44f44642f94c0f99f4e80417	mods/jupiter-2.3.7-1.20.1-forge.jar	https://edge.forgecdn.net/files/7738/299/jupiter-2.3.7-1.20.1-forge.jar	curseforge:1072905	
 7792b3b92e0a91e7ca9b54446590bb0466ff98e6	mods/jecharacters-1.20.1-forge-4.6.11.jar	https://edge.forgecdn.net/files/8771/525/jecharacters-1.20.1-forge-4.6.11.jar	curseforge:250702	
 b059217831d8c8f16ccda3df97c5eca676e9418a	mods/kaleidoscope_compat-2.6.5-forge+mc1.20.1.jar	https://edge.forgecdn.net/files/8462/133/kaleidoscope_compat-2.6.5-forge%2Bmc1.20.1.jar	curseforge:1580791	
@@ -169,6 +167,7 @@ e85f53de2e582a79ce25ff1df1e7b5b5fc08440f	mods/Placebo-1.20.1-8.6.3.jar	https://e
 bf49919adc9e9109196762ff20030f823790e2db	mods/polylib-forge-2000.0.3-build.143.jar	https://edge.forgecdn.net/files/5350/440/polylib-forge-2000.0.3-build.143.jar	curseforge:576589	
 4f464a183a2df82978c3f6cf55e714bde694af68	mods/polymorph-forge-0.49.11+1.20.1.jar	https://edge.forgecdn.net/files/8854/504/polymorph-forge-0.49.11%2B1.20.1.jar	curseforge:388800	
 4617a4de40edda9a480ea0c33ba03e97d4a3ae1a	mods/polyeng-forge-0.1.1-1.20.1.jar	https://edge.forgecdn.net/files/5282/394/polyeng-forge-0.1.1-1.20.1.jar	curseforge:941096	
+13b9c11524d826eeba71a848b38e0c58800cac47	mods/powerful_dummy-20-0.0.10.jar	https://edge.forgecdn.net/files/8876/874/powerful_dummy-20-0.0.10.jar	curseforge:1276893	
 aff030e4fadb788201599e5cfff325f171b5028f	mods/powerfuljs-1.6.1.jar	https://edge.forgecdn.net/files/4951/461/powerfuljs-1.6.1.jar	curseforge:819845	
 bcb4bbb1052f49ed4fe6e7d5d7f91f68d45c3fe3	mods/Prism-1.20.1-forge-1.0.5.jar	https://edge.forgecdn.net/files/4650/325/Prism-1.20.1-forge-1.0.5.jar	curseforge:638111	
 5380211b1c2891f454a136545721526b184d8513	mods/probejs-6.0.1-forge.jar	https://edge.forgecdn.net/files/5227/399/probejs-6.0.1-forge.jar	curseforge:585406	
@@ -185,7 +184,7 @@ c6a8b553bc95a39b16af4d272c8afccf6df55d70	mods/smartercontraptionstorage-1.20.1-6
 3fd79132dba444bd109b5de4ad75dee06a48e130	mods/smoothboot(reloaded)-mc1.20.1-0.0.4.jar	https://edge.forgecdn.net/files/5016/280/smoothboot%28reloaded%29-mc1.20.1-0.0.4.jar	curseforge:633412	
 9be2c9c53e063890b90bc6b24cce3fc96f7cfa47	mods/sophisticatedbackpacks-1.20.1-3.26.3.2157.jar	https://edge.forgecdn.net/files/8845/923/sophisticatedbackpacks-1.20.1-3.26.3.2157.jar	curseforge:422301	
 68f35e2930bff5f30340419257b38962df2e0983	mods/sophisticatedcore-1.20.1-1.5.1.2335.jar	https://edge.forgecdn.net/files/8839/328/sophisticatedcore-1.20.1-1.5.1.2335.jar	curseforge:618298	
-76ddd1881eae5cbaf58ecf844bd94f8b6a327fe3	mods/SophisticatedSorter-forge-1.20.1-1.1.0-hotfix.jar	https://edge.forgecdn.net/files/8807/326/SophisticatedSorter-forge-1.20.1-1.1.0-hotfix.jar	curseforge:1375092	
+b4d4caae7a79ad13f10ad1948e48b17fabae90a4	mods/SophisticatedSorter-forge-1.20.1-1.1.1.jar	https://edge.forgecdn.net/files/8879/811/SophisticatedSorter-forge-1.20.1-1.1.1.jar	curseforge:1375092	mods/SophisticatedSorter-forge-1.20.1-1.1.0-hotfix.jar
 f7fa1fd0c633b10f98d7f0f97766b95aac1a2dc0	mods/solcarrot-1.20.1-1.15.1.jar	https://edge.forgecdn.net/files/4888/575/solcarrot-1.20.1-1.15.1.jar	curseforge:277616	
 ec567d383778b35f8f5c85f0bc55ecf389682336	mods/tconstruct_js-1.0.6.jar	https://edge.forgecdn.net/files/8352/452/tconstruct_js-1.0.6.jar	curseforge:1210790	
 fb9d9e9d53a4b21863fa99ab90d51b478df02acf	mods/thermalconstruct-1.20.1-0.0.4.jar	https://edge.forgecdn.net/files/7560/401/thermalconstruct-1.20.1-0.0.4.jar	curseforge:1280482	
