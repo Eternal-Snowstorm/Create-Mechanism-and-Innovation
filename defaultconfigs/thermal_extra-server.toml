@@ -12,7 +12,7 @@
 	[Dynamos."Cold Dynamo"]
 		#This sets the base power generation (RF/t) for the Cold Dynamo.
 		#Range: 10 ~ 32000
-		"Base Power" = 200
+		"Base Power" = 512
 
 [Machines]
 

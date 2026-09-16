@@ -1,0 +1,13 @@
+{
+	"parent": "nebula_libs:block/double_layered_top_side",
+	"render_type": "cutout",
+	"textures": {
+		"background_top": "cmi:block/coil/copper/top_idle",
+		"background_side": "cmi:block/coil/copper/side_idle",
+		"background_bottom": "cmi:block/coil/copper/top_idle",
+		"layered_top": "cmi:block/coil/copper/top_idle_g",
+		"layered_side": "cmi:block/coil/copper/side_idle_g",
+		"layered_bottom": "cmi:block/coil/copper/top_idle_g"
+	},
+	"__autoglow": true
+}

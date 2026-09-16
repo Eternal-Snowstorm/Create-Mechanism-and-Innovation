@@ -1,6 +1,7 @@
 ServerEvents.recipes((event) => {
 	removeRecipe(event, [
 		"jei:/treetap/water_from_crying_obsidian",
+		"neoecoae:integrated_working_station/cryotheum_solution",
 		"minecraft:paper",
 		"mekanism:paper",
 		"edenring:limphium_paper",
