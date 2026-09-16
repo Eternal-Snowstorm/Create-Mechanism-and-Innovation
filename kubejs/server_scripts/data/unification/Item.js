@@ -1,12 +1,12 @@
 ServerEvents.highPriorityData((event) => {
 	// 焦煤
 	addUnification("coal_coke", [
-		"#forge:gems/sulfur"
+		"#forge:coal_coke"
 	], "thermal:coal_coke")
 
 	// 硫磺
 	addUnification("sulfur", [
-		"#forge:coal_coke"
+		"#forge:gems/sulfur"
 	], "thermal:sulfur")
 
 	// 硝酸盐
