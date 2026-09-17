@@ -1,19 +1,19 @@
-filename = 'quest_enhance-1.20.1-forge-3.8.jar'
-name = 'FTB Quest Enhance'
+filename = 'quest_enhance-1.20.1-forge-3.9.jar'
+name = 'Quest Enhance'
 side = 'server'
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'quest_enhance-1.20.1-forge-3.8.jar'
+x-prismlauncher-version-number = 'Quest Enhance 3.9 - 1.20.1 Forge'
 
 [download]
-hash = '6c423006ab1fdd710815cb6f1c741e3295ccb15a'
+hash = '1e3068348ed0cf5d7948b8620a4384a000b9c4a7'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 8762501
+file-id = 8886966
 project-id = 1610171
 
 [[x-prismlauncher-dependencies]]

@@ -1,4 +1,4 @@
-filename = 'Ksyxis-1.4.3.jar'
+filename = 'Ksyxis-1.4.4.jar'
 name = 'Ksyxis'
 side = ''
 x-prismlauncher-dependencies = []
@@ -77,17 +77,18 @@ x-prismlauncher-mc-versions = [
     '26.1',
     '26.1.1',
     '26.1.2',
-    '26.2'
+    '26.2',
+    '26.3'
 ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'Ksyxis 1.4.3'
+x-prismlauncher-version-number = 'Ksyxis 1.4.4'
 
 [download]
-hash = '6f4b2ea7827da8136bdf436457a2ba3fcdb2120e'
+hash = 'c4e4282d80322d5d41f1f1cdb4811ded6ab97b11'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 7979747
+file-id = 8891330
 project-id = 537533

@@ -1,18 +1,18 @@
-filename = 'cupboard-1.20.1-4.1.jar'
-name = 'Cupboard'
+filename = 'cupboard-1.20.1-4.2.jar'
+name = 'Cupboard utilities'
 side = 'server'
 x-prismlauncher-dependencies = []
 x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'cupboard-1.20.1-4.1.jar'
+x-prismlauncher-version-number = 'cupboard-1.20.1-4.2.jar'
 
 [download]
-hash = 'cea6ff50c4eb566fec606ba337c1a94e1da6462d'
+hash = 'db25dfc4935b7f1bde62c69f13a7b70e2ecd9f2f'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 8746423
+file-id = 8889041
 project-id = 326652

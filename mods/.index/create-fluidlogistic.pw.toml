@@ -1,25 +1,25 @@
-filename = 'fluidlogistics-1.2.9.jar'
-name = 'Create: FluidLogistics'
+filename = 'fluidlogistics-1.3.0-mc1.20.1.jar'
+name = 'Create FluidLogistics '
 side = 'server'
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
-x-prismlauncher-release-type = 'beta'
-x-prismlauncher-version-number = 'Create: FluidLogistic 1.2.9'
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'Create: FluidLogistic 1.3.0'
 
 [download]
-hash = 'aca8cef3c75a4ef72629940084e9393bce88b7d0'
+hash = '3b3ce9a2da949b63fbe1f51abfd32e5109355b10'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 8812597
+file-id = 8894036
 project-id = 1475079
-
-[[x-prismlauncher-dependencies]]
-addonId = '1232978'
-type = 'OPTIONAL'
 
 [[x-prismlauncher-dependencies]]
 addonId = '328085'
 type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '1232978'
+type = 'OPTIONAL'

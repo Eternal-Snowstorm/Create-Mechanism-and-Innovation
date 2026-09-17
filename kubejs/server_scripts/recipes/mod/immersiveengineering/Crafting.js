@@ -161,34 +161,34 @@ ServerEvents.recipes((event) => {
 	})
 
 	// 铜线圈
-	kubejs.shaped("4x immersiveengineering:wirecoil_copper", [
+	kubejs.shaped("4x cmi:copper_coil", [
 		"A A",
 		" B ",
 		"A A"
 	], {
 		A: "#forge:wires/copper",
 		B: "createaddition:spool"
-	}).id("immersiveengineering:crafting/wirecoil_copper")
+	}).id("immersiveengineering:crafting/coil_lv")
 
 	// 琥珀金线圈
-	kubejs.shaped("4x immersiveengineering:wirecoil_electrum", [
+	kubejs.shaped("4x cmi:electrum_coil", [
 		"A A",
 		" B ",
 		"A A"
 	], {
 		A: "#forge:wires/electrum",
 		B: "createaddition:spool"
-	}).id("immersiveengineering:crafting/wirecoil_electrum")
+	}).id("immersiveengineering:crafting/coil_mv")
 
 	// 钢线圈
-	kubejs.shaped("4x immersiveengineering:wirecoil_steel", [
+	kubejs.shaped("4x cmi:steel_coil", [
 		"A A",
 		" B ",
 		"A A"
 	], {
 		A: "#forge:wires/steel",
 		B: "createaddition:spool"
-	}).id("immersiveengineering:crafting/wirecoil_steel")
+	}).id("immersiveengineering:crafting/coil_hv")
 
 	// 电解机
 	kubejs.shaped("immersiveindustry:electrolyzer", [
