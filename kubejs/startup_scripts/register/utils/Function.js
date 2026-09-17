@@ -16,6 +16,30 @@ function setFluidBucketModel(name) {
 }
 
 /**
+ * 模型定义
+ * 根据 overlay 决定 2 / 3 层
+ * 
+ * @param {string} type 
+ * @param {boolean} overlay 
+ * @returns 
+ */
+function defineModels(type, overlay) {
+	let textures = {
+		layer0: `cmi:item/material/color/${type}/${type}`,
+		layer1: `cmi:item/material/color/${type}/${type}_secondary`
+	}
+
+	if (overlay) {
+		textures.layer2 = `cmi:item/material/color/${type}/${type}_overlay`
+	}
+
+	return {
+		parent: "minecraft:item/generated",
+		textures: textures
+	}
+}
+
+/**
  * 
  * @typedef {Internal.Item | Internal.Block | Internal.Fluid} TagKeyType
  * @param {Internal.TagKey_<TagKeyType>} tag 
