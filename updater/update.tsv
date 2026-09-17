@@ -43,7 +43,7 @@ b0dcd905c0ce2e22561881537235f67cce3d23dc	mods/createcoolingfan-forge-1.20.1-1.3.
 416ea3d5c1190246369bbcfa32e5e86597402264	mods/createdieselgenerators-1.20.1-1.3.12.jar	https://edge.forgecdn.net/files/7932/785/createdieselgenerators-1.20.1-1.3.12.jar	curseforge:869316	
 6006df3311cc4fd8e5ea330720a5630d38b1a857	mods/CreateDragonsPlus-1.11.8.jar	https://edge.forgecdn.net/files/8810/578/CreateDragonsPlus-1.11.8.jar	curseforge:1216624	
 54349b1167eb8c7b70ca8d57caacfaece5c11e19	mods/create-enchantment-industry-2.5.2.jar	https://edge.forgecdn.net/files/8678/495/create-enchantment-industry-2.5.2.jar	curseforge:688768	
-aca8cef3c75a4ef72629940084e9393bce88b7d0	mods/fluidlogistics-1.2.9.jar	https://edge.forgecdn.net/files/8812/597/fluidlogistics-1.2.9.jar	curseforge:1475079	
+3b3ce9a2da949b63fbe1f51abfd32e5109355b10	mods/fluidlogistics-1.3.0-mc1.20.1.jar	https://edge.forgecdn.net/files/8894/36/fluidlogistics-1.3.0-mc1.20.1.jar	curseforge:1475079	mods/fluidlogistics-1.2.9.jar
 799b1ad1be700000bcc1630eb4c8a9f08be4b80d	mods/interlocked-1.1.jar	https://edge.forgecdn.net/files/8829/48/interlocked-1.1.jar	curseforge:1600362	
 066572eef380c5d3d34138110cf0c70c55c487bd	mods/create_jetpack-forge-4.4.6.jar	https://edge.forgecdn.net/files/7285/444/create_jetpack-forge-4.4.6.jar	curseforge:655608	
 25a3142fff25f8760ee2f243c3b97bb236d51c99	mods/Railway-Automation-1.20.1-1.0.jar	https://edge.forgecdn.net/files/8676/39/Railway-Automation-1.20.1-1.0.jar	curseforge:1657925	
@@ -54,7 +54,7 @@ f167bf75d91b505857a745d2ef1ae62398230e39	mods/Create-Steam-Ages-1.0.jar	https://
 b13d912b9247a38d66d11598c121442585a1c1e9	mods/create-1.20.1-6.0.8.jar	https://edge.forgecdn.net/files/7178/761/create-1.20.1-6.0.8.jar	curseforge:328085	
 c7d464c451fdc2979bc29a67d7eec2a30858af12	mods/createaddition-1.20.1-1.3.3.jar	https://edge.forgecdn.net/files/7208/610/createaddition-1.20.1-1.3.3.jar	curseforge:439890	
 5381b3092d99c8f16f9fe36b3b680dee63db33a9	mods/CTM-1.20.1-1.1.10.jar	https://edge.forgecdn.net/files/5983/309/CTM-1.20.1-1.1.10.jar	curseforge:267602	
-cea6ff50c4eb566fec606ba337c1a94e1da6462d	mods/cupboard-1.20.1-4.1.jar	https://edge.forgecdn.net/files/8746/423/cupboard-1.20.1-4.1.jar	curseforge:326652	
+db25dfc4935b7f1bde62c69f13a7b70e2ecd9f2f	mods/cupboard-1.20.1-4.2.jar	https://edge.forgecdn.net/files/8889/41/cupboard-1.20.1-4.2.jar	curseforge:326652	mods/cupboard-1.20.1-4.1.jar
 452175b95ad3db6ff58bb8968f6bf7a9d1e0f480	mods/curios-forge-5.14.1+1.20.1.jar	https://edge.forgecdn.net/files/6418/456/curios-forge-5.14.1%2B1.20.1.jar	curseforge:309927	
 253b9a3cb915d85c06a639ac54f9a43c858dde64	mods/CustomWindowTitle-Forge-1.20+v1.2.0.jar	https://edge.forgecdn.net/files/4584/612/CustomWindowTitle-Forge-1.20%2Bv1.2.0.jar	curseforge:360673	
 0222bda665449250336db60b4a3ab6a8e0c3ea02	mods/CustomMachineryCreate-forge-1.20.1-1.1.4.jar	https://edge.forgecdn.net/files/6978/360/CustomMachineryCreate-forge-1.20.1-1.1.4.jar	curseforge:1109533	
@@ -106,7 +106,7 @@ d08e64e66521d69e083c8525f1fc507f1c202384	mods/Jade-1.20.1-Forge-11.13.3.jar	http
 ea6930c226929c0f65c0d5a3f74b63ea4e0958bd	mods/JavaScriptJS-2001-1.0.3.jar	https://edge.forgecdn.net/files/6837/807/JavaScriptJS-2001-1.0.3.jar	curseforge:1238318	
 0aa9c598105938ee0be35f1c1b31ab5d936b0ef6	mods/jeiintegration_1.20.1-10.0.0.jar	https://edge.forgecdn.net/files/4999/754/jeiintegration_1.20.1-10.0.0.jar	curseforge:265917	
 f54caa33a63d699722b56e4b540adce74e5106fa	mods/jei_plus_plus-1.0.5-1.20.1.jar	https://edge.forgecdn.net/files/8870/204/jei_plus_plus-1.0.5-1.20.1.jar	curseforge:1645653	
-a8c34dd424cf2d939bf28649809060342279480f	mods/jei-1.20.1-forge-15.59.0.211.jar	https://edge.forgecdn.net/files/8879/628/jei-1.20.1-forge-15.59.0.211.jar	curseforge:238222	
+bfed31fa3defb09f8890890a91359ef4ab8623e0	mods/jei-1.20.1-forge-15.59.0.212.jar	https://edge.forgecdn.net/files/8895/264/jei-1.20.1-forge-15.59.0.212.jar	curseforge:238222	mods/jei-1.20.1-forge-15.59.0.211.jar
 a2d05f0e70ac59ea44f44642f94c0f99f4e80417	mods/jupiter-2.3.7-1.20.1-forge.jar	https://edge.forgecdn.net/files/7738/299/jupiter-2.3.7-1.20.1-forge.jar	curseforge:1072905	
 7792b3b92e0a91e7ca9b54446590bb0466ff98e6	mods/jecharacters-1.20.1-forge-4.6.11.jar	https://edge.forgecdn.net/files/8771/525/jecharacters-1.20.1-forge-4.6.11.jar	curseforge:250702	
 b059217831d8c8f16ccda3df97c5eca676e9418a	mods/kaleidoscope_compat-2.6.5-forge+mc1.20.1.jar	https://edge.forgecdn.net/files/8462/133/kaleidoscope_compat-2.6.5-forge%2Bmc1.20.1.jar	curseforge:1580791	
@@ -117,7 +117,7 @@ ad07ae00e6a1d9270fda145fb72c3fb87fc80473	mods/kaleidoscope_nether-1.1.8-forge+mc
 2e8f6370fb4acae9796705b6e84716c4a398b9c5	mods/kaleidoscopetavern-1.2.0-forge+mc1.20.1.jar	https://edge.forgecdn.net/files/8350/841/kaleidoscopetavern-1.2.0-forge%2Bmc1.20.1.jar	curseforge:1475175	
 2019d821bed9071daabed43979433a5473ceee49	mods/konkrete_forge_1.8.0_MC_1.20-1.20.1.jar	https://edge.forgecdn.net/files/5028/413/konkrete_forge_1.8.0_MC_1.20-1.20.1.jar	curseforge:410295	
 962fdb760409d6d71cbf079235f1ca94e3863a22	mods/kotlinforforge-4.12.0-all.jar	https://edge.forgecdn.net/files/7291/67/kotlinforforge-4.12.0-all.jar	curseforge:351264	
-6f4b2ea7827da8136bdf436457a2ba3fcdb2120e	mods/Ksyxis-1.4.3.jar	https://edge.forgecdn.net/files/7979/747/Ksyxis-1.4.3.jar	curseforge:537533	
+c4e4282d80322d5d41f1f1cdb4811ded6ab97b11	mods/Ksyxis-1.4.4.jar	https://edge.forgecdn.net/files/8891/330/Ksyxis-1.4.4.jar	curseforge:537533	mods/Ksyxis-1.4.3.jar
 c2720e589a292d5d168ef71a57f5dc3436db96b1	mods/kubejsadditions-forge-4.3.4.jar	https://edge.forgecdn.net/files/6302/185/kubejsadditions-forge-4.3.4.jar	curseforge:594387	
 cbeb6643d1cea979a7e01c87cfb08b9210a1c393	mods/kubejs-create-forge-2001.3.0-build.8.jar	https://edge.forgecdn.net/files/6265/498/kubejs-create-forge-2001.3.0-build.8.jar	curseforge:429371	
 d16736c07c210f41d4987a95c26f439bb5121d14	mods/kubejs-mekanism-forge-2001.1.5.1-build.2.jar	https://edge.forgecdn.net/files/5532/573/kubejs-mekanism-forge-2001.1.5.1-build.2.jar	curseforge:1062867	
@@ -162,7 +162,7 @@ cc24a959278990277483fe200286e3307d7f6d7e	mods/OneEnoughItem-1.0.8.jar	https://ed
 7616deeb511132de1c071a47bd6811b8e7a8d7e0	mods/Paintings-forge-1.20.1-11.0.0.2.jar	https://edge.forgecdn.net/files/5196/35/Paintings-forge-1.20.1-11.0.0.2.jar	curseforge:252042	
 d4614507d6e4c7cb464bba5eca891978272062ef	mods/Patchouli-1.20.1-85-FORGE.jar	https://edge.forgecdn.net/files/7731/17/Patchouli-1.20.1-85-FORGE.jar	curseforge:306770	
 a3a7008e07a27b3c831af7e4c82fbbc10a4da328	mods/Paxi-1.20-Forge-4.0.jar	https://edge.forgecdn.net/files/4749/994/Paxi-1.20-Forge-4.0.jar	curseforge:515708	
-35b125834f152d7ad1a37c84c39c45c5e3dbbeab	mods/pipez_optimizer-1.0.4-1.20.1.jar	https://edge.forgecdn.net/files/8844/680/pipez_optimizer-1.0.4-1.20.1.jar	curseforge:1643017	
+9c2f69f212c186d346d1f28f6d6f144ce8c3bf66	mods/pipez_optimizer-1.0.5-1.20.1.jar	https://edge.forgecdn.net/files/8885/599/pipez_optimizer-1.0.5-1.20.1.jar	curseforge:1643017	mods/pipez_optimizer-1.0.4-1.20.1.jar
 1c32e2fff406f1e8ee6b0689eca257f6bc28e4c7	mods/pipez-forge-1.20.1-1.2.26.jar	https://edge.forgecdn.net/files/6945/379/pipez-forge-1.20.1-1.2.26.jar	curseforge:443900	
 e85f53de2e582a79ce25ff1df1e7b5b5fc08440f	mods/Placebo-1.20.1-8.6.3.jar	https://edge.forgecdn.net/files/6274/231/Placebo-1.20.1-8.6.3.jar	curseforge:283644	
 16808f94a41d45d8e986b4e4ea6b02ba57fa058a	mods/player-animation-lib-forge-1.0.2-rc1+1.20.jar	https://edge.forgecdn.net/files/4587/214/player-animation-lib-forge-1.0.2-rc1%2B1.20.jar	curseforge:658587	
@@ -173,7 +173,7 @@ bf49919adc9e9109196762ff20030f823790e2db	mods/polylib-forge-2000.0.3-build.143.j
 aff030e4fadb788201599e5cfff325f171b5028f	mods/powerfuljs-1.6.1.jar	https://edge.forgecdn.net/files/4951/461/powerfuljs-1.6.1.jar	curseforge:819845	
 bcb4bbb1052f49ed4fe6e7d5d7f91f68d45c3fe3	mods/Prism-1.20.1-forge-1.0.5.jar	https://edge.forgecdn.net/files/4650/325/Prism-1.20.1-forge-1.0.5.jar	curseforge:638111	
 5380211b1c2891f454a136545721526b184d8513	mods/probejs-6.0.1-forge.jar	https://edge.forgecdn.net/files/5227/399/probejs-6.0.1-forge.jar	curseforge:585406	
-6c423006ab1fdd710815cb6f1c741e3295ccb15a	mods/quest_enhance-1.20.1-forge-3.8.jar	https://edge.forgecdn.net/files/8762/501/quest_enhance-1.20.1-forge-3.8.jar	curseforge:1610171	
+1e3068348ed0cf5d7948b8620a4384a000b9c4a7	mods/quest_enhance-1.20.1-forge-3.9.jar	https://edge.forgecdn.net/files/8886/966/quest_enhance-1.20.1-forge-3.9.jar	curseforge:1610171	mods/quest_enhance-1.20.1-forge-3.8.jar
 bc0f67b84bd55531c8da3ae692e0a5887da94028	mods/quick-pack-forge-1.5.0+1.20.1-all-srg.jar	https://edge.forgecdn.net/files/8619/188/quick-pack-forge-1.5.0%2B1.20.1-all-srg.jar	curseforge:1380888	
 597d40920dcc935f963842c817dcc4901862ab14	mods/resourcefulconfig-forge-1.20.1-2.1.3.jar	https://edge.forgecdn.net/files/6231/176/resourcefulconfig-forge-1.20.1-2.1.3.jar	curseforge:714059	
 6fc590a7c56a720fec57e290cbb0a106efbb3ffa	mods/resourcefullib-forge-1.20.1-2.1.29.jar	https://edge.forgecdn.net/files/5659/871/resourcefullib-forge-1.20.1-2.1.29.jar	curseforge:570073	
