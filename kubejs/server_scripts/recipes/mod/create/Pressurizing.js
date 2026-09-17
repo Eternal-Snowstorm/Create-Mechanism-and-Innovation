@@ -21,4 +21,9 @@ ServerEvents.recipes((event) => {
 		{ fluidTag: "forge:steam", amount: 1000 },
 		{ fluidTag: "forge:steam", amount: 1000 }
 	]).secondaryFluidInput(1).heatRequirement(CmiHeatLevel.GRILLED)
+
+	// 细雪
+	vintageimprovements.vacuumizing(Fluid.of("tconstruct:powdered_snow", 1000), [
+		"minecraft:snow_block"
+	]).id("vintageimprovements:vacuumizing/powder_snow")
 })

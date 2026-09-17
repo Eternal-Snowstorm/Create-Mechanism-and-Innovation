@@ -24,12 +24,6 @@ ServerEvents.recipes((event) => {
 		"#forge:nuggets/zinc"
 	]).heatRequirement(CmiHeatLevel.GRILLED)
 
-	// 殷钢
-	create.mixing(Fluid.of("tconstruct:molten_invar", 270), [
-		"2x #forge:ingots/iron",
-		"#forge:ingots/nickel"
-	]).heated()
-
 	// 盐水
 	create.mixing(Fluid.of("mekanism:brine", 50), [
 		Fluid.of("minecraft:water", 50),
@@ -95,12 +89,6 @@ ServerEvents.recipes((event) => {
 		"#cmi:crystals",
 		"32x #forge:seeds"
 	]).heated()
-
-	// 熔融黄铜
-	create.mixing(Fluid.of("tconstruct:molten_brass", 180), [
-		Fluid.of("tconstruct:molten_zinc", 90),
-		Fluid.of("tconstruct:molten_copper", 90)
-	]).heated().id("create:mixing/brass_ingot")
 
 	// 墨囊
 	create.mixing("2x minecraft:ink_sac", [

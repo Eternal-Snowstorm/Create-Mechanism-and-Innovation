@@ -204,7 +204,9 @@ ServerEvents.recipes((event) => {
 		"tconstruct:tools/modifiers/ability/luck_level_1",
 		"tconstruct:tools/modifiers/ability/luck_level_2",
 		"tconstruct:tools/modifiers/ability/luck_level_3",
-		"tconstruct:common/glass/vanilla/glass_bottle"
+		"tconstruct:common/glass/vanilla/glass_bottle",
+		"createaddition:compat/tconstruct/pig_iron_2",
+		"tconstruct:smeltery/alloys/molten_refined_obsidian"
 	])
 
 	let removedMods = [

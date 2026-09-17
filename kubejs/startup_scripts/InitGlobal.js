@@ -113,6 +113,14 @@ let metals = {
 		t: 1535,
 		n: "v"
 	},
+	knightmetal: {
+		t: 1827,
+		n: "v"
+	},
+	knightslime: {
+		t: 1385,
+		n: "v"
+	},
 	lead: {
 		t: 327,
 		n: "v"

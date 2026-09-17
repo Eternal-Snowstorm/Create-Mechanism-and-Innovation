@@ -26,6 +26,12 @@ ServerEvents.recipes((event) => {
 		"#forge:ingots/tin",
 	])
 
+	// 黄铜
+	thermal.smelter("4x create:brass_ingot", [
+		"3x #forge:ingots/copper",
+		"#forge:ingots/zinc",
+	]).id("thermal:compat/create/smelter_create_alloy_brass")
+
 	// 龙钢
 	thermal.smelter("2x thermal_extra:dragonsteel_ingot", [
 		["thermal_extra:ancient_dust"],
