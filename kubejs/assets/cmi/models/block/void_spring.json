@@ -1,13 +1,8 @@
 {
-	"parent": "nebula_libs:block/double_layered_top_side",
-	"render_type": "cutout",
-	"textures": {
-		"background_top": "cmi:block/void_spring",
-		"background_side": "cmi:block/void_spring_side",
-		"background_bottom": "minecraft:block/bedrock",
-		"layered_top": "cmi:block/void_spring_g",
-		"layered_side": "cmi:block/void_spring_side_g",
-		"layered_bottom": "minecraft:block/bedrock"
-	},
-	"__autoglow": true
+    "parent": "minecraft:block/cube_bottom_top",
+    "textures": {
+        "bottom": "minecraft:block/bedrock",
+        "side": "cmi:block/void_spring_side",
+        "top": "cmi:block/void_spring"
+    }
 }

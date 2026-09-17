@@ -1,13 +1,23 @@
 {
-	"parent": "nebula_libs:block/double_layered_top_side",
-	"render_type": "cutout",
+	"format_version": "1.9.0",
 	"textures": {
-		"background_top": "cmi:block/machine/chemical_gas_extractor/fan_on",
-		"background_side": "cmi:block/machine/chemical_gas_extractor/on",
-		"background_bottom": "cmi:block/machine/chemical_gas_extractor/fan_on",
-		"layered_top": "cmi:block/machine/chemical_gas_extractor/fan_on",
-		"layered_side": "cmi:block/machine/chemical_gas_extractor/on_e",
-		"layered_bottom": "cmi:block/machine/chemical_gas_extractor/fan_on"
+		"0": "cmi:block/machine/chemical_gas_extractor/fan_on",
+		"1": "cmi:block/machine/chemical_gas_extractor/side",
+		"2": "cmi:block/machine/chemical_gas_extractor/on",
+		"particle": "cmi:block/machine/chemical_gas_extractor/fan_on"
 	},
-	"__autoglow": true
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#0"}
+			}
+		}
+	]
 }
