@@ -48,7 +48,13 @@ if ($Mode -eq 'setup') {
 }
 
 # 确保 gitee 远程存在
-git remote get-url gitee > $null 2>&1
+# 警告: 这里不能写成 "git remote get-url gitee > $null 2>&1"。
+#   Windows PowerShell 5.1 会把经 2>&1 合并过来的原生命令 stderr 包装成 ErrorRecord
+#   写进成功流, 叠加本脚本顶部的 $ErrorActionPreference='Stop' 会抛出 NativeCommandError
+#   并当场终止脚本; 而"本地还没有 gitee 远程"正是首次 setup 的必经分支,
+#   结果是远程永远建不起来, 玩家只能看到一句英文报错。
+#   git config --get 在键不存在时静默返回退出码 1(不写 stderr), 因此安全。
+git config --get remote.gitee.url | Out-Null
 if ($LASTEXITCODE -ne 0) {
   Write-Host '[提示] 未找到 gitee 远程, 正在添加...'
   git remote add gitee $RemoteUrl
