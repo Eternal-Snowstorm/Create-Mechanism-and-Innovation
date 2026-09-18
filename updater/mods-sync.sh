@@ -164,6 +164,31 @@ for i in "${!M_PATH[@]}"; do
   done
 done
 
+# 2c. 自愈: 清单中的 mod 在 mods/ 下残留的其它版本(同名主干)
+#     若历史 delete.tsv 漏记了某个下架项, 新旧两个 jar 会并存, Forge 会以
+#     "Duplicate mods" 直接崩溃启动; 这里按 mod 名主干兜底清理。
+#     只扫 mods/*.jar, 并且只清理"与清单中某个 mod 同主干"的文件 ——
+#     玩家自己添加的、与清单无关的 mod 不会被碰。
+#     注意: mod_key 用 printf '%s' 输出(不带换行), 这里必须自己补 \n,
+#           否则所有 key 会粘成一行, 下面的整行匹配就永远失效。
+LIST_KEYS="$(mktemp)"
+for i in "${!M_PATH[@]}"; do
+  case "${M_PATH[$i]}" in
+    mods/*) printf '%s\n' "$(mod_key "${M_PATH[$i]}")" ;;
+  esac
+done | sort -u > "$LIST_KEYS"
+if [ -s "$LIST_KEYS" ] && [ -d "$ROOT/mods" ]; then
+  for _f in "$ROOT"/mods/*.jar; do
+    [ -f "$_f" ] || continue
+    _rel="mods/$(basename "$_f")"
+    grep -qxF "$_rel" "$PROTECTED" && continue
+    _k="$(mod_key "$_rel")"
+    grep -qxF "$_k" "$LIST_KEYS" || continue
+    printf '%s\n' "$_rel" >> "$PENDING"
+  done
+fi
+rm -f "$LIST_KEYS" 2>/dev/null || true
+
 sort -u "$PENDING" -o "$PENDING"
 
 # --- 3. 备份待删除的旧 jar ---------------------------------------------
