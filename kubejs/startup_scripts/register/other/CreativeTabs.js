@@ -18,8 +18,7 @@ StartupEvents.registry("creative_mode_tab", (event) => {
 	addCreativeTab("materials")
 		.icon(() => Item.of("cmi:cast_iron_ingot"))
 		.content(() => {
-			return Ingredient.of("#cmi:metals").getItemIds()
-				.concat(Ingredient.of("#cmi:ores").getItemIds())
+			return Ingredient.of("#cmi:ores").getItemIds()
 				.concat(Ingredient.of("#cmi:raw_metals").getItemIds())
 		})
 		.displayName(Component.translatable(`itemGroup.${Cmi.MODID}.materials`))

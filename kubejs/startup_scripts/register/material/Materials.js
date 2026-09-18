@@ -1,6 +1,8 @@
 NebulaEvents.registerMaterial((event) => {
 	event.namespace(Cmi.MODID)
+	event.setCreativeTab("cmi:materials")
 
+	// 木头
 	event.register("wooden", MiningLevels.WOODEN)
 		.color(0xAB7500, 0xAC8430)
 		.gear(false)
