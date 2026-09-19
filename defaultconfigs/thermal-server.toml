@@ -232,37 +232,37 @@
 	[Dynamos.Stirling]
 		#This sets the base power generation (RF/t) for the Stirling Dynamo.
 		#Range: 10 ~ 32000
-		"Base Power" = 50
+		"Base Power" = 512
 
 	[Dynamos.Compression]
 		#This sets the base power generation (RF/t) for the Compression Dynamo.
 		#Range: 10 ~ 32000
-		"Base Power" = 200
+		"Base Power" = 512
 
 	[Dynamos.Magmatic]
 		#This sets the base power generation (RF/t) for the Magmatic Dynamo.
 		#Range: 10 ~ 32000
-		"Base Power" = 100
+		"Base Power" = 512
 
 	[Dynamos.Numismatic]
 		#This sets the base power generation (RF/t) for the Numismatic Dynamo.
 		#Range: 10 ~ 32000
-		"Base Power" = 300
+		"Base Power" = 512
 
 	[Dynamos.Lapidary]
 		#This sets the base power generation (RF/t) for the Lapidary Dynamo.
 		#Range: 10 ~ 32000
-		"Base Power" = 500
+		"Base Power" = 512
 
 	[Dynamos.Disenchantment]
 		#This sets the base power generation (RF/t) for the Disenchantment Dynamo.
 		#Range: 10 ~ 32000
-		"Base Power" = 500
+		"Base Power" = 512
 
 	[Dynamos.Gourmand]
 		#This sets the base power generation (RF/t) for the Gourmand Dynamo.
 		#Range: 10 ~ 32000
-		"Base Power" = 500
+		"Base Power" = 512
 
 [Machines]
 

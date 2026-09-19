@@ -1,18 +1,18 @@
-filename = 'createbetterfps-1.20.1-1.1.2.jar'
-name = 'Create Better FPS'
+filename = 'createbetterfps-1.20.1-1.1.3.jar'
+name = 'CreateBetterFps'
 side = ''
 x-prismlauncher-dependencies = []
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'createbetterfps-1.20.1-1.1.2.jar'
+x-prismlauncher-version-number = 'createbetterfps-1.20.1-1.1.3.jar'
 
 [download]
-hash = 'e3906e1b5cc33ad9ff930fc65b316564a3059fbf'
+hash = '62c449392c98008332ef452323a26a1fdb9eec1d'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 7949342
+file-id = 8918086
 project-id = 1217518

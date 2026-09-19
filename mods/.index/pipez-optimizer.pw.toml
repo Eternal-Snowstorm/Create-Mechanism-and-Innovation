@@ -1,24 +1,20 @@
-filename = 'pipez_optimizer-1.0.5-1.20.1.jar'
+filename = 'pipez_optimizer-1.0.6-1.20.1.jar'
 name = 'Pipez Optimizer'
 side = 'server'
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'pipez_optimizer-1.0.5-1.20.1.jar'
+x-prismlauncher-version-number = 'pipez_optimizer-1.0.6-1.20.1.jar'
 
 [download]
-hash = '9c2f69f212c186d346d1f28f6d6f144ce8c3bf66'
+hash = '1cc360e390a716e44fc70eaefde1e77a2c508f17'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 8885599
+file-id = 8921578
 project-id = 1643017
-
-[[x-prismlauncher-dependencies]]
-addonId = '443900'
-type = 'REQUIRED'
 
 [[x-prismlauncher-dependencies]]
 addonId = '1453074'
@@ -27,3 +23,7 @@ type = 'OPTIONAL'
 [[x-prismlauncher-dependencies]]
 addonId = '364466'
 type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '443900'
+type = 'REQUIRED'
