@@ -1,7 +1,7 @@
 {
 	id: "4FEE7DEDEDCE5E06"
 	loot_size: 1
-	order_index: 3
+	order_index: 2
 	rewards: [
 		{ item: "cmi:plate_mold" }
 		{ item: "cmi:gear_mold" }

@@ -31,7 +31,7 @@
 				type: "item"
 			}]
 			title: "安山岩"
-			x: -20.0d
+			x: -19.5d
 			y: 16.5d
 		}
 		{
@@ -67,11 +67,8 @@
 			y: 16.5d
 		}
 		{
-			dependencies: [
-				"23C01A41EBA593FC"
-				"7A9561BE016F15B5"
-			]
-			description: ["在拥有了生物柴油后你就可以在匠魂炉中融化铁了"]
+			dependencies: ["23C01A41EBA593FC"]
+			description: ["拥有了生物柴油后，你就可以在匠魂炉中融化铁了"]
 			icon: "tconstruct:molten_iron_bucket"
 			id: "06012DC3A4BBF58B"
 			subtitle: "IRON!"
@@ -81,10 +78,10 @@
 				type: "checkmark"
 			}]
 			x: -9.5d
-			y: 15.0d
+			y: 14.0d
 		}
 		{
-			dependencies: ["0D502CA40E47F832"]
+			dependencies: ["73D78755B4430729"]
 			hide_dependency_lines: true
 			id: "0498E2991294B14D"
 			tasks: [{
@@ -99,8 +96,8 @@
 				title: "制糖原料"
 				type: "item"
 			}]
-			x: -10.0d
-			y: 10.5d
+			x: -17.5d
+			y: 14.0d
 		}
 		{
 			dependencies: ["46858C4B5052EC0C"]
@@ -118,10 +115,10 @@
 				type: "item"
 			}]
 			x: -17.5d
-			y: 16.5d
+			y: 17.5d
 		}
 		{
-			dependencies: ["0771A7C0D2B6D023"]
+			dependencies: ["46858C4B5052EC0C"]
 			description: ["一种低熔点金属, 我可以用它做出第一份&6安山合金"]
 			id: "3942E154F0734013"
 			tasks: [{
@@ -136,32 +133,21 @@
 				title: "粗锌"
 				type: "item"
 			}]
-			x: -16.5d
-			y: 15.0d
-		}
-		{
-			dependencies: ["26DFF62383774404"]
-			icon: "tconstruct:seared_melter"
-			id: "0771A7C0D2B6D023"
-			tasks: [{
-				id: "20D0AC74FEBE23A3"
-				title: "初级冶炼"
-				type: "checkmark"
-			}]
-			x: -18.5d
-			y: 15.0d
+			x: -17.5d
+			y: 15.5d
 		}
 		{
 			dependencies: ["65F2C054D52EB96B"]
 			id: "0D502CA40E47F832"
 			shape: "gear"
 			size: 2.0d
+			tags: ["achievement_toast_glow"]
 			tasks: [{
 				id: "7458BCB71C9C2186"
 				item: "cmi:andesite_mechanism"
 				type: "item"
 			}]
-			x: -13.0d
+			x: -11.5d
 			y: 16.5d
 		}
 		{
@@ -193,6 +179,7 @@
 					type: "item"
 				}
 			]
+			subtitle: "多做点总没错"
 			tasks: [
 				{
 					count: 64L
@@ -241,18 +228,26 @@
 				}
 			]
 			title: "基础传动元件"
-			x: -14.5d
-			y: 15.0d
+			x: -13.5d
+			y: 15.5d
 		}
 		{
 			dependencies: ["0D502CA40E47F832"]
 			id: "6865ED5A1D93E5EA"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "14BE717EF67E1E5D"
-				table_id: 2826709868639936990L
-				type: "all_table"
-			}]
+			rewards: [
+				{
+					count: 2
+					id: "59E88F3D65A2585A"
+					item: "create:basin"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "2506E2627772FDAA"
+					item: "create:depot"
+					type: "item"
+				}
+			]
 			tasks: [
 				{
 					id: "765A5560DEAE9343"
@@ -260,6 +255,7 @@
 					type: "item"
 				}
 				{
+					count: 2L
 					id: "644C01D85646AB2F"
 					item: "create:mechanical_press"
 					type: "item"
@@ -281,8 +277,8 @@
 				}
 			]
 			title: "基础工作元件"
-			x: -11.0d
-			y: 18.0d
+			x: -9.5d
+			y: 16.5d
 		}
 		{
 			dependencies: ["6865ED5A1D93E5EA"]
@@ -304,11 +300,12 @@
 				title: "铁齿轮"
 				type: "item"
 			}]
-			x: -9.5d
-			y: 18.0d
+			x: -8.5d
+			y: 16.5d
 		}
 		{
 			dependencies: ["580C6E604C71F620"]
+			description: ["应力消耗大户，注意控制转速"]
 			id: "63BF49635AEF3AF8"
 			rewards: [{
 				id: "140CC56105388FA6"
@@ -321,24 +318,23 @@
 				item: "create:crushing_wheel"
 				type: "item"
 			}]
-			x: -8.0d
-			y: 18.0d
+			x: -7.5d
+			y: 16.5d
 		}
 		{
 			dependencies: [
 				"295BF991FD7133DF"
 				"24FD90B8F1474193"
-				"0D502CA40E47F832"
 			]
 			icon: "createdieselgenerators:biodiesel_bucket"
 			id: "23C01A41EBA593FC"
 			tasks: [{
-				id: "47B6061246D334C4"
+				id: "5094E3A154CD1DB1"
 				title: "生物柴油"
 				type: "checkmark"
 			}]
-			x: -11.0d
-			y: 15.0d
+			x: -11.5d
+			y: 13.0d
 		}
 		{
 			dependencies: ["649CAA93BB644BF3"]
@@ -348,8 +344,8 @@
 				item: "minecraft:sugar"
 				type: "item"
 			}]
-			x: -10.0d
-			y: 13.5d
+			x: -13.5d
+			y: 14.0d
 		}
 		{
 			dependencies: ["0498E2991294B14D"]
@@ -359,22 +355,33 @@
 				item: "thermal:syrup_bucket"
 				type: "item"
 			}]
-			x: -10.0d
-			y: 12.0d
+			x: -15.5d
+			y: 14.0d
 		}
 		{
-			dependencies: ["0D502CA40E47F832"]
+			dependencies: ["21B1DA369A461281"]
 			description: ["想要杂酚油, 我必须先做一台焦炉 "]
 			hide_dependency_lines: true
 			id: "2CCDB1390C34C80A"
+			rewards: [{
+				id: "5C905DCBE1FF747A"
+				item: {
+					Count: 1
+					id: "immersiveengineering:hammer"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
 			tasks: [{
 				count: 27L
 				id: "02C27A7E7E4E2731"
 				item: { Count: 27, id: "tconstruct:seared_bricks" }
 				type: "item"
 			}]
-			x: -12.0d
-			y: 10.5d
+			x: -17.5d
+			y: 12.0d
 		}
 		{
 			dependencies: ["2CCDB1390C34C80A"]
@@ -385,26 +392,17 @@
 			]
 			icon: "immersiveengineering:coke_oven"
 			id: "12A2C0FB29927390"
-			rewards: [{
-				id: "67860FEDC372EC4A"
-				item: {
-					Count: 1
-					id: "immersiveengineering:hammer"
-					tag: {
-						Damage: 0
-					}
-				}
-				type: "item"
-			}]
 			subtitle: "杂酚油的来源"
 			tasks: [{
-				count: 27L
-				id: "2F4BD553A5521213"
-				item: { Count: 27, id: "tconstruct:seared_bricks" }
-				type: "item"
+				id: "6EFA2FDE5732A407"
+				observe_type: 0
+				timer: 0L
+				title: "观察:焦炉"
+				to_observe: "immersiveengineering:coke_oven"
+				type: "observation"
 			}]
 			title: "焦炉"
-			x: -12.0d
+			x: -15.5d
 			y: 12.0d
 		}
 		{
@@ -416,39 +414,22 @@
 				item: "immersiveengineering:creosote_bucket"
 				type: "item"
 			}]
-			x: -12.0d
-			y: 13.5d
-		}
-		{
-			dependencies: ["0D502CA40E47F832"]
-			id: "7A9561BE016F15B5"
-			tasks: [{
-				id: "4D2FC0401BDE6F5A"
-				item: {
-					Count: 1
-					id: "itemfilters:tag"
-					tag: {
-						value: "forge:raw_materials/iron"
-					}
-				}
-				title: "粗铁"
-				type: "item"
-			}]
-			x: -11.0d
-			y: 16.5d
+			x: -13.5d
+			y: 12.0d
 		}
 		{
 			dependencies: ["06012DC3A4BBF58B"]
 			id: "6FE26470A8A3B7B1"
 			shape: "gear"
 			size: 2.0d
+			tags: ["achievement_toast_glow"]
 			tasks: [{
 				id: "4E97951D974529FB"
 				item: "cmi:iron_mechanism"
 				type: "item"
 			}]
-			x: -6.0d
-			y: 15.0d
+			x: -6.5d
+			y: 14.0d
 		}
 		{
 			dependencies: ["6FE26470A8A3B7B1"]
@@ -459,8 +440,8 @@
 				item: "create:empty_blaze_burner"
 				type: "item"
 			}]
-			x: -6.0d
-			y: 13.0d
+			x: -3.5d
+			y: 14.0d
 		}
 		{
 			dependencies: ["26DFF62383774404"]
@@ -478,8 +459,8 @@
 				type: "item"
 			}]
 			title: "橡胶原木"
-			x: -17.5d
-			y: 19.5d
+			x: -19.5d
+			y: 20.5d
 		}
 		{
 			dependencies: ["00A42257F183E046"]
@@ -490,8 +471,8 @@
 				item: "thermal:rubberwood_planks"
 				type: "item"
 			}]
-			x: -15.5d
-			y: 19.5d
+			x: -17.5d
+			y: 21.5d
 		}
 		{
 			dependencies: ["71AB4DF031ED3CB4"]
@@ -501,32 +482,28 @@
 				item: "createdieselgenerators:basin_lid"
 				type: "item"
 			}]
-			x: -14.0d
-			y: 19.5d
+			x: -15.5d
+			y: 22.5d
 		}
 		{
 			dependencies: [
 				"2DDCBAC1D7AF08AE"
 				"7DD1547C967EDD20"
 			]
+			icon: "cmi:vinegar_bucket"
 			id: "664B44589F807708"
 			subtitle: "好酸!"
 			tasks: [{
-				id: "093C6622F63F1D1F"
-				item: "cmi:vinegar_bucket"
-				type: "item"
+				id: "0E2AB642B36EB7AA"
+				title: "醋"
+				type: "checkmark"
 			}]
 			title: "醋"
-			x: -11.0d
-			y: 19.5d
+			x: -13.5d
+			y: 21.5d
 		}
 		{
-			dependencies: [
-				"664B44589F807708"
-				"14FCB2B036726682"
-				"50B5CFD57763580A"
-				"2EE13016985061C5"
-			]
+			dependencies: ["3D4750217EE8ECD1"]
 			dependency_requirement: "one_completed"
 			description: ["制作熔融硫化橡胶浇筑到铸件台上"]
 			id: "43FFB9DB898EA83A"
@@ -536,12 +513,13 @@
 				item: "thermal:cured_rubber"
 				type: "item"
 			}]
-			x: -11.0d
-			y: 21.0d
+			x: -9.5d
+			y: 19.5d
 		}
 		{
-			dependencies: ["2DDCBAC1D7AF08AE"]
+			dependencies: ["46858C4B5052EC0C"]
 			description: ["可以通过挖掘硫矿打粉后获得, 也可以通过磨煤炭获得"]
+			hide_dependency_lines: true
 			id: "14FCB2B036726682"
 			subtitle: "硫磺粉末"
 			tasks: [{
@@ -549,12 +527,12 @@
 				item: "thermal:sulfur_dust"
 				type: "item"
 			}]
-			x: -12.5d
-			y: 21.0d
+			x: -11.5d
+			y: 18.5d
 		}
 		{
 			dependencies: ["2DDCBAC1D7AF08AE"]
-			description: ["我应该能在&6河边&f找到一些野生稻米, 之后就可以自己种植了"]
+			description: ["我应该能在&6湿地的池塘&f找到一些野生稻米, 之后就可以自己种植了"]
 			hide_dependency_lines: true
 			id: "7DD1547C967EDD20"
 			subtitle: "要酿醋, 就要先获得稻米"
@@ -570,8 +548,8 @@
 				title: "稻米"
 				type: "item"
 			}]
-			x: -12.5d
-			y: 19.5d
+			x: -15.5d
+			y: 20.5d
 		}
 		{
 			dependencies: ["5D40D5E4A4DC395D"]
@@ -581,54 +559,49 @@
 				item: "cmi:rubber_plate"
 				type: "item"
 			}]
-			x: -12.5d
-			y: 22.5d
+			x: -13.5d
+			y: 19.5d
 		}
 		{
-			dependencies: ["5E096A2AD55E8040"]
+			dependencies: ["29ACEBA79B437ADD"]
 			id: "5D40D5E4A4DC395D"
 			tasks: [{
 				id: "76F962DD1425FF35"
 				item: "thermal:rubber"
 				type: "item"
 			}]
-			x: -14.0d
-			y: 22.5d
+			x: -15.5d
+			y: 18.5d
 		}
 		{
-			dependencies: ["2DDCBAC1D7AF08AE"]
-			id: "5E096A2AD55E8040"
-			tasks: [{
-				id: "2F3B8F408FDE770B"
-				item: "thermal:latex_bucket"
-				type: "item"
-			}]
-			x: -14.0d
-			y: 21.0d
-		}
-		{
-			dependencies: ["43FFB9DB898EA83A"]
+			dependencies: [
+				"43FFB9DB898EA83A"
+				"45EFA2C8267E8293"
+				"551A2E50E2232A77"
+			]
 			id: "24384207DB9668D9"
 			shape: "gear"
 			size: 2.0d
+			tags: ["achievement_toast_glow"]
 			tasks: [{
 				id: "030F5C6E150B9665"
 				item: "cmi:copper_mechanism"
 				type: "item"
 			}]
-			x: -8.0d
-			y: 21.0d
+			x: -5.5d
+			y: 19.5d
 		}
 		{
 			dependencies: ["24384207DB9668D9"]
 			id: "590FBD1F501100AE"
+			subtitle: "无限流体池来咯"
 			tasks: [{
 				id: "136C8606D1197457"
 				item: "create:hose_pulley"
 				type: "item"
 			}]
-			x: -8.0d
-			y: 24.0d
+			x: -5.5d
+			y: 21.5d
 		}
 		{
 			dependencies: ["26DFF62383774404"]
@@ -658,8 +631,8 @@
 				title: "橡胶树边角料"
 				type: "item"
 			}]
-			x: -9.5d
-			y: 22.5d
+			x: -13.5d
+			y: 23.5d
 		}
 		{
 			dependencies: ["795C395B35395809"]
@@ -677,7 +650,7 @@
 				title: "橡胶粉"
 				type: "item"
 			}]
-			x: -11.0d
+			x: -11.5d
 			y: 22.5d
 		}
 		{
@@ -688,8 +661,8 @@
 				item: "create:item_drain"
 				type: "item"
 			}]
-			x: -6.0d
-			y: 23.0d
+			x: -3.5d
+			y: 20.5d
 		}
 		{
 			dependencies: ["24384207DB9668D9"]
@@ -699,8 +672,8 @@
 				item: "create:spout"
 				type: "item"
 			}]
-			x: -4.5d
-			y: 21.0d
+			x: -3.5d
+			y: 18.5d
 		}
 		{
 			dependencies: ["24FD90B8F1474193"]
@@ -733,14 +706,11 @@
 				title: "防腐木板"
 				type: "item"
 			}]
-			x: -13.5d
-			y: 13.5d
+			x: -11.5d
+			y: 11.0d
 		}
 		{
-			dependencies: [
-				"7A9561BE016F15B5"
-				"63BF49635AEF3AF8"
-			]
+			dependencies: ["63BF49635AEF3AF8"]
 			description: [
 				"开采得到的&a粗矿&r需要先经过粉碎轮处理, 破碎后形成粒度更细的&b粉碎矿&r"
 				"随后对&b粉碎矿&r进行水洗处理, 通过清洗与分离最终获得&c矿粉&r"
@@ -760,7 +730,7 @@
 				title: "铁粉"
 				type: "item"
 			}]
-			x: -9.5d
+			x: -6.5d
 			y: 16.5d
 		}
 		{
@@ -786,7 +756,7 @@
 				title: "工业铁锭"
 				type: "item"
 			}]
-			x: -6.5d
+			x: -4.5d
 			y: 16.5d
 		}
 		{
@@ -799,11 +769,12 @@
 				title: "熔融工业铁"
 				type: "checkmark"
 			}]
-			x: -8.0d
+			x: -5.5d
 			y: 16.5d
 		}
 		{
 			dependencies: ["45F48FA80A7D0340"]
+			icon: "immersiveengineering:workbench"
 			id: "24FBD0678ECC293A"
 			rewards: [{
 				exclude_from_claim_all: true
@@ -832,8 +803,8 @@
 					type: "item"
 				}
 			]
-			x: -15.0d
-			y: 13.5d
+			x: -9.5d
+			y: 12.0d
 		}
 		{
 			dependencies: ["24FBD0678ECC293A"]
@@ -850,14 +821,13 @@
 				item: "cmi:mechanism_mold"
 				type: "item"
 			}]
-			x: -15.0d
+			x: -7.5d
 			y: 12.0d
 		}
 		{
 			dependencies: ["65F2C054D52EB96B"]
 			icon: "create:large_water_wheel"
 			id: "010A13B6C2954C69"
-			subtitle: "下一代水车仙人"
 			tasks: [
 				{
 					id: "6142060D6BC72388"
@@ -865,35 +835,20 @@
 					type: "item"
 				}
 				{
-					id: "54B98A8B98F4256E"
-					item: "create:water_wheel"
+					id: "609A9DC13B32D0C6"
+					item: "create:windmill_bearing"
 					type: "item"
 				}
 				{
-					id: "7EE273A6BE6129BF"
-					item: "immersiveengineering:waterwheel_segment"
+					id: "3A539E78CE899B58"
+					item: "create:hand_crank"
+					title: "你确定？"
 					type: "item"
 				}
 			]
-			x: -14.5d
-			y: 18.0d
-		}
-		{
-			dependencies: ["65F2C054D52EB96B"]
-			id: "179FB9DD8855E255"
-			rewards: [{
-				count: 8
-				id: "5E5A0301B4442E3B"
-				item: "create:white_sail"
-				type: "item"
-			}]
-			tasks: [{
-				id: "34DE6CCC182816DE"
-				item: "create:windmill_bearing"
-				type: "item"
-			}]
-			x: -16.5d
-			y: 18.0d
+			title: "选择你的初级应力源"
+			x: -13.5d
+			y: 17.5d
 		}
 		{
 			dependencies: ["3B5ADA1051DE6F9A"]
@@ -904,8 +859,8 @@
 				item: "cmi:advanced_spout"
 				type: "item"
 			}]
-			x: -2.5d
-			y: 21.0d
+			x: -1.5d
+			y: 19.5d
 		}
 		{
 			dependencies: [
@@ -950,8 +905,8 @@
 				}
 			]
 			title: "更高效的石板获取!"
-			x: -4.5d
-			y: 19.5d
+			x: -1.5d
+			y: 17.5d
 		}
 		{
 			dependencies: ["6FB78C12B3941053"]
@@ -968,8 +923,8 @@
 				title: "工业铁板"
 				type: "item"
 			}]
-			x: -6.5d
-			y: 18.0d
+			x: -3.5d
+			y: 16.5d
 		}
 		{
 			dependencies: ["28DFB902C00FCB4D"]
@@ -1015,13 +970,13 @@
 				}
 			]
 			title: "超级大的容量!"
-			x: -4.5d
-			y: 16.5d
+			x: 0.0d
+			y: 15.75d
 		}
 		{
 			dependencies: ["45F48FA80A7D0340"]
 			description: [
-				"防腐木部件大部分都可以将防腐木放入切石机内切割制成"
+				"大部分防腐木建筑方块都可以通过切石机切割防腐木板获得"
 				"{image:cmi:textures/images/ie/treated_wood_components.png width:185 height:72 align:center}"
 			]
 			icon: "immersiveengineering:treated_fence"
@@ -1034,19 +989,22 @@
 			subtitle: "切石机大人😭✍️✍️✍️✍️"
 			tasks: [{
 				id: "7E811F8A1D4E3551"
-				title: "防腐木部件"
+				title: "防腐木建筑方块"
 				type: "checkmark"
 			}]
-			x: -13.5d
-			y: 12.0d
+			x: -9.5d
+			y: 10.0d
 		}
 		{
 			dependencies: ["28DFB902C00FCB4D"]
-			description: ["{image:cmi:textures/images/create/bulk_fermenter.png width:113 height:128 align:center}"]
+			description: [
+				"{image:cmi:textures/images/create/bulk_fermenter.png width:113 height:128 align:center}"
+				"尺寸为3*3*6时，发酵速度最大"
+			]
 			icon: "createdieselgenerators:bulk_fermenter"
 			id: "7E097A0AFDB21208"
 			rewards: [{
-				count: 9
+				count: 27
 				id: "576328DC09DECD40"
 				item: "createdieselgenerators:bulk_fermenter"
 				type: "item"
@@ -1061,8 +1019,8 @@
 				type: "item"
 			}]
 			title: "大型发酵储罐"
-			x: -4.5d
-			y: 18.0d
+			x: 0.0d
+			y: 17.25d
 		}
 		{
 			dependencies: ["6865ED5A1D93E5EA"]
@@ -1073,8 +1031,8 @@
 				item: "fluidlogistics:copper_basin"
 				type: "item"
 			}]
-			x: -9.5d
-			y: 19.5d
+			x: -8.5d
+			y: 15.5d
 		}
 		{
 			dependencies: ["3CB9E200952C9D9F"]
@@ -1090,8 +1048,8 @@
 				item: "create_enchantment_industry:mechanical_grindstone"
 				type: "item"
 			}]
-			x: -4.5d
-			y: 24.5d
+			x: -1.5d
+			y: 21.5d
 		}
 		{
 			dependencies: ["46858C4B5052EC0C"]
@@ -1128,7 +1086,7 @@
 				}
 			]
 			title: "缺少安山岩?"
-			x: -20.0d
+			x: -19.5d
 			y: 18.5d
 		}
 		{
@@ -1151,8 +1109,66 @@
 				item: "ad_astra:coal_generator"
 				type: "item"
 			}]
-			x: -6.5d
+			x: -1.5d
+			y: 15.5d
+		}
+		{
+			dependencies: ["00A42257F183E046"]
+			description: [
+				"将树液漏斗放置在&6去皮的橡胶原木&r上，用桶/碗右键漏斗即可缓慢收集胶乳"
+				"它的效率计算规则有点复杂...如果你不想研究，可以直接翻页查看&6最小最省密堆单元&r"
+				"{@pagebreak}"
+				"{image:cmi:textures/images/example/rubber.png width:199 height:112 align:center fit:true}"
+				"去皮橡胶原木周围26格内（以其为中心，边长3格的正方体范围内）&4不要&r放第二个去皮橡胶原木，会扣效率"
+			]
+			id: "29ACEBA79B437ADD"
+			subtitle: "提取橡胶"
+			tasks: [{
+				id: "06FDE6DA1BF7BCE7"
+				item: "treetap:tap"
+				type: "item"
+			}]
+			x: -17.5d
 			y: 19.5d
+		}
+		{
+			dependencies: ["29C10567663F027F"]
+			id: "45EFA2C8267E8293"
+			tasks: [{
+				id: "1B0101C03DFCEB65"
+				item: "cmi:copper_mechanism_basement"
+				type: "item"
+			}]
+			x: -7.5d
+			y: 18.5d
+		}
+		{
+			dependencies: ["29C10567663F027F"]
+			id: "551A2E50E2232A77"
+			tasks: [{
+				id: "1932EE031FE934E8"
+				item: "create:fluid_pipe"
+				type: "item"
+			}]
+			x: -7.5d
+			y: 20.5d
+		}
+		{
+			dependencies: [
+				"2EE13016985061C5"
+				"50B5CFD57763580A"
+				"664B44589F807708"
+				"14FCB2B036726682"
+			]
+			icon: "cmi:cured_rubber_bucket"
+			id: "3D4750217EE8ECD1"
+			tasks: [{
+				id: "367793F8DFF295ED"
+				title: "熔融硫化橡胶"
+				type: "checkmark"
+			}]
+			x: -11.5d
+			y: 20.5d
 		}
 	]
 	title: "巧械奇工"
