@@ -36,7 +36,7 @@ e3906e1b5cc33ad9ff930fc65b316564a3059fbf	mods/createbetterfps-1.20.1-1.1.2.jar	h
 3bebfb40c2d232ac69214126012dd28106c3a917	mods/bigcontraptions-1.0.jar	https://edge.forgecdn.net/files/5108/576/bigcontraptions-1.0.jar	curseforge:877334	
 0b086193c1df819730ca6c06d5de3c7a8ed3b4f3	mods/create_central_kitchen-1.20.1-for-create-6.0.8-1.5.1.jar	https://edge.forgecdn.net/files/8760/859/create_central_kitchen-1.20.1-for-create-6.0.8-1.5.1.jar	curseforge:820977	
 98b4a41c452476496713df16ce4d52fc9f476508	mods/create_connected-1.2.3-mc1.20.1-all.jar	https://edge.forgecdn.net/files/8290/615/create_connected-1.2.3-mc1.20.1-all.jar	curseforge:947914	
-d200f128f6afad90d6f060fcd49525d34c10eded	mods/createcoolingfan-forge-1.20.1-1.1.1.jar	https://edge.forgecdn.net/files/8904/998/createcoolingfan-forge-1.20.1-1.1.1.jar	curseforge:1603577	mods/createcoolingfan-forge-1.20.1-1.3.0.jar
+b0dcd905c0ce2e22561881537235f67cce3d23dc	mods/createcoolingfan-forge-1.20.1-1.3.0.jar	https://edge.forgecdn.net/files/8615/633/createcoolingfan-forge-1.20.1-1.3.0.jar	curseforge:1603577	mods/createcoolingfan-forge-1.20.1-1.1.1.jar
 0aab00450801572cd81fdf3d30221bfc4827a9dc	mods/create_jetpack_curios-1.2.0-forge-1.20.1.jar	https://edge.forgecdn.net/files/5887/734/create_jetpack_curios-1.2.0-forge-1.20.1.jar	curseforge:1057194	
 8e345f8aa5f50af65123feb60dc1aa11303f8390	mods/CreateCyberGoggles-1.20.1-7.2.3-Forge.jar	https://edge.forgecdn.net/files/8622/914/CreateCyberGoggles-1.20.1-7.2.3-Forge.jar	curseforge:1233804	
 54c8ad5686b846310bca9e69982a455e668dede3	mods/createdeco-2.0.3-1.20.1-forge.jar	https://edge.forgecdn.net/files/6373/226/createdeco-2.0.3-1.20.1-forge.jar	curseforge:509285	
@@ -96,7 +96,7 @@ d551ff55814cfb01403b812459ee5a02b020d87b	mods/Iceberg-1.20.1-forge-1.1.25.jar	ht
 9eacd407b7dea636d375dc47335d92f616484ea2	mods/ImmediatelyFast-Forge-1.5.5+1.20.4.jar	https://edge.forgecdn.net/files/8348/481/ImmediatelyFast-Forge-1.5.5%2B1.20.4.jar	curseforge:686911	
 dceb59fc5dbfa30625bfa56256480708e0c58419	mods/immersive_aircraft-1.5.0+1.20.1-forge.jar	https://edge.forgecdn.net/files/8865/821/immersive_aircraft-1.5.0%2B1.20.1-forge.jar	curseforge:666014	
 b6e403e0e5be1802268be366ad1a7791f07fb793	mods/ImmersiveEngineering-1.20.1-10.2.0-183.jar	https://edge.forgecdn.net/files/6206/989/ImmersiveEngineering-1.20.1-10.2.0-183.jar	curseforge:231951	
-acae8554a8cd9c5088ef581fcae71d3ceecb555b	mods/immersivefixes-1.6.1.jar	https://edge.forgecdn.net/files/8494/332/immersivefixes-1.6.1.jar	curseforge:1326199	
+f38e1754f4d8dd97efa014aac2f69786cbaa7437	mods/immersivefixes-1.7.0.jar	https://edge.forgecdn.net/files/8905/564/immersivefixes-1.7.0.jar	curseforge:1326199	mods/immersivefixes-1.6.1.jar
 b66280cebb97cada77bd2f94bead864bf492e6a9	mods/ImmersiveIndustry-1.20.1-0.2.4.jar	https://edge.forgecdn.net/files/7530/803/ImmersiveIndustry-1.20.1-0.2.4.jar	curseforge:542053	
 f1e375ce040ead55f9ac35cf7350d6f1082148db	mods/immersive_machinery-0.2.1+1.20.1-forge.jar	https://edge.forgecdn.net/files/8846/276/immersive_machinery-0.2.1%2B1.20.1-forge.jar	curseforge:1068736	
 5f291f96a2cb7001978529ab9944769ed1433af3	mods/Industrial Platform-1.20.1-1.8.0.jar	https://edge.forgecdn.net/files/8157/752/Industrial%20Platform-1.20.1-1.8.0.jar	curseforge:1350900	
@@ -109,9 +109,8 @@ f54caa33a63d699722b56e4b540adce74e5106fa	mods/jei_plus_plus-1.0.5-1.20.1.jar	htt
 bfed31fa3defb09f8890890a91359ef4ab8623e0	mods/jei-1.20.1-forge-15.59.0.212.jar	https://edge.forgecdn.net/files/8895/264/jei-1.20.1-forge-15.59.0.212.jar	curseforge:238222	
 a2d05f0e70ac59ea44f44642f94c0f99f4e80417	mods/jupiter-2.3.7-1.20.1-forge.jar	https://edge.forgecdn.net/files/7738/299/jupiter-2.3.7-1.20.1-forge.jar	curseforge:1072905	
 7792b3b92e0a91e7ca9b54446590bb0466ff98e6	mods/jecharacters-1.20.1-forge-4.6.11.jar	https://edge.forgecdn.net/files/8771/525/jecharacters-1.20.1-forge-4.6.11.jar	curseforge:250702	
-b059217831d8c8f16ccda3df97c5eca676e9418a	mods/kaleidoscope_compat-2.6.5-forge+mc1.20.1.jar	https://edge.forgecdn.net/files/8462/133/kaleidoscope_compat-2.6.5-forge%2Bmc1.20.1.jar	curseforge:1580791	
 eb5feb59870574c6f65a3f5a29c8c7a3b187b63e	mods/kaleidoscopecookery_automation-1.0.1.jar	https://edge.forgecdn.net/files/7685/895/kaleidoscopecookery_automation-1.0.1.jar	curseforge:1467064	
-21dbbe0e97966b38bbfd5a45287d7f463dfe0436	mods/kaleidoscopecookery-1.4.1-forge+mc1.20.1.jar	https://edge.forgecdn.net/files/8266/769/kaleidoscopecookery-1.4.1-forge%2Bmc1.20.1.jar	curseforge:1309203	
+00d46464ba3f975735b554fca600a513218e2bc3	mods/kaleidoscopecookery-1.5.0-forge+mc1.20.1.jar	https://edge.forgecdn.net/files/8910/14/kaleidoscopecookery-1.5.0-forge%2Bmc1.20.1.jar	curseforge:1309203	mods/kaleidoscopecookery-1.4.1-forge+mc1.20.1.jar
 4998ecd33f97f11dbec4d256fa424502de553aa8	mods/kaleidoscope_end-1.0.14-forge+mc1.20.1.jar	https://edge.forgecdn.net/files/8323/717/kaleidoscope_end-1.0.14-forge%2Bmc1.20.1.jar	curseforge:1456076	
 ad07ae00e6a1d9270fda145fb72c3fb87fc80473	mods/kaleidoscope_nether-1.1.8-forge+mc1.20.1.jar	https://edge.forgecdn.net/files/8252/557/kaleidoscope_nether-1.1.8-forge%2Bmc1.20.1.jar	curseforge:1417862	
 2e8f6370fb4acae9796705b6e84716c4a398b9c5	mods/kaleidoscopetavern-1.2.0-forge+mc1.20.1.jar	https://edge.forgecdn.net/files/8350/841/kaleidoscopetavern-1.2.0-forge%2Bmc1.20.1.jar	curseforge:1475175	
@@ -189,9 +188,9 @@ c6a8b553bc95a39b16af4d272c8afccf6df55d70	mods/smartercontraptionstorage-1.20.1-6
 b4d4caae7a79ad13f10ad1948e48b17fabae90a4	mods/SophisticatedSorter-forge-1.20.1-1.1.1.jar	https://edge.forgecdn.net/files/8879/811/SophisticatedSorter-forge-1.20.1-1.1.1.jar	curseforge:1375092	
 f7fa1fd0c633b10f98d7f0f97766b95aac1a2dc0	mods/solcarrot-1.20.1-1.15.1.jar	https://edge.forgecdn.net/files/4888/575/solcarrot-1.20.1-1.15.1.jar	curseforge:277616	
 ec567d383778b35f8f5c85f0bc55ecf389682336	mods/tconstruct_js-1.0.6.jar	https://edge.forgecdn.net/files/8352/452/tconstruct_js-1.0.6.jar	curseforge:1210790	
-719999a5c4172ac4e59ae43f0c33132e9fd7c570	mods/thermalconstruct-1.20.1-0.0.5.jar	https://edge.forgecdn.net/files/8902/176/thermalconstruct-1.20.1-0.0.5.jar	curseforge:1280482	mods/thermalconstruct-1.20.1-0.0.4.jar
+719999a5c4172ac4e59ae43f0c33132e9fd7c570	mods/thermalconstruct-1.20.1-0.0.5.jar	https://edge.forgecdn.net/files/8902/176/thermalconstruct-1.20.1-0.0.5.jar	curseforge:1280482	
 c79fe5b922653d109cdcee45f4bca24c86daf6c0	mods/thermal_expansion-1.20.1-11.0.1.29.jar	https://edge.forgecdn.net/files/5372/749/thermal_expansion-1.20.1-11.0.1.29.jar	curseforge:69163	
-53a6271a645882009d2e52ef2803cdf3296b19dc	mods/ThermalExtra-3.3.1-1.20.1.jar	https://edge.forgecdn.net/files/7926/122/ThermalExtra-3.3.1-1.20.1.jar	curseforge:573674	
+d1c1009562e353071d97b2b14757cdd3a3d2092d	mods/ThermalExtra-3.3.2-1.20.1.jar	https://edge.forgecdn.net/files/8911/740/ThermalExtra-3.3.2-1.20.1.jar	curseforge:573674	mods/ThermalExtra-3.3.1-1.20.1.jar
 7c1fbd79c9bda7478560faa886eaadf0dd8d181f	mods/thermal_foundation-1.20.1-11.0.6.70.jar	https://edge.forgecdn.net/files/5443/583/thermal_foundation-1.20.1-11.0.6.70.jar	curseforge:222880	
 5c6881416ff4fb116d05f4a48acf12b30f10af82	mods/thermal_innovation-1.20.1-11.0.1.23.jar	https://edge.forgecdn.net/files/5372/751/thermal_innovation-1.20.1-11.0.1.23.jar	curseforge:291737	
 8d6ecb5e6c8b7dc0a95eeaba012c6bcd1b75e77d	mods/thermal_integration-1.20.1-11.0.1.27.jar	https://edge.forgecdn.net/files/5374/210/thermal_integration-1.20.1-11.0.1.27.jar	curseforge:626708	

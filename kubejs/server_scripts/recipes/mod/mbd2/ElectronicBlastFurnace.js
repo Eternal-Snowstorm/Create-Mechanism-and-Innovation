@@ -27,5 +27,4 @@ ServerEvents.recipes((event) => {
 		.outputItems("cmi:composite_magnetic_conduction_plate")
 		.inputFE(114514)
 		.duration(20 * 3)
-
 })

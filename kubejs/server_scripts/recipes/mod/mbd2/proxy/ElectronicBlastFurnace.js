@@ -1,13 +1,20 @@
-let $MBDFluidIngredient =
-	Java.loadClass("dev.celestiacraft.cmi.compat.mbd2.MBDFluidIngredient")
-
+// priority: -100
+//
+// 必须最后加载.
+//
+// ServerEvents.recipes 的各个回调是按"脚本加载顺序"依次执行的, 而 KubeJS 是按
+// 文件系统遍历顺序读脚本的, recipes/RemoveAll.js 这类删除脚本反而排在
+// recipes/mod/mbd2/proxy/* 之后才跑. 之前代理脚本执行时删除 / 覆盖都还没发生,
+// 于是把已经失效的配方也一起代理了.
+// priority 越小加载越晚, -100 保证所有删除 / 覆盖 / 替换脚本都执行完毕.
 ServerEvents.recipes((event) => {
-	proxyArcFurnace(event)
-	proxyMelting(event)
-	proxyAlloy(event)
-	proxyAlloying(event)
-	proxyCarKiln(event)
-	proxyRotaryKiln(event)
+	// 逐个兜错: 一个代理抛异常不该把后面几个一起带走
+	safeProxy("ebf/arc_furnace", event, proxyArcFurnace)
+	safeProxy("ebf/melting", event, proxyMelting)
+	safeProxy("ebf/alloy", event, proxyAlloy)
+	safeProxy("ebf/alloying", event, proxyAlloying)
+	safeProxy("ebf/car_kiln", event, proxyCarKiln)
+	safeProxy("ebf/rotary_kiln", event, proxyRotaryKiln)
 })
 
 /**
@@ -17,21 +24,26 @@ ServerEvents.recipes((event) => {
 function proxyArcFurnace(event) {
 	let { cmi } = event.getRecipes()
 
-	event.forEachRecipe({
-		type: "immersiveengineering:arc_furnace"
-	}, (recipe) => {
+	forEachLiveRecipe(event, "immersiveengineering:arc_furnace", (recipe) => {
 		let json = sourceJsonOf(recipe)
 		let id = recipe.getId()
+		let results = jsonArrayOf(json, "results")
+
+		// 没有产物的话代理过去也是坏配方
+		if (results == null) {
+			console.warn(`[MBD2 Proxy] Skipping arc_furnace recipe without results: ${id}`)
+			return
+		}
 
 		let builder = cmi.electronic_blast_furnace()
 
 		addIngredient(builder, json.get("input"))
 
 		if (json.has("additives")) {
-			addIngredients(builder, json.get("additives").getAsJsonArray())
+			addIngredients(builder, jsonArrayOf(json, "additives"))
 		}
 
-		addResults(builder, json.get("results").getAsJsonArray())
+		addResults(builder, results)
 
 		builder.duration(getInt(json, "time", 200))
 			.perTick((recipe) => {
@@ -51,7 +63,7 @@ function proxyArcFurnace(event) {
 function proxyMelting(event) {
 	let { cmi } = event.getRecipes()
 
-	forEachOriginalRecipe(event, "tconstruct:melting", (recipe) => {
+	forEachLiveRecipe(event, "tconstruct:melting", (recipe) => {
 		let json = sourceJsonOf(recipe)
 		let id = recipe.getId()
 		let ingredientJson = json.get("ingredient")
@@ -66,9 +78,7 @@ function proxyMelting(event) {
 
 		addFluidResult(builder, json.get("result"))
 
-		if (json.has("byproducts")) {
-			addFluidResults(builder, json.get("byproducts").getAsJsonArray())
-		}
+		addFluidResults(builder, jsonArrayOf(json, "byproducts"))
 
 		builder.duration(getInt(json, "time", 100))
 			.id(`${id}_mbd2_proxy`)
@@ -82,17 +92,19 @@ function proxyMelting(event) {
 function proxyAlloy(event) {
 	let { cmi } = event.getRecipes()
 
-	event.forEachRecipe({
-		type: "tconstruct:alloy"
-	}, (recipe) => {
+	forEachLiveRecipe(event, "tconstruct:alloy", (recipe) => {
 		let json = sourceJsonOf(recipe)
 		let id = recipe.getId()
+		let inputs = jsonArrayOf(json, "inputs")
+
+		if (inputs == null) {
+			console.warn(`[MBD2 Proxy] Skipping alloy recipe without inputs: ${id}`)
+			return
+		}
 
 		let builder = cmi.electronic_blast_furnace()
 
-		let inputs = json.get("inputs")
-
-		addFluidIngredients(builder, inputs.getAsJsonArray())
+		addFluidIngredients(builder, inputs)
 
 		addFluidResult(builder, json.get("result"))
 
@@ -105,22 +117,10 @@ function proxyAlloy(event) {
  * @param {Internal.RecipesEventJS_} event
  */
 function proxyAlloying(event) {
-	// 数据包/原有的 ad_astra:alloying 配方
-	forEachOriginalRecipe(event, "ad_astra:alloying", (recipe) => {
+	forEachLiveRecipe(event, "ad_astra:alloying", (recipe) => {
 		proxyAlloyingRecipe(event, recipe)
 	})
-
-	// 手写的 event.custom ad_astra:alloying 配方在 addedRecipes 里
-	for (let recipe of event.addedRecipes) {
-		if (String(recipe.getType()) === "ad_astra:alloying") {
-			proxyAlloyingRecipe(event, recipe)
-		}
-	}
 }
-
-ServerEvents.recipes((event) => {
-	let { cmi } = event.getRecipes()
-})
 
 /**
  * @param {Internal.RecipesEventJS_} event
@@ -129,9 +129,18 @@ ServerEvents.recipes((event) => {
 function proxyAlloyingRecipe(event, recipe) {
 	let { cmi } = event.getRecipes()
 	let json = sourceJsonOf(recipe)
+	let id = String(recipe.getId())
 
-	// Ad Astra 的 result 是 {count, id} 而不是 {item, count}, 单独按 id 匹配
-	let result = json.get("result").getAsJsonObject()
+	let result = json != null
+		&& json.has("result")
+		? json.get("result").getAsJsonObject()
+		: null
+
+	if (result == null || !result.has("id")) {
+		console.warn(`[MBD2 Proxy] Skipping malformed ad_astra:alloying recipe: ${id}`)
+		return
+	}
+
 	let outputId = result.get("id").getAsString()
 	let count = getInt(result, "count", 1)
 
@@ -139,7 +148,7 @@ function proxyAlloyingRecipe(event, recipe) {
 
 	builder.outputItems(stackString(outputId, count))
 
-	addIngredients(builder, json.get("ingredients").getAsJsonArray())
+	addIngredients(builder, jsonArrayOf(json, "ingredients"))
 
 	builder.duration(getInt(json, "cookingtime", 100))
 		.perTick((recipe) => {
@@ -157,11 +166,15 @@ function proxyAlloyingRecipe(event, recipe) {
 function proxyCarKiln(event) {
 	let { cmi } = event.getRecipes()
 
-	event.forEachRecipe({
-		type: "immersiveindustry:car_kiln"
-	}, (recipe) => {
+	forEachLiveRecipe(event, "immersiveindustry:car_kiln", (recipe) => {
 		let json = sourceJsonOf(recipe)
 		let id = recipe.getId()
+		let results = jsonArrayOf(json, "results")
+
+		if (results == null) {
+			console.warn(`[MBD2 Proxy] Skipping car_kiln recipe without results: ${id}`)
+			return
+		}
 
 		let builder = cmi.electronic_blast_furnace()
 
@@ -171,9 +184,7 @@ function proxyCarKiln(event) {
 		}
 
 		// 多物品输入
-		if (json.has("inputs")) {
-			addIngredients(builder, json.get("inputs").getAsJsonArray())
-		}
+		addIngredients(builder, jsonArrayOf(json, "inputs"))
 
 		// 流体输入
 		if (json.has("input_fluid")) {
@@ -181,7 +192,7 @@ function proxyCarKiln(event) {
 		}
 
 		// 输出
-		addResults(builder, json.get("results").getAsJsonArray())
+		addResults(builder, results)
 
 		builder.duration(getInt(json, "time", 200))
 			.perTick((recipe) => {
@@ -197,9 +208,7 @@ function proxyCarKiln(event) {
 function proxyRotaryKiln(event) {
 	let { cmi } = event.getRecipes()
 
-	event.forEachRecipe({
-		type: "immersiveindustry:rotary_kiln"
-	}, (recipe) => {
+	forEachLiveRecipe(event, "immersiveindustry:rotary_kiln", (recipe) => {
 		let json = sourceJsonOf(recipe)
 		let id = recipe.getId()
 
@@ -250,20 +259,6 @@ function getFloat(json, key, fallback) {
  */
 function sourceJsonOf(recipe) {
 	return recipe.originalJson == null ? recipe.json : recipe.originalJson
-}
-
-/**
- * 
- * @param {Internal.RecipesEventJS_} event
- * @param {string} type
- * @param {Internal.Consumer_<Internal.RecipeJS_} consumer
- */
-function forEachOriginalRecipe(event, type, consumer) {
-	for (let recipe of event.originalRecipes.values()) {
-		if (String(recipe.getType()) === type) {
-			consumer(recipe)
-		}
-	}
 }
 
 /**
@@ -379,13 +374,13 @@ function inputFluidOf(entry) {
 	if (json.has("tag") && json.has("amount")) {
 		let tag = json.get("tag").getAsString()
 
-		return $MBDFluidIngredient.ofTagId(tag, amount)
+		return MBDFluidIngredient.ofTagId(tag, amount)
 	}
 
 	if (json.has("fluidTag")) {
 		let fluidTag = json.get("fluidTag").getAsString()
 
-		return $MBDFluidIngredient.ofTagId(fluidTag, amount)
+		return MBDFluidIngredient.ofTagId(fluidTag, amount)
 	}
 
 	return null
@@ -411,7 +406,7 @@ function outputFluidOf(entry) {
 	if (json.has("tag") && json.has("amount")) {
 		let tag = json.get("tag").getAsString()
 
-		return $MBDFluidIngredient.ofTagId(tag, amount)
+		return MBDFluidIngredient.ofTagId(tag, amount)
 	}
 
 	return null
@@ -455,6 +450,11 @@ function addIngredient(builder, entry) {
  * @param {Internal.JsonElement_} entry
  */
 function addIngredients(builder, ingredients) {
+	// 现在遍历范围包含 addedRecipes, 兜一下空值, 避免一条怪配方把整轮代理全部中断
+	if (ingredients == null) {
+		return
+	}
+
 	for (let ingredient of ingredients) {
 		addIngredient(builder, ingredient)
 	}
@@ -479,6 +479,10 @@ function addFluidIngredient(builder, entry) {
  * @param {Internal.JsonArray_} ingredients
  */
 function addFluidIngredients(builder, ingredients) {
+	if (ingredients == null) {
+		return
+	}
+
 	for (let entry of ingredients) {
 		addFluidIngredient(builder, entry)
 	}
@@ -525,6 +529,10 @@ function addResult(builder, entry) {
  * @param {Internal.JsonArray_} results
  */
 function addResults(builder, results) {
+	if (results == null) {
+		return
+	}
+
 	for (let entry of results) {
 		addResult(builder, entry)
 	}
@@ -549,6 +557,10 @@ function addFluidResult(builder, entry) {
  * @param {Internal.JsonArray_} results
  */
 function addFluidResults(builder, results) {
+	if (results == null) {
+		return
+	}
+
 	for (let entry of results) {
 		addFluidResult(builder, entry)
 	}

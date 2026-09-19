@@ -32,6 +32,10 @@ ServerEvents.recipes((event) => {
 					INGOT,
 					"cmi:plate_mold"
 				])
+				thermal.press(OUTPUT, [
+					INGOT,
+					"cmi:plate_clay_mold"
+				])
 				immersiveengineering.metal_press(PLATE)
 					.input(INGOT)
 					.mold("cmi:plate_mold")

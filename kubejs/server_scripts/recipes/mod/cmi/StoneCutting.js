@@ -8,4 +8,12 @@ ServerEvents.recipes((event) => {
 			minecraft.stonecutting(id, "#minecraft:wool")
 			minecraft.stonecutting(id, "#cmi:dev_doll")
 		})
+
+	// 黏土模具
+	Ingredient.of("#cmi:clay_molds")
+		.getItemIds()
+		.forEach((mold) => {
+			minecraft.stonecutting(mold, "#cmi:clay_molds")
+		})
+
 })

@@ -12,39 +12,6 @@
 	quests: [
 		{
 			description: [
-				"妈的, 烧的真他妈充分."
-				"要不是紧急逃生仓, 我怕是也和这船体一样支离破碎了. "
-				"空气含氧量34%, 地表重力加速度10.28m*s^-2, 有地球生物存活...啊, 这就是伊甸了. "
-				"重力, 我操的只是略不正常, 比上次那个巴...巴兰尼科夫先生发现的星球好太多了."
-				"既然这样, 得赶紧想办法活下去, 才能争取与地球的通讯..."
-			]
-			disable_toast: true
-			icon: {
-				Count: 1
-				id: "ad_astra:tier_4_rocket"
-				tag: { }
-			}
-			id: "21ED583750523195"
-			rewards: [{
-				count: 64
-				id: "7921A777ABA1D383"
-				item: "minecraft:cooked_beef"
-				type: "item"
-			}]
-			shape: "gear"
-			size: 1.8d
-			subtitle: "紧急求助!紧急求助!"
-			tasks: [{
-				id: "22D0220F20C29089"
-				title: "从航天事故生还"
-				type: "checkmark"
-			}]
-			title: "劫后余生"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: [
 				"思索(Ponder)是伟大的工程师&bSimibubi&r发明出来用于传递知识的仪式——直观的演示胜于千言万语"
 				"我把我所知道的经验都编织为了思索, 当你&e对着某些物品按住[W]&r时, 你就能和仪式建立连接"
 				""
@@ -63,12 +30,6 @@
 			disable_toast: true
 			icon: "create:empty_schematic"
 			id: "1EA33F05E5B01612"
-			rewards: [{
-				count: 16
-				id: "2D13E4A26211EAD7"
-				item: "minecraft:cooked_beef"
-				type: "item"
-			}]
 			shape: "hexagon"
 			subtitle: "这些是辅助你通关的工具"
 			tasks: [{
@@ -77,26 +38,13 @@
 			}]
 			title: "关于思索, 任务和JEI"
 			x: 2.0d
-			y: -4.0d
+			y: -5.5d
 		}
 		{
 			description: ["整合包内添加了些许彩蛋, 这些彩蛋里有开发组的恶趣味, 也有让玩家更舒服的内容. 但是希望大家发现一个彩蛋后还请&l&c不要声张&r&r! 当彩蛋不再是彩蛋那它便失去了它作为彩蛋的意义了!"]
 			disable_toast: true
 			icon: "create:wrench"
 			id: "16E08617F49E62A9"
-			rewards: [
-				{
-					id: "4271BF34E3F04113"
-					type: "xp"
-					xp: 100
-				}
-				{
-					count: 8
-					id: "742154C82A2045CF"
-					item: "minecraft:cooked_beef"
-					type: "item"
-				}
-			]
 			shape: "hexagon"
 			subtitle: "还请大家保密!"
 			tasks: [{
@@ -105,26 +53,13 @@
 				type: "checkmark"
 			}]
 			title: "关于彩蛋"
-			x: 5.0d
+			x: 3.5d
 			y: -2.5d
 		}
 		{
 			disable_toast: true
 			icon: "create:steam_engine"
 			id: "1970EFE7924032F0"
-			rewards: [
-				{
-					id: "433BB8C77D51C434"
-					type: "xp"
-					xp: 100
-				}
-				{
-					count: 4
-					id: "07F15332DAC93775"
-					item: "minecraft:cooked_beef"
-					type: "item"
-				}
-			]
 			shape: "hexagon"
 			subtitle: "当前版本:Beta-2.5.0"
 			tasks: [{
@@ -154,19 +89,6 @@
 			disable_toast: true
 			icon: "cmi:re_construction"
 			id: "04615C350964977A"
-			rewards: [
-				{
-					id: "7B2A097158E9272F"
-					type: "xp"
-					xp: 100
-				}
-				{
-					count: 4
-					id: "2C2A9E5C2CE8A725"
-					item: "minecraft:cooked_beef"
-					type: "item"
-				}
-			]
 			shape: "hexagon"
 			subtitle: "整合包开发团队"
 			tasks: [{
@@ -174,7 +96,7 @@
 				type: "checkmark"
 			}]
 			title: "CMI开发团队"
-			x: 3.5d
+			x: 2.0d
 			y: -4.0d
 		}
 		{
@@ -187,11 +109,6 @@
 			]
 			icon: "ftbquests:book"
 			id: "79AA74F5F585BC6B"
-			rewards: [{
-				id: "37AA8EF9463A9990"
-				item: "farmersdelight:steak_and_potatoes"
-				type: "item"
-			}]
 			shape: "hexagon"
 			subtitle: "未完成, 请注意"
 			tasks: [{
@@ -465,12 +382,6 @@
 				}
 			}
 			id: "5A4FC2CACB726A2B"
-			rewards: [{
-				count: 64
-				id: "5EA3431C9FE56D19"
-				item: "minecraft:cooked_beef"
-				type: "item"
-			}]
 			shape: "hexagon"
 			subtitle: "和平发育还是战斗爽?"
 			tasks: [{
@@ -491,12 +402,6 @@
 			]
 			icon: "minecraft:apple"
 			id: "30ED8BD20D50F96D"
-			rewards: [{
-				count: 4
-				id: "511E5FE18D4DEEBD"
-				item: "minecraft:cooked_beef"
-				type: "item"
-			}]
 			shape: "hexagon"
 			subtitle: "他们是制作整合包时提供了帮助的人"
 			tasks: [{
@@ -504,10 +409,11 @@
 				title: "致谢名单"
 				type: "checkmark"
 			}]
-			x: 3.5d
+			x: 5.0d
 			y: -2.5d
 		}
 		{
+			icon: "create:goggles"
 			id: "405D0556F11BCE2C"
 			shape: "hexagon"
 			subtitle: "感谢游玩&6机械动力:构件与革新&f！"
@@ -548,81 +454,6 @@
 			}]
 			x: -1.5d
 			y: -7.0d
-		}
-		{
-			description: [
-				"这是一把很普通的弓, 它的韧性和柔度较好, 可以快速拉满射出紫水晶晶簇, 为您提供基础的防身. "
-				"如果您碰到由热力系列(指名道姓&c狂风人&r和&c岩石人&r)添加的拥有远程攻击能力的怪物, 就用它进行反击吧. "
-				"橡胶木板可以用于修复这把弓, 请一定要活下去. "
-			]
-			icon: {
-				Count: 1
-				id: "minecraft:iron_sword"
-				tag: {
-					Damage: 0
-				}
-			}
-			id: "41A9A5F81771CD4F"
-			rewards: [
-				{
-					id: "1AED3A4B90A6614F"
-					item: {
-						Count: 1
-						id: "tconstruct:longbow"
-						tag: {
-							Damage: 0
-							owner: [I;
-								290990735
-								69617159
-								-1729868015
-								-1156403660
-							]
-							tic_broken: 0b
-							tic_materials: [
-								"cmi:rubberwood"
-								"cmi:rubberwood"
-								"cmi:amethyst"
-								"cmi:rope"
-							]
-							tic_modifiers: [{
-								level: 1
-								name: "tconstruct:crystalshot"
-							}]
-							tic_multipliers: {
-								"tconstruct:durability": 1.5f
-							}
-							tic_persistent: { }
-							tic_stats: {
-								"tconstruct:accuracy": 0.85f
-								"tconstruct:attack_damage": 3.2f
-								"tconstruct:draw_speed": 1.5f
-								"tconstruct:durability": 351.0f
-								"tconstruct:velocity": 0.8f
-							}
-							tic_volatile_data: {
-								abilities: 1
-								upgrades: 2
-							}
-						}
-					}
-					type: "item"
-				}
-				{
-					count: 16
-					id: "3D333E50E3192974"
-					item: "thermal:rubberwood_planks"
-					title: "修补材料"
-					type: "item"
-				}
-			]
-			subtitle: "就请拿着它走下去吧"
-			tasks: [{
-				id: "4CAC16543EDBED94"
-				title: "如果您处于困境"
-				type: "checkmark"
-			}]
-			x: 3.5d
-			y: -0.5d
 		}
 	]
 	title: "开始"

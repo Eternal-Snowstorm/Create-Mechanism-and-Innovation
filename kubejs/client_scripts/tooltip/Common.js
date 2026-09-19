@@ -41,6 +41,7 @@ ItemEvents.tooltip((event) => {
 	addCommonTooltip("#railways:filled_paint_pitchers")
 	addCommonTooltip("cmi:steam_cast_iron_upgrade")
 	addCommonTooltip("cmi:steam_steel_upgrade")
+	addCommonTooltip("#cmi:clay_molds")
 
 	/**
 	 * 
