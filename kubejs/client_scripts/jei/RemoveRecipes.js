@@ -23,20 +23,6 @@ JEIEvents.removeRecipes((event) => {
 		"cmi:blasting/steel_ingot/stockpot_lid_manual_only",
 	])
 
-	if (ids.contains("custommachinery:custom_machine")) {
-		removeRecipeFromJEI("custommachinery:custom_machine", [
-			"torcherino:torcherino",
-			"torcherino:lanterino",
-			"torcherino:lantern",
-			"torcherino:compressed_torcherino",
-			"torcherino:compressed_lanterino",
-			"torcherino:compressed_lantern",
-			"torcherino:double_compressed_torcherino",
-			"torcherino:double_compressed_lanterino",
-			"torcherino:double_compressed_lantern"
-		])
-	}
-
 	const RAILWAYS_COLOR_GROUP = [
 		"black",
 		"blue",
@@ -113,5 +99,4 @@ JEIEvents.removeRecipes((event) => {
 			`railways:mixing/palettes/dyeing/${color}_locometal_vent`
 		])
 	})
-
 })
