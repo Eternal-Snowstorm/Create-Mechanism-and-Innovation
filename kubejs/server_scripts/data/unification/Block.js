@@ -90,6 +90,23 @@ ServerEvents.highPriorityData((event) => {
 		"immersiveengineering:coil_hv"
 	], "cmi:steel_coil")
 
+	// 齿轮
+	let cogwheelTypes = [
+		"bronze",
+		"cast_iron",
+		"steel"
+	]
+
+	cogwheelTypes.forEach((type) => {
+		addUnification(`${type}_cogwheel`, [
+			`steampowered:${type}_cogwheel`
+		], `cmi:${type}_cogwheel`)
+
+		addUnification(`${type}_large_cogwheel`, [
+			`steampowered:${type}_large_cogwheel`
+		], `cmi:${type}_large_cogwheel`)
+	})
+
 	/**
 	 * 
 	 * @param {string} name
