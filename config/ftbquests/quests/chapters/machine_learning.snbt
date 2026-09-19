@@ -1122,6 +1122,11 @@
 				"去皮橡胶原木周围26格内（以其为中心，边长3格的正方体范围内）&4不要&r放第二个去皮橡胶原木，会扣效率"
 			]
 			id: "29ACEBA79B437ADD"
+			rewards: [{
+				id: "269286154577B97A"
+				item: "treetap:tap"
+				type: "item"
+			}]
 			subtitle: "提取橡胶"
 			tasks: [{
 				id: "06FDE6DA1BF7BCE7"
