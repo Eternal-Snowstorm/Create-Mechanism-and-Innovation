@@ -20,6 +20,11 @@ ServerEvents.recipes((event) => {
 				"cmi:rod_mold"
 			])
 
+			thermal.press(highPriorityItem(ROD, 2), [
+				INGOT,
+				"cmi:rod_clay_mold"
+			])
+
 			immersiveengineering.metal_press(highPriorityItem(ROD, 2))
 				.input(INGOT)
 				.mold("cmi:rod_mold")

@@ -13,6 +13,11 @@ ServerEvents.recipes((event) => {
 				"cmi:coin_mold"
 			])
 
+			thermal.press(highPriorityItem(COIN, 3), [
+				INGOT,
+				"cmi:coin_clay_mold"
+			])
+
 			immersiveengineering.metal_press(highPriorityItem(COIN, 3))
 				.input(INGOT)
 				.mold("cmi:coin_mold")

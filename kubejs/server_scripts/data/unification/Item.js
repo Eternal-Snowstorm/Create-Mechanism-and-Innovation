@@ -95,7 +95,8 @@ ServerEvents.highPriorityData((event) => {
 
 	// 杆冲压模板
 	addUnification("rod_mold", [
-		"immersiveengineering:mold_rod"
+		"immersiveengineering:mold_rod",
+		"thermal_extra:press_rod_die"
 	], "cmi:rod_mold")
 
 	// 线冲压模板

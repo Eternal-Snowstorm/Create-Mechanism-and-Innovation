@@ -12,6 +12,11 @@ ServerEvents.recipes((event) => {
 				"cmi:gear_mold"
 			])
 
+			thermal.press(highPriorityItem(GEAR), [
+				`4x ${INGOT}`,
+				"cmi:gear_clay_mold"
+			])
+
 			immersiveengineering.metal_press(GEAR)
 				.input(`4x ${INGOT}`)
 				.mold("cmi:gear_mold")

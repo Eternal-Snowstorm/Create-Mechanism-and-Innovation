@@ -279,4 +279,14 @@ ServerEvents.recipes((event) => {
 		P: "#forge:plates/iron",
 		R: "#create:tracks"
 	}).id("railway_automation:track_placer")
+
+	// 黏土模具
+	kubejs.shapeless("4x cmi:blank_clay_mold", [
+		"minecraft:clay"
+	])
+
+	kubejs.shapeless("cmi:blank_clay_mold", [
+		"minecraft:clay_ball"
+	])
+
 })
