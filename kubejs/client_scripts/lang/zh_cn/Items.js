@@ -357,7 +357,7 @@ ClientEvents.lang("zh_cn", (event) => {
 
 	addItemLang("frost_cake_base", "寒霜蛋糕胚")
 
-	let moleList = [
+	let moldList = [
 		["plate", "板状"],
 		["gear", "齿轮状"],
 		["rod", "棒状"],
@@ -367,10 +367,12 @@ ClientEvents.lang("zh_cn", (event) => {
 		["3x3_packing", "3x3打包"],
 		["unpack", "解包"],
 		["coin", "硬币"],
-		["mechanism", "构件"]
+		["mechanism", "构件"],
+		["blank", "空白"]
 	]
-	moleList.forEach(([name, value]) => {
+	moldList.forEach(([name, value]) => {
 		addItemLang(`${name}_mold`, `${value}模具`)
+		addItemLang(`${name}_clay_mold`, `${value}黏土模具`)
 	})
 
 	addCastItemLang("mechanism", "构件")

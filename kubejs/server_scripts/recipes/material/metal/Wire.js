@@ -16,12 +16,17 @@ ServerEvents.recipes((event) => {
 				PLATE
 			])
 
-			thermal.press(highPriorityItem(WIRE), [
+			thermal.press(highPriorityItem(WIRE, 2), [
 				INGOT,
 				"cmi:wire_mold"
 			])
 
-			immersiveengineering.metal_press(highPriorityItem(WIRE))
+			thermal.press(highPriorityItem(WIRE, 2), [
+				INGOT,
+				"cmi:wire_clay_mold"
+			])
+
+			immersiveengineering.metal_press(highPriorityItem(WIRE, 2))
 				.input(INGOT)
 				.mold("cmi:wire_mold")
 		} else {

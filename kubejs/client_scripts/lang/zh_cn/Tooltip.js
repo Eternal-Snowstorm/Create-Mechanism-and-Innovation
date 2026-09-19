@@ -112,6 +112,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addCommonTooltipLang("#cmi:machine_core", "制作接口时不消耗")
 	addCommonTooltipLang("#forge:tools/wrench", "工作台制作构件时不消耗")
 	addCommonTooltipLang("#railways:filled_paint_pitchers", "此模组的{create:mechanical_mixer, 1}混合搅拌染色配方已被隐藏，你可以用{railways:white_paint_pitcher, 1}白色染色配方类推其他被隐藏的染色配方")
+	addCommonTooltipLang("#cmi:clay_molds", "和普通模具不同, 此模具是一次性的(执行配方会消耗)")
 
 	addCommonTooltipLang("cmi:steam_cast_iron_upgrade", "可用于将青铜蒸汽锅炉部件升级为铸铁材质")
 	addCommonTooltipLang("cmi:steam_steel_upgrade", "可用于将铸铁蒸汽锅炉部件升级为钢材质")
