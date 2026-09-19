@@ -80,6 +80,7 @@ ClientEvents.lang("zh_cn", (event) => {
 
 		event.add(`block.${Cmi.MODID}.molten_${key}`, `熔融${name}`)
 		event.add(`fluid.${Cmi.MODID}.molten_${key}`, `熔融${name}`)
+		event.add(`fluid_type.${Cmi.MODID}.molten_${key}`, `熔融${name}`)
 		event.add(`item.${Cmi.MODID}.molten_${key}_bucket`, `熔融${name}桶`)
 
 		event.add(`item.${Cmi.MODID}.raw_${key}`, `粗${name}`)

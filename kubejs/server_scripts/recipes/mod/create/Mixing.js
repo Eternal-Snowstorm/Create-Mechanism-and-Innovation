@@ -170,9 +170,4 @@ ServerEvents.recipes((event) => {
 		"4x minecraft:gravel",
 		Fluid.of("tconstruct:magma", 1000)
 	]).id("cmi:ae2/transform/tconstruct/nether_grout2")
-
-	// 福鲁伊克斯色ME玻璃线缆
-	create.mixing("8x ae2:fluix_glass_cable", [
-		"4x cmi:fluix_wire"
-	])
 })

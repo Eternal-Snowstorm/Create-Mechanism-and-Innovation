@@ -1,0 +1,69 @@
+filename = 'Ad-Astra-Giselle-Addon-forge-1.20.1-6.24.jar'
+name = 'Ad Astra: Giselle Addon'
+side = 'server'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'forge-1.20.1-6.24.jar'
+
+[download]
+hash = 'dab65770c597e3d1e3e10e0b90306ca54fb034ad'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 8843399
+project-id = 714958
+
+[[x-prismlauncher-dependencies]]
+addonId = '238222'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '1028211'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '624165'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '341284'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '74072'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '268560'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '635042'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '310111'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '281849'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '570073'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '328085'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '704113'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '714059'
+type = 'REQUIRED'
