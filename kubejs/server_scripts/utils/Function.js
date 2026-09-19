@@ -425,12 +425,23 @@ function materializeRecipeJson(recipe) {
  *   3. addedRecipes 里 builder 建的配方 json 还是占位对象 —— 用
  *      materializeRecipeJson 先物化, 否则读出来是空配方甚至直接抛错.
  *
+ * 关键: 按 ID 合并成"一份配方一个 ID", 并且 addedRecipes 优先.
+ * `event.forEachRecipe` 只遍历 originalRecipes, 而"用同一个 ID 重新写一遍配方"
+ * (本整合包里到处都是: `.id("create:mixing/brass_ingot")` 之类) 会把新配方放进
+ * addedRecipes —— 于是同一个 ID 会被遍历两次. 之前 deadIds 用字符串装 ID, 却拿
+ * ResourceLocation 去 has(), 永远匹配不上, 覆盖不掉旧的那份, 结果同一个
+ * `<id>_mbd2_proxy` 被添加两遍, KubeJS 就会刷一屏
+ * "Duplicate added recipe for id ..._mbd2_proxy!" 报错.
+ *
  * @param {Internal.RecipesEventJS_} event 
  * @param {string} type 配方类型 ID
- * @param {function(Internal.RecipeJS_)} consumer 
+ * @param {Internal.Consumer_<Internal.RecipeJS_>} consumer 
  */
 function forEachLiveRecipe(event, type, consumer) {
 	let deadIds = deadOriginalRecipeIds(event)
+
+	// id(String) -> 当前生效的那份配方
+	let liveRecipes = new Map()
 
 	event.forEachRecipe({
 		type: type
@@ -442,7 +453,7 @@ function forEachLiveRecipe(event, type, consumer) {
 			return
 		}
 
-		consumer(recipe)
+		liveRecipes.set(id, recipe)
 	})
 
 	// 先复制一份: 代理配方自身也会写进 addedRecipes,
@@ -464,8 +475,11 @@ function forEachLiveRecipe(event, type, consumer) {
 			continue
 		}
 
-		consumer(recipe)
+		// 同 ID 覆盖: 最终配方表里生效的是 addedRecipes 里的这一份
+		liveRecipes.set(String(recipe.getId()), recipe)
 	}
+
+	liveRecipes.forEach((recipe) => consumer(recipe))
 }
 
 /**
@@ -476,7 +490,7 @@ function forEachLiveRecipe(event, type, consumer) {
  *
  * @param {string} name 
  * @param {Internal.RecipesEventJS_} event 
- * @param {function(Internal.RecipesEventJS_)} fn 
+ * @param {Internal.Consumer_<Internal.RecipesEventJS_>} fn 
  */
 function safeProxy(name, event, fn) {
 	try {

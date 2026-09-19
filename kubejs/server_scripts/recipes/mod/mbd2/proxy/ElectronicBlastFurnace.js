@@ -117,16 +117,10 @@ function proxyAlloy(event) {
  * @param {Internal.RecipesEventJS_} event
  */
 function proxyAlloying(event) {
-	// 数据包里的原有配方 + 手写 event.custom / KubeJS 新建的配方都要代理,
-	// forEachLiveRecipe 已经同时覆盖这两种来源, 并滤掉失效的旧配方
 	forEachLiveRecipe(event, "ad_astra:alloying", (recipe) => {
 		proxyAlloyingRecipe(event, recipe)
 	})
 }
-
-ServerEvents.recipes((event) => {
-	let { cmi } = event.getRecipes()
-})
 
 /**
  * @param {Internal.RecipesEventJS_} event
@@ -137,8 +131,10 @@ function proxyAlloyingRecipe(event, recipe) {
 	let json = sourceJsonOf(recipe)
 	let id = String(recipe.getId())
 
-	// Ad Astra 的 result 是 {count, id} 而不是 {item, count}, 单独按 id 匹配
-	let result = json != null && json.has("result") ? json.get("result").getAsJsonObject() : null
+	let result = json != null
+		&& json.has("result")
+		? json.get("result").getAsJsonObject()
+		: null
 
 	if (result == null || !result.has("id")) {
 		console.warn(`[MBD2 Proxy] Skipping malformed ad_astra:alloying recipe: ${id}`)
