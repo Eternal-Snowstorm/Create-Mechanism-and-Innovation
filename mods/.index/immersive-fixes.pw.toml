@@ -1,19 +1,19 @@
-filename = 'immersivefixes-1.6.1.jar'
+filename = 'immersivefixes-1.7.0.jar'
 name = 'Immersive Fixes'
 side = 'server'
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'immersivefixes-1.6.1.jar'
+x-prismlauncher-version-number = 'immersivefixes-1.7.0.jar'
 
 [download]
-hash = 'acae8554a8cd9c5088ef581fcae71d3ceecb555b'
+hash = 'f38e1754f4d8dd97efa014aac2f69786cbaa7437'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 8494332
+file-id = 8905564
 project-id = 1326199
 
 [[x-prismlauncher-dependencies]]

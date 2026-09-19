@@ -1,7 +1,8 @@
 EntityEvents.spawned("minecraft:lightning_bolt", (event) => {
 	let lightning = event.entity
 	let player = event.getPlayer()
-	let level = event.level
+	let level = event.getLevel()
+
 	/**
 	 * 函数封装
 	 * @param {Internal.ItemStack_} output 输出
