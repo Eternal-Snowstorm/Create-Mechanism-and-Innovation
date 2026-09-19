@@ -65,6 +65,14 @@ ServerEvents.recipes((event) => {
 		.loops(1)
 		.id("expatternprovider:cobblestone_cell")
 
+	// 福鲁伊克斯色ME玻璃线缆
+	kubejs.shaped("4x ae2:fluix_glass_cable", [
+		"AA",
+		"AA"
+	], {
+		A: "cmi:fluix_wire"
+	})
+
 	// 黑曜石元件
 	let obsidianCell = Item.of("cmi:obsidian_cell")
 		.withNBT({
