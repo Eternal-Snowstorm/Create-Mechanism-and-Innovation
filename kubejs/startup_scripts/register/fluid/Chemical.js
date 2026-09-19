@@ -136,4 +136,10 @@ StartupEvents.registry("fluid", (event) => {
 	// 放射性酸溶液
 	addColorFluid("radioactive_acid_solution", 0x052A0B)
 
+	// 复制酶溶液
+	addColorFluid("copy_enzyme_solution", 0xBE8BB0)
+
+	// 固化幻晶
+	addColorFluid("dreamcore_solidified", 0xE8AEFF)
+
 })

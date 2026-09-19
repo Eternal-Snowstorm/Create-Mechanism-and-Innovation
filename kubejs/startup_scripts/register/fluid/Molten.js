@@ -14,4 +14,7 @@ StartupEvents.registry("fluid", (event) => {
 		console.debug(`molten_${name}已注册!`)
 		return builder
 	}
+
+	// 熔融幻晶
+	addColorMaterialFluid("dreamcore_molten", 0xEE8ED7)
 })

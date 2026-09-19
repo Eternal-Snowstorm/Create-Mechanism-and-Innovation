@@ -342,6 +342,31 @@ StartupEvents.registry("item", (event) => {
 		.texture(Cmi.loadResource("item/upgrade/steam/steel"))
 		.tag(Cmi.loadResource("steam_upgrades"))
 
+	// C10
+	// 融冰木碎块
+	addMaterial("glacian_chunk")
+
+	// 重组幻晶
+	addMaterial("dreamcore_rc")
+
+	// 富集幻晶
+	addMaterial("dreamcore_enriched")
+
+	// 电离幻晶
+	addMaterial("dreamcore_electrolized")
+
+	// 源质幻晶
+	addMaterial("dreamcore_source")
+
+	// 热解幻晶
+	addMaterial("dreamcore_pyrolysis")
+
+	// 高能幻晶
+	addMaterial("dreamcore_charged")
+
+	// 革新幻晶
+	addMaterial("dreamcore_i")
+
 	function componentModel(type) {
 		return {
 			"parent": "cmi:item/computing_cell",
