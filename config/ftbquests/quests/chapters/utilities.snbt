@@ -38,20 +38,13 @@
 			description: ["建筑手杖是一种可以快速搭建方块的工具, 搭建冶炼炉或地板时可以发挥大用"]
 			hide_dependency_lines: true
 			id: "794382603730734B"
-			rewards: [
-				{
-					id: "64ED75CE47E67146"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "79AE46FA1AD74FED"
-					table_id: 5841905550488911466L
-					title: "手杖核心"
-					type: "choice"
-				}
-			]
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "79AE46FA1AD74FED"
+				table_id: 5841905550488911466L
+				title: "手杖核心"
+				type: "choice"
+			}]
 			subtitle: "不能拿来抡人"
 			tasks: [{
 				id: "442E57867A50ED37"
@@ -112,19 +105,12 @@
 			]
 			hide_dependency_lines: true
 			id: "48FF030A13CEF66D"
-			rewards: [
-				{
-					id: "175562A991B7D87B"
-					type: "xp"
-					xp: 10
-				}
-				{
-					count: 2
-					id: "22D0AA1B4C1008F6"
-					item: "tconstruct:pig_iron_ingot"
-					type: "item"
-				}
-			]
+			rewards: [{
+				count: 2
+				id: "22D0AA1B4C1008F6"
+				item: "tconstruct:pig_iron_ingot"
+				type: "item"
+			}]
 			subtitle: "这个不可以吃"
 			tasks: [{
 				id: "16474AE01A0452B5"
@@ -144,18 +130,11 @@
 			]
 			hide_dependency_lines: true
 			id: "4CCF561EE0B2C3A6"
-			rewards: [
-				{
-					id: "21FE937F4DD74A9E"
-					type: "xp"
-					xp: 10
-				}
-				{
-					id: "1C0A3CAB47B3DFB6"
-					item: "cmi:amethyst_bronze_upgrade"
-					type: "item"
-				}
-			]
+			rewards: [{
+				id: "1C0A3CAB47B3DFB6"
+				item: "cmi:amethyst_bronze_upgrade"
+				type: "item"
+			}]
 			subtitle: "存储的好手段"
 			tasks: [{
 				id: "50F32AC335DB631E"
@@ -184,18 +163,11 @@
 			]
 			hide_dependency_lines: true
 			id: "645BA6E93229CA27"
-			rewards: [
-				{
-					id: "188377787CFE9304"
-					type: "xp"
-					xp: 10
-				}
-				{
-					id: "7707E934906B6AEC"
-					item: "cmi:amethyst_bronze_upgrade"
-					type: "item"
-				}
-			]
+			rewards: [{
+				id: "7707E934906B6AEC"
+				item: "cmi:amethyst_bronze_upgrade"
+				type: "item"
+			}]
 			subtitle: "没有黄铜时的过滤神器"
 			tasks: [{
 				id: "4DCE9FB6C29C2B4A"
@@ -218,18 +190,11 @@
 				tag: { }
 			}
 			id: "515D545E66315AF9"
-			rewards: [
-				{
-					id: "0165C2212CAAC5E3"
-					type: "xp"
-					xp: 10
-				}
-				{
-					id: "740D6D6B75B3A98A"
-					item: "cmi:amethyst_bronze_upgrade"
-					type: "item"
-				}
-			]
+			rewards: [{
+				id: "740D6D6B75B3A98A"
+				item: "cmi:amethyst_bronze_upgrade"
+				type: "item"
+			}]
 			subtitle: "一种传输方式"
 			tasks: [
 				{
@@ -258,19 +223,12 @@
 			description: ["虚空升级可以让抽屉内的物品超过存储上限后输入进去的物品或流体自动销毁, 在处理极大产量的产线时尤为重要"]
 			hide_dependency_lines: true
 			id: "04D94D6A19BFCAD5"
-			rewards: [
-				{
-					id: "30C8910AB46543E6"
-					type: "xp"
-					xp: 10
-				}
-				{
-					count: 8
-					id: "3C6D28DF35F59A36"
-					item: "minecraft:obsidian"
-					type: "item"
-				}
-			]
+			rewards: [{
+				count: 8
+				id: "3C6D28DF35F59A36"
+				item: "minecraft:obsidian"
+				type: "item"
+			}]
 			subtitle: "妈妈再也不怕我产能过剩了"
 			tasks: [{
 				id: "380D891EA57D8A79"
@@ -293,11 +251,6 @@
 			hide_dependency_lines: true
 			icon: "steampowered:cast_iron_flywheel"
 			id: "38472ADBCFC92083"
-			rewards: [{
-				id: "57B448C721039A9F"
-				type: "xp"
-				xp: 10
-			}]
 			subtitle: "超大应力来源"
 			tasks: [
 				{
@@ -340,11 +293,6 @@
 			hide_dependency_lines: true
 			icon: "steampowered:cast_iron_burner"
 			id: "243EF0B9E933D85A"
-			rewards: [{
-				id: "4A87A56EAFEA81C5"
-				type: "xp"
-				xp: 10
-			}]
 			subtitle: "蒸汽产出设备"
 			tasks: [
 				{
@@ -409,11 +357,6 @@
 			]
 			hide_dependency_lines: true
 			id: "5E52B40EB76B5C84"
-			rewards: [{
-				id: "1BC96651A96CB49B"
-				type: "xp"
-				xp: 10
-			}]
 			subtitle: "清理垃圾和流体的好手段"
 			tasks: [{
 				id: "27B5F94D96D252FE"
@@ -443,11 +386,6 @@
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "7CF3605CD32CCEED"
-			rewards: [{
-				id: "433B4A0FB4FC08AA"
-				type: "xp"
-				xp: 10
-			}]
 			subtitle: "就是正版的加速火把!"
 			tasks: [{
 				id: "5A6E3C313B4A1442"
@@ -466,11 +404,6 @@
 			description: ["搭配输出输入升级使用有奇效"]
 			hide_dependency_lines: true
 			id: "15080FCC44C718DD"
-			rewards: [{
-				id: "4B5E173031563764"
-				type: "xp"
-				xp: 10
-			}]
 			subtitle: "比流体储罐好用一百亿倍"
 			tasks: [{
 				id: "4AF4B44DD243B23F"
@@ -565,18 +498,11 @@
 			hide_dependent_lines: true
 			icon: "industrial_platform:industrial_platform"
 			id: "7BA8A28AD2EA188E"
-			rewards: [
-				{
-					id: "750CB938A115C0E0"
-					type: "xp"
-					xp: 10
-				}
-				{
-					id: "49D5F0F64419194F"
-					item: "industrial_platform:industrial_platform"
-					type: "item"
-				}
-			]
+			rewards: [{
+				id: "49D5F0F64419194F"
+				item: "industrial_platform:industrial_platform"
+				type: "item"
+			}]
 			subtitle: "搭建基地的好帮手"
 			tasks: [{
 				id: "47E8C062AA7F9EF7"
@@ -591,11 +517,6 @@
 			dependencies: ["714D1AC6D07BEEC0"]
 			hide_dependency_lines: true
 			id: "3DD175AC87EB32EA"
-			rewards: [{
-				id: "45BC8967815A7259"
-				type: "xp"
-				xp: 10
-			}]
 			subtitle: "伤害测试器"
 			tasks: [{
 				id: "0CC98A213BBFBC9C"
@@ -633,7 +554,7 @@
 			]
 			hide_dependency_lines: true
 			id: "64E519AA358DD04C"
-			subtitle: "一键生成万格流体池(不包括液体)"
+			subtitle: "一键生成万格流体池(当然需要你自己填充)"
 			tasks: [{
 				id: "3F948671C7F78B31"
 				item: "industrial_platform:fluid_pool"
@@ -646,11 +567,6 @@
 			dependencies: ["714D1AC6D07BEEC0"]
 			hide_dependency_lines: true
 			id: "0E0683A73BB85ABC"
-			rewards: [{
-				id: "0E6E025375B3189B"
-				type: "xp"
-				xp: 10
-			}]
 			subtitle: "♻️环保♻️"
 			tasks: [{
 				id: "46B8E557794AB6F7"
