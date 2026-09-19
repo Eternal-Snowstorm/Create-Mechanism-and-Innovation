@@ -84,6 +84,7 @@ CMI Dev.json
 !/mods/Composting*.jar
 !/mods/interlocked*.jar
 !/mods/FunctionalStorageJS*.jar
+!/mods/achievement_toast-1.20.1-forge-*.jar
 
 # ResourcePacks
 /resourcepacks/*
