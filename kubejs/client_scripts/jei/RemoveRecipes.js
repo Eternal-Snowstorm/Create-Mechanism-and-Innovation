@@ -1,13 +1,17 @@
 JEIEvents.removeRecipes((event) => {
-	let ids = event.getCategoryIds()
+	if (CmiGlobal.isDebug) {
+		event.getCategoryIds().forEach((id) => {
+			console.info("[JEI Categories] " + id)
+		})
+	}
 
 	/**
 	 * 
-	 * @param {Special.RecipeType} type 要删除的配方类型
+	 * @param {Special.RecipeType} category 要删除的配方类型
 	 * @param {Special.RecipeId | Special.RecipeId[]} id 要删除的配方id
 	 */
-	function removeRecipeFromJEI(type, id) {
-		event.remove(type, id)
+	function removeRecipeFromJEI(category, id) {
+		event.remove(category, id)
 	}
 
 	removeRecipeFromJEI("minecraft:crafting", [
