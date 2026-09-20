@@ -945,7 +945,7 @@ ServerEvents.tags("item", (event) => {
 	]
 	toolTpyes.forEach((tool) => {
 		// astrallium 工具
-		let astralliumTool = `enenring:astrallium_${tool}`
+		let astralliumTool = `edenring:astrallium_${tool}`
 		event.get("minecraft:tools")
 			.add(astralliumTool)
 

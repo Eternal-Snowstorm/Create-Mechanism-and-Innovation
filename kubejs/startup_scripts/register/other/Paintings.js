@@ -43,7 +43,7 @@ StartupEvents.registry("painting_variant", (event) => {
 	addPainting("driver_nature", 16, 16)
 	addPainting("driver_nether", 16, 16)
 	addPainting("driver_nuclear", 16, 16)
-	addPainting("driver_photosensive", 16, 16)
+	addPainting("driver_photosensitive", 16, 16)
 	addPainting("driver_pig_iron", 16, 16)
 	addPainting("driver_precision", 16, 16)
 	addPainting("driver_resonant", 16, 16)

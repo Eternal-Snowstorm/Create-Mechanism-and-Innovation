@@ -33,7 +33,6 @@ StartupEvents.registry("block", (event) => {
 		builder.waterlogged()
 		builder.notSolid()
 		builder.defaultCutout()
-		builder.notSolid()
 		builder.noCollision()
 		builder.translationKey(Component.translatable(`${Cmi.MODID}:${name}`))
 		builder.tag(`${Cmi.MODID}:dev_doll`)

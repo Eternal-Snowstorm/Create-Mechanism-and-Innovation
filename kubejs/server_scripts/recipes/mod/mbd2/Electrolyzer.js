@@ -78,7 +78,8 @@ ServerEvents.recipes((event) => {
 		.inputItems("alexscaves:toxic_paste")
 		.outputFluids(Fluid.of("mekanism:sulfuric_acid", 100))
 		.duration(20)
-
+	
+	/*
 	cmi.test()
 		.outputItems("minecraft:diamond")
 		.inputItems("#forge:ingots/iron")
@@ -86,4 +87,5 @@ ServerEvents.recipes((event) => {
 		.perTick((recipe) => {
 			recipe.inputFE(1000)
 		})
+	*/
 })

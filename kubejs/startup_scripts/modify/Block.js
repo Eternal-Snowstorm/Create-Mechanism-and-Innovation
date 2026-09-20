@@ -3,11 +3,6 @@ BlockEvents.modification((event) => {
 
 	modifySoundType([
 		"immersiveengineering:coke_oven",
-		"immersiveengineering:coke_oven"
-	], SoundType.DEEPSLATE_BRICKS)
-
-	modifySoundType([
-		"immersiveengineering:coke_oven",
 		"immersiveengineering:blast_furnace"
 	], SoundType.DEEPSLATE_BRICKS)
 
@@ -42,6 +37,7 @@ BlockEvents.modification((event) => {
 		"cmi:cheese_deposit_block",
 		"cmi:platinum_deposit_block",
 		"cmi:vanadium_deposit_block",
+		"cmi:aluminum_deposit_block",
 		"create_rns:depleted_deposit_block",
 		"create_rns:cobalt_deposit_block",
 		"create_rns:quartz_deposit_block",

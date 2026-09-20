@@ -35,14 +35,14 @@ ServerEvents.recipes((event) => {
 	// 龙钢
 	thermal.smelter("2x thermal_extra:dragonsteel_ingot", [
 		["thermal_extra:ancient_dust"],
-		["minecraft:netherite_scarp"],
+		["minecraft:netherite_scrap"],
 		["#forge:dusts/ender_pearl", "minecraft:ender_pearl"],
 	])
 
 	// 深渊
 	thermal.smelter("2x thermal_extra:abyssal_ingot", [
 		["#forge:dusts/diamond"],
-		["minecraft:netherite_scarp"],
+		["minecraft:netherite_scrap"],
 		["minecraft:echo_shard"],
 	])
 
