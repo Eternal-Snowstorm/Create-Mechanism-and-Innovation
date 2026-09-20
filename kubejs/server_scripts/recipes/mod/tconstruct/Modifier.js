@@ -293,7 +293,7 @@ ServerEvents.recipes((event) => {
 	new ModifierRecipeBuilder("tconstruct:draconic")
 		.allowCrystal(true)
 		.checkTraitLevel(false)
-		.tools("#tconstruct:modifiable/held")
+		.tools("#tconstruct:modifiable")
 		.inputs([
 			"tconstruct:dragon_scale",
 			"#forge:gears/titanium",
@@ -307,7 +307,7 @@ ServerEvents.recipes((event) => {
 	new ModifierRecipeBuilder("tconstruct:writable")
 		.allowCrystal(true)
 		.checkTraitLevel(false)
-		.tools("#tconstruct:modifiable/held")
+		.tools("#tconstruct:modifiable")
 		.inputs([
 			"#forge:plates/silver",
 			"minecraft:writable_book",
