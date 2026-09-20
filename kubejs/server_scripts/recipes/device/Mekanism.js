@@ -1,6 +1,47 @@
 ServerEvents.recipes((event) => {
 	let { neoecoae, thermal_extra } = event.getRecipes()
 
+	// 设备组件
+	neoecoae.integrated_working_station()
+		.itemOutput("cmi:basalt_general_component")
+		.inputFluid(Fluid.of("thermalconstruct:basalz_blood", 1000))
+		.inputItems([
+			"#forge:gears/chromeplated_steel",
+			"#forge:plates/stainless_steel",
+			"#forge:plates/osmium",
+			"cmi:basalz_unit"
+		])
+
+	neoecoae.integrated_working_station()
+		.itemOutput("cmi:blaze_general_component")
+		.inputFluid(Fluid.of("tconstruct:blazing_blood", 1000))
+		.inputItems([
+			"#forge:gears/chromeplated_steel",
+			"#forge:plates/stainless_steel",
+			"#forge:plates/osmium",
+			"cmi:blaze_unit"
+		])
+
+	neoecoae.integrated_working_station()
+		.itemOutput("cmi:blitz_general_component")
+		.inputFluid(Fluid.of("thermalconstruct:blitz_blood", 1000))
+		.inputItems([
+			"#forge:gears/chromeplated_steel",
+			"#forge:plates/stainless_steel",
+			"#forge:plates/osmium",
+			"cmi:blitz_unit"
+		])
+
+	neoecoae.integrated_working_station()
+		.itemOutput("cmi:blizz_general_component")
+		.inputFluid(Fluid.of("thermalconstruct:blizz_blood", 1000))
+		.inputItems([
+			"#forge:gears/chromeplated_steel",
+			"#forge:plates/stainless_steel",
+			"#forge:plates/osmium",
+			"cmi:blizz_unit"
+		])
+
 	// 热力蒸馏装置
 	thermal_extra.component_assembly("mekanism:thermal_evaporation_block", [
 		"mekanism:dynamic_tank",
@@ -78,6 +119,7 @@ ServerEvents.recipes((event) => {
 	// 感应矩阵
 	neoecoae.integrated_working_station()
 		.itemOutput("2x mekanism:induction_casing")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
 		.inputItems([
 			Casing.STAINLESS_STEEL,
 			"2x #forge:plates/aluminum",
@@ -97,6 +139,7 @@ ServerEvents.recipes((event) => {
 	// 锅炉
 	neoecoae.integrated_working_station()
 		.itemOutput("2x mekanism:boiler_casing")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
 		.inputItems([
 			Casing.STAINLESS_STEEL,
 			"2x #forge:plates/bronze",
@@ -154,6 +197,7 @@ ServerEvents.recipes((event) => {
 
 	neoecoae.integrated_working_station()
 		.itemOutput("2x mekanismgenerators:turbine_casing")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
 		.inputItems([
 			Casing.STAINLESS_STEEL,
 			"2x #forge:plates/stainless_steel",
@@ -185,5 +229,127 @@ ServerEvents.recipes((event) => {
 		]).id("mekanismgenerators:saturating_condenser")
 
 	// 富集仓
+	neoecoae.integrated_working_station()
+		.itemOutput("mekanism:enrichment_chamber")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
+		.inputItems([
+			Casing.STAINLESS_STEEL,
+			"2x #forge:plates/industrial_iron",
+			Mechanisms.BASIC.COM,
+			Mechanisms.IRON.COM,
+			"cmi:blizz_general_component"
+		])
+		.id("mekanism:enrichment_chamber")
 
+	// 锯木机
+	neoecoae.integrated_working_station()
+		.itemOutput("mekanism:precision_sawmill")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
+		.inputItems([
+			Casing.STAINLESS_STEEL,
+			"2x #forge:plates/industrial_iron",
+			Mechanisms.BASIC.COM,
+			"3x thermal:saw_blade",
+			"cmi:blizz_general_component"
+		])
+		.id("mekanism:precision_sawmill")
+
+	// 融合机
+	neoecoae.integrated_working_station()
+		.itemOutput("mekanism:combiner")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
+		.inputItems([
+			Casing.STAINLESS_STEEL,
+			"2x #forge:plates/industrial_iron",
+			Mechanisms.BASIC.COM,
+			Mechanisms.STONE.COM,
+			"cmi:blitz_general_component"
+		])
+		.id("mekanism:combiner")
+
+	// 粉碎机
+	neoecoae.integrated_working_station()
+		.itemOutput("mekanism:crusher")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
+		.inputItems([
+			Casing.STAINLESS_STEEL,
+			"2x #forge:plates/industrial_iron",
+			Mechanisms.BASIC.COM,
+			"2x #forge:gears/chromeplated_steel",
+			"cmi:basalt_general_component"
+		])
+		.id("mekanism:crusher")
+
+	// 熔炼炉
+	neoecoae.integrated_working_station()
+		.itemOutput("mekanism:energized_smelter")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
+		.inputItems([
+			Casing.STAINLESS_STEEL,
+			"2x #forge:plates/industrial_iron",
+			Mechanisms.BASIC.COM,
+			Mechanisms.NETHER.COM,
+			"cmi:blaze_general_component"
+		])
+		.id("mekanism:energized_smelter")
+
+	// 裂变反应堆
+	neoecoae.integrated_working_station()
+		.itemOutput("2x mekanismgenerators:reactor_glass")
+		.inputFluid(Fluid.of("tconstruct:molten_lead", 90))
+		.inputItems([
+			"mekanism:structural_glass",
+			"2x #forge:plates/stainless_steel"
+		])
+		.id("mekanismgenerators:reactor/glass")
+
+	neoecoae.integrated_working_station()
+		.itemOutput("mekanismgenerators:fission_reactor_casing")
+		.inputFluid(Fluid.tag("tag", "forge:cements", 1000))
+		.inputItems([
+			Casing.STAINLESS_STEEL,
+			"2x #forge:plates/lead"
+		])
+		.id("mekanismgenerators:fission_reactor/casing")
+
+	neoecoae.integrated_working_station()
+		.itemOutput("mekanismgenerators:fission_reactor_port")
+		.inputItems([
+			"mekanismgenerators:fission_reactor_casing",
+			Mechanisms.ADVANCED.COM,
+			"#forge:plates/industrial_iron"
+		])
+		.id("mekanismgenerators:fission_reactor/port")
+
+	neoecoae.integrated_working_station()
+		.itemOutput("mekanismgenerators:fission_reactor_logic_adapter")
+		.inputItems([
+			"mekanismgenerators:fission_reactor_casing",
+			Mechanisms.ADVANCED.COM,
+			Mechanisms.REDSTONE.COM
+		])
+		.id("mekanismgenerators:fission_reactor/logic_adapter")
+
+	neoecoae.integrated_working_station()
+		.itemOutput("mekanismgenerators:control_rod_assembly")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
+		.inputItems([
+			"mekanismgenerators:fission_reactor_casing",
+			"#forge:plates/aluminum_alloy",
+			"5x #forge:rods/silver",
+			Mechanisms.ADVANCED.COM,
+			"cmi:nuke_cooler"
+		])
+		.id("mekanismgenerators:fission_reactor/control_rod_assembly")
+
+	neoecoae.integrated_working_station()
+		.itemOutput("mekanismgenerators:fission_fuel_assembly")
+		.inputFluid(Fluid.tag("tag", "forge:cements", 1000))
+		.inputItems([
+			Casing.STAINLESS_STEEL,
+			"cmi:filled_fuel_rod",
+			"cmi:nuke_cooler",
+			"4x #forge:plates/lead"
+		])
+		.id("mekanismgenerators:fission_reactor/fuel_assembly")
 })

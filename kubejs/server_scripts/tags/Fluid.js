@@ -14,19 +14,33 @@ ServerEvents.tags("fluid", (event) => {
 		.add("#forge:gasoline")
 		.add("#tconstruct:blazing_blood")
 
-	/*
-	// 一桶就能上天的燃料
+	// Ada燃油
+	// 高效率燃油
 	event.get("ad_astra:efficient_fuel")
-		  .add("minecraft:lava")
+		.removeAll()
 
-	// ad原油
-	event.get("ad_astra:oil")
-		  .add("minecraft:lava")
+	// T1
+	event.get("ad_astra:tier_1_rocket_fuel")
+		.removeAll()
+		.add([
+			"ad_astra:fuel",
+			"neoecoae:cryotheum_solution"
+		])
 
-	// ad氧气
-	event.get("ad_astra:oxygen")
-		  .add("minecraft:lava")
-	*/
+	// T2
+	event.get("ad_astra:tier_2_rocket_fuel")
+		.removeAll()
+		.add([
+			"neoecoae:cryotheum_solution"
+		])
+
+	// T3
+	event.get("ad_astra:tier_3_rocket_fuel")
+		.removeAll()
+
+	// T4
+	event.get("ad_astra:tier_4_rocket_fuel")
+		.removeAll()
 
 	// 机械动力无限流体
 	event.get("create:bottomless/allow")

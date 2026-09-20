@@ -97,7 +97,7 @@ ServerEvents.recipes((event) => {
 		.press()
 
 	// 铁氧体磁芯
-	new InscriberRecipe("cmi:ferrit_core")
+	new InscriberRecipe("4x cmi:ferrit_core")
 		.bottom("#forge:plates/nickel")
 		.middle("#forge:plates/iron")
 		.top("#forge:plates/zinc")

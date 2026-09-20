@@ -94,7 +94,6 @@ ServerEvents.recipes((event) => {
 			"#forge:plates/aluminum_alloy"
 		])
 
-
 	// 复合板
 	neoecoae.integrated_working_station()
 		.itemOutput("cmi:incomplete_composite_carbon_fiber_plate")
@@ -105,7 +104,6 @@ ServerEvents.recipes((event) => {
 			"cmi:carbon_nanotube"
 		])
 
-
 	// 空燃料棒
 	neoecoae.integrated_working_station()
 		.itemOutput("cmi:empty_fuel_rod")
@@ -114,9 +112,8 @@ ServerEvents.recipes((event) => {
 		.inputItems([
 			"16x #forge:ingots/hop_graphite",
 			"16x alexscaves:polymer_plate",
-			"8x mekanism:reprocessed_fissile_fragment",
+			"4x #forge:plates/lead",
 		])
-
 
 	// 复合钨钢板
 	neoecoae.integrated_working_station()
