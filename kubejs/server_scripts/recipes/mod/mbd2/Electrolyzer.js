@@ -88,4 +88,18 @@ ServerEvents.recipes((event) => {
 			recipe.inputFE(1000)
 		})
 	*/
+
+	// 盐酸
+	cmi.electrolyzer()
+		.inputFluids(Fluid.of("cmi:brine", 100))
+		.outputFluids([
+			Fluid.of("mekanism:hydrogen_chloride", 50),
+			Fluid.of("cmi:alkaline_brine", 50)
+		])
+		.duration(20)
+		.perTick((recipe) => {
+			recipe.inputFE(1000)
+		})
+		.id("mekanism:gas_conversion/salt_to_hydrogen_chloride")
+
 })

@@ -714,6 +714,10 @@ ServerEvents.tags("item", (event) => {
 		.add("minecraft:blue_ice")
 		.add("ratatouille:frozen_block")
 
+	// 热力模具
+	event.get("thermal:crafting/dies")
+		.add("cmi:bullet_mold")
+
 	// 史莱姆球 
 	event.get("forge:slimeballs")
 		.add("alexscaves:ferrouslime_ball")

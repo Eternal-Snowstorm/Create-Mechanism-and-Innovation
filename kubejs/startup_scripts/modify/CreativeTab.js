@@ -16,7 +16,7 @@ StartupEvents.modifyCreativeTab("kubejs:tab", (event) => {
 		`#${Cmi.MODID}:raw_metals`,
 		`#${Cmi.MODID}:ore_nodes`,
 		`#${Cmi.MODID}:dev_doll`,
-		`#${Cmi.MODID}:machine_block`
+		`#${Cmi.MODID}:block/machine_block`
 	]
 	removeItemFromCreativeTab.forEach((item) => {
 		event.remove(item)

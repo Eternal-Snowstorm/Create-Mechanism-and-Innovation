@@ -161,7 +161,7 @@ ServerEvents.recipes((event) => {
 		Casing.THERMAL,
 		Mechanisms.REINFORCED.COM,
 		"cmi:basalz_unit",
-		"#forge:gears/tungsten_steel"
+		"#forge:gears/titanium"
 	]).id("thermal_extra:crafting/nitratic_igniter")
 
 	// 热解炉

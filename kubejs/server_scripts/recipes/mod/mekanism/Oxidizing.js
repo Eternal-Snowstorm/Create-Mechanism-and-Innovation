@@ -19,12 +19,6 @@ ServerEvents.recipes((event) => {
 		MekType.Gas.of("cmi:refined_nuke_waste", 200)
 	)
 
-	// 裂变燃料 from 燃料棒
-	mekanism.oxidizing(
-		"cmi:filled_fuel_rod",
-		MekType.Gas.of("mekanism:fissile_fuel", 2000)
-	).id("mekanism:processing/uranium/reprocessing/to_fuel")
-
 	// 钛氧化物
 	mekanism.oxidizing(
 		"cmi:raw_titanium_mixture",

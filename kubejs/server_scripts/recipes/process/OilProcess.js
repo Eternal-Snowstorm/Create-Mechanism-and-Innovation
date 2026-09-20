@@ -47,7 +47,7 @@ ServerEvents.recipes((event) => {
 	tconstruct.casting_table("thermal:bitumen")
 		.fluid(Fluid.of("cmi:bitumen", 200))
 		.cooling_time(20)
-	
+
 	tconstruct.casting_basin("thermal:bitumen_block")
 		.fluid(Fluid.of("cmi:bitumen", 1800))
 		.cooling_time(180)
@@ -245,6 +245,7 @@ ServerEvents.recipes((event) => {
 		Fluid.of("cmi:structural_plastic", 200),
 		"ae2:quartz_glass"
 	])
+		.id("mekanism:structural_glass")
 
 	// 轻芳烃
 	event.custom({
