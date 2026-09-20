@@ -14,7 +14,7 @@ new Schema("thermal_extra:component_assembly")
 	.simpleKey("energy", "intNumber", 100)
 
 new Schema("thermal_extra:endothermic_dehydrator")
-	.simpleKey("result", "outputFluidOrItemArray")
+	.simpleKey("result", "outputFluidOrItem")
 	.simpleKey("ingredients", "inputFluidOrItemArray")
 	.simpleKey("energy", "intNumber", 100)
 
