@@ -132,9 +132,10 @@ function registryDtmaBus(event) {
 		.build())
 
 	input.machineSettings(() => {
-		return ConfigMachineSettings.builder()
-			.hasUI(false)
-			.build()
+	// 总线 = 箱子: 储物槽和界面都不在这里 —— CMI Core 的 BusKit 会给所有 *_bus 自动加 (含这台)
+	return ConfigMachineSettings.builder()
+		.hasUI(false)
+		.build()
 	})
 
 	input.itemProperties(ConfigItemProperties.builder()
@@ -183,9 +184,10 @@ function registryDtmaBus(event) {
 		.build())
 
 	output.machineSettings(() => {
-		return ConfigMachineSettings.builder()
-			.hasUI(false)
-			.build()
+	// 总线 = 箱子: 储物槽和界面都不在这里 —— CMI Core 的 BusKit 会给所有 *_bus 自动加 (含这台)
+	return ConfigMachineSettings.builder()
+		.hasUI(false)
+		.build()
 	})
 
 	output.recipeLogicSettings(ConfigRecipeLogicSettings.builder()
