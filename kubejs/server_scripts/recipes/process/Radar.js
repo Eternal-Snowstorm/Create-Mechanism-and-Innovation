@@ -13,8 +13,6 @@ ServerEvents.recipes((event) => {
 		"ad_astra:mercury"
 	]
 
-
-
 	event.custom({
 		"type": "custommachinery:custom_machine",
 		"machine": `${Cmi.MODID}:radar_terminal`,
@@ -54,6 +52,4 @@ ServerEvents.recipes((event) => {
 			}
 		]
 	})
-
-
 })

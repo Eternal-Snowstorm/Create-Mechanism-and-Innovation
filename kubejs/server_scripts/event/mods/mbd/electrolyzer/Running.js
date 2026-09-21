@@ -19,9 +19,10 @@ MBDMachineEvents.onBeforeRecipeWorking(($) => {
 	let electrode = machine.getTraitByName(INPUT_GRAPHITE_ELECTRODE).storage
 	let stack = electrode.getStackInSlot(0)
 
-	if (!isGraphiteElectrode(stack)) {
+	if (isGraphiteElectrode(stack)) {
 		return
 	}
+
 	event.setCanceled(true)
 })
 
@@ -35,13 +36,14 @@ MBDMachineEvents.onRecipeWorking(($) => {
 		return
 	}
 
-	/** 
+	/**
 	 * @type {ItemStackTransfer_}
 	 */
 	let electrode = machine.getTraitByName(INPUT_GRAPHITE_ELECTRODE).storage
 	let stack = electrode.getStackInSlot(0)
 
 	if (!isGraphiteElectrode(stack)) {
+		event.setCanceled(true)
 		return
 	}
 

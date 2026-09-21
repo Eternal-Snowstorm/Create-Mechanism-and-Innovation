@@ -1,5 +1,5 @@
 ServerEvents.recipes((event) => {
-	let { create, mekanism, thermal, immersiveengineering } = event.getRecipes()
+	let { create } = event.getRecipes()
 
 	create.item_application("cmi:power_supply", [
 		"cmi:broken_power_supply",
