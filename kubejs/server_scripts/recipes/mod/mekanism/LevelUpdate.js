@@ -21,6 +21,4 @@ ServerEvents.recipes(event => {
 	RemoveMekUpgrade("infusing_factory", "mekanism:metallurgic_infuser")
 	RemoveMekUpgrade("sawing_factory", "mekanism:precision_sawmill")
 	RemoveMekUpgrade("energy_cube", "immersiveengineering:capacitor_mv")
-	RemoveMekUpgrade("fluid_tank", "create:fluid_tank")
-	RemoveMekUpgrade("chemical_tank", "cmi:osmium_tile")
 })
