@@ -48,36 +48,36 @@ ServerEvents.recipes((event) => {
 
 	// 流体储罐
 	kubejs.shaped("mekanism:basic_fluid_tank", [
-		" A ",
-		" B ",
-		" A "
+		"A",
+		"B",
+		"A"
 	], {
 		A: "#forge:plates/cast_iron",
 		B: Mechanisms.COPPER.COM
 	}).id("mekanism:fluid_tank/basic")
 
 	kubejs.shaped("mekanism:advanced_fluid_tank", [
-		" A ",
-		" B ",
-		" A "
+		"A",
+		"B",
+		"A"
 	], {
 		A: "#forge:plates/cast_iron",
 		B: "mekanism:basic_fluid_tank"
 	}).id("mekanism:fluid_tank/advanced")
 
 	kubejs.shaped("mekanism:elite_fluid_tank", [
-		" A ",
-		" B ",
-		" A "
+		"A",
+		"B",
+		"A"
 	], {
 		A: "#forge:plates/cast_iron",
 		B: "mekanism:elite_fluid_tank"
 	}).id("mekanism:fluid_tank/elite")
 
 	kubejs.shaped("mekanism:ultimate_fluid_tank", [
-		" A ",
-		" B ",
-		" A "
+		"A",
+		"B",
+		"A"
 	], {
 		A: "#forge:plates/cast_iron",
 		B: "mekanism:ultimate_fluid_tank"
@@ -85,18 +85,18 @@ ServerEvents.recipes((event) => {
 
 	// 化学品储罐
 	kubejs.shaped("mekanism:basic_chemical_tank", [
-		" A ",
-		" B ",
-		" A "
+		"A",
+		"B",
+		"A"
 	], {
 		A: "#forge:plates/stainless_steel",
 		B: Mechanisms.AIR.COM
 	}).id("mekanism:chemical_tank/basic")
 
 	kubejs.shaped("mekanism:advanced_chemical_tank", [
-		" A ",
-		" B ",
-		" A "
+		"A",
+		"B",
+		"A"
 	], {
 		A: "#forge:plates/stainless_steel",
 		B: "mekanism:basic_chemical_tank"
@@ -104,18 +104,18 @@ ServerEvents.recipes((event) => {
 
 
 	kubejs.shaped("mekanism:elite_chemical_tank", [
-		" A ",
-		" B ",
-		" A "
+		"A",
+		"B",
+		"A"
 	], {
 		A: "#forge:plates/stainless_steel",
 		B: "mekanism:advanced_chemical_tank"
 	}).id("mekanism:chemical_tank/elite")
 
 	kubejs.shaped("mekanism:ultimate_chemical_tank", [
-		" A ",
-		" B ",
-		" A "
+		"A",
+		"B",
+		"A"
 	], {
 		A: "#forge:plates/stainless_steel",
 		B: "mekanism:elite_chemical_tank"
