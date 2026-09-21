@@ -37,12 +37,8 @@ function upgradeCastIron(item, block, hand, player, level) {
 		return
 	}
 
-	if (hand !== InteractionHand.MAIN_HAND) {
-		return
-	}
-
 	/**
-	 * @type {Special.Block}
+	 * @type {Internal.Block_}
 	 */
 	let targetId = CAST_IRON_UPGRADES[block.getId()]
 
@@ -65,12 +61,8 @@ function upgradeSteel(item, block, hand, player, level) {
 		return
 	}
 
-	if (hand !== InteractionHand.MAIN_HAND) {
-		return
-	}
-
 	/**
-	 * @type {Special.Block}
+	 * @type {Internal.Block_}
 	 */
 	let targetId = STEEL_UPGRADES[block.getId()]
 
@@ -85,11 +77,15 @@ function upgradeSteel(item, block, hand, player, level) {
  * @param {Internal.BlockContainerJS_} block 
  * @param {Player} player 
  * @param {Internal.Level_} level 
- * @param {Special.Block} targetId 
+ * @param {Internal.Block_} targetId 
  */
 function upgradeBlock(item, block, player, level, targetId) {
 	let properties = block.getProperties()
 	let nbt = block.getEntityData()
+
+	if (hand !== InteractionHand.MAIN_HAND) {
+		return
+	}
 
 	player.swing()
 	level.playSound(

@@ -53,9 +53,8 @@ MbtoolKJSEvents.InitMbtoolStructures((event) => {
 			 * mbtool.structure.ballmill
 			 * mbtool:mbtool_structures/ballmill.nbt
 			 */
-			let isTarget =
-				idStr === `mbtool:mbtool_structures/${structure}.nbt` ||
-				idStr === `mbtool.structure.${structure}`
+			let isTarget = idStr === `mbtool:mbtool_structures/${structure}.nbt`
+				|| idStr === `mbtool.structure.${structure}`
 
 			if (isTarget) {
 				let nbt = structures[i].getStructureNbt()

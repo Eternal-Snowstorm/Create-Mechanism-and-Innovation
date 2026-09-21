@@ -80,6 +80,7 @@ ServerEvents.recipes((event) => {
 	immersiveengineering.blast_furnace("ae2:silicon")
 		.input("cmi:silicon_mixture")
 		.slag("thermal:slag")
+		.time(20 * 30)
 
 	// 硅板
 	vintageimprovements.curving("ae2:printed_silicon", [
