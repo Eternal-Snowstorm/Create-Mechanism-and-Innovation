@@ -72,6 +72,8 @@ CMI Dev.json
 /log4j2.xml
 /.codex
 /.agents
+.graphflow-cache/*
+graphflow-out/*
 
 # Mods
 /mods/*
