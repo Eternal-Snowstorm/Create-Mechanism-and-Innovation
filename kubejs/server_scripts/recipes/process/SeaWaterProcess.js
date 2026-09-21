@@ -29,25 +29,6 @@ ServerEvents.recipes((event) => {
 		Fluid.of("mekanism:chlorine", 100)
 	])
 
-	// 氯
-	event.custom({
-		"type": "immersiveindustry:electrolyzer",
-		"fluid": {
-			"tag": "forge:brine",
-			"amount": 500
-		},
-		"result_fluid": {
-			"fluid": "mekanism:chlorine",
-			"amount": 100
-		},
-		"result": {
-			"item": "mekanism:salt",
-			"count": 1
-		},
-		"large_only": true,
-		"time": 200
-	})
-
 	// 含锂电解液
 	event.custom({
 		"type": "immersiveindustry:electrolyzer",

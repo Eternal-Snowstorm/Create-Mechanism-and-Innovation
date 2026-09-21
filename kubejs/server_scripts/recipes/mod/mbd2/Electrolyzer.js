@@ -5,7 +5,7 @@ ServerEvents.recipes((event) => {
 	cmi.electrolyzer()
 		.outputGases("100x mekanism:chlorine")
 		.outputGases("100x mekanism:sodium")
-		.inputFluids(MBDFluidIngredient.ofTagId("forge:brine", 1000))
+		.inputItems("20x #forge:dusts/salt")
 		.duration(20)
 		.perTick((recipe) => {
 			recipe.inputFE(1000)
@@ -61,7 +61,7 @@ ServerEvents.recipes((event) => {
 
 	// 氯
 	cmi.electrolyzer()
-		.inputFluids(MBDFluidIngredient.ofTagId("forge:brine", 500))
+		.inputFluids(Fluid.of("cmi:concentrated_sea_water", 500))
 		.outputFluids(Fluid.of("mekanism:chlorine", 100))
 		.outputItems("mekanism:salt")
 		.duration(20 * 5)
@@ -78,7 +78,7 @@ ServerEvents.recipes((event) => {
 		.inputItems("alexscaves:toxic_paste")
 		.outputFluids(Fluid.of("mekanism:sulfuric_acid", 100))
 		.duration(20)
-	
+
 	/*
 	cmi.test()
 		.outputItems("minecraft:diamond")
