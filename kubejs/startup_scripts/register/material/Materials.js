@@ -72,7 +72,7 @@ NebulaEvents.registerMaterial((event) => {
 		.nugget()
 		.dust()
 		.gear()
-		.block("immersiveengineering:block/storage_steel")
+		.blockWithModel("immersiveengineering:block/storage_steel")
 		.isMetal()
 
 	// 铸铁
