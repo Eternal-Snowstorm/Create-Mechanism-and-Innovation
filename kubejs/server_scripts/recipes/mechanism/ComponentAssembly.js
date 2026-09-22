@@ -45,18 +45,4 @@ ServerEvents.recipes((event) => {
 		"#forge:dusts/ender_pearl",
 		"#forge:slimeball/ender"
 	])
-
-	// 航天构件
-	thermal_extra.component_assembly("cmi:aeronautic_mechanism", [
-		"cmi:aeronautic_mechanism_basement",
-		"#forge:plates/composite_tungsten_steel",
-		"#forge:circuits/basic"
-	])
-
-	// 宇航构件
-	thermal_extra.component_assembly("cmi:astronautic_mechanism", [
-		"cmi:astronautic_mechanism_basement",
-		"#forge:plates/composite_carbon_fiber",
-		"#forge:circuits/advanced"
-	])
 })

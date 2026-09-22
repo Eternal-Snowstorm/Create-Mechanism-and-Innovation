@@ -206,30 +206,30 @@ ServerEvents.recipes((event) => {
 
 	// 基础控制电路
 	new InscriberRecipe("mekanism:basic_control_circuit")
-		.top("cmi:inscribed_silicon")
-		.middle("cmi:osmium_wafer")
-		.bottom("#forge:alloys/enriched")
+		.top("#forge:plates/silicon_carbide")
+		.middle("neoecoae:crystal_matrix")
+		.bottom("cmi:basic_electronic_components")
 		.press()
 
 	// 高级控制电路
 	new InscriberRecipe("mekanism:advanced_control_circuit")
-		.top("cmi:inscribed_silicon")
-		.middle("cmi:silicon_wafer")
-		.bottom("mekanism:alloy_infused")
+		.top("#forge:plates/silicon_carbide")
+		.middle("neoecoae:crystal_matrix")
+		.bottom("cmi:advanced_electronic_components")
 		.press()
 
 	// 精英控制电路
 	new InscriberRecipe("mekanism:elite_control_circuit")
-		.top("cmi:inscribed_silicon")
-		.middle("cmi:germanium_wafer")
-		.bottom("mekanism:alloy_reinforced")
+		.top("#forge:plates/silicon_carbide")
+		.middle("neoecoae:crystal_matrix")
+		.bottom("cmi:elite_electronic_components")
 		.press()
 
 	// 终极控制电路
 	new InscriberRecipe("mekanism:ultimate_control_circuit")
-		.top("neoecoae:superconducting_processor")
-		.middle("cmi:entro_alloy_wafer")
-		.bottom("mekanism:alloy_atomic")
+		.top("#forge:plates/silicon_carbide")
+		.middle("neoecoae:crystal_matrix")
+		.bottom("cmi:ultimate_electronic_components")
 		.press()
 
 })

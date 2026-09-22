@@ -131,11 +131,6 @@ let Mechanisms = Object.freeze({
 		INC: Item.of("cmi:incomplete_basic_mekanism_mechanism"),
 		BAS: Item.of("cmi:basic_mekanism_mechanism_basement")
 	}),
-	AVI1: Object.freeze({
-		COM: Item.of("cmi:tier_1_aviation_mechanism"),
-		INC: Item.of("cmi:incomplete_tier_1_aviation_mechanism"),
-		BAS: Item.of("cmi:tier_1_aviation_mechanism_basement")
-	}),
 	COMPUTE: Object.freeze({
 		COM: Item.of("cmi:computing_mechanism"),
 		INC: Item.of("cmi:incomplete_computing_mechanism"),
@@ -147,15 +142,15 @@ let Mechanisms = Object.freeze({
 		INC: Item.of("cmi:incomplete_advanced_mekanism_mechanism"),
 		BAS: Item.of("cmi:advanced_mekanism_mechanism_basement")
 	}),
-	AVI2: Object.freeze({
-		COM: Item.of("cmi:tier_2_aviation_mechanism"),
-		INC: Item.of("cmi:incomplete_tier_2_aviation_mechanism"),
-		BAS: Item.of("cmi:tier_2_aviation_mechanism_basement")
-	}),
 	AIR: Object.freeze({
 		COM: Item.of("cmi:air_tight_mechanism"),
 		INC: Item.of("cmi:incomplete_air_tight_mechanism"),
 		BAS: Item.of("cmi:air_tight_mechanism_basement")
+	}),
+	AERO: Object.freeze({
+		COM: Item.of("cmi:aeronautic_mechanism"),
+		INC: Item.of("cmi:incomplete_aeronautic_mechanism"),
+		BAS: Item.of("cmi:aeronautic_mechanism_basement")
 	}),
 	// C8
 	ELITE: Object.freeze({
@@ -168,21 +163,16 @@ let Mechanisms = Object.freeze({
 		INC: Item.of("cmi:incomplete_nuclear_mechanism"),
 		BAS: Item.of("cmi:nuclear_mechanism_basement")
 	}),
-	AVI3: Object.freeze({
-		COM: Item.of("cmi:tier_3_aviation_mechanism"),
-		INC: Item.of("cmi:incomplete_tier_3_aviation_mechanism"),
-		BAS: Item.of("cmi:tier_3_aviation_mechanism_basement")
+	ASTRO: Object.freeze({
+		COM: Item.of("cmi:astronautic_mechanism"),
+		INC: Item.of("cmi:incomplete_astronautic_mechanism"),
+		BAS: Item.of("cmi:astronautic_mechanism_basement")
 	}),
 	// C9
 	ULTIMATE: Object.freeze({
 		COM: Item.of("cmi:ultimate_mekanism_mechanism"),
 		INC: Item.of("cmi:incomplete_ultimate_mekanism_mechanism"),
 		BAS: Item.of("cmi:ultimate_mekanism_mechanism_basement")
-	}),
-	AVI4: Object.freeze({
-		COM: Item.of("cmi:tier_4_aviation_mechanism"),
-		INC: Item.of("cmi:incomplete_tier_4_aviation_mechanism"),
-		BAS: Item.of("cmi:tier_4_aviation_mechanism_basement")
 	}),
 	ANTI: Object.freeze({
 		COM: Item.of("cmi:antimatter_mechanism"),
@@ -194,7 +184,10 @@ let Mechanisms = Object.freeze({
 		MAGIC: Item.of("cmi:magical_mechanism_part"),
 		MECHA: Item.of("cmi:mechanical_mechanism_part"),
 		ENGIN: Item.of("cmi:engineering_mechanism_part"),
-		FLUX: Item.of("cmi:flux_mechanism_part")
+		FLUX: Item.of("cmi:flux_mechanism_part"),
+		GENERAL: Item.of("cmi:mekanism_mechanism_part"),
+		SPACE: Item.of("cmi:space_mechanism_part"),
+		QUANTUM: Item.of("cmi:quantum_mechanism_part")
 	})
 })
 
