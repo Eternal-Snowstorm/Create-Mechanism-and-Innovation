@@ -207,7 +207,8 @@ ServerEvents.recipes((event) => {
 		"tconstruct:common/glass/vanilla/glass_bottle",
 		"createaddition:compat/tconstruct/pig_iron_2",
 		"tconstruct:smeltery/alloys/molten_refined_obsidian",
-		"thermal_extra:crafting/rod_die"
+		"thermal_extra:crafting/rod_die",
+		"createaddition:compat/tconstruct/tinkers_bronze"
 	])
 
 	let removedMods = [

@@ -28,4 +28,8 @@ ServerEvents.recipes((event) => {
 		"tconstruct:gem_cast"
 	])
 
+	// 玻璃
+	thermal.chiller("tconstruct:clear_glass", [
+		Fluid.of("tconstruct:molten_glass", 90 * 9)
+	]).energy(1000)
 })
