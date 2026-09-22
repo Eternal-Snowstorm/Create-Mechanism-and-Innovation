@@ -71,7 +71,7 @@ ServerEvents.recipes((event) => {
 		"A"
 	], {
 		A: "#forge:plates/cast_iron",
-		B: "mekanism:elite_fluid_tank"
+		B: "mekanism:advanced_fluid_tank"
 	}).id("mekanism:fluid_tank/elite")
 
 	kubejs.shaped("mekanism:ultimate_fluid_tank", [
@@ -80,7 +80,7 @@ ServerEvents.recipes((event) => {
 		"A"
 	], {
 		A: "#forge:plates/cast_iron",
-		B: "mekanism:ultimate_fluid_tank"
+		B: "mekanism:elite_fluid_tank"
 	}).id("mekanism:fluid_tank/ultimate")
 
 	// 化学品储罐

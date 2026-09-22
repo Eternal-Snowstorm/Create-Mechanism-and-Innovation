@@ -138,6 +138,10 @@ bash updater/update-from-gitee.sh
 1. `updater/delete.tsv` 里**已下架**的路径 —— 且会在新清单中再次出现时自动跳过;
 2. 清单条目 `replaces` 列里记录**被当前版本取代**的旧 jar(仅当对应新 jar 下载成功时才真正丢弃)。
 
+**黑名单文件永不被删除**:文件名以 `[]` 开头(例如 `mods/[]ysm-2.6.5-forge+mc1.20.1-release.jar`)
+的 mod 属于"不同步的自有文件",脚本在统计待删清单时**一律跳过**它们 —— 既不会因为
+`delete.tsv` 里的历史记录被删,也不会被 `replaces` 或同名主干清理误伤。
+
 玩家自己额外添加的 mod(不在清单里、也不在 delete.tsv 里)**不会被删除**。
 
 ## 七、常见问题

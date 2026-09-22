@@ -65,6 +65,17 @@ function Get-ModKey([string]$path) {
   return $b.ToLowerInvariant()
 }
 
+# 黑名单: 文件名以 "[]" 开头的 mod 不参与同步(与 dev/make-update-json.sh 的约定一致)。
+# 这类文件由玩家自行持有, 既不在 update.tsv 里, 也绝不能被 delete.tsv / replaces
+# 流程删除 —— 否则历史 delete.tsv 里一旦混入同样的路径, 每次更新都会把它清掉。
+function Test-ModBlacklisted([string]$p) {
+  if ([string]::IsNullOrWhiteSpace($p)) { return $false }
+  $leaf = $p.Replace('\', '/')
+  $i = $leaf.LastIndexOf('/')
+  if ($i -ge 0) { $leaf = $leaf.Substring($i + 1) }
+  return $leaf.StartsWith('[]')
+}
+
 function Get-Sha1([string]$file) {
   return (Get-FileHash -Algorithm SHA1 -LiteralPath $file).Hash.ToLowerInvariant()
 }
@@ -100,6 +111,9 @@ $protected = New-Object 'System.Collections.Generic.HashSet[string]'
 foreach ($it in $items) { [void]$protected.Add($it.Path) }
 
 # --- 2. 汇总待下架 / 待替换的旧 jar -------------------------------------
+# 黑名单保护: 下面三处待删来源(delete.tsv / replaces / 同主干自愈)统一跳过
+# 文件名以 "[]" 开头的文件, 让玩家自有的黑名单 mod 永远不被删除或替换。
+$script:BlacklistSkipped = 0
 $pendingList = New-Object 'System.Collections.Generic.List[string]'
 $pendingSeen = New-Object 'System.Collections.Generic.HashSet[string]'
 
@@ -109,6 +123,7 @@ if (Test-Path -LiteralPath $deleteList) {
     $p = $line.Trim()
     if (-not (Test-SafePath $p)) { continue }
     if ($protected.Contains($p)) { continue }
+    if (Test-ModBlacklisted $p) { $script:BlacklistSkipped++; continue }
     if (-not (Test-Path -LiteralPath (Join-Path $Root $p))) { continue }
     if ($pendingSeen.Add($p)) { $pendingList.Add($p) }
   }
@@ -121,6 +136,7 @@ foreach ($it in $items) {
     $op = $op0.Trim()
     if (-not (Test-SafePath $op)) { continue }
     if ($protected.Contains($op)) { continue }
+    if (Test-ModBlacklisted $op) { $script:BlacklistSkipped++; continue }
     if (-not (Test-Path -LiteralPath (Join-Path $Root $op))) { continue }
     if ($pendingSeen.Add($op)) { $pendingList.Add($op) }
   }
@@ -142,6 +158,7 @@ if (($listKeys.Count -gt 0) -and (Test-Path -LiteralPath $modsDir)) {
   foreach ($f in @(Get-ChildItem -LiteralPath $modsDir -File -Filter '*.jar' -ErrorAction SilentlyContinue)) {
     $rel = 'mods/' + $f.Name
     if ($protected.Contains($rel)) { continue }
+    if (Test-ModBlacklisted $rel) { $script:BlacklistSkipped++; continue }
     if (-not $listKeys.Contains((Get-ModKey $rel))) { continue }
     if ($pendingSeen.Add($rel)) { $pendingList.Add($rel) }
   }
@@ -308,6 +325,9 @@ if ((-not $DryRun) -and (Test-Path -LiteralPath $backupDir)) {
 # --- 7. 汇总与中文提示 --------------------------------------------------
 Write-Log ''
 Write-Log ("[mods] 完成: 总数 " + $total + ", 已最新 " + $skipped + ", 已下载 " + $downloaded + ", 失败 " + $failed + ", 无源 " + $nosource)
+if ($script:BlacklistSkipped -gt 0) {
+  Write-Log ("[mods] 黑名单保护: 已跳过 " + $script:BlacklistSkipped + " 个以 [] 开头的文件(不删除/不替换)")
+}
 
 if ($DryRun) { Write-Log '[mods] (dry-run 模式, 未做任何实际改动)'; exit 0 }
 

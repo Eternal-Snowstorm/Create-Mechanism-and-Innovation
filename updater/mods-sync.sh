@@ -102,6 +102,20 @@ trim() {
   printf '%s' "$s"
 }
 
+# 黑名单: 文件名以 "[]" 开头的 mod 不参与同步(与 dev/make-update-json.sh 的约定一致)。
+# 这类文件由玩家自行持有, 既不在 update.tsv 里, 也绝不能被 delete.tsv / replaces
+# 流程删除 —— 否则历史 delete.tsv 里一旦混入同样的路径, 每次更新都会把它清掉。
+is_blacklisted() {
+  local b="${1##*/}"
+  case "$b" in
+    '[]'*) return 0 ;;
+  esac
+  return 1
+}
+
+# 黑名单保护计数器(仅用于日志汇总)
+BL_SKIP=0
+
 # mod 名主干: 与 make-update-json.sh 保持一致, 用于把失败项匹配到它的旧版本备份
 mod_key() {
   local b="$1"
@@ -145,6 +159,7 @@ if [ -f "$DELETE_LIST" ]; then
     p="$(trim "$p")"
     safe_path "$p" || continue
     grep -qxF "$p" "$PROTECTED" && continue
+    if is_blacklisted "$p"; then BL_SKIP=$((BL_SKIP+1)); continue; fi
     [ -e "$ROOT/$p" ] || continue
     printf '%s\n' "$p" >> "$PENDING"
   done < "$DELETE_LIST"
@@ -159,6 +174,7 @@ for i in "${!M_PATH[@]}"; do
     op="$(trim "$op")"
     safe_path "$op" || continue
     grep -qxF "$op" "$PROTECTED" && continue
+    if is_blacklisted "$op"; then BL_SKIP=$((BL_SKIP+1)); continue; fi
     [ -e "$ROOT/$op" ] || continue
     printf '%s\n' "$op" >> "$PENDING"
   done
@@ -182,6 +198,7 @@ if [ -s "$LIST_KEYS" ] && [ -d "$ROOT/mods" ]; then
     [ -f "$_f" ] || continue
     _rel="mods/$(basename "$_f")"
     grep -qxF "$_rel" "$PROTECTED" && continue
+    if is_blacklisted "$_rel"; then BL_SKIP=$((BL_SKIP+1)); continue; fi
     _k="$(mod_key "$_rel")"
     grep -qxF "$_k" "$LIST_KEYS" || continue
     printf '%s\n' "$_rel" >> "$PENDING"
@@ -352,6 +369,9 @@ rm -f "$PROTECTED" "$PENDING" "$FAIL_TABLE" 2>/dev/null || true
 
 # --- 7. 汇总与中文提示 --------------------------------------------------
 log ""
+if [ "$BL_SKIP" -gt 0 ]; then
+  log "[mods] 黑名单保护: 已跳过 $BL_SKIP 个以 [] 开头的文件(不删除/不替换)"
+fi
 log "[mods] 完成: 总数 $total, 已最新 $skipped, 已下载 $downloaded, 失败 $failed, 无源 $nosource"
 [ "$DRY_RUN" = "1" ] && { log "[mods] (dry-run 模式, 未做任何实际改动)"; exit 0; }
 
