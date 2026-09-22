@@ -84,7 +84,7 @@ ItemEvents.tooltip((event) => {
 	]
 	materialTypeList.forEach((type) => {
 		CmiMetal.getAll().forEach((metal) => {
-			let mp = metal.getMeltingPoint()
+			let mp = parseInt(metal.getMeltingPoint().toString())
 
 			if (mp > 0) {
 				let translatable = Component.translatable(
@@ -112,7 +112,7 @@ ItemEvents.tooltip((event) => {
 		/**
 		 * @type {number}
 		 */
-		let tp = temperatures
+		let tp = parseInt(temperatures.toString())
 
 		if (typeof tp === "number") {
 			let translatable = Component.translatable(
@@ -127,7 +127,7 @@ ItemEvents.tooltip((event) => {
 
 	// 碎矿单独循环一次
 	CmiMetal.getAll().forEach((metal) => {
-		let mp = metal.getMeltingPoint()
+		let mp = parseInt(metal.getMeltingPoint().toString())
 
 		if (mp > 0) {
 			let translatable = Component.translatable(

@@ -30,6 +30,6 @@ ServerEvents.recipes((event) => {
 
 	// 玻璃
 	thermal.chiller("tconstruct:clear_glass", [
-		Fluid.of("tconstruct:molten_glass", 90 * 9)
+		Fluid.of("tconstruct:molten_glass", 1000)
 	]).energy(1000)
 })

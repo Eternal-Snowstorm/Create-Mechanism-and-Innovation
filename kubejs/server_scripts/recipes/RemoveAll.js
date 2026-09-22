@@ -88,7 +88,7 @@ ServerEvents.recipes((event) => {
 		"thermal_extra:crafting/abyssal_integral_component",
 		"jei:/thermal_extra/crafting/device_lava_gen",
 		"jei:/thermal_extra/crafting/device_harvester",
-		"thermal_parallel:argument_parallel",
+		"cmi:2_parallel_upgrade",
 		"jei:/immersiveengineering/metalpress/bullet_casing",
 		"jei:/immersiveengineering/crafting/empty_casing",
 		"jei:/immersiveengineering/bottling/empty_shell",

@@ -355,6 +355,8 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("optical_fiber", "光纤")
 	addItemLang("fluix_wire", "福鲁伊克斯线")
 
+	addItemLang("parallel_upgrade", "%sx 并行升级")
+
 	addItemLang("frost_cake_base", "寒霜蛋糕胚")
 
 	let moldList = [

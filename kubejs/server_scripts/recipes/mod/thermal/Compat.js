@@ -2,7 +2,7 @@ ServerEvents.recipes((event) => {
 	let { create } = event.getRecipes()
 
 	// 并行升级 +1
-	create.mechanical_crafting("thermal_parallel:argument_parallel", [
+	create.mechanical_crafting("cmi:2_parallel_upgrade", [
 		" A ",
 		"BCB",
 		" D "

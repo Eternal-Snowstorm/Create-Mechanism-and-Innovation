@@ -168,6 +168,19 @@ ServerEvents.highPriorityData((event) => {
 		"functionalstorage:netherite_upgrade"
 	], "cmi:hepatizon_upgrade")
 
+	// 并行
+	addUnification("2_parallel", [
+		"thermal_parallel:argument_parallel"
+	], "cmi:2_parallel_upgrade")
+
+	addUnification("4_parallel", [
+		"thermal_parallel:argument_parallel_2"
+	], "cmi:4_parallel_upgrade")
+
+	addUnification("16_parallel", [
+		"thermal_parallel:argument_parallel_3"
+	], "cmi:16_parallel_upgrade")
+
 	/**
 	 * 
 	 * @param {string} name

@@ -12,6 +12,20 @@ ServerEvents.recipes((event) => {
 			.energy(16000)
 	}
 
+	event.custom({
+		"type": "thermal_extra:component_assembly",
+		"energy": 5000,
+		"ingredients": [
+			{
+				"item": "minecraft:stick",
+				"count": 2
+			}
+		],
+		"result": [
+			Item.of("minecraft:stone", 2)
+		]
+	})
+
 	// 二极管
 	addComponRecipe("4x thermal:laser_diode", [
 		"#forge:wires/electrum",
@@ -121,8 +135,8 @@ ServerEvents.recipes((event) => {
 	]).id("thermal_extra:machine/component_assembly/redstone_servo")
 
 	// 并行升级 +4
-	addComponRecipe("thermal_parallel:argument_parallel_2", [
-		"thermal_parallel:argument_parallel",
+	addComponRecipe("cmi:4_parallel_upgrade", [
+		"cmi:2_parallel_upgrade",
 		["#forge:ingots/cobalt", "#forge:plates/cobalt"],
 		"immersiveengineering:component_electronic",
 		"#forge:gears/rose_gold",
@@ -130,8 +144,8 @@ ServerEvents.recipes((event) => {
 	])
 
 	// 并行升级 +4 流体配方虽然麻烦, 但是相对应的造价更便宜
-	addComponRecipe("thermal_parallel:argument_parallel_2", [
-		"thermal_parallel:argument_parallel",
+	addComponRecipe("cmi:4_parallel_upgrade", [
+		"cmi:2_parallel_upgrade",
 		"immersiveengineering:component_electronic",
 		["#forge:ingots/cobalt", "#forge:plates/cobalt"],
 		"#forge:dusts/redstone",

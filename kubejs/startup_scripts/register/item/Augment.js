@@ -1,3 +1,8 @@
+let $TePaConstants =
+	Java.loadClass("com.c2h6s.thermal_parallel.util.TePaConstants")
+let $NBTTags =
+	Java.loadClass("cofh.lib.util.constants.NBTTags")
+
 StartupEvents.registry("item", (event) => {
 	/**
 	 * @param {string} name 注册ID
@@ -19,13 +24,56 @@ StartupEvents.registry("item", (event) => {
 			}
 		}
 
-		return event.create(`${Cmi.MODID}:${name}_upgrade_augment`, "thermal:upgrade_augment")
-			.setValue(multipliers)
-			.modelJson(model)
+		let builder = event.create(
+			`${Cmi.MODID}:${name}_upgrade_augment`,
+			"thermal:upgrade_augment"
+		)
+
+		builder.setValue(multipliers)
+		builder.modelJson(model)
+
+		return builder
 	}
 
 	addUpgrade("aluminum", 2, 7)
 	addUpgrade("stainless_steel", 3, 8)
 	addUpgrade("titanium_alloy", 3, 9)
 	addUpgrade("tungsten_steel", 3, 10)
+
+	/**
+	 * 
+	 * @param {number} multipliers 
+	 */
+	function addParallelUpgrade(multipliers) {
+		let multipliersInt = parseInt(multipliers.toString())
+
+		let builder = event.create(
+			`${Cmi.MODID}:${multipliers}_parallel_upgrade`,
+			"thermal_augment"
+		)
+
+		builder.thermalMod($TePaConstants.TAG_MACHINE_PARALLEL, multipliersInt)
+		builder.augmentType($NBTTags.TAG_AUGMENT_TYPE_MACHINE)
+		builder.texture(`cmi:item/augment/parallel/${multipliersInt}`)
+		builder.rarity(Rarity.EPIC)
+		builder.tag("thermal:augments")
+		builder.tag("thermal:augments/parallel")
+		builder.name(() => {
+			return Component.translatable(
+				`item.${Cmi.MODID}.parallel_upgrade`,
+				`${multipliersInt}`
+			)
+		})
+
+		return builder
+	}
+
+	addParallelUpgrade(2)
+	addParallelUpgrade(4)
+	addParallelUpgrade(8)
+	addParallelUpgrade(16)
+	addParallelUpgrade(32)
+	addParallelUpgrade(64)
+	addParallelUpgrade(128)
+	addParallelUpgrade(256)
 })
