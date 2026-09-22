@@ -35,7 +35,9 @@ ServerEvents.recipes((event) => {
 	cmi.electrolyzer()
 		.inputFluids(Fluid.of("cmi:sea_water", 1000))
 		.outputFluids(Fluid.of("cmi:caustic_soda_solution", 200))
-		.outputItems("mekanism:salt", 1)
+		// outputItems 是 varargs(InputItem...), 数量和 "Nx id" 都写在字符串里 ——
+		// 多写的 `, 1` 会被当成第二个 InputItem(数字解析不出原料), 生成一个幽灵槽位
+		.outputItems("mekanism:salt")
 		.duration(20 * 10)
 
 	// 铝粉
