@@ -1,0 +1,783 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "steam_railway_rework"
+	group: "050255AE19A93344"
+	icon: "create:track"
+	id: "7E5C1B2E00000000"
+	order_index: 5
+	quest_enhance_decorative_lines: [ ]
+	quest_enhance_hidden_dependency_lines: [ ]
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["7E5C1B2D00000019"]
+			description: [
+				"现在不要以后也得要"
+				"手搓的焦黑小炉子只能熔一点低熔点金属, 想要冶炼合金就必须换成完整的冶炼炉"
+				"焦黑砖、冶炼炉控制器、排液口与燃料槽, 四样凑齐就能开工"
+			]
+			icon: "tconstruct:smeltery_controller"
+			id: "7E5C1B2E00000001"
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "7E5C5B2E00000101"
+					item: "tconstruct:seared_bricks"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00000102"
+					item: "tconstruct:smeltery_controller"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00000103"
+					item: "tconstruct:seared_drain"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00000104"
+					item: "tconstruct:seared_fuel_tank"
+					type: "item"
+				}
+			]
+			title: "冶炼炉"
+			x: -8.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000001"]
+			description: [
+				"非常重要的合金!"
+				"使用冶炼炉制作合金: 铜与锡熔在一起是青铜, 铜与锌熔在一起是黄铜"
+				"青铜耐腐蚀、黄铜好加工, 蒸汽时代的整条产线都建立在这两种合金上"
+			]
+			id: "7E5C1B2E00000002"
+			subtitle: "使用冶炼炉制作合金"
+			tasks: [
+				{
+					id: "7E5C5B2E00000201"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:ingots/bronze"
+						}
+					}
+					title: "青铜锭"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00000202"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:ingots/brass"
+						}
+					}
+					title: "黄铜锭"
+					type: "item"
+				}
+			]
+			title: "非常重要的合金!"
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000002"]
+			description: [
+				"熔好的青铜与黄铜先备一批"
+				"青铜拿去做构件与蒸汽设备, 黄铜则是机械动力精密部件的原料"
+			]
+			id: "7E5C1B2E00000003"
+			tasks: [
+				{
+					id: "7E5C5B2E00000301"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:ingots/bronze"
+						}
+					}
+					title: "青铜"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00000302"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:ingots/brass"
+						}
+					}
+					title: "黄铜"
+					type: "item"
+				}
+			]
+			title: "青铜与黄铜"
+			x: -11.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000002"]
+			description: [
+				"青铜的简易配方介绍"
+				"三份铜加一份锡就是青铜, 铜与锌二比一就是黄铜 —— 不用完成合金的探索任务也能直接照这个比例投料"
+			]
+			id: "7E5C1B2E00000004"
+			subtitle: "青铜的简易配方介绍"
+			tasks: [{
+				id: "7E5C5B2E00000401"
+				title: "记住合金配比"
+				type: "checkmark"
+			}]
+			title: "青铜的简易配方"
+			x: -11.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000002"]
+			description: [
+				"有点烫手, 拿在手上有一点火热🥵"
+				"青铜构件是蒸汽设备的通用核心, 蒸汽机、锅炉、锻锤都要靠它"
+			]
+			icon: "cmi:bronze_mechanism"
+			id: "7E5C1B2E00000005"
+			shape: "gear"
+			size: 2.0d
+			tasks: [
+				{
+					id: "7E5C5B2E00000501"
+					item: "cmi:bronze_mechanism"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00000502"
+					item: "cmi:bronze_mechanism_augment"
+					type: "item"
+				}
+			]
+			title: "青铜构件"
+			x: -8.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000005"]
+			description: [
+				"压缩机、SP蒸汽机、背罐与真空室"
+				"这一批蒸汽时代的机器负责加压、做功与储气, 是铁路与化工线的动力基础"
+			]
+			id: "7E5C1B2E00000006"
+			tasks: [
+				{
+					id: "7E5C5B2E00000601"
+					item: "steampowered:steam_engine"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00000602"
+					item: "create:backtank"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00000603"
+					item: "vintageimprovements:vacuum_chamber"
+					type: "item"
+				}
+			]
+			title: "蒸汽设备套件"
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000005"]
+			description: [
+				"人类的科技就是烧开水..."
+				"&m只是方式越来越复杂&r"
+				"锅炉把水烧成蒸汽, 蒸汽再推动一切 —— 这是殖民地最可靠的能量形式"
+			]
+			id: "7E5C1B2E00000007"
+			subtitle: "&m只是方式越来越复杂&r"
+			tasks: [{
+				id: "7E5C5B2E00000701"
+				item: "steampowered:boiler"
+				type: "item"
+			}]
+			title: "人类的科技就是烧开水..."
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000007"]
+			description: [
+				"...当然烧了开水也得用"
+				"&m不然这水不是白烧了&r"
+				"蒸汽机把蒸汽的压力转换成旋转动力, 配上飞轮就能稳定地驱动整套机械"
+			]
+			id: "7E5C1B2E00000008"
+			subtitle: "&m不然这水不是白烧了&r"
+			tasks: [
+				{
+					id: "7E5C5B2E00000801"
+					item: "steampowered:steam_engine"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00000802"
+					item: "steampowered:flywheel"
+					type: "item"
+				}
+			]
+			title: "...当然烧了开水也得用"
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000007"]
+			description: [
+				"蒸汽不只是动力, 更是化工原料"
+				"裂化、发酵、蒸馏都要用到它, 先把稳定产汽的产线固定下来"
+			]
+			id: "7E5C1B2E00000009"
+			tasks: [{
+				id: "7E5C5B2E00000901"
+				item: "mekanism:steam_bucket"
+				type: "item"
+			}]
+			title: "蒸汽"
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000005"]
+			description: [
+				"♻️环保模式♻️"
+				"整点太阳能的 —— 在有阳光的地方铺几块太阳能板, 白天的电力就白送了"
+			]
+			id: "7E5C1B2E00000010"
+			subtitle: "♻️环保模式♻️"
+			tasks: [{
+				id: "7E5C5B2E00001001"
+				title: "搭起太阳能发电"
+				type: "checkmark"
+			}]
+			title: "整点太阳能的"
+			x: -4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000005"]
+			description: [
+				"本质上就是黑曜石板"
+				"坚固板强度极高, 是铁路与重型机械的通用结构材料"
+			]
+			id: "7E5C1B2E00000011"
+			subtitle: "本质上就是黑曜石板"
+			tasks: [{
+				id: "7E5C5B2E00001101"
+				item: "create:sturdy_sheet"
+				type: "item"
+			}]
+			title: "坚固板"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000011"]
+			description: [
+				"中间就像磁铁一样"
+				"在坚固板中间夹上磁铁, 就得到了致密坚固板, 列车的车体与连接件都靠它"
+			]
+			id: "7E5C1B2E00000012"
+			subtitle: "中间就像磁铁一样"
+			tasks: [{
+				id: "7E5C5B2E00001201"
+				item: "cmi:dense_sturdy_sheet"
+				type: "item"
+			}]
+			title: "致密坚固板"
+			x: 2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000011"]
+			description: [
+				"列车时刻表是自动化的开始"
+				"给列车排好班次, 它就会自己往返于站点之间 —— 这正是我丢掉的那套物流系统最基础的一环"
+			]
+			id: "7E5C1B2E00000013"
+			tasks: [{
+				id: "7E5C5B2E00001301"
+				item: "create:schedule"
+				type: "item"
+			}]
+			title: "列车时刻表"
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000012"]
+			description: [
+				"集装箱介绍"
+				"列车本身只负责跑, 真正装货的是集装箱与流体罐, 大宗物资运输全靠它们"
+			]
+			id: "7E5C1B2E00000014"
+			subtitle: "集装箱介绍"
+			tasks: [{
+				id: "7E5C5B2E00001401"
+				title: "了解集装箱运输"
+				type: "checkmark"
+			}]
+			title: "集装箱介绍"
+			x: 2.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000012"]
+			description: [
+				"逛, 吃, 逛, 吃"
+				"列车构件是机车与车厢的核心, 有了它才能造出真正能拉货的列车"
+			]
+			icon: "cmi:railway_mechanism"
+			id: "7E5C1B2E00000015"
+			shape: "gear"
+			size: 2.0d
+			tasks: [
+				{
+					id: "7E5C5B2E00001501"
+					item: "cmi:railway_mechanism"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00001502"
+					item: "cmi:railway_mechanism_augment"
+					type: "item"
+				}
+			]
+			title: "列车构件"
+			x: 4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000015"]
+			description: [
+				"列车套件"
+				"车厢、车钩、车站、控制台、轨道观察器与信号灯 —— 一次把整套铁路系统备齐"
+				"从这一列火车开始, 殖民地终于有了自己的运输网"
+			]
+			id: "7E5C1B2E00000016"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "7E5C5B2E00001601"
+					item: "create:railway_casing"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00001602"
+					item: "railways:track_coupler"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00001603"
+					item: "create:track_station"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00001604"
+					item: "create:controls"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00001605"
+					item: "create:track_observer"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00001606"
+					item: "create:track_signal"
+					type: "item"
+				}
+			]
+			title: "列车套件"
+			x: 6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000012"]
+			description: [
+				"这个阶段比较方便的东西"
+				"戴斯流体管道耐高温又耐用, 用来输送蒸汽与热流体最合适"
+			]
+			id: "7E5C1B2E00000017"
+			subtitle: "这个阶段比较方便的东西"
+			tasks: [{
+				count: 2L
+				id: "7E5C5B2E00001701"
+				item: "ad_astra:desh_fluid_pipe"
+				type: "item"
+			}]
+			title: "戴斯流体管道"
+			x: 8.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000015"]
+			description: [
+				"来自远方的矿石"
+				"列车是不得不品的一环 —— 装上游矿扫描器, 就能把远处矿脉的位置标出来"
+				"镍、银、钒都是下一阶段的关键材料"
+			]
+			id: "7E5C1B2E00000018"
+			subtitle: "列车是不得不品的一环"
+			tasks: [
+				{
+					id: "7E5C5B2E00001801"
+					item: "create_rns:deposit_scanner"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00001802"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:raw_materials/nickel"
+						}
+					}
+					title: "粗镍"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00001803"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:raw_materials/silver"
+						}
+					}
+					title: "粗银"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00001804"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:raw_materials/vanadium"
+						}
+					}
+					title: "粗钒"
+					type: "item"
+				}
+			]
+			title: "来自远方的矿石"
+			x: 8.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000015"]
+			description: [
+				"潜水套装"
+				"亿万人, 必须呼吸"
+				"戴上潜水头盔、背上背罐, 才能在水下施工 —— 海底的资源同样要开采"
+			]
+			id: "7E5C1B2E00000019"
+			shape: "hexagon"
+			subtitle: "亿万人, 必须呼吸"
+			tasks: [
+				{
+					id: "7E5C5B2E00001901"
+					item: "create:diving_helmet"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00001902"
+					item: "create:backtank"
+					type: "item"
+				}
+			]
+			title: "潜水套装"
+			x: 6.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000015"]
+			description: [
+				"蒸汽与化学反应的结合能做出比工作盆更好的东西"
+				"把胶乳、硫粉与蒸汽一起送进真空室, 就能得到熔融硫化橡胶, 效率远超手工硫化"
+			]
+			id: "7E5C1B2E00000020"
+			subtitle: "更高效的方式"
+			tasks: [{
+				id: "7E5C5B2E00002001"
+				item: "cmi:cured_rubber_bucket"
+				type: "item"
+			}]
+			title: "熔融硫化橡胶"
+			x: 0.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000020"]
+			description: ["熔融硫化橡胶冷却之后就是成品硫化橡胶, 一次能做出一大批"]
+			id: "7E5C1B2E00000021"
+			tasks: [{
+				id: "7E5C5B2E00002101"
+				item: "thermal:cured_rubber"
+				type: "item"
+			}]
+			title: "硫化橡胶"
+			x: 2.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000020"]
+			description: [
+				"植物胶乳是热带树种的产物"
+				"在伊甸的丛林里找到产胶的树, 插上提取器就能稳定收获"
+			]
+			id: "7E5C1B2E00000022"
+			tasks: [{
+				id: "7E5C5B2E00002201"
+				title: "收集植物胶乳"
+				type: "checkmark"
+			}]
+			title: "植物胶乳"
+			x: -2.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000015"]
+			description: [
+				"升级太麻烦?"
+				"一键安装, 直接升级 —— 高阶设备与构件都可以用序列组装批量生产, 不用再一件件手搓"
+			]
+			id: "7E5C1B2E00000023"
+			subtitle: "一键安装, 直接升级"
+			tasks: [{
+				id: "7E5C5B2E00002301"
+				title: "掌握批量升级的方式"
+				type: "checkmark"
+			}]
+			title: "升级太麻烦?"
+			x: 0.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000015"]
+			description: [
+				"高级的炉子"
+				"高级焦炉一次能处理更多煤, 焦炭与杂酚油的产量都会翻倍"
+			]
+			icon: "cmi:reinforced_coke_oven"
+			id: "7E5C1B2E00000024"
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [
+				{
+					id: "7E5C5B2E00002401"
+					item: "cmi:reinforced_coke_oven"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00002402"
+					item: "cmi:reinforced_coke_oven_input_bus"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00002403"
+					item: "cmi:reinforced_coke_oven_output_bus"
+					type: "item"
+				}
+			]
+			title: "高级的炉子"
+			x: 16.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000015"]
+			description: [
+				"进入下界"
+				"焦黑设备已经到头了, 想要熔炼更高温度的材料, 就必须去下界取回焦褐系的建材"
+			]
+			id: "7E5C1B2E00000025"
+			tasks: [{
+				id: "7E5C5B2E00002501"
+				title: "进入下界"
+				type: "checkmark"
+			}]
+			title: "进入下界"
+			x: 10.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000025"]
+			description: ["岩浆块、灵魂沙与下界岩, 是焦褐砖与下界构件的原料"]
+			id: "7E5C1B2E00000026"
+			tasks: [
+				{
+					id: "7E5C5B2E00002601"
+					item: "minecraft:magma_block"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00002602"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:netherrack"
+						}
+					}
+					title: "下界岩"
+					type: "item"
+				}
+			]
+			title: "下界的一些材料"
+			x: 10.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000026"]
+			description: [
+				"收集一批焦褐砖即可解锁"
+				"焦褐砖是熔铸炉的骨架, 比焦黑砖更能承受高温"
+			]
+			id: "7E5C1B2E00000027"
+			subtitle: "收集一批焦褐砖即可解锁"
+			tasks: [{
+				id: "7E5C5B2E00002701"
+				item: "tconstruct:scorched_brick"
+				type: "item"
+			}]
+			title: "焦褐砖"
+			x: 10.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000026"]
+			description: ["下界砖泥是砌炉的材料, 高炉砖则要再经过一次烧结"]
+			id: "7E5C1B2E00000028"
+			tasks: [{
+				id: "7E5C5B2E00002801"
+				item: "tconstruct:nether_grout"
+				type: "item"
+			}]
+			title: "下界砖泥"
+			x: 8.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000028"]
+			description: ["高炉砖是工业高炉的基本砌块, 后面炼钢与炼铸铁都离不开它"]
+			id: "7E5C1B2E00000029"
+			tasks: [{
+				id: "7E5C5B2E00002901"
+				item: "immersiveengineering:blastbrick"
+				type: "item"
+			}]
+			title: "高炉砖"
+			x: 12.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000027"]
+			description: [
+				"或许可以当暖宝宝"
+				"下界构件对应高温加热, 是燃烧室、热解炉与熔铸设备的通用核心"
+			]
+			icon: "cmi:nether_mechanism"
+			id: "7E5C1B2E00000030"
+			shape: "gear"
+			size: 2.0d
+			tasks: [
+				{
+					id: "7E5C5B2E00003001"
+					item: "cmi:nether_mechanism"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00003002"
+					item: "cmi:nether_mechanism_augment"
+					type: "item"
+				}
+			]
+			title: "下界构件"
+			x: 12.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000030"]
+			description: [
+				"熔铸炉是冶炼炉的进阶分支"
+				"铸件台、铸造盆、熔铸炉控制器、燃料槽、排液口与浇筑口 —— 一套下来就能处理需要更高温度的金属"
+			]
+			icon: "tconstruct:foundry_controller"
+			id: "7E5C1B2E00000031"
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "7E5C5B2E00003101"
+					item: "tconstruct:scorched_table"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00003102"
+					item: "tconstruct:scorched_basin"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00003103"
+					item: "tconstruct:foundry_controller"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00003104"
+					item: "tconstruct:scorched_fuel_tank"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00003105"
+					item: "tconstruct:scorched_drain"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2E00003106"
+					item: "tconstruct:scorched_faucet"
+					type: "item"
+				}
+			]
+			title: "熔铸炉"
+			x: 14.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000030"]
+			description: [
+				"下界砖为烈焰人提供了熟悉的环境"
+				"把烈焰人装进燃烧室, 它就会源源不断地提供热与应力, 熔铸炉与蒸汽设备都要它点火"
+			]
+			id: "7E5C1B2E00000032"
+			subtitle: "下界砖为烈焰人提供了熟悉的环境"
+			tasks: [{
+				id: "7E5C5B2E00003201"
+				item: "create:blaze_burner"
+				type: "item"
+			}]
+			title: "烈焰人燃烧室(满)"
+			x: 14.0d
+			y: 21.0d
+		}
+	]
+	title: "汽鸣铁道"
+}

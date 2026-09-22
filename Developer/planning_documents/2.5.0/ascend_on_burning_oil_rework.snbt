@@ -1,0 +1,1428 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "ascend_on_burning_oil_rework"
+	group: "050255AE19A93344"
+	icon: "createdieselgenerators:oil_scanner"
+	id: "7E5C1A2B00000000"
+	order_index: 8
+	quest_enhance_decorative_lines: [ ]
+	quest_enhance_hidden_dependency_lines: [ ]
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["1570B04A1D692BCC"]
+			description: [
+				"整合包大幅度提升了铝土刷新率, 至少从代码上看刷新率和锌差不多"
+				"铝是重建自动化设备时用得最多的金属, 先把这条线拉起来"
+			]
+			id: "7E5C1A2B00000001"
+			tasks: [{
+				id: "7E5C5A2B00000101"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:raw_materials/aluminum"
+					}
+				}
+				title: "铝土"
+				type: "item"
+			}]
+			title: "铝土"
+			x: -8.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000003"]
+			description: [
+				"电解槽是这一阶段最大的用电户, 先把&e低压蓄电池&r接上, 有条件再补上&6中压&r与&c高压&r"
+				"电存在电池里, 电解槽才能稳定地一直跑下去"
+			]
+			icon: "immersiveengineering:capacitor_hv"
+			id: "7E5C1A2B00000002"
+			shape: "diamond"
+			tasks: [{
+				id: "7E5C5A2B00000201"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "immersiveengineering:capacitor_lv"
+							}
+							{
+								Count: 1b
+								id: "immersiveengineering:capacitor_mv"
+							}
+							{
+								Count: 1b
+								id: "immersiveengineering:capacitor_hv"
+							}
+						]
+					}
+				}
+				title: "低中高压蓄电池"
+				type: "item"
+			}]
+			title: "低中高压蓄电池"
+			x: -8.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1570B04A1D692BCC"]
+			description: [
+				"需要通电使用"
+				"把&7氧化铝&r送进电解槽并通上电, 就能得到&f铝粉&r"
+				"自动化的电解产线早就随船毁了, 这一台是我用还能找到的零件手搓出来的替代品"
+			]
+			id: "7E5C1A2B00000003"
+			shape: "diamond"
+			subtitle: "#前期发电机"
+			tasks: [{
+				id: "7E5C5A2B00000301"
+				item: "immersiveindustry:electrolyzer"
+				type: "item"
+			}]
+			title: "简易电解槽"
+			x: -6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"7E5C1A2B00000001"
+				"7E5C1A2B00000003"
+			]
+			description: [
+				"把铝土送进电解槽, 通电之后就能得到纯净的铝粉"
+				"它是所有铝制零件与合金的源头"
+			]
+			id: "7E5C1A2B00000004"
+			tasks: [{
+				id: "7E5C5A2B00000401"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:dusts/aluminum"
+					}
+				}
+				title: "铝粉"
+				type: "item"
+			}]
+			title: "铝粉"
+			x: -8.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000004"]
+			description: ["把铝粉烧成锭, 再轧成板, 后面装配机器时两样都会用到"]
+			id: "7E5C1A2B00000005"
+			tasks: [
+				{
+					id: "7E5C5A2B00000501"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:ingots/aluminum"
+						}
+					}
+					title: "铝锭"
+					type: "item"
+				}
+				{
+					id: "7E5C5A2B00000502"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:plates/aluminum"
+						}
+					}
+					title: "铝板"
+					type: "item"
+				}
+			]
+			title: "铝锭与铝板"
+			x: -8.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"7E5C1A2B00000003"
+				"7E5C1A2B00000005"
+			]
+			description: ["有了它, 一堆零件就能被组装成更复杂的零件, 是制作构件的前置设备"]
+			id: "7E5C1A2B00000006"
+			shape: "diamond"
+			subtitle: "把一堆零件变成更复杂的零件"
+			tasks: [{
+				id: "7E5C5A2B00000601"
+				item: "thermal_extra:component_assembly"
+				type: "item"
+			}]
+			title: "部件装配机"
+			x: -6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["1570B04A1D692BCC"]
+			description: [
+				"镍与银是这颗星球上最常见的伴生矿"
+				"殷钢、琥珀金与精密电路都要从这两种金属开始"
+			]
+			id: "7E5C1A2B00000007"
+			tasks: [
+				{
+					id: "7E5C5A2B00000701"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:raw_materials/nickel"
+						}
+					}
+					title: "粗镍"
+					type: "item"
+				}
+				{
+					id: "7E5C5A2B00000702"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:raw_materials/silver"
+						}
+					}
+					title: "粗银"
+					type: "item"
+				}
+			]
+			title: "镍和银"
+			x: -8.0d
+			y: 13.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000007"]
+			description: ["镍与铁按比例熔炼, 得到热膨胀系数极小的殷钢, 它是热力设备的理想材料"]
+			id: "7E5C1A2B00000008"
+			subtitle: "因瓦合金(笑)"
+			tasks: [
+				{
+					id: "7E5C5A2B00000801"
+					item: "thermal:invar_ingot"
+					title: "殷钢"
+					type: "item"
+				}
+				{
+					id: "7E5C5A2B00000802"
+					item: "vintageimprovements:invar_sheet"
+					title: "殷钢板"
+					type: "item"
+				}
+			]
+			title: "殷钢锭与殷钢板"
+			x: -8.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["1570B04A1D692BCC"]
+			description: ["沉浸工程的装配台, 构件与设备的很多零件都要在这里组合起来"]
+			id: "7E5C1A2B00000009"
+			shape: "diamond"
+			tasks: [{
+				id: "7E5C5A2B00000901"
+				item: "immersiveengineering:workbench"
+				type: "item"
+			}]
+			title: "工程师装配台"
+			x: -6.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000007"]
+			description: ["银的导电性在金属里数一数二, 是精密电路与合金的常客"]
+			id: "7E5C1A2B00000010"
+			tasks: [
+				{
+					id: "7E5C5A2B00001001"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:ingots/silver"
+						}
+					}
+					title: "银锭"
+					type: "item"
+				}
+				{
+					id: "7E5C5A2B00001002"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:plates/silver"
+						}
+					}
+					title: "银板"
+					type: "item"
+				}
+			]
+			title: "银"
+			x: -6.0d
+			y: 13.0d
+		}
+		{
+			dependencies: [
+				"7E5C1A2B00000006"
+				"7E5C1A2B00000008"
+				"7E5C1A2B00000009"
+			]
+			description: [
+				"构件是整合包的核心概念, 它把&6零件&r、&6材料&r与&6机器&r串联成一条可以复用的产线"
+				"第一个要拿下的就是&e热力构件&r, 它是热力系机器的通用核心"
+			]
+			icon: "cmi:thermal_mechanism"
+			id: "7E5C1A2B00000011"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "7E5C5A2B00001101"
+				item: "cmi:thermal_mechanism"
+				type: "item"
+			}]
+			title: "热力构件"
+			x: -3.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000011"]
+			description: [
+				"把热力构件装进机器外壳, 就能开始制作这一阶段的基础热力设备"
+				"&7流体混合&r、&7流体灌装&r、&7结晶&r、&7热解&r与&7基础精炼&r是后面化工流程的主力, 建议一次多做几台"
+			]
+			icon: "thermal:machine_frame"
+			id: "7E5C1A2B00000012"
+			tasks: [{
+				id: "7E5C5A2B00001201"
+				title: "搭建基础热力设备"
+				type: "checkmark"
+			}]
+			title: "基础热力设备"
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000011"]
+			description: ["热力的结晶机负责把流体养成晶体, 纯净石英就是它的产物"]
+			id: "7E5C1A2B00000013"
+			tasks: [{
+				id: "7E5C5A2B00001301"
+				item: "thermal:machine_crystallizer"
+				type: "item"
+			}]
+			title: "结晶机"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000011"]
+			description: [
+				"晶体催生剂是加速结晶的催化剂"
+				"没有它, 石英晶体长得又慢又碎"
+			]
+			id: "7E5C1A2B00000014"
+			tasks: [{
+				id: "7E5C5A2B00001401"
+				item: "cmi:crystal_catalyt_bucket"
+				type: "item"
+			}]
+			title: "晶体催生剂"
+			x: 2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"7E5C1A2B00000013"
+				"7E5C1A2B00000014"
+			]
+			description: ["在催生剂的帮助下, 石英可以长成纯净的石英晶体, 这是电子工业的基础材料"]
+			id: "7E5C1A2B00000015"
+			tasks: [{
+				id: "7E5C5A2B00001501"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:prisms/pure_quartz"
+					}
+				}
+				title: "纯净石英"
+				type: "item"
+			}]
+			title: "纯净石英"
+			x: 2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000015"]
+			description: ["把纯净石英碾成粉, 才好与其它原料混合"]
+			id: "7E5C1A2B00000016"
+			tasks: [{
+				id: "7E5C5A2B00001601"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:dusts/pure_quartz"
+					}
+				}
+				title: "纯净石英粉"
+				type: "item"
+			}]
+			title: "纯净石英粉"
+			x: 4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000016"]
+			description: ["把纯净石英粉与其它原料混合, 得到可以还原出硅的混合物"]
+			icon: "cmi:silicon_mixture"
+			id: "7E5C1A2B00000017"
+			tasks: [{
+				id: "7E5C5A2B00001701"
+				item: "cmi:silicon_mixture"
+				type: "item"
+			}]
+			title: "硅混合物"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000017"]
+			description: ["从硅混合物里还原出来的硅, 是电子工业的粮食"]
+			id: "7E5C1A2B00000018"
+			tasks: [{
+				id: "7E5C5A2B00001801"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:silicon"
+					}
+				}
+				title: "硅"
+				type: "item"
+			}]
+			title: "硅"
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000018"]
+			description: ["硅压成板, 才能拿去做处理器与芯片"]
+			id: "7E5C1A2B00000019"
+			tasks: [{
+				id: "7E5C5A2B00001901"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:plates/silicon"
+					}
+				}
+				title: "硅板"
+				type: "item"
+			}]
+			title: "硅板"
+			x: 8.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1570B04A1D692BCC"]
+			description: ["自动化设备的骨架几乎都是铁做的, 先把铁备足"]
+			id: "7E5C1A2B00000020"
+			tasks: [{
+				id: "7E5C5A2B00002001"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:ingots/iron"
+					}
+				}
+				title: "铁材料"
+				type: "item"
+			}]
+			title: "铁材料"
+			x: 0.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000020"]
+			description: ["最基础的工程零件, 后面几乎所有设备都要用它"]
+			id: "7E5C1A2B00000021"
+			tasks: [{
+				id: "7E5C5A2B00002101"
+				item: "immersiveengineering:component_iron"
+				type: "item"
+			}]
+			title: "铁工程零件"
+			x: 2.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000015"]
+			description: ["二极管控制电流的方向, 是电路里最基础的元件"]
+			id: "7E5C1A2B00000022"
+			tasks: [{
+				id: "7E5C5A2B00002201"
+				item: "cmi:diode"
+				type: "item"
+			}]
+			title: "二极管"
+			x: 2.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["6CCEECDF932F5041"]
+			description: ["康铜的电阻随温度变化很小, 是测温与加热元件的理想材料"]
+			id: "7E5C1A2B00000023"
+			tasks: [{
+				id: "7E5C5A2B00002301"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:rods/constantan"
+					}
+				}
+				title: "康铜杆"
+				type: "item"
+			}]
+			title: "康铜杆"
+			x: 4.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"7E5C1A2B00000021"
+				"7E5C1A2B00000022"
+				"7E5C1A2B00000023"
+			]
+			description: ["轻量化的工程构件, 抽油机、挤压机这类中型设备都靠它撑起来"]
+			icon: "cmi:light_engineering_mechanism"
+			id: "7E5C1A2B00000024"
+			shape: "gear"
+			size: 2.0d
+			tasks: [
+				{
+					id: "7E5C5A2B00002401"
+					item: "cmi:light_engineering_mechanism"
+					type: "item"
+				}
+				{
+					id: "7E5C5A2B00002402"
+					item: "cmi:light_engineering_mechanism_augment"
+					type: "item"
+				}
+			]
+			title: "轻型工程构件"
+			x: 4.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000022"]
+			description: ["把二极管与其它零件组装起来, 就是完整的电子元件"]
+			id: "7E5C1A2B00000025"
+			tasks: [{
+				id: "7E5C5A2B00002501"
+				item: "immersiveengineering:component_electronic"
+				type: "item"
+			}]
+			title: "电子元件"
+			x: 2.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000015"]
+			description: ["玫瑰石英是控制芯片的核心材料, 它能把信号稳定地传递下去"]
+			id: "7E5C1A2B00000026"
+			tasks: [{
+				id: "7E5C5A2B00002601"
+				item: "create:rose_quartz"
+				type: "item"
+			}]
+			title: "玫瑰石英"
+			x: 6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"7E5C1A2B00000018"
+				"7E5C1A2B00000026"
+			]
+			description: ["玫瑰石英与硅结合, 第一次让机器有了判断的能力"]
+			id: "7E5C1A2B00000027"
+			tasks: [{
+				id: "7E5C5A2B00002701"
+				item: "create_connected:control_chip"
+				type: "item"
+			}]
+			title: "控制芯片"
+			x: 7.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"7E5C1A2B00000024"
+				"7E5C1A2B00000025"
+			]
+			description: [
+				"有了轻型工程构件与电子元件, 就可以开始拼装这一阶段的工业设备了"
+				"抽油机是这颗星球上第一台真正意义上\"自己会动\"的机器"
+			]
+			id: "7E5C1A2B00000028"
+			rewards: [{
+				id: "7E5C5A2B00002899"
+				item: "createdieselgenerators:oil_scanner"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "磕头机(笑)"
+			tasks: [
+				{
+					id: "7E5C5A2B00002801"
+					item: "createdieselgenerators:pumpjack_hole"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7E5C5A2B00002802"
+					item: "createdieselgenerators:pumpjack_bearing"
+					type: "item"
+				}
+				{
+					id: "7E5C5A2B00002803"
+					item: "createdieselgenerators:pumpjack_crank"
+					type: "item"
+				}
+				{
+					id: "7E5C5A2B00002804"
+					item: "createdieselgenerators:pumpjack_head"
+					type: "item"
+				}
+				{
+					id: "7E5C5A2B00002805"
+					item: "immersiveengineering:metal_press"
+					type: "item"
+				}
+			]
+			title: "抽油机与工业设备"
+			x: 9.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000030"]
+			description: ["{image:cmi:textures/images/ie/squeezer.png width:142 height:139 align:center}"]
+			icon: "immersiveengineering:squeezer"
+			icon_scale: 2.0d
+			id: "7E5C1A2B00000029"
+			rewards: [
+				{
+					count: 4
+					id: "7E5C5A2B00002901"
+					item: "immersiveengineering:wooden_barrel"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "7E5C5A2B00002902"
+					item: "immersiveengineering:steel_fence"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "7E5C5A2B00002903"
+					item: "minecraft:piston"
+					type: "item"
+				}
+				{
+					count: 6L
+					id: "7E5C5A2B00002904"
+					item: { Count: 6, id: "immersiveengineering:steel_scaffolding_standard" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7E5C5A2B00002905"
+					item: { Count: 2, id: "immersiveengineering:light_engineering" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7E5C5A2B00002906"
+					item: { Count: 2, id: "immersiveengineering:fluid_pipe" }
+					type: "item"
+				}
+				{
+					id: "7E5C5A2B00002907"
+					item: "immersiveengineering:rs_engineering"
+					type: "item"
+				}
+			]
+			title: "工业挤压机"
+			x: 11.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["1570B04A1D692BCC"]
+			description: ["挤压机需要焦煤粉作为辅料, 先把煤炼成焦炭再磨粉"]
+			id: "7E5C1A2B00000030"
+			tasks: [{
+				id: "7E5C5A2B00003001"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:dusts/coal_coke"
+					}
+				}
+				title: "焦煤粉"
+				type: "item"
+			}]
+			title: "焦煤粉"
+			x: 13.0d
+			y: 13.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000029"]
+			description: ["把焦煤粉送进工业挤压机, 在高温高压下得到高定向热解石墨粉"]
+			id: "7E5C1A2B00000031"
+			tasks: [{
+				id: "7E5C5A2B00003101"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:dusts/hop_graphite"
+					}
+				}
+				title: "高定向热解石墨粉"
+				type: "item"
+			}]
+			title: "高定向热解石墨粉"
+			x: 13.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000031"]
+			description: ["石墨粉压成锭, 就是处理器基板用的材料"]
+			id: "7E5C1A2B00000032"
+			tasks: [{
+				id: "7E5C5A2B00003201"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:ingots/hop_graphite"
+					}
+				}
+				title: "高定向热解石墨锭"
+				type: "item"
+			}]
+			title: "高定向热解石墨锭"
+			x: 13.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000010"]
+			description: ["银与金熔合而成的合金, 兼有良好的导电性与化学稳定性"]
+			id: "7E5C1A2B00000033"
+			tasks: [{
+				id: "7E5C5A2B00003301"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:ingots/electrum"
+					}
+				}
+				title: "琥珀金"
+				type: "item"
+			}]
+			title: "琥珀金"
+			x: 10.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000033"]
+			description: ["琥珀金拉成线绕在线轴上, 用于精密电路与信号传输"]
+			id: "7E5C1A2B00000034"
+			tasks: [{
+				id: "7E5C5A2B00003401"
+				item: "createaddition:electrum_spool"
+				type: "item"
+			}]
+			title: "琥珀金线轴"
+			x: 10.0d
+			y: 11.0d
+		}
+		{
+			dependencies: [
+				"7E5C1A2B00000019"
+				"7E5C1A2B00000032"
+				"7E5C1A2B00000033"
+			]
+			description: ["硅板、高定向热解石墨与琥珀金三者结合, 就是你的第一颗处理器"]
+			id: "7E5C1A2B00000035"
+			subtitle: "第一颗CPU"
+			tasks: [{
+				id: "7E5C5A2B00003501"
+				item: "ae2:logic_processor"
+				type: "item"
+			}]
+			title: "逻辑处理器"
+			x: 12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000035"]
+			description: ["逻辑处理器与一批精密零件组合成智能构件, 它是ME网络的钥匙"]
+			icon: "cmi:smart_mechanism"
+			id: "7E5C1A2B00000036"
+			shape: "gear"
+			size: 2.0d
+			tasks: [
+				{
+					id: "7E5C5A2B00003601"
+					item: "cmi:smart_mechanism"
+					type: "item"
+				}
+				{
+					id: "7E5C5A2B00003602"
+					item: "cmi:smart_mechanism_augment"
+					type: "item"
+				}
+			]
+			title: "智能构件"
+			x: 14.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000036"]
+			description: [
+				"智能构件让你可以开始搭建&bME网络&r"
+				"先做出控制器与最基础的输入输出设备, 再把存储挂上去, 一个能自动整理物品的网络就跑起来了"
+				"这是坠毁之后我第一次把\"自动化\"三个字重新握在手里"
+			]
+			icon: "ae2:controller"
+			id: "7E5C1A2B00000037"
+			tasks: [
+				{
+					id: "7E5C5A2B00003701"
+					item: "ae2:controller"
+					type: "item"
+				}
+				{
+					id: "7E5C5A2B00003702"
+					item: "ae2:interface"
+					type: "item"
+				}
+				{
+					id: "7E5C5A2B00003703"
+					item: "ae2:import_bus"
+					type: "item"
+				}
+				{
+					id: "7E5C5A2B00003704"
+					item: "ae2:export_bus"
+					type: "item"
+				}
+				{
+					id: "7E5C5A2B00003705"
+					item: "ae2:chest"
+					type: "item"
+				}
+			]
+			title: "ME基础设备"
+			x: 17.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000011"]
+			description: [
+				"热力添加的整合组件可以以一定的倍率提高设备运行速率"
+				"除了热力及其附属注册的2x-6x速率整合组件以外, 我们还注册了7x-10x速率的整合组件"
+				"所有整合组件都以非常便宜的序列组装配方制作, 而且结构完全相同, 可以使用同一条生产线制作"
+			]
+			icon: "thermal:upgrade_augment_1"
+			id: "7E5C1A2B00000038"
+			rewards: [{
+				id: "7E5C5A2B00003801"
+				item: "thermal:upgrade_augment_3"
+				type: "item"
+			}]
+			subtitle: "这个组件会帮到你的"
+			tasks: [{
+				id: "7E5C5A2B00003802"
+				title: "如果你觉得设备运行太慢..."
+				type: "checkmark"
+			}]
+			title: "速率整合组件"
+			x: 0.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000028"]
+			description: [
+				"本整合包修改了原油生成机制, 现在每个区块都会生成无限量的原油, 因此无需再四处勘探或寻找特定油田"
+				"殖民地最缺的就是能源与化工原料, 而这两样都从这一桶黑色液体开始"
+			]
+			hide_dependency_lines: true
+			icon: "createdieselgenerators:crude_oil_bucket"
+			id: "7E5C1A2B00000039"
+			shape: "gear"
+			size: 2.0d
+			subtitle: "霉菌"
+			tasks: [{
+				id: "7E5C5A2B00003901"
+				item: "createdieselgenerators:crude_oil_bucket"
+				type: "item"
+			}]
+			title: "原油"
+			x: -8.0d
+			y: 22.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000039"]
+			description: [
+				"分馏塔控制器是整套蒸馏系统的核心, 需要按结构图把蒸馏塔搭好, 再把控制器装上去"
+				"之后所有石油产品的分馏都要经过它"
+			]
+			id: "7E5C1A2B00000040"
+			shape: "diamond"
+			tasks: [{
+				id: "7E5C5A2B00004001"
+				item: "createdieselgenerators:distillation_controller"
+				type: "item"
+			}]
+			title: "蒸馏塔控制器"
+			x: -6.0d
+			y: 22.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000040"]
+			description: [
+				"把&6原油&r泵入蒸馏塔, 在&c加热&r条件下分馏, 一次可以得到六种不同的馏分"
+				"&8沥青&r、&7重油&r、&6润滑油&r、&e含硫柴油&r、&b煤油&r与&f石脑油&r各有各的去处"
+			]
+			id: "7E5C1A2B00000041"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "7E5C5A2B00004101"
+					item: "thermal_extra:naphtha_bucket"
+					type: "item"
+				}
+				{
+					id: "7E5C5A2B00004102"
+					item: "cmi:kerosene_bucket"
+					type: "item"
+				}
+				{
+					id: "7E5C5A2B00004103"
+					item: "cmi:sulfric_diesel_bucket"
+					type: "item"
+				}
+				{
+					id: "7E5C5A2B00004104"
+					item: "thermal_extra:lubricant_bucket"
+					type: "item"
+				}
+				{
+					id: "7E5C5A2B00004105"
+					item: "thermal:heavy_oil_bucket"
+					type: "item"
+				}
+				{
+					id: "7E5C5A2B00004106"
+					item: "cmi:bitumen_bucket"
+					type: "item"
+				}
+			]
+			title: "原油分馏初步产物"
+			x: -4.0d
+			y: 22.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000041"]
+			description: ["最轻的馏分之一, 是制取苯、乙烯等基础化工原料的起点"]
+			id: "7E5C1A2B00000042"
+			tasks: [{
+				id: "7E5C5A2B00004201"
+				item: "thermal_extra:naphtha_bucket"
+				type: "item"
+			}]
+			title: "石脑油"
+			x: -6.0d
+			y: 25.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000041"]
+			description: ["既能当燃料烧, 也能在流体精炼机里转化成汽油"]
+			id: "7E5C1A2B00000043"
+			tasks: [{
+				id: "7E5C5A2B00004301"
+				item: "cmi:kerosene_bucket"
+				type: "item"
+			}]
+			title: "煤油"
+			x: -4.0d
+			y: 25.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000041"]
+			description: ["硫含量偏高, 需要经过精炼脱硫才能拿到可用的柴油"]
+			id: "7E5C1A2B00000044"
+			tasks: [{
+				id: "7E5C5A2B00004401"
+				item: "cmi:sulfric_diesel_bucket"
+				type: "item"
+			}]
+			title: "含硫柴油"
+			x: -2.0d
+			y: 25.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000041"]
+			description: ["设备润滑与裂化润滑油的前体"]
+			id: "7E5C1A2B00000045"
+			tasks: [{
+				id: "7E5C5A2B00004501"
+				item: "thermal_extra:lubricant_bucket"
+				type: "item"
+			}]
+			title: "润滑油"
+			x: -6.0d
+			y: 28.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000041"]
+			description: ["交给流体精炼机, 就能裂解出汽油与更多润滑油"]
+			id: "7E5C1A2B00000046"
+			tasks: [{
+				id: "7E5C5A2B00004601"
+				item: "thermal:heavy_oil_bucket"
+				type: "item"
+			}]
+			title: "重油"
+			x: -4.0d
+			y: 28.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000041"]
+			description: ["冷却后凝固成沥青, 既是建材也是燃料原料"]
+			id: "7E5C1A2B00000047"
+			tasks: [{
+				id: "7E5C5A2B00004701"
+				item: "cmi:bitumen_bucket"
+				type: "item"
+			}]
+			title: "熔融沥青"
+			x: -2.0d
+			y: 28.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000011"]
+			description: ["热力的流体精炼机, 重油、煤油、含硫柴油都要靠它进一步加工"]
+			id: "7E5C1A2B00000048"
+			tasks: [{
+				id: "7E5C5A2B00004801"
+				item: "thermal:machine_refinery"
+				type: "item"
+			}]
+			title: "流体精炼机"
+			x: -2.0d
+			y: 22.0d
+		}
+		{
+			dependencies: [
+				"7E5C1A2B00000043"
+				"7E5C1A2B00000046"
+				"7E5C1A2B00000048"
+			]
+			description: ["重油与煤油精炼后都能得到汽油, 它既可以当燃料, 也可以继续裂化"]
+			id: "7E5C1A2B00000049"
+			tasks: [{
+				id: "7E5C5A2B00004901"
+				item: "createdieselgenerators:gasoline_bucket"
+				type: "item"
+			}]
+			title: "汽油"
+			x: -2.0d
+			y: 19.0d
+		}
+		{
+			dependencies: ["7E5C1B2E00000009"]
+			description: ["裂化反应需要大量蒸汽, 把蒸汽产线接过来, 顺便也能用于其它化工流程"]
+			id: "7E5C1A2B00000050"
+			tasks: [{
+				id: "7E5C5A2B00005001"
+				item: "mekanism:steam_bucket"
+				type: "item"
+			}]
+			title: "蒸汽"
+			x: -4.0d
+			y: 19.0d
+		}
+		{
+			dependencies: [
+				"7E5C1A2B00000049"
+				"7E5C1A2B00000050"
+			]
+			description: [
+				"汽油与蒸汽在催化剂作用下发生裂化反应, 得到裂化汽油"
+				"把裂化汽油再分馏一次, 就能同时拿到石脑油、苯与轻烯烃"
+			]
+			id: "7E5C1A2B00000051"
+			tasks: [{
+				id: "7E5C5A2B00005101"
+				item: "cmi:cracked_gasoline_bucket"
+				type: "item"
+			}]
+			title: "裂化汽油"
+			x: 0.0d
+			y: 22.0d
+		}
+		{
+			dependencies: [
+				"7E5C1A2B00000044"
+				"7E5C1A2B00000049"
+			]
+			description: ["重油精炼与含硫柴油脱硫都能产出柴油, 它是通往轻烯烃的关键中间体"]
+			id: "7E5C1A2B00000052"
+			tasks: [{
+				id: "7E5C5A2B00005201"
+				item: "createdieselgenerators:diesel_bucket"
+				type: "item"
+			}]
+			title: "柴油"
+			x: 0.0d
+			y: 25.0d
+		}
+		{
+			dependencies: [
+				"7E5C1A2B00000044"
+				"7E5C1A2B00000048"
+			]
+			description: ["含硫柴油脱硫时的副产物, 别丢, 后面还有别的用途"]
+			id: "7E5C1A2B00000053"
+			tasks: [{
+				id: "7E5C5A2B00005301"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:dusts/sulfur"
+					}
+				}
+				title: "硫粉"
+				type: "item"
+			}]
+			title: "硫粉"
+			x: 0.0d
+			y: 28.0d
+		}
+		{
+			dependencies: [
+				"7E5C1A2B00000051"
+				"7E5C1A2B00000052"
+			]
+			description: ["柴油与裂化汽油分馏出的轻烯烃, 是硅橡胶产线的起点"]
+			id: "7E5C1A2B00000054"
+			tasks: [{
+				id: "7E5C5A2B00005401"
+				item: "cmi:light_olefin_bucket"
+				type: "item"
+			}]
+			title: "轻烯烃"
+			x: 2.0d
+			y: 25.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000044"]
+			description: ["分馏含硫柴油还能得到杂酚油, 它是防腐木与燃料的原料"]
+			id: "7E5C1A2B00000055"
+			tasks: [{
+				id: "7E5C5A2B00005501"
+				item: "immersiveengineering:creosote_bucket"
+				type: "item"
+			}]
+			title: "杂酚油"
+			x: 2.0d
+			y: 28.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000042"]
+			description: ["石脑油裂解得到的乙烯, 是化工行业最基本的原料之一"]
+			id: "7E5C1A2B00000056"
+			tasks: [{
+				id: "7E5C5A2B00005601"
+				item: "mekanism:ethene_bucket"
+				type: "item"
+			}]
+			title: "乙烯"
+			x: -6.0d
+			y: 31.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000056"]
+			description: ["乙烯进一步氧化得到乙醛, 它既是酚醛树脂的原料, 也能用来制取轻芳烃"]
+			id: "7E5C1A2B00000057"
+			tasks: [{
+				id: "7E5C5A2B00005701"
+				item: "immersiveengineering:acetaldehyde_bucket"
+				type: "item"
+			}]
+			title: "乙醛"
+			x: -4.0d
+			y: 31.0d
+		}
+		{
+			dependencies: [
+				"7E5C1A2B00000042"
+				"7E5C1A2B00000051"
+			]
+			description: ["石脑油与裂化汽油都可以分馏出苯"]
+			id: "7E5C1A2B00000058"
+			tasks: [{
+				id: "7E5C5A2B00005801"
+				item: "cmi:benzene_bucket"
+				type: "item"
+			}]
+			title: "苯"
+			x: -2.0d
+			y: 31.0d
+		}
+		{
+			dependencies: [
+				"7E5C1A2B00000040"
+				"7E5C1A2B00000054"
+				"7E5C1A2B00000057"
+				"7E5C1A2B00000058"
+			]
+			description: [
+				"苯与乙烯在铁催化剂作用下反应可以得到苯酚"
+				"另一条路线是把含硫柴油分馏出的杂酚油再蒸馏一次, 同样能得到苯酚和轻烯烃"
+			]
+			id: "7E5C1A2B00000059"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "7E5C5A2B00005901"
+				item: "cmi:phenol_bucket"
+				type: "item"
+			}]
+			title: "苯酚"
+			x: 0.0d
+			y: 31.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000016"]
+			description: ["发酵得到的米醋, 蒸馏之后就能得到醋酸"]
+			id: "7E5C1A2B00000060"
+			tasks: [{
+				id: "7E5C5A2B00006001"
+				item: "cmi:vinegar_bucket"
+				title: "米醋"
+				type: "item"
+			}]
+			title: "米醋"
+			x: 2.0d
+			y: 31.0d
+		}
+		{
+			dependencies: [
+				"7E5C1A2B00000040"
+				"7E5C1A2B00000060"
+			]
+			description: ["醋酸是制取聚硅醚的必要原料之一"]
+			id: "7E5C1A2B00000061"
+			tasks: [{
+				id: "7E5C5A2B00006101"
+				item: "cmi:vinegar_acid_bucket"
+				type: "item"
+			}]
+			title: "醋酸"
+			x: 4.0d
+			y: 31.0d
+		}
+		{
+			dependencies: ["1570B04A1D692BCC"]
+			description: ["{image:cmi:textures/images/ie/chemical_reactor.png width:103 height:147 align:center}"]
+			icon: "immersiveindustry:chemical_reactor"
+			icon_scale: 2.0d
+			id: "7E5C1A2B00000062"
+			rewards: [
+				{
+					count: 8
+					id: "7E5C5A2B00006201"
+					item: "immersiveengineering:slab_sheetmetal_aluminum"
+					type: "item"
+				}
+				{
+					id: "7E5C5A2B00006202"
+					item: "immersiveengineering:rs_engineering"
+					type: "item"
+				}
+				{
+					id: "7E5C5A2B00006203"
+					item: "immersiveengineering:metal_barrel"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					count: 13L
+					id: "7E5C5A2B00006204"
+					item: "immersiveengineering:sheetmetal_steel"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "7E5C5A2B00006205"
+					item: "immersiveengineering:light_engineering"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "7E5C5A2B00006206"
+					item: { Count: 8, id: "immersiveengineering:treated_scaffold" }
+					type: "item"
+				}
+			]
+			title: "反应釜"
+			x: 6.0d
+			y: 28.0d
+		}
+		{
+			dependencies: [
+				"7E5C1A2B00000054"
+				"7E5C1A2B00000062"
+			]
+			description: ["轻烯烃与醋酸在反应釜中反应, 得到轻硅醚"]
+			id: "7E5C1A2B00000063"
+			tasks: [{
+				id: "7E5C5A2B00006301"
+				item: "cmi:light_silicone_ether_bucket"
+				type: "item"
+			}]
+			title: "轻硅醚"
+			x: 4.0d
+			y: 25.0d
+		}
+		{
+			dependencies: [
+				"7E5C1A2B00000061"
+				"7E5C1A2B00000062"
+				"7E5C1A2B00000063"
+			]
+			description: ["轻硅醚在反应釜中进一步聚合, 得到聚硅醚"]
+			id: "7E5C1A2B00000064"
+			tasks: [{
+				id: "7E5C5A2B00006401"
+				item: "cmi:polysilicone_ether_bucket"
+				type: "item"
+			}]
+			title: "聚硅醚"
+			x: 6.0d
+			y: 22.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000011"]
+			description: ["把聚硅醚冷却固化, 才能得到可以加工的硅橡胶"]
+			id: "7E5C1A2B00000065"
+			tasks: [{
+				id: "7E5C5A2B00006501"
+				item: "thermal:machine_chiller"
+				type: "item"
+			}]
+			title: "冷冻机"
+			x: 8.0d
+			y: 28.0d
+		}
+		{
+			dependencies: [
+				"7E5C1A2B00000064"
+				"7E5C1A2B00000065"
+			]
+			description: [
+				"聚硅醚冷却后得到硅橡胶, 再压制成硅橡胶板"
+				"注释: 硅橡胶是硅橡胶, 颜色为灰色"
+			]
+			id: "7E5C1A2B00000066"
+			tasks: [
+				{
+					id: "7E5C5A2B00006601"
+					item: "cmi:silicon_rubber"
+					type: "item"
+				}
+				{
+					id: "7E5C5A2B00006602"
+					item: "cmi:silicon_rubber_plate"
+					title: "硅橡胶板"
+					type: "item"
+				}
+			]
+			title: "硅橡胶"
+			x: 8.0d
+			y: 22.0d
+		}
+		{
+			dependencies: ["7E5C1A2B00000011"]
+			description: ["炼油厂是沉浸工程的多方块结构, 很多精炼配方都要在它里面完成"]
+			id: "7E5C1A2B00000067"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "7E5C5A2B00006701"
+				item: "immersiveengineering:refinery"
+				type: "item"
+			}]
+			title: "炼油厂"
+			x: 8.0d
+			y: 31.0d
+		}
+		{
+			dependencies: [
+				"7E5C1A2B00000059"
+				"7E5C1A2B00000067"
+			]
+			description: ["苯酚与乙醛在炼油厂中反应, 得到酚醛树脂, 它是后续绝缘与耐热材料的基础"]
+			id: "7E5C1A2B00000068"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "7E5C5A2B00006801"
+				item: "immersiveengineering:phenolic_resin_bucket"
+				type: "item"
+			}]
+			title: "酚醛树脂"
+			x: 10.0d
+			y: 28.0d
+		}
+	]
+	title: "油燃而升"
+}

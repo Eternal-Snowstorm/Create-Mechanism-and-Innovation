@@ -1,0 +1,17 @@
+{
+	"item": "#forge:coins/iron",
+	"fire_type": "knockback",
+	"knockback_strength": 1,
+	"pierce_level": 1,
+	"bullet_count": 3,
+	"velocity": 2.0,
+	"damage": 2.5,
+	"inaccuracy": 1.0,
+	"render_mode": "toward_motion",
+	"scale": 1.0,
+	"spin": 1.0,
+	"cooldown": 8,
+	"shoot_sound": "immersiveengineering:railgun_fire",
+	"shoot_volume": 0.5,
+	"hit_sound": "minecraft:entity.arrow.hit"
+}

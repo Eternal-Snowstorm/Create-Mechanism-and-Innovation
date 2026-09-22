@@ -162,7 +162,7 @@
 
 [entity]
 	#Whether to enable health bar for entity. If disabled, all other health bar options will be ignored.
-	enableHealthBar = true
+	enableHealthBar = false
 	#The maximum distance to display mob health bar.
 	#Range: 0.0 ~ 100.0
 	maxDistance = 32.0

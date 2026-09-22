@@ -1,0 +1,1014 @@
+{
+	consume_items: false
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "start_rework"
+	group: "050255AE19A93344"
+	icon: "tconstruct:seared_melter"
+	id: "7E5C1B2C00000000"
+	order_index: 1
+	quest_enhance_decorative_lines: [ ]
+	quest_enhance_hidden_dependency_lines: [ ]
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"妈的, 烧的真他妈充分."
+				"要不是紧急逃生仓, 我怕是也和这船体一样支离破碎了."
+				"这里是&b伊甸&r, 一颗刚被确认可居住的&6新星系行星&r. 我是被派来的开拓工程师之一, 任务是把整套&e自动化开拓设备&r铺开, 让后续的殖民船落地就能开工."
+				"可它们在坠毁里全没了. 图纸还在我脑子里, 工具却得一件件重新做."
+				"空气含氧量34%, 地表重力加速度10.28m*s^-2, 有地球生物存活... 既然这样, 得赶紧想办法活下去, 才能争取与地球的通讯..."
+			]
+			id: "7E5C1B2C00000001"
+			shape: "gear"
+			size: 1.8d
+			subtitle: "紧急求助!紧急求助!"
+			tasks: [{
+				id: "7E5C5B2C00000101"
+				item: "minecraft:cooked_beef"
+				type: "item"
+			}]
+			title: "劫后余生"
+			x: -10.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000001"]
+			description: [
+				"在星球地层里发现了一种特殊的晶体矿物"
+				"它的表面上一直浮动着奇怪的光辉, 似乎蕴含着能量"
+				"手上暂时没有什么鉴定材料, 但是我有一种直觉, 我可以用特殊的结构把它的能量激发出来"
+				"我需要给这种用于激发晶体能量的结构起一个名字"
+				"就叫...构件吧"
+			]
+			id: "7E5C1B2C00000002"
+			subtitle: "当一种矿物发光时, 你最好祈祷它也在发热"
+			tasks: [{
+				id: "7E5C5B2C00000201"
+				item: "cmi:dreamcore_ore"
+				type: "item"
+			}]
+			title: "梦幻般的晶体"
+			x: -10.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000002"]
+			description: [
+				"把随处可见的材料敲打成型, 就是最基础的构件零件"
+				"既然自动化设备丢了, 那就用最原始的方式把产线重新拼出来 —— 这些不起眼的零件就是第一块砖"
+			]
+			id: "7E5C1B2C00000003"
+			tasks: [{
+				id: "7E5C5B2C00000301"
+				item: "cmi:basic_mechanism_part"
+				type: "item"
+			}]
+			title: "基础构件零件"
+			x: -10.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000001"]
+			description: [
+				"先把处理食材的地方收拾出来"
+				"一把砧板加上任意斧头, 就是最原始的木材加工台"
+			]
+			id: "7E5C1B2C00000004"
+			tasks: [{
+				id: "7E5C5B2C00000401"
+				item: "farmersdelight:cutting_board"
+				type: "item"
+			}]
+			title: "砧板"
+			x: -7.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000004"]
+			description: [
+				"原木放在砧板上用斧削皮, 就能得到树皮"
+				"树皮可以泡出鞣质, 是后面处理木材与制作防水材料的原料"
+			]
+			id: "7E5C1B2C00000005"
+			subtitle: "原木放在砧板上用斧削皮"
+			tasks: [{
+				id: "7E5C5B2C00000501"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "cmi:tree_barks"
+					}
+				}
+				title: "树皮"
+				type: "item"
+			}]
+			title: "树皮"
+			x: -7.0d
+			y: 18.5d
+		}
+		{
+			dependencies: ["7E5C1B2C00000001"]
+			description: [
+				"这是一把很普通的弓, 它的韧性和柔度较好, 可以快速拉满射出紫水晶晶簇, 为您提供基础的防身."
+				"如果您碰到由热力系列(指名道姓&c狂风人&r和&c岩石人&r)添加的拥有远程攻击能力的怪物, 就用它进行反击吧."
+				"橡胶木板可以用于修复这把弓, 请一定要活下去."
+			]
+			id: "7E5C1B2C00000006"
+			subtitle: "就请拿着它走下去吧"
+			tasks: [{
+				id: "7E5C5B2C00000601"
+				item: "thermal:rubberwood_planks"
+				type: "item"
+			}]
+			title: "修补材料"
+			x: -10.0d
+			y: 17.5d
+		}
+		{
+			dependencies: ["7E5C1B2C00000001"]
+			description: [
+				"这是我为数不多能徒手挖掘的材料"
+				"先攒够十六根原木, 开拓者的一切都要从木头开始"
+			]
+			id: "7E5C1B2C00000007"
+			rewards: [{
+				id: "7E5C5B2C00000799"
+				item: "cmi:initial_item_kit"
+				type: "item"
+			}]
+			tasks: [{
+				count: 16L
+				id: "7E5C5B2C00000701"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "minecraft:logs"
+					}
+				}
+				title: "原木"
+				type: "item"
+			}]
+			title: "从木头开始..."
+			x: -4.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000007"]
+			description: ["原木分解出的基础材料, 也是整个第一章里最通用的东西"]
+			id: "7E5C1B2C00000008"
+			subtitle: "原木分解出的基础材料"
+			tasks: [{
+				id: "7E5C5B2C00000801"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "minecraft:planks"
+					}
+				}
+				title: "木板"
+				type: "item"
+			}]
+			title: "木板"
+			x: -2.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000008"]
+			description: [
+				"有了它, 我就能把零散的材料拼成工具与机器"
+				"工作台几乎是所有合成路线的起点, 后面很长一段时间都离不开它"
+			]
+			id: "7E5C1B2C00000009"
+			tasks: [{
+				id: "7E5C5B2C00000901"
+				item: "minecraft:crafting_table"
+				type: "item"
+			}]
+			title: "工作台"
+			x: 0.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000008"]
+			description: [
+				"从基础做起..."
+				"匠魂的模具是浇铸工具部件的模板, 先准备八块, 后面做工具时会一直用"
+			]
+			icon: "tconstruct:pattern"
+			id: "7E5C1B2C00000010"
+			subtitle: "从基础做起..."
+			tasks: [{
+				count: 8L
+				id: "7E5C5B2C00001001"
+				item: "tconstruct:pattern"
+				type: "item"
+			}]
+			title: "模具"
+			x: 0.0d
+			y: 17.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000009"]
+			description: [
+				"能让树苗立刻生长且不消耗"
+				"扳手在前面的初始套件中有赠送, 不需要担心制作时会消耗"
+				"这是我做出的第一个构件 —— 自动化设备遗失之后, 它就是我把产线重新拼起来的起点"
+			]
+			icon: "cmi:wooden_mechanism"
+			id: "7E5C1B2C00000011"
+			shape: "gear"
+			size: 2.0d
+			subtitle: "我的第一个构件"
+			tags: ["achievement_toast_glow"]
+			tasks: [{
+				id: "7E5C5B2C00001101"
+				item: "cmi:wooden_mechanism"
+				type: "item"
+			}]
+			title: "木质构件"
+			x: 1.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000010"]
+			description: [
+				"工作站是匠魂阶段的中枢, 它能把各个加工方块串在一起"
+				"把它放在部件制造台旁边, 我就能在一个界面里完成大部分操作"
+			]
+			id: "7E5C1B2C00000012"
+			shape: "diamond"
+			tasks: [{
+				id: "7E5C5B2C00001201"
+				item: "tconstruct:tinker_station"
+				type: "item"
+			}]
+			title: "工作站"
+			x: 2.0d
+			y: 17.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000012"]
+			description: [
+				"工作站可以读取&6相连的容器&f, 也可以在UI内快捷切换到&6相连的其他匠魂工作方块&f(如&6部件制造台&f等)"
+				"并且它十分重要, 是你目前阶段&c唯一&r可以从保险库中取出东西的方式"
+				"没有工程机械可用的时候, 这套手工作坊就是我最可靠的生产力"
+			]
+			id: "7E5C1B2C00000013"
+			subtitle: "我曾经是一枚工匠！"
+			tasks: [
+				{
+					id: "7E5C5B2C00001301"
+					item: "craftingstationjei:crafting_station"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2C00001302"
+					item: "tconstruct:tinker_station"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2C00001303"
+					item: "tconstruct:part_builder"
+					type: "item"
+				}
+			]
+			title: "工匠的第一步"
+			x: 4.0d
+			y: 17.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000013"]
+			description: [
+				"可以查看所有的材料及工具数据"
+				"每推进一段匠魂进度, 这本书都会记录下来, 忘了配方时随手翻一翻就好"
+			]
+			icon: "tconstruct:encyclopedia"
+			id: "7E5C1B2C00000014"
+			rewards: [
+				{
+					advancement: "tconstruct:world/tinkers_gadgetry"
+					criterion: ""
+					id: "7E5C5B2C00001401"
+					type: "advancement"
+				}
+				{
+					advancement: "tconstruct:smeltery/puny_smelting"
+					criterion: ""
+					id: "7E5C5B2C00001402"
+					type: "advancement"
+				}
+				{
+					advancement: "tconstruct:smeltery/mighty_smelting"
+					criterion: ""
+					id: "7E5C5B2C00001403"
+					type: "advancement"
+				}
+				{
+					advancement: "tconstruct:foundry/fantastic_foundry"
+					criterion: ""
+					id: "7E5C5B2C00001404"
+					type: "advancement"
+				}
+			]
+			subtitle: "可以查看所有的材料及工具数据"
+			tasks: [{
+				id: "7E5C5B2C00001405"
+				item: "tconstruct:encyclopedia"
+				type: "item"
+			}]
+			title: "工匠大百科"
+			x: 6.0d
+			y: 17.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000009"]
+			description: [
+				"更方便的东西"
+				"随身携带的工作台, 出门在外也能随时合成, 不用再跑回基地"
+			]
+			id: "7E5C1B2C00000015"
+			subtitle: "更方便的东西"
+			tasks: [{
+				id: "7E5C5B2C00001501"
+				item: "cmi:handheld_crafting_table"
+				type: "item"
+			}]
+			title: "手持工作台"
+			x: -2.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000013"]
+			description: [
+				"它兼备&6镐&f、&6斧&f和&6锹&f的功能, 几乎能满足所有的挖掘需求。唯一的缺点就是没有攻击力"
+				"推荐把它当作这一阶段的主力工具, 一把顶三把, 能省下不少背包格子"
+			]
+			icon: {
+				Count: 1
+				id: "cmi:paxel"
+				tag: {
+					Damage: 0
+					tic_broken: 0b
+				}
+			}
+			id: "7E5C1B2C00000016"
+			subtitle: "万用挖掘工具"
+			tasks: [{
+				id: "7E5C5B2C00001601"
+				item: {
+					Count: 1
+					id: "cmi:paxel"
+					tag: {
+						Damage: 0
+						tic_broken: 0b
+					}
+				}
+				type: "item"
+			}]
+			title: "镐尖斧"
+			x: 4.0d
+			y: 13.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000009"]
+			description: [
+				"做把锹能让我更快地收集材料...或者还有&6更快的选择&f？"
+				"总之先把铲子做出来, 挖沙挖土都利索得多"
+			]
+			id: "7E5C1B2C00000017"
+			tasks: [{
+				id: "7E5C5B2C00001701"
+				title: "做一把铲子"
+				type: "checkmark"
+			}]
+			title: "更便捷的工具"
+			x: 0.0d
+			y: 20.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000017"]
+			description: [
+				"砂砾、燧石、黏土与沙子, 都是随手就能挖到的材料"
+				"但把它们按比例凑在一起, 就是砖泥的原料"
+			]
+			id: "7E5C1B2C00000018"
+			tasks: [
+				{
+					id: "7E5C5B2C00001801"
+					item: "minecraft:gravel"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2C00001802"
+					item: "minecraft:flint"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2C00001803"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:clay"
+						}
+					}
+					title: "黏土"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2C00001804"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:sand"
+						}
+					}
+					title: "沙子"
+					type: "item"
+				}
+			]
+			title: "原料采集"
+			x: 2.0d
+			y: 20.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000018"]
+			description: [
+				"&m原本叫水泥来着&r"
+				"把黏土与沙子混合成砖泥, 烧结之后就是匠魂设备的骨架材料"
+			]
+			id: "7E5C1B2C00000019"
+			subtitle: "&m原本叫水泥来着&r"
+			tasks: [{
+				id: "7E5C5B2C00001901"
+				item: "tconstruct:grout"
+				type: "item"
+			}]
+			title: "砖泥"
+			x: 4.0d
+			y: 20.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000018"]
+			description: [
+				"锤子是这一阶段最实用的敲打工具"
+				"金属、石头都可以先用它敲成需要的形状"
+			]
+			id: "7E5C1B2C00000020"
+			tasks: [{
+				id: "7E5C5B2C00002001"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "createdieselgenerators:hammers"
+					}
+				}
+				title: "Any #createdieselgenerators:hammers"
+				type: "item"
+			}]
+			title: "锤子"
+			x: 6.0d
+			y: 20.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000020"]
+			description: [
+				"石头同样可以敲成板"
+				"石板是石质构件的重要原料之一"
+			]
+			id: "7E5C1B2C00000021"
+			tasks: [{
+				id: "7E5C5B2C00002101"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:plates/stone"
+					}
+				}
+				title: "石板"
+				type: "item"
+			}]
+			title: "石板"
+			x: 8.0d
+			y: 20.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000019"]
+			description: [
+				"尽量多做些"
+				"有了焦黑砖, 我就能制作熔炼更高熔点金属的设备"
+			]
+			id: "7E5C1B2C00000022"
+			subtitle: "尽量多做些"
+			tasks: [{
+				count: 2L
+				id: "7E5C5B2C00002201"
+				item: "tconstruct:seared_brick"
+				type: "item"
+			}]
+			title: "焦黑砖"
+			x: 4.0d
+			y: 23.0d
+		}
+		{
+			dependencies: [
+				"7E5C1B2C00000021"
+				"7E5C1B2C00000022"
+			]
+			description: [
+				"把石板与焦黑砖组合起来, 就得到了石质构件"
+				"石质构件对应基础传热与石头转化, 匠魂的整套熔炼设备都由它开启"
+			]
+			icon: "cmi:stone_mechanism"
+			id: "7E5C1B2C00000023"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "7E5C5B2C00002301"
+				item: "cmi:stone_mechanism"
+				type: "item"
+			}]
+			title: "石质构件"
+			x: 7.0d
+			y: 23.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000009"]
+			description: [
+				"原神, 启动!"
+				"用镐挖一点圆石回来, 石头是这颗星球上最不缺的东西"
+			]
+			id: "7E5C1B2C00000024"
+			subtitle: "原神, 启动!"
+			tasks: [{
+				id: "7E5C5B2C00002401"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:stone"
+					}
+				}
+				title: "圆石"
+				type: "item"
+			}]
+			title: "圆石"
+			x: 0.0d
+			y: 26.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000024"]
+			description: [
+				"我可以用它来熔炼一些&6熔点较低&f的金属"
+				"燃料用木炭或煤都可以, 先让它一直烧着, 后面炼铜炼铁都要排队"
+			]
+			id: "7E5C1B2C00000025"
+			rewards: [{
+				count: 16
+				id: "7E5C5B2C00002599"
+				item: "minecraft:coal"
+				type: "item"
+			}]
+			subtitle: "“热”门话题"
+			tasks: [{
+				id: "7E5C5B2C00002501"
+				item: "minecraft:furnace"
+				type: "item"
+			}]
+			title: "熔炉"
+			x: 2.0d
+			y: 26.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000009"]
+			description: [
+				"地表的铜矿很容易找到, 挖一些粗铜回来"
+				"它是这颗星球上最适合上手的金属之一"
+			]
+			id: "7E5C1B2C00000026"
+			tasks: [{
+				id: "7E5C5B2C00002601"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:raw_materials/copper"
+					}
+				}
+				title: "粗铜"
+				type: "item"
+			}]
+			title: "粗铜"
+			x: 0.0d
+			y: 29.0d
+		}
+		{
+			dependencies: [
+				"7E5C1B2C00000025"
+				"7E5C1B2C00000026"
+			]
+			description: [
+				"一种质地较软的金属, 似乎很容易塑形"
+				"把粗铜烧成锭, 是制作铜制工具与铜质构件的前提"
+			]
+			id: "7E5C1B2C00000027"
+			subtitle: "一种质地较软的金属 似乎很容易塑形"
+			tasks: [{
+				id: "7E5C5B2C00002701"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:ingots/copper"
+					}
+				}
+				title: "铜锭"
+				type: "item"
+			}]
+			title: "铜锭"
+			x: 2.0d
+			y: 29.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000027"]
+			description: [
+				"我应该可以在部件制造台直接用&6铜&f做出对应部件...其他材料就不一定行得通了"
+				"有了这些 就能做挖掘等级更高的工具了"
+				"{image:cmi:textures/images/tconstruct/copper_pickaxe.png width:647 height:296 align:center fit:true}"
+			]
+			id: "7E5C1B2C00000028"
+			subtitle: "有了这些 就能做挖掘等级更高的工具了"
+			tasks: [{
+				id: "7E5C5B2C00002801"
+				item: {
+					Count: 1
+					id: "itemfilters:weak_nbt"
+					tag: {
+						value: {
+							Material: "tconstruct:copper"
+						}
+					}
+				}
+				title: "铜部件"
+				type: "item"
+			}]
+			title: "铜部件(匠魂)"
+			x: 4.0d
+			y: 29.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000023"]
+			description: [
+				"有了这些, 我就能搭出一套简易的熔炼设备, &6思索&f应该能提供帮助..."
+				"这也是第一章的核心: 熔化炉负责把金属熔成流体, 加热器负责升温, 浇筑口与铸件台、铸造盆负责把流体浇进模具"
+				"它是自动化设备遗失之后, 我在这颗星球上重建的第一条完整产线"
+				"一个完整的固体燃料熔化炉结构:"
+				"{image:cmi:textures/images/tconstruct/seared_melter_1.png width:133 height:115 align:center}"
+			]
+			icon: "tconstruct:seared_melter"
+			id: "7E5C1B2C00000029"
+			shape: "gear"
+			size: 2.0d
+			tasks: [
+				{
+					id: "7E5C5B2C00002901"
+					item: "tconstruct:seared_melter"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2C00002902"
+					item: "tconstruct:seared_heater"
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "7E5C5B2C00002903"
+					item: "tconstruct:seared_faucet"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2C00002904"
+					item: "tconstruct:seared_table"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2C00002905"
+					item: "tconstruct:seared_basin"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2C00002906"
+					item: "tconstruct:cast_chest"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2C00002907"
+					item: "tconstruct:ingot_cast"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2C00002908"
+					item: "tconstruct:plate_cast"
+					type: "item"
+				}
+			]
+			title: "初级冶炼"
+			x: 11.0d
+			y: 23.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000029"]
+			description: [
+				"此外你还可以选择温度更高的流体燃料"
+				"把固体燃料槽换成流体燃料槽, 熔化炉就能烧更热的燃料, 也就能熔炼更高熔点的金属"
+				"一个完整的流体燃料熔化炉结构:"
+				"{image:cmi:textures/images/tconstruct/seared_melter_2.png width:133 height:115 align:center}"
+			]
+			id: "7E5C1B2C00000030"
+			subtitle: "此外你还可以选择温度更高的流体燃料"
+			tasks: [{
+				id: "7E5C5B2C00003001"
+				item: "tconstruct:seared_fuel_tank"
+				type: "item"
+			}]
+			title: "流体燃料选择"
+			x: 11.0d
+			y: 26.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000023"]
+			description: [
+				"主世界也有啦"
+				"石英矿不只长在地底, 地表同样能找到, 先观察一下它的样子"
+			]
+			id: "7E5C1B2C00000031"
+			subtitle: "主世界也有啦"
+			tasks: [{
+				icon: "cmi:quartz_ore"
+				id: "7E5C5B2C00003101"
+				observe_type: 1
+				timer: 0L
+				title: "观察：主世界石英矿"
+				to_observe: "cmi:overworld_quartz_ore"
+				type: "observation"
+			}]
+			title: "石英矿"
+			x: 10.0d
+			y: 20.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000031"]
+			description: ["挖下来的石英表面光滑, 是后面光学与电子材料的起点"]
+			id: "7E5C1B2C00000032"
+			tasks: [{
+				id: "7E5C5B2C00003201"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:gems/quartz"
+					}
+				}
+				title: "石英"
+				type: "item"
+			}]
+			title: "石英"
+			x: 12.0d
+			y: 20.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000032"]
+			description: [
+				"打制石器吗"
+				"手持石英右键{minecraft:deepslate, 1}深板岩或{minecraft:cobbled_deepslate, 1}深板岩圆石会有30%的概率获取"
+			]
+			id: "7E5C1B2C00000033"
+			subtitle: "打制石器吗"
+			tasks: [{
+				id: "7E5C5B2C00003301"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:prisms/polished_quartz"
+					}
+				}
+				title: "磨制石英"
+				type: "item"
+			}]
+			title: "磨制石英"
+			x: 14.0d
+			y: 20.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000029"]
+			description: [
+				"村庄的工匠小屋中有大量的&6冶炼炉元件&r，或许可以帮助你快速发展"
+				"这里的原住民已经先我一步定居下来, 带上熔炼设备相关的材料去村里换一换, 能省下大量时间"
+			]
+			id: "7E5C1B2C00000034"
+			size: 1.5d
+			tasks: [{
+				id: "7E5C5B2C00003401"
+				structure: "#minecraft:village"
+				type: "structure"
+			}]
+			title: "到达村庄"
+			x: 15.0d
+			y: 23.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000034"]
+			description: [
+				"你应该能找到"
+				"工匠砧可以制作更多工具，以及一些具有&4特殊功能&r的工具"
+			]
+			id: "7E5C1B2C00000035"
+			subtitle: "你应该能找到"
+			tasks: [{
+				id: "7E5C5B2C00003501"
+				item: "tconstruct:tinkers_anvil"
+				type: "item"
+			}]
+			title: "工匠砧"
+			x: 18.0d
+			y: 23.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000035"]
+			description: [
+				"                  这是你应得的"
+				"大锤能一次开采一片区域, 挖矿效率远超普通镐子, 但耐久消耗也更快"
+			]
+			hide_dependency_lines: true
+			icon: {
+				Count: 1
+				id: "tconstruct:sledge_hammer"
+				tag: {
+					Damage: 0
+					tic_broken: 0b
+				}
+			}
+			id: "7E5C1B2C00000036"
+			invisible: true
+			rewards: [{
+				count: 16
+				id: "7E5C5B2C00003699"
+				item: "create:andesite_alloy"
+				type: "item"
+			}]
+			subtitle: "你很清楚什么工具适应什么需求"
+			tags: ["achievement_toast_glow"]
+			tasks: [{
+				id: "7E5C5B2C00003601"
+				item: {
+					Count: 1
+					id: "tconstruct:sledge_hammer"
+					tag: {
+						Damage: 0
+						tic_broken: 0b
+					}
+				}
+				title: "任意 大锤"
+				type: "item"
+			}]
+			title: "任意 大锤"
+			x: 21.0d
+			y: 21.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000035"]
+			description: [
+				"                  这是你应得的"
+				"板斧一次能放倒整棵树, 砍伐与清理林地时非常省事"
+			]
+			hide_dependency_lines: true
+			icon: {
+				Count: 1
+				id: "tconstruct:broad_axe"
+				tag: {
+					Damage: 0
+					tic_broken: 0b
+				}
+			}
+			id: "7E5C1B2C00000037"
+			invisible: true
+			rewards: [{
+				count: 16
+				id: "7E5C5B2C00003799"
+				item: "create:andesite_alloy"
+				type: "item"
+			}]
+			subtitle: "你很清楚什么工具适应什么需求"
+			tags: ["achievement_toast_glow"]
+			tasks: [{
+				id: "7E5C5B2C00003701"
+				item: {
+					Count: 1
+					id: "tconstruct:broad_axe"
+					tag: {
+						Damage: 0
+						tic_broken: 0b
+					}
+				}
+				title: "任意 板斧"
+				type: "item"
+			}]
+			title: "板斧"
+			x: 21.0d
+			y: 23.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000035"]
+			description: [
+				"                  这是你应得的"
+				"矿脉锤能一次开采整条矿脉, 找矿时比一格一格挖快得多"
+			]
+			hide_dependency_lines: true
+			icon: {
+				Count: 1
+				id: "tconstruct:vein_hammer"
+				tag: {
+					Damage: 0
+					tic_broken: 0b
+				}
+			}
+			id: "7E5C1B2C00000038"
+			invisible: true
+			rewards: [{
+				count: 16
+				id: "7E5C5B2C00003899"
+				item: "create:andesite_alloy"
+				type: "item"
+			}]
+			subtitle: "你很清楚什么工具适应什么需求"
+			tags: ["achievement_toast_glow"]
+			tasks: [{
+				id: "7E5C5B2C00003801"
+				item: {
+					Count: 1
+					id: "tconstruct:vein_hammer"
+					tag: {
+						Damage: 0
+						tic_broken: 0b
+					}
+				}
+				title: "任意 矿脉锤"
+				type: "item"
+			}]
+			title: "矿脉锤"
+			x: 21.0d
+			y: 25.0d
+		}
+		{
+			dependencies: ["7E5C1B2C00000035"]
+			description: [
+				"                  这是你应得的"
+				"开掘铲能整片挖走泥土与沙子, 平整地形和挖沙时最顺手"
+			]
+			hide_dependency_lines: true
+			icon: {
+				Count: 1
+				id: "tconstruct:excavator"
+				tag: {
+					Damage: 0
+					tic_broken: 0b
+				}
+			}
+			id: "7E5C1B2C00000039"
+			invisible: true
+			rewards: [{
+				count: 16
+				id: "7E5C5B2C00003999"
+				item: "create:andesite_alloy"
+				type: "item"
+			}]
+			subtitle: "你很清楚什么工具适应什么需求"
+			tags: ["achievement_toast_glow"]
+			tasks: [{
+				id: "7E5C5B2C00003901"
+				item: {
+					Count: 1
+					id: "tconstruct:excavator"
+					tag: {
+						Damage: 0
+						tic_broken: 0b
+					}
+				}
+				title: "任意 开掘铲"
+				type: "item"
+			}]
+			title: "任意 开掘铲"
+			x: 21.0d
+			y: 27.0d
+		}
+	]
+	title: "炽焰匠心"
+}

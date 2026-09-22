@@ -1,0 +1,1022 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "machine_learning_rework"
+	group: "050255AE19A93344"
+	icon: "create:cogwheel"
+	id: "7E5C1B2D00000000"
+	order_index: 3
+	quest_enhance_decorative_lines: [ ]
+	quest_enhance_hidden_dependency_lines: [ ]
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["7E5C1B2C00000029"]
+			description: [
+				"焦黑小炉子是第一章留给我的唯一一台\"设备\""
+				"从这里开始, 我要把只会手搓的作坊, 一步步变成会自己转动的机械车间"
+				"开拓船带来的自动化产线本该直接铺在这片土地上, 现在只能靠我一块一块把它拼回来"
+			]
+			id: "7E5C1B2D00000001"
+			shape: "diamond"
+			subtitle: "对接第一章"
+			tasks: [{
+				id: "7E5C5B2D00000101"
+				item: "tconstruct:seared_melter"
+				type: "item"
+			}]
+			title: "焦黑小炉子"
+			x: -12.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000001"]
+			description: [
+				"这片森林里长着一种会\"流泪\"的树"
+				"靠近观察一下橡胶木, 它的树皮里藏着可以凝固成弹性材料的胶乳"
+			]
+			id: "7E5C1B2D00000002"
+			subtitle: "先认识一下这棵树"
+			tasks: [{
+				icon: "thermal:rubberwood_log"
+				id: "7E5C5B2D00000201"
+				observe_type: 1
+				timer: 0L
+				title: "观察：橡胶木"
+				to_observe: "thermal:rubberwood_log"
+				type: "observation"
+			}]
+			title: "观察橡胶木"
+			x: -12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000002"]
+			description: ["橡胶原木的木质疏松, 当作建材不够结实, 但它的汁液是这一章的关键原料"]
+			id: "7E5C1B2D00000003"
+			tasks: [{
+				id: "7E5C5B2D00000301"
+				item: "thermal:rubberwood_log"
+				type: "item"
+			}]
+			title: "橡胶原木"
+			x: -10.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000003"]
+			description: ["橡胶木板柔软且易于密封, 常常被拿来做垫圈与密封件"]
+			id: "7E5C1B2D00000004"
+			tasks: [{
+				id: "7E5C5B2D00000401"
+				item: "thermal:rubberwood_planks"
+				type: "item"
+			}]
+			title: "橡胶木板"
+			x: -8.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000003"]
+			description: [
+				"把提取器插进橡胶原木, 就能慢慢收集到胶乳"
+				"两个提取器可以并行工作, 建议一起挂上"
+			]
+			id: "7E5C1B2D00000005"
+			subtitle: "提取橡胶"
+			tasks: [{
+				count: 2L
+				id: "7E5C5B2D00000501"
+				item: "treetap:tap"
+				type: "item"
+			}]
+			title: "树液提取器"
+			x: -6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000005"]
+			description: [
+				"胶乳是乳白色的粘稠液体, 接在桶里放一会儿就会慢慢变稠"
+				"这是我在伊甸拿到的第一批\"工业原料\""
+			]
+			id: "7E5C1B2D00000006"
+			tasks: [{
+				id: "7E5C5B2D00000601"
+				title: "收集到橡胶胶乳"
+				type: "checkmark"
+			}]
+			title: "橡胶胶乳"
+			x: -4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000006"]
+			description: ["胶乳凝固之后就是橡胶, 弹性好、绝缘性好, 是传送带与密封件的标准材料"]
+			id: "7E5C1B2D00000007"
+			tasks: [{
+				id: "7E5C5B2D00000701"
+				item: "thermal:rubber"
+				type: "item"
+			}]
+			title: "橡胶"
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000007"]
+			description: ["把橡胶压成板, 就能用于各种机械的密封与减震结构"]
+			id: "7E5C1B2D00000008"
+			tasks: [{
+				id: "7E5C5B2D00000801"
+				item: "cmi:rubber_plate"
+				type: "item"
+			}]
+			title: "橡胶板"
+			x: -2.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000003"]
+			description: [
+				"橡胶树上获取的边角料"
+				"树叶与树皮都能拿来做堆肥, 也能碾成橡胶粉"
+			]
+			id: "7E5C1B2D00000009"
+			tasks: [
+				{
+					id: "7E5C5B2D00000901"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "thermal:rubberwood_logs"
+						}
+					}
+					title: "橡胶树皮"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2D00000902"
+					item: "thermal:rubberwood_sapling"
+					title: "橡胶树苗"
+					type: "item"
+				}
+			]
+			title: "橡胶树的边角料"
+			x: -8.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000009"]
+			description: ["橡胶碾成粉之后可以掺进别的材料里, 提升成品的韧性"]
+			id: "7E5C1B2D00000010"
+			tasks: [{
+				id: "7E5C5B2D00001001"
+				item: "cmi:rubber_dust"
+				type: "item"
+			}]
+			title: "橡胶粉"
+			x: -6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000001"]
+			description: [
+				"硫磺粉末"
+				"含硫柴油精炼的副产物也能得到它, 这里是更直接的来源"
+			]
+			id: "7E5C1B2D00000011"
+			subtitle: "硫磺粉末"
+			tasks: [{
+				id: "7E5C5B2D00001101"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:dusts/sulfur"
+					}
+				}
+				title: "硫粉"
+				type: "item"
+			}]
+			title: "硫粉"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"7E5C1B2D00000007"
+				"7E5C1B2D00000011"
+			]
+			description: [
+				"气密性绝佳且不易磨损的材料"
+				"生橡胶加硫之后才真正耐用 —— 这就是硫化橡胶, 后面几乎所有密封与管线都要用它"
+			]
+			id: "7E5C1B2D00000012"
+			subtitle: "气密性绝佳且不易磨损的材料"
+			tasks: [{
+				id: "7E5C5B2D00001201"
+				item: "thermal:cured_rubber"
+				type: "item"
+			}]
+			title: "硫化橡胶"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"7E5C1B2D00000012"
+				"7E5C1B2D00000016"
+			]
+			description: [
+				"铜在伊甸并不稀缺, 用它做出来的构件耐腐蚀、导热快"
+				"铜构件负责流体存储与传输, 是物流设备的骨架"
+			]
+			icon: "cmi:copper_mechanism"
+			id: "7E5C1B2D00000013"
+			shape: "gear"
+			size: 2.0d
+			tasks: [
+				{
+					id: "7E5C5B2D00001301"
+					item: "cmi:copper_mechanism"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2D00001302"
+					item: "cmi:copper_mechanism_augment"
+					type: "item"
+				}
+			]
+			title: "铜构件"
+			x: 2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000013"]
+			description: [
+				"分液池、注液器与软管滑轮, 组成最基础的流体物流"
+				"软管滑轮可以无限抽取流体, 是我最早拥有的\"自动化\"之一"
+			]
+			id: "7E5C1B2D00000014"
+			subtitle: "无限流体池来咯"
+			tasks: [
+				{
+					id: "7E5C5B2D00001401"
+					item: "create:item_drain"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2D00001402"
+					item: "create:spout"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2D00001403"
+					item: "create:hose_pulley"
+					type: "item"
+				}
+			]
+			title: "分液池与注液器"
+			x: 4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000013"]
+			description: ["工作盆盖上盖子就可以进行发酵, 这是把农作物变成化工原料的关键一步"]
+			id: "7E5C1B2D00000015"
+			tasks: [{
+				id: "7E5C5B2D00001501"
+				item: "createdieselgenerators:basin_lid"
+				type: "item"
+			}]
+			title: "工作盆盖板"
+			x: 2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000015"]
+			description: [
+				"好酸!"
+				"要酿醋, 就要先获得稻米 —— 把稻米放进盖好的工作盆里发酵, 就能得到米醋"
+				"后面硅橡胶与醋酸产线都要靠它"
+			]
+			id: "7E5C1B2D00000016"
+			subtitle: "好酸!"
+			tasks: [{
+				id: "7E5C5B2D00001601"
+				title: "酿出一份米醋"
+				type: "checkmark"
+			}]
+			title: "米醋"
+			x: 4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000015"]
+			description: [
+				"发酵的产物不止醋, 还有可以驱动发电机的生物柴油"
+				"在化石燃料管道铺好之前, 它是我最稳定的能源之一"
+			]
+			id: "7E5C1B2D00000017"
+			tasks: [{
+				id: "7E5C5B2D00001701"
+				item: "createdieselgenerators:biodiesel_bucket"
+				type: "item"
+			}]
+			title: "生物柴油"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000013"]
+			description: ["铁在伊甸的分布很广, 先把它挖回来备着"]
+			id: "7E5C1B2D00000018"
+			tasks: [{
+				id: "7E5C5B2D00001801"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:ingots/iron"
+					}
+				}
+				title: "铁材料"
+				type: "item"
+			}]
+			title: "铁材料"
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000018"]
+			description: [
+				"铁构件对应吸引与排斥, 集中设备中的温度控制与充能"
+				"分馏塔、燃烧室、电解设备都建立在它之上"
+			]
+			icon: "cmi:iron_mechanism"
+			id: "7E5C1B2D00000019"
+			shape: "gear"
+			size: 2.0d
+			tasks: [
+				{
+					id: "7E5C5B2D00001901"
+					item: "cmi:iron_mechanism"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2D00001902"
+					item: "cmi:iron_mechanism_augment"
+					type: "item"
+				}
+			]
+			title: "铁构件"
+			x: 8.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000018"]
+			description: [
+				"铁粉放入搅拌机内加热, 就能得到工业铁"
+				"它比普通铁更韧, 可以拿来做冲压模具与设备外壳"
+			]
+			id: "7E5C1B2D00000020"
+			subtitle: "铁粉放入搅拌机内加热"
+			tasks: [{
+				id: "7E5C5B2D00002001"
+				title: "制作一批工业铁"
+				type: "checkmark"
+			}]
+			title: "工业铁的制备"
+			x: 8.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000020"]
+			description: [
+				"一个非常重要的东西"
+				"自动化车间需要一处能同时组装多种零件的工位, 工程师装配台就是它"
+			]
+			id: "7E5C1B2D00000021"
+			subtitle: "一个非常重要的东西"
+			tasks: [{
+				id: "7E5C5B2D00002101"
+				item: "immersiveengineering:workbench"
+				type: "item"
+			}]
+			title: "工程师装配台"
+			x: 10.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000019"]
+			description: [
+				"嗯...看起来像面包..."
+				"构件铸模是浇筑构件的模板, 有了它才能批量产出替换用的构件"
+			]
+			id: "7E5C1B2D00000022"
+			subtitle: "嗯...看起来像面包..."
+			tasks: [{
+				id: "7E5C5B2D00002201"
+				item: "cmi:mechanism_mold"
+				type: "item"
+			}]
+			title: "构件铸模"
+			x: 10.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000001"]
+			description: [
+				"安山岩是一种很好加工的石材, 配上锤子就能敲出颗粒"
+				"锤子可以用铁、燧石乃至钻石制作"
+			]
+			id: "7E5C1B2D00000023"
+			size: 1.5d
+			tasks: [
+				{
+					id: "7E5C5B2D00002301"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:stone"
+						}
+					}
+					title: "安山岩"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2D00002302"
+					item: "createdieselgenerators:hammers"
+					title: "锤子"
+					type: "item"
+				}
+			]
+			title: "安山岩与锤子"
+			x: -12.0d
+			y: 13.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000023"]
+			description: ["把安山岩敲成粉, 是安山合金的主要原料"]
+			id: "7E5C1B2D00000024"
+			tasks: [{
+				id: "7E5C5B2D00002401"
+				item: "cmi:andesite_dust"
+				type: "item"
+			}]
+			title: "安山岩粉"
+			x: -10.0d
+			y: 13.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000023"]
+			description: [
+				"锌是伊甸地表最容易找到的金属之一"
+				"它与安山岩粉结合, 就能得到整合包含义最特殊的一种合金"
+			]
+			id: "7E5C1B2D00000025"
+			tasks: [{
+				id: "7E5C5B2D00002501"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:raw_materials/zinc"
+					}
+				}
+				title: "粗锌"
+				type: "item"
+			}]
+			title: "粗锌"
+			x: -8.0d
+			y: 13.0d
+		}
+		{
+			dependencies: [
+				"7E5C1B2D00000024"
+				"7E5C1B2D00000025"
+			]
+			description: [
+				"安第斯合金(点头)"
+				"安山合金是机械动力整套体系的基础材料, 齿轮、机壳、传动杆都由它而来"
+			]
+			id: "7E5C1B2D00000026"
+			subtitle: "安第斯合金(点头)"
+			tasks: [{
+				count: 16L
+				id: "7E5C5B2D00002601"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:ingots/andesite_alloy"
+					}
+				}
+				title: "安山合金"
+				type: "item"
+			}]
+			title: "安山合金"
+			x: -6.0d
+			y: 13.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000026"]
+			description: [
+				"安山构件对应动力传输, 是机动设备的通用核心"
+				"有了它, 机械动力的机器才算真正属于我"
+			]
+			icon: "cmi:andesite_mechanism"
+			id: "7E5C1B2D00000027"
+			shape: "gear"
+			size: 2.0d
+			tasks: [
+				{
+					id: "7E5C5B2D00002701"
+					item: "cmi:andesite_mechanism"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2D00002702"
+					item: "cmi:andesite_mechanism_augment"
+					type: "item"
+				}
+			]
+			title: "安山构件"
+			x: -4.0d
+			y: 13.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000027"]
+			description: [
+				"一对大家伙"
+				"粉碎轮是粉碎的上一步, 成对放置才能把矿石与石料碾成粉"
+			]
+			id: "7E5C1B2D00000028"
+			subtitle: "一对大家伙"
+			tasks: [{
+				count: 2L
+				id: "7E5C5B2D00002801"
+				item: "create:crushing_wheel"
+				type: "item"
+			}]
+			title: "粉碎轮"
+			x: -2.0d
+			y: 13.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000027"]
+			description: [
+				"多做点总没错"
+				"传动杆、齿轮、大齿轮与安山机壳是机械动力最基础的零件"
+				"这一批做出来就可以直接开工, 奖励会把同样的物品按同样数量发还给你"
+			]
+			id: "7E5C1B2D00000029"
+			rewards: [
+				{
+					count: 64
+					id: "7E5C5B2D00002901"
+					item: "create:shaft"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "7E5C5B2D00002902"
+					item: "create:cogwheel"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "7E5C5B2D00002903"
+					item: "create:large_cogwheel"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "7E5C5B2D00002904"
+					item: "create:andesite_casing"
+					type: "item"
+				}
+			]
+			subtitle: "多做点总没错"
+			tasks: [
+				{
+					count: 64L
+					id: "7E5C5B2D00002905"
+					item: "create:shaft"
+					title: "传动杆"
+					type: "item"
+				}
+				{
+					count: 32L
+					id: "7E5C5B2D00002906"
+					item: "create:cogwheel"
+					title: "齿轮"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "7E5C5B2D00002907"
+					item: "create:large_cogwheel"
+					title: "大齿轮"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "7E5C5B2D00002908"
+					item: "create:andesite_casing"
+					title: "安山机壳"
+					type: "item"
+				}
+			]
+			title: "基础传动元件"
+			x: -12.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000027"]
+			description: [
+				"工作盆、置物台、动力搅拌器、动力压床、轧机、卷簧机……"
+				"这些是机械动力最常用的加工设备, 把它们摆成一行, 就是一条最简加工线"
+			]
+			id: "7E5C1B2D00000030"
+			tasks: [
+				{
+					id: "7E5C5B2D00003001"
+					item: "create:basin"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2D00003002"
+					item: "create:depot"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2D00003003"
+					item: "create:mechanical_mixer"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2D00003004"
+					item: "create:mechanical_press"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2D00003005"
+					item: "createaddition:rolling_mill"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2D00003006"
+					item: "vintageimprovements:curving_press"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2D00003007"
+					item: "vintageimprovements:spring_coiling_machine"
+					type: "item"
+				}
+			]
+			title: "基础工作元件"
+			x: -12.0d
+			y: 19.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000026"]
+			description: [
+				"选择你的初级应力源"
+				"水车、风车轴承或手摇曲柄 —— 三选一即可, 它们会决定你的车间能带多少台机器"
+			]
+			id: "7E5C1B2D00000031"
+			subtitle: "选择你的初级应力源"
+			tasks: [
+				{
+					id: "7E5C5B2D00003101"
+					item: "create:large_water_wheel"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2D00003102"
+					item: "create:windmill_bearing"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2D00003103"
+					item: "create:hand_crank"
+					type: "item"
+				}
+			]
+			title: "选择你的初级应力源"
+			x: -12.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000029"]
+			description: [
+				"齿轮怎么做?"
+				"除了用安山合金直接合成, 也可以在部件加工台上制作齿轮铸模, 再浇筑成型"
+				"{image:cmi:textures/images/tconstruct/copper_pickaxe.png width:647 height:296 align:center fit:true}"
+			]
+			id: "7E5C1B2D00000032"
+			tasks: [{
+				id: "7E5C5B2D00003201"
+				title: "掌握齿轮的两种做法"
+				type: "checkmark"
+			}]
+			title: "齿轮怎么做?"
+			x: -8.0d
+			y: 19.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000030"]
+			description: [
+				"辊压机、轧机、冲压机、搅拌器与工作盆"
+				"它们分别负责压片、轧制、冲压、混合与发酵, 记住哪台机器对应哪道工序, 后面会省下很多时间"
+			]
+			id: "7E5C1B2D00000033"
+			tasks: [{
+				id: "7E5C5B2D00003301"
+				title: "认识这几台设备"
+				type: "checkmark"
+			}]
+			title: "辊压机与工作盆"
+			x: -6.0d
+			y: 19.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000035"]
+			description: [
+				"杂酚油的来源"
+				"焦炉把煤变成焦炭, 顺带产出杂酚油 —— 既能防腐, 也能当燃料"
+			]
+			id: "7E5C1B2D00000034"
+			subtitle: "杂酚油的来源"
+			tasks: [{
+				icon: "immersiveengineering:coke_oven"
+				id: "7E5C5B2D00003401"
+				observe_type: 1
+				timer: 0L
+				title: "观察：焦炉"
+				to_observe: "immersiveengineering:coke_oven"
+				type: "observation"
+			}]
+			title: "焦炉"
+			x: -4.0d
+			y: 19.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000001"]
+			description: [
+				"焦黑砖是焦炉与熔炼设备的骨架"
+				"一座焦炉需要二十七块, 早点开始备料比较划算"
+			]
+			id: "7E5C1B2D00000035"
+			tasks: [{
+				count: 27L
+				id: "7E5C5B2D00003501"
+				item: "tconstruct:seared_brick"
+				type: "item"
+			}]
+			title: "焦黑砖块"
+			x: -4.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000034"]
+			description: [
+				"喝!"
+				"杂酚油可以给木头做防腐处理, 处理过的木材防虫防潮, 是做户外结构与管线的首选"
+			]
+			id: "7E5C1B2D00000036"
+			subtitle: "喝!"
+			tasks: [{
+				id: "7E5C5B2D00003601"
+				item: "immersiveengineering:creosote_bucket"
+				type: "item"
+			}]
+			title: "杂酚油"
+			x: -2.0d
+			y: 19.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000019"]
+			description: [
+				"下界砖为烈焰人提供了熟悉的环境"
+				"空燃烧室只是外壳, 后面往里塞进烈焰人, 它就能变成稳定的热源"
+			]
+			id: "7E5C1B2D00000037"
+			subtitle: "下界砖为烈焰人提供了熟悉的环境"
+			tasks: [{
+				id: "7E5C5B2D00003701"
+				item: "create:empty_blaze_burner"
+				type: "item"
+			}]
+			title: "烈焰人燃烧室(空)"
+			x: 0.0d
+			y: 19.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000019"]
+			description: [
+				"蒸馏塔控制器是分馏与裂化设备的核心"
+				"铁构件装上它, 石油化工的整条线才算有了心脏"
+			]
+			id: "7E5C1B2D00000038"
+			tasks: [{
+				id: "7E5C5B2D00003801"
+				item: "createdieselgenerators:distillation_controller"
+				type: "item"
+			}]
+			title: "蒸馏塔控制器"
+			x: 0.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000037"]
+			description: ["甘蔗与甜菜都能榨出糖, 糖又是发酵产线的起点"]
+			id: "7E5C1B2D00000039"
+			tasks: [{
+				id: "7E5C5B2D00003901"
+				item: "minecraft:sugar"
+				type: "item"
+			}]
+			title: "糖"
+			x: 2.0d
+			y: 19.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000039"]
+			description: ["糖进一步加工得到糖浆, 它是发酵与酿造产线的重要中间产物"]
+			id: "7E5C1B2D00000040"
+			tasks: [{
+				id: "7E5C5B2D00004001"
+				item: "thermal:syrup_bucket"
+				type: "item"
+			}]
+			title: "糖浆"
+			x: 2.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000039"]
+			description: ["甘蔗与甜菜是糖的两大来源, 在伊甸两种作物都长得不错, 建议都种上"]
+			id: "7E5C1B2D00000041"
+			tasks: [
+				{
+					id: "7E5C5B2D00004101"
+					item: "minecraft:sugar_cane"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2D00004102"
+					item: "minecraft:beetroot"
+					type: "item"
+				}
+			]
+			title: "甘蔗与甜菜"
+			x: 4.0d
+			y: 19.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000001"]
+			description: [
+				"介绍: 粘土的简易获取"
+				"找不到黏土球也不用着急, 泥巴与水就能现场制泥, 后面砖泥与陶土都不缺"
+			]
+			id: "7E5C1B2D00000042"
+			subtitle: "粘土的简易获取"
+			tasks: [{
+				id: "7E5C5B2D00004201"
+				title: "了解粘土的来源"
+				type: "checkmark"
+			}]
+			title: "粘土的简易获取"
+			x: 6.0d
+			y: 19.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000042"]
+			description: ["泥巴是水与泥土的混合物, 用挤压盆处理就能得到粘土"]
+			id: "7E5C1B2D00000043"
+			tasks: [{
+				id: "7E5C5B2D00004301"
+				item: "minecraft:mud"
+				type: "item"
+			}]
+			title: "泥巴"
+			x: 8.0d
+			y: 19.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000045"]
+			description: ["粘土是砖泥与陶制品的原料, 自动化的粘土来源能让整条砖线稳定运转"]
+			id: "7E5C1B2D00000044"
+			tasks: [{
+				id: "7E5C5B2D00004401"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:clay"
+					}
+				}
+				title: "粘土"
+				type: "item"
+			}]
+			title: "粘土"
+			x: 10.0d
+			y: 19.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000042"]
+			description: ["挤压盆可以把泥巴里的水分压出去, 只留下细腻的粘土"]
+			id: "7E5C1B2D00000045"
+			tasks: [{
+				id: "7E5C5B2D00004501"
+				item: "create:basin"
+				type: "item"
+			}]
+			title: "挤压盆"
+			x: 8.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000016"]
+			description: [
+				"看起来更大?"
+				"大型发酵储罐容量远超工作盆, 想把酿醋做成产业, 就得换成它"
+			]
+			id: "7E5C1B2D00000046"
+			subtitle: "看起来更大?"
+			tasks: [{
+				count: 2L
+				id: "7E5C5B2D00004601"
+				item: "createdieselgenerators:bulk_fermenter"
+				type: "item"
+			}]
+			title: "大型发酵储罐"
+			x: 6.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000013"]
+			description: [
+				"大胃袋😋"
+				"动态储罐可以用方块拼出任意大小的流体仓储, 是殖民地真正的\"大容量\""
+			]
+			id: "7E5C1B2D00000047"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "大胃袋😋"
+			tasks: [
+				{
+					id: "7E5C5B2D00004701"
+					item: "mekanism:dynamic_tank"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2D00004702"
+					item: "mekanism:dynamic_valve"
+					type: "item"
+				}
+			]
+			title: "超级大的容量"
+			x: 4.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["7E5C1B2D00000028"]
+			description: [
+				"铸模浇筑"
+				"石块不再是唯一途径: 用铸模浇筑石板, 效率比一块块敲高得多"
+			]
+			id: "7E5C1B2D00000048"
+			subtitle: "铸模浇筑"
+			tasks: [
+				{
+					id: "7E5C5B2D00004801"
+					item: "createdieselgenerators:mold"
+					type: "item"
+				}
+				{
+					id: "7E5C5B2D00004802"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:plates/stone"
+						}
+					}
+					title: "石板"
+					type: "item"
+				}
+			]
+			title: "更高效的石板获取"
+			x: 2.0d
+			y: 13.0d
+		}
+	]
+	title: "巧械奇工"
+}
