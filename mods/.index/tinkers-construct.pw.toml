@@ -1,25 +1,25 @@
-filename = 'TConstruct-1.20.1-3.12.0.220.jar'
-name = 'Tinkers Construct'
+filename = 'TConstruct-1.20.1-3.12.1.231.jar'
+name = "Tinkers' Construct"
 side = 'server'
 x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'beta'
-x-prismlauncher-version-number = 'Slimesuit Update (3.12.0.220) for 1.20.1'
+x-prismlauncher-version-number = 'Just Enough Update (3.12.1.231) for 1.20.1'
 
 [download]
-hash = 'ab20cfeb4a8397295f376a60b45bac705509dce5'
+hash = '8a9a09e625ee106cf8befa953c372af4e955116c'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 8809959
+file-id = 8944121
 project-id = 74072
-
-[[x-prismlauncher-dependencies]]
-addonId = '74924'
-type = 'REQUIRED'
 
 [[x-prismlauncher-dependencies]]
 addonId = '238222'
 type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '74924'
+type = 'REQUIRED'
