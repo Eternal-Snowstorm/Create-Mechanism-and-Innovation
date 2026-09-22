@@ -101,5 +101,4 @@ ServerEvents.recipes((event) => {
 			recipe.inputFE(1000)
 		})
 		.id("mekanism:gas_conversion/salt_to_hydrogen_chloride")
-
 })
