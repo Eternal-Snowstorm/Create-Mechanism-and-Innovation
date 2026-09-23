@@ -12,20 +12,6 @@ ServerEvents.recipes((event) => {
 			.energy(16000)
 	}
 
-	event.custom({
-		"type": "thermal_extra:component_assembly",
-		"energy": 5000,
-		"ingredients": [
-			{
-				"item": "minecraft:stick",
-				"count": 2
-			}
-		],
-		"result": [
-			Item.of("minecraft:stone", 2)
-		]
-	})
-
 	// 二极管
 	addComponRecipe("4x thermal:laser_diode", [
 		"#forge:wires/electrum",
