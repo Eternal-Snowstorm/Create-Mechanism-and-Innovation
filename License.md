@@ -1,5 +1,5 @@
 # Chinese
-## CMI用户使用条款2.1
+## CMI用户使用条款2.1.1
 
 ### 术语定义:
 
@@ -22,7 +22,6 @@
 **您可以选择不使用本产品, 若您一旦使用本产品, 默认为您对本协议全部内容的认可和接受.**
 
 ## 免责声明
-
     1. 本产品并不具备"接入互联网, 网络数据存储, 通讯传输, 窃取用户隐私"中任何一项与用户数据等信息相关的功能.
     2. 您承诺以合法, 合理的原则使用本产品, 不利用本产品进行任何违法, 侵害他人合法利益等恶意的行为, 亦不将本产品运用于任何违反我国法律法规的操作上.
     3. 任何单位或个人因下载使用本产品而产生的任何意外, 疏忽, 毁约, 诽谤, 知识产权侵犯及其造成的损失(包括但不限于直接, 间接, 附带或衍生的损失等), 我们不承担任何法律责任.
@@ -35,7 +34,6 @@
 ---
 
 ## 一般条款
-
     1. 个人许可条款
         1. 我们几乎不会给予个人许可, 因为给予个人许可意味着认可.向我们请求个人许可大概率不会通过, 并要求您继续遵守本条款.
         2. 经个人许可, 如无特殊声明, 本条款中带限制性的一般条款均可忽略.请阅读上述条款.
@@ -43,12 +41,11 @@
     2. 分发
         1. 您必须将本产品的功劳归功于我们, 如果您做出任何改动, 您必须提供一个返回原发布地址的链接.
         2. 您不得对本产品分发收取费用.
-        3. 您不得对访问本产品的过程收取费用, 包括但不限于任何形式的在线广告, 限制下载速度或数量.
+        3. 您不得对访问本产品的过程主动收取费用, 包括但不限于任何形式的在线广告, 限制下载速度或数量.
     3. 展示
         1. 我们欢迎您使用本产品拍摄, 并发布介绍视频.但您不能声称您是本产品的开发者.如果您不想, 请不必这么做.
     4. 如果您想使用本产品的代码或资源文件
-        1. 您必须将本产品的功劳归功于我们, 如果您做出任何改动, 您必须提供一个返回原发布地址的链接.
-        2. 未经特殊许可, 您的项目必须是开源的. 
+        1. 未经特殊许可, 您的项目必须是开源的. 
 
 ---
 
@@ -83,7 +80,6 @@
 ---
 
 ## 1. Disclaimer
-
 	1. This product does not possess any functions related to internet access, online data storage, communication transmission, or the collection of user privacy.
 	2. You agree to use this product legally and reasonably, and not for any illegal, malicious, or harmful purposes, nor to perform any operations that violate the laws and regulations of the People’s Republic of China.
 	3. We are not legally liable for any accidents, negligence, breaches of contract, defamation, intellectual property infringement, or any resulting losses (including but not limited to direct, indirect, incidental, or consequential losses) caused by individuals or organizations downloading or using this product.
@@ -98,13 +94,11 @@
 ## 2. General Terms
 
 ### 2.1 Personal License Terms
-
 	1. We rarely grant personal licenses, as doing so implies endorsement. Requests for personal licenses are unlikely to be approved, and you are expected to continue following these terms.
 	2. If granted a personal license, unless otherwise specified, you may ignore the restrictive general clauses. Please review the above terms.
 	3. If granted a personal license, unless otherwise specified, the license applies to related products such as this product’s official website, resource files, etc.
 
 ### 2.2 Distribution
-
 	1. You must credit us for the original product. If you make any modifications, you must provide a link back to the original release page.
 	2. You may not charge any fees for distributing this product.
 	3. You may not charge for access to this product, including but not limited to placing online ads, restricting download speed or quantity.
@@ -114,6 +108,4 @@
 	1. You are welcome to create and publish videos about this product. However, you may not claim to be the developer. If you do not wish to make such content, you are not required to.
 
 ### 2.4 If You Want to Use Code or Resources from This Product
-
-	1. You must credit us for the original product. If you make any modifications, you must provide a link back to the original release page.
-	2. Unless specifically permitted, your project must be open source.
+	1. Unless specifically permitted, your project must be open source.
