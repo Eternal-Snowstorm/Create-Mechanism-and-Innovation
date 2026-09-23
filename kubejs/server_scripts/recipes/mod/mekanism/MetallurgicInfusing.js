@@ -57,4 +57,10 @@ ServerEvents.recipes((event) => {
 		"cmi:titanium_oxide"
 	)
 
+	// 湮灭奇点
+	mekanism.metallurgic_infusing(
+		"extendedae_plus:oblivion_singularity",
+		"ae2:singularity",
+		"cmi:chaotic_void"
+	).id("extendedae_plus:transform/oblivion_singularity")
 })

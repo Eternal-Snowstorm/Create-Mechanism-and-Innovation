@@ -1,10 +1,6 @@
 ServerEvents.recipes((event) => {
-	let { kubejs, create, vintageimprovements, tconstruct } = event.getRecipes()
-	let Inc = {
-		MEKA: "cmi:incomplete_mekanism_mechanism_part",
-		ADA: "cmi:incomplete_space_mechanism_part",
-		QUANT: "cmi:incomplete_quantum_mechanism_part"
-	}
+	let { kubejs, thermal_extra, neoecoae } = event.getRecipes()
+
 	// 基础
 	kubejs.shapeless("4x cmi:basic_mechanism_part", [
 		"#forge:plates/stone",
@@ -26,27 +22,58 @@ ServerEvents.recipes((event) => {
 	])
 
 	// 工程
-	kubejs.shapeless("4x cmi:engineering_mechanism_part", [
+	thermal_extra.component_assembly("4x cmi:engineering_mechanism_part", [
 		"#forge:plates/constantan",
-		"2x #forge:wires/signalum",
 		"#immersiveengineering:circuits/logic",
-		"#forge:gems/dreamcore"
+		"#forge:gems/dreamcore",
+		Fluid.of("tconstruct:molten_signalum", 90)
 	])
 
 	// 通量
-	kubejs.shapeless("4x cmi:flux_mechanism_part", [
-		"#forge:plates/lead",
-		"2x #forge:dusts/redstone",
-		"#forge:gears/invar",
-		"#forge:gems/dreamcore"
+	kubejs.shapeless("cmi:flux_mechanism_part", [
+		"#forge:plates/invar",
+		"thermal:rf_coil",
+		"#forge:gems/dreamcore",
+		"#forge:plates/signalum"
+	])
+
+	thermal_extra.component_assembly("4x cmi:flux_mechanism_part", [
+		"#forge:plates/invar",
+		"thermal:rf_coil",
+		"#forge:gems/dreamcore",
+		Fluid.of("tconstruct:molten_signalum", 90)
 	])
 
 	// 通用
-	kubejs.shapeless("4x cmi:mekanism_mechanism_part", [
-		"#forge:plates/osmium",
-		"2x #forge:dusts/cobalt",
-		"#forge:gears/chromeplated_steel",
-		"#forge:gems/dreamcore"
-	])
+	neoecoae.integrated_working_station()
+		.itemOutput("4x cmi:mekanism_mechanism_part")
+		.inputFluid(Fluid.of("tconstruct:molten_cobalt", 180))
+		.energy(1000)
+		.inputItems([
+			"#forge:plates/osmium",
+			"#forge:gears/chromeplated_steel",
+			"#forge:gems/dreamcore"
+		])
 
+	// 太空
+	neoecoae.integrated_working_station()
+		.itemOutput("4x cmi:space_mechanism_part")
+		.inputFluid(Fluid.of("cmi:molten_etrium", 90))
+		.energy(1000)
+		.inputItems([
+			"extendedae_plus:oblivion_singularity",
+			"2x ae2:sky_dust",
+			"#forge:gems/dreamcore"
+		])
+
+	// 量子
+	neoecoae.integrated_working_station()
+		.itemOutput("4x cmi:quantum_mechanism_part")
+		.inputFluid(Fluid.of("neoecoae:cryotheum_solution", 200))
+		.energy(1000)
+		.inputItems([
+			"extendedae_plus:oblivion_singularity",
+			"cmi:entro_alloy",
+			"#forge:gems/dreamcore"
+		])
 })

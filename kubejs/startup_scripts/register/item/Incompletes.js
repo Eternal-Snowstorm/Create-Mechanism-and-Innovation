@@ -65,14 +65,6 @@ StartupEvents.registry("item", (event) => {
 	addItem("steam_engine")
 		.parentModel("create:block/steam_engine/item")
 
-	// 未完成构件零件
-	addItem("mekanism_mechanism_part")
-		.texture(Cmi.loadResource("item/mechanism/part/mekanism"))
-	addItem("quantum_mechanism_part")
-		.texture(Cmi.loadResource("item/mechanism/part/quantum"))
-	addItem("space_mechanism_part")
-		.texture(Cmi.loadResource("item/mechanism/part/space"))
-
 	// ae未完成处理器
 	addItem("logic_processor")
 		.texture("ae2:item/printed_logic_processor")
