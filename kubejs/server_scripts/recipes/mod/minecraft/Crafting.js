@@ -191,4 +191,12 @@ ServerEvents.recipes((event) => {
 		X: "create:industrial_iron_block"
 	})
 
+	// 玻璃
+	kubejs.shapeless("minecraft:glass", [
+		"tconstruct:clear_glass"
+	]).id("minecraft:glass")
+
+	kubejs.shapeless("tconstruct:clear_glass", [
+		"minecraft:glass"
+	])
 })

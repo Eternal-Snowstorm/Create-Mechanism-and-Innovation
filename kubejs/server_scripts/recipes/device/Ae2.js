@@ -584,4 +584,17 @@ ServerEvents.recipes((event) => {
 			"cmi:silicon_rubber"
 		])
 		.inputFluid(Fluid.of("thermal:resin", 100))
+
+	// 无线能源感应塔
+	neoecoae.integrated_working_station()
+		.itemOutput("me_beam_former:wireless_energy_tower")
+		.inputFluid(Fluid.of("cmi:ferrouslime", 500))
+		.inputItems([
+			"8x #forge:plates/platinum",
+			"cmi:steel_coil",
+			"2x cmi:magnetic_contact",
+			"2x #forge:gems/energized_fluix_crystal",
+			Mechanisms.COMPUTE.COM
+		])
+		.id("me_beam_former:wireless_energy_tower")
 })

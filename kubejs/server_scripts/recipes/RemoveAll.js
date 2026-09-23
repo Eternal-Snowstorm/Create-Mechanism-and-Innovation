@@ -32,7 +32,6 @@ ServerEvents.recipes((event) => {
 		"jei:/functionalstorage/oak_drawer_alternate_x1",
 		"jei:/functionalstorage/oak_drawer_alternate_x2",
 		"jei:/functionalstorage/oak_drawer_alternate_x4",
-		"jei:/minecraft/glass",
 		"jei:/mynethersdelight/crafting/tnt_alt",
 		"jei:/tconstruct/common/basalt_blast_furnace",
 		"jei:/tconstruct/smeltery/seared/drain_retextured",

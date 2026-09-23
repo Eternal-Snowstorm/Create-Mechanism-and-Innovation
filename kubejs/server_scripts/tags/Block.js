@@ -189,6 +189,7 @@ ServerEvents.tags("block", (event) => {
 			"#ad_astra:globes",
 
 			"create_rns:mine_head",
+			"#cmi:coils",
 
 			"immersiveengineering:craftingtable",
 			"immersiveengineering:workbench",
@@ -327,6 +328,12 @@ ServerEvents.tags("block", (event) => {
 
 	event.get("forge:ores/cheese")
 		.add("ad_astra:moon_cheese_ore")
+
+	event.get("minecraft:needs_stone_tool")
+		.add("#cmi:coils")
+
+	event.get("minecraft:mineable/pickaxe")
+		.add("#cmi:coils")
 
 	// 遍历木头列表
 	WoodMaterials.forEach((wood) => {
