@@ -338,7 +338,8 @@ ServerEvents.recipes((event) => {
 			"#forge:plates/aluminum_alloy",
 			"5x #forge:rods/silver",
 			Mechanisms.ADVANCED.COM,
-			"cmi:nuke_cooler"
+			Mechanisms.NUKE.COM,
+			"4x #forge:plates/lead"
 		])
 		.id("mekanismgenerators:fission_reactor/control_rod_assembly")
 
@@ -346,9 +347,11 @@ ServerEvents.recipes((event) => {
 		.itemOutput("mekanismgenerators:fission_fuel_assembly")
 		.inputFluid(Fluid.tag("tag", "forge:cements", 1000))
 		.inputItems([
-			Casing.STAINLESS_STEEL,
+			"mekanismgenerators:fission_reactor_casing",
+			"#forge:plates/aluminum_alloy",
 			"cmi:filled_fuel_rod",
-			"cmi:nuke_cooler",
+			Mechanisms.ADVANCED.COM,
+			Mechanisms.NUKE.COM,
 			"4x #forge:plates/lead"
 		])
 		.id("mekanismgenerators:fission_reactor/fuel_assembly")

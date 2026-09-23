@@ -7,7 +7,7 @@ ServerEvents.recipes((event) => {
 
 	// 气密构件基座
 	addRecipe()
-		.itemOutput("cmi:air_tight_mechanism_basement")
+		.itemOutput(Mechanisms.AIR.BAS)
 		.energy(2000)
 		.inputFluid(Fluid.of("tconstruct:molten_glass", 1000))
 		.inputItems([
@@ -19,7 +19,7 @@ ServerEvents.recipes((event) => {
 
 	// 基础通用构件基座
 	addRecipe()
-		.itemOutput("cmi:basic_mekanism_mechanism_basement")
+		.itemOutput(Mechanisms.BASIC.BAS)
 		.energy(2000)
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 100))
 		.inputItems([
@@ -31,7 +31,7 @@ ServerEvents.recipes((event) => {
 
 	// 高级通用构件基座
 	addRecipe()
-		.itemOutput("cmi:advanced_mekanism_mechanism_basement")
+		.itemOutput(Mechanisms.ADVANCED.BAS)
 		.energy(2000)
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 100))
 		.inputItems([
@@ -43,7 +43,7 @@ ServerEvents.recipes((event) => {
 
 	// 精英通用构件基座
 	addRecipe()
-		.itemOutput("cmi:elite_mekanism_mechanism_basement")
+		.itemOutput(Mechanisms.ELITE.BAS)
 		.energy(2000)
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 100))
 		.inputItems([
@@ -55,7 +55,7 @@ ServerEvents.recipes((event) => {
 
 	// 终级通用构件基座
 	addRecipe()
-		.itemOutput("cmi:ultimate_mekanism_mechanism_basement")
+		.itemOutput(Mechanisms.ULTIMATE.BAS)
 		.energy(2000)
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 100))
 		.inputItems([
@@ -67,7 +67,7 @@ ServerEvents.recipes((event) => {
 
 	// 计算构件基座
 	addRecipe()
-		.itemOutput("cmi:computing_mechanism_basement")
+		.itemOutput(Mechanisms.COMPUTE.BAS)
 		.inputFluid(Fluid.of("immersiveengineering:redstone_acid", 100))
 		.energy(2000)
 		.inputItems([
@@ -79,7 +79,7 @@ ServerEvents.recipes((event) => {
 
 	// 航空构件基座
 	addRecipe()
-		.itemOutput("cmi:aeronautic_mechanism_basement")
+		.itemOutput(Mechanisms.AERO.BAS)
 		.inputFluid(Fluid.of("cmi:molten_etrium", 90))
 		.energy(2000)
 		.inputItems([
@@ -89,10 +89,9 @@ ServerEvents.recipes((event) => {
 			"4x cmi:optical_fiber"
 		])
 
-
 	// 宇航构件基座
 	addRecipe()
-		.itemOutput("cmi:astronautic_mechanism_basement")
+		.itemOutput(Mechanisms.ASTRO.BAS)
 		.inputFluid(Fluid.of("cmi:molten_etrium", 90))
 		.energy(2000)
 		.inputItems([
@@ -102,4 +101,27 @@ ServerEvents.recipes((event) => {
 			"4x cmi:optical_fiber"
 		])
 
+	// 核构件基座
+	addRecipe()
+		.itemOutput(Mechanisms.NUKE.BAS)
+		.inputFluid(Fluid.tag("tag", "forge:cements", 1000))
+		.energy(2000)
+		.inputItems([
+			"2x #forge:plates/lead",
+			"2x alexscaves:polymer_plate",
+			"#forge:plates/refined_glowstone",
+			"4x #forge:wires/fluix"
+		])
+
+	// 反物质构件基座
+	addRecipe()
+		.itemOutput(Mechanisms.ANTI.BAS)
+		.inputFluid(Fluid.of("neoecoae:cryotheum_solution", 90))
+		.energy(2000)
+		.inputItems([
+			"2x #forge:plates/titanium_alloy",
+			"#forge:ingots/azure_neodymium",
+			"#forge:plates/refined_obsidian",
+			"extendedae_plus:oblivion_singularity"
+		])
 })

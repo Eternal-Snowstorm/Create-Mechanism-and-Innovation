@@ -39,6 +39,16 @@ ServerEvents.highPriorityData((event) => {
 		"ad_astra:cryo_fuel"
 	], "neoecoae:cryotheum_solution")
 
+	// 三氧化硫
+	addUnification("sulfur_trioxide", [
+		"vintageimprovements:sulfur_trioxide"
+	], "mekanism:sulfur_trioxide")
+
+	// 二氧化硫
+	addUnification("sulfur_dioxide", [
+		"vintageimprovements:sulfur_dioxide"
+	], "mekanism:sulfur_dioxide")
+
 	// 细雪
 	addUnification("power_snow", [
 		"fluidlogistics:powder_snow",

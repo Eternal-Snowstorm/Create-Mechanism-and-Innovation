@@ -1,8 +1,12 @@
 ServerEvents.recipes((event) => {
 	let { neoecoae } = event.getRecipes()
 
+	function addRecipe() {
+		return neoecoae.integrated_working_station()
+	}
+
 	// 碳聚合催化片
-	neoecoae.integrated_working_station()
+	addRecipe()
 		.itemOutput("cmi:carbon_polymerization_catalytic_plate")
 		.energy(2000)
 		.inputFluid(Fluid.of("tconstruct:molten_chromium", 45))
@@ -12,7 +16,7 @@ ServerEvents.recipes((event) => {
 		])
 
 	// 钨钢板
-	neoecoae.integrated_working_station()
+	addRecipe()
 		.itemOutput("cmi:incomplete_tungsten_steel_plate")
 		.energy(2000)
 		.inputFluid(Fluid.of("immersiveengineering:redstone_acid", 100))
@@ -23,7 +27,7 @@ ServerEvents.recipes((event) => {
 		])
 
 	// 复合板
-	neoecoae.integrated_working_station()
+	addRecipe()
 		.itemOutput("cmi:incomplete_composite_carbon_fiber_plate")
 		.energy(2000)
 		.inputFluid(Fluid.of("cmi:structural_plastic", 50))
@@ -33,7 +37,7 @@ ServerEvents.recipes((event) => {
 		])
 
 	// 空燃料棒
-	neoecoae.integrated_working_station()
+	addRecipe()
 		.itemOutput("cmi:empty_fuel_rod")
 		.energy(2000)
 		.inputFluid(Fluid.of("tconstruct:molten_lead", 90 * 8))
@@ -44,7 +48,7 @@ ServerEvents.recipes((event) => {
 		])
 
 	// 复合钨钢板
-	neoecoae.integrated_working_station()
+	addRecipe()
 		.itemOutput("cmi:composite_tungsten_steel_plate")
 		.energy(16000)
 		.inputFluid(Fluid.of("tconstruct:molten_tungsten", 90))
@@ -53,4 +57,23 @@ ServerEvents.recipes((event) => {
 			"#forge:plates/tungsten_steel"
 		])
 
+	// 裂变核心
+	addRecipe()
+		.itemOutput("alexscaves:fissile_core")
+		.energy(16000)
+		.inputFluid(Fluid.tag("tag", "forge:cements", 1000))
+		.inputItems([
+			"4x #forge:plates/lead",
+			"2x alexscaves:cinder_brick",
+			"4x mekanism:yellow_cake_uranium"
+		])
+
+	// 钛合金线圈
+	addRecipe()
+		.itemOutput("cmi:titanium_alloy_coil")
+		.energy(2000)
+		.inputItems([
+			"#forge:gears/titanium_alloy",
+			"8x #forge:wires/fluix"
+		])
 })

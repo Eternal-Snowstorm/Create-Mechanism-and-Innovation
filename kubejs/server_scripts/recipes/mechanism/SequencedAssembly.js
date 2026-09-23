@@ -497,4 +497,26 @@ ServerEvents.recipes((event) => {
 		.deploying("#forge:plates/titanium")
 		.deploying(Mechanisms.PART.SPACE)
 		.build()
+
+	// 核能
+	new SequencedAssemblyRecipe(Mechanisms.NUKE)
+		.input(Mechanisms.NUKE.BAS)
+		.deploying("#forge:plates/composite_tungsten_steel")
+		.pressing()
+		.deploying("cmi:nuke_cooler")
+		.deploying("alexscaves:fissile_core")
+		.vacuumizing()
+		.deploying(Mechanisms.PART.QUANTUM)
+		.build()
+
+	// 反物质
+	new SequencedAssemblyRecipe(Mechanisms.ANTI)
+		.input(Mechanisms.ANTI.BAS)
+		.deploying("cmi:titanium_alloy_coil")
+		.deploying("neoecoae:energized_superconductive_ingot")
+		.laserCutting(1000)
+		.deploying("#forge:pellets/plutonium")
+		.deploying("#forge:pellets/polonium")
+		.deploying(Mechanisms.PART.QUANTUM)
+		.build()
 })
