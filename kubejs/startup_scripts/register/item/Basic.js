@@ -206,19 +206,6 @@ StartupEvents.registry("item", (event) => {
 	// 黑曜石元件
 	addMaterial("obsidian_cell")
 
-	// ME整合组件
-	addMaterial("combined_component_4k")
-
-	addMaterial("combined_component_16k")
-
-	addMaterial("combined_component_64k")
-
-	addMaterial("combined_component_256k")
-
-	addMaterial("combined_spatial_component_16")
-
-	addMaterial("combined_spatial_component_128")
-
 	// 碳纳米管
 	addMaterial("carbon_nanotube")
 

@@ -83,7 +83,7 @@ ServerEvents.recipes((event) => {
 		"cmi:hammer_head"
 	]).id("ae2:network/blocks/inscribers")
 
-	// 存储单元
+	// 1k 存储单元
 	thermal_extra.component_assembly("ae2:cell_component_1k", [
 		"ae2:logic_processor",
 		"#forge:plates/silver",
@@ -92,88 +92,84 @@ ServerEvents.recipes((event) => {
 		Fluid.of("immersiveengineering:redstone_acid", 100)
 	]).id("ae2:network/cells/item_storage_components_cell_1k_part")
 
-	thermal_extra.component_assembly("ae2:cell_component_4k", [
-		"ae2:calculation_processor",
-		"#forge:gems/certus_quartz",
-		"cmi:combined_component_4k",
-		Fluid.of("immersiveengineering:redstone_acid", 100)
+	// 4k 存储单元
+	kubejs.shapeless("ae2:cell_component_4k", [
+		"2x ae2:cell_component_1k",
+		"#forge:plates/silver"
 	]).id("ae2:network/cells/item_storage_components_cell_4k_part")
 
-	thermal_extra.component_assembly("ae2:cell_component_16k", [
-		"ae2:engineering_processor",
-		"#forge:gems/certus_quartz",
-		"cmi:combined_component_16k",
-		Fluid.of("immersiveengineering:redstone_acid", 100)
+	// 16k 存储单元
+	kubejs.shapeless("ae2:cell_component_16k", [
+		"3x ae2:cell_component_1k",
+		"#forge:plates/silver"
 	]).id("ae2:network/cells/item_storage_components_cell_16k_part")
 
-	thermal_extra.component_assembly("ae2:cell_component_64k", [
-		"cmi:concurrent_processor",
-		"#forge:gems/certus_quartz",
-		"cmi:combined_component_64k",
-		Fluid.of("immersiveengineering:redstone_acid", 100)
+	kubejs.shapeless("ae2:cell_component_16k", [
+		"ae2:cell_component_1k",
+		"ae2:cell_component_4k"
+	])
+
+	// 64k 存储单元
+	kubejs.shapeless("ae2:cell_component_64k", [
+		"4x ae2:cell_component_1k",
+		"#forge:plates/silver"
 	]).id("ae2:network/cells/item_storage_components_cell_64k_part")
 
-	thermal_extra.component_assembly("ae2:cell_component_256k", [
-		"neoecoae:superconducting_processor",
-		"#forge:gems/certus_quartz",
-		"cmi:combined_component_256k",
-		Fluid.of("immersiveengineering:redstone_acid", 100)
+	kubejs.shapeless("ae2:cell_component_64k", [
+		"2x ae2:cell_component_1k",
+		"ae2:cell_component_4k"
+	])
+
+	kubejs.shapeless("ae2:cell_component_64k", [
+		"ae2:cell_component_1k",
+		"ae2:cell_component_16k"
+	])
+
+	// 256k 存储单元
+	kubejs.shapeless("ae2:cell_component_256k", [
+		"5x ae2:cell_component_1k",
+		"#forge:plates/silver"
 	]).id("ae2:network/cells/item_storage_components_cell_256k_part")
 
-	// 整合组件
-	kubejs.shaped("cmi:combined_component_4k", [
-		" C ",
-		"CPC",
-		" C "
-	], {
-		C: "ae2:cell_component_1k",
-		P: "#forge:plates/silver"
-	})
+	kubejs.shapeless("ae2:cell_component_256k", [
+		"3x ae2:cell_component_1k",
+		"ae2:cell_component_4k"
+	])
 
-	kubejs.shaped("cmi:combined_component_16k", [
-		" C ",
-		"CPC",
-		" C "
-	], {
-		C: "ae2:cell_component_4k",
-		P: "#forge:plates/silver"
-	})
+	kubejs.shapeless("ae2:cell_component_256k", [
+		"2x ae2:cell_component_1k",
+		"ae2:cell_component_16k"
+	])
 
-	kubejs.shaped("cmi:combined_component_64k", [
-		" C ",
-		"CPC",
-		" C "
-	], {
-		C: "ae2:cell_component_16k",
-		P: "#forge:plates/silver"
-	})
+	kubejs.shapeless("ae2:cell_component_256k", [
+		"ae2:cell_component_1k",
+		"ae2:cell_component_64k"
+	])
 
-	kubejs.shaped("cmi:combined_component_256k", [
-		" C ",
-		"CPC",
-		" C "
-	], {
-		C: "ae2:cell_component_64k",
-		P: "#forge:plates/silver"
-	})
+	// 2^3空间组件
+	thermal_extra.component_assembly("ae2:spatial_cell_component_2", [
+		"ae2:engineering_processor",
+		"#forge:plates/platinum",
+		"ae2:fluix_dust",
+		"cmi:ferrit_core"
+	]).id("ae2:network/cells/spatial_components")
 
-	kubejs.shaped("cmi:combined_spatial_component_16", [
-		" C ",
-		"CPC",
-		" C "
-	], {
-		C: "ae2:spatial_cell_component_2",
-		P: "#forge:plates/platinum"
-	})
+	// 16^3空间组件
+	kubejs.shapeless("ae2:spatial_cell_component_16", [
+		"2x ae2:spatial_cell_component_2",
+		"#forge:plates/platinum"
+	]).id("ae2:network/cells/spatial_components_0")
 
-	kubejs.shaped("cmi:combined_spatial_component_128", [
-		" C ",
-		"CPC",
-		" C "
-	], {
-		C: "ae2:spatial_cell_component_16",
-		P: "#forge:plates/platinum"
-	})
+	// 128^3空间组件
+	kubejs.shapeless("ae2:spatial_cell_component_128", [
+		"3x ae2:spatial_cell_component_2",
+		"#forge:plates/platinum"
+	]).id("ae2:network/cells/spatial_components_1")
+
+	kubejs.shapeless("ae2:spatial_cell_component_128", [
+		"ae2:spatial_cell_component_2",
+		"ae2:spatial_cell_component_16"
+	])
 
 	// 样板
 	thermal_extra.component_assembly("4x ae2:blank_pattern", [
@@ -578,31 +574,6 @@ ServerEvents.recipes((event) => {
 		"cmi:magnetic_contact",
 		Mechanisms.COMPUTE.COM
 	]).id("me_beam_former:omni_beam_former_block")
-
-	// 2^3空间组件
-	thermal_extra.component_assembly("ae2:spatial_cell_component_2", [
-		"ae2:engineering_processor",
-		"#forge:plates/platinum",
-		"#forge:gems/fluix",
-		"ae2:fluix_dust",
-		"cmi:ferrit_core"
-	]).id("ae2:network/cells/spatial_components")
-
-	// 16^3空间组件
-	thermal_extra.component_assembly("ae2:spatial_cell_component_16", [
-		"cmi:concurrent_processor",
-		"#forge:plates/platinum",
-		"cmi:combined_spatial_component_16",
-		"#forge:gems/fluix"
-	]).id("ae2:network/cells/spatial_components_0")
-
-	// 128^3空间组件
-	thermal_extra.component_assembly("ae2:spatial_cell_component_128", [
-		"neoecoae:superconducting_processor",
-		"#forge:plates/platinum",
-		"cmi:combined_spatial_component_128",
-		"#forge:gems/fluix"
-	]).id("ae2:network/cells/spatial_components_1")
 
 	neoecoae.integrated_working_station()
 		.itemOutput("cmi:computing_casing")

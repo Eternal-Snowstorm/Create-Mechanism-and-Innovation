@@ -66,6 +66,17 @@ ServerEvents.recipes((event) => {
 		.time(20 * 5)
 		.temperature(800)
 
+	// 福鲁伊克斯
+	tconstruct.melting(Fluid.of("cmi:molten_fluix", 100))
+		.ingredient("#forge:gems/fluix")
+		.time(20 * 6)
+		.temperature(1242)
+
+	tconstruct.melting(Fluid.of("cmi:molten_fluix", 900))
+		.ingredient("ae2:fluix_block")
+		.time(20 * 18)
+		.temperature(1242)
+
 	// 铁轨系列
 	tconstruct.melting(Fluid.of("tconstruct:molten_iron", 30))
 		.ingredient("minecraft:rail")
