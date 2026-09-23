@@ -59,4 +59,11 @@ ServerEvents.recipes((event) => {
 		A: "#forge:rods/wooden",
 		B: "#minecraft:planks"
 	}).id("tconstruct:tables/pattern_3")
+
+	// EFLN
+	kubejs.shapeless("4x tconstruct:efln_ball", [
+		"minecraft:paper",
+		"#kaleidoscope_cookery:oil",
+		"#forge:dusts/niter"
+	])
 })

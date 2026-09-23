@@ -19,6 +19,12 @@ ServerEvents.recipes((event) => {
 		Fluid.of("cmi:hdpe", 100)
 	])
 
+	// 未成形碳纳米管
+	thermal.crystallizer("cmi:incomplete_carbon_nanotube", [
+		"cmi:graphene",
+		Fluid.of("cmi:polymeric_carbon_solution", 50)
+	])
+
 	// 纯净石英
 	thermal.crystallizer("cmi:pure_quartz_prism", [
 		"#forge:dusts/pure_quartz",

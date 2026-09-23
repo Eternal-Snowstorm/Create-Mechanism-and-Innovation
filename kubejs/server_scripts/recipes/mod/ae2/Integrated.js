@@ -33,7 +33,7 @@ ServerEvents.recipes((event) => {
 		.inputFluid(Fluid.of("cmi:structural_plastic", 50))
 		.inputItems([
 			"cmi:composite_tungsten_steel_plate",
-			"cmi:carbon_nanotube"
+			"4x cmi:carbon_nanotube"
 		])
 
 	// 空燃料棒
@@ -76,4 +76,70 @@ ServerEvents.recipes((event) => {
 			"#forge:gears/titanium_alloy",
 			"8x #forge:wires/fluix"
 		])
+
+	// 引擎框架
+	addRecipe()
+		.itemOutput("ad_astra:engine_frame")
+		.energy(4000)
+		.inputItems([
+			"4x #forge:plates/stainless_steel",
+			"2x #forge:plates/titanium",
+			"4x ad_astra:fan"
+		])
+		.id("ad_astra:engine_frame")
+
+	// T1火箭组件
+	addRecipe()
+		.itemOutput("cmi:tier_1_rocket_nose_cone")
+		.energy(16000)
+		.inputFluid(Fluid.of("cmi:molten_etrium", 90))
+		.inputItems([
+			"4x #forge:plates/composite_tungsten_steel",
+			"#forge:gears/tungsten_steel",
+			"cmi:tier_1_aviation_cell",
+			"mekanism:basic_control_circuit",
+			"#railways:palettes/dye_groups/flywheel",
+			Mechanisms.AERO.COM
+		])
+
+	addRecipe()
+		.itemOutput("cmi:tier_1_rocket_body")
+		.energy(4000)
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 100))
+		.inputItems([
+			"2x #forge:plates/tungsten_steel",
+			"#forge:plates/composite_tungsten_steel",
+			"#forge:plates/aluminum_alloy"
+		])
+
+	addRecipe()
+		.itemOutput("cmi:tier_1_rocket_fin")
+		.energy(4000)
+		.inputFluid(Fluid.of("cmi:molten_etrium", 90))
+		.inputItems([
+			"2x #forge:plates/tungsten_steel",
+			"#forge:plates/aluminum_alloy"
+		])
+
+	addRecipe()
+		.itemOutput("ad_astra:steel_engine")
+		.energy(16000)
+		.inputItems([
+			"4x #forge:plates/composite_tungsten_steel",
+			"2x #forge:gears/tungsten_steel",
+			Mechanisms.AERO.COM,
+			"ad_astra:engine_frame"
+		])
+		.id("ad_astra:steel_engine")
+
+	addRecipe()
+		.itemOutput("ad_astra:steel_tank")
+		.energy(16000)
+		.inputItems([
+			"2x #forge:plates/composite_tungsten_steel",
+			"2x #forge:plates/tungsten_steel",
+			"#forge:plates/aluminum_alloy",
+			"#cmi:fluid_tanks"
+		])
+		.id("ad_astra:steel_tank")
 })

@@ -25,7 +25,7 @@ ServerEvents.recipes((event) => {
 				{
 					"count": 32,
 					"ingredient": {
-						"tag": `cmi:tier_${tier}_aviation_mechanism`
+						"tag": `create:mechanisms/astronautic`
 					}
 				}
 			],
