@@ -1,5 +1,5 @@
 ServerEvents.recipes((event) => {
-	let { kubejs, minecraft } = event.getRecipes()
+	let { kubejs } = event.getRecipes()
 
 	// 木齿轮
 	kubejs.shaped("cmi:wooden_gear", [

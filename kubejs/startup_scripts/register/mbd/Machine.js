@@ -3,6 +3,7 @@ let dtma = "dimensionally_transcendent_mechanism_accelerator"
 MBDRegistryEvents.machine((event) => {
 	registryDtma(event)
 	registryDtmaBus(event)
+	registryChemicalReactorEnergyBus(event)
 })
 
 /**
@@ -263,4 +264,98 @@ function buildPattern(controllerBlock) {
 			.or(Predicates.blocks("cmi:dimensionally_transcendent_mechanism_accelerator_input_bus").setMaxGlobalLimited(2))
 			.or(Predicates.blocks("cmi:dimensionally_transcendent_mechanism_accelerator_output_bus").setMaxGlobalLimited(2)))
 		.build()
+}
+
+/**
+ * 化学反应釜的"电力输入总线" (大化反 / 小化反共用一条)。
+ *
+ * 代理过滤器写的是 chemical_reactor_input_energy —— MBD2 的匹配是 **contains** (见 MBDPartMachine),
+ * 所以它会同时命中:
+ *   chemical_reactor_input_energy              (小化反)
+ *   reinforced_chemical_reactor_input_energy   (强化化反)
+ * 一条总线两台都能用。
+ *
+ * 储物 / 自动 IO / 界面都不用管: CMI Core 的 BusKit 会按"代理到能量 trait"给它判定成纯能量总线,
+ * MachineUIKit 对纯能量总线的规则是"不开界面"(能量看 Jade 就行)。
+ *
+ * ⚠️ 只有这一段还不够: 多方块结构 (pattern) 在 .mb 二进制工程文件里, 代码改不了。
+ * 要让这个方块真的能放进化反的结构, 得在 MBD2 的多方块编辑器里给结构谓词加上它。
+ */
+function registryChemicalReactorEnergyBus(event) {
+	const ID = "chemical_reactor_energy_input_bus"
+
+	let bus = event.create("single", Cmi.loadResource(ID))
+
+	// 外观: GenMBDModel 给每台机器生成的端口模型 (cmi:block/machine/<机器>/<端口>)
+	bus.rootState(MachineState.builder()
+		.name("base")
+		.modelRenderer("cmi:block/machine/chemical_reactor/energy_input")
+		.shape(Shapes.block())
+		.build())
+
+	bus.machineSettings(() => {
+		return ConfigMachineSettings.builder()
+			.hasUI(false)
+			.dropMachineItem(true)
+			.build()
+	})
+
+	bus.itemProperties(ConfigItemProperties.builder()
+		.maxStackSize(64)
+		.creativeTab(new ToggleCreativeTab("cmi:machines"))
+		.rarity(Rarity.EPIC)
+		.build())
+
+	bus.blockProperties(ConfigBlockProperties.builder()
+		.destroyTime(3)
+		.rotationState(RotationState.ALL)
+		.build())
+
+	bus.recipeLogicSettings(ConfigRecipeLogicSettings.builder()
+		.enable(false)
+		.recipeType(Cmi.loadResource("test"))
+		.build())
+
+	bus.partSettings(() => {
+		let proxy = new ConfigPartSettings$ProxyCapability()
+		MBDHelpers.setPrivateField(proxy, MBDHelpers.traitNameFilter, "chemical_reactor_input_energy")
+
+		proxy.capabilityIO()
+			.setFrontIO(IO.IN)
+		proxy.capabilityIO()
+			.setBackIO(IO.IN)
+		proxy.capabilityIO()
+			.setLeftIO(IO.IN)
+		proxy.capabilityIO()
+			.setRightIO(IO.IN)
+		proxy.capabilityIO()
+			.setTopIO(IO.IN)
+		proxy.capabilityIO()
+			.setBottomIO(IO.IN)
+
+		// 六面自动 IO: 从相邻的线缆/容器把电拉进来
+		proxy.autoIO()
+			.setEnable(true)
+		proxy.autoIO()
+			.setInterval(5)
+		proxy.autoIO()
+			.setFrontIO(IO.IN)
+		proxy.autoIO()
+			.setBackIO(IO.IN)
+		proxy.autoIO()
+			.setLeftIO(IO.IN)
+		proxy.autoIO()
+			.setRightIO(IO.IN)
+		proxy.autoIO()
+			.setTopIO(IO.IN)
+		proxy.autoIO()
+			.setBottomIO(IO.IN)
+
+		let part = ConfigPartSettings.builder()
+		part.enable(true)
+		part.canShare(true)
+		part.proxyControllerCapabilities(JavaArrays.asList(proxy))
+
+		return part.build()
+	})
 }
