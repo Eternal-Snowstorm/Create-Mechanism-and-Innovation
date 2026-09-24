@@ -289,4 +289,40 @@ ServerEvents.recipes((event) => {
 		"minecraft:clay_ball"
 	])
 
+	// 太阳能板
+	kubejs.shaped("mekanismgenerators:solar_panel", [
+		"ABA",
+		"CMC",
+		" C "
+	], {
+		A: "#forge:glass_panes",
+		B: "#forge:plates/silicon",
+		C: "#forge:plates/copper",
+		M: Mechanisms.PHOTO.COM
+	})
+		.id("mekanismgenerators:solar_panel")
+
+	kubejs.shaped("ad_astra:photovoltaic_etrium_cell", [
+		"ABA",
+		"CMC",
+		" C "
+	], {
+		A: "#forge:glass_panes",
+		B: "#forge:plates/silicon",
+		C: "#forge:plates/etrium",
+		M: Mechanisms.PHOTO.COM
+	})
+		.id("ad_astra:photovoltaic_etrium_cell")
+
+	kubejs.shaped("ad_astra:photovoltaic_vesnium_cell", [
+		"ABA",
+		"CMC",
+		" C "
+	], {
+		A: "#forge:glass_panes",
+		B: "#forge:plates/silicon",
+		C: "#forge:plates/silver",
+		M: Mechanisms.PHOTO.COM
+	})
+		.id("ad_astra:photovoltaic_vesnium_cell")
 })
