@@ -1,4 +1,10 @@
 ServerEvents.recipes((event) => {
+	/**
+	 * 
+	 * @param {Internal.Ingredient_} inputItem 
+	 * @param {number} amount 
+	 * @returns 
+	 */
 	function addCryoFreezingRecipe(inputItem, amount) {
 		return event.custom({
 			"type": "ad_astra:cryo_freezing",
@@ -24,7 +30,7 @@ ServerEvents.recipes((event) => {
 	addCryoFreezingRecipe("minecraft:packed_ice", 40)
 		.id("ad_astra:cryo_freezing/cryo_fuel_from_cryo_freezing_packed_ice")
 
-	// // 蓝冰
+	// 蓝冰
 	addCryoFreezingRecipe("minecraft:blue_ice", 160)
 		.id("ad_astra:cryo_freezing/cryo_fuel_from_cryo_freezing_blue_ice")
 })
