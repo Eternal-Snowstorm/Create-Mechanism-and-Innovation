@@ -19,7 +19,7 @@ ServerEvents.recipes((event) => {
 				.input(INGOT)
 
 			mekanism.crushing(DUST, INGOT)
-			if (Ingredient.isNotNull(highPriorityItem(RAW_ORE))) {
+			if (Ingredient.isNotNull(RAW_ORE)) {
 				thermal.pulverizer(Item.of(Ingredient.getFirstItemId(DUST)).withChance(1.25), [
 					RAW_ORE
 				])

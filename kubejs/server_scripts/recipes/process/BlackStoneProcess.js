@@ -142,22 +142,11 @@ ServerEvents.recipes((event) => {
 	])
 
 	// Delta溶液
-	event.custom({
-		"type": "immersiveengineering:mixer",
-		"energy": 1600,
-		"fluid": {
-			"amount": 50,
-			"tag": "forge:redstone_acid"
-		},
-		"inputs": [
-			Ingredient.of("#cmi:delta_blackstone_source").toJson(),
-			Ingredient.of("#forge:dusts/end_stone").toJson()
-		],
-		"result": {
-			"amount": 200,
-			"fluid": "cmi:delta_unstable_solution"
-		}
-	})
+	create.mixing(Fluid.of("cmi:delta_unstable_solution", 200), [
+		"#cmi:delta_blackstone_source",
+		"#forge:dusts/end_stone",
+		Fluid.tag("tag", "forge:redstone_acid", 50)
+	])
 
 	// 铂溶液
 	event.custom({
@@ -169,10 +158,7 @@ ServerEvents.recipes((event) => {
 	})
 
 	// 脱水
-	thermal_extra.endothermic_dehydrator([
-		Fluid.of("cmi:turbid_waste_liquid", 50),
-		"cmi:platinum_dust"
-	], [
+	thermal_extra.endothermic_dehydrator("cmi:dirty_platinum_dust", [
 		Fluid.of("cmi:platinum_solution", 100)
 	])
 

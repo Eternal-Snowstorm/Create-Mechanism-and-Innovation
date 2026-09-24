@@ -198,7 +198,7 @@ ServerEvents.recipes((event) => {
 	], {
 		P: "#forge:plates/iron",
 		G: "#forge:gears/signalum",
-		A: "#forge:gems/fluix"
+		A: "#forge:gems/amethyst"
 	}).id("ae2:network/blocks/crystal_processing_charger")
 
 	// 无线发信
