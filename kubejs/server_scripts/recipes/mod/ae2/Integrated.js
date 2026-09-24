@@ -33,7 +33,7 @@ ServerEvents.recipes((event) => {
 		.inputFluid(Fluid.of("cmi:structural_plastic", 50))
 		.inputItems([
 			"cmi:composite_tungsten_steel_plate",
-			"cmi:carbon_nanotube"
+			"4x cmi:carbon_nanotube"
 		])
 
 	// 空燃料棒
@@ -45,16 +45,6 @@ ServerEvents.recipes((event) => {
 			"16x #forge:ingots/hop_graphite",
 			"16x alexscaves:polymer_plate",
 			"4x #forge:plates/lead",
-		])
-
-	// 复合钨钢板
-	addRecipe()
-		.itemOutput("cmi:composite_tungsten_steel_plate")
-		.energy(16000)
-		.inputFluid(Fluid.of("tconstruct:molten_tungsten", 90))
-		.inputItems([
-			"cmi:incomplete_tungsten_steel_plate",
-			"#forge:plates/tungsten_steel"
 		])
 
 	// 裂变核心

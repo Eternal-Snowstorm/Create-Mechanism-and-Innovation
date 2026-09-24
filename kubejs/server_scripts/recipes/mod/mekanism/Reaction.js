@@ -1,14 +1,6 @@
 ServerEvents.recipes((event) => {
 	let { mekanism } = event.getRecipes()
 
-	// 未成形碳纳米管
-	mekanism.reaction(
-		"cmi:graphene",
-		MekType.Gas.of("mekanism:oxygen", 10),
-		Fluid.of("cmi:polymeric_carbon_solution", 50),
-		"cmi:incomplete_carbon_nanotube"
-	).duration(60).energyRequired(1000)
-
 	// 锇
 	mekanism.reaction(
 		"#forge:dusts/osmium",

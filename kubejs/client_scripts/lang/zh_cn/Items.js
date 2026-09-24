@@ -308,6 +308,11 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("tier_3_rocket_fin", "三阶火箭尾翼")
 	addItemLang("tier_4_rocket_fin", "四阶火箭尾翼")
 
+	addItemLang("tier_1_rocket_body", "一阶火箭箭身")
+	addItemLang("tier_2_rocket_body", "二阶火箭箭身")
+	addItemLang("tier_3_rocket_body", "三阶火箭箭身")
+	addItemLang("tier_4_rocket_body", "四阶火箭箭身")
+
 	addItemLang("aluminum_upgrade_augment", "铝整合组件")
 	addItemLang("stainless_steel_upgrade_augment", "不锈钢整合组件")
 	addItemLang("titanium_alloy_upgrade_augment", "钛合金整合组件")
