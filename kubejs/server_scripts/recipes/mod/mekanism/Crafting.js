@@ -120,4 +120,15 @@ ServerEvents.recipes((event) => {
 		A: "#forge:plates/stainless_steel",
 		B: "mekanism:elite_chemical_tank"
 	}).id("mekanism:chemical_tank/ultimate")
+
+	// 太阳能板
+	kubejs.shaped("mekanismgenerators:solar_generator", [
+		"BAB",
+		"CDC"
+	], {
+		A: "mekanismgenerators:solar_panel",
+		B: "#forge:glass",
+		C: "#forge:plates/industrial_iron",
+		D: "#forge:plates/vanadium"
+	}).id("mekanismgenerators:generator/solar")
 })

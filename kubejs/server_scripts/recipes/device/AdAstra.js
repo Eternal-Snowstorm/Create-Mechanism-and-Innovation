@@ -20,17 +20,6 @@ ServerEvents.recipes((event) => {
 		Mechanisms.COIL.COM
 	]).id("ad_astra:etrionic_blast_furnace")
 
-	// 太阳能板
-	kubejs.shaped("mekanismgenerators:solar_generator", [
-		"BAB",
-		"CDC"
-	], {
-		A: "mekanismgenerators:solar_panel",
-		B: "#forge:glass",
-		C: "#forge:plates/industrial_iron",
-		D: "#forge:plates/vanadium"
-	}).id("mekanismgenerators:generator/solar")
-
 	thermal_extra.component_assembly("ad_astra:solar_panel", [
 		"ad_astra:photovoltaic_etrium_cell",
 		Casing.STEEL,
@@ -44,6 +33,5 @@ ServerEvents.recipes((event) => {
 		Casing.STEEL,
 		"#forge:plates/vanadium",
 		"#forge:plates/steel"
-	])
-		.id("mekanismgenerators:generator/advanced_solar")
+	]).id("mekanismgenerators:generator/advanced_solar")
 })
