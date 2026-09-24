@@ -90,6 +90,10 @@ ServerEvents.highPriorityData((event) => {
 		"immersiveengineering:coil_hv"
 	], "cmi:steel_coil")
 
+	addUnification("coke_block", [
+		"immersiveengineering:coke"
+	], "thermal:coal_coke_block")
+
 	// 齿轮
 	let cogwheelTypes = [
 		"bronze",

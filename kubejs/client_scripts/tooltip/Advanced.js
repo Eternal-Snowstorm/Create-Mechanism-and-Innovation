@@ -24,6 +24,7 @@ ItemEvents.tooltip((event) => {
 
 	// 繁星核心
 	addAdvancedTooltip("cmi:astral_core")
+	addAdvancedTooltip("cmi:impact_pile")
 
 	/**
 	 * 

@@ -11,12 +11,9 @@ ServerEvents.highPriorityData((event) => {
 		"tinker",
 		"clinic",
 		"mill",
-		"farm_1",
-		"farm_2",
-		"farm_3",
-		"farm_4",
-		"farm_5",
-		"farm_6"
+		"fisherman_cabin",
+		"library",
+		"restaurant"
 	]
 
 	let streetTypes = [
