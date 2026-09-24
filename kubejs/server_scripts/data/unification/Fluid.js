@@ -55,6 +55,11 @@ ServerEvents.highPriorityData((event) => {
 		"tconstruct:powdered_snow"
 	], "tconstruct:powdered_snow")
 
+	// 熔融末影珍珠
+	addUnification("ender_pearl", [
+		"tconstruct:molten_ender"
+	], "thermal:ender")
+
 	/**
 	 * 
 	 * @param {string} name

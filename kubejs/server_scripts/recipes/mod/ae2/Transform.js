@@ -65,13 +65,7 @@ ServerEvents.recipes((event) => {
 	}
 
 	// 量子缠绕态奇点
-	new TransformRecipe("ae2:quantum_entangled_singularity", 4)
-		.input("ae2:singularity")
-		.input("cmi:ender_mechanism")
-		.explosion()
-		.build("ae2:transform/entangled_singularity_from_mechanism")
-
-	new TransformRecipe("ae2:quantum_entangled_singularity", 8)
+	new TransformRecipe("ae2:quantum_entangled_singularity", 2)
 		.input("ae2:singularity")
 		.input("mekanism:teleportation_core")
 		.explosion()

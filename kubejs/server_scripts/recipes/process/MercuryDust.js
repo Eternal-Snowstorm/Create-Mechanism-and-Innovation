@@ -1,7 +1,7 @@
 ServerEvents.recipes((event) => {
 	let { mekanism, cmi } = event.getRecipes()
 
-	
+
 	// 酸洗水星岩
 	mekanism.reaction(
 		"#ad_astra:mercury_stones",
@@ -10,6 +10,15 @@ ServerEvents.recipes((event) => {
 		"cmi:acid_washed_mercury_rock",
 		"10x cmi:mercury_mixture" // MekType.Gas.of("cmi:mercury_mixture", 10)
 	).duration(60).energyRequired(12000)
+
+	// 朱砂产汞
+	mekanism.reaction("#forge:dusts/cinnabar",
+		"50x mekanism:steam"
+	)
+		.fluidInput(Fluid.of("mekanism:sulfuric_acid", 50))
+		.gasOutput("10x cmi:mercury_mixture")
+		.duration(60)
+		.energyRequired(12000)
 
 	// 过热汞混合物
 	mekanism.chemical_infusing(
@@ -38,7 +47,7 @@ ServerEvents.recipes((event) => {
 
 	// 传送核心
 	mekanism.reaction(
-		"ae2:singularity",
+		"ae2:fluix_pearl",
 		"1000x cmi:mercury", // MekType.Gas.of("cmi:mercury", 1000)
 		Fluid.tag("tag", "forge:ender", 1000),
 		"mekanism:teleportation_core"

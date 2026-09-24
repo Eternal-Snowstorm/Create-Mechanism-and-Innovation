@@ -462,19 +462,28 @@ ServerEvents.recipes((event) => {
 	]).id("ae2:network/blocks/energy_vibration_chamber")
 
 	// 量子环
-	thermal_extra.component_assembly("ae2:quantum_ring", [
-		"#forge:plates/silver",
-		"ae2:energy_cell",
-		Mechanisms.COMPUTE.COM,
-		"ae2:sky_dust"
-	]).id("ae2:network/blocks/quantum_ring")
+	neoecoae.integrated_working_station()
+		.itemOutput("ae2:quantum_ring")
+		.inputItems([
+			Casing.COMPUTE,
+			Mechanisms.COMPUTE.COM,
+			"4x #forge:plates/silicon_carbide",
+			"2x #forge:plates/superconducting_mercury",
+			"2x #forge:gems/energized_fluix_crystal"
+		])
+		.id("ae2:network/blocks/quantum_ring")
 
 	// 量子链接仓
-	thermal_extra.component_assembly("ae2:quantum_link", [
-		"ae2:quartz_glass",
-		Mechanisms.ENDER.COM,
-		"ae2:fluix_pearl"
-	]).id("ae2:network/blocks/quantum_link")
+	neoecoae.integrated_working_station()
+		.itemOutput("ae2:quantum_link")
+		.inputItems([
+			"ae2:quartz_glass",
+			Mechanisms.COMPUTE.COM,
+			"4x #forge:plates/silicon_carbide",
+			"2x #forge:plates/superconducting_mercury",
+			"2x #forge:gems/energized_fluix_crystal"
+		])
+		.id("ae2:network/blocks/quantum_link")
 
 	// 空间塔
 	thermal_extra.component_assembly("ae2:spatial_pylon", [
