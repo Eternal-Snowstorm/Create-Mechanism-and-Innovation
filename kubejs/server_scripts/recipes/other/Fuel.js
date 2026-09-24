@@ -25,7 +25,7 @@ ServerEvents.recipes((event) => {
 	 * 例如烈焰血的就是"tconstruct:smeltery/melting/fuel/blaze"
 	 * 当然你要是硬要用.id()去替换我也阻止不了你
 	 * 
-	 * @param {Internal.FluidStackJS} fluid 流体id
+	 * @param {Internal.FluidStackJS_} fluid 流体id
 	 * @param {Number} temperature 温度
 	 */
 	function addFuel(fluid, temperature) {
