@@ -1,5 +1,5 @@
 ServerEvents.recipes((event) => {
-	let { cmi, tconstruct, immersiveengineering } = event.getRecipes()
+	let { cmi, tconstruct } = event.getRecipes()
 
 	addFuel(Fluid.of("createdieselgenerators:plant_oil"), 1027)
 	addFuel(Fluid.of("immersiveengineering:ethanol"), 1132)
