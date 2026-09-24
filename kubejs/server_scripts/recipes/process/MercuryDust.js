@@ -53,4 +53,9 @@ ServerEvents.recipes((event) => {
 		"mekanism:teleportation_core"
 	).duration(60).energyRequired(12000)
 
+	// 灌注量子
+	mekanism.infusion_conversion(
+		"extendedae_plus:oblivion_singularity",
+		MekType.InfuseType.of("cmi:infuse_quantum", 10)
+	)
 })
