@@ -2,25 +2,16 @@ ServerEvents.recipes((event) => {
 	let { thermal_extra } = event.getRecipes()
 
 	// 催化剂配方
-	event.custom({
-		"type": "thermal_extra:nitratic_igniter_catalyst",
-		"energy_mod": 1.0,
-		"ingredient": {
-			"item": "cmi:trinitrotoluene"
-		},
-		"primary_mod": 1.0,
-		"secondary_mod": 1.0
-	})
 
-	event.custom({
-		"type": "thermal_extra:nitratic_igniter_catalyst",
-		"energy_mod": 1.25,
-		"ingredient": {
-			"item": "cmi:nitrocellulose"
-		},
-		"primary_mod": 1.0,
-		"secondary_mod": 1.0
-	})
+	thermal_extra.nitratic_igniter_catalyst("cmi:trinitrotoluene")
+		.primary_mod(1)
+		.secondary_mod(1)
+		.energy_mod(1)
+
+	thermal_extra.nitratic_igniter_catalyst("cmi:nitrocellulose")
+		.primary_mod(1)
+		.secondary_mod(1)
+		.energy_mod(1.25)
 
 	// 锇
 	thermal_extra.nitratic_igniter([
