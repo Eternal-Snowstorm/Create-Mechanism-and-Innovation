@@ -193,12 +193,12 @@ ServerEvents.recipes((event) => {
 	// 充能器
 	kubejs.shaped("ae2:charger", [
 		"PAP",
-		" M ",
+		" G ",
 		"PAP"
 	], {
 		P: "#forge:plates/iron",
-		M: Mechanisms.COIL.COM,
-		A: "#forge:gems/amethyst"
+		G: "#forge:gears/signalum",
+		A: "#forge:gems/fluix"
 	}).id("ae2:network/blocks/crystal_processing_charger")
 
 	// 无线发信
