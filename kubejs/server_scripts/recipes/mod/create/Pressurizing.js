@@ -18,8 +18,8 @@ ServerEvents.recipes((event) => {
 
 	// 高温蒸汽
 	vintageimprovements.pressurizing(Fluid.of("create_steam_ages:high_temperature_steam", 1000), [
-		{ fluidTag: "forge:steam", amount: 1000 },
-		{ fluidTag: "forge:steam", amount: 1000 }
+		CreateFluidIngredient.ofTagId("forge:steam", 1000),
+		CreateFluidIngredient.ofTagId("forge:steam", 1000)
 	]).secondaryFluidInput(1).heatRequirement(CmiHeatLevel.GRILLED)
 
 	// 细雪
