@@ -1,22 +1,55 @@
+#true: blocks removed by the platform's fill-up area drop as items.
+#false (default): they are simply removed.
+cleanup_drops = false
 
 #All settings below will only take effect after restarting the server or client.
 [general]
-	#Items that can trigger platform placement (right-click).
-	#Use "#namespace:path" for tags, "namespace:path" for item IDs.
-	#Examples: "#forge:stone", "minecraft:cobblestone"
-	trigger_block = ["#forge:stone", "minecraft:cobblestone"]
-	#Items that can adjust platform mode (right-click) and show boundary preview (hold).
-	#Use "#namespace:path" for tags, "namespace:path" for item IDs.
-	#Examples: "#forge:tools/wrench", "minecraft:stick"
-	adjuster = ["#forge:tools/wrench", "minecraft:stick"]
-	#The distance that the platform fills on its top
+	#Items that can be put into the material slot of the platform builder screen.
+	#Use #namespace:path for tags, namespace:path for item IDs.
+	#The item tag industrial_platform:platform_material is accepted as well.
+	#Examples: #forge:stone, minecraft:cobblestone
+	platform_material = ["#forge:stone", "minecraft:cobblestone"]
+	#Items treated as a platform adjuster: right-click a platform block or the builder station to open its screen,
+	#hold one to display the block boundary preview.
+	#Use #namespace:path for tags, namespace:path for item IDs.
+	#Examples: #forge:tools/wrench, industrial_platform:fill_adjuster
+	adjuster = ["#forge:tools/wrench", "industrial_platform:fill_adjuster"]
+	#Default value of the fill-up field shown in the platform builder screen.
+	#The player can still change it in the screen, range: 0 ~ 64
 	#type: int
 	#default: 5
 	#Range: 0 ~ 64
 	top_filling_distance = 5
-	#The distance that the platform fills on its bottom
+	#Default value of the fill-down field shown in the platform builder screen.
+	#The player can still change it in the screen, range: 0 ~ 64
 	#type: int
 	#default: 5
 	#Range: 0 ~ 64
 	bottom_filling_distance = 5
+
+#Platform footprint limits, measured in chunks per side.
+[platform]
+	#Smallest platform footprint, in chunks per side.
+	#default: 1
+	#Range: 1 ~ 8
+	min_platform_chunks = 1
+	#Largest platform footprint, in chunks per side.
+	#default: 4 (64x64 blocks)
+	#Range: 1 ~ 8
+	max_platform_chunks = 4
+
+#Legacy cost settings, kept while the material system is being rewritten.
+[cost]
+	#Cost of a standard platform (1x1 chunk).
+	#default: 1
+	#Range: 0 ~ 4096
+	light_platform_cost = 1
+	#Cost of a heavy platform (3x3 chunks).
+	#default: 1, raise it if a heavy platform should cost more
+	#Range: 0 ~ 4096
+	heavy_platform_cost = 1
+	#Extra cost for every layer filled up / down.
+	#default: 0
+	#Range: 0 ~ 4096
+	filling_layer_cost = 0
 
