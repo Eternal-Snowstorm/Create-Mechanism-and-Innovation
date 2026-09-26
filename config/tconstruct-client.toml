@@ -36,8 +36,6 @@
 		showFilledFluidTanks = false
 		#If true, variants of our potion fluid for every potion will show in JEI. If false it will be hidden, but still usable.
 		showPotionFluid = true
-		#[Experimental] If true, modifier recipe lookup from a specific tool will show your tool in JEI. If false, a generic display tool will be shown.
-		showToolInModifiers = true
 
 	#Settings related to modifiers
 	[client.modifiers]
