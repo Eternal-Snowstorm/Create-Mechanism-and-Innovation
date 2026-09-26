@@ -1,7 +1,7 @@
 // priority: 18
 
 // 构件相关物品统一调用
-let Mechanisms = Object.freeze({
+const Mechanisms = Object.freeze({
 	// C0
 	WOODEN: Object.freeze({
 		COM: Item.of("cmi:wooden_mechanism"),
