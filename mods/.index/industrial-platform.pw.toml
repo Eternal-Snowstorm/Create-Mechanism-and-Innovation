@@ -1,18 +1,18 @@
-filename = 'Industrial Platform-1.20.1-2.0.0.jar'
+filename = 'Industrial Platform-1.20.1-2.0.1.jar'
 name = 'Industrial Platform'
 side = 'server'
 x-prismlauncher-dependencies = []
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'Industrial Platform-1.20.1-2.0.0.jar'
+x-prismlauncher-version-number = 'Industrial Platform-1.20.1-2.0.1.jar'
 
 [download]
-hash = '831318630a0d56e8b831ff92039c42974df94500'
+hash = '6fbd5732f2bfaff3497b6e82ae3afd9c993d06da'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 8973270
+file-id = 8979564
 project-id = 1350900

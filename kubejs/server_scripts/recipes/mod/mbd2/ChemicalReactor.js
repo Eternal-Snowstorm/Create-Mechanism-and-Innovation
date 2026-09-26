@@ -48,5 +48,4 @@ ServerEvents.recipes((event) => {
 		.perTick((recipe) => {
 			recipe.inputFE(25000 / 20)
 		})
-	
 })
