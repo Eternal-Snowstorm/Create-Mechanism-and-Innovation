@@ -1,25 +1,18 @@
-filename = 'jei-1.20.1-forge-15.62.0.216.jar'
-name = 'Just Enough Items'
+filename = 'jei-1.20.1-forge-15.59.0.212.jar'
+name = 'Just Enough Items (JEI)'
 side = 'server'
+x-prismlauncher-dependencies = []
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'beta'
-x-prismlauncher-version-number = '15.62.0.216 for Forge 1.20.1'
+x-prismlauncher-version-number = '15.59.0.212 for Forge 1.20.1'
 
 [download]
-hash = 'bb0cb397083a0be2601bd4c6f7060326a1c8505f'
+hash = 'bfed31fa3defb09f8890890a91359ef4ab8623e0'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 8964933
+file-id = 8895264
 project-id = 238222
-
-[[x-prismlauncher-dependencies]]
-addonId = '1700987'
-type = 'OPTIONAL'
-
-[[x-prismlauncher-dependencies]]
-addonId = '1689768'
-type = 'REQUIRED'
