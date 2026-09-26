@@ -16,5 +16,5 @@ StartupEvents.registry("fluid", (event) => {
 	}
 
 	// 熔融幻晶
-	addColorMaterialFluid("dreamcore_molten", 0xEE8ED7)
+	addColorMaterialFluid("dreamcore", 0xEE8ED7)
 })

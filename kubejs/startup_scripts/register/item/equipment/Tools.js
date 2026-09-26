@@ -4,10 +4,10 @@ let $Tiers =
 	Java.loadClass("net.minecraft.world.item.Tiers")
 
 StartupEvents.registry("item", (event) => {
-	let properties = new Item$Properties()
-
+	
 	// 超级刀
 	event.createCustom(`${Cmi.MODID}:super_knife`, () => {
+		let properties = new Item$Properties()
 		return new JavaAdapter($KnifeItem, {
 			/**
 			 * 
@@ -51,6 +51,7 @@ StartupEvents.registry("item", (event) => {
 
 	// 木质小刀
 	event.createCustom(`${Cmi.MODID}:wooden_knife`, () => {
+		let properties = new Item$Properties()
 		return new $KnifeItem($Tiers.WOOD, 0.5, -2.0, properties)
 	}).tag("forge:tools/knives").tag("forge:tools")
 

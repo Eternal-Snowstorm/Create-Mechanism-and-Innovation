@@ -334,7 +334,7 @@ StartupEvents.registry("item", (event) => {
 	addMaterial("glacian_chunk")
 
 	// 重组幻晶
-	addMaterial("dreamcore_rc")
+	addMaterial("dreamcore_recombine")
 
 	// 富集幻晶
 	addMaterial("dreamcore_enriched")
@@ -348,11 +348,11 @@ StartupEvents.registry("item", (event) => {
 	// 热解幻晶
 	addMaterial("dreamcore_pyrolysis")
 
-	// 高能幻晶
+	// 充能幻晶
 	addMaterial("dreamcore_charged")
 
 	// 革新幻晶
-	addMaterial("dreamcore_i")
+	addMaterial("dreamcore_innovation")
 
 	function componentModel(type) {
 		return {

@@ -205,6 +205,21 @@ let Material = Object.freeze({
 	})
 })
 
+// 终章幻晶
+let Dreamcores = {
+    ore: "cmi:dreamcore_ore",
+    recombine: "cmi:dreamcore_recombine",
+    enriched: "cmi:dreamcore_enriched",
+    electrolized: "cmi:dreamcore_electrolized",
+    source: "cmi:dreamcore_source",
+    pyrolysis: "cmi:dreamcore_pyrolysis",
+    charged: "cmi:dreamcore_charged",
+    molten: "cmi:molten_dreamcore_molten",
+    solidified: "cmi:dreamcore_solidified",
+    innovation: "cmi:dreamcore_innovation",
+    finalPart: "cmi:final_mechanism_part"
+}
+
 // 处理器
 let Print = Object.freeze({
 	LOGIC: "ae2:printed_logic_processor",

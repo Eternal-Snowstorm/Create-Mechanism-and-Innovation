@@ -53,6 +53,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addMaterialLang("compressed_iron", "加压铁")
 	addMaterialLang("glass", "玻璃")
 	addMaterialLang("fluix", "福鲁伊克斯")
+	addMaterialLang("dreamcore", "幻晶")
 
 	/**
 	 * 

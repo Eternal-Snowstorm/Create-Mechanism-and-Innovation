@@ -25,10 +25,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	 * @param {string} type 
 	 * @param {string} name 
 	 * @param {string} typeName 
-	 * @param {string} key 
-	 * @param {string} type 
-	 * @param {string} name 
-	 * @param {string} typeName 
 	 */
 	function addIOerLang(key, type, name, typeName) {
 		event.add(`block.${Cmi.MODID}.${key}_${type}_input_bus`, `${name + typeName}输入总线`)

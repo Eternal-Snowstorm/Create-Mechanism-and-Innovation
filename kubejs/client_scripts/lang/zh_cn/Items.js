@@ -287,9 +287,22 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("torn_parchment_a", "撕开的羊皮纸(甲)")
 	addItemLang("torn_parchment_b", "撕开的羊皮纸(乙)")
 
+	// 幻晶
 	addItemLang("dreamcore_crystal", "幻晶晶簇")
 	addItemLang("dreamcore_ore", "幻晶原石")
 	addItemLang("dreamcore_seed", "幻晶晶种")
+	let dreamcoreList = [
+		["recombine", "重组"],
+		["enriched", "富集"],
+		["electrolized", "电离"],
+		["source", "源质"],
+		["pyrolysis", "热解"],
+		["charged", "充能"],
+		["innovation", "革新"]
+	]
+	dreamcoreList.forEach(([id, name]) => {
+		addItemLang(`dreamcore_${id}`, `${name}幻晶`)
+	})
 
 	addItemLang("power_supply_repair_kit", "电源修复包")
 	addItemLang("transformer_repair_kit", "变压器修复包")
