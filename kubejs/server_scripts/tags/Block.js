@@ -335,6 +335,16 @@ ServerEvents.tags("block", (event) => {
 	event.get("minecraft:mineable/pickaxe")
 		.add("#cmi:coils")
 
+	// 平台填充
+	event.get("industrial_platform:no_drop_blocks")
+		.add([
+			"create:polished_cut_andesite",
+			"create:polished_cut_diorite",
+			"create:polished_cut_ochrum",
+			"create:polished_cut_scorchia",
+			"create:layered_deepslate"
+		])
+
 	// 遍历木头列表
 	WoodMaterials.forEach((wood) => {
 		let { STRIPPED_LOG, STRIPPED_WOOD } = wood

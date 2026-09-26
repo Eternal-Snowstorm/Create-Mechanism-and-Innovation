@@ -1,6 +1,3 @@
-#true: blocks removed by the platform's fill-up area drop as items.
-#false (default): they are simply removed.
-cleanup_drops = false
 
 #All settings below will only take effect after restarting the server or client.
 [general]
@@ -9,23 +6,24 @@ cleanup_drops = false
 	#The item tag industrial_platform:platform_material is accepted as well.
 	#Examples: #forge:stone, minecraft:cobblestone
 	platform_material = ["#forge:stone", "minecraft:cobblestone"]
-	#Items treated as a platform adjuster: right-click a platform block or the builder station to open its screen,
-	#hold one to display the block boundary preview.
+	#Extra items treated as a platform adjuster: standing right click a platform block to cycle
+	#its type, and holding one displays the block boundary preview.
+	#The Fill Adjuster item is always treated as one and does not need to be listed here.
 	#Use #namespace:path for tags, namespace:path for item IDs.
-	#Examples: #forge:tools/wrench, industrial_platform:fill_adjuster
-	adjuster = ["#forge:tools/wrench", "industrial_platform:fill_adjuster"]
+	#Examples: #forge:tools/wrench
+	adjuster = ["#forge:tools/wrench"]
 	#Default value of the fill-up field shown in the platform builder screen.
 	#The player can still change it in the screen, range: 0 ~ 64
 	#type: int
 	#default: 5
 	#Range: 0 ~ 64
-	top_filling_distance = 5
+	default_top_filling_distance = 5
 	#Default value of the fill-down field shown in the platform builder screen.
 	#The player can still change it in the screen, range: 0 ~ 64
 	#type: int
 	#default: 5
 	#Range: 0 ~ 64
-	bottom_filling_distance = 5
+	default_bottom_filling_distance = 5
 
 #Platform footprint limits, measured in chunks per side.
 [platform]
