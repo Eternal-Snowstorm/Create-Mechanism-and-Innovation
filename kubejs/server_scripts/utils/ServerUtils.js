@@ -187,7 +187,8 @@ const Mechanisms = Object.freeze({
 		FLUX: Item.of("cmi:flux_mechanism_part"),
 		GENERAL: Item.of("cmi:mekanism_mechanism_part"),
 		SPACE: Item.of("cmi:space_mechanism_part"),
-		QUANTUM: Item.of("cmi:quantum_mechanism_part")
+		QUANTUM: Item.of("cmi:quantum_mechanism_part"),
+		FINAL: Item.of("cmi:final_mechanism_part")
 	})
 })
 
@@ -206,19 +207,19 @@ let Material = Object.freeze({
 })
 
 // 终章幻晶
-let Dreamcores = {
-    ore: "cmi:dreamcore_ore",
-    recombine: "cmi:dreamcore_recombine",
-    enriched: "cmi:dreamcore_enriched",
-    electrolized: "cmi:dreamcore_electrolized",
-    source: "cmi:dreamcore_source",
-    pyrolysis: "cmi:dreamcore_pyrolysis",
-    charged: "cmi:dreamcore_charged",
-    molten: "cmi:molten_dreamcore_molten",
-    solidified: "cmi:dreamcore_solidified",
-    innovation: "cmi:dreamcore_innovation",
-    finalPart: "cmi:final_mechanism_part"
-}
+let Dreamcores = Object.freeze({
+	SEED: Item.of("cmi:dreamcore_seed"),
+	ORE: Item.of("cmi:dreamcore_ore"),
+	RECOMBINE: Item.of("cmi:dreamcore_recombine"),
+	ENRICHED: Item.of("cmi:dreamcore_enriched"),
+	ELECTROLIZED: Item.of("cmi:dreamcore_electrolized"),
+	SOURCE: Item.of("cmi:dreamcore_source"),
+	PYROLYSIS: Item.of("cmi:dreamcore_pyrolysis"),
+	CHARGED: Item.of("cmi:dreamcore_charged"),
+	MOLTEN: Fluid.of("cmi:molten_dreamcore", 100),
+	SOLIDIFIED: Fluid.of("cmi:dreamcore_solidified", 100),
+	INNOVATION: Item.of("cmi:dreamcore_innovation")
+})
 
 // 处理器
 let Print = Object.freeze({
