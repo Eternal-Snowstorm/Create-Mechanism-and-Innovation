@@ -1,5 +1,5 @@
 filename = 'jei-1.20.1-forge-15.59.0.212.jar'
-name = 'Just Enough Items'
+name = 'Just Enough Items (JEI)'
 side = 'server'
 x-prismlauncher-dependencies = []
 x-prismlauncher-loaders = [ 'forge' ]

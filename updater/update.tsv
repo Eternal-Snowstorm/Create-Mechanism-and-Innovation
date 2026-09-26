@@ -13,7 +13,7 @@ a52918a500ff421180a1cbd1a0cabee712134ec4	mods/architectury-9.2.14-forge.jar	http
 2acee24454af859988a691f0506271a465f68f7b	mods/athena-forge-1.20.1-3.1.2.jar	https://edge.forgecdn.net/files/5176/879/athena-forge-1.20.1-3.1.2.jar	curseforge:841890	
 76d6b2d0f2a3c9842587ad20666ba419cd8c1efa	mods/AttributeFix-Forge-1.20.1-21.0.5.jar	https://edge.forgecdn.net/files/7612/291/AttributeFix-Forge-1.20.1-21.0.5.jar	curseforge:280510	
 0eb5c3935eb4a2bcafa67e762054956be5f41f38	mods/auratip-forge-1.20.1-1.1.1-beta.jar	https://edge.forgecdn.net/files/8078/922/auratip-forge-1.20.1-1.1.1-beta.jar	curseforge:1515854	
-4248e3b8fb20e9b6432d2225325c605f4ad7b211	mods/balm-forge-1.20.1-7.3.43.jar	https://edge.forgecdn.net/files/8862/257/balm-forge-1.20.1-7.3.43.jar	curseforge:531761	
+b3f8a6a5823d3b4f2dce19c8aea9373e24bcb443	mods/balm-forge-1.20.1-7.3.44.jar	https://edge.forgecdn.net/files/8969/708/balm-forge-1.20.1-7.3.44.jar	curseforge:531761	
 d3cd12e2f08415fb072f8ea7572bd60b9b0d9042	mods/BCLib-20.0.13.jar	https://edge.forgecdn.net/files/8590/585/BCLib-20.0.13.jar	curseforge:1435106	
 8e4fe2cd85c08c24ab363b47a63d1c872fc3cc1e	mods/betterfpsdist-1.20.1-6.0.jar	https://edge.forgecdn.net/files/5723/247/betterfpsdist-1.20.1-6.0.jar	curseforge:551520	
 7cec406c736997eea5c7be0e88f625d64313e362	mods/biomespy-1.3.3-all.jar	https://edge.forgecdn.net/files/7488/30/biomespy-1.3.3-all.jar	curseforge:1376024	
@@ -99,7 +99,7 @@ b6e403e0e5be1802268be366ad1a7791f07fb793	mods/ImmersiveEngineering-1.20.1-10.2.0
 f38e1754f4d8dd97efa014aac2f69786cbaa7437	mods/immersivefixes-1.7.0.jar	https://edge.forgecdn.net/files/8905/564/immersivefixes-1.7.0.jar	curseforge:1326199	
 b66280cebb97cada77bd2f94bead864bf492e6a9	mods/ImmersiveIndustry-1.20.1-0.2.4.jar	https://edge.forgecdn.net/files/7530/803/ImmersiveIndustry-1.20.1-0.2.4.jar	curseforge:542053	
 f1e375ce040ead55f9ac35cf7350d6f1082148db	mods/immersive_machinery-0.2.1+1.20.1-forge.jar	https://edge.forgecdn.net/files/8846/276/immersive_machinery-0.2.1%2B1.20.1-forge.jar	curseforge:1068736	
-831318630a0d56e8b831ff92039c42974df94500	mods/Industrial Platform-1.20.1-2.0.0.jar	https://edge.forgecdn.net/files/8973/270/Industrial%20Platform-1.20.1-2.0.0.jar	curseforge:1350900	
+6fbd5732f2bfaff3497b6e82ae3afd9c993d06da	mods/Industrial Platform-1.20.1-2.0.1.jar	https://edge.forgecdn.net/files/8979/564/Industrial%20Platform-1.20.1-2.0.1.jar	curseforge:1350900	
 55a7f032c59489eca96069a7841601de2ff97590	mods/item-filters-forge-2001.1.0-build.59.jar	https://edge.forgecdn.net/files/4838/266/item-filters-forge-2001.1.0-build.59.jar	curseforge:309674	
 c4339eb3ef0c4728cb511efe60726653a35c7a0d	mods/JadeAddons-1.20.1-Forge-5.5.1.jar	https://edge.forgecdn.net/files/8203/724/JadeAddons-1.20.1-Forge-5.5.1.jar	curseforge:583345	
 d08e64e66521d69e083c8525f1fc507f1c202384	mods/Jade-1.20.1-Forge-11.13.3.jar	https://edge.forgecdn.net/files/8479/276/Jade-1.20.1-Forge-11.13.3.jar	curseforge:324717	
@@ -117,7 +117,7 @@ ad07ae00e6a1d9270fda145fb72c3fb87fc80473	mods/kaleidoscope_nether-1.1.8-forge+mc
 2e8f6370fb4acae9796705b6e84716c4a398b9c5	mods/kaleidoscopetavern-1.2.0-forge+mc1.20.1.jar	https://edge.forgecdn.net/files/8350/841/kaleidoscopetavern-1.2.0-forge%2Bmc1.20.1.jar	curseforge:1475175	
 2019d821bed9071daabed43979433a5473ceee49	mods/konkrete_forge_1.8.0_MC_1.20-1.20.1.jar	https://edge.forgecdn.net/files/5028/413/konkrete_forge_1.8.0_MC_1.20-1.20.1.jar	curseforge:410295	
 962fdb760409d6d71cbf079235f1ca94e3863a22	mods/kotlinforforge-4.12.0-all.jar	https://edge.forgecdn.net/files/7291/67/kotlinforforge-4.12.0-all.jar	curseforge:351264	
-c4e4282d80322d5d41f1f1cdb4811ded6ab97b11	mods/Ksyxis-1.4.4.jar	https://edge.forgecdn.net/files/8891/330/Ksyxis-1.4.4.jar	curseforge:537533	
+026b789a30de912a40911443c37c2fc92579629e	mods/Ksyxis-1.4.5.jar	https://edge.forgecdn.net/files/8971/236/Ksyxis-1.4.5.jar	curseforge:537533	
 c2720e589a292d5d168ef71a57f5dc3436db96b1	mods/kubejsadditions-forge-4.3.4.jar	https://edge.forgecdn.net/files/6302/185/kubejsadditions-forge-4.3.4.jar	curseforge:594387	
 cbeb6643d1cea979a7e01c87cfb08b9210a1c393	mods/kubejs-create-forge-2001.3.0-build.8.jar	https://edge.forgecdn.net/files/6265/498/kubejs-create-forge-2001.3.0-build.8.jar	curseforge:429371	
 d16736c07c210f41d4987a95c26f439bb5121d14	mods/kubejs-mekanism-forge-2001.1.5.1-build.2.jar	https://edge.forgecdn.net/files/5532/573/kubejs-mekanism-forge-2001.1.5.1-build.2.jar	curseforge:1062867	
@@ -162,7 +162,7 @@ cc24a959278990277483fe200286e3307d7f6d7e	mods/OneEnoughItem-1.0.8.jar	https://ed
 7616deeb511132de1c071a47bd6811b8e7a8d7e0	mods/Paintings-forge-1.20.1-11.0.0.2.jar	https://edge.forgecdn.net/files/5196/35/Paintings-forge-1.20.1-11.0.0.2.jar	curseforge:252042	
 d4614507d6e4c7cb464bba5eca891978272062ef	mods/Patchouli-1.20.1-85-FORGE.jar	https://edge.forgecdn.net/files/7731/17/Patchouli-1.20.1-85-FORGE.jar	curseforge:306770	
 a3a7008e07a27b3c831af7e4c82fbbc10a4da328	mods/Paxi-1.20-Forge-4.0.jar	https://edge.forgecdn.net/files/4749/994/Paxi-1.20-Forge-4.0.jar	curseforge:515708	
-1cc360e390a716e44fc70eaefde1e77a2c508f17	mods/pipez_optimizer-1.0.6-1.20.1.jar	https://edge.forgecdn.net/files/8921/578/pipez_optimizer-1.0.6-1.20.1.jar	curseforge:1643017	
+6a05385ef3a1ed84cca24dd502ff74755ee0d65e	mods/pipez_optimizer-1.0.7-1.20.1.jar	https://edge.forgecdn.net/files/8954/628/pipez_optimizer-1.0.7-1.20.1.jar	curseforge:1643017	
 1c32e2fff406f1e8ee6b0689eca257f6bc28e4c7	mods/pipez-forge-1.20.1-1.2.26.jar	https://edge.forgecdn.net/files/6945/379/pipez-forge-1.20.1-1.2.26.jar	curseforge:443900	
 e85f53de2e582a79ce25ff1df1e7b5b5fc08440f	mods/Placebo-1.20.1-8.6.3.jar	https://edge.forgecdn.net/files/6274/231/Placebo-1.20.1-8.6.3.jar	curseforge:283644	
 16808f94a41d45d8e986b4e4ea6b02ba57fa058a	mods/player-animation-lib-forge-1.0.2-rc1+1.20.jar	https://edge.forgecdn.net/files/4587/214/player-animation-lib-forge-1.0.2-rc1%2B1.20.jar	curseforge:658587	
@@ -206,7 +206,7 @@ db1df2e61e410ebe099c331a71372a48e6bfd8de	mods/TconPlanner-1.20.1-forge-1.8.0.jar
 013680b29aac6438a970fe713342f2f61658c4e8	mods/Torcherino-forge-1.20.1-20.0.0.jar	https://edge.forgecdn.net/files/4722/725/Torcherino-forge-1.20.1-20.0.0.jar	curseforge:236794	
 ac5a20b5a2fd9ed7d6e9a0c033f53307947e5f3f	mods/TreeChop-1.20.1-forge-0.19.0-fixed.jar	https://edge.forgecdn.net/files/5565/422/TreeChop-1.20.1-forge-0.19.0-fixed.jar	curseforge:421377	
 397dc912e94bb651bc8dcc193c0f77ed38bead17	mods/treetap-1.20.1-0.5.0.jar	https://edge.forgecdn.net/files/5922/848/treetap-1.20.1-0.5.0.jar	curseforge:927874	
-d24732304e2ce77399ee301daa3edbc5a09ed872	mods/TES-forge-1.20.1-1.6.1.jar	https://edge.forgecdn.net/files/7126/708/TES-forge-1.20.1-1.6.1.jar	curseforge:830420	
+ef9b0e1bb167c939f3eb8f3dfc820c321acb448a	mods/tslatentitystatus-forge-1.20.1-1.6.3.jar	https://edge.forgecdn.net/files/8979/252/tslatentitystatus-forge-1.20.1-1.6.3.jar	curseforge:830420	
 cc24a258a264969d617bea604386dd39011d3daa	mods/UntranslatedItems-forge-1.20.1-1.21.jar	https://edge.forgecdn.net/files/8678/2/UntranslatedItems-forge-1.20.1-1.21.jar	curseforge:401770	
 7ffdf848dc8578db309fd54c08f05ddc1ddbd45a	mods/uti_afac-1.1.6+1.20.1-forge.jar	https://edge.forgecdn.net/files/8628/628/uti_afac-1.1.6%2B1.20.1-forge.jar	curseforge:1071634	
 5519e010b9992aa723d34ece6a14a3892d52a3dc	mods/vartapack-forge-mc1.20.1-1.1.3-mc1.20.1.jar	https://edge.forgecdn.net/files/8221/174/vartapack-forge-mc1.20.1-1.1.3-mc1.20.1.jar	curseforge:1552180	
