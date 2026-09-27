@@ -305,6 +305,8 @@ ClientEvents.lang("zh_cn", (event) => {
 	})
 
 	addItemLang("glacian_chunk", "霜原木碎块")
+	addItemLang("culture_medium", "培养基")
+	addItemLang("glacian_sprout", "霜原芽")
 
 	addItemLang("power_supply_repair_kit", "电源修复包")
 	addItemLang("transformer_repair_kit", "变压器修复包")

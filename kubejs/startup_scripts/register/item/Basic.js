@@ -333,6 +333,12 @@ StartupEvents.registry("item", (event) => {
 	// 霜原木碎块
 	addMaterial("glacian_chunk")
 
+	// 培养基
+	addMaterial("culture_medium")
+
+	// 霜原芽
+	addMaterial("glacian_sprout")
+
 	// 重组幻晶
 	addMaterial("dreamcore_recombine")
 

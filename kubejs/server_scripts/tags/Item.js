@@ -29,10 +29,16 @@ ServerEvents.tags("item", (event) => {
 		.add("cmi:incomplete_nuclear_mechanism")
 
 	// 航天构件
-	for (let i = 1; i <= 4; i++) {
-		event.get(`cmi:tier_${i}_aviation_mechanism`)
-			.add(`cmi:tier_${i}_aviation_mechanism`)
-	}
+	// for (let i = 1; i <= 4; i++) {
+	//	event.get(`cmi:tier_${i}_aviation_mechanism`)
+	//		.add(`cmi:tier_${i}_aviation_mechanism`)
+	// }
+
+	// 霜原植物
+	event.get("cmi:glacian_plant")
+		.add("ad_astra:glacian_leaves")
+		.add("cmi:glacian_sapling")
+		.add("cmi:glacian_sprout")
 
 	// DYE_COLOR_GROUP 遍历
 	CmiGlobal.DYE_COLOR_GROUP.forEach((colors) => {

@@ -107,4 +107,5 @@ ClientEvents.lang("zh_cn", (event) => {
 	addFluidLang("ionized_entro_solution", "恩特罗电离液")
 	addFluidLang("liquid_crystal_etrium", "液晶态埃忒恩")
 	addFluidLang("dreamcore_solidified", "固化幻晶")
+	addFluidLang("copy_enzyme_solution", "复制酶溶液")
 })
