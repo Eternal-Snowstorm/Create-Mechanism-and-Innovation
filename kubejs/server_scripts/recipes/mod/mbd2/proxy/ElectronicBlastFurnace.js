@@ -1,20 +1,20 @@
 // priority: -100
-//
-// 必须最后加载.
-//
-// ServerEvents.recipes 的各个回调是按"脚本加载顺序"依次执行的, 而 KubeJS 是按
-// 文件系统遍历顺序读脚本的, recipes/RemoveAll.js 这类删除脚本反而排在
-// recipes/mod/mbd2/proxy/* 之后才跑. 之前代理脚本执行时删除 / 覆盖都还没发生,
-// 于是把已经失效的配方也一起代理了.
-// priority 越小加载越晚, -100 保证所有删除 / 覆盖 / 替换脚本都执行完毕.
-//
-// 解析 / 拼槽位的函数(getInt, sourceJsonOf, itemIngredientOf, inputFluidOf,
-// outputFluidOf, asItemSlots, addIngredient(s), addResult(s), addFluidResult(s))
-// 全部由 utils/MbdProxyHelper.js 提供. 不要在本文件里再抄一份: KubeJS 的所有
-// server 脚本共享同一个顶层作用域, 重复定义会静默互相覆盖, 实际跑的是哪一份
-// 取决于脚本加载顺序(原因见该文件头注释).
+
+/**
+ * 必须最后加载.
+ * 
+ * ServerEvents.recipes 的各个回调是按"脚本加载顺序"依次执行的, 而 KubeJS 是按
+ * 文件系统遍历顺序读脚本的, recipes/RemoveAll.js 这类删除脚本反而排在
+ * recipes/mod/mbd2/proxy/* 之后才跑. 之前代理脚本执行时删除 / 覆盖都还没发生,
+ * 于是把已经失效的配方也一起代理了.
+ * priority 越小加载越晚, -100 保证所有删除 / 覆盖 / 替换脚本都执行完毕.
+ * 解析 / 拼槽位的函数(getInt, sourceJsonOf, itemIngredientOf, inputFluidOf,
+ * outputFluidOf, asItemSlots, addIngredient(s), addResult(s), addFluidResult(s))
+ * 全部由 utils/MbdProxyHelper.js 提供. 不要在本文件里再抄一份: KubeJS 的所有
+ * server 脚本共享同一个顶层作用域, 重复定义会静默互相覆盖, 实际跑的是哪一份
+ * 取决于脚本加载顺序(原因见该文件头注释).
+ */
 ServerEvents.recipes((event) => {
-	// 逐个兜错: 一个代理抛异常不该把后面几个一起带走
 	safeProxy("ebf/arc_furnace", event, proxyArcFurnace)
 	safeProxy("ebf/melting", event, proxyMelting)
 	safeProxy("ebf/alloy", event, proxyAlloy)

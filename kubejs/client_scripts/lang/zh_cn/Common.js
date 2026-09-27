@@ -110,7 +110,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addAdvancementLang("north_star", "迷航", "轨迹从此断裂, 却像在等待另一侧的回声")
 	addAdvancementLang("south_cross", "星港", "即便断裂, 它依旧把角度留给那道未曾抵达的回声")
 	addAdvancementLang("academic_fraud", "学术造假", "在未获得高炉的情况下获得铁锭\n§c逃的课迟早也得补回来")
-	addAdvancementLang("fraud", "十分甚至是九分的不对劲", "我怎么被骗了")
+	addAdvancementLang("fraud", "十分甚至是九分的不对劲", "快点说你是自愿的!")
 
 	addPaintingLang("bug_is_right", "有Bug是对的", "古镇天")
 	addPaintingLang("it_must_be_optifine", "一定是OptiFine干的", "XeKr")
