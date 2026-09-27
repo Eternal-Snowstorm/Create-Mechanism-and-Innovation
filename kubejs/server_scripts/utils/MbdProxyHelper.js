@@ -416,28 +416,52 @@ function mergeIngredientSlots(entries) {
 }
 
 /**
- * 
+ * 应用一个槽位到 builder
+ *
+ * 传了 slotName 时, 把这个槽位包进 builder.slotName(slotName, builder => ...) 里
+ * 不传时保持原来的直接写法.
+ * 注：MBD2 的 slotName 回调只影响配方匹配,
+ * 不会改变 uiName
+ *
  * @param {Internal.MBDRecipeSchema$MBDRecipeJS_} builder 
  * @param {*} slot 
+ * @param {string} slotName 
  */
-function applyIngredientSlot(builder, slot) {
+function applyIngredientSlot(builder, slot, slotName) {
+	if (slotName) {
+		builder.slotName(slotName, (b) => {
+			applyIngredientSlotTo(b, slot)
+		})
+		return
+	}
+
+	applyIngredientSlotTo(builder, slot)
+}
+
+/**
+ * applyIngredientSlot 的真正实现, 单独拆出来给两种情况复用
+ *
+ * @param {Internal.MBDRecipeSchema$MBDRecipeJS_} b 
+ * @param {*} slot 
+ */
+function applyIngredientSlotTo(b, slot) {
 	if (slot.kind == "item") {
-		builder.inputItems(stackString(slot.id, slot.count))
+		b.inputItems(stackString(slot.id, slot.count))
 		return
 	}
 
 	if (slot.kind == "candidates") {
-		builder.inputItems(asItemSlots(slot.ids))
+		b.inputItems(asItemSlots(slot.ids))
 		return
 	}
 
 	if (slot.kind == "fluid") {
-		builder.inputFluids(Fluid.of(slot.id, slot.amount))
+		b.inputFluids(Fluid.of(slot.id, slot.amount))
 		return
 	}
 
 	if (slot.kind == "fluidTag") {
-		builder.inputFluids(MBDFluidIngredient.ofTagId(slot.id, slot.amount))
+		b.inputFluids(MBDFluidIngredient.ofTagId(slot.id, slot.amount))
 	}
 }
 
@@ -445,25 +469,27 @@ function applyIngredientSlot(builder, slot) {
  * 
  * @param {Internal.MBDRecipeSchema$MBDRecipeJS_} builder 
  * @param {Internal.JsonElement_} entry 
+ * @param {string} slotName 
  * @returns 
  */
-function addIngredient(builder, entry) {
-	addIngredients(builder, [entry])
+function addIngredient(builder, entry, slotName) {
+	addIngredients(builder, [entry], slotName)
 }
 
 /**
  * 
  * @param {Internal.MBDRecipeSchema$MBDRecipeJS_} builder 
  * @param {Internal.JsonArray_} ingredients 
+ * @param {string} slotName 
  */
-function addIngredients(builder, ingredients) {
+function addIngredients(builder, ingredients, slotName) {
 	// 遍历范围包含 addedRecipes, 兜一下空值, 避免一条怪配方把整轮代理全部中断
 	if (ingredients == null) {
 		return
 	}
 
 	for (let slot of mergeIngredientSlots(ingredients)) {
-		applyIngredientSlot(builder, slot)
+		applyIngredientSlot(builder, slot, slotName)
 	}
 }
 

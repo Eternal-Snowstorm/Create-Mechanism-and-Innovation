@@ -43,10 +43,10 @@ function proxyArcFurnace(event) {
 
 		let builder = cmi.electronic_blast_furnace()
 
-		addIngredient(builder, json.get("input"))
+		addIngredient(builder, json.get("input"), "input_arc")
 
 		if (json.has("additives")) {
-			addIngredients(builder, jsonArrayOf(json, "additives"))
+			addIngredients(builder, jsonArrayOf(json, "additives"), "input_arc")
 		}
 
 		addResults(builder, results)
@@ -80,7 +80,7 @@ function proxyMelting(event) {
 
 		let builder = cmi.electronic_blast_furnace()
 
-		addIngredient(builder, ingredientJson, id)
+		addIngredient(builder, ingredientJson, "input_melting")
 
 		addFluidResult(builder, json.get("result"))
 
@@ -129,6 +129,7 @@ function proxyAlloying(event) {
 }
 
 /**
+ *
  * @param {Internal.RecipesEventJS_} event
  * @param {Internal.RecipeJS_} recipe
  */
@@ -154,7 +155,7 @@ function proxyAlloyingRecipe(event, recipe) {
 
 	builder.outputItems(stackString(outputId, count))
 
-	addIngredients(builder, jsonArrayOf(json, "ingredients"))
+	addIngredients(builder, jsonArrayOf(json, "ingredients"), "input_alloying")
 
 	builder.duration(getInt(json, "cookingtime", 100))
 		.perTick((recipe) => {
@@ -186,11 +187,11 @@ function proxyCarKiln(event) {
 
 		// 单物品输入
 		if (json.has("input")) {
-			addIngredient(builder, json.get("input"))
+			addIngredient(builder, json.get("input"), "input_car_kiln")
 		}
 
 		// 多物品输入
-		addIngredients(builder, jsonArrayOf(json, "inputs"))
+		addIngredients(builder, jsonArrayOf(json, "inputs"), "input_car_kiln")
 
 		// 流体输入
 		if (json.has("input_fluid")) {
@@ -220,7 +221,7 @@ function proxyRotaryKiln(event) {
 
 		let builder = cmi.electronic_blast_furnace()
 
-		addIngredient(builder, json.get("input"))
+		addIngredient(builder, json.get("input"), "input_rotary_kiln")
 
 		addResult(builder, json.get("result"))
 
