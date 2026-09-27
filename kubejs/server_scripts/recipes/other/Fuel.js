@@ -18,15 +18,17 @@ ServerEvents.recipes((event) => {
 
 	/**
 	 * 添加匠魂流体燃料
+	 *
 	 * 速率由温度直接除100进行计算
 	 * 例如传入1500度速率则返回15(1.5倍)
-	 * 
-	 * 如果想要替换默认燃料还不想破坏整体整齐性的话建议去Remove.js去删除配方
-	 * 例如烈焰血的就是"tconstruct:smeltery/melting/fuel/blaze"
-	 * 当然你要是硬要用.id()去替换我也阻止不了你
-	 * 
+	 *
+	 * 如果想要替换默认燃料还不想破坏整体整齐性的话建议去`RemoveAll.js`去删除配方
+	 * 例如烈焰血的就是 `tconstruct:smeltery/melting/fuel/blaze`
+	 *
+	 * 当然要是硬要用 `.id()` 去替换也阻止不了你
+	 *
 	 * @param {Internal.FluidStackJS} fluid 流体id
-	 * @param {Number} temperature 温度
+	 * @param {number} temperature 温度
 	 */
 	function addFuel(fluid, temperature) {
 		tconstruct.melting_fuel(fluid.withAmount(50))
