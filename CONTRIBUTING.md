@@ -241,7 +241,7 @@ ServerEvents.recipes((event) => {})
 
 #### 10. 箭头函数代码块
 
-所有箭头函数必须使用大括号 `{}` 包裹函数体, 禁止直接返回表达式.
+所有箭头函数(lambda)必须使用大括号 `{}` 包裹函数体, 禁止直接返回表达式.
 
 错误:
 
@@ -253,6 +253,10 @@ xxx.forEach((value) => value)
 
 ```js
 xxx.forEach((value) => {
+	value
+})
+
+yyy.map((value) => {
 	return value
 })
 ```
