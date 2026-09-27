@@ -16,9 +16,9 @@ ServerEvents.recipes((event) => {
 	// 电解幻晶
 	cmi.electrolyzer()
 		.inputItems(Dreamcores.ENRICHED)
-		.inputFluids(MBDFluidIngredient.ofTagId("forge:redstone_acid", 500))
 		.outputItems(Dreamcores.ELECTROLIZED)
 		.duration(20 * 5)
+		// .inputFluids(MBDFluidIngredient.ofTagId("forge:redstone_acid", 500))
 
 	// 幻晶源质
 	thermal_extra.nitratic_igniter([
@@ -31,9 +31,14 @@ ServerEvents.recipes((event) => {
 	])
 
 	// 充能幻晶
-	createaddition.charging(Dreamcores.CHARGED, [
-		Dreamcores.PYROLYSIS
-	]).energy(5000)
+	// createaddition.charging(Dreamcores.CHARGED, [
+	//	Dreamcores.PYROLYSIS
+	// ]).energy(5000)
+	event.custom({
+		type: "ae2:charger",
+		result: Dreamcores.CHARGED.toJson(),
+		ingredient: Dreamcores.PYROLYSIS.toJson()
+	})
 
 	// 熔融幻晶
 	vintageimprovements.pressurizing(Dreamcores.MOLTEN, [

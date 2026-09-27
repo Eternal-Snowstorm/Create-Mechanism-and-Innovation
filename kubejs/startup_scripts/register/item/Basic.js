@@ -330,7 +330,7 @@ StartupEvents.registry("item", (event) => {
 		.tag(Cmi.loadResource("steam_upgrades"))
 
 	// C10
-	// 融冰木碎块
+	// 霜原木碎块
 	addMaterial("glacian_chunk")
 
 	// 重组幻晶

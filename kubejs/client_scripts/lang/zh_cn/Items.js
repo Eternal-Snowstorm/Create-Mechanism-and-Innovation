@@ -304,6 +304,8 @@ ClientEvents.lang("zh_cn", (event) => {
 		addItemLang(`dreamcore_${id}`, `${name}幻晶`)
 	})
 
+	addItemLang("glacian_chunk", "霜原木碎块")
+
 	addItemLang("power_supply_repair_kit", "电源修复包")
 	addItemLang("transformer_repair_kit", "变压器修复包")
 	addItemLang("tracker_repair_kit", "追踪阵列修复包")
