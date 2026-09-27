@@ -35,7 +35,7 @@ ServerEvents.recipes((event) => {
 	mekanism.sawing("cmi:glacian_sapling",
 		"2x createdieselgenerators:wood_chip",
 		"cmi:glacian_sprout"
-	).setValue("secondaryChance", 0.5)
+	).setValue("secondaryChance", "0.5")
 
 	// 复制酶溶液
 	cmi.chemical_reactor()

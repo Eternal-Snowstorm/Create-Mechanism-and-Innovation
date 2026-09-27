@@ -102,4 +102,14 @@ ServerEvents.recipes((event) => {
 	nahuatlWood.forEach((wood) => {
 		minecraft.stonecutting(wood, "tconstruct:nahuatl")
 	})
+
+	let barTypes = [
+		"brass",
+		"copper",
+		"industrial_iron",
+		"zinc"
+	]
+	barTypes.forEach((type) => {
+		minecraft.stonecutting(`3x createdeco:${type}_bars`, `#forge:ingots/${type}`)
+	})
 })

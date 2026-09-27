@@ -136,18 +136,6 @@ ServerEvents.recipes((event) => {
 		.cast_consumed(true)
 		.id("immersiveengineering:crafting/ersatz_leather")
 
-	let barTypes = [
-		"brass",
-		"copper",
-		"industrial_iron",
-		"zinc"
-	]
-	barTypes.forEach((type) => {
-		tconstruct.casting_table(`createdeco:${type}_bars`)
-			.fluid(Fluid.tag("tag", `tconstruct:molten_${type}`, 30))
-			.cooling_time(35)
-	})
-
 	// 石板
 	tconstruct.casting_table("cmi:stone_plate")
 		.cast("#tconstruct:casts/single_use/plate")
