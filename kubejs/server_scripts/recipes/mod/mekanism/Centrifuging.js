@@ -12,5 +12,4 @@ ServerEvents.recipes((event) => {
 		MekType.Gas.of("cmi:refined_nuke_waste", 1),
 		MekType.Gas.of("mekanismgenerators:tritium", 1)
 	)
-
 })

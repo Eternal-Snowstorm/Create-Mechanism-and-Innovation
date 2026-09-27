@@ -50,4 +50,21 @@ ServerEvents.recipes((event) => {
 		.gasInput(MekType.Gas.of("cmi:mercury", 200))
 		.gasOutput(MekType.Gas.of("cmi:mercury", 200))
 
+	mekanism.rotary()
+		.fluidInput(Fluid.of("neoecoae:cryotheum_solution", 200))
+		.fluidOutput(Fluid.of("neoecoae:cryotheum_solution", 200))
+		.gasInput(MekType.Gas.of("cmi:hydrogen_oxygen_fuel", 200))
+		.gasOutput(MekType.Gas.of("cmi:hydrogen_oxygen_fuel", 200))
+
+	mekanism.rotary()
+		.fluidInput(Fluid.of("cmi:nitrogen_oxide", 200))
+		.fluidOutput(Fluid.of("cmi:nitrogen_oxide", 200))
+		.gasInput(MekType.Gas.of("cmi:nitrogen_oxide", 200))
+		.gasOutput(MekType.Gas.of("cmi:nitrogen_oxide", 200))
+
+	mekanism.rotary()
+		.fluidInput(Fluid.of("cmi:light_olefin", 200))
+		.fluidOutput(Fluid.of("cmi:light_olefin", 200))
+		.gasInput(MekType.Gas.of("cmi:light_olefin", 200))
+		.gasOutput(MekType.Gas.of("cmi:light_olefin", 200))
 })

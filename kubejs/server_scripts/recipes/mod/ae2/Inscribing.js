@@ -206,14 +206,14 @@ ServerEvents.recipes((event) => {
 
 	// 基础控制电路
 	new InscriberRecipe("mekanism:basic_control_circuit")
-		.top("#forge:plates/silicon")
+		.top("#forge:plates/silicon_carbide")
 		.middle("neoecoae:crystal_matrix")
 		.bottom("cmi:basic_electronic_components")
 		.press()
 
 	// 高级控制电路
 	new InscriberRecipe("mekanism:advanced_control_circuit")
-		.top("#forge:plates/silicon")
+		.top("#forge:plates/silicon_carbide")
 		.middle("neoecoae:crystal_matrix")
 		.bottom("cmi:advanced_electronic_components")
 		.press()

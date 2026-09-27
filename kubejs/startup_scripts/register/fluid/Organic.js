@@ -97,4 +97,18 @@ StartupEvents.registry("fluid", (event) => {
 	// 光合反应液
 	addColorFluid("photosyn_fluid", 0x00FA9A)
 
+	// 甲烷燃油
+	addColorFluid("methane_fuel", 0xDBDBDB)
+
+	// 轻胺烃
+	addColorFluid("light_amine", 0xFFA63F)
+
+	// 氮氧化物
+	addColorFluid("nitrogen_oxide", 0x82502F)
+
+	// 联氨
+	addColorFluid("hydrazines", 0x8C7050)
+
+	// 联氨燃油
+	addColorFluid("hydrazines_fuel", 0x845520)
 })

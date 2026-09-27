@@ -18,4 +18,12 @@ ServerEvents.recipes((event) => {
 	).energyRequired(1000).duration(60)
 		.id("mekanism:processing/uranium/reprocessing/from_plutonium")
 
+	// 天外寒冰
+	mekanism.reaction(
+		"neoecoae:cryotheum",
+		MekType.Gas.of("cmi:methane", 50),
+		Fluid.of("mekanism:oxygen", 50),
+		"neoecoae:cryotheum_crystal"
+	).energyRequired(5000).duration(80)
+		.id("neoecoae:cryotheum_crystal")
 })

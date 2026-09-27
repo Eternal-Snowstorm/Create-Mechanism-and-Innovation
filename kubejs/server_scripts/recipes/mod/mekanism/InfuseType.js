@@ -30,5 +30,4 @@ ServerEvents.recipes((event) => {
 		"cmi:raw_titanium_mixture",
 		"cmi:titanium_oxide"
 	)
-
 })

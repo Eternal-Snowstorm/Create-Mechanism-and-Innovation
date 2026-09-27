@@ -49,6 +49,11 @@ ServerEvents.recipes((event) => {
 		"ae2:silicon",
 		"mekanism:carbon"
 	)
+	mekanism.metallurgic_infusing(
+		"cmi:silicon_carbide",
+		"ae2:silicon",
+		"mekanism:diamond"
+	)
 
 	// 压电陶瓷
 	mekanism.metallurgic_infusing(

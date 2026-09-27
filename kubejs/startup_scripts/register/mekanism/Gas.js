@@ -18,7 +18,7 @@ StartupEvents.registry("mekanism:gas", (event) => {
 
 	// 氡混合物
 	addMekanismGas("radon_mixture", 0x008F00)
-	
+
 	// 精炼核废料
 	addMekanismGas("refined_nuke_waste", 0x7CFC00)
 
@@ -38,7 +38,7 @@ StartupEvents.registry("mekanism:gas", (event) => {
 	addMekanismGas("silicon_gas_modulator", 0x002C55)
 
 	// 裂变铀复合物
-	addMekanismGas("fissile_uranium_compound", 0x008000) 
+	addMekanismGas("fissile_uranium_compound", 0x008000)
 
 	// 高能裂变燃料
 	addMekanismGas("high_energy_fission_fuel", 0x00294E)
@@ -61,4 +61,18 @@ StartupEvents.registry("mekanism:gas", (event) => {
 	// 用尽的核废料
 	addMekanismGas("spent_nuke_waste", 0x262015)
 
+	// 氢氧燃料
+	addMekanismGas("hydrogen_oxygen_fuel", 0x9CDCF7)
+
+	// 天然气
+	addMekanismGas("natural_gas", 0xA7DDE7)
+
+	// 轻烯烃
+	addMekanismGas("light_olefin", 0x6FEAFF)
+
+	// 甲烷
+	addMekanismGas("methane", 0xDBDBDB)
+
+	// 氮氧化物
+	addMekanismGas("nitrogen_oxide", 0x82502F)
 })

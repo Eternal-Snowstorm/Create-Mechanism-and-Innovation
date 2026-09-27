@@ -101,6 +101,11 @@ ClientEvents.lang("zh_cn", (event) => {
 	addMekanismLang("plutonium_mixture", "钚混合物")
 	addMekanismLang("nuke_waste", "核废料")
 	addMekanismLang("spent_nuke_waste", "用尽的核废料")
+	addMekanismLang("hydrogen_oxygen_fuel", "氢氧燃料")
+	addMekanismLang("natural_gas", "天然气")
+	addMekanismLang("light_olefin", "轻烯烃")
+	addMekanismLang("methane", "甲烷")
+	addMekanismLang("nitrogen_oxide", "氮氧化物")
 
 	addPlanetLang("dionysus", "迪奥尼索斯")
 	addPlanetLang("hephaestus", "赫菲斯托斯")

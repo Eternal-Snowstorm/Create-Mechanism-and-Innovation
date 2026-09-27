@@ -81,15 +81,11 @@ ServerEvents.recipes((event) => {
 		.outputFluids(Fluid.of("mekanism:sulfuric_acid", 100))
 		.duration(20)
 
-	/*
-	cmi.test()
-		.outputItems("minecraft:diamond")
-		.inputItems("#forge:ingots/iron")
-		.duration(20 * 10)
-		.perTick((recipe) => {
-			recipe.inputFE(1000)
-		})
-	*/
+	// 天然气分离
+	cmi.electrolyzer()
+		.inputGases("200x cmi:natural_gas")
+		.outputGases("100x cmi:methane")
+		.outputGases("100x cmi:light_olefin")
 
 	// 盐酸
 	cmi.electrolyzer()

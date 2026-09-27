@@ -16,4 +16,8 @@ ServerEvents.recipes((event) => {
 		"cmi:single_crystal_silicon"
 	)
 
+	// 凛冰粉
+	mekanism.enriching("neoecoae:cryotheum",
+		"minecraft:blue_ice"
+	).id("neoecoae:cryotheum")
 })
