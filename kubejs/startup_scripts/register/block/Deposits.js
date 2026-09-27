@@ -78,16 +78,10 @@ StartupEvents.registry("block", (event) => {
 		return builder
 	}
 
-	new OreNodeBlock("vanadium")
-		.build()
-	new OreNodeBlock("platinum")
-		.build()
-	new OreNodeBlock("cheese")
-		.build()
-	new OreNodeBlock("coal")
-		.build()
-	new OreNodeBlock("oil_shale")
-		.build()
-	new OreNodeBlock("aluminum")
-		.build()
+	new OreNodeBlock("vanadium").build()
+	new OreNodeBlock("platinum").build()
+	new OreNodeBlock("cheese").build()
+	new OreNodeBlock("coal").build()
+	new OreNodeBlock("oil_shale").build()
+	new OreNodeBlock("aluminum").build()
 })

@@ -24,8 +24,7 @@ StartupEvents.registry("block", (event) => {
 	 * @returns 
 	 */
 	function addDeveloperDoll(name, type) {
-		let builder =
-			event.create(`${Cmi.MODID}:${name}`, "cardinal")
+		let builder = event.create(`${Cmi.MODID}:${name}`, "cardinal")
 
 		builder.soundType(SoundType.WOOL)
 		builder.hardness(0)
