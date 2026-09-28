@@ -30,9 +30,9 @@ ServerEvents.recipes((event) => {
 	// 氮氧化物
 	mekanism.reaction(
 		"cmi:plant_ash",
-		MekType.Gas.of("mekanism:hydrogen", 10),
-		Fluid.of("cmi:nitric_acid", 20),
-		"thermal:niter",
-		MekType.Gas.of("cmi:nitrogen_oxide", 10)
-	)
+		MekType.Gas.of("mekanism:hydrogen", 100),
+		Fluid.of("cmi:nitric_acid", 400),
+		"thermal:niter_dust",
+		MekType.Gas.of("cmi:nitrogen_oxide", 100)
+	).energyRequired(5000).duration(80)
 })

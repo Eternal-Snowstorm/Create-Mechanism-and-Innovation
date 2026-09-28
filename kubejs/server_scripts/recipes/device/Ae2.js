@@ -66,6 +66,18 @@ ServerEvents.recipes((event) => {
 		Mechanisms.SMART.COM
 	]).id("ae2:tools/network_tool")
 
+	// 样板编辑器
+	kubejs.shapeless("expatternprovider:pattern_modifier", [
+		"ae2:blank_pattern",
+		Mechanisms.SMART.COM
+	]).id("expatternprovider:pattern_modifier")
+
+	// 无线连接工具
+	kubejs.shapeless("expatternprovider:wireless_tool", [
+		"ae2:wireless_receiver",
+		Mechanisms.SMART.COM
+	]).id("expatternprovider:wireless_tool")
+
 	// 机壳
 	thermal_extra.component_assembly("2x cmi:smart_casing", [
 		"#forge:plates/iron",
@@ -357,9 +369,31 @@ ServerEvents.recipes((event) => {
 
 	thermal_extra.component_assembly("ae2:wireless_booster", [
 		"#forge:plates/silver",
-		Mechanisms.ENDER.COM,
-		"#forge:dusts/fluix"
+		"create:transmitter",
+		"#forge:dusts/fluix",
+		"#forge:plates/etrium"
 	]).id("ae2:network/wireless_booster")
+
+	// 缓存元件
+	thermal_extra.component_assembly("expatternprovider:ingredient_buffer", [
+		Casing.SMART,
+		"ae2:quartz_glass",
+		Mechanisms.WOODEN.COM
+	]).id("expatternprovider:ingredient_buffer")
+
+	// 无线连接器
+	thermal_extra.component_assembly("expatternprovider:wireless_connect", [
+		Casing.SMART,
+		"create:transmitter",
+		"#ae2:glass_cable"
+	]).id("expatternprovider:wireless_connector")
+
+	// 无线集线器
+	thermal_extra.component_assembly("expatternprovider:wireless_hub", [
+		"expatternprovider:wireless_connect",
+		"ae2:wireless_receiver",
+		Mechanisms.SMART.COM
+	]).id("expatternprovider:wireless_hub")
 
 	// ME IO端口
 	thermal_extra.component_assembly("ae2:io_port", [
@@ -559,6 +593,22 @@ ServerEvents.recipes((event) => {
 		"ae2:smart_dense_cable"
 	]).id("meplacementtool:me_cable_placement_tool")
 
+	// 无限范围增幅
+	thermal_extra.component_assembly("aeinfinitybooster:infinity_card", [
+		"ae2:wireless_booster",
+		Mechanisms.ENDER.COM,
+		"ae2:fluix_pearl",
+		"#forge:plates/silicon"
+	]).id("aeinfinitybooster:infinity_card")
+
+	// 维度卡
+	thermal_extra.component_assembly("aeinfinitybooster:dimension_card", [
+		"aeinfinitybooster:infinity_card",
+		"ae2:sky_dust",
+		"#forge:gems/energized_fluix_crystal",
+		"#forge:plates/silicon_carbide"
+	]).id("aeinfinitybooster:dimension_card")
+
 	// ME光束成型器
 	thermal_extra.component_assembly("me_beam_former:beam_former_part", [
 		"#forge:plates/aluminum",
@@ -606,4 +656,5 @@ ServerEvents.recipes((event) => {
 			Mechanisms.COMPUTE.COM
 		])
 		.id("me_beam_former:wireless_energy_tower")
+
 })

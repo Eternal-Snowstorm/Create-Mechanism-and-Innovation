@@ -479,7 +479,7 @@ ServerEvents.recipes((event) => {
 	// 航空
 	new SequencedAssemblyRecipe(Mechanisms.AERO)
 		.input(Mechanisms.AERO.BAS)
-		.deploying("cmi:nuke_cooler")
+		.deploying("ad_astra:oxygen_gear")
 		.deploying("#forge:wires/fluix")
 		.laserCutting(1000)
 		.filling(Fluid.of("cmi:structural_plastic", 200))

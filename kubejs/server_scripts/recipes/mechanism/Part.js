@@ -61,7 +61,7 @@ ServerEvents.recipes((event) => {
 		.inputFluid(Fluid.of("cmi:molten_etrium", 90))
 		.energy(1000)
 		.inputItems([
-			"extendedae_plus:oblivion_singularity",
+			"ae2:singularity",
 			"2x ae2:sky_dust",
 			"#forge:gems/dreamcore"
 		])
