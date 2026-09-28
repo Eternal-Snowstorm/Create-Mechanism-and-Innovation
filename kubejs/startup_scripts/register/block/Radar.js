@@ -33,6 +33,18 @@ StartupEvents.registry("block", (event) => {
 	addConcreteBlock("white", 0xFFFFFF)
 	addConcreteBlock("light_gray", 0xa0a3a5)
 	addConcreteBlock("black", 0x262626)
+	addConcreteBlock("red", 0xf90d0d)
+	addConcreteBlock("orange", 0xf48a12)
+	addConcreteBlock("yellow", 0xffc400)
+	addConcreteBlock("green", 0x14ba16)
+	addConcreteBlock("cyan", 0x0adfbb)
+	addConcreteBlock("blue", 0x3431fc)
+	addConcreteBlock("purple", 0xaf22f1)
+	addConcreteBlock("magenta", 0xff0d92)
+	addConcreteBlock("lime", 0x66ff00)
+	addConcreteBlock("light_blue", 0x81d5ff)
+	addConcreteBlock("pink", 0xffb6b6)
+	addConcreteBlock("brown", 0x61440c)
 
 	// 雷达
 	addBlock(`radar`)

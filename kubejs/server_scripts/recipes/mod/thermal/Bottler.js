@@ -56,4 +56,12 @@ ServerEvents.recipes((event) => {
 		"create_enchantment_industry:experience_cake_base",
 		Fluid.of("create_enchantment_industry:experience", 1000)
 	]).energy(400).id("thermal:compat/create_enchantment_industry/bottler_create_experience_cake")
+
+	// 钢筋混凝土
+	CmiGlobal.DYE_COLOR_GROUP.forEach((color) => {
+		thermal.bottler(`cmi:${color}_reinforced_concrete`, [
+			"immersiveengineering:steel_scaffolding_standard",
+			Fluid.of(`createdieselgenerators:${color}_cement`, 1000)
+		])
+	})
 })

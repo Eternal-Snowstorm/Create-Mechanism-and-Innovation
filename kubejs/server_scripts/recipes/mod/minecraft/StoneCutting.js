@@ -64,6 +64,8 @@ ServerEvents.recipes((event) => {
 		.id("immersiveengineering:crafting/steel_scaffolding_wooden_top_from_grate_top")
 	minecraft.stonecutting("immersiveengineering:steel_scaffolding_wooden_top", "immersiveengineering:steel_scaffolding_standard")
 
+	minecraft.stonecutting("2x cmi:iron_scaffold", "#forge:plates/iron")
+
 	minecraft.stonecutting("2x cmi:industrial_iron_slab", "create:industrial_iron_block")
 	minecraft.stonecutting("cmi:industrial_iron_stairs", "create:industrial_iron_block")
 
