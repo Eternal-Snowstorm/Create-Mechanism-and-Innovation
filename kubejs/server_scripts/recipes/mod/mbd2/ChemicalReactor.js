@@ -48,4 +48,20 @@ ServerEvents.recipes((event) => {
 		.perTick((recipe) => {
 			recipe.inputFE(25000 / 20)
 		})
+
+	// 液氧甲烷燃料
+	cmi.chemical_reactor()
+		.outputFluids(Fluid.of("cmi:methane_fuel", 100))
+		.inputFluids(Fluid.of("neoecoae:cryotheum_solution", 100))
+		.inputItems("8x neoecoae:cryotheum_crystal")
+		.inputFE(16000)
+		.duration(160)
+
+	// 联氨燃料
+	cmi.chemical_reactor()
+		.outputFluids(Fluid.of("cmi:hydrazines_fuel", 50))
+		.inputFluids(Fluid.of("cmi:nitrogen_oxide", 100))
+		.inputFluids(Fluid.of("cmi:hydrazines", 100))
+		.inputFE(20000)
+		.duration(160)
 })

@@ -61,4 +61,14 @@ ServerEvents.recipes((event) => {
 		"input0": Fluid.tag("tag", "cmi:light_olefin", 10).toJson(),
 		"result": Fluid.of("cmi:polymeric_carbon_solution", 1).toJson()
 	})
+
+	// 轻胺烃
+	event.custom({
+		"type": "immersiveengineering:refinery",
+		"catalyst": Ingredient.of("#forge:plates/vanadium").toJson(),
+		"energy": 1600,
+		"input0": Fluid.tag("tag", "cmi:light_olefin", 20).toJson(),
+		"input1": Fluid.tag("tag", "cmi:nitric_acid", 10).toJson(),
+		"result": Fluid.of("cmi:light_amine", 20).toJson()
+	})
 })

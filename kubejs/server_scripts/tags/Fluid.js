@@ -24,23 +24,34 @@ ServerEvents.tags("fluid", (event) => {
 		.removeAll()
 		.add([
 			"ad_astra:fuel",
-			"neoecoae:cryotheum_solution"
+			"neoecoae:cryotheum_solution",
+			"cmi:methane_fuel",
+			"cmi:hydrazines_fuel"
 		])
 
 	// T2
 	event.get("ad_astra:tier_2_rocket_fuel")
 		.removeAll()
 		.add([
-			"neoecoae:cryotheum_solution"
+			"neoecoae:cryotheum_solution",
+			"cmi:methane_fuel",
+			"cmi:hydrazines_fuel"
 		])
 
 	// T3
 	event.get("ad_astra:tier_3_rocket_fuel")
 		.removeAll()
+		.add([
+			"cmi:methane_fuel",
+			"cmi:hydrazines_fuel"
+		])
 
 	// T4
 	event.get("ad_astra:tier_4_rocket_fuel")
 		.removeAll()
+		.add([
+			"cmi:hydrazines_fuel"
+		])
 
 	// 机械动力无限流体
 	event.get("create:bottomless/allow")

@@ -68,4 +68,11 @@ ServerEvents.recipes((event) => {
 		"ae2:singularity",
 		"cmi:chaotic_void"
 	).id("extendedae_plus:transform/oblivion_singularity")
+
+	// 氢氧燃料
+	mekanism.chemical_infusing(
+		MekType.Gas.of("cmi:hydrogen_oxygen_fuel", 200),
+		MekType.Gas.of("mekanism:hydrogen", 100),
+		MekType.Gas.of("mekanism:oxygen", 100)
+	)
 })

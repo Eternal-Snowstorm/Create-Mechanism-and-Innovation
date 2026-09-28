@@ -30,6 +30,7 @@ StartupEvents.registry("fluid", (event) => {
 		builder.stillTexture(Cmi.loadResource("fluid/chemical/still"))
 		builder.translucent()
 		builder.bucketItem.modelJson(setFluidBucketModel(name))
+		builder.tag(`${Cmi.MODID}:${name}`)
 
 		return builder
 	}

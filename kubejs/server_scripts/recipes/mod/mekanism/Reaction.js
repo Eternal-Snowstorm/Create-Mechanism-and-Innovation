@@ -26,4 +26,13 @@ ServerEvents.recipes((event) => {
 		"neoecoae:cryotheum_crystal"
 	).energyRequired(5000).duration(80)
 		.id("neoecoae:cryotheum_crystal")
+
+	// 氮氧化物
+	mekanism.reaction(
+		"cmi:plant_ash",
+		MekType.Gas.of("mekanism:hydrogen", 10),
+		Fluid.of("cmi:nitric_acid", 20),
+		"thermal:niter",
+		MekType.Gas.of("cmi:nitrogen_oxide", 10)
+	)
 })

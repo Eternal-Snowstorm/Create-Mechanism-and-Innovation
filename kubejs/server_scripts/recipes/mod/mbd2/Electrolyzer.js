@@ -87,6 +87,12 @@ ServerEvents.recipes((event) => {
 		.outputGases("100x cmi:methane")
 		.outputGases("100x cmi:light_olefin")
 
+	// 联氨
+	cmi.electrolyzer()
+		.inputGases("100x cmi:nitrogen_oxide")
+		.inputFluids(Fluid.of("cmi:light_amine", 100))
+		.outputFluids(Fluid.of("cmi:hydrazines", 100))
+
 	// 盐酸
 	cmi.electrolyzer()
 		.inputFluids(Fluid.of("cmi:brine", 100))
