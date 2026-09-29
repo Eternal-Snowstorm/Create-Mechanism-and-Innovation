@@ -14,6 +14,7 @@ StartupEvents.registry("item", (event) => {
 
 		return builder
 	}
+
 	/**
 	 * 
 	 * @param {string} name 
