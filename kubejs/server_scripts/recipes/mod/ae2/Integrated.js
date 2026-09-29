@@ -66,4 +66,41 @@ ServerEvents.recipes((event) => {
 			"#forge:gears/titanium_alloy",
 			"8x #forge:wires/fluix"
 		])
+
+	// 雷达天线临时配方
+	addRecipe()
+		.itemOutput("cmi:power_supply")
+		.energy(16000)
+		.inputItems([
+			"4x #forge:plates/osmium",
+			"#cmi:batteries"
+		])
+	addRecipe()
+		.itemOutput("cmi:transformer")
+		.energy(16000)
+		.inputItems([
+			"4x #forge:plates/osmium",
+			"#cmi:coils"
+		])
+	addRecipe()
+		.itemOutput("cmi:tracking_array")
+		.energy(16000)
+		.inputItems([
+			"4x #forge:plates/osmium",
+			Mechanisms.AERO.COM
+		])
+	addRecipe()
+		.itemOutput("cmi:modem")
+		.energy(16000)
+		.inputItems([
+			"4x #forge:plates/osmium",
+			Mechanisms.COMPUTE.COM
+		])
+	addRecipe()
+		.itemOutput("cmi:radar")
+		.energy(16000)
+		.inputItems([
+			"4x #forge:plates/osmium",
+			"ae2:wireless_receiver"
+		])
 })

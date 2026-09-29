@@ -55,6 +55,7 @@ ServerEvents.recipes((event) => {
 		.fluidOutput(Fluid.of("neoecoae:cryotheum_solution", 200))
 		.gasInput(MekType.Gas.of("cmi:hydrogen_oxygen_fuel", 200))
 		.gasOutput(MekType.Gas.of("cmi:hydrogen_oxygen_fuel", 200))
+		.id("neoecoae:integrated_working_station/cryotheum_solution")
 
 	mekanism.rotary()
 		.fluidInput(Fluid.of("cmi:nitrogen_oxide", 200))

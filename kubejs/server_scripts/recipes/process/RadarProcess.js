@@ -19,6 +19,6 @@ ServerEvents.recipes((event) => {
 		]).energy(4000).maxChargeRate(4000),
 		vintageimprovements.curving(INCOMPLETE_AVIATION_CELL, [
 			INCOMPLETE_AVIATION_CELL
-		]).itemAsHead("vintageimprovements:w_shaped_curving_head")
+		]).mode(3)
 	]).loops(1).transitionalItem(INCOMPLETE_AVIATION_CELL)
 })
