@@ -435,8 +435,64 @@ ServerEvents.recipes((event) => {
 			"2x #forge:plates/composite_tungsten_steel",
 			Mechanisms.ADVANCED.COM,
 			Mechanisms.AIR.COM,
-			"ad_astra:engine_frame",
+			Mechanisms.NUKE.COM,
 			"cmi:blitz_general_component"
 		])
 		.id("mekanism:isotopic_centrifuge")
+
+	// 化学溶解室
+	addRecipe()
+		.itemOutput("mekanism:chemical_dissolution_chamber")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
+		.inputItems([
+			Casing.STAINLESS_STEEL,
+			"2x #forge:plates/composite_carbon_fiber",
+			Mechanisms.ELITE.COM,
+			Mechanisms.AIR.COM,
+			"create:whisk",
+			"cmi:basalt_general_component"
+		])
+		.id("mekanism:chemical_dissolution_chamber")
+
+	// 化学清洗室
+	addRecipe()
+		.itemOutput("mekanism:chemical_washer")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
+		.inputItems([
+			Casing.STAINLESS_STEEL,
+			"2x #forge:plates/composite_carbon_fiber",
+			Mechanisms.ELITE.COM,
+			Mechanisms.AIR.COM,
+			"create:whisk",
+			"cmi:blitz_general_component"
+		])
+		.id("mekanism:chemical_washer")
+
+	// 化学结晶室
+	addRecipe()
+		.itemOutput("mekanism:chemical_crystallizer")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
+		.inputItems([
+			Casing.STAINLESS_STEEL,
+			"2x #forge:plates/composite_carbon_fiber",
+			Mechanisms.ELITE.COM,
+			Mechanisms.AIR.COM,
+			"create:whisk",
+			"cmi:blizz_general_component"
+		])
+		.id("mekanism:chemical_crystallizer")
+
+	// 中子活化器
+	addRecipe()
+		.itemOutput("mekanism:solar_neutron_activator")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
+		.inputItems([
+			Casing.STAINLESS_STEEL,
+			"2x #forge:plates/composite_carbon_fiber",
+			Mechanisms.ELITE.COM,
+			Mechanisms.AIR.COM,
+			"ad_astra:photovoltaic_vesnium_cell",
+			"cmi:blitz_general_component"
+		])
+		.id("mekanism:solar_neutron_activator")
 })

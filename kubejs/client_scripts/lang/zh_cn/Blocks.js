@@ -143,11 +143,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addOreNodeLang("aluminum", "铝")
 	addOreNodeLang("osmium", "锇矿")
 
-	addMachineLang("flash_disk_writer", "闪存盘写入器")
-	addMachineLang("chemical_gas_extractor", "化学气体抽取器")
-	addMachineLang("steam_boiler", "青铜蒸汽锅炉")
-	addMachineLang("radar_terminal", "雷达终端")
-
 	// 制作组fumo
 	addBlockLang("re_construction", "Re_Construction")
 	addBlockLang("dkrkoo_weihe", "dkrkoo为何")

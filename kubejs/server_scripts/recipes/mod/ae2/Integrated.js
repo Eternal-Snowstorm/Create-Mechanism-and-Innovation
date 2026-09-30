@@ -103,4 +103,14 @@ ServerEvents.recipes((event) => {
 			"4x #forge:plates/osmium",
 			"ae2:wireless_receiver"
 		])
+	addRecipe()
+		.itemOutput("cmi:radar_skyline")
+		.energy(16000)
+		.inputItems([
+			"8x #forge:plates/stainless_steel",
+			"8x cmi:optical_fiber",
+			"4x cmi:ferrit_core",
+			"ae2:terminal",
+			Mechanisms.COMPUTE.COM
+		])
 })

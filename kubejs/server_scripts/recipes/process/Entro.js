@@ -79,7 +79,7 @@ ServerEvents.recipes((event) => {
 			Fluid.of("cmi:crystal_entro_solution", 50)
 		])
 		.duration(20 * 2)
-	
+
 	// 恩特罗合金
 	cmi.chemical_reactor()
 		.inputFluids([
@@ -106,7 +106,7 @@ ServerEvents.recipes((event) => {
 			Fluid.of("cmi:molten_silicon_containing_compound", 50)
 		])
 		.duration(20 * 2)
-	
+
 	// 恩特罗化合物
 	cmi.chemical_reactor()
 		.inputFluids([
@@ -116,7 +116,7 @@ ServerEvents.recipes((event) => {
 		])
 		.outputItems("4x cmi:entro_compound")
 		.duration(20 * 2)
-	
+
 	// 液晶态埃忒恩
 	cmi.chemical_reactor()
 		.inputItems("cmi:etrium_mixture")
@@ -127,7 +127,7 @@ ServerEvents.recipes((event) => {
 			Fluid.of("cmi:liquid_crystal_etrium", 100)
 		])
 		.duration(20 * 2)
-	
+
 	// 纯净晶源
 	cmi.electronic_blast_furnace()
 		.inputItems("#forge:raw_materials/dreamcore")
@@ -135,9 +135,9 @@ ServerEvents.recipes((event) => {
 			Fluid.of("cmi:pure_crystal_source", 50)
 		])
 		.duration(20)
-	
+
 	// 恩特罗氧化剂
-	cmi.electronic_blast_furnace()
+	cmi.electrolyzer()
 		.inputItems([
 			"#forge:raw_materials/dreamcore",
 			"cmi:etrium_peroxide_crystal"
