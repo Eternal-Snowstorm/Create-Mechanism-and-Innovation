@@ -4,7 +4,6 @@ let $Tiers =
 	Java.loadClass("net.minecraft.world.item.Tiers")
 
 StartupEvents.registry("item", (event) => {
-	
 	// 超级刀
 	event.createCustom(`${Cmi.MODID}:super_knife`, () => {
 		let properties = new Item$Properties()

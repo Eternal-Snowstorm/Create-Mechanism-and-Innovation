@@ -1,9 +1,14 @@
 StartupEvents.registry("block", (event) => {
-
-	// 继承父模型
+	/**
+	 * 继承父模型
+	 * 
+	 * @param {string} ore 
+	 * @returns 
+	 */
 	function simpleOreNodeModel(ore) {
 		const BACKGROUND = `create_rns:block/depleted_deposit_block`
 		const ORE = `cmi:block/ore/node/${ore}`
+
 		return {
 			loader: "forge:composite",
 			textures: {
