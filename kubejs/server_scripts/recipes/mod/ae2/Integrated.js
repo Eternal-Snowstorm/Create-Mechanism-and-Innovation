@@ -94,7 +94,7 @@ ServerEvents.recipes((event) => {
 		.energy(16000)
 		.inputItems([
 			"4x #forge:plates/osmium",
-			Mechanisms.COMPUTE.COM
+			Mechanisms.SMART.COM
 		])
 	addRecipe()
 		.itemOutput("cmi:radar")
@@ -111,6 +111,6 @@ ServerEvents.recipes((event) => {
 			"8x cmi:optical_fiber",
 			"4x cmi:ferrit_core",
 			"ae2:terminal",
-			Mechanisms.COMPUTE.COM
+			Mechanisms.SMART.COM
 		])
 })

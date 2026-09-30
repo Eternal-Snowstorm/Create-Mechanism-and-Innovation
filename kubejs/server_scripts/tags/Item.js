@@ -851,6 +851,29 @@ ServerEvents.tags("item", (event) => {
 	removeTagAllId("forge:raw_materials/ostrum")
 	removeTagAllId("forge:raw_materials/calorite")
 
+	// 肥料
+	event.get("cmi:nitrogen_fertilizer")
+		.add([
+			"thermal:compost",
+			"#forge:dusts/niter",
+			"#cmi:tree_barks",
+			"minecraft:rotten_flesh"
+		])
+
+	event.get("cmi:phosphorus_fertilizer")
+		.add([
+			"#forge:dusts/apatite",
+			"minecraft:bone_meal",
+			"thermal:compost"
+		])
+
+	event.get("cmi:pottasium_fertilizer")
+		.add([
+			"#forge:dusts/niter",
+			"#forge:plant_ash",
+			"farmersdelight:straw"
+		])
+
 	// 工作台 
 	event.get("forge:workbenches")
 		.add("immersiveengineering:craftingtable")

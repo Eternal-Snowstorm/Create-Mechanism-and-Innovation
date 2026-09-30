@@ -32,4 +32,9 @@ ServerEvents.recipes((event) => {
 	thermal.chiller("tconstruct:clear_glass", [
 		Fluid.of("tconstruct:molten_glass", 1000)
 	]).energy(1000)
+
+	thermal.chiller("cmi:glass_wire", [
+		Fluid.of("tconstruct:molten_glass", 50),
+		"#tconstruct:casts/multi_use/wire"
+	]).energy(500)
 })

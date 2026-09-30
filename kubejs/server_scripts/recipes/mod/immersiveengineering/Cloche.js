@@ -331,11 +331,64 @@ ServerEvents.recipes((event) => {
 		.input("#forge:seeds/rice")
 		.render("crop", "kaleidoscope_cookery:rice_crop")
 		.results([
-			setResult("2x kaleidoscope_cookery:rice_panicle")
+			setResult("kaleidoscope_cookery:rice_panicle", 2)
 		])
 		.soil("minecraft:mud")
 		.time(20 * 50)
 		.build()
 
+	// 番茄
+	new ClocheRecipeBuilder()
+		.input("#forge:seeds/tomato")
+		.render("crop", "kaleidoscope_cookery:tomato_crop")
+		.results([
+			setResult("kaleidoscope_cookery:tomato", 4)
+		])
+		.soil("minecraft:dirt")
+		.time(20 * 50)
+		.build()
+		.id("farmersdelight:integration/immersiveengineering/cloche/tomato")
+
+	// 辣椒
+	new ClocheRecipeBuilder()
+		.input("#forge:seeds/chilipepper")
+		.render("crop", "kaleidoscope_cookery:chili_crop")
+		.results([
+			setResult("kaleidoscope_cookery:red_chili", 2),
+			setResult("kaleidoscope_cookery:green_chili")
+		])
+		.soil("minecraft:dirt")
+		.time(20 * 50)
+		.build()
+
+	// 生菜
+	new ClocheRecipeBuilder()
+		.input("#forge:seeds/lettuce")
+		.render("crop", "kaleidoscope_cookery:lettuce_crop")
+		.results([
+			setResult("kaleidoscope_cookery:lettuce", 2)
+		])
+		.soil("minecraft:dirt")
+		.time(20 * 50)
+		.build()
+
 	// endregion
+
+	// 草木灰肥料
+	event.custom({
+		type: "immersiveengineering:fertilizer",
+		growthModifier: 1.2,
+		input: {
+			tag: "forge:plant_ash"
+		}
+	})
+
+	// 金坷垃
+	event.custom({
+		type: "immersiveengineering:fertilizer",
+		growthModifier: 2.5,
+		input: {
+			tag: "forge:dusts/fertilizer"
+		}
+	})
 })

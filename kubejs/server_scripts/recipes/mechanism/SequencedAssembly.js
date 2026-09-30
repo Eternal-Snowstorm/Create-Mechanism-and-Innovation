@@ -307,7 +307,7 @@ ServerEvents.recipes((event) => {
 		.deploying("cmi:resonant_tube")
 		.deploying("#forge:dusts/amethyst")
 		.grinding()
-		.deploying(Mechanisms.PART.ENGIN)
+		.deploying(Mechanisms.PART.FLUX)
 		.build()
 
 	// 幽匿

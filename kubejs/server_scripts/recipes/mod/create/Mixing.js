@@ -170,4 +170,11 @@ ServerEvents.recipes((event) => {
 		"4x minecraft:gravel",
 		Fluid.of("tconstruct:magma", 1000)
 	]).id("cmi:ae2/transform/tconstruct/nether_grout2")
+
+	// 金坷垃
+	create.mixing("3x cmi:fertilizer",[
+		"#cmi:nitrogen_fertilizer",
+		"#cmi:phosphorus_fertilizer",
+		"#cmi:pottasium_fertilizer"
+	])
 })

@@ -1,6 +1,30 @@
 ServerEvents.recipes((event) => {
 	let { thermal } = event.getRecipes()
 
+	// 磷灰石
+	thermal.crystallizer("thermal:apatite", [
+		"#forge:dusts/apatite",
+		Fluid.of("cmi:crystal_catalyt", 200)
+	]).id("thermal:machines/crystallizer/crystallizer_apatite")
+
+	// 朱砂
+	thermal.crystallizer("thermal:cinnabar", [
+		"#forge:dusts/cinnabar",
+		Fluid.of("cmi:crystal_catalyt", 200)
+	]).id("thermal:machines/crystallizer/crystallizer_cinnabar")
+
+	// 硫
+	thermal.crystallizer("thermal:sulfur", [
+		"#forge:dusts/sulfur",
+		Fluid.of("cmi:crystal_catalyt", 200)
+	]).id("thermal:machines/crystallizer/crystallizer_sulfur")
+
+	// 硝石
+	thermal.crystallizer("thermal:niter", [
+		"#forge:dusts/niter",
+		Fluid.of("cmi:crystal_catalyt", 200)
+	]).id("thermal:machines/crystallizer/crystallizer_niter")
+
 	// 钴电解质
 	thermal.crystallizer("cmi:cobalt_electrolyte", [
 		"#forge:dusts/cobalt",

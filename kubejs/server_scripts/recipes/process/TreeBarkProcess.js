@@ -69,10 +69,10 @@ ServerEvents.recipes((event) => {
 	// 沃土
 	create.item_application("farmersdelight:rich_soil", [
 		"minecraft:dirt",
-		"thermal:compost"
+		"#forge:dusts/fertilizer"
 	])
 	create.item_application("farmersdelight:rich_soil_farmland", [
 		"minecraft:farmland",
-		"thermal:compost"
+		"#forge:dusts/fertilizer"
 	])
 })

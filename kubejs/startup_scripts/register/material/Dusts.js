@@ -102,6 +102,9 @@ StartupEvents.registry("item", (event) => {
 	// 金星岩粉
 	addAloneDustItem("venus_stone")
 
+	// 金坷垃
+	addNamedDustItem("fertilizer","fertilizer")
+
 	// 纯净蓝宝石化合物
 	addNonDustItem("pure_sapphire_compound")
 	// 赤泥
@@ -145,6 +148,5 @@ StartupEvents.registry("item", (event) => {
 	// 生石灰
 	addNonDustItem("furnaced_lime")
 	// 草木灰
-	addNonDustItem("plant_ash")
-
+	addNonDustItem("plant_ash").tag("forge:plant_ash")
 })

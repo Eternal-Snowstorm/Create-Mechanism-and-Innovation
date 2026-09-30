@@ -121,6 +121,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("entro_oxidizer", "恩特罗氧化剂")
 	addItemLang("sodium_reducing_agent", "钠还原剂")
 	addItemLang("venus_stone_dust", "金星岩粉")
+	addItemLang("fertilizer", "金坷垃")
 
 	// 晶体
 	addItemLang("charged_amethyst", "充能紫水晶")
