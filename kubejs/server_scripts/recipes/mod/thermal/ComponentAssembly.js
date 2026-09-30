@@ -264,7 +264,7 @@ ServerEvents.highPriorityData((event) => {
 	function getRecipeId(recipe, index) {
 		return recipe.recipeId
 			? dataPath(recipe.recipeId)
-			: `thermal_extra:recipes/machine/component_assembly/${RANDOM_UUID.toString()}-${index}`
+			: `cmi:recipes/kjs/${RANDOM_UUID.toString()}-${index}`
 	}
 
 	recipes.forEach((recipe, index) => {
