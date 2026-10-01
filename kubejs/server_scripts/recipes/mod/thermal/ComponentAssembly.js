@@ -43,7 +43,7 @@ ServerEvents.highPriorityData((event) => {
 	/**
 	 * 把单个条目转成 ingredient / result 的 JSON
 	 * 
-	 * @param {Internal.InputFluid_ | InputItem_ | OutputItem_ } entry 条目, 数组表示任一满足
+	 * @param {Internal.InputFluid_ | InputItem_ | OutputItem_} entry 条目, 数组表示任一满足
 	 * @returns {Internal.JsonObject_ | Internal.JsonObject_[]} 数组即 compound ingredient
 	 */
 	function toJson(entry) {
