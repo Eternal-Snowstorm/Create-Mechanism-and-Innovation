@@ -179,6 +179,37 @@ StartupEvents.registry("block", (event) => {
 				.tag("forge:storage_blocks")
 		})
 
+	// 钻探轴承
+	addBlock("driller_bearing")
+		.soundType(SoundType.NETHERITE_BLOCK)
+		.hardness(5)
+		.resistance(5)
+		.tagBlock(CmiToolType.PICKAXE.tag())
+		.tagBlock(CmiMiningLevel.IRON.tag())
+		.requiresTool(true)
+
+	// 瓷砖
+	addBlock("ceramic_tile")
+		.soundType(SoundType.STONE)
+		.hardness(6)
+		.resistance(6)
+		.tagBlock(CmiToolType.PICKAXE.tag())
+		.tagBlock(CmiMiningLevel.STONE.tag())
+		.requiresTool(true)
+
+	// 瓷砖蹲坑
+
+	// 瓷砖小便池
+	addBlock("ceramic_tile_urinal")
+		.model(Cmi.loadResource("block/custom/ceramic_tile_urinal"))
+		.soundType(SoundType.STONE)
+		.hardness(6)
+		.resistance(6)
+		.tagBlock(CmiToolType.PICKAXE.tag())
+		.tagBlock(CmiMiningLevel.STONE.tag())
+		.requiresTool(true)
+		.box(0, 0, 0, 16, 8, 16)
+
 	// 雕纹铜块
 	addBlock("chiseled_copper")
 		.textureAll(Cmi.loadResource("block/chiseled_copper/0"))

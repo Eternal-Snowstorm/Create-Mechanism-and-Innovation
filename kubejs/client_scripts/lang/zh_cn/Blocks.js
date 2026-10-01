@@ -93,8 +93,8 @@ ClientEvents.lang("zh_cn", (event) => {
 	addBlockLang("broken_copper_drill_head", "损坏的铜制钻头")
 	addBlockLang("broken_brass_drill_head", "损坏的黄铜制钻头")
 
-	addBlockLang("cracked_concrete", "碎裂的混凝土")
-	addBlockLang("bar_acid", "酸洗钢筋")
+	addBlockLang("ceramic_tile", "瓷砖")
+	addBlockLang("ceramic_tile_urinal", "瓷砖小便池")
 	addBlockLang("bar_concrete", "带混凝土的结构钢筋")
 	addBlockLang("bar_normal", "结构钢筋")
 	addBlockLang("bar_rust", "锈蚀钢筋")
