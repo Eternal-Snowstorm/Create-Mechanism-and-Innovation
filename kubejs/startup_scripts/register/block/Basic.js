@@ -197,18 +197,25 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiMiningLevel.STONE.tag())
 		.requiresTool(true)
 
-	// 瓷砖蹲坑
-
-	// 瓷砖小便池
-	addBlock("ceramic_tile_urinal")
-		.model(Cmi.loadResource("block/custom/ceramic_tile_urinal"))
+	// 瓷砖台阶
+	addBlock("ceramic_tile_slab", "slab")
+		.textureAll(Cmi.loadResource("block/ceramic_tile"))
 		.soundType(SoundType.STONE)
 		.hardness(6)
 		.resistance(6)
 		.tagBlock(CmiToolType.PICKAXE.tag())
 		.tagBlock(CmiMiningLevel.STONE.tag())
 		.requiresTool(true)
-		.box(0, 0, 0, 16, 8, 16)
+
+	// 瓷砖楼梯
+	addBlock("ceramic_tile_stairs", "stairs")
+		.textureAll(Cmi.loadResource("block/ceramic_tile"))
+		.soundType(SoundType.STONE)
+		.hardness(6)
+		.resistance(6)
+		.tagBlock(CmiToolType.PICKAXE.tag())
+		.tagBlock(CmiMiningLevel.STONE.tag())
+		.requiresTool(true)
 
 	// 雕纹铜块
 	addBlock("chiseled_copper")

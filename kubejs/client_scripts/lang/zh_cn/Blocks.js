@@ -94,11 +94,8 @@ ClientEvents.lang("zh_cn", (event) => {
 	addBlockLang("broken_brass_drill_head", "损坏的黄铜制钻头")
 
 	addBlockLang("ceramic_tile", "瓷砖")
-	addBlockLang("ceramic_tile_urinal", "瓷砖小便池")
-	addBlockLang("bar_concrete", "带混凝土的结构钢筋")
-	addBlockLang("bar_normal", "结构钢筋")
-	addBlockLang("bar_rust", "锈蚀钢筋")
-	addBlockLang("bar_rust_concrete", "带混凝土的锈蚀钢筋")
+	addBlockLang("ceramic_tile_slab", "瓷砖台阶")
+	addBlockLang("ceramic_tile_stairs", "瓷砖楼梯")
 	addBlockLang("radar", "雷达")
 	addBlockLang("broken_radar", "损坏的雷达")
 	addBlockLang("white_reinforced_concrete", "白色钢筋混凝土")
