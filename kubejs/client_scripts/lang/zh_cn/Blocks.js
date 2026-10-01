@@ -63,6 +63,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addCasingLang("steel", "钢")
 	addCasingLang("smart", "智能")
 	addCasingLang("computing", "高级计算")
+	addCasingLang("airtight", "气密")
 
 	addBlockLang("rocket_pattern", "火箭模版")
 	addBlockLang("tier_1_rocket_frame", "一阶火箭框架")
