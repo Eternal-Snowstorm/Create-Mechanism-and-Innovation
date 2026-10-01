@@ -1,6 +1,6 @@
 {
 	"scanner_icon_item": "immersiveengineering:raw_uranium",
-	"dimension": "minecraft:null",
-	"map_icon_item": "create_rns:uranium_deposit_block",
-	"structure": "create_rns:deposit_uranium"
+	"dimension": "cmi:dionysus",
+	"map_icon_item": "immersiveengineering:raw_uranium",
+	"structure": "cmi:ore_node/uranium_node"
 }

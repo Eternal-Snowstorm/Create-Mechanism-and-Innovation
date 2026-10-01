@@ -1,0 +1,6 @@
+{
+	"scanner_icon_item": "neoecoae:raw_aluminum_ore",
+	"dimension": "minecraft:overworld",
+	"map_icon_item": "neoecoae:raw_aluminum_ore",
+	"structure": "cmi:ore_node/aluminum_node"
+}
