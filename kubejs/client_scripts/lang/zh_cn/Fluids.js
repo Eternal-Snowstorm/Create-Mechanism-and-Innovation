@@ -113,4 +113,5 @@ ClientEvents.lang("zh_cn", (event) => {
 	addFluidLang("nitrogen_oxide", "氮氧化物")
 	addFluidLang("hydrazines", "联氨")
 	addFluidLang("hydrazines_fuel", "联氨燃油")
+	addFluidLang("glacious_cryotheum", "极寒之凛冰")
 })
