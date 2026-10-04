@@ -107,8 +107,8 @@ body:
       render: shell
 
   - type: textarea
-    id: sex_images
+    id: additional_images
     attributes:
-      label: 来点色图?
-      description: 来点好看的色图让大伙和开发者们都养养眼怎么样?
+      label: 来点美图?
+      description: 来点好看的图片让大伙和开发者们都养养眼怎么样?
       render: shell
