@@ -36,6 +36,6 @@ ServerEvents.recipes((event) => {
 			.rate(temperature / 100)
 			.temperature(temperature)
 
-		cmi.fluid_burn(fluid.withAmount(10), temperature / 10)
+		cmi.fluid_burn(fluid.withAmount(10), (temperature / 10))
 	}
 })

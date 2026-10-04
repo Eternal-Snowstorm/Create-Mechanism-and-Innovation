@@ -34,20 +34,20 @@
 
 配置来源: `src/main/java/com/teammoeg/steampowered/SPConfig.java`
 
-| 配置项             | 默认值                 | 含义                        |
-| --------------- | ------------------- | ------------------------- |
-| `steamPerWater` | `12.0`              | `1 mB` 水 → `12 mB` 蒸汽     |
-| `HuPerFuelTick` | `24`                | 燃料每燃烧 `1 tick` 产生 `24 HU` |
-| (硬编码换算)         | `10 HU = 1 mB` 蒸汽   | HU → 蒸汽换算率                |
-| (由上式导出)         | `1 mB` 水 = `120 HU` | 即 `steamPerWater × 10`    |
+| 配置项          | 默认值               | 含义                             |
+| --------------- | -------------------- | -------------------------------- |
+| `steamPerWater` | `12.0`               | `1 mB` 水 → `12 mB` 蒸汽         |
+| `HuPerFuelTick` | `24`                 | 燃料每燃烧 `1 tick` 产生 `24 HU` |
+| (硬编码换算)    | `10 HU = 1 mB` 蒸汽  | HU → 蒸汽换算率                  |
+| (由上式导出)    | `1 mB` 水 = `120 HU` | 即 `steamPerWater × 10`          |
 
 三个品级的默认数值:
 
-| 品级              | 燃烧室每刻最大发 HU | 锅炉每刻最大收 HU | 燃烧效率  | 引擎耗汽 mB/t | 引擎容量 SU | 引擎转速 RPM | 引擎内置蒸汽罐 mB |
-| --------------- | ----------- | ---------- | ----- | --------- | ------- | -------- | ---------- |
-| `Bronze(青铜)`    | `120`       | `120`      | `0.8` | `12`      | `512`   | `32`     | `32 000`   |
-| `Cast Iron(铸铁)` | `240`       | `240`      | `0.9` | `24`      | `1024`  | `32`     | `64 000`   |
-| `Steel(钢)`      | `480`       | `480`      | `1.0` | `48`      | `2048`  | `32`     | `96 000`   |
+| 品级              | 燃烧室每刻最大发 HU | 锅炉每刻最大收 HU | 燃烧效率 | 引擎耗汽 mB/t | 引擎容量 SU | 引擎转速 RPM | 引擎内置蒸汽罐 mB |
+| ----------------- | ------------------- | ----------------- | -------- | ------------- | ----------- | ------------ | ----------------- |
+| `Bronze(青铜)`    | `120`               | `120`             | `0.8`    | `12`          | `512`       | `32`         | `32 000`          |
+| `Cast Iron(铸铁)` | `240`               | `240`             | `0.9`    | `24`          | `1024`      | `32`         | `64 000`          |
+| `Steel(钢)`       | `480`               | `480`             | `1.0`    | `48`          | `2048`      | `32`         | `96 000`          |
 
 注意: 锅炉与燃烧室的每级数值完全相同, 且引擎耗汽恰好等于锅炉满负荷产汽,
 因此"同级的锅炉 / 燃烧室 / 引擎"在默认值下可满功率持续运转.
@@ -72,11 +72,11 @@ HURemain += ΔHU
 
 以煤矿 `burnTime = 1600` 为例:
 
-| 品级          | `ΔHU(burnTime × 24 × eff)` | 对应蒸汽总量(÷10) |
-| ----------- | -------------------------- | ----------- |
-| `Bronze`    | `30 720 HU`                | `3 072 mB`  |
-| `Cast Iron` | `34 560 HU`                | `3 456 mB`  |
-| `Steel`     | `38 400 HU`                | `3 840 mB`  |
+| 品级        | `ΔHU(burnTime × 24 × eff)` | 对应蒸汽总量(÷10) |
+| ----------- | -------------------------- | ----------------- |
+| `Bronze`    | `30 720 HU`                | `3 072 mB`        |
+| `Cast Iron` | `34 560 HU`                | `3 456 mB`        |
+| `Steel`     | `38 400 HU`                | `3 840 mB`        |
 
 换算率速记: 每个品级每个燃料 tick 产生 `burnTime × 19.2 / 21.6 / 24 HU`.
 
@@ -152,11 +152,11 @@ if (HURemain < emit) {
 
 默认满负荷核算:
 
-| 品级          | 每刻消耗 HU | 每刻耗水   | 每刻产蒸汽   | 每小时(3600 tick)产汽 |
-| ----------- | ------- | ------ | ------- | ---------------- |
-| `Bronze`    | `120`   | `1 mB` | `12 mB` | `43 200 mB`      |
-| `Cast Iron` | `240`   | `2 mB` | `24 mB` | `86 400 mB`      |
-| `Steel`     | `480`   | `4 mB` | `48 mB` | `172 800 mB`     |
+| 品级        | 每刻消耗 HU | 每刻耗水 | 每刻产蒸汽 | 每小时(3600 tick)产汽 |
+| ----------- | ----------- | -------- | ---------- | --------------------- |
+| `Bronze`    | `120`       | `1 mB`   | `12 mB`    | `43 200 mB`           |
+| `Cast Iron` | `240`       | `2 mB`   | `24 mB`    | `86 400 mB`           |
+| `Steel`     | `480`       | `4 mB`   | `48 mB`    | `172 800 mB`          |
 
 ### 3.2 热源来源规则
 
@@ -225,13 +225,13 @@ if (wanted > 0) {
 
 ### 4.3 工作状态机
 
-| 状态           | 条件                    | 行为                                                                    |
-| ------------ | --------------------- | --------------------------------------------------------------------- |
-| 未接飞轮         | `poweredWheel` 为空或已移除 | 只从内置罐按 `baseConsumption` 抽汽(不抽锅炉), 不输出动力, `heatup` 清零, `LIT=false`    |
-| 暖机 `Heating` | 有汽且 `heatup < 60`     | 每 tick 正常耗汽, `heatup++`, `LIT=true`, 不输出动力                            |
-| 运行 `Running` | `heatup ≥ 60`         | 将转速/容量写入飞轮并每 tick 刷新(数值不变则不重复应用)                                      |
-| 断汽/停转        | 抽不到足够蒸汽               | 立即清零 `appliedSpeed` / `appliedCapacity`, `heatup--` 缓慢冷却, `LIT=false` |
-| 停机过渡         | 引擎不再给飞轮速度             | 飞轮有 `40 tick` 停止冷却(`stoppingCooldown`)后才真正归零                          |
+| 状态           | 条件                        | 行为                                                                                  |
+| -------------- | --------------------------- | ------------------------------------------------------------------------------------- |
+| 未接飞轮       | `poweredWheel` 为空或已移除 | 只从内置罐按 `baseConsumption` 抽汽(不抽锅炉), 不输出动力, `heatup` 清零, `LIT=false` |
+| 暖机 `Heating` | 有汽且 `heatup < 60`        | 每 tick 正常耗汽, `heatup++`, `LIT=true`, 不输出动力                                  |
+| 运行 `Running` | `heatup ≥ 60`               | 将转速/容量写入飞轮并每 tick 刷新(数值不变则不重复应用)                               |
+| 断汽/停转      | 抽不到足够蒸汽              | 立即清零 `appliedSpeed` / `appliedCapacity`, `heatup--` 缓慢冷却, `LIT=false`         |
+| 停机过渡       | 引擎不再给飞轮速度          | 飞轮有 `40 tick` 停止冷却(`stoppingCooldown`)后才真正归零                             |
 
 ### 4.4 输出到飞轮(转速 / 容量)
 
@@ -259,12 +259,12 @@ setRotation(speed, cap);            // 写入飞轮(GeneratingKineticBlockEntity
 4. 引擎(钢, 泵送模式): 每 tick 耗 `48 mB` 蒸汽, `60 tick` 预热后输出 `32 RPM × 2048 SU`.
 5. 全链总产汽 = `3840 mB`, 满功率可持续约 `80 tick`(扣除暖机 `60 tick` 内的耗汽后略短).
 
-| 环节    | 数量关系                          |
-| ----- | ----------------------------- |
-| 燃料    | `burnTime tick`(Forge 熔炉燃料时间) |
-| HU 总量 | `burnTime × 24 × 品级效率`        |
-| 蒸汽总量  | `HU 总量 ÷ 10 mB`               |
-| 满功率时长 | `蒸汽总量 ÷ 引擎耗汽(12/24/48 mB/t)`  |
+| 环节       | 数量关系                             |
+| ---------- | ------------------------------------ |
+| 燃料       | `burnTime tick`(Forge 熔炉燃料时间)  |
+| HU 总量    | `burnTime × 24 × 品级效率`           |
+| 蒸汽总量   | `HU 总量 ÷ 10 mB`                    |
+| 满功率时长 | `蒸汽总量 ÷ 引擎耗汽(12/24/48 mB/t)` |
 
 ---
 
@@ -273,7 +273,6 @@ setRotation(speed, cap);            // 写入飞轮(GeneratingKineticBlockEntity
 1. `HU` 不是能量存储: 锅炉每 tick 用后即清零(`heatreceived = 0`), 超出锅炉上限的 `HU` 直接浪费；只有燃烧室的 `HURemain` 是储备.
 2. 热量提交是覆盖式: `commitHeat(float)` 直接赋值, 多热源会互相覆盖, 代码中没有做多热源求和.
 3. 取整损失三处:
-
    * 燃料折算 `HU: HURemain +=` 浮点表达式, 复合赋值截断；
    * 抽水按整 `mB(ceil)`, 水不够按实抽回推；
    * 产汽 `consume / 10` 为 `int` 整除, 丢弃小于 `10 HU` 的尾数.
@@ -286,17 +285,17 @@ setRotation(speed, cap);            // 写入飞轮(GeneratingKineticBlockEntity
 
 ## 7. 关键源码位置速查
 
-| 逻辑           | 文件                                                                                                 |
-| ------------ | -------------------------------------------------------------------------------------------------- |
-| 全部默认数值 / 配置  | `src/main/java/com/teammoeg/steampowered/SPConfig.java`                                            |
-| HU 产生与放热     | `src/main/java/com/teammoeg/steampowered/content/burner/BurnerBlockEntity.java`                    |
-| 各品级燃烧室数值     | `content/burner/` 下 `Bronze/CastIron/SteelBurnerBlockEntity.java`(`120/240/480`, 效率 `0.8/0.9/1.0`) |
-| HU → 蒸汽换算    | `src/main/java/com/teammoeg/steampowered/content/boiler/BoilerTileEntity.java`(`166-208` 行附近)      |
-| 各品级锅炉数值      | `content/boiler/` 下 `Bronze/CastIron/SteelBoilerBlockEntity.java`(`120/240/480`)                   |
+| 逻辑                   | 文件                                                                                                  |
+| ---------------------- | ----------------------------------------------------------------------------------------------------- |
+| 全部默认数值 / 配置    | `src/main/java/com/teammoeg/steampowered/SPConfig.java`                                               |
+| HU 产生与放热          | `src/main/java/com/teammoeg/steampowered/content/burner/BurnerBlockEntity.java`                       |
+| 各品级燃烧室数值       | `content/burner/` 下 `Bronze/CastIron/SteelBurnerBlockEntity.java`(`120/240/480`, 效率 `0.8/0.9/1.0`) |
+| HU → 蒸汽换算          | `src/main/java/com/teammoeg/steampowered/content/boiler/BoilerTileEntity.java`(`166-208` 行附近)      |
+| 各品级锅炉数值         | `content/boiler/` 下 `Bronze/CastIron/SteelBoilerBlockEntity.java`(`120/240/480`)                     |
 | 引擎耗汽/预热/高温蒸汽 | `src/main/java/com/teammoeg/steampowered/content/engine/SteamEngineTileEntity.java`(`132-374` 行附近) |
-| 各品级引擎数值      | `content/engine/` 下 `Bronze/CastIron/SteelSteamEngineTileEntity.java`                              |
-| 飞轮动力输出与停转冷却  | `src/main/java/com/teammoeg/steampowered/oldcreatestuff/OldFlywheelBlockEntity.java`               |
-| 热量接收接口       | `src/main/java/com/teammoeg/steampowered/content/burner/IHeatReceiver.java`                        |
+| 各品级引擎数值         | `content/engine/` 下 `Bronze/CastIron/SteelSteamEngineTileEntity.java`                                |
+| 飞轮动力输出与停转冷却 | `src/main/java/com/teammoeg/steampowered/oldcreatestuff/OldFlywheelBlockEntity.java`                  |
+| 热量接收接口           | `src/main/java/com/teammoeg/steampowered/content/burner/IHeatReceiver.java`                           |
 
 注意: 第 4 章的"`60 tick` 暖机 + 冷启动储备 + 高温蒸汽 `1/4` 耗汽"属于本仓库 fork 的新增/改动逻辑,
 与网上旧版 Steam Powered 的引擎实现不完全一致, 引用时以本仓库代码为准.
