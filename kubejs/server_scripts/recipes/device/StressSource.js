@@ -85,37 +85,37 @@ ServerEvents.recipes((event) => {
 	let materials = [
 		{
 			id: "bronze",
-			block: "tconstruct:seared_bricks",
-			brick: "tconstruct:seared_brick"
+			block: "tconstruct:seared_bricks"
 		},
 		{
 			id: "cast_iron",
-			block: "tconstruct:scorched_bricks",
-			brick: "tconstruct:scorched_brick"
+			block: "tconstruct:scorched_bricks"
 		},
 		{
 			id: "steel",
-			block: "immersiveengineering:blastbrick",
-			brick: "immersiveindustry:refractory_kiln_brick"
+			block: "immersiveengineering:blastbrick"
 		}
 	]
 	materials.forEach((material) => {
-		let ingot = `#forge:ingots/${material.id}`
-		let plate = `#forge:plates/${material.id}`
+		let { id, block } = material
+
+		let ingot = `#forge:ingots/${id}`
+		let plate = `#forge:plates/${id}`
 
 		// 太阳能锅炉
-		kubejs.shaped(`cmi:${material.id}_solar_boiler`, [
+		kubejs.shaped(`cmi:${id}_solar_boiler`, [
 			"ABA",
-			"A A",
-			"CCC"
+			"ACA",
+			"DDD"
 		], {
 			A: [plate, ingot],
-			B: "#forge:plates/copper",
-			C: material.brick
+			B: "#forge:plates/silver",
+			C: Mechanisms.COPPER.COM,
+			D: block
 		})
 
 		// 锅炉
-		kubejs.shaped(`steampowered:${material.id}_boiler`, [
+		kubejs.shaped(`steampowered:${id}_boiler`, [
 			"AAA",
 			"ACA",
 			"ABA"
@@ -126,29 +126,29 @@ ServerEvents.recipes((event) => {
 		})
 
 		// 固体燃烧室
-		kubejs.shaped(`steampowered:${material.id}_burner`, [
+		kubejs.shaped(`steampowered:${id}_burner`, [
 			"AAA",
 			"ABA",
 			"CCC"
 		], {
 			A: [plate, ingot],
 			B: Mechanisms.STONE.COM,
-			C: material.block
+			C: block
 		})
 
 		// 流体燃烧室
-		kubejs.shaped(`cmi:${material.id}_fluid_burner`, [
+		kubejs.shaped(`cmi:${id}_fluid_burner`, [
 			"AAA",
 			"ABA",
 			"CCC"
 		], {
 			A: [plate, ingot],
 			B: Mechanisms.COPPER.COM,
-			C: material.block
+			C: block
 		})
 
 		// 蒸汽引擎
-		kubejs.shaped(`steampowered:${material.id}_steam_engine`, [
+		kubejs.shaped(`steampowered:${id}_steam_engine`, [
 			"ABE",
 			"MCF",
 			"ABE"
@@ -162,7 +162,7 @@ ServerEvents.recipes((event) => {
 		})
 
 		// 飞轮
-		kubejs.shaped(`steampowered:${material.id}_flywheel`, [
+		kubejs.shaped(`steampowered:${id}_flywheel`, [
 			"AB ",
 			"CFB",
 			"AB "
