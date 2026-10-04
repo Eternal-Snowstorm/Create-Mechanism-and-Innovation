@@ -110,7 +110,7 @@ ServerEvents.recipes((event) => {
 		], {
 			A: [plate, ingot],
 			B: "#forge:plates/silver",
-			C: Mechanisms.COPPER.COM,
+			C: Mechanisms.STEAM.COM,
 			D: block
 		})
 
