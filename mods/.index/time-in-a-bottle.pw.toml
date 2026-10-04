@@ -1,18 +1,18 @@
-filename = 'time-in-a-bottle-4.0.4-mc1.20.1.jar'
-name = 'Time in a Bottle'
-side = ''
+filename = 'time-in-a-bottle-4.1.1-mc1.20.1.jar'
+name = 'Time In A Bottle'
+side = 'server'
 x-prismlauncher-dependencies = []
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'Time in a bottle 1.20.1 - 4.0.4'
+x-prismlauncher-version-number = 'Time in a bottle 4.1.1'
 
 [download]
-hash = '25a1aef5ed1984104835bcfb5d03027d32ce856b'
+hash = 'c6691825489b709066f2a348c49609ca7da7f267'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 4744787
+file-id = 8988876
 project-id = 895919

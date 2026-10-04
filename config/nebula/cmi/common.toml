@@ -89,9 +89,9 @@
 	[general.solar_boilder]
 		#Water consumption and steam production per tick
 		#type: int
-		#default: 2
+		#default: 19
 		#Range: 1 ~ 1024
-		bronze_pre_tick_consum_and_production = 2
+		bronze_pre_tick_consum_and_production = 19
 		#Boiler's Fluid Capacity
 		#type: int
 		#default: 4000
@@ -99,9 +99,9 @@
 		bronze_boiler_capacity = 4000
 		#Water consumption and steam production per tick
 		#type: int
-		#default: 4
+		#default: 38
 		#Range: 1 ~ 1024
-		cast_iron_pre_tick_consum_and_production = 4
+		cast_iron_pre_tick_consum_and_production = 38
 		#Boiler's Fluid Capacity
 		#type: int
 		#default: 8000
@@ -109,9 +109,9 @@
 		cast_iron_boiler_capacity = 8000
 		#Water consumption and steam production per tick
 		#type: int
-		#default: 8
+		#default: 75
 		#Range: 1 ~ 1024
-		steel_pre_tick_consum_and_production = 8
+		steel_pre_tick_consum_and_production = 75
 		#Boiler's Fluid Capacity
 		#type: int
 		#default: 12000
@@ -123,6 +123,18 @@
 		#default: 0.5
 		#Range: 0.0 ~ 1.0
 		artificial_light_efficiency_multiplier = 0.5
+		#Efficiency multiplier when the boiler runs under natural light while it is raining
+		#1.0 = same as clear weather, 0.5 = half efficiency. Set to 0.0 to disable running in rain.
+		#type: double
+		#default: 0.5
+		#Range: 0.0 ~ 1.0
+		rain_efficiency_multiplier = 0.5
+		#Efficiency multiplier when the boiler runs under natural light during a thunderstorm
+		#1.0 = same as clear weather, 0.25 = quarter efficiency. Set to 0.0 to disable running in thunderstorms.
+		#type: double
+		#default: 0.25
+		#Range: 0.0 ~ 1.0
+		thunder_efficiency_multiplier = 0.25
 
 	#Space Elevator Settings
 	[general.space_elevator]

@@ -41,7 +41,7 @@ function defineModels(type, overlay) {
 
 /**
  * 
- * @typedef {Internal.Item | Internal.Block | Internal.Fluid} TagKeyType
+ * @typedef {Internal.Item | Internal.Block | Internal.Fluid | EntityType<?>} TagKeyType
  * @param {Internal.TagKey_<TagKeyType>} tag 
  * @returns 
  */

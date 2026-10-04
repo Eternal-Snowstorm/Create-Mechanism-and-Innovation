@@ -139,6 +139,7 @@ ClientEvents.lang("zh_cn", (event) => {
 
 	addMusicDiscLang("mechanism", "Mechanism", "DontkillBelalus")
 
+	addDepositLang("aluminum", "铝")
 	addDepositLang("coal", "煤炭")
 	addDepositLang("copper", "铜")
 	addDepositLang("gold", "金")
@@ -154,4 +155,5 @@ ClientEvents.lang("zh_cn", (event) => {
 	addDepositLang("cobalt", "钴")
 	addDepositLang("vanadium", "钒")
 	addDepositLang("osmium", "锇")
+	addDepositLang("uranium", "铀")
 })

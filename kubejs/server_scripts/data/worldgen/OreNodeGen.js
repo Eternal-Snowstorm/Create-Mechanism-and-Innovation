@@ -2,6 +2,7 @@ ServerEvents.highPriorityData((event) => {
 	let structures = []
 	let netherStructures = []
 	let moonStructures = []
+	let dionysusStructure = []
 
 	/**
 	 * 
@@ -196,6 +197,13 @@ ServerEvents.highPriorityData((event) => {
 				structure.biomes = [
 					"alexscaves:toxic_caves"
 				]
+				// 结构集
+				dionysusStructure.push(
+					{
+						structure: `${Cmi.MODID}:ore_node/${name}_node`,
+						weight: weight
+					}
+				)
 				build()
 				return this
 			},
@@ -270,6 +278,10 @@ ServerEvents.highPriorityData((event) => {
 	addNodeGen("cheese")
 		.moon(10)
 
+	// 铀矿点
+	addNodeGen("uranium")
+		.dionysus(30)
+
 	// 金矿点
 	addNodeGen("gold")
 		.overworld(50)
@@ -312,6 +324,10 @@ ServerEvents.highPriorityData((event) => {
 
 	// 铅矿点
 	addNodeGen("lead")
+		.overworld(80)
+
+	// 铝矿点
+	addNodeGen("aluminum")
 		.overworld(80)
 
 	// 钒矿点
@@ -360,7 +376,18 @@ ServerEvents.highPriorityData((event) => {
 		}
 	}
 
+	let dionysusStructureSet = {
+		structures: dionysusStructure,
+		placement: {
+			type: "minecraft:random_spread",
+			salt: 385912846,
+			spacing: 20,
+			separation: 15
+		}
+	}
+
 	event.addJson("cmi:worldgen/structure_set/ore_nodes", structureSet)
 	event.addJson("cmi:worldgen/structure_set/nether_ore_nodes", netherStructureSet)
 	event.addJson("cmi:worldgen/structure_set/moon_ore_nodes", moonStructureSet)
+	event.addJson("cmi:worldgen/structure_set/dionysus_ore_nodes", dionysusStructureSet)
 })
