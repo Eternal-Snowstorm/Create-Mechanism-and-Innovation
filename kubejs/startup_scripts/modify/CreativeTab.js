@@ -7,7 +7,6 @@ StartupEvents.modifyCreativeTab("kubejs:tab", (event) => {
 		"#create:mechanisms",
 		"#create:incomplete_mechanisms",
 		`#${Cmi.MODID}:mechanism_parts`,
-		`#${Cmi.MODID}:mechanism_flash_drives`,
 		"#tconstruct:casts/multi_use/mechanism",
 		"#tconstruct:casts/single_use/mechanism",
 		"#tconstruct:casts/multi_use/nugget",
@@ -102,11 +101,6 @@ StartupEvents.modifyCreativeTab("thermal:thermal.devices", (event) => {
 })
 
 StartupEvents.modifyCreativeTab("cmi:mechanisms", (event) => {
-	Ingredient.of("#cmi:mechanism_flash_drives")
-		.getItemIds()
-		.forEach((flashDrive) => {
-			event.add(flashDrive)
-		})
 	Ingredient.of("#cmi:block/machine_block")
 		.getItemIds()
 		.forEach((machineBlock) => {

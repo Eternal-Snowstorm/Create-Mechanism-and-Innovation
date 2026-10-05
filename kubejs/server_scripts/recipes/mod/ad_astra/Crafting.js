@@ -43,4 +43,14 @@ ServerEvents.recipes((event) => {
 		C: "#forge:plates/silver",
 		M: Mechanisms.PHOTO.COM
 	}).id("ad_astra:photovoltaic_vesnium_cell")
+
+	// 车轮
+	kubejs.shaped("ad_astra:wheel", [
+		" A ",
+		"ABA",
+		" A "
+	], {
+		A: "thermal:cured_rubber",
+		B: "#forge:plates/industrial_iron"
+	}).id("ad_astra:wheel")
 })

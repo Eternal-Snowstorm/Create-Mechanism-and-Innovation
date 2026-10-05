@@ -21,4 +21,16 @@ ServerEvents.recipes((event) => {
 		])
 		.time(400)
 		.energy(8000)
+
+	// 铝合金
+	immersiveengineering.arc_furnace("#forge:ingots/aluminum_alloy")
+		.input("2x #forge:ingots/aluminum")
+		.slag("#forge:slag")
+		.additives([
+			"#forge:ingots/chromium",
+			"#forge:dusts/certus_quartz"
+		])
+		.time(100)
+		.energy(8000)
+		.id("neoecoae:aluminum_alloy_dust")
 })
