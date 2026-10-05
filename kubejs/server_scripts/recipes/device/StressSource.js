@@ -4,7 +4,6 @@ ServerEvents.recipes((event) => {
 		ENGINE: "cmi:incomplete_steam_engine"
 	}
 
-	// 应力源
 	// 风车轴承
 	kubejs.shaped("create:windmill_bearing", [
 		"X",
@@ -197,7 +196,7 @@ ServerEvents.recipes((event) => {
 			Inc.ENGINE,
 			"create:precision_mechanism"
 		])
-	]).loops(1).transitionalItem(Inc.ENGINE)
+	]).transitionalItem(Inc.ENGINE)
+		.loops(1)
 		.id("create:crafting/kinetics/steam_engine")
-
 })
