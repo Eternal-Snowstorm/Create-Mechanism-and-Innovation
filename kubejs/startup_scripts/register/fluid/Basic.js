@@ -111,5 +111,5 @@ StartupEvents.registry("fluid", (event) => {
 	// 极寒之凛冰
 	addAloneFluid("glacious_cryotheum")
 	// 热冷却液
-	addAloneFluid("cmi:hot_cryotheum_solution")
+	addAloneFluid("hot_cryotheum_solution")
 })

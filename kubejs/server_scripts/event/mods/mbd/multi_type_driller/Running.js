@@ -39,18 +39,160 @@ const DURATION = 20
 const COOLANT_INPUT_TRAIT = "multi_type_driller_coolant_input"
 const COOLANT_OUTPUT_TRAIT = "multi_type_driller_coolant_output"
 const PRODUCT_OUTPUT_TRAIT = "multi_type_driller_product_output"
+const FLUID_OUTPUT_TRAIT = "multi_type_driller_fluid_output"
 const GAS_OUTPUT_TRAIT = "multi_type_driller_gas_output"
 const ENERGY_INPUT_TRAIT = "multi_type_driller_energy_input"
 
-// 钻头工位在控制器上方 2 格, 判定点因此是"控制器朝向上方那两格再往前一格"
-const HEAD_ABOVE = 2
-const HEAD_BELOW = 2
+// 兜底用的纸面偏移: 结构未成型时找不到钻头, 就按这个猜一格.
+// 正常路径不走这里 —— 走 findPatternCell 拿钻头的真实世界坐标。
+const HEAD_BELOW = 3
 
+// 每台机器只打一次诊断日志, 用字符串键 (BlockPos 每次都新建对象, 不能当 WeakMap 键)
+const DIAG_ONCE = new Set()
+
+/**
+ * 找出 pattern 里某个格子对应的世界坐标。
+ *
+ * 做法: 用 MultiblockState.posCache (pattern 判定时逐格算出的世界坐标, 顺序与
+ * blockMatches 的 [aisle][row][char] 三重循环一致), 逐格读该坐标上的方块,
+ * 谁是我们想要的那个方块 id, 就返回它。
+ *
+ * 这样完全不用手推轴向 —— 之前正是在"控制器上方/下方/侧面"这一步反复搞错,
+ * 因为 FactoryBlockPattern 的 aisle/row/char 到世界 XYZ 的映射不直观。
+ *
+ * @param {*} state MultiblockState
+ * @param {string} blockId 目标方块 id
+ * @returns {Internal.BlockPos_|null}
+ */
+function findPatternCell(state, blockId) {
+	if (state == null) {
+		return null
+	}
+
+	try {
+		let cache = state.getCache()
+
+		if (cache == null) {
+			return null
+		}
+
+		let list = new java.util.ArrayList(cache)
+
+		for (let i = 0; i < list.size(); i++) {
+			let pos = list.get(i)
+
+			if (level.getBlockState(pos).getBlock().getId() === blockId) {
+				return pos
+			}
+		}
+	} catch (error) {
+		console.error("[driller] findPatternCell failed: " + error)
+	}
+
+	return null
+}
+
+/**
+ * 打印 pattern 关键格子相对控制器的世界偏移。
+ *
+ * 直接用 posCache 找到每个关键方块的真实位置, 算出相对控制器的 (dx,dy,dz),
+ * 把"结构要求的偏移"落到纸面上。
+ *
+ * @param {Internal.MBDMachine_} machine
+ * @param {*} state
+ */
+function dumpPatternOffsets(machine, state) {
+	try {
+		let cache = state == null ? null : state.getCache()
+
+		if (cache == null || cache.isEmpty()) {
+			console.info("[driller] offsets: posCache empty (structure not checked)")
+
+			return
+		}
+
+		let ctrl = machine.getPos()
+		let parts = []
+
+		for (let id of [DRILLER_HEAD, DRILLER_FLUID_PUMP, DRILLER_GAS_PUMP,
+			`${DRILLER_MACHINE_ID}_coolant_input_bus`,
+			`${DRILLER_MACHINE_ID}_coolant_output_bus`,
+			`${DRILLER_MACHINE_ID}_energy_input_bus`,
+			`${DRILLER_MACHINE_ID}_item_output_bus`]) {
+			let pos = findPatternCell(state, id)
+
+			if (pos == null) {
+				parts.push(id.substring(id.indexOf(':') + 1) + "=MISSING")
+				continue
+			}
+
+			parts.push(id.substring(id.indexOf(':') + 1)
+				+ "@(" + (pos.getX() - ctrl.getX())
+				+ "," + (pos.getY() - ctrl.getY())
+				+ "," + (pos.getZ() - ctrl.getZ()) + ")")
+		}
+
+		console.info("[driller] offsets: " + parts.join(" || "))
+	} catch (error) {
+		console.error("[driller] dumpPatternOffsets failed: " + error)
+	}
+}
+
+/**
+ * 取 PatternError 的可读文本。
+ *
+ * PatternError 的 getTooltips() 是 protected, 且它的 toString() 只有对象地址,
+ * 所以要反射调用 (setAccessible) 再拼接。
+ *
+ * @param {*} error
+ * @returns {string}
+ */
+function patternErrorText(error) {
+	if (error == null) {
+		return "none"
+	}
+
+	try {
+		let cls = error.getClass()
+		let tips = null
+
+		// getTooltips() 在 protected 层, 逐级往上找
+		while (cls != null && tips == null) {
+			for (let m of cls.getDeclaredMethods()) {
+				if (m.getName() === "getTooltips" && m.getParameterTypes().length === 0) {
+					m.setAccessible(true)
+					tips = m.invoke(error)
+					break
+				}
+			}
+
+			cls = cls.getSuperclass()
+		}
+
+		if (tips == null) {
+			return String(error)
+		}
+
+		let parts = []
+
+		for (let i = 0; i < tips.size(); i++) {
+			parts.push(String(tips.get(i).getString()))
+		}
+
+		return parts.join(" | ")
+	} catch (failure) {
+		return "unreadable(" + error.getClass().getSimpleName() + ": " + failure + ")"
+	}
+}
+
+// 注意: 命名不能和 kubejs/server_scripts/utils/Function.js 撞车 ——
+// KubeJS 把所有 server_scripts 放在同一个顶层作用域, 顶层 let/const 重复声明
+// 会直接报 "redeclaration of var X" (Function.js:6 已经声明了 $Gas).
 const $FluidStack = Java.loadClass("com.lowdragmc.lowdraglib.side.fluid.FluidStack")
-const $GasStack = Java.loadClass("mekanism.api.chemical.gas.GasStack")
-const $Gas = Java.loadClass("mekanism.api.chemical.gas.Gas")
+const $DrillerGasStack = Java.loadClass("mekanism.api.chemical.gas.GasStack")
+const $DrillerGas = Java.loadClass("mekanism.api.chemical.gas.Gas")
 const $LiquidBlock = Java.loadClass("net.minecraft.world.level.block.LiquidBlock")
-const $ResourceLocation = Java.loadClass("net.minecraft.resources.ResourceLocation")
+const $DrillerResourceLocation = Java.loadClass("net.minecraft.resources.ResourceLocation")
 const $ItemSlotCapabilityTrait =
 	Java.loadClass("com.lowdragmc.mbd2.common.trait.item.ItemSlotCapabilityTrait")
 const $FluidTankCapabilityTrait =
@@ -58,7 +200,7 @@ const $FluidTankCapabilityTrait =
 const $ForgeEnergyCapabilityTrait =
 	Java.loadClass("com.lowdragmc.mbd2.common.trait.forgeenergy.ForgeEnergyCapabilityTrait")
 const $ChemicalTankGasTrait =
-	Java.loadClass("com.lowdragmc.mbd2.integration.mekanism.trait.chemical.ChemicalTankCapabilityTrait$Gas")
+	Java.loadClass("com.lowdragmc.mbd2.integration.mekanism.trait.chemical.ChemicalTankCapabilityTraitDefinition$Gas")
 const $ItemRecipeCapability =
 	Java.loadClass("com.lowdragmc.mbd2.common.capability.recipe.ItemRecipeCapability")
 const $FluidRecipeCapability =
@@ -66,7 +208,7 @@ const $FluidRecipeCapability =
 const $MBDRegistries = Java.loadClass("com.lowdragmc.mbd2.api.registry.MBDRegistries")
 
 const DRILLER_RECIPE_TYPE = $MBDRegistries.RECIPE_TYPES.get(
-	new $ResourceLocation(DRILLER_MACHINE_ID)
+	new $DrillerResourceLocation(DRILLER_MACHINE_ID)
 )
 
 /**
@@ -76,49 +218,42 @@ const DRILLER_RECIPE_TYPE = $MBDRegistries.RECIPE_TYPES.get(
  * @returns {boolean}
  */
 function isMultiTypeDriller(machine) {
-	return machine != null && machine.getDefinition().getId() === DRILLER_MACHINE_ID
+	if (machine == null) {
+		return false
+	}
+
+	// 注意: MBDMachineDefinition 上的取 id 方法是 id() (返回 ResourceLocation),
+	// 没有 getId() —— 用错的话每 tick 都抛
+	// "Cannot find function getId in object MBDMachineDefinition",
+	// 整个 onTick 直接失效, 表现为"几乎丢失所有功能".
+	let definition = machine.getDefinition()
+
+	if (definition == null) {
+		return false
+	}
+
+	return String(definition.id()) === DRILLER_MACHINE_ID
 }
 
 /**
- * 机器朝向对应的正前方水平偏移
+ * 钻头"咬"下去的那一格世界坐标 = 钻头方块正下方 1 格。
+ *
+ * 这里必须由钻头的**实际世界坐标**推出, 不能用纸面偏移:
+ * 实测钻头会出现在控制器西侧 (日志 H: w=cmi:driller_head), 说明 pattern 的
+ * aisle/row/char 到世界 XYZ 并非直觉上的"上下"。所以统一从 pattern 缓存里
+ * 拿到钻头位置, 再往下推一格。
  *
  * @param {Internal.MBDMachine_} machine
- * @returns {number[]} [dx, dz]
- */
-function getFacingOffset(machine) {
-	let facing = machine.getFrontFacing()
-
-	if (facing == null || !facing.isPresent()) {
-		return [0, -1]
-	}
-
-	switch (facing.get().getName()) {
-		case "south":
-			return [0, 1]
-		case "east":
-			return [1, 0]
-		case "west":
-			return [-1, 0]
-		default:
-			return [0, -1]
-	}
-}
-
-/**
- * 钻头下方的世界坐标. 结构里 X 位于 (2,2,2), 控制器在 (2,1,2), 所以判定点
- * 是 "控制器 + 前方 * 2 + 下方 * 2"; 未旋转时即控制器向下两格.
- *
- * @param {Internal.MBDMachine_} machine
+ * @param {Internal.BlockPos_} headPos findPatternCell 找到的钻头位置
  * @returns {Internal.BlockPos_}
  */
-function getDrillPos(machine) {
-	let face = getFacingOffset(machine)
+function getDrillPos(machine, headPos) {
+	if (headPos != null) {
+		return headPos.below(1)
+	}
 
-	return machine.getPos().offset(
-		face[0] * HEAD_ABOVE,
-		-HEAD_BELOW,
-		face[1] * HEAD_ABOVE
-	)
+	// 兜底: 结构没成型时按纸面偏移猜一个
+	return machine.getPos().below(HEAD_BELOW)
 }
 
 /**
@@ -153,7 +288,7 @@ function isBottomlessFluid(fluid) {
 
 	let tag = TagKey.create(
 		Java.loadClass("net.minecraft.core.registries.Registries").FLUID,
-		new $ResourceLocation(BOTTOMLESS_FLUID_TAG)
+		new $DrillerResourceLocation(BOTTOMLESS_FLUID_TAG)
 	)
 
 	return fluid.is(tag)
@@ -210,7 +345,10 @@ function pushProduct(machine, itemId) {
 }
 
 /**
- * 塞流体进 A 冷却液输出仓 (热冷却液与液泵产出共用)
+ * 塞流体进 C 产物输出口的液体仓 (液泵抽出来的液体)
+ *
+ * C 口是固/液/气三者共用的输出口, 所以液泵产物走 multi_type_driller_fluid_output,
+ * 而热冷却液走 A 仓的 multi_type_driller_coolant_output (换热回路, 与产物分开)。
  *
  * @param {Internal.MBDMachine_} machine
  * @param {Internal.Fluid_} fluid
@@ -218,7 +356,7 @@ function pushProduct(machine, itemId) {
  * @returns {boolean}
  */
 function pushFluid(machine, fluid, amount) {
-	let output = getTrait(machine, $FluidTankCapabilityTrait, COOLANT_OUTPUT_TRAIT)
+	let output = getTrait(machine, $FluidTankCapabilityTrait, FLUID_OUTPUT_TRAIT)
 
 	if (output == null) {
 		return false
@@ -257,7 +395,7 @@ function pushGas(machine, gasId, amount) {
 		return false
 	}
 
-	let gas = $Gas.getFromRegistry(new $ResourceLocation(gasId))
+	let gas = $DrillerGas.getFromRegistry(new $DrillerResourceLocation(gasId))
 
 	if (gas == null || gas.isEmptyType()) {
 		return false
@@ -265,11 +403,11 @@ function pushGas(machine, gasId, amount) {
 
 	let tank = output.storages[0]
 
-	if (tank.insert(new $GasStack(gas, amount), true) < amount) {
+	if (tank.insert(new $DrillerGasStack(gas, amount), true) < amount) {
 		return false
 	}
 
-	tank.insert(new $GasStack(gas, amount), false)
+	tank.insert(new $DrillerGasStack(gas, amount), false)
 
 	return true
 }
@@ -339,12 +477,68 @@ MBDMachineEvents.onTick(($) => {
 		return
 	}
 
-	// ---- 判定钻头类型 ----
-	let headId = level.getBlockState(machine.getPos().above(HEAD_ABOVE)).getBlock().getId()
+	// ---- 诊断 ----
+	// 只在每台机器第一次进入周期时打印一次。
+	// 注意: machine.getPos() 每次返回新的 BlockPos 对象, 用 WeakMap 当键去重无效,
+	// 必须用字符串键。
+	let state = machine.getMultiblockState()
+	let formed = machine.isFormed()
+	let key = "driller@" + machine.getPos()
 
-	if (headId !== DRILLER_HEAD && headId !== DRILLER_FLUID_PUMP && headId !== DRILLER_GAS_PUMP) {
+	if (!DIAG_ONCE.has(key)) {
+		DIAG_ONCE.add(key)
+
+		// PatternError 的文本要反射取: 它是受保护的 getTooltips(),
+		// 直接 String(error) 只有一个无用的对象地址。
+		let errText = "none"
+
+		if (state != null && state.hasError()) {
+			errText = patternErrorText(state.error)
+		}
+
+		console.info("[driller] pos=" + machine.getPos()
+			+ " facing=" + machine.getFrontFacing()
+			+ " formed=" + formed
+			+ " parts=" + (machine.getPartPositions() != null ? machine.getPartPositions().length : -1)
+			+ " error=" + errText)
+		console.info("[driller] V: ctrl-3=" + level.getBlockState(machine.getPos().below(3)).getBlock().getId()
+			+ " | ctrl-2=" + level.getBlockState(machine.getPos().below(2)).getBlock().getId()
+			+ " | ctrl-1=" + level.getBlockState(machine.getPos().below(1)).getBlock().getId()
+			+ " | ctrl=" + level.getBlockState(machine.getPos()).getBlock().getId()
+			+ " | ctrl+1=" + level.getBlockState(machine.getPos().above(1)).getBlock().getId()
+			+ " | ctrl+2=" + level.getBlockState(machine.getPos().above(2)).getBlock().getId())
+		console.info("[driller] H: n=" + level.getBlockState(machine.getPos().north()).getBlock().getId()
+			+ " | s=" + level.getBlockState(machine.getPos().south()).getBlock().getId()
+			+ " | w=" + level.getBlockState(machine.getPos().west()).getBlock().getId()
+			+ " | e=" + level.getBlockState(machine.getPos().east()).getBlock().getId())
+
+		// ---- 结构要求 vs 实际摆放 ----
+		// 直接读 MultiblockState 的 posCache: 它就是 pattern 逐格判定过的世界坐标,
+		// 数量与 blockMatches 的格子数一致(150), 遍历顺序也一致 ——
+		// 于是可以逐个算出"每个格子离控制器多少格", 不用再去猜轴向。
+		dumpPatternOffsets(machine, state)
+	}
+
+	// ---- 判定钻头类型 ----
+	// 不再硬编码"控制器上/下几格": 直接从 pattern 的 posCache 里找出钻头方块的实际
+	// 世界坐标。这样与 FactoryBlockPattern 的轴向映射完全解耦 ——
+	// 之前用 below(1) 判定, 实测钻头却出现在控制器西侧 (见日志 H: w=cmi:driller_head),
+	// 就是因为 aisle/row/char 到世界 XYZ 的映射不是直觉上的"上下"。
+	let headPos = findPatternCell(state, DRILLER_HEAD)
+
+	if (headPos == null) {
+		headPos = findPatternCell(state, DRILLER_FLUID_PUMP)
+	}
+
+	if (headPos == null) {
+		headPos = findPatternCell(state, DRILLER_GAS_PUMP)
+	}
+
+	if (headPos == null) {
 		return
 	}
+
+	let headId = level.getBlockState(headPos).getBlock().getId()
 
 	// ---- 先确认输入够、输出放得下, 避免扣了东西却产不出来 ----
 	let coolantIn = getTrait(machine, $FluidTankCapabilityTrait, COOLANT_INPUT_TRAIT)
@@ -352,6 +546,14 @@ MBDMachineEvents.onTick(($) => {
 	let energyIn = getTrait(machine, $ForgeEnergyCapabilityTrait, ENERGY_INPUT_TRAIT)
 
 	if (coolantIn == null || coolantOut == null || energyIn == null) {
+		// 冷却液输入/输出仓 (或能量仓) 没接上 —— 这时不该"看起来在运行",
+		// 每 100 tick 提示一次, 方便定位是哪一路总线没代理上。
+		if (machine.getOffsetTimer() % 100 === 0) {
+			console.warn("[driller] trait missing: coolantIn=" + (coolantIn != null)
+				+ " coolantOut=" + (coolantOut != null)
+				+ " energyIn=" + (energyIn != null))
+		}
+
 		return
 	}
 
@@ -367,7 +569,7 @@ MBDMachineEvents.onTick(($) => {
 	}
 
 	// ---- 按钻头类型产出 ----
-	let pos = getDrillPos(machine)
+	let pos = getDrillPos(machine, headPos)
 	let belowId = level.getBlockState(pos).getBlock().getId()
 
 	if (headId === DRILLER_HEAD) {
