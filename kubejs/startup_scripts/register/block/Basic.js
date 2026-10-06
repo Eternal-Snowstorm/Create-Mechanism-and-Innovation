@@ -188,6 +188,33 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiMiningLevel.IRON.tag())
 		.requiresTool(true)
 
+	// 钻头
+	addBlock("driller_head")
+		.soundType(SoundType.NETHERITE_BLOCK)
+		.hardness(5)
+		.resistance(5)
+		.tagBlock(CmiToolType.PICKAXE.tag())
+		.tagBlock(CmiMiningLevel.IRON.tag())
+		.requiresTool(true)
+
+	// 液泵
+	addBlock("driller_fluid_pump")
+		.soundType(SoundType.NETHERITE_BLOCK)
+		.hardness(5)
+		.resistance(5)
+		.tagBlock(CmiToolType.PICKAXE.tag())
+		.tagBlock(CmiMiningLevel.IRON.tag())
+		.requiresTool(true)
+
+	// 气泵
+	addBlock("driller_gas_pump")
+		.soundType(SoundType.NETHERITE_BLOCK)
+		.hardness(5)
+		.resistance(5)
+		.tagBlock(CmiToolType.PICKAXE.tag())
+		.tagBlock(CmiMiningLevel.IRON.tag())
+		.requiresTool(true)
+
 	// 瓷砖
 	addBlock("ceramic_tile")
 		.soundType(SoundType.STONE)
