@@ -114,4 +114,5 @@ ClientEvents.lang("zh_cn", (event) => {
 	addFluidLang("hydrazines", "联氨")
 	addFluidLang("hydrazines_fuel", "联氨燃油")
 	addFluidLang("glacious_cryotheum", "极寒之凛冰")
+	addFluidLang("placeholder_fluid", "占位流体")
 })
