@@ -66,4 +66,13 @@ StartupEvents.registry("block", (event) => {
 		.resistance(5)
 		.tagBlock(CmiToolType.PICKAXE.tag())
 		.tagBlock(CmiMiningLevel.DIAMOND.tag())
+
+	// 械钢
+	addCasing("mechanium")
+		.textureAll(Cmi.loadResource("block/casing/mechanium/casing"))
+		.soundType(SoundType.METAL)
+		.hardness(5)
+		.resistance(5)
+		.tagBlock(CmiToolType.PICKAXE.tag())
+		.tagBlock(CmiMiningLevel.DIAMOND.tag())
 })

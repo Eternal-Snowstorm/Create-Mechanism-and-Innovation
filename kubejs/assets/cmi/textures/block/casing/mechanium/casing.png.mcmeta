@@ -1,0 +1,18 @@
+{
+	"ctm": {
+		"ctm_version": 1,
+		"type": "CTM",
+		"layer": "SOLID",
+		"textures": [
+			"cmi:block/casing/mechanium/ctm"
+		],
+		
+		"extra": {
+			"connect_to": [
+				{
+					"block": "cmi:mechanium_casing"
+				}
+			]
+		}
+	}
+}
