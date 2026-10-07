@@ -244,6 +244,38 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiMiningLevel.STONE.tag())
 		.requiresTool(true)
 
+	// DTMA幻晶能量核心
+	addBlock("dtma_dreamcore_energy_core")
+		.textureAll(Cmi.loadResource("block/dreamcore_core"))
+		.soundType(SoundType.STONE)
+		.hardness(6)
+		.resistance(6)
+		.tagBlock(CmiToolType.PICKAXE.tag())
+		.tagBlock(CmiMiningLevel.STONE.tag())
+		.requiresTool(true)
+
+	// 幻晶线圈
+	addBlock("dreamcore_coil")
+		.textureAll(Cmi.loadResource("block/dtma/coil_side"))
+		.soundType(SoundType.STONE)
+		.hardness(6)
+		.resistance(6)
+		.tagBlock(CmiToolType.PICKAXE.tag())
+		.tagBlock(CmiMiningLevel.STONE.tag())
+		.requiresTool(true)
+
+	// 械钢矿石
+	addBlock("mechanium_ore")
+		.textureAll(Cmi.loadResource("block/mechanium_ore"))
+		.soundType(SoundType.STONE)
+		.hardness(6)
+		.resistance(6)
+		.tagBlock(CmiToolType.PICKAXE.tag())
+		.tagBlock(CmiMiningLevel.STONE.tag())
+		.requiresTool(true)
+
+
+		
 	// 雕纹铜块
 	addBlock("chiseled_copper")
 		.textureAll(Cmi.loadResource("block/chiseled_copper/0"))

@@ -17,4 +17,7 @@ StartupEvents.registry("fluid", (event) => {
 
 	// 熔融幻晶
 	addColorMaterialFluid("dreamcore", 0xEE8ED7)
+
+	// 械钢
+	addColorMaterialFluid("mechanium", 0xBCDAF8)
 })
