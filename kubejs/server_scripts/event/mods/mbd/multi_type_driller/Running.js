@@ -177,6 +177,26 @@ function getTrait(machine, traitClass, name) {
 }
 
 /**
+ * 切换机器状态 (working / waiting)。
+ *
+ * 本机的 MBD2 配方引擎是关掉的 (recipeType 用 mbd2:dummy), 所以引擎不会像
+ * 普通机器那样自动更新状态 —— 由这里手动切。
+ * 状态名必须与 drillerStates() 里定义的一致: working / waiting / suspend。
+ *
+ * @param {Internal.MBDMachine_} machine
+ * @param {string} state
+ */
+function setDrillerState(machine, state) {
+	try {
+		if (machine.getMachineStateName() !== state) {
+			machine.setMachineState(state)
+		}
+	} catch (error) {
+		console.error("[multi_type_driller] 切换状态 " + state + " 失败: " + error)
+	}
+}
+
+/**
  * 该流体 id 是否在 #create:bottomless/allow 里
  *
  * @param {Internal.Fluid_} fluid
@@ -435,31 +455,40 @@ MBDMachineEvents.onTick(($) => {
 		let pool = getProductPool(belowId)
 
 		if (pool.length === 0) {
+			setDrillerState(machine, "waiting")
 			return
 		}
 
 		if (!pushProduct(machine, pool[Math.floor(Math.random() * pool.length)])) {
+			setDrillerState(machine, "waiting")
 			return
 		}
 	} else if (headId === DRILLER_FLUID_PUMP) {
 		let fluid = getWorldFluid(level, pos)
 
 		if (fluid == null || !isBottomlessFluid(fluid)) {
+			setDrillerState(machine, "waiting")
 			return
 		}
 
 		if (!pushFluid(machine, fluid, PUMP_OUTPUT)) {
+			setDrillerState(machine, "waiting")
 			return
 		}
 	} else {
 		if (belowId !== MERCURY_GEOTHERMAL_VENT) {
+			setDrillerState(machine, "waiting")
 			return
 		}
 
 		if (!pushGas(machine, HYDROGEN_GAS, PUMP_OUTPUT)) {
+			setDrillerState(machine, "waiting")
 			return
 		}
 	}
+
+	// 这一周期真的产出成功了 -> 切到 working (gecko 模型 / 工作态外观)
+	setDrillerState(machine, "working")
 
 	// ---- 产物放好了, 现在扣冷却液 / 产热冷却液 / 扣电 ----
 	let hotCoolant = Fluid.of(HOT_COOLANT_FLUID).getFluid()

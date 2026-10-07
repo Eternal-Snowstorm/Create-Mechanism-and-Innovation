@@ -417,10 +417,21 @@ MBDRegistryEvents.machine(event => {
 	)
 	builder.itemProperties($ConfigItemProperties.builder().maxStackSize(64).isGui3d(true).build())
 	builder.machineSettings(() => drillerSettings())
-	// 钻井机自己判定工作 (要读钻头下方的世界方块/流体), 关掉 MBD2 配方引擎,
-	// 由 Running.js 按 20 tick 一个周期驱动; .rt 只负责 JEI/EMI 与产物池数据
+	// 钻井机自己判定工作 (要读钻头下方的世界方块/流体), MBD2 配方引擎全程不参与:
+	// 用 mbd2:dummy 这个空配方类型, 任何配方都匹配不上, 于是
+	// MBDRecipe.matchRecipe 永远不会被调用 —— 也就不会出现
+	//   "输出不足: 物品 | miss: ..."
+	//
+	// 为什么必须这样: .rt 里物品输出是一个**候选池** (例如煤矿床有 9 种可能掉落),
+	// 但 MBD2 的 outputs 是 **AND 语义** —— 列表里每一项都必须能放下。
+	// 于是引擎会要求 9 种产物同时放得下, 必然报"输出不足"。
+	// 真正的"随机挑一个"由 Running.js 的 getProductPool() 自己做。
+	//
+	// 注意: .rt 仍然注册在 MBDRegistries.RECIPE_TYPES 里, Running.js 通过
+	//       $MBDRegistries.RECIPE_TYPES.get(...) 直接读它的数据, 与这台机器
+	//       是否挂配方引擎无关。
 	builder.recipeLogicSettings(
-		$ConfigRecipeLogicSettings.builder().enable(false).recipeType(DRILLER).build()
+		$ConfigRecipeLogicSettings.builder().enable(false).recipeType("mbd2:dummy").build()
 	)
 	builder.multiblockSettings(() =>
 		$ConfigMultiblockSettings.builder().showUIOnlyFormed(true).showUIWhenClickStructure(true).build()
