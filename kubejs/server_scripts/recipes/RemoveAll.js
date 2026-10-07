@@ -158,7 +158,6 @@ ServerEvents.recipes((event) => {
 		"jei:/create/compacting/diorite_from_flint",
 		"jei:/createaddition/compat/immersiveengineering/fabric_sail",
 		"jei:/create/crafting/kinetics/white_sailfrom_conversion",
-		"jei:/create_factory_abstractions/empty",
 		"jei:/createaddition/compat/immersiveengineering/crushing/steel_ingot",
 		"jei:/create_factory_logistics/sequenced_assembly/fluid_mechanism",
 		"jei:/create/crafting/kinetics/track_observer_from_other_plates",
