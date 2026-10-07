@@ -1,0 +1,11 @@
+
+#All settings below will only take effect after restarting the client.
+[client]
+
+	#Tab Sections Settings
+	[client.tab_configs]
+		#Whether the index panel on the left edge of the creative inventory is expanded
+		#type: boolean
+		#default: true
+		index_expanded = true
+

@@ -301,4 +301,7 @@ StartupEvents.registry("block", (event) => {
 		.resistance(6)
 		.tagBlock(CmiToolType.PICKAXE.tag())
 		.tagBlock(CmiMiningLevel.STONE.tag())
+
+	addBlock("test_block")
+		.model("cmi:block/machine/chemical_reactor/item_input")
 })
