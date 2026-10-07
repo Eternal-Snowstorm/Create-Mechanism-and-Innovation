@@ -164,3 +164,4 @@ updater/dev/
 updater/logs/
 updater/.rollback/
 config/asteorbar-client.toml
+/.graphflow
