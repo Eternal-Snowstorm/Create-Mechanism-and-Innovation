@@ -14,10 +14,11 @@
 // 产物池直接读自 ldlib/assets/mbd2/recipe_type/multi_type_driller.rt,
 // 不会和 RnsMining.js 里的定义脱钩.
 //
-// 输出口 (与 .mb 中 7 个仓室对应):
-//   物品 -> C 产物输出口  multi_type_driller_product_output
-//   流体 -> A 冷却液输出仓 multi_type_driller_coolant_output (热冷却液 / 液泵产出共用)
-//   气体 -> C 产物输出口  multi_type_driller_gas_output
+// 输出口 (与 .mb 里的 6 条特性对应):
+//   B 冷却液输入仓   multi_type_driller_coolant_input
+//   A 热冷却液输出仓 multi_type_driller_coolant_output
+//   C 产物输出口     multi_type_driller_product_output / _fluid_output / _gas_output
+//   D 能量输入仓     multi_type_driller_energy_input
 
 const DRILLER_MACHINE_ID = "cmi:multi_type_driller"
 
@@ -43,147 +44,6 @@ const FLUID_OUTPUT_TRAIT = "multi_type_driller_fluid_output"
 const GAS_OUTPUT_TRAIT = "multi_type_driller_gas_output"
 const ENERGY_INPUT_TRAIT = "multi_type_driller_energy_input"
 
-// 兜底用的纸面偏移: 结构未成型时找不到钻头, 就按这个猜一格.
-// 正常路径不走这里 —— 走 findPatternCell 拿钻头的真实世界坐标。
-const HEAD_BELOW = 3
-
-// 每台机器只打一次诊断日志, 用字符串键 (BlockPos 每次都新建对象, 不能当 WeakMap 键)
-const DIAG_ONCE = new Set()
-
-/**
- * 找出 pattern 里某个格子对应的世界坐标。
- *
- * 做法: 用 MultiblockState.posCache (pattern 判定时逐格算出的世界坐标, 顺序与
- * blockMatches 的 [aisle][row][char] 三重循环一致), 逐格读该坐标上的方块,
- * 谁是我们想要的那个方块 id, 就返回它。
- *
- * 这样完全不用手推轴向 —— 之前正是在"控制器上方/下方/侧面"这一步反复搞错,
- * 因为 FactoryBlockPattern 的 aisle/row/char 到世界 XYZ 的映射不直观。
- *
- * @param {*} state MultiblockState
- * @param {string} blockId 目标方块 id
- * @returns {Internal.BlockPos_|null}
- */
-function findPatternCell(state, blockId) {
-	if (state == null) {
-		return null
-	}
-
-	try {
-		let cache = state.getCache()
-
-		if (cache == null) {
-			return null
-		}
-
-		let list = new java.util.ArrayList(cache)
-
-		for (let i = 0; i < list.size(); i++) {
-			let pos = list.get(i)
-
-			if (level.getBlockState(pos).getBlock().getId() === blockId) {
-				return pos
-			}
-		}
-	} catch (error) {
-		console.error("[driller] findPatternCell failed: " + error)
-	}
-
-	return null
-}
-
-/**
- * 打印 pattern 关键格子相对控制器的世界偏移。
- *
- * 直接用 posCache 找到每个关键方块的真实位置, 算出相对控制器的 (dx,dy,dz),
- * 把"结构要求的偏移"落到纸面上。
- *
- * @param {Internal.MBDMachine_} machine
- * @param {*} state
- */
-function dumpPatternOffsets(machine, state) {
-	try {
-		let cache = state == null ? null : state.getCache()
-
-		if (cache == null || cache.isEmpty()) {
-			console.info("[driller] offsets: posCache empty (structure not checked)")
-
-			return
-		}
-
-		let ctrl = machine.getPos()
-		let parts = []
-
-		for (let id of [DRILLER_HEAD, DRILLER_FLUID_PUMP, DRILLER_GAS_PUMP,
-			`${DRILLER_MACHINE_ID}_coolant_input_bus`,
-			`${DRILLER_MACHINE_ID}_coolant_output_bus`,
-			`${DRILLER_MACHINE_ID}_energy_input_bus`,
-			`${DRILLER_MACHINE_ID}_item_output_bus`]) {
-			let pos = findPatternCell(state, id)
-
-			if (pos == null) {
-				parts.push(id.substring(id.indexOf(':') + 1) + "=MISSING")
-				continue
-			}
-
-			parts.push(id.substring(id.indexOf(':') + 1)
-				+ "@(" + (pos.getX() - ctrl.getX())
-				+ "," + (pos.getY() - ctrl.getY())
-				+ "," + (pos.getZ() - ctrl.getZ()) + ")")
-		}
-
-		console.info("[driller] offsets: " + parts.join(" || "))
-	} catch (error) {
-		console.error("[driller] dumpPatternOffsets failed: " + error)
-	}
-}
-
-/**
- * 取 PatternError 的可读文本。
- *
- * PatternError 的 getTooltips() 是 protected, 且它的 toString() 只有对象地址,
- * 所以要反射调用 (setAccessible) 再拼接。
- *
- * @param {*} error
- * @returns {string}
- */
-function patternErrorText(error) {
-	if (error == null) {
-		return "none"
-	}
-
-	try {
-		let cls = error.getClass()
-		let tips = null
-
-		// getTooltips() 在 protected 层, 逐级往上找
-		while (cls != null && tips == null) {
-			for (let m of cls.getDeclaredMethods()) {
-				if (m.getName() === "getTooltips" && m.getParameterTypes().length === 0) {
-					m.setAccessible(true)
-					tips = m.invoke(error)
-					break
-				}
-			}
-
-			cls = cls.getSuperclass()
-		}
-
-		if (tips == null) {
-			return String(error)
-		}
-
-		let parts = []
-
-		for (let i = 0; i < tips.size(); i++) {
-			parts.push(String(tips.get(i).getString()))
-		}
-
-		return parts.join(" | ")
-	} catch (failure) {
-		return "unreadable(" + error.getClass().getSimpleName() + ": " + failure + ")"
-	}
-}
 
 // 注意: 命名不能和 kubejs/server_scripts/utils/Function.js 撞车 ——
 // KubeJS 把所有 server_scripts 放在同一个顶层作用域, 顶层 let/const 重复声明
@@ -236,15 +96,50 @@ function isMultiTypeDriller(machine) {
 }
 
 /**
- * 钻头"咬"下去的那一格世界坐标 = 钻头方块正下方 1 格。
+ * 找出三个工位方块 (钻头 / 液泵 / 气泵) 里实际在场的那个。
  *
- * 这里必须由钻头的**实际世界坐标**推出, 不能用纸面偏移:
- * 实测钻头会出现在控制器西侧 (日志 H: w=cmi:driller_head), 说明 pattern 的
- * aisle/row/char 到世界 XYZ 并非直觉上的"上下"。所以统一从 pattern 缓存里
- * 拿到钻头位置, 再往下推一格。
+ * 为什么不写死 "控制器下方 1 格":
+ *   pattern 的 aisle/row/char 到世界 XYZ 的映射会随机器朝向变化, 实测钻头会出现在
+ *   控制器侧面而不是正下方 (日志 H: w=cmi:driller_head)。
+ *
+ * 为什么不用 MultiblockState.posCache:
+ *   结构未成型/未判定时 posCache 为空, 直接遍历会抛
+ *   NullPointerException, 挂在 tick 上就会刷异常 —— 之前那个"鼠标移上去就崩"
+ *   就是这么来的。
+ *
+ * 这里改为从控制器出发, 按一组候选偏移逐一认方块; 命中即返回。偏移集合覆盖
+ * "正下方优先 + 六个方向的一格/两格", 数量很少, 每周期最多十几次方块查询。
  *
  * @param {Internal.MBDMachine_} machine
- * @param {Internal.BlockPos_} headPos findPatternCell 找到的钻头位置
+ * @param {Internal.Level_} level
+ * @returns {Internal.BlockPos_|null}
+ */
+function findHead(machine, level) {
+	let origin = machine.getPos()
+	let offsets = [
+		[0, -1, 0], [0, -2, 0], [0, 1, 0], [0, 2, 0],
+		[1, 0, 0], [-1, 0, 0], [0, 0, 1], [0, 0, -1],
+		[1, -1, 0], [-1, -1, 0], [0, -1, 1], [0, -1, -1]
+	]
+
+	for (let i = 0; i < offsets.length; i++) {
+		let o = offsets[i]
+		let pos = origin.offset(o[0], o[1], o[2])
+		let id = level.getBlockState(pos).getBlock().getId()
+
+		if (id === DRILLER_HEAD || id === DRILLER_FLUID_PUMP || id === DRILLER_GAS_PUMP) {
+			return pos
+		}
+	}
+
+	return null
+}
+
+/**
+ * 钻头"咬"下去的那一格世界坐标 = 工位方块正下方 1 格。
+ *
+ * @param {Internal.MBDMachine_} machine
+ * @param {Internal.BlockPos_} headPos findHead 找到的工位方块位置
  * @returns {Internal.BlockPos_}
  */
 function getDrillPos(machine, headPos) {
@@ -477,62 +372,12 @@ MBDMachineEvents.onTick(($) => {
 		return
 	}
 
-	// ---- 诊断 ----
-	// 只在每台机器第一次进入周期时打印一次。
-	// 注意: machine.getPos() 每次返回新的 BlockPos 对象, 用 WeakMap 当键去重无效,
-	// 必须用字符串键。
-	let state = machine.getMultiblockState()
-	let formed = machine.isFormed()
-	let key = "driller@" + machine.getPos()
-
-	if (!DIAG_ONCE.has(key)) {
-		DIAG_ONCE.add(key)
-
-		// PatternError 的文本要反射取: 它是受保护的 getTooltips(),
-		// 直接 String(error) 只有一个无用的对象地址。
-		let errText = "none"
-
-		if (state != null && state.hasError()) {
-			errText = patternErrorText(state.error)
-		}
-
-		console.info("[driller] pos=" + machine.getPos()
-			+ " facing=" + machine.getFrontFacing()
-			+ " formed=" + formed
-			+ " parts=" + (machine.getPartPositions() != null ? machine.getPartPositions().length : -1)
-			+ " error=" + errText)
-		console.info("[driller] V: ctrl-3=" + level.getBlockState(machine.getPos().below(3)).getBlock().getId()
-			+ " | ctrl-2=" + level.getBlockState(machine.getPos().below(2)).getBlock().getId()
-			+ " | ctrl-1=" + level.getBlockState(machine.getPos().below(1)).getBlock().getId()
-			+ " | ctrl=" + level.getBlockState(machine.getPos()).getBlock().getId()
-			+ " | ctrl+1=" + level.getBlockState(machine.getPos().above(1)).getBlock().getId()
-			+ " | ctrl+2=" + level.getBlockState(machine.getPos().above(2)).getBlock().getId())
-		console.info("[driller] H: n=" + level.getBlockState(machine.getPos().north()).getBlock().getId()
-			+ " | s=" + level.getBlockState(machine.getPos().south()).getBlock().getId()
-			+ " | w=" + level.getBlockState(machine.getPos().west()).getBlock().getId()
-			+ " | e=" + level.getBlockState(machine.getPos().east()).getBlock().getId())
-
-		// ---- 结构要求 vs 实际摆放 ----
-		// 直接读 MultiblockState 的 posCache: 它就是 pattern 逐格判定过的世界坐标,
-		// 数量与 blockMatches 的格子数一致(150), 遍历顺序也一致 ——
-		// 于是可以逐个算出"每个格子离控制器多少格", 不用再去猜轴向。
-		dumpPatternOffsets(machine, state)
-	}
-
-	// ---- 判定钻头类型 ----
-	// 不再硬编码"控制器上/下几格": 直接从 pattern 的 posCache 里找出钻头方块的实际
-	// 世界坐标。这样与 FactoryBlockPattern 的轴向映射完全解耦 ——
-	// 之前用 below(1) 判定, 实测钻头却出现在控制器西侧 (见日志 H: w=cmi:driller_head),
-	// 就是因为 aisle/row/char 到世界 XYZ 的映射不是直觉上的"上下"。
-	let headPos = findPatternCell(state, DRILLER_HEAD)
-
-	if (headPos == null) {
-		headPos = findPatternCell(state, DRILLER_FLUID_PUMP)
-	}
-
-	if (headPos == null) {
-		headPos = findPatternCell(state, DRILLER_GAS_PUMP)
-	}
+	// ---- 定位钻头 / 液泵 / 气泵 ----
+	// 结构里 X 工位在控制器正下方 1 格 (spec L0=最底层, 控制器在 L1)。
+	// 但 pattern 的 aisle/row/char 到世界 XYZ 的映射会随机器朝向变化, 所以这里不写死
+	// "below(1)", 而是从控制器出发按一组候选偏移去认方块 —— 命中哪个就是哪个。
+	// 这样与朝向解耦, 也不会像读 MultiblockState.posCache 那样在结构未成型时抛 NPE。
+	let headPos = findHead(machine, level)
 
 	if (headPos == null) {
 		return

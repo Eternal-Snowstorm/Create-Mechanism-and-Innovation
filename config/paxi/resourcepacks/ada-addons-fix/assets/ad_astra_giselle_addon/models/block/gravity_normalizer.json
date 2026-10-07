@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "down": "ad_astra_giselle_addon:block/machine_top",
+    "up": "ad_astra_giselle_addon:block/machine_top",
+    "north": "ad_astra_giselle_addon:block/gravity_normalizer",
+    "east": "ad_astra_giselle_addon:block/gravity_normalizer",
+    "south": "ad_astra_giselle_addon:block/gravity_normalizer",
+    "west": "ad_astra_giselle_addon:block/gravity_normalizer",
+    "particle": "ad_astra_giselle_addon:block/gravity_normalizer"
+  }
+}
