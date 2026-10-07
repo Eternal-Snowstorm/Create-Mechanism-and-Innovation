@@ -447,10 +447,9 @@ MBDRegistryEvents.machine(event => {
  * @param {string} id
  * @param {string} model
  * @param {string} traitFilter
- * @param {*} io
  * @param {number} interval
  */
-function registerDrillerBus(event, id, model, traitFilter, io, interval) {
+function registerDrillerBus(event, id, model, traitFilter, interval) {
 	const builder = event.create("single", id)
 	builder.rootState(machineState("base", model, 0))
 	builder.blockProperties($ConfigBlockProperties.builder().destroyTime(3).rotationState($RotationState.NON_Y_AXIS).build())
@@ -462,21 +461,39 @@ function registerDrillerBus(event, id, model, traitFilter, io, interval) {
 	builder.partSettings(() => {
 		const proxy = new $ConfigPartSettings$ProxyCapability()
 		setPrivateField(proxy, "traitNameFilter", traitFilter)
-		proxy.capabilityIO().setInternal(io)
-		proxy.capabilityIO().setFrontIO(io)
-		proxy.capabilityIO().setBackIO($IO.NONE)
-		proxy.capabilityIO().setLeftIO($IO.NONE)
-		proxy.capabilityIO().setRightIO($IO.NONE)
-		proxy.capabilityIO().setTopIO($IO.NONE)
-		proxy.capabilityIO().setBottomIO($IO.NONE)
+
+		// capabilityIO: 这个部件对外暴露哪一侧的能力。
+		// 六面都给 BOTH, 这样管道接在总线的哪一面都能互操作。
+		// (真正的方向限制交给控制器侧特性的 recipeHandlerIO: 输入仓不允许被抽走,
+		//  输出仓不允许被塞入 —— 所以这里放开是安全的。)
+		proxy.capabilityIO().setInternal($IO.BOTH)
+		proxy.capabilityIO().setFrontIO($IO.BOTH)
+		proxy.capabilityIO().setBackIO($IO.BOTH)
+		proxy.capabilityIO().setLeftIO($IO.BOTH)
+		proxy.capabilityIO().setRightIO($IO.BOTH)
+		proxy.capabilityIO().setTopIO($IO.BOTH)
+		proxy.capabilityIO().setBottomIO($IO.BOTH)
+
+		// autoIO: 部件把内容物自动搬到相邻方块的方向。
+		//
+		// ★ 这里必须六面都开 ★
+		// MBDPartMachine.internalServerTick() 的字节码逻辑是:
+		//     for (Direction d : Direction.values()) {
+		//         IO io = proxy.autoIO().getIO(d, frontFacing);
+		//         if (io != IO.NONE) trait.handleAutoIO(pos, d, io);
+		//     }
+		// 也就是说 **autoIO 为 NONE 的那个面完全不会搬运**。
+		// 之前只设了 frontIO, 于是总线只在它"正对"的那一面工作 ——
+		// 表现为输出槽挂着却没能力/不导出。
+		// 六面给 BOTH 后, 总线朝任意方向都能与相邻容器互操作。
 		proxy.autoIO().setEnable(true)
 		proxy.autoIO().setInterval(interval)
-		proxy.autoIO().setFrontIO(io)
-		proxy.autoIO().setBackIO($IO.NONE)
-		proxy.autoIO().setLeftIO($IO.NONE)
-		proxy.autoIO().setRightIO($IO.NONE)
-		proxy.autoIO().setTopIO($IO.NONE)
-		proxy.autoIO().setBottomIO($IO.NONE)
+		proxy.autoIO().setFrontIO($IO.BOTH)
+		proxy.autoIO().setBackIO($IO.BOTH)
+		proxy.autoIO().setLeftIO($IO.BOTH)
+		proxy.autoIO().setRightIO($IO.BOTH)
+		proxy.autoIO().setTopIO($IO.BOTH)
+		proxy.autoIO().setBottomIO($IO.BOTH)
 
 		const part = $ConfigPartSettings.builder()
 		part.enable(true)
@@ -488,25 +505,25 @@ function registerDrillerBus(event, id, model, traitFilter, io, interval) {
 
 MBDRegistryEvents.machine(event => {
 	registerDrillerBus(event, `${DRILLER}_coolant_input_bus`,
-		`${MODEL}/fluid_input`, T_COOLANT_IN, $IO.IN, 1)
+		`${MODEL}/fluid_input`, T_COOLANT_IN, 1)
 })
 MBDRegistryEvents.machine(event => {
 	registerDrillerBus(event, `${DRILLER}_coolant_output_bus`,
-		`${MODEL}/fluid_output`, T_COOLANT_OUT, $IO.OUT, 20)
+		`${MODEL}/fluid_output`, T_COOLANT_OUT, 20)
 })
 MBDRegistryEvents.machine(event => {
 	registerDrillerBus(event, `${DRILLER}_product_output_bus`,
-		`${MODEL}/item_output`, T_PRODUCT, $IO.OUT, 20)
+		`${MODEL}/item_output`, T_PRODUCT, 20)
 })
 MBDRegistryEvents.machine(event => {
 	registerDrillerBus(event, `${DRILLER}_fluid_output_bus`,
-		`${MODEL}/fluid_output`, T_FLUID, $IO.OUT, 20)
+		`${MODEL}/fluid_output`, T_FLUID, 20)
 })
 MBDRegistryEvents.machine(event => {
 	registerDrillerBus(event, `${DRILLER}_gas_output_bus`,
-		`${MODEL}/gas_output`, T_GAS, $IO.OUT, 20)
+		`${MODEL}/gas_output`, T_GAS, 20)
 })
 MBDRegistryEvents.machine(event => {
 	registerDrillerBus(event, `${DRILLER}_energy_input_bus`,
-		`${MODEL}/energy_input`, T_ENERGY, $IO.IN, 1)
+		`${MODEL}/energy_input`, T_ENERGY, 1)
 })
