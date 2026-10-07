@@ -45,6 +45,7 @@ const GAS_OUTPUT_TRAIT = "multi_type_driller_gas_output"
 const ENERGY_INPUT_TRAIT = "multi_type_driller_energy_input"
 
 
+
 // 注意: 命名不能和 kubejs/server_scripts/utils/Function.js 撞车 ——
 // KubeJS 把所有 server_scripts 放在同一个顶层作用域, 顶层 let/const 重复声明
 // 会直接报 "redeclaration of var X" (Function.js:6 已经声明了 $Gas).
@@ -122,10 +123,17 @@ function findHead(machine, level) {
 		[1, -1, 0], [-1, -1, 0], [0, -1, 1], [0, -1, -1]
 	]
 
-	for (let i = 0; i < offsets.length; i++) {
-		let o = offsets[i]
-		let pos = origin.offset(o[0], o[1], o[2])
-		let id = level.getBlockState(pos).getBlock().getId()
+	// Rhino 不给循环体独立作用域, 循环内不能用 let/const (第二轮迭代会报
+	// "redeclaration of var X"), 统一用函数级 var
+	var i = 0
+	var o = null
+	var pos = null
+	var id = ""
+
+	for (i = 0; i < offsets.length; i++) {
+		o = offsets[i]
+		pos = origin.offset(o[0], o[1], o[2])
+		id = level.getBlockState(pos).getBlock().getId()
 
 		if (id === DRILLER_HEAD || id === DRILLER_FLUID_PUMP || id === DRILLER_GAS_PUMP) {
 			return pos
@@ -165,6 +173,26 @@ function getTrait(machine, traitClass, name) {
 	} catch (error) {
 		console.error("[multi_type_driller] 读取特性 " + name + " 失败: " + error)
 		return null
+	}
+}
+
+/**
+ * 切换机器状态 (working / waiting)。
+ *
+ * 本机的 MBD2 配方引擎是关掉的 (recipeType 用 mbd2:dummy), 所以引擎不会像
+ * 普通机器那样自动更新状态 —— 由这里手动切。
+ * 状态名必须与 drillerStates() 里定义的一致: working / waiting / suspend。
+ *
+ * @param {Internal.MBDMachine_} machine
+ * @param {string} state
+ */
+function setDrillerState(machine, state) {
+	try {
+		if (machine.getMachineStateName() !== state) {
+			machine.setMachineState(state)
+		}
+	} catch (error) {
+		console.error("[multi_type_driller] 切换状态 " + state + " 失败: " + error)
 	}
 }
 
@@ -318,9 +346,15 @@ function getProductPool(blockId) {
 		return []
 	}
 
-	for (let entry of DRILLER_RECIPE_TYPE.getBuiltinRecipes().entrySet()) {
-		let recipe = entry.getValue()
-		let data = recipe.data
+	var recipe = null
+	var data = null
+	var pool = null
+	var ingredient = null
+	var inner = null
+
+	for (var entry of DRILLER_RECIPE_TYPE.getBuiltinRecipes().entrySet()) {
+		recipe = entry.getValue()
+		data = recipe.data
 
 		if (data == null || !data.contains("deposit_block")) {
 			continue
@@ -330,11 +364,11 @@ function getProductPool(blockId) {
 			continue
 		}
 
-		let pool = []
+		pool = []
 
 		recipe.getOutputContents($ItemRecipeCapability.INSTANCE).forEach((content) => {
-			let inner = content.getContent()
-			let ingredient = inner.ingredient != null ? inner.ingredient : inner
+			inner = content.getContent()
+			ingredient = inner.ingredient != null ? inner.ingredient : inner
 
 			if (ingredient == null) {
 				return
@@ -421,31 +455,40 @@ MBDMachineEvents.onTick(($) => {
 		let pool = getProductPool(belowId)
 
 		if (pool.length === 0) {
+			setDrillerState(machine, "waiting")
 			return
 		}
 
 		if (!pushProduct(machine, pool[Math.floor(Math.random() * pool.length)])) {
+			setDrillerState(machine, "waiting")
 			return
 		}
 	} else if (headId === DRILLER_FLUID_PUMP) {
 		let fluid = getWorldFluid(level, pos)
 
 		if (fluid == null || !isBottomlessFluid(fluid)) {
+			setDrillerState(machine, "waiting")
 			return
 		}
 
 		if (!pushFluid(machine, fluid, PUMP_OUTPUT)) {
+			setDrillerState(machine, "waiting")
 			return
 		}
 	} else {
 		if (belowId !== MERCURY_GEOTHERMAL_VENT) {
+			setDrillerState(machine, "waiting")
 			return
 		}
 
 		if (!pushGas(machine, HYDROGEN_GAS, PUMP_OUTPUT)) {
+			setDrillerState(machine, "waiting")
 			return
 		}
 	}
+
+	// 这一周期真的产出成功了 -> 切到 working (gecko 模型 / 工作态外观)
+	setDrillerState(machine, "working")
 
 	// ---- 产物放好了, 现在扣冷却液 / 产热冷却液 / 扣电 ----
 	let hotCoolant = Fluid.of(HOT_COOLANT_FLUID).getFluid()

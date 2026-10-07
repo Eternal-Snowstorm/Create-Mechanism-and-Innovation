@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.0",
+	"format_version": "1.12.0",
 	"minecraft:geometry": [
 		{
 			"description": {
@@ -422,12 +422,12 @@
 							"origin": [-7, 33, -8],
 							"size": [16, 32, 16],
 							"uv": {
-								"north": {"uv": [464, 98], "uv_size": [16, 32]},
-								"east": {"uv": [464, 98], "uv_size": [16, 32]},
-								"south": {"uv": [464, 98], "uv_size": [16, 32]},
-								"west": {"uv": [464, 98], "uv_size": [16, 32]},
-								"up": {"uv": [480, 130], "uv_size": [-16, -32]},
-								"down": {"uv": [480, 130], "uv_size": [-16, -32]}
+								"north": {"uv": [13, 184], "uv_size": [24, 22]},
+								"east": {"uv": [13, 184], "uv_size": [24, 22]},
+								"south": {"uv": [13, 184], "uv_size": [24, 22]},
+								"west": {"uv": [13, 184], "uv_size": [24, 22]},
+								"up": {"uv": [37, 206], "uv_size": [-24, -22]},
+								"down": {"uv": [37, 206], "uv_size": [-24, -22]}
 							}
 						},
 						{
