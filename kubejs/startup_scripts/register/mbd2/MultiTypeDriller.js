@@ -31,7 +31,7 @@ let $Predicates = Java.loadClass("com.lowdragmc.mbd2.api.pattern.Predicates")
 let $MBDRegistries = Java.loadClass("com.lowdragmc.mbd2.api.registry.MBDRegistries")
 let $Shapes = Java.loadClass("net.minecraft.world.phys.shapes.Shapes")
 let $Arrays = Java.loadClass("java.util.Arrays")
-let $Direction = Java.loadClass("net.minecraft.core.Direction")
+let $ResourceLocation = Java.loadClass("net.minecraft.resources.ResourceLocation")
 // shapeInfo 需要这几个 (JEI 机器页 / 结构预览)
 let $Array = Java.loadClass("java.lang.reflect.Array")
 let $Class = Java.loadClass("java.lang.Class")
@@ -72,6 +72,50 @@ function allSides(trait, io) {
 	return trait
 }
 
+// ---- 成型后使用的 GeckoLib 模型 ----
+// 三个参数都是 ResourceLocation, 路径以 assets/<ns>/ 为根:
+//     model     : models/block/machine/multi_type_driller.geo.json
+//     texture   : textures/block/machine/driller/multi_type_driller.png
+//     animation : animations/multi_type_driller.animation.json
+// (GeckolibRenderer 内部有 checkAnimationAvailable(), 动画缺失不会崩, 只是没动画;
+//  模型文件缺失才会看不到模型。)
+const GEO_MODEL = "cmi:models/block/machine/multi_type_driller.geo.json"
+const GEO_TEXTURE = "cmi:textures/block/machine/driller/multi_type_driller.png"
+const GEO_ANIMATION = "cmi:animations/multi_type_driller.animation.json"
+
+// 关掉它即可回到原来的普通方块模型
+const DRILLER_USE_GEO_MODEL = true
+
+// 为什么不直接写 b.geckolibRenderer(...):
+//   MachineState.builder() 的返回类型是 `Builder<? extends MachineState>`,
+//   而 geckolibRenderer 的返回类型带泛型参数 T —— Rhino 解析不了, 会报
+//     TypeError: Cannot find function geckolibRenderer in object ...MachineState$Builder
+//   而它的字节码实现只是 `renderer(new GeckolibRenderer(m, t, a))`,
+//   所以这里用反射直接构造 GeckolibRenderer, 再交给已有的 renderer()。
+//   (反射还有一个好处: 类缺失时在这里就抛明确错误, 不会到渲染期才炸)
+//
+// 注意: 取 Class 对象必须用 Class.forName("...")。
+// Java.loadClass("x.y.Z") 返回的是**类本身**, 不是它的 Class 对象,
+// 所以 $ResourceLocation.class 会报
+//   Java class "net.minecraft.resources.ResourceLocation" has no public
+//   instance field or method named "class"
+const GECKOLIB_RENDERER_CLASS =
+	$Class.forName("com.lowdragmc.mbd2.integration.geckolib.GeckolibRenderer")
+const RESOURCE_LOCATION_CLASS = $Class.forName("net.minecraft.resources.ResourceLocation")
+
+function newGeckolibRenderer(model, texture, animation) {
+	const ctor = GECKOLIB_RENDERER_CLASS.getConstructor(
+		RESOURCE_LOCATION_CLASS, RESOURCE_LOCATION_CLASS, RESOURCE_LOCATION_CLASS
+	)
+
+	return ctor.newInstance(
+		new $ResourceLocation(model),
+		new $ResourceLocation(texture),
+		new $ResourceLocation(animation)
+	)
+}
+
+// 普通方块模型状态 (总线等单方块部件用)
 function machineState(name, model, light) {
 	const b = $MachineState.builder().name(name).shape($Shapes.block()).lightLevel(light)
 	if (model !== null) {
@@ -80,17 +124,36 @@ function machineState(name, model, light) {
 	return b.build()
 }
 
-// 状态树: base(off) -> formed -> (working(on) -> waiting, suspend)
+// 成型后的状态: 使用 GeckoLib 模型
+//
+// 注意 children(...) 是 MachineState$Builder 的方法, 不是 MachineState 的。
+// 对已经 build() 出来的 MachineState 调用会报
+//   Can't find method ...MachineState.children(java.util.Arrays$ArrayList)
+// 所以这里返回的是 **builder**, 由调用方在链式里继续 .children(...).build()。
+function drillerFormedBuilder(name, light) {
+	const b = $MachineState.builder().name(name).shape($Shapes.block()).lightLevel(light)
+
+	if (DRILLER_USE_GEO_MODEL) {
+		b.renderer(newGeckolibRenderer(GEO_MODEL, GEO_TEXTURE, GEO_ANIMATION))
+	}
+
+	return b
+}
+
+// 状态树: base(off) -> formed(geo 模型) -> (working, waiting, suspend)
 function drillerStates() {
-	const waiting = machineState("waiting", `${MODEL}/off`, 0)
-	const suspend = machineState("suspend", null, 0)
-	const working = machineState("working", `${MODEL}/on`, 0)
-	const formed = $MachineState.builder().name("formed").shape($Shapes.block())
-		.children($Arrays.asList(working, suspend)).build()
+	const waiting = drillerFormedBuilder("waiting", 0).build()
+	const suspend = drillerFormedBuilder("suspend", 0).build()
+	const working = drillerFormedBuilder("working", 0).build()
+	const formed = drillerFormedBuilder("formed", 0)
+		.children($Arrays.asList(working, suspend))
+		.build()
+
 	return $MachineState.builder().name("base")
 		.modelRenderer(`${MODEL}/off`)
 		.shape($Shapes.block())
-		.children($Arrays.asList(formed)).build()
+		.children($Arrays.asList(formed))
+		.build()
 }
 
 function drillerSettings() {
@@ -215,10 +278,9 @@ for (drillerMk = 0; drillerMk < DRILLER_RAW_LAYERS.length; drillerMk++) {
 
 const DRILLER_SIZE = DRILLER_LAYERS[0].length
 
-// 控制器朝向: 开启后结构只在该朝向时成型 (见 drillerControllerPredicate 的说明)
-// 若朝向仍反, 改成 false 即可回到"任意水平朝向都能成型"的行为
-const DRILLER_FIX_CONTROLLER_FRONT = true
-const DRILLER_CONTROLLER_FRONT = $Direction.SOUTH
+// 控制器朝向: 这里**不做任何限制**。
+// 不使用 pattern 的 controllerFront (那会让"只有某个朝向才能成型"),
+// 也不干预方块朝向 —— 于是东南西北四个水平方向都能成型。
 
 function drillerPattern() {
 	// ★ Rhino 作用域注意 (踩过两次) ★
@@ -286,54 +348,8 @@ function drillerPattern() {
 		.where("C", $Predicates.blocks(B(`${DRILLER}_product_output_bus`))
 			.or($Predicates.blocks(B(`${DRILLER}_fluid_output_bus`)))
 			.or($Predicates.blocks(B(`${DRILLER}_gas_output_bus`))))
-		.where("#", $Predicates.controller(drillerControllerPredicate()))
+		.where("#", $Predicates.controller($Predicates.any()))
 		.build()
-}
-
-/**
- * 控制器的谓词。
- *
- * ★ 控制器朝向问题的正解 ★
- *
- * MBD2 的 SimplePredicate.test() 里有一段 (字节码确证):
- *
- *     if (controllerFront.isEnable()) {
- *         Optional<Direction> f = controller.getFrontFacing();
- *         if (f.isPresent() && f.get() != controllerFront.getValue()) {
- *             state.setError("The Controller Front side fails to match");
- *             return false;        // 结构不成型
- *         }
- *     }
- *
- * 也就是 controllerFront 是**结构侧的硬性要求**: 开启后, 只有控制器朝向
- * 指定方向时结构才会成型。
- *
- * 现象是"控制器朝向机器内侧才能成型、贴图看起来是反面", 说明 pattern 的
- * 参考朝向与方块前脸差 180 度。所以这里把要求锁成 SOUTH:
- * 控制器必须朝向 +Z 才能成型, 而玩家面朝机器放置时正好就是 +Z ——
- * 于是"成型的那一面"就是视觉正面, 朝向不再反过来。
- *
- * 若仍然反: 把 DRILLER_CONTROLLER_FRONT 改成 $Direction.NORTH 即可 (唯一开关)。
- *
- * @returns {Internal.TraceabilityPredicate_}
- */
-function drillerControllerPredicate() {
-	var pred = $Predicates.controller($Predicates.any())
-
-	if (DRILLER_FIX_CONTROLLER_FRONT) {
-		var common = pred.common
-
-		if (common != null && common.size() > 0) {
-			var toggle = common.get(0).controllerFront
-
-			if (toggle != null) {
-				toggle.setEnable(true)
-				toggle.setValue(DRILLER_CONTROLLER_FRONT)
-			}
-		}
-	}
-
-	return pred
 }
 
 // ---- shapeInfo (JEI 机器页 / 结构预览) ----
