@@ -42,5 +42,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	}
 	addMBDLang("electrolyzer", "三相电解机")
 	addMBDLang("dimensionally_transcendent_mechanism_accelerator", "超维度等离子构件催生器(WIP)")
-	addMBDLang("radar_skyline", "雷达天线")
+	addMBDLang("radar_antenna", "雷达天线")
+	addMBDLang("large_mixer", "大型搅拌器")
 })

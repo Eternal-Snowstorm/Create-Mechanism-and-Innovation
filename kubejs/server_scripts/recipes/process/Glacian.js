@@ -9,14 +9,14 @@ ServerEvents.recipes((event) => {
 
 	// 雪球
 	mekanism.injecting(
-		"2x minecraft:snowball", 
-		"#cmi:glacian_plant", 
+		"2x minecraft:snowball",
+		"#cmi:glacian_plant",
 		"mekanism:steam"
 	)
 
 	mekanism.injecting(
-		"2x minecraft:snowball", 
-		"#cmi:glacian_plant", 
+		"2x minecraft:snowball",
+		"#cmi:glacian_plant",
 		"mekanism:water_vapor"
 	)
 
@@ -32,10 +32,11 @@ ServerEvents.recipes((event) => {
 		.duration(20 * 5)
 
 	// 霜原芽
-	mekanism.sawing("cmi:glacian_sapling",
+	mekanism.sawing(
+		"cmi:glacian_sapling",
 		"2x createdieselgenerators:wood_chip",
-		"cmi:glacian_sprout"
-	) // .setValue("secondaryChance", "0.5")
+		Item.of("cmi:glacian_sprout").withChance(0.5)
+	)
 
 	// 复制酶溶液
 	cmi.chemical_reactor()

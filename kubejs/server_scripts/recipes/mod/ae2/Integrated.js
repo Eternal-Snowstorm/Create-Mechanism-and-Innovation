@@ -104,7 +104,7 @@ ServerEvents.recipes((event) => {
 			"ae2:wireless_receiver"
 		])
 	addRecipe()
-		.itemOutput("cmi:radar_skyline")
+		.itemOutput("cmi:radar_antenna")
 		.energy(16000)
 		.inputItems([
 			"8x #forge:plates/stainless_steel",

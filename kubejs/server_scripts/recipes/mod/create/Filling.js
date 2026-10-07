@@ -14,7 +14,7 @@ ServerEvents.recipes((event) => {
 			{}
 		]
 	}), [
-		Fluid.of("create_enchantment_industry:hyper_experience", 1000),
+		Fluid.of("cmi:placeholder_fluid", 1000),
 		"immersiveengineering:graphite_electrode"
 	])
 
@@ -51,7 +51,7 @@ ServerEvents.recipes((event) => {
 	// 超级刀
 	create.filling("cmi:super_knife", [
 		"farmersdelight:netherite_knife",
-		Fluid.of("create_enchantment_industry:hyper_experience", 1000)
+		Fluid.of("cmi:placeholder_fluid", 1000)
 	])
 
 	// 紫水晶

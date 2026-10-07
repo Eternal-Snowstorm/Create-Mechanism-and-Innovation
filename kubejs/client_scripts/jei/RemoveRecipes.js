@@ -1,9 +1,4 @@
 JEIEvents.removeRecipes((event) => {
-	if (CmiGlobal.isDebug) {
-		event.getCategoryIds().forEach((id) => {
-			console.info("[JEI Categories] " + id)
-		})
-	}
 
 	/**
 	 * 
@@ -15,8 +10,7 @@ JEIEvents.removeRecipes((event) => {
 	}
 
 	removeRecipeFromJEI("minecraft:crafting", [
-		"cmi:minecraft/shaped/love_manual_only",
-		"create_factory_abstractions:empty"
+		"cmi:minecraft/shaped/love_manual_only"
 	])
 
 	removeRecipeFromJEI("minecraft:blasting", [
@@ -48,7 +42,7 @@ JEIEvents.removeRecipes((event) => {
 		"chartreuse",
 		"diorite",
 		"dripstone",
-		"flat_sea_green",
+		// "flat_sea_green",
 		"granite",
 		"limestone",
 		"maroon",

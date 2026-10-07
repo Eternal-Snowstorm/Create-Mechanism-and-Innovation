@@ -22,7 +22,7 @@ ClientEvents.highPriorityAssets((event) => {
 		})
 
 		if (CmiGlobal.isDebug) {
-			console.info(`[GenMBDModel] Generated: assets/cmi/models/block/${model}.json`)
+			console.info(`[GenMBDModel] Generated: assets/cmi/models/block/${model.split(":").pop()}.json`)
 		}
 	}
 
@@ -139,4 +139,5 @@ ClientEvents.highPriorityAssets((event) => {
 	addMainModel("reinforced_coke_oven")
 	addMainModel("dimensionally_transcendent_mechanism_accelerator")
 	addMainModel("multi_type_driller")
+	addMainModel("large_mixer")
 })
