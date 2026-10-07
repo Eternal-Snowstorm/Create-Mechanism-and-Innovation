@@ -6,11 +6,12 @@
 
 Multiblocked 2 (`MBD2`) 提供了可视化的编辑界面, 不过用可视化并不是十分方便, 然而用[代码注册](./MBD2代码注册文档/README.md)功能又不全, 所以还是得用可视化编辑. 但随便编辑也不太好, 所以需要这一个规范.
 
-| 类型     | 文件扩展名                  | 重载指令                            |
-| :------ | :----------------------- | :--------------------------------- |
-| 单方块机器 | `.sm` (*Single Machine*) | `/mbd2 reload_machine_project`     |
-| 多方块机器 | `.mb` (*Multiblock*)     | `/mbd2 reload_machine_project`     |
-| 配方类型  | `.rt` (*Recipe Type*)     | `/mbd2 reload_recipe_type_project` |
+| 类型      | 文件扩展名                  | 重载指令                              |
+| :------- | :----------------------- | :----------------------------------- |
+| 单方块机器  | `.sm` (*Single Machine*) | `/mbd2 reload_machine_projects`     |
+| 多方块机器  | `.mb` (*Multiblock*)     | `/mbd2 reload_machine_projects`     |
+| 机械动力机器 | `.km` (*kinetic_machine*)| `/mbd2 reload_machine_projects`     |
+| 配方类型    | `.rt` (*Recipe Type*)    | `/mbd2 reload_recipe_type_projects` |
 
 ## 通用
 
