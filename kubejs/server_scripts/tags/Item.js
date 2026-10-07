@@ -28,12 +28,6 @@ ServerEvents.tags("item", (event) => {
 		.add("vintageimprovements:incomplete_redstone_module")
 		.add("cmi:incomplete_nuclear_mechanism")
 
-	// 航天构件
-	// for (let i = 1; i <= 4; i++) {
-	//	event.get(`cmi:tier_${i}_aviation_mechanism`)
-	//		.add(`cmi:tier_${i}_aviation_mechanism`)
-	// }
-
 	// 霜原植物
 	event.get("cmi:glacian_plant")
 		.add("ad_astra:glacian_leaves")
@@ -85,16 +79,6 @@ ServerEvents.tags("item", (event) => {
 	// 铁锭
 	event.get("c:iron_ingots")
 		.add("#forge:ingots/iron")
-
-	// 抽屉
-	event.get("functionalstorage:drawers/rubberwood_1")
-		.add("functional_storage_js:rubberwood_1")
-
-	event.get("functionalstorage:drawers/rubberwood_2")
-		.add("functional_storage_js:rubberwood_2")
-
-	event.get("functionalstorage:drawers/rubberwood_4")
-		.add("functional_storage_js:rubberwood_4")
 
 	// 伪装方块
 	event.get("create:copycats")
@@ -242,6 +226,15 @@ ServerEvents.tags("item", (event) => {
 		.add("functionalstorage:simple_compacting_drawer")
 		.add("functionalstorage:compacting_framed_drawer")
 		.add("functionalstorage:framed_simple_compacting_drawer")
+
+	event.get("functionalstorage:drawers/rubberwood_1")
+		.add("functional_storage_js:rubberwood_1")
+
+	event.get("functionalstorage:drawers/rubberwood_2")
+		.add("functional_storage_js:rubberwood_2")
+
+	event.get("functionalstorage:drawers/rubberwood_4")
+		.add("functional_storage_js:rubberwood_4")
 
 	let drawerMaterialWoods = [
 		"oak",

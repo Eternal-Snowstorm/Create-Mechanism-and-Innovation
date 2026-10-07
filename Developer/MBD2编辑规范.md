@@ -17,13 +17,14 @@ Multiblocked 2 (`MBD2`) 提供了可视化的编辑界面, 不过用可视化并
 
  - 命名空间为 `cmi`
  - 不要出现 `new 0` 这样的默认名
- - 默认条目 `ldlib.author: Hello Kilabash!`、默认36种颜色需要删除
+ - 默认条目 `ldlib.author: Hello Kilabash!`、默认36种颜色需要删
 
 ## 机器
 
  - 所属创造模式标签页应为`cmi:machines`
  - 如果机器有 xei, 需要在进度条箭头上覆盖查看配方的按钮
- - 运行时的模型名称需要是on, 停止时的模型名称需要是off
+ - 运行时的模型名称需要是`on`, 停止时的模型名称需要是`off`
+ - 如果没有gui, 默认gui的位置、大小全部归零, 背景删除, 玩家物品栏删除
  - 如果有机器名称：
     - 对齐设置为`TOP_CENTER`
     - 文本框的 width 为 gui 中背景的 width, height 为 20
@@ -34,8 +35,14 @@ Multiblocked 2 (`MBD2`) 提供了可视化的编辑界面, 不过用可视化并
 ```
 <机器名>_<input/output>_<item/fluid/gas>
 ```
+当一个特性挂多个 slotNames, 或一个机器同一方向有多个同类槽位时, 末尾加一个数字索引
+```
+<机器名>_<input/output>_<item/fluid/gas>_<索引>
+```
 
 ### 单方块机器
+
+ - 模型名称为`model`
 
 ### 多方块机器
 
