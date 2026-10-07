@@ -139,4 +139,5 @@ ClientEvents.highPriorityAssets((event) => {
 	addMainModel("reinforced_coke_oven")
 	addMainModel("dimensionally_transcendent_mechanism_accelerator")
 	addMainModel("multi_type_driller")
+	addMainModel("large_mixer")
 })
