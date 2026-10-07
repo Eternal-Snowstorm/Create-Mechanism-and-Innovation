@@ -131,18 +131,18 @@ ServerEvents.recipes((event) => {
 	]).heatRequirement(CmiHeatLevel.GRILLED)
 
 	// 墨水
-	create.mixing(Fluid.of("create_enchantment_industry:ink", 250), [
+	create.mixing(Fluid.of("cmi:placeholder_fluid", 250), [
 		Fluid.of("minecraft:water", 250), [
 			"#forge:dusts/charcoal",
 			"#forge:dusts/coal"
-		]]).id("create_enchantment_industry:mixing/ink")
+		]])
 
 	// 超态经验
-	create.mixing(Fluid.of("create_enchantment_industry:hyper_experience", 10), [
+	create.mixing(Fluid.of("cmi:placeholder_fluid", 10), [
 		"#forge:dusts/lapis",
-		Fluid.of("create_enchantment_industry:ink", 25),
+		Fluid.of("cmi:placeholder_fluid", 25),
 		Fluid.of("create_enchantment_industry:experience", 100)
-	]).superheated().id("create_enchantment_industry:mixing/hyper_experience")
+	]).superheated()
 
 	// 玫瑰石英
 	create.mixing("create:rose_quartz", [
