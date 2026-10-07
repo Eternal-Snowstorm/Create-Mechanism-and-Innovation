@@ -142,11 +142,11 @@ ServerEvents.recipes((event) => {
 	])
 
 	// Delta溶液
-	create.mixing(Fluid.of("cmi:delta_unstable_solution", 200), [
-		"#cmi:delta_blackstone_source",
-		"#forge:dusts/end_stone",
-		Fluid.tag("tag", "forge:redstone_acid", 50)
-	])
+	// create.mixing(Fluid.of("cmi:delta_unstable_solution", 200), [
+	//	"#cmi:delta_blackstone_source",
+	//	"#forge:dusts/end_stone",
+	//	Fluid.tag("tag", "forge:redstone_acid", 50)
+	// ])
 
 	// 铂溶液
 	event.custom({
