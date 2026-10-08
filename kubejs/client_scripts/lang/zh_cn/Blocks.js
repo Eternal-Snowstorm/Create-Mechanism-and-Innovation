@@ -124,6 +124,8 @@ ClientEvents.lang("zh_cn", (event) => {
 	addBlockLang("broken_transformer", "损坏的变压器")
 	addBlockLang("broken_tracking_array", "损坏的追踪阵列")
 	addBlockLang(`broken_modem`, "损坏的调制解调器")
+	addBlockLang("driller_cooler_input_bus", "钻机冷却剂输入总线")
+	addBlockLang("driller_cooler_output_bus", "钻机冷却剂输出总线")
 	addBlockLang("piggy_bank", "破旧的存钱罐")
 
 	addBlockLang("chiseled_copper", "雕纹铜块")
