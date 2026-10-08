@@ -23,4 +23,7 @@ ServerEvents.recipes((event) => {
 	minecraft.stonecutting("2x createdieselgenerators:andesite_girder",
 		"#forge:plates/andesite_alloy"
 	).id("createdieselgenerators:crafting/andesite_girder")
+
+	// 红石二极管基底
+	minecraft.stonecutting("2x cmi:redstone_diode_base", "minecraft:smooth_stone_slab")
 })

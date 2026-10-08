@@ -275,7 +275,7 @@ StartupEvents.registry("block", (event) => {
 		.requiresTool(true)
 
 
-		
+
 	// 雕纹铜块
 	addBlock("chiseled_copper")
 		.textureAll(Cmi.loadResource("block/chiseled_copper/0"))
@@ -334,6 +334,29 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiToolType.PICKAXE.tag())
 		.tagBlock(CmiMiningLevel.STONE.tag())
 
-	addBlock("test_block")
-		.model("cmi:block/machine/chemical_reactor/item_input")
+	addBlock("redstone_diode_base")
+		.hardness(3)
+		.resistance(6)
+		.tagBlock(CmiToolType.PICKAXE.tag())
+		.tagBlock(CmiMiningLevel.STONE.tag())
+		.box(0, 0, 0, 16, 2, 16)
+		.modelJson = {
+		parent: "cmi:block/redstone_diode",
+		textures: {
+			"diode": "minecraft:block/smooth_stone"
+		}
+	}
+
+	addBlock("brass_diode_base", "cardinal")
+		.hardness(3)
+		.resistance(6)
+		.tagBlock(CmiToolType.PICKAXE.tag())
+		.tagBlock(CmiMiningLevel.STONE.tag())
+		.box(0, 0, 0, 16, 2, 16)
+		.modelJson = {
+		parent: "cmi:block/redstone_diode",
+		textures: {
+			"diode": "create:block/diodes/brass_diode_base"
+		}
+	}
 })

@@ -13,4 +13,9 @@ ServerEvents.recipes((event) => {
 		"#forge:dusts/chaotic_void"
 	])
 
+	// 黄铜二极管基底
+	create.item_application("cmi:brass_diode_base", [
+		"cmi:redstone_diode_base",
+		"#forge:plates/brass"
+	])
 })

@@ -85,6 +85,8 @@ ClientEvents.lang("zh_cn", (event) => {
 	addBlockLang("entro_block", "恩特罗块")
 
 	addBlockLang("eden_crystal", "伊甸水晶")
+	addBlockLang("redstone_diode_base", "红石二极管基底")
+	addBlockLang("brass_diode_base", "黄铜二极管基底")
 
 	addBlockLang("impact_pile", "冲击桩")
 	addBlockLang("void_spring", "虚空涌泉")

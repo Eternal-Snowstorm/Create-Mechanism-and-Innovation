@@ -124,13 +124,18 @@ ServerEvents.recipes((event) => {
 		setOutput("minecraft:deepslate_redstone_ore", 0.05),
 		setOutput("thermal:deepslate_lead_ore", 0.05)
 	])
-	addRecipe("vintageimprovements:redstone_module", "minecraft:furnace", [
-		setOutput("minecraft:piston", 0.05),
-		setOutput("minecraft:observer", 0.05),
-		setOutput("minecraft:dispenser", 0.05),
-		setOutput("minecraft:dropper", 0.05),
-		setOutput("minecraft:repeater", 0.05),
-		setOutput("minecraft:comparator", 0.05)
+	addRecipe("vintageimprovements:redstone_module", "cmi:redstone_diode_base", [
+		setOutput("minecraft:repeater", 0.2),
+		setOutput("minecraft:comparator", 0.2),
+		setOutput("create:powered_latch", 0.2),
+		setOutput("create:powered_toggle_latch", 0.2),
+		setOutput("createaddition:redstone_relay", 0.2)
+	])
+	addRecipe("vintageimprovements:redstone_module", "cmi:brass_diode_base", [
+		setOutput("create:pulse_repeater", 0.25),
+		setOutput("create:pulse_extender", 0.25),
+		setOutput("create:pulse_timer", 0.25),
+		setOutput("create_connected:sequenced_pulse_generator", 0.25)
 	])
 
 	// 智能构件
