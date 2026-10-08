@@ -2,7 +2,6 @@ ServerEvents.recipes((event) => {
 	let { thermal_extra } = event.getRecipes()
 
 	// 催化剂配方
-
 	thermal_extra.nitratic_igniter_catalyst("cmi:trinitrotoluene")
 		.primary_mod(1)
 		.secondary_mod(1)
