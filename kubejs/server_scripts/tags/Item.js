@@ -379,6 +379,10 @@ ServerEvents.tags("item", (event) => {
 		.add("tconstruct:tinkers_anvil")
 		.add("tconstruct:scorched_anvil")
 
+	// 锻造砧材料
+	event.get("tconstruct:anvil_metal")
+		.add(["create:andesite_alloy_block"])
+
 	// 传动杆
 	event.get("create:shaft")
 		.add("create:shaft")

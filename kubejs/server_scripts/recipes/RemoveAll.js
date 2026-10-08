@@ -207,7 +207,22 @@ ServerEvents.recipes((event) => {
 		"tconstruct:smeltery/alloys/molten_refined_obsidian",
 		"thermal_extra:crafting/rod_die",
 		"createaddition:compat/tconstruct/tinkers_bronze",
-		"vintageimprovements:pressurizing/sulfur_dioxide"
+		"vintageimprovements:pressurizing/sulfur_dioxide",
+		"create_rns:coal_deposit_block",
+		"create_rns:redstone_deposit_block",
+		"create_rns:nether_quartz_deposit_block",
+		"create_rns:nether_cobalt_deposit_block",
+		"create_rns:copper_deposit_block",
+		"create_rns:iron_deposit_block",
+		"create_rns:zinc_deposit_block",
+		"create_rns:gold_deposit_block",
+		"create_rns:nether_gold_deposit_block",
+		"create_rns:tin_deposit_block",
+		"create_rns:lead_deposit_block",
+		"create_rns:nickel_deposit_block",
+		"create_rns:silver_deposit_block",
+		"create_rns:uranium_deposit_block",
+		"create_rns:osmium_deposit_block"
 	])
 
 	let removedMods = [
