@@ -1,7 +1,4 @@
 ItemEvents.modification((event) => {
-	let month = LocalDateTime.now().getMonthValue()
-	let day = LocalDateTime.now().getDayOfMonth()
-
 	/**
 	 *
 	 * @param {Internal.ItemStack_} item 修改的物品
@@ -9,7 +6,7 @@ ItemEvents.modification((event) => {
 	 * @returns 
 	 */
 	function modifyItemBurnTime(item, time) {
-		return event.modify(item, (modify) => {
+		event.modify(item, (modify) => {
 			const BURN_TIME = 200
 			modify.setBurnTime(BURN_TIME * time)
 		})
