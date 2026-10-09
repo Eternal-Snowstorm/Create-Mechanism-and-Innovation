@@ -9,7 +9,7 @@ ServerEvents.recipes((event) => {
 
 	// 聚合物板
 	cmi.electronic_blast_furnace()
-		.inputItems("#forge:plates/hdpe")
+		.inputItems("mekanism:hdpe_sheet")
 		.inputFluids([
 			Fluid.of("cmi:radon", 100),
 			Fluid.of("cmi:radiation_resistant_creosote", 100)

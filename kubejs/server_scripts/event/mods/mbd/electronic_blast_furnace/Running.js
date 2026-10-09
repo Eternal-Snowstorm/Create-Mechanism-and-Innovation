@@ -72,7 +72,21 @@ MBDMachineEvents.onBeforeRecipeModify(($) => {
 	}
 
 	let copy = levelParallelModify(machine, event.getRecipe())
-	event.setRecipe(copy)
+
+	/*
+	 * 必须挡掉 null.
+	 *
+	 * levelParallelModify 走的是 machine.applyParallel(recipe, N), 而
+	 * IMachine.applyParallel 内部调 MBDRecipe.accurateParallel -> tryParallel.
+	 * tryParallel 在「连并行 1 都匹配不上」时会直接 return null(字节码: min > max 时
+	 * 返回 null; 且判定同时要求 matchRecipe 与 matchTickRecipe 都成功, 也就是
+	 * 物品与每 tick 能量都得够). 于是 applyParallel 返回 null, 这时若把 null 交给
+	 * event.setRecipe, 机器这一 tick 的配方就被清空 —— 表现为材料明明在场、
+	 * 能量也够, 机器却永远不启动. 所以必须判空后再设置.
+	 */
+	if (copy != null) {
+		event.setRecipe(copy)
+	}
 })
 
 /**
@@ -179,6 +193,10 @@ function levelMultiplierModify(machine) {
 	 * 甚至能看到配方时间越来越多甚至突破 int 上限
 	 */
 	if (recipe.getProgress() > 0) {
+		return
+	}
+	// duration 为 0 时乘倍率仍是 0, 配方会被判成瞬间完成或永不完成, 直接跳过
+	if (duration <= 0) {
 		return
 	}
 

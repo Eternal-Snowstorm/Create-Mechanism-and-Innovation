@@ -1,5 +1,6 @@
 ServerEvents.recipes((event) => {
 	removeRecipe(event, [
+		"alexscaves:polymer_plate",
 		"jei:/treetap/water_from_crying_obsidian",
 		"minecraft:paper",
 		"mekanism:paper",
@@ -250,7 +251,6 @@ ServerEvents.recipes((event) => {
 		"tconstruct:grout",
 		"createdieselgenerators:mold",
 		"#forge:circuits",
-		"alexscaves:polymer_plate",
 		"mekanism:teleportation_core"
 	]
 	removeOutput.forEach((output) => {
