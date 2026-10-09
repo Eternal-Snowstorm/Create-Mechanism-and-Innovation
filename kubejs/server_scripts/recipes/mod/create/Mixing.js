@@ -131,16 +131,15 @@ ServerEvents.recipes((event) => {
 	]).heatRequirement(CmiHeatLevel.GRILLED)
 
 	// 墨水
-	create.mixing(Fluid.of("cmi:placeholder_fluid", 250), [
-		Fluid.of("minecraft:water", 250), [
-			"#forge:dusts/charcoal",
-			"#forge:dusts/coal"
-		]])
+	create.mixing(Fluid.of("cmi:ink", 250), [
+		Fluid.of("minecraft:water", 250),
+		["#forge:dusts/charcoal", "#forge:dusts/coal"]
+	])
 
 	// 超态经验
-	create.mixing(Fluid.of("cmi:placeholder_fluid", 10), [
+	create.mixing(Fluid.of("cmi:hyper_experience", 10), [
 		"#forge:dusts/lapis",
-		Fluid.of("cmi:placeholder_fluid", 25),
+		Fluid.of("cmi:ink", 25),
 		Fluid.of("create_enchantment_industry:experience", 100)
 	]).superheated()
 
@@ -172,7 +171,7 @@ ServerEvents.recipes((event) => {
 	]).id("cmi:ae2/transform/tconstruct/nether_grout2")
 
 	// 金坷垃
-	create.mixing("3x cmi:fertilizer",[
+	create.mixing("3x cmi:fertilizer", [
 		"#cmi:nitrogen_fertilizer",
 		"#cmi:phosphorus_fertilizer",
 		"#cmi:pottasium_fertilizer"

@@ -14,7 +14,7 @@ ServerEvents.recipes((event) => {
 			{}
 		]
 	}), [
-		Fluid.of("cmi:placeholder_fluid", 1000),
+		Fluid.of("cmi:hyper_experience", 1000),
 		"immersiveengineering:graphite_electrode"
 	])
 
@@ -51,7 +51,7 @@ ServerEvents.recipes((event) => {
 	// 超级刀
 	create.filling("cmi:super_knife", [
 		"farmersdelight:netherite_knife",
-		Fluid.of("cmi:placeholder_fluid", 1000)
+		Fluid.of("cmi:hyper_experience", 1000)
 	])
 
 	// 紫水晶
@@ -81,7 +81,7 @@ ServerEvents.recipes((event) => {
 	// 高压蒸汽容器
 	create.filling("steampowered:pressurized_steam_container", [
 		"steampowered:pressurized_gas_container",
-		Fluid.of("mekanism:steam", 1000)
+		CreateFluidIngredient.ofTagId("forge:steam", 1000)
 	])
 
 	// 幻晶原石
@@ -100,7 +100,8 @@ ServerEvents.recipes((event) => {
 	for (let level = 1; level <= 3; level++) {
 		let input = level === 1
 			? "minecraft:book"
-			: Item.of("minecraft:enchanted_book").enchant("create:capacity", level - 1)
+			: Item.of("minecraft:enchanted_book")
+				.enchant("create:capacity", level - 1)
 
 		let output = Item.of("minecraft:enchanted_book")
 			.enchant("create:capacity", level)

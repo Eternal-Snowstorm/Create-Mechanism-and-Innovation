@@ -1,9 +1,6 @@
 ServerEvents.recipes((event) => {
 	let { mekanism } = event.getRecipes()
 
-	// Fluid.tag() 的 toJson 输出 {"amount": N, "tag": "..."}，
-	// 而 Mekanism rotary 的流体输入只认 "fluid" 字符串（解析错误 "Missing fluid, expected to find a string"）。
-	// 与 TConCasting 同理：先把 forge 流体 tag 解析成具体流体 id，再用 Fluid.of() 输出 {"fluid": ...}。
 	function rotaryWithTag(fluidTag, gasId, id) {
 		let fluid = Ingredient.getFluidString(fluidTag)
 
@@ -12,7 +9,7 @@ ServerEvents.recipes((event) => {
 			return
 		}
 
-		mekanism.rotary()
+		return mekanism.rotary()
 			.fluidInput(Fluid.of(fluid, 200))
 			.fluidOutput(Fluid.of(fluid, 200))
 			.gasInput(MekType.Gas.of(gasId, 200))

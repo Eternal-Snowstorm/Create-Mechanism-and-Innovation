@@ -52,7 +52,7 @@ ServerEvents.recipes((event) => {
 
 	vintageimprovements.pressurizing(Fluid.of("cmi:cured_rubber", 1000), [
 		"#forge:dusts/sulfur",
-		Fluid.of("mekanism:steam", 200),
+		CreateFluidIngredient.ofTagId("forge:steam", 200),
 		Fluid.of("thermal:latex", 500)
 	]).secondaryFluidInput(0).heatRequirement(CmiHeatLevel.GRILLED)
 })

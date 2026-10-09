@@ -81,8 +81,6 @@ StartupEvents.registry("fluid", (event) => {
 	addColorFluid("activated_graphite", 0x200000)
 	// 钨溶液
 	addColorFluid("tungsten_solution", 0x283440)
-	// 占位流体
-	addColorFluid("placeholder_fluid", 0x000000)
 	// 硅橡胶
 	addThickColorFluid("silicon_rubber", 0xBBBBBB)
 	// 熔融纯净硅
@@ -114,4 +112,8 @@ StartupEvents.registry("fluid", (event) => {
 	addAloneFluid("glacious_cryotheum")
 	// 热冷却液
 	addAloneFluid("hot_cryotheum_solution")
+	// 液态超经验
+	addAloneFluid("hyper_experience")
+	// 墨水
+	addAloneFluid("ink")
 })
