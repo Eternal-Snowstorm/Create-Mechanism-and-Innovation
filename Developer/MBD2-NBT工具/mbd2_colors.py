@@ -2,7 +2,7 @@
 """
 按 Developer/MBD2编辑规范.md 清掉默认颜色表
 
-规范: 「默认条目 `ldlib.author: Hello Kilabash!`、默认36种颜色需要删」
+规范: 「默认条目 `ldlib.author: Hello Kilabash!`, 默认36种颜色需要删」
 
 现状:
     machine/*.sm                    38 条默认色 (19 基础 + 19 个 T_ 变体)

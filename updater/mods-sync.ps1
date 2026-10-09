@@ -146,7 +146,7 @@ foreach ($it in $items) {
 #     若历史 delete.tsv 漏记了某个下架项, 新旧两个 jar 会并存, Forge 会以
 #     "Duplicate mods" 直接崩溃启动; 这里按 mod 名主干兜底清理。
 #     只扫 mods\*.jar, 并且只清理"与清单中某个 mod 同主干"的文件 ——
-#     玩家自己添加的、与清单无关的 mod 不会被碰。
+#     玩家自己添加的, 与清单无关的 mod 不会被碰。
 $listKeys = New-Object 'System.Collections.Generic.HashSet[string]'
 foreach ($it in $items) {
   if (-not $it.Path.StartsWith('mods/')) { continue }

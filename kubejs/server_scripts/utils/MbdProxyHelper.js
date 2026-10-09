@@ -33,7 +33,7 @@
 // 同材料归并(重点):
 //   "同一个材料在 ingredients 里连写几遍"是原版写法(apple_cider = apple + apple
 //   + sugar, 语义是"要 2 个苹果"), 逐条 inputItems 会让 MBD2 生成两个各 1x 的
-//   Content —— 配方界面两个格子、机器也要两个槽位, 就是"相同的多个材料被分别
+//   Content —— 配方界面两个格子, 机器也要两个槽位, 就是"相同的多个材料被分别
 //   单个填入配方格子". 输入侧统一走 mergeIngredientSlots(): 相同材料数量相加,
 //   输出 "2x minecraft:apple" 一条. MBD2 的 ItemRecipeHandler 跨槽累计提取,
 //   所以合并后不会更难满足, 反而省槽位. (产物侧不归并: 每条产物可能带各自的
@@ -373,7 +373,7 @@ function slotKeyOf(slot) {
  *
  * create:mixing 里"同一个材料连写几遍"非常常见(create_central_kitchen 的
  * apple_cider 就是 apple + apple + sugar), 原版 Create 里那是"要 2 个苹果".
- * 逐条 inputItems 会生成两个各 1x 的 Content —— 配方界面两个格子、机器也要
+ * 逐条 inputItems 会生成两个各 1x 的 Content —— 配方界面两个格子, 机器也要
  * 占两个槽位, 也就是"相同的多个材料被分别单个填入配方格子". 归并成一条
  * "2x minecraft:apple" 才等价: MBD2 的
  * ItemSlotCapabilityTrait$ItemRecipeHandler 是跨槽累计提取的(单个槽不够会继续

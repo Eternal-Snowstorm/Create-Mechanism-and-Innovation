@@ -40,7 +40,7 @@ JadeEvents.onClientRegistration((event) => {
 		 */
 		function addCommonTooltip(block) {
 			/*
-			 * Jade 的 accessor 可能代表不同目标(实体、方块等)
+			 * Jade 的 accessor 可能代表不同目标(实体, 方块等)
 			 * 这里只处理"方块", 不是方块就直接退出
 			 *
 			 * Jade's accessor may point to different targets

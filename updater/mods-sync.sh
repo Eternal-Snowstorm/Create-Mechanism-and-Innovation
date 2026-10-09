@@ -22,7 +22,7 @@
 #    bash updater/mods-sync.sh [--dry-run]
 #
 #  安全: 只操作 mods/ config/ kubejs/ defaultconfigs/ resourcepacks/,
-#        绝不触碰 saves、options.txt 与服务器数据。
+#        绝不触碰 saves, options.txt 与服务器数据。
 # =============================================================================
 set -uo pipefail
 
@@ -184,7 +184,7 @@ done
 #     若历史 delete.tsv 漏记了某个下架项, 新旧两个 jar 会并存, Forge 会以
 #     "Duplicate mods" 直接崩溃启动; 这里按 mod 名主干兜底清理。
 #     只扫 mods/*.jar, 并且只清理"与清单中某个 mod 同主干"的文件 ——
-#     玩家自己添加的、与清单无关的 mod 不会被碰。
+#     玩家自己添加的, 与清单无关的 mod 不会被碰。
 #     注意: mod_key 用 printf '%s' 输出(不带换行), 这里必须自己补 \n,
 #           否则所有 key 会粘成一行, 下面的整行匹配就永远失效。
 LIST_KEYS="$(mktemp)"

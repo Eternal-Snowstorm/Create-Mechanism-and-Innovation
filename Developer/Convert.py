@@ -31,7 +31,7 @@ def is_targeted_file(rel_path, target_folders):
 	return False
 
 def should_ignore(rel_path, ignore_patterns):
-	"""根据忽略模式跳过文件（例如临时文件、日志等）"""
+	"""根据忽略模式跳过文件（例如临时文件, 日志等）"""
 	for pattern in ignore_patterns:
 		pattern = pattern.replace("\\", "/")
 		if pattern in rel_path or Path(rel_path).match(pattern):

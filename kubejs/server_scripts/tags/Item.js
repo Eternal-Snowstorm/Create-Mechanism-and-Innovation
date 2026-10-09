@@ -250,8 +250,9 @@ ServerEvents.tags("item", (event) => {
 		"cmi:rubberwood"
 	]
 	drawerMaterialWoods.forEach((woodName) => {
-		let woodId =
-			woodName.includes(":") ? woodName : `functionalstorage:${woodName}`
+		let woodId = woodName.includes(":")
+			? woodName
+			: `functionalstorage:${woodName}`
 
 		let woodType = woodName.split(":").pop()
 
@@ -380,8 +381,21 @@ ServerEvents.tags("item", (event) => {
 		.add("tconstruct:scorched_anvil")
 
 	// 锻造砧材料
-	event.get("tconstruct:anvil_metal")
-		.add(["create:andesite_alloy_block"])
+	let metalIds = [
+		"andesite_alloy",
+		"steel",
+		"cast_iron",
+		"industrial_iron",
+		"titanium_alloy",
+		"aluminum_alloy",
+		"neodymium",
+		"neodymium",
+		"black_tungsten_alloy"
+	]
+	metalIds.forEach((metal) => {
+		event.get("tconstruct:anvil_metal")
+			.add(`#forge:storage_blocks/${metal}`)
+	})
 
 	// 传动杆
 	event.get("create:shaft")
@@ -899,7 +913,7 @@ ServerEvents.tags("item", (event) => {
 			.add(`create:crushed_raw_${material}`)
 	})
 
-	// 遍历锭、粒、板、杆
+	// 遍历锭, 粒, 板, 杆
 	let materialTypes = [
 		"ingot",
 		"nugget",

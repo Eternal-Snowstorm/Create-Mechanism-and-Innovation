@@ -52,7 +52,7 @@ $env:PYTHONDONTWRITEBYTECODE = "1"     # 免得生成 __pycache__
 
 | 文件类型 | 资源名 | 参照 |
 | :--- | :--- | :--- |
-| `machine/*.sm` | `model` | `machine/reinforced_coke_oven/*.sm`、`machine/large_mixer/input.sm` |
+| `machine/*.sm` | `model` | `machine/reinforced_coke_oven/*.sm`, `machine/large_mixer/input.sm` |
 | `multiblock/*.mb` | `off` / `on` | 同文件 `resources` 只有这两个；`working` 状态 = `on`，其余 = `off` |
 | `recipe_type/*.rt` | `icon` | `recipe_type/reinforced_coke_oven.rt` 等 7 个 `.rt` |
 
@@ -81,7 +81,7 @@ $env:PYTHONDONTWRITEBYTECODE = "1"     # 免得生成 __pycache__
   以及 13 个文件残留的默认作者 `ldlib.author = Hello KilaBash!`。
   `hive_hopper.rt` 的 `background_color` / `overlay` 是自定义色，已保留。
 
-处理后：34 个文件 **0 处默认色、0 处默认作者、0 处默认名、0 处空白污染、100% 字节一致往返**。
+处理后：34 个文件 **0 处默认色, 0 处默认作者, 0 处默认名, 0 处空白污染, 100% 字节一致往返**。
 
 > 注意作者默认值的拼写是 `Hello KilaBash!`（大写 **B**）。
 > 按小写 `Hello Kilabash!` 搜会漏掉，早期体检就是这么漏的。
@@ -91,7 +91,7 @@ $env:PYTHONDONTWRITEBYTECODE = "1"     # 免得生成 __pycache__
 `mbd2_audit.py` 仍会报出两类问题，**故意没自动改**，需要先确认：
 
 1. **13 个 `.sm` 的 `hasUI=0` 但 UI 未清零**（26 处位置/大小 + 15 处背景）。
-   规范要求「没有 gui 时，默认 gui 的位置、大小全部归零，背景删除，玩家物品栏删除」，
+   规范要求「没有 gui 时，默认 gui 的位置, 大小全部归零，背景删除，玩家物品栏删除」，
    但这些文件里保留着完整的 `ui.children`（36 个 `player_inv_*` 槽位等）。
    清零会不会影响部件方块在控制器 UI 里的呈现，需要先在游戏里验证。
 2. **`large_mixer.mb` 的创造标签页是 `minecraft:redstone_blocks`**，

@@ -11,7 +11,7 @@ body:
         > [!important]
         > 重要：如果要提出**多个 Bug**, 请为每一个 Bug 开一个单独的 issue。
         >
-        > 如果您不知道如何有效、精准地表述, 我们建议您先阅读《提问的智慧》([链接](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md))。
+        > 如果您不知道如何有效, 精准地表述, 我们建议您先阅读《提问的智慧》([链接](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md))。
 
   - type: checkboxes
     id: checklist
@@ -31,7 +31,7 @@ body:
     attributes:
       value: |
         ### Bug 信息
-        描述您遇到的 Bug。您可以附上截图、录屏、日志等材料, 便于开发者追踪问题。
+        描述您遇到的 Bug。您可以附上截图, 录屏, 日志等材料, 便于开发者追踪问题。
 
   - type: textarea
     id: expected

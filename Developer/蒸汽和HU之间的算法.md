@@ -221,7 +221,7 @@ if (wanted > 0) {
 }
 ```
 
-示例: `12 mB/t` 引擎烧高温蒸汽时每 tick quota += 12、wanted = 3, 即每 tick 扣 `3 mB`.
+示例: `12 mB/t` 引擎烧高温蒸汽时每 tick quota += 12, wanted = 3, 即每 tick 扣 `3 mB`.
 
 ### 4.3 工作状态机
 
@@ -276,10 +276,10 @@ setRotation(speed, cap);            // 写入飞轮(GeneratingKineticBlockEntity
    * 燃料折算 `HU: HURemain +=` 浮点表达式, 复合赋值截断；
    * 抽水按整 `mB(ceil)`, 水不够按实抽回推；
    * 产汽 `consume / 10` 为 `int` 整除, 丢弃小于 `10 HU` 的尾数.
-4. 数值全部可配置: 表格均为默认值, 服务端 config 可改 `steamPerWater`、各级 HU / 耗汽 / 容量等.
+4. 数值全部可配置: 表格均为默认值, 服务端 config 可改 `steamPerWater`, 各级 HU / 耗汽 / 容量等.
 5. 效率 ≠ HU/t: `burnerEfficiency` 只影响"每个燃料燃烧 tick 折算多少 HU", 不影响每 tick 最大放热量 `getHuPerTick()`.
 6. 直连损耗: 引擎直吸锅炉蒸汽时容量 ×`0.7` 并向上取整；泵送进内置罐为满容量.
-7. 高温蒸汽: 按 `1/4` 速率消耗(每 `mB` 4 倍能量), 判定只认 `SPTags.HIGH_TEMPERATURE_STEAM`；普通蒸汽(含 `mekanism:steam`、`SPTags.STEAM`)全速消耗.
+7. 高温蒸汽: 按 `1/4` 速率消耗(每 `mB` 4 倍能量), 判定只认 `SPTags.HIGH_TEMPERATURE_STEAM`；普通蒸汽(含 `mekanism:steam`, `SPTags.STEAM`)全速消耗.
 
 ---
 
@@ -304,7 +304,7 @@ setRotation(speed, cap);            // 写入飞轮(GeneratingKineticBlockEntity
 
 ## 8. 三条速查公式(默认值)
 
-> 品级参数: 效率 `eff = 0.8 / 0.9 / 1.0`, HU 上限与引擎耗汽、容量随品级取 `青铜 / 铸铁 / 钢`.
+> 品级参数: 效率 `eff = 0.8 / 0.9 / 1.0`, HU 上限与引擎耗汽, 容量随品级取 `青铜 / 铸铁 / 钢`.
 
 ### ① 燃烧时间 `burnTime` → `HU/t`(燃烧室)
 

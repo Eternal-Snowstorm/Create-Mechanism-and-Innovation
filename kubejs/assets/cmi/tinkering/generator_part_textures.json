@@ -1,0 +1,20 @@
+{
+	"parts": [
+		{
+			"path": "cmi:item/tool/tconstruct/paxel/head",
+			"stat_type": "tconstruct:head"
+		},
+		{
+			"path": "cmi:item/tool/tconstruct/paxel/axe",
+			"stat_type": "tconstruct:head"
+		},
+		{
+			"path": "cmi:item/tool/tconstruct/paxel/broken_head",
+			"stat_type": "tconstruct:head"
+		},
+		{
+			"path": "cmi:item/tool/tconstruct/paxel/broken_axe",
+			"stat_type": "tconstruct:head"
+		}
+	]
+}

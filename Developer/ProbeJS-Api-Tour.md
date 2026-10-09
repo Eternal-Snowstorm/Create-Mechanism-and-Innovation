@@ -1,7 +1,7 @@
 # ProbeJS 使用教程
 
 面向 KubeJS 脚本作者 / 整合包作者 / 想给 ProbeJS 加料的 mod 作者. 
-代码风格统一为脚本侧的 getter 写法(`document.getMethods()`、`method.getName()`). 
+代码风格统一为脚本侧的 getter 写法(`document.getMethods()`, `method.getName()`). 
 
 ---
 
@@ -58,7 +58,7 @@ declare namespace Special {
 ```
 
 **要点**: 元素是原样拼接的, 字符串必须自己带引号. 写 `"mymod:a"` 而不是 `mymod:a`. 
-数字、裸类型名同理: `[1, 2, 3]`、`["ValueA", "ValueB"]`. 
+数字, 裸类型名同理: `[1, 2, 3]`, `["ValueA", "ValueB"]`. 
 
 ### 1.2 白送的那些 Special
 
@@ -147,7 +147,7 @@ ofTagId(tag: Special.FluidTag, amount: number): FluidIngredient_
 
 - `index` 从 **0** 开始数. 
 - 想顺手改参数名就加 `"name": "tag"`. 
-- 只想改类型、不改名字: `name` 省略. 
+- 只想改类型, 不改名字: `name` 省略. 
 - 方法名不用管, `@RemapForJS` 已经在反射层生效. 
 
 ### 2.2 整个类换成一个别名(assign)
@@ -205,7 +205,7 @@ ProbeJSEvents.generateDoc((event) => {
 
 ---
 
-## 3. 用 JSON 写文档(不写 Java、不写脚本)
+## 3. 用 JSON 写文档(不写 Java, 不写脚本)
 
 1. `/probejs configure toggle_json_intermediates`, dump 一次. 
 2. 打开 `kubejs/probe/cache/mergedClasses.json`, 找到目标类/方法, **整段复制**. 

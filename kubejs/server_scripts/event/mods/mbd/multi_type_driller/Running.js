@@ -419,7 +419,7 @@ MBDMachineEvents.onTick(($) => {
 
 	let headId = level.getBlockState(headPos).getBlock().getId()
 
-	// ---- 先确认输入够、输出放得下, 避免扣了东西却产不出来 ----
+	// ---- 先确认输入够, 输出放得下, 避免扣了东西却产不出来 ----
 	let coolantIn = getTrait(machine, $FluidTankCapabilityTrait, COOLANT_INPUT_TRAIT)
 	let coolantOut = getTrait(machine, $FluidTankCapabilityTrait, COOLANT_OUTPUT_TRAIT)
 	let energyIn = getTrait(machine, $ForgeEnergyCapabilityTrait, ENERGY_INPUT_TRAIT)

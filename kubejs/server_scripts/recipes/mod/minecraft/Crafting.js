@@ -42,53 +42,27 @@ ServerEvents.recipes((event) => {
 
 	// 工业平台
 	kubejs.shaped("industrial_platform:industrial_platform", [
-		"ACB",
-		"EDE",
-		"EEE"
+		"ABA",
+		"CDC",
+		"CCC"
 	], {
-		A: "#forge:dyes/yellow",
-		B: "#forge:dyes/black",
-		C: "#forge:deepslate",
-		D: "cmi:stone_mechanism",
-		E: "#forge:stone"
+		A: "#forge:dyes",
+		B: "#forge:deepslate",
+		C: "#forge:stone",
+		D: Mechanisms.STONE.COM
 	}).id("industrial_platform:platform")
-
-	kubejs.shaped("industrial_platform:industrial_platform", [
-		"BCA",
-		"EDE",
-		"EEE"
-	], {
-		A: "#forge:dyes/yellow",
-		B: "#forge:dyes/black",
-		C: "#forge:deepslate",
-		D: "cmi:stone_mechanism",
-		E: "#forge:stone"
-	}).id("industrial_platform:platform_2")
 
 	// 流体池
 	kubejs.shaped("industrial_platform:fluid_pool", [
-		"A B",
-		"CDC",
-		"CEC"
+		"A A",
+		"BCB",
+		"BDB"
 	], {
-		A: "#forge:dyes/yellow",
-		B: "#forge:dyes/black",
-		C: "#forge:stone",
-		D: "#forge:deepslate",
-		E: "cmi:stone_mechanism",
+		A: "#forge:dyes",
+		B: "#forge:stone",
+		C: "#forge:deepslate",
+		D: Mechanisms.STONE.COM,
 	}).id("industrial_platform:pool")
-
-	kubejs.shaped("industrial_platform:fluid_pool", [
-		"B A",
-		"CDC",
-		"CEC"
-	], {
-		A: "#forge:dyes/yellow",
-		B: "#forge:dyes/black",
-		C: "#forge:stone",
-		D: "#forge:deepslate",
-		E: "cmi:stone_mechanism",
-	}).id("industrial_platform:pool_2")
 
 	// 蜘蛛网
 	kubejs.shaped("minecraft:cobweb", [
