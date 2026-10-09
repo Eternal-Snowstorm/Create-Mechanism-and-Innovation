@@ -121,7 +121,7 @@ ServerEvents.recipes((event) => {
 		],
 		"ingredient": Ingredient.of("#tconstruct:seared_tanks").toJson(),
 		"result": Fluid.of("tconstruct:seared_stone", 1000).toJson(),
-		"temperature": 1000,
+		"temperature": 600,
 		"time": 20 * 10
 	}).id("tconstruct:smeltery/melting/seared/fuel_tank")
 
@@ -132,7 +132,7 @@ ServerEvents.recipes((event) => {
 		],
 		"ingredient": Ingredient.of("#tconstruct:scorched_tanks").toJson(),
 		"result": Fluid.of("tconstruct:scorched_stone", 1000).toJson(),
-		"temperature": 1000,
+		"temperature": 500,
 		"time": 20 * 10
 	}).id("tconstruct:smeltery/melting/scorched/fuel_tank")
 
