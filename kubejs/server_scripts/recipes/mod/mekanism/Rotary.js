@@ -1,6 +1,13 @@
 ServerEvents.recipes((event) => {
 	let { mekanism } = event.getRecipes()
 
+	/**
+	 * 
+	 * @param {Special.FluidTag} fluidTag 
+	 * @param {Special.Gas} gasId 
+	 * @param {ResourceLocation_} id 
+	 * @returns 
+	 */
 	function rotaryWithTag(fluidTag, gasId, id) {
 		let fluid = Ingredient.getFluidString(fluidTag)
 

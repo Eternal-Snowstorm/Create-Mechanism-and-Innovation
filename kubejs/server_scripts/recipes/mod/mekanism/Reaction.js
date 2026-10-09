@@ -4,7 +4,7 @@ ServerEvents.recipes((event) => {
 	// 锇
 	mekanism.reaction(
 		"#forge:dusts/osmium",
-		MekType.Gas.of("mekanism:hydrofluoric_acid", 10),
+		"10x mekanism:hydrofluoric_acid",
 		Fluid.of("cmi:hydrochloric_acid", 50),
 		"cmi:infuse_osmium"
 	).duration(60).energyRequired(1000)
@@ -12,7 +12,7 @@ ServerEvents.recipes((event) => {
 	// 再处理裂变碎片
 	mekanism.reaction(
 		"ae2:matter_ball",
-		MekType.Gas.of("mekanism:spent_nuclear_waste", 200),
+		"200x mekanism:spent_nuclear_waste",
 		Fluid.tag("tag", "forge:molten_lead", 90),
 		"4x mekanism:reprocessed_fissile_fragment"
 	).energyRequired(1000).duration(60)
@@ -21,7 +21,7 @@ ServerEvents.recipes((event) => {
 	// 天外寒冰
 	mekanism.reaction(
 		"neoecoae:cryotheum",
-		MekType.Gas.of("cmi:methane", 50),
+		"50x cmi:methane",
 		Fluid.of("mekanism:oxygen", 50),
 		"neoecoae:cryotheum_crystal"
 	).energyRequired(5000).duration(80)
@@ -30,9 +30,9 @@ ServerEvents.recipes((event) => {
 	// 氮氧化物
 	mekanism.reaction(
 		"cmi:plant_ash",
-		MekType.Gas.of("mekanism:hydrogen", 100),
+		"100x mekanism:hydrogen",
 		Fluid.of("cmi:nitric_acid", 400),
 		"thermal:niter_dust",
-		MekType.Gas.of("cmi:nitrogen_oxide", 100)
+		"100x cmi:nitrogen_oxide"
 	).energyRequired(5000).duration(80)
 })

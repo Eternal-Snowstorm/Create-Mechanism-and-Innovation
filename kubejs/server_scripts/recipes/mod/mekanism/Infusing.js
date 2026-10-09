@@ -12,21 +12,21 @@ ServerEvents.recipes((event) => {
 	mekanism.metallurgic_infusing(
 		"mekanism:alloy_infused",
 		"#forge:ingots/chromium",
-		MekType.InfuseType.of("mekanism:redstone", 20)
+		"2x mekanism:redstone"
 	).id("mekanism:metallurgic_infusing/alloy/infused")
 
 	// 强化合金
 	mekanism.metallurgic_infusing(
 		"mekanism:alloy_reinforced",
 		"#forge:ingots/titanium",
-		MekType.InfuseType.of("cmi:etrium", 20)
+		"2x mekanism:redstone"
 	).id("mekanism:metallurgic_infusing/alloy/reinforced")
 
 	// 原子合金
 	mekanism.metallurgic_infusing(
 		"mekanism:alloy_atomic",
 		"#forge:ingots/superconducting_mercury",
-		MekType.InfuseType.of("cmi:infuse_quantum", 20)
+		"2x mekanism:redstone"
 	).id("mekanism:metallurgic_infusing/alloy/atomic")
 
 	// 碳纳米管
@@ -71,8 +71,8 @@ ServerEvents.recipes((event) => {
 
 	// 氢氧燃料
 	mekanism.chemical_infusing(
-		MekType.Gas.of("cmi:hydrogen_oxygen_fuel", 200),
-		MekType.Gas.of("mekanism:hydrogen", 100),
-		MekType.Gas.of("mekanism:oxygen", 100)
+		"200x cmi:hydrogen_oxygen_fuel",
+		"100x mekanism:hydrogen",
+		"100x mekanism:oxygen"
 	)
 })

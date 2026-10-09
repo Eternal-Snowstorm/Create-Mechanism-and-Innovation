@@ -24,6 +24,11 @@ ServerEvents.recipes((event) => {
 		return this
 	}
 
+	/**
+	 * 
+	 * @param {ResourceLocation_} [id] 
+	 * @returns 
+	 */
 	AlloyingRecipe.prototype.alloy = function (id) {
 		let tconBuilder = tconstruct.alloy(this.resultFluid)
 			.temperature(this.meltingPoint)
@@ -36,6 +41,11 @@ ServerEvents.recipes((event) => {
 		return this
 	}
 
+	/**
+	 * 
+	 * @param {ResourceLocation_} [id] 
+	 * @returns 
+	 */
 	AlloyingRecipe.prototype.mixing = function (id) {
 		let createBuilder = create.mixing(
 			this.resultFluid,

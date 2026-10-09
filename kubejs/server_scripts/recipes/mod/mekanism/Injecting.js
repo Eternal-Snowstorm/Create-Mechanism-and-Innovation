@@ -5,7 +5,6 @@ ServerEvents.recipes((event) => {
 	mekanism.injecting(
 		"mekanism:yellow_cake_uranium",
 		"2x #forge:ingots/uranium",
-		MekType.Gas.of("cmi:fissile_uranium_compound", 1),
+		"cmi:fissile_uranium_compound"
 	)
-
 })
