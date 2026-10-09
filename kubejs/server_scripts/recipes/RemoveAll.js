@@ -207,6 +207,7 @@ ServerEvents.recipes((event) => {
 		"createaddition:compat/tconstruct/pig_iron_2",
 		"tconstruct:smeltery/alloys/molten_refined_obsidian",
 		"thermal_extra:crafting/rod_die",
+		"thermal:machines/smelter/smelter_alloy_rose_gold",
 		"createaddition:compat/tconstruct/tinkers_bronze",
 		"vintageimprovements:pressurizing/sulfur_dioxide",
 		"create_rns:coal_deposit_block",

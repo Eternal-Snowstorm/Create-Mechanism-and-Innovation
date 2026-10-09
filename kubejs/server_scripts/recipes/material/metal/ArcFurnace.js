@@ -33,4 +33,24 @@ ServerEvents.recipes((event) => {
 		.time(100)
 		.energy(8000)
 		.id("neoecoae:aluminum_alloy_dust")
+
+	// 黄铜
+	immersiveengineering.arc_furnace("4x create:brass_ingot")
+		.input("3x #forge:ingots/copper")
+		.additives([
+			"#forge:ingots/zinc",
+		])
+		.time(400)
+		.energy(8000)
+		.id("immersiveengineering:arcfurnace/alloy_brass")
+
+	// 琥珀金
+	immersiveengineering.arc_furnace("4x thermal:rose_gold_ingot")
+		.input("3x #forge:ingots/gold")
+		.additives([
+			"#forge:ingots/copper"
+		])
+		.time(400)
+		.energy(8000)
+		.id("immersiveengineering:arcfurnace/alloy_rose_gold")
 })

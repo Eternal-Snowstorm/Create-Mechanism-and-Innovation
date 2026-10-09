@@ -56,15 +56,94 @@
  * 字符串 "input_alloying"(横跨 input_item_1..4 共 4 格).
  */
 const EBF_INPUT_SLOT = null
+/**
+ * arc_furnace 代理的输入排除名单.
+ *
+ * 电子高炉的定位是「合金机」: 只保留合金类配方. 凡是「整类材料」的配方
+ * (原矿 / 粗矿 / 粗矿块 / 粉 / 脏粉) 一律不代理 —— 它们都是前段工序量产的产物,
+ * 该由别的机器处理, 代理过来只会塞满配方表并与既有工序重复.
+ *
+ * 分两张表, 因为这两类标签的命名方式不一样:
+ *   - 家族表: 命中标签本身, 也命中它的子标签(forge:dusts 命中 forge:dusts/iron);
+ *   - 前缀表: 命中以该串开头的标签. 粗矿块是 forge:storage_blocks/raw_iron,
+ *     它并不是某个「.../raw」标签的子标签, 只好按前缀匹配.
+ *
+ * 为什么必须这样匹配而不是全等: IE 配方里写的全是带子路径的具体标签, 实测
+ * 精确等于 #forge:dusts / #forge:ores 的配方一条都没有, 只做全等等于规则不生效.
+ *
+ * 实测 IE 1.20.1 的 78 条 arc_furnace 配方: 家族表跳过 38 条, 再加上粗矿 15 条、
+ * 粗矿块 15 条, 共跳过 68 条, 只留下 10 条(7 条合金 + 钢 + 绝缘玻璃 + 下界合金碎片).
+ */
+const EBF_EXCLUDED_INPUT_TAGS = [
+	"forge:ores",
+	"mekanism:dirty_dusts",
+	"forge:dusts",
+	"forge:raw_materials",
+	"create:crushed_raw_materials"
+]
+
+/**
+ * 按前缀排除的标签(粗矿块).
+ */
+const EBF_EXCLUDED_INPUT_TAG_PREFIXES = [
+	"forge:storage_blocks/raw_"
+]
 
 ServerEvents.recipes((event) => {
 	safeProxy("ebf/arc_furnace", event, proxyArcFurnace)
-	// safeProxy("ebf/melting", event, proxyMelting)
-	// safeProxy("ebf/alloy", event, proxyAlloy)
 	safeProxy("ebf/alloying", event, proxyAlloying)
+	safeProxy("ebf/alloy", event, proxyAlloy)
+	// safeProxy("ebf/melting", event, proxyMelting)
 	// safeProxy("ebf/car_kiln", event, proxyCarKiln)
 	// safeProxy("ebf/rotary_kiln", event, proxyRotaryKiln)
 })
+
+/**
+ * 单个物品原料 id 是否落在排除名单的标签家族里.
+ *
+ * @param {string} id 形如 "#forge:dusts/iron" / "#forge:ores" / "minecraft:iron_ingot"
+ * @returns {boolean}
+ */
+function isExcludedArcFurnaceIngredient(id) {
+	if (typeof id != "string" || !id.startsWith("#")) {
+		return false
+	}
+
+	let tag = id.substring(1)
+
+	let inFamily = EBF_EXCLUDED_INPUT_TAGS.some((excluded) => {
+		return tag == excluded || tag.startsWith(`${excluded}/`)
+	})
+
+	if (inFamily) {
+		return true
+	}
+
+	return EBF_EXCLUDED_INPUT_TAG_PREFIXES.some((prefix) => {
+		return tag.startsWith(prefix)
+	})
+}
+
+/**
+ * 解析后的输入槽位是否命中排除名单.
+ *
+ * 候选数组(一个槽位任选其一)按「任一命中即排除」处理: 宁可少代理一条,
+ * 也不要把整类材料的配方漏进电子高炉.
+ *
+ * @param {*} slot itemSlotOf() 的返回值, 可能为 null
+ * @returns {boolean}
+ */
+function isExcludedArcFurnaceInput(slot) {
+	if (slot == null) {
+		return false
+	}
+
+	if (slot.kind == "candidates") {
+		return slot.ids.some(isExcludedArcFurnaceIngredient)
+	}
+
+	return isExcludedArcFurnaceIngredient(slot.id)
+}
 
 /**
  * 
@@ -74,6 +153,7 @@ function proxyArcFurnace(event) {
 	let { cmi } = event.getRecipes()
 
 	let proxied = 0
+	let skipped = 0
 
 	forEachLiveRecipe(event, "immersiveengineering:arc_furnace", (recipe) => {
 		let json = sourceJsonOf(recipe)
@@ -83,6 +163,16 @@ function proxyArcFurnace(event) {
 		// 没有产物的话代理过去也是坏配方
 		if (results == null) {
 			console.warn(`[MBD2 Proxy] Skipping arc_furnace recipe without results: ${id}`)
+			return
+		}
+
+		// 整类材料(原矿 / 脏粉 / 粉)的配方不代理, 名单见 EBF_EXCLUDED_INPUT_TAGS
+		if (isExcludedArcFurnaceInput(itemSlotOf(json.get("input")))) {
+			skipped++
+
+			if (CmiGlobal.isDebug) {
+				console.info(`[EBF] arc_furnace 跳过整类材料配方: ${id}`)
+			}
 			return
 		}
 
@@ -124,7 +214,9 @@ function proxyArcFurnace(event) {
 		}
 	})
 
-	console.info(`[EBF] arc_furnace 代理完成: ${proxied} 条 (物品输入统一绑 '${EBF_INPUT_SLOT}')`)
+	let slotDesc = EBF_INPUT_SLOT == null ? "通配(不绑槽位名)" : EBF_INPUT_SLOT
+
+	console.info(`[EBF] arc_furnace 代理完成: ${proxied} 条, 按整类材料跳过 ${skipped} 条 (物品输入: ${slotDesc})`)
 }
 
 /**
