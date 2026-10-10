@@ -4,6 +4,22 @@
 		"type": "ctm",
 		"textures": [
 			"cmi:block/machine/driller_placeholder_ctm"
-		]
+		],
+		"extra": {
+			"connect_to": [
+				{
+					"block": "cmi:driller_bearing"
+				},
+				{
+					"block": "cmi:driller_head"
+				},
+				{
+					"block": "cmi:driller_fluid_pump"
+				},
+				{
+					"block": "cmi:driller_gas_pump"
+				}
+			]
+		}
 	}
 }
