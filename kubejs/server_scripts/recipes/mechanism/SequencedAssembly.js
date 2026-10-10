@@ -3,21 +3,6 @@ ServerEvents.recipes((event) => {
 
 	/**
 	 * 
-	 * @param {OutputItem_} output 
-	 * @param {InputItem_} input 
-	 * @param {InputItem_} tran 
-	 * @returns 
-	 */
-	function seqItems(output, input, tran) {
-		return {
-			RES: output,
-			ING: input,
-			TRANS: tran
-		}
-	}
-
-	/**
-	 * 
 	 * @param {{
 	 *		RES: OutputItem_,
 	 *		ING: InputItem_,
@@ -204,6 +189,15 @@ ServerEvents.recipes((event) => {
 		.input("#forge:plates/copper")
 		.deploying("#forge:nuggets/copper")
 		.deploying("#forge:glass")
+		.filling(Fluid.of("minecraft:water", 1000))
+		.deploying("thermal:cured_rubber")
+		.deploying(Mechanisms.PART.MECHA)
+		.build()
+
+	new SequencedAssemblyRecipe(Mechanisms.COPPER)
+		.input("#forge:plates/copper")
+		.deploying("#forge:nuggets/copper")
+		.filling(Fluid.of("tconstruct:molten_glass", 1000))
 		.filling(Fluid.of("minecraft:water", 1000))
 		.deploying("thermal:cured_rubber")
 		.deploying(Mechanisms.PART.MECHA)
