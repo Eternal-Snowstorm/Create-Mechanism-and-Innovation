@@ -1,29 +1,41 @@
 ServerEvents.highPriorityData((event) => {
 	let villageBiomes = [
-		"desert",
+		// "desert",
 		"plains",
-		"savanna",
-		"snowy",
-		"taiga"
+		// "savanna",
+		// "snowy",
+		// "taiga"
 	]
 
 	const SLOTS_PER_VILLAGE = 8
 
 	let buildingTypes = [
 		{
-			id: "tinker",
-			perVillage: 0.85
+			id: "cabin_1",
+			perVillage: 0.4
+		},
+		{
+			id: "cabin_2",
+			perVillage: 0.5
+		},
+		{
+			id: "cabin_3",
+			perVillage: 0.4
 		},
 		{
 			id: "clinic",
 			perVillage: 0.4
 		},
 		{
-			id: "mill",
-			perVillage: 0.35
+			id: "dyeing",
+			perVillage: 0.2
 		},
 		{
-			id: "fisherman_cabin",
+			id: "fisherman",
+			perVillage: 0.3
+		},
+		{
+			id: "grain",
 			perVillage: 0.3
 		},
 		{
@@ -31,8 +43,24 @@ ServerEvents.highPriorityData((event) => {
 			perVillage: 0.3
 		},
 		{
+			id: "mill",
+			perVillage: 0.35
+		},
+		{
 			id: "restaurant",
 			perVillage: 0.25
+		},
+		{
+			id: "tinker",
+			perVillage: 0.85
+		},
+		{
+			id: "toilet",
+			perVillage: 0.5
+		},
+		{
+			id: "train",
+			perVillage: 0.85
 		}
 	]
 
@@ -162,7 +190,6 @@ ServerEvents.highPriorityData((event) => {
 			weight: emptyWeightFinal
 		})
 
-		event.addJson(`cmi:worldgen/template_pool/village/${biome}/houses.json`, templatePool)
 		event.addJson(`minecraft:worldgen/template_pool/village/${biome}/houses.json`, templatePool)
 
 		let streetPool = {

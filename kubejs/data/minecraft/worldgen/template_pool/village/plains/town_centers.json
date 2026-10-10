@@ -8,6 +8,15 @@
 				"projection": "rigid"
 			},
 			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "cmi:village/plains/town_centers/sculpture",
+				"processors": "minecraft:mossify_20_percent",
+				"projection": "rigid"
+			},
+			"weight": 40
 		}
 	],
 	"fallback": "minecraft:empty"
