@@ -162,36 +162,36 @@ ServerEvents.highPriorityData((event) => {
 		sends_telemetry_event: true
 	})
 
-	addAdvancement("academic_fraud", {
-		parent: "cmi:start",
-		criteria: {
-			no_blast_furnace_iron: {
-				trigger: "cmi:academic_fraud",
-				conditions: {}
-			}
-		},
-		display: {
-			announce_to_chat: true,
-			description: {
-				color: "#DBA213",
-				translate: "advancements.cmi.academic_fraud.desc"
-			},
-			frame: "challenge",
-			hidden: true,
-			icon: {
-				item: "minecraft:iron_ingot"
-			},
-			show_toast: true,
-			title: {
-				translate: "advancements.cmi.academic_fraud"
-			}
-		},
-		requirements: [
-			[
-				"no_blast_furnace_iron"
-			]
-		]
-	})
+	// addAdvancement("academic_fraud", {
+	// 	parent: "cmi:start",
+	// 	criteria: {
+	// 		no_blast_furnace_iron: {
+	// 			trigger: "cmi:academic_fraud",
+	// 			conditions: {}
+	// 		}
+	// 	},
+	// 	display: {
+	// 		announce_to_chat: true,
+	// 		description: {
+	// 			color: "#DBA213",
+	// 			translate: "advancements.cmi.academic_fraud.desc"
+	// 		},
+	// 		frame: "challenge",
+	// 		hidden: true,
+	// 		icon: {
+	// 			item: "minecraft:iron_ingot"
+	// 		},
+	// 		show_toast: true,
+	// 		title: {
+	// 			translate: "advancements.cmi.academic_fraud"
+	// 		}
+	// 	},
+	// 	requirements: [
+	// 		[
+	// 			"no_blast_furnace_iron"
+	// 		]
+	// 	]
+	// })
 
 	addAdvancement("fraud", {
 		parent: "cmi:start",
