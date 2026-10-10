@@ -1,6 +1,14 @@
 ServerEvents.recipes((event) => {
 	let { immersiveengineering } = event.getRecipes()
 
+	// 硅
+	immersiveengineering.arc_furnace("#forge:silicon")
+		.input("cmi:silicon_mixture")
+		.slag("#forge:slag")
+		.additives([])
+		.time(100)
+		.energy(8000)
+
 	// 不锈钢
 	immersiveengineering.arc_furnace("#forge:ingots/stainless_steel")
 		.input("#forge:ingots/steel")

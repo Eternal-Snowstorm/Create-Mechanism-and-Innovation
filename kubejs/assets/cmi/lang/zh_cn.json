@@ -72,11 +72,8 @@
 	"tooltip.electronic_blast_furnace.4": "- 使用_琥珀金线圈_的配方处理速度为原速的_1.5_倍",
 	"tooltip.electronic_blast_furnace.5": "- 使用_高压电线圈_的配方处理速度为原速的_4_倍",
 	"tooltip.electronic_blast_furnace.type.0": "- _电弧炉_",
-	"tooltip.electronic_blast_furnace.type.1": "- _熔炼_",
-	"tooltip.electronic_blast_furnace.type.2": "- _合金_",
-	"tooltip.electronic_blast_furnace.type.3": "- _车窑_",
-	"tooltip.electronic_blast_furnace.type.4": "- _旋转窑_",
-	"tooltip.electronic_blast_furnace.type.5": "- _电力高炉_",
+	"tooltip.electronic_blast_furnace.type.1": "- _电力高炉_",
+	"tooltip.electronic_blast_furnace.type.2": "- _匠魂合金_",
 	"thermal.hive_hopper": "蜂箱漏斗",
 	"info.thermal.hive_hopper.jei": "配方要求：\n上方蜂箱的储密量为满格"
 }

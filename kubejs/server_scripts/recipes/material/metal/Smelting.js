@@ -1,5 +1,5 @@
 ServerEvents.recipes((event) => {
-	let { minecraft, mekanism, immersiveengineering, thermal } = event.getRecipes()
+	let { minecraft, mekanism, immersiveengineering, thermal, cmi } = event.getRecipes()
 	let types = [
 		"forge:ores",
 		"forge:raw_materials",
@@ -112,6 +112,12 @@ ServerEvents.recipes((event) => {
 				}
 
 				mekanism.smelting(ingotId[0], `#${type}/${metal}`)
+
+				cmi.electronic_blast_furnace()
+					.inputItems(`#${type}/${metal}`)
+					.outputItems(ingotId[0])
+					.inputFE(10000)
+					.duration(20 * 3)
 			}
 		})
 	})
