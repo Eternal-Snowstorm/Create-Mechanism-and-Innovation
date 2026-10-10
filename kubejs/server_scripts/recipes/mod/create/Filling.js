@@ -102,10 +102,10 @@ ServerEvents.recipes((event) => {
 			? "minecraft:book"
 			: Item.of("minecraft:enchanted_book")
 				.enchant("create:capacity", level - 1)
+				.weakNBT()
 
 		let output = Item.of("minecraft:enchanted_book")
 			.enchant("create:capacity", level)
-			.strongNBT()
 
 		create.filling(output, [
 			input,

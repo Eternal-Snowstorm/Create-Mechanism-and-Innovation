@@ -13,6 +13,7 @@
 		{
 			icon: "minecraft:coal"
 			id: "2D245A409C2C190B"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "2264475D2DE77C7F"
 				type: "xp"
@@ -30,6 +31,7 @@
 		{
 			dependencies: ["2D245A409C2C190B"]
 			id: "55952D9B9D8E8F21"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "05DD24F8CF5BBEB1"
 				type: "xp"
@@ -53,6 +55,7 @@
 		{
 			dependencies: ["55952D9B9D8E8F21"]
 			id: "4930FB8565659CF5"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "7B28F4E8A7B59C0D"
 				type: "xp"
@@ -70,6 +73,7 @@
 		{
 			dependencies: ["4930FB8565659CF5"]
 			id: "5A90B92B1CCF14B8"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "28997BE9A7D5728F"
 				type: "xp"
@@ -87,6 +91,7 @@
 		{
 			dependencies: ["5A90B92B1CCF14B8"]
 			id: "727E544121C1E389"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "58D2B9155B373748"
 				type: "xp"
@@ -104,6 +109,7 @@
 		{
 			dependencies: ["727E544121C1E389"]
 			id: "494A3AF72096707C"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "2D1F23F1F735EA84"
 				type: "xp"
@@ -121,6 +127,7 @@
 		{
 			dependencies: ["55952D9B9D8E8F21"]
 			id: "0CE693D306C1B691"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "5713E685D9E94D33"
 				type: "xp"
@@ -145,6 +152,7 @@
 		{
 			dependencies: ["0CE693D306C1B691"]
 			id: "4E1C39C56CD52564"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "7539C9E05F1764A6"
 				type: "xp"
@@ -171,6 +179,7 @@
 			dependencies: ["2D245A409C2C190B"]
 			description: ["泥炭块只会在红树林沼泽和沼泽群系生成, 挖掘时掉落的泥炭数量受工具的时运效果影响"]
 			id: "7AC1116B656361E6"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [
 				{
 					id: "45DEF34B46517197"
@@ -212,6 +221,7 @@
 			dependencies: ["2D245A409C2C190B"]
 			description: ["煤炭也可以烧成焦炭"]
 			id: "12FAE452591719C6"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "2E48459F498A2E75"
 				type: "xp"

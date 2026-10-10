@@ -3,21 +3,6 @@ ServerEvents.recipes((event) => {
 
 	/**
 	 * 
-	 * @param {OutputItem_} output 
-	 * @param {InputItem_} input 
-	 * @param {InputItem_} tran 
-	 * @returns 
-	 */
-	function seqItems(output, input, tran) {
-		return {
-			RES: output,
-			ING: input,
-			TRANS: tran
-		}
-	}
-
-	/**
-	 * 
 	 * @param {{
 	 *		RES: OutputItem_,
 	 *		ING: InputItem_,
@@ -82,7 +67,7 @@ ServerEvents.recipes((event) => {
 	}
 	/**
 	 * 
-	 * @param {Number} energy
+	 * @param {number} energy
 	 * @returns 
 	 */
 	SequencedAssemblyRecipe.prototype.laserCutting = function (energy) {
@@ -117,7 +102,7 @@ ServerEvents.recipes((event) => {
 	}
 	/**
 	 * 
-	 * @param {Fluid_} fluid
+	 * @param {Internal.Fluid_} fluid
 	 * @returns 
 	 */
 	SequencedAssemblyRecipe.prototype.filling = function (fluid) {
@@ -128,7 +113,7 @@ ServerEvents.recipes((event) => {
 	}
 	/**
 	 * 
-	 * @param {Number} loops 
+	 * @param {number} loops 
 	 */
 	SequencedAssemblyRecipe.prototype.loop = function (loops) {
 		this.loops = loops
@@ -141,11 +126,12 @@ ServerEvents.recipes((event) => {
 		let loops = this.loops
 		let transit = this.transit
 
-		return create.sequenced_assembly(result,
+		let builder = create.sequenced_assembly(result,
 			input,
 			sequences
-		).loops(loops)
-			.transitionalItem(transit)
+		).loops(loops).transitionalItem(transit)
+
+		return builder
 	}
 
 	// 木质
@@ -204,6 +190,15 @@ ServerEvents.recipes((event) => {
 		.input("#forge:plates/copper")
 		.deploying("#forge:nuggets/copper")
 		.deploying("#forge:glass")
+		.filling(Fluid.of("minecraft:water", 1000))
+		.deploying("thermal:cured_rubber")
+		.deploying(Mechanisms.PART.MECHA)
+		.build()
+
+	new SequencedAssemblyRecipe(Mechanisms.COPPER)
+		.input("#forge:plates/copper")
+		.deploying("#forge:nuggets/copper")
+		.filling(Fluid.of("tconstruct:molten_glass", 1000))
 		.filling(Fluid.of("minecraft:water", 1000))
 		.deploying("thermal:cured_rubber")
 		.deploying(Mechanisms.PART.MECHA)

@@ -111,7 +111,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addCommonTooltipLang("#cmi:machine_port", "制作时不消耗机器核心")
 	addCommonTooltipLang("#cmi:machine_core", "制作接口时不消耗")
 	addCommonTooltipLang("#forge:tools/wrench", "工作台制作构件时不消耗")
-	addCommonTooltipLang("#railways:filled_paint_pitchers", "此模组的{create:mechanical_mixer, 1}混合搅拌染色配方已被隐藏，你可以用{railways:white_paint_pitcher, 1}白色染色配方类推其他被隐藏的染色配方")
+	addCommonTooltipLang("#railways:filled_paint_pitchers", "此模组的{create:mechanical_mixer, 1}混合搅拌染色配方已被隐藏, 你可以用{railways:white_paint_pitcher, 1}白色染色配方类推其他被隐藏的染色配方")
 	addCommonTooltipLang("#cmi:clay_molds", "和普通模具不同, 此模具是一次性的(执行配方会消耗)")
 	addCommonTooltipLang("cmi:impact_pile","放置于基岩顶部, 然后用锤子敲击即可制造虚空涌泉")
 
@@ -135,7 +135,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addJEIInfoLang("#cmi:peat_gen", `泥炭是一种上好的燃料, 单个泥炭可以烧炼4个物品\n只会在"红树林沼泽"和"沼泽"群系的地表生成\n并且挖掘泥炭块时将会受到"时运"和"精准采集"的附魔效果影响`)
 	addJEIInfoLang("cmi:sludge_extract", "制作此物品需向机器中安装 整合组件 或 扩容储罐构造")
 	addJEIInfoLang("#easyrepair:repair_item_pouchs", "向其中装入修补件或修复材料并装备后, 手中的工具损坏时会自动修复")
-	addJEIInfoLang("#railways:filled_paint_pitchers", "此模组的混合搅拌染色配方已被隐藏，仅保留白色染色配方\n你可以用白色染色配方类推其他被隐藏的染色配方")
+	addJEIInfoLang("#railways:filled_paint_pitchers", "此模组的混合搅拌染色配方已被隐藏, 仅保留白色染色配方\n你可以用白色染色配方类推其他被隐藏的染色配方")
 
 	addCustomTooltipLang("tooltip.moreburners.electric_burner.1", "§b电力驱动的{create:blaze_burner, 1}烈焰人燃烧室")
 	addCustomTooltipLang("tooltip.moreburners.electric_burner.2", "§b通上{createaddition:electrum_spool, 1}电后会缓慢的升温, 需要保持供电")

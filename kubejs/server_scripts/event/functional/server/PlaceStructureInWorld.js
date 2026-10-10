@@ -76,7 +76,7 @@ ServerEvents.loaded((event) => {
 			// 获取结构的底部 Y 坐标
 			let baseY = getStructureBaseY(temp)
 
-			// 获取目标位置的地面高度，并调整 Y 坐标
+			// 获取目标位置的地面高度, 并调整 Y 坐标
 			let groundY = getGroundY(level, x, z)
 
 			// 计算放置位置的 Y 坐标(地面高度 - 结构底部偏移)

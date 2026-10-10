@@ -42,8 +42,8 @@ EntityEvents.spawned("minecraft:lightning_bolt", (event) => {
 	 * 函数封装
 	 * @param {Internal.ItemStack_} output 输出
 	 * @param {Internal.ItemStack_} input 输入
-	 * @param {Number} arg1 
-	 * @param {Number} arg2 
+	 * @param {number} arg1 
+	 * @param {number} arg2 
 	 */
 	function addConditionalLightningCraft(output, input, arg1, arg2) {
 		if (Math.floor(lightning.x) !== ClientSeedHandler.getValue(arg1) ||

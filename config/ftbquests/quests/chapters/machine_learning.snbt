@@ -16,6 +16,7 @@
 			description: ["随处可见的岩石...它能开启&6工业时代"]
 			icon: "minecraft:andesite"
 			id: "46858C4B5052EC0C"
+			quest_enhance_disable_scroll_paging: false
 			size: 1.5d
 			subtitle: "锤子可以用铁, 燧石乃至钻石制作"
 			tasks: [{
@@ -44,6 +45,7 @@
 				"将熔融锌浇筑在安山岩粉上就可以制作出第一份安山合金"
 			]
 			id: "65F2C054D52EB96B"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "47882DC9659E05FD"
 				type: "xp"
@@ -71,6 +73,7 @@
 			description: ["拥有了生物柴油后，你就可以在匠魂炉中融化铁了"]
 			icon: "tconstruct:molten_iron_bucket"
 			id: "06012DC3A4BBF58B"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "IRON!"
 			tasks: [{
 				id: "7D2AA0D21C95E91B"
@@ -84,6 +87,7 @@
 			dependencies: ["73D78755B4430729"]
 			hide_dependency_lines: true
 			id: "0498E2991294B14D"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "72A612B094AFC6D6"
 				item: {
@@ -102,6 +106,7 @@
 		{
 			dependencies: ["46858C4B5052EC0C"]
 			id: "331EF47BF4AFEA01"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "6040C604D9F8C6C4"
 				item: {
@@ -121,6 +126,7 @@
 			dependencies: ["46858C4B5052EC0C"]
 			description: ["一种低熔点金属, 我可以用它做出第一份&6安山合金"]
 			id: "3942E154F0734013"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "69F09FA657F1E187"
 				item: {
@@ -139,6 +145,7 @@
 		{
 			dependencies: ["65F2C054D52EB96B"]
 			id: "0D502CA40E47F832"
+			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
 			size: 2.0d
 			tags: ["achievement_toast_glow"]
@@ -153,6 +160,7 @@
 		{
 			dependencies: ["65F2C054D52EB96B"]
 			id: "04357F14C006EAAF"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [
 				{
 					count: 64
@@ -234,6 +242,7 @@
 		{
 			dependencies: ["0D502CA40E47F832"]
 			id: "6865ED5A1D93E5EA"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [
 				{
 					count: 2
@@ -287,6 +296,7 @@
 				"或者也可以制作一个&b木质齿轮&r来作为制造铸模的材料"
 			]
 			id: "580C6E604C71F620"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "粉碎的上一步"
 			tasks: [{
 				id: "5A81F7F4B157839D"
@@ -307,6 +317,7 @@
 			dependencies: ["580C6E604C71F620"]
 			description: ["应力消耗大户，注意控制转速"]
 			id: "63BF49635AEF3AF8"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "140CC56105388FA6"
 				item: "create:crushing_wheel"
@@ -328,6 +339,7 @@
 			]
 			icon: "createdieselgenerators:biodiesel_bucket"
 			id: "23C01A41EBA593FC"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "5094E3A154CD1DB1"
 				title: "生物柴油"
@@ -339,6 +351,7 @@
 		{
 			dependencies: ["649CAA93BB644BF3"]
 			id: "295BF991FD7133DF"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "5292BFEE1C4E58E8"
 				item: "minecraft:sugar"
@@ -350,6 +363,7 @@
 		{
 			dependencies: ["0498E2991294B14D"]
 			id: "649CAA93BB644BF3"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "64EBCF622DC2C48B"
 				item: "thermal:syrup_bucket"
@@ -363,6 +377,7 @@
 			description: ["想要杂酚油, 我必须先做一台焦炉 "]
 			hide_dependency_lines: true
 			id: "2CCDB1390C34C80A"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "5C905DCBE1FF747A"
 				item: {
@@ -392,6 +407,7 @@
 			]
 			icon: "immersiveengineering:coke_oven"
 			id: "12A2C0FB29927390"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "杂酚油的来源"
 			tasks: [{
 				id: "6EFA2FDE5732A407"
@@ -408,6 +424,7 @@
 		{
 			dependencies: ["12A2C0FB29927390"]
 			id: "24FD90B8F1474193"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "喝!"
 			tasks: [{
 				id: "27905A9F73DAFBBC"
@@ -420,6 +437,7 @@
 		{
 			dependencies: ["06012DC3A4BBF58B"]
 			id: "6FE26470A8A3B7B1"
+			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
 			size: 2.0d
 			tags: ["achievement_toast_glow"]
@@ -434,6 +452,7 @@
 		{
 			dependencies: ["6FE26470A8A3B7B1"]
 			id: "6B1F2EFF4DAC1814"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "下界砖为烈焰人提供了熟悉的环境"
 			tasks: [{
 				id: "05FC3E680C04077C"
@@ -446,6 +465,7 @@
 		{
 			dependencies: ["26DFF62383774404"]
 			id: "00A42257F183E046"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "1E67C231F9433E3D"
 				item: {
@@ -465,6 +485,7 @@
 		{
 			dependencies: ["00A42257F183E046"]
 			id: "71AB4DF031ED3CB4"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "软木, 可用作密封"
 			tasks: [{
 				id: "75CC40BC1D648EEC"
@@ -477,6 +498,7 @@
 		{
 			dependencies: ["71AB4DF031ED3CB4"]
 			id: "2DDCBAC1D7AF08AE"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "73EDADC7F9FF375B"
 				item: "createdieselgenerators:basin_lid"
@@ -492,6 +514,7 @@
 			]
 			icon: "cmi:vinegar_bucket"
 			id: "664B44589F807708"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "好酸!"
 			tasks: [{
 				id: "0E2AB642B36EB7AA"
@@ -507,6 +530,7 @@
 			dependency_requirement: "one_completed"
 			description: ["制作熔融硫化橡胶浇筑到铸件台上"]
 			id: "43FFB9DB898EA83A"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "气密性绝佳且不易磨损的材料"
 			tasks: [{
 				id: "284D3297AFBA5295"
@@ -521,6 +545,7 @@
 			description: ["可以通过挖掘硫矿打粉后获得, 也可以通过磨煤炭获得"]
 			hide_dependency_lines: true
 			id: "14FCB2B036726682"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "硫磺粉末"
 			tasks: [{
 				id: "1D3ABB165889ABB1"
@@ -535,6 +560,7 @@
 			description: ["我应该能在&6湿地的池塘&f找到一些野生稻米, 之后就可以自己种植了"]
 			hide_dependency_lines: true
 			id: "7DD1547C967EDD20"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "要酿醋, 就要先获得稻米"
 			tasks: [{
 				id: "01EE3E33CD71F8C7"
@@ -554,6 +580,7 @@
 		{
 			dependencies: ["5D40D5E4A4DC395D"]
 			id: "50B5CFD57763580A"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "260B84045CFBC4CC"
 				item: "cmi:rubber_plate"
@@ -565,6 +592,7 @@
 		{
 			dependencies: ["29ACEBA79B437ADD"]
 			id: "5D40D5E4A4DC395D"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "76F962DD1425FF35"
 				item: "thermal:rubber"
@@ -580,6 +608,7 @@
 				"551A2E50E2232A77"
 			]
 			id: "24384207DB9668D9"
+			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
 			size: 2.0d
 			tags: ["achievement_toast_glow"]
@@ -594,6 +623,7 @@
 		{
 			dependencies: ["24384207DB9668D9"]
 			id: "590FBD1F501100AE"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "无限流体池来咯"
 			tasks: [{
 				id: "136C8606D1197457"
@@ -608,6 +638,7 @@
 			icon: "cmi:rubber_tree_bark"
 			id: "795C395B35395809"
 			optional: true
+			quest_enhance_disable_scroll_paging: false
 			size: 1.0d
 			subtitle: "橡胶树上获取的边角料"
 			tasks: [{
@@ -638,6 +669,7 @@
 			dependencies: ["795C395B35395809"]
 			id: "2EE13016985061C5"
 			optional: true
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "4824EB82274F2DA8"
 				item: {
@@ -656,6 +688,7 @@
 		{
 			dependencies: ["24384207DB9668D9"]
 			id: "3CB9E200952C9D9F"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "06D1D3BA96CD62DB"
 				item: "create:item_drain"
@@ -667,6 +700,7 @@
 		{
 			dependencies: ["24384207DB9668D9"]
 			id: "3B5ADA1051DE6F9A"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "264A72D387A04775"
 				item: "create:spout"
@@ -687,6 +721,7 @@
 				"{image:cmi:textures/images/ie/coke_oven_use.png width:104 height:122 align:center}"
 			]
 			id: "45F48FA80A7D0340"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				count: 32
 				id: "5D2B9F22400AE8FA"
@@ -716,6 +751,7 @@
 				"随后对&b粉碎矿&r进行水洗处理, 通过清洗与分离最终获得&c矿粉&r"
 			]
 			id: "0A7ACD83404B2AFA"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "搭配磁铁非常好玩"
 			tasks: [{
 				count: 4L
@@ -737,6 +773,7 @@
 			dependencies: ["4B3C8BED0FFCD6AB"]
 			description: ["制作各种类型的冲压模具时, 都需要使用到这种材料"]
 			id: "6FB78C12B3941053"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				count: 4
 				id: "1BB08903BD86DF88"
@@ -763,6 +800,7 @@
 			dependencies: ["0A7ACD83404B2AFA"]
 			icon: "cmi:molten_industrial_iron_bucket"
 			id: "4B3C8BED0FFCD6AB"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "铁粉放入搅拌机内加热"
 			tasks: [{
 				id: "3A6E3A0F98DD4389"
@@ -776,6 +814,7 @@
 			dependencies: ["45F48FA80A7D0340"]
 			icon: "immersiveengineering:workbench"
 			id: "24FBD0678ECC293A"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "1317194CAF1EB6DF"
@@ -809,6 +848,7 @@
 		{
 			dependencies: ["24FBD0678ECC293A"]
 			id: "2CE848599231C333"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "6041330B6680321C"
@@ -828,6 +868,7 @@
 			dependencies: ["65F2C054D52EB96B"]
 			icon: "create:large_water_wheel"
 			id: "010A13B6C2954C69"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [
 				{
 					id: "6142060D6BC72388"
@@ -853,6 +894,7 @@
 		{
 			dependencies: ["3B5ADA1051DE6F9A"]
 			id: "46163FE283604AC6"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "是的还有个Pro Max"
 			tasks: [{
 				id: "76CF67FE710507C3"
@@ -872,6 +914,7 @@
 				"这里比较推荐使用后者配方, 虽然麻烦点, 但是便宜"
 			]
 			id: "60111BA1F94FFBB5"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "铸模浇筑"
 			tasks: [
 				{
@@ -911,6 +954,7 @@
 		{
 			dependencies: ["6FB78C12B3941053"]
 			id: "28DFB902C00FCB4D"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "5212896F0A6C5E29"
 				item: {
@@ -942,6 +986,7 @@
 			]
 			icon: "mekanism:dynamic_valve"
 			id: "71449F7653BC203B"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "3C141FAD05179E6E"
 				item: {
@@ -981,6 +1026,7 @@
 			]
 			icon: "immersiveengineering:treated_fence"
 			id: "47356A22BB2F191E"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "6B971E57C8509699"
 				type: "xp"
@@ -1003,6 +1049,7 @@
 			]
 			icon: "createdieselgenerators:bulk_fermenter"
 			id: "7E097A0AFDB21208"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				count: 27
 				id: "576328DC09DECD40"
@@ -1025,6 +1072,7 @@
 		{
 			dependencies: ["6865ED5A1D93E5EA"]
 			id: "7B308F2171EB91AD"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "容量更大"
 			tasks: [{
 				id: "3C9BEBD5F153DB58"
@@ -1037,6 +1085,7 @@
 		{
 			dependencies: ["3CB9E200952C9D9F"]
 			id: "7B40AD53E7A35CC9"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "58A26F99815597EE"
 				item: "create_enchantment_industry:mechanical_grindstone"
@@ -1060,6 +1109,7 @@
 			]
 			icon: "minecraft:andesite"
 			id: "0427BA147EFE77D7"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "02309DAFE27D30D0"
 				type: "xp"
@@ -1098,6 +1148,7 @@
 				"将需要充电的物品放入工匠工作台电力条下方的物品槽中, 即可为物品充电"
 			]
 			id: "0F6D17B7AF1897C4"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "028DCD676EF77D32"
 				item: "thermal:tinker_bench"
@@ -1122,6 +1173,7 @@
 				"去皮橡胶原木周围26格内（以其为中心，边长3格的正方体范围内）&4不要&r放第二个去皮橡胶原木，会扣效率"
 			]
 			id: "29ACEBA79B437ADD"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "269286154577B97A"
 				item: "treetap:tap"
@@ -1139,6 +1191,7 @@
 		{
 			dependencies: ["29C10567663F027F"]
 			id: "45EFA2C8267E8293"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "1B0101C03DFCEB65"
 				item: "cmi:copper_mechanism_basement"
@@ -1150,6 +1203,7 @@
 		{
 			dependencies: ["29C10567663F027F"]
 			id: "551A2E50E2232A77"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "1932EE031FE934E8"
 				item: "create:fluid_pipe"
@@ -1167,6 +1221,7 @@
 			]
 			icon: "cmi:cured_rubber_bucket"
 			id: "3D4750217EE8ECD1"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "367793F8DFF295ED"
 				title: "熔融硫化橡胶"

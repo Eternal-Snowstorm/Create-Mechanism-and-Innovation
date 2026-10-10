@@ -380,6 +380,13 @@ ServerEvents.tags("item", (event) => {
 		.add("tconstruct:tinkers_anvil")
 		.add("tconstruct:scorched_anvil")
 
+	// 垃圾桶
+	event.get("trashcans:trash_cans")
+		.add("trashcans:item_trash_can")
+		.add("trashcans:liquid_trash_can")
+		.add("trashcans:energy_trash_can")
+		.add("trashcans:ultimate_trash_can")
+
 	// 锻造砧材料
 	let metalIds = [
 		"andesite_alloy",

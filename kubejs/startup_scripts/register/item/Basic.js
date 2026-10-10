@@ -360,6 +360,11 @@ StartupEvents.registry("item", (event) => {
 	// 革新幻晶
 	addMaterial("dreamcore_innovation")
 
+	/**
+	 * 
+	 * @param {string} type 
+	 * @returns 
+	 */
 	function componentModel(type) {
 		return {
 			"parent": "cmi:item/computing_cell",
@@ -370,10 +375,16 @@ StartupEvents.registry("item", (event) => {
 	}
 
 	let SomeModelsJson = {
-		cogwheel: function (material) {
+		/**
+		 * 
+		 * @param {string} material 
+		 * @returns 
+		 */
+		cogwheel(material) {
 			const PARENT = "cmi:item/cogwheels/cogwheel"
 			const PARTICLE = `steampowered:block/cogwheel/${material}_cogwheel`
 			const COGWHEEL = `steampowered:block/cogwheel/${material}_cogwheel`
+
 			return {
 				"parent": PARENT,
 				"textures": {
@@ -382,7 +393,12 @@ StartupEvents.registry("item", (event) => {
 				}
 			}
 		},
-		largeCogwheel: function (material) {
+		/**
+		 * 
+		 * @param {string} material 
+		 * @returns 
+		 */
+		largeCogwheel(material) {
 			const PARENT = "cmi:item/cogwheels/large_cogwheel"
 			const PARTICLE = `steampowered:block/cogwheel/${material}_large_cogwheel`
 			const LARGE_COGWHEEL = `steampowered:block/cogwheel/${material}_large_cogwheel`
@@ -395,7 +411,12 @@ StartupEvents.registry("item", (event) => {
 				}
 			}
 		},
-		casingFrame: function (material) {
+		/**
+		 * 
+		 * @param {string} material 
+		 * @returns 
+		 */
+		casingFrame(material) {
 			return {
 				"parent": "cmi:item/casing_framework/main",
 				"textures": {

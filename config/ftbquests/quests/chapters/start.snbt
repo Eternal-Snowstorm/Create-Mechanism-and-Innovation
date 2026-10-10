@@ -15,6 +15,7 @@
 			dependencies: ["2613E62AF5BCD9AC"]
 			icon: "tconstruct:encyclopedia"
 			id: "5D0FEBD3FC3443C6"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [
 				{
 					advancement: "tconstruct:world/tinkers_gadgetry"
@@ -55,6 +56,7 @@
 			dependencies: ["21ED583750523195"]
 			description: ["这是我为数不多能徒手挖掘的材料"]
 			id: "5DC78DC9A01883A1"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "54681A0AC1BE477B"
 				item: "cmi:initial_item_kit"
@@ -81,6 +83,7 @@
 			dependencies: ["1231A867DC253AAA"]
 			description: ["我可以用它来熔炼一些&6熔点较低&f的金属"]
 			id: "562C10B7F3C07DCF"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				count: 16
 				id: "38FDE22246C66CC9"
@@ -101,6 +104,7 @@
 			dependencies: ["4EAFBA3A19526127"]
 			icon: "tconstruct:pattern"
 			id: "73153E1AFAD14636"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "从基础做起..."
 			tasks: [{
 				count: 8L
@@ -115,6 +119,7 @@
 		{
 			dependencies: ["5DC78DC9A01883A1"]
 			id: "4EAFBA3A19526127"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "原木分解出的基础材料"
 			tasks: [{
 				id: "727B3A48525FE96F"
@@ -140,6 +145,7 @@
 				"扳手在前面的初始套件中有赠送, 不需要担心制作时会消耗"
 			]
 			id: "0849A3B5EAAE4E14"
+			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
 			size: 2.0d
 			subtitle: "我的第一个构件"
@@ -198,6 +204,7 @@
 				}
 			}
 			id: "3A4EA6A20A0727AA"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "万用挖掘工具"
 			tasks: [{
 				icon: {
@@ -261,6 +268,7 @@
 		{
 			dependencies: ["07FD61829D499994"]
 			id: "17AEC8F5B7867AFE"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "&m原本叫水泥来着&r"
 			tasks: [{
 				id: "36A475E42CA7D3E6"
@@ -274,6 +282,7 @@
 		{
 			dependencies: ["3A4EA6A20A0727AA"]
 			id: "1231A867DC253AAA"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "原神, 启动!"
 			tasks: [{
 				id: "02D9C6FC1909A08D"
@@ -293,6 +302,7 @@
 		{
 			dependencies: ["3A4EA6A20A0727AA"]
 			id: "637C1318E278B73E"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "44CCB17D995B1FD3"
 				item: {
@@ -313,6 +323,7 @@
 			dependencies: ["17AEC8F5B7867AFE"]
 			description: ["有了焦黑砖, 我就能制作熔炼更高熔点金属的设备"]
 			id: "21B1DA369A461281"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				count: 16
 				id: "0690EB4431BB3208"
@@ -334,6 +345,7 @@
 				"799329AFB898606F"
 			]
 			id: "73D78755B4430729"
+			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
 			size: 2.0d
 			tags: ["achievement_toast_glow"]
@@ -356,6 +368,7 @@
 				}
 			}
 			id: "4840B337A93659FC"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "39B8ED66C34F6F63"
 				title: "锹"
@@ -368,6 +381,7 @@
 		{
 			dependencies: ["4840B337A93659FC"]
 			id: "07FD61829D499994"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [
 				{
 					count: 16L
@@ -423,6 +437,7 @@
 				"并且它十分重要, 是你目前阶段&c唯一&r可以从保险库中取出东西的方式"
 			]
 			id: "2613E62AF5BCD9AC"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "我曾经是一枚工匠！"
 			tasks: [
 				{
@@ -452,6 +467,7 @@
 				"{image:cmi:textures/images/tconstruct/copper_pickaxe.png width:647 height:296 align:center fit:true}"
 			]
 			id: "5FB6FC064E4EECAB"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "有了这些 就能做挖掘等级更高的工具了"
 			tasks: [{
 				id: "7B4E9E4E487B6BC3"
@@ -474,6 +490,7 @@
 			dependencies: ["3A4EA6A20A0727AA"]
 			dependency_requirement: "one_completed"
 			id: "5DEF00C4138EE4FB"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "主世界也有啦"
 			tasks: [{
 				icon: "cmi:quartz_ore"
@@ -495,6 +512,7 @@
 				"概率获取"
 			]
 			id: "3D854C186FF6E897"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "打制石器吗"
 			tasks: [{
 				id: "2FC531D747BB6BDA"
@@ -514,6 +532,7 @@
 		{
 			dependencies: ["5DEF00C4138EE4FB"]
 			id: "13884F7A75B4D36D"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "2AA80A2100D437DD"
 				item: {
@@ -541,6 +560,7 @@
 			]
 			icon: "tconstruct:seared_melter"
 			id: "26DFF62383774404"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [
 				{
 					id: "3BF1DDA15DF19657"
@@ -598,6 +618,7 @@
 				"637C1318E278B73E"
 			]
 			id: "29C10567663F027F"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "一种质地较软的金属 似乎很容易塑形"
 			tasks: [{
 				id: "3182E885E9C07E4D"
@@ -618,6 +639,7 @@
 		{
 			dependencies: ["4EAFBA3A19526127"]
 			id: "76DD35F7BAB2AF34"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "74F9735622F1DEC4"
 				item: "minecraft:crafting_table"
@@ -630,6 +652,7 @@
 			dependencies: ["76DD35F7BAB2AF34"]
 			hide_dependency_lines: true
 			id: "256C6C201607525D"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "更方便的东西"
 			tasks: [{
 				id: "07E1028A8A66D5A9"
@@ -642,6 +665,7 @@
 		{
 			dependencies: ["07FD61829D499994"]
 			id: "23E3A74C5D9EEEBF"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				icon: {
 					Count: 1
@@ -667,6 +691,7 @@
 		{
 			dependencies: ["23E3A74C5D9EEEBF"]
 			id: "799329AFB898606F"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "0F67DC1976A07223"
 				item: {
@@ -690,6 +715,7 @@
 			]
 			id: "7C35ECF218BDC872"
 			optional: true
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "此外你还可以选择温度更高的流体燃料"
 			tasks: [{
 				id: "1F58387AF83C7CD3"
@@ -710,6 +736,7 @@
 				"就叫...构件吧"
 			]
 			id: "79EF51A3C7D8075C"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				count: 16
 				id: "26485367B073FBC9"
@@ -745,6 +772,7 @@
 				tag: { }
 			}
 			id: "21ED583750523195"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				count: 64
 				id: "7921A777ABA1D383"
@@ -779,6 +807,7 @@
 				}
 			}
 			id: "41A9A5F81771CD4F"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [
 				{
 					id: "1AED3A4B90A6614F"
@@ -843,6 +872,7 @@
 		{
 			dependencies: ["79EF51A3C7D8075C"]
 			id: "40A3953BD0E4AB68"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "38DDD56EE022E5F4"
 				item: "cmi:basic_mechanism_part"
@@ -855,6 +885,7 @@
 			dependencies: ["26DFF62383774404"]
 			description: ["村庄的工匠小屋中有大量的&6冶炼炉元件&r，或许可以帮助你快速发展"]
 			id: "35D993D8B21B6A08"
+			quest_enhance_disable_scroll_paging: false
 			size: 1.5d
 			tasks: [{
 				icon: "tconstruct:smeltery_controller"
@@ -870,6 +901,7 @@
 		{
 			dependencies: ["21ED583750523195"]
 			id: "1EBE557E214AC530"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "4DBE3D25EC22BA8D"
 				item: "farmersdelight:cutting_board"
@@ -881,6 +913,7 @@
 		{
 			dependencies: ["1EBE557E214AC530"]
 			id: "219F885BCE038EA1"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "原木放在砧板上用斧削皮"
 			tasks: [{
 				id: "61932BA611B3AB88"
@@ -902,6 +935,7 @@
 			dependencies: ["35D993D8B21B6A08"]
 			description: ["工匠砧可以制作更多工具，以及一些具有&4特殊功能&r的工具"]
 			id: "6AF60377F2DAB309"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "你应该能找到"
 			tasks: [{
 				id: "5EBBB8F5701B2A1C"
@@ -963,6 +997,7 @@
 			}
 			id: "13E71E8494A3B774"
 			invisible: true
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "你很清楚什么工具适应什么需求"
 			tags: ["achievement_toast_glow"]
 			tasks: [
@@ -1042,6 +1077,7 @@
 			}
 			id: "7987BD41A7A33F99"
 			invisible: true
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				count: 16
 				id: "2A30983D5CE84389"
@@ -1118,6 +1154,7 @@
 			}
 			id: "0C1214BEA3AA5904"
 			invisible: true
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				count: 16
 				id: "641824364F9F50C8"
@@ -1197,6 +1234,7 @@
 			}
 			id: "27027EE58989C749"
 			invisible: true
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				count: 16
 				id: "543B1298BC2531BC"

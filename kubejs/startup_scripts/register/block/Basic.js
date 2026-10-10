@@ -264,6 +264,16 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiMiningLevel.STONE.tag())
 		.requiresTool(true)
 
+	// 矿藏粉末块
+	addBlock("deposit_dust_block")
+		.textureAll(Cmi.loadResource("block/deposit_dust_block"))
+		.soundType(SoundType.TUFF)
+		.hardness(3)
+		.resistance(3)
+		.tagBlock(CmiToolType.PICKAXE.tag())
+		.tagBlock(CmiMiningLevel.WOODEN.tag())
+		.requiresTool(false)
+
 	// 械钢矿石
 	addBlock("mechanium_ore")
 		.textureAll(Cmi.loadResource("block/mechanium_ore"))
@@ -274,8 +284,6 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiMiningLevel.STONE.tag())
 		.requiresTool(true)
 
-
-
 	// 雕纹铜块
 	addBlock("chiseled_copper")
 		.textureAll(Cmi.loadResource("block/chiseled_copper/0"))
@@ -284,6 +292,7 @@ StartupEvents.registry("block", (event) => {
 		.resistance(6)
 		.tagBlock(CmiToolType.PICKAXE.tag())
 		.tagBlock(CmiMiningLevel.STONE.tag())
+
 	addBlock("exposed_chiseled_copper")
 		.textureAll(Cmi.loadResource("block/chiseled_copper/1"))
 		.soundType(SoundType.COPPER)
@@ -291,6 +300,7 @@ StartupEvents.registry("block", (event) => {
 		.resistance(6)
 		.tagBlock(CmiToolType.PICKAXE.tag())
 		.tagBlock(CmiMiningLevel.STONE.tag())
+
 	addBlock("weathered_chiseled_copper")
 		.textureAll(Cmi.loadResource("block/chiseled_copper/2"))
 		.soundType(SoundType.COPPER)
@@ -298,6 +308,7 @@ StartupEvents.registry("block", (event) => {
 		.resistance(6)
 		.tagBlock(CmiToolType.PICKAXE.tag())
 		.tagBlock(CmiMiningLevel.STONE.tag())
+
 	addBlock("oxidized_chiseled_copper")
 		.textureAll(Cmi.loadResource("block/chiseled_copper/3"))
 		.soundType(SoundType.COPPER)
@@ -305,6 +316,7 @@ StartupEvents.registry("block", (event) => {
 		.resistance(6)
 		.tagBlock(CmiToolType.PICKAXE.tag())
 		.tagBlock(CmiMiningLevel.STONE.tag())
+
 	addBlock("waxed_chiseled_copper")
 		.textureAll(Cmi.loadResource("block/chiseled_copper/0"))
 		.soundType(SoundType.COPPER)
@@ -312,6 +324,7 @@ StartupEvents.registry("block", (event) => {
 		.resistance(6)
 		.tagBlock(CmiToolType.PICKAXE.tag())
 		.tagBlock(CmiMiningLevel.STONE.tag())
+
 	addBlock("waxed_exposed_chiseled_copper")
 		.textureAll(Cmi.loadResource("block/chiseled_copper/1"))
 		.soundType(SoundType.COPPER)
@@ -319,6 +332,7 @@ StartupEvents.registry("block", (event) => {
 		.resistance(6)
 		.tagBlock(CmiToolType.PICKAXE.tag())
 		.tagBlock(CmiMiningLevel.STONE.tag())
+
 	addBlock("waxed_weathered_chiseled_copper")
 		.textureAll(Cmi.loadResource("block/chiseled_copper/2"))
 		.soundType(SoundType.COPPER)
@@ -326,6 +340,7 @@ StartupEvents.registry("block", (event) => {
 		.resistance(6)
 		.tagBlock(CmiToolType.PICKAXE.tag())
 		.tagBlock(CmiMiningLevel.STONE.tag())
+
 	addBlock("waxed_oxidized_chiseled_copper")
 		.textureAll(Cmi.loadResource("block/chiseled_copper/3"))
 		.soundType(SoundType.COPPER)

@@ -103,39 +103,31 @@ ServerEvents.recipes((event) => {
 		.time(2 * 20)
 		.temperature(1064)
 
-	event.custom({
-		"type": "tconstruct:melting",
-		"byproducts": [
-			Fluid.of("tconstruct:scorched_stone", 125).toJson()
-		],
-		"ingredient": Ingredient.of("#create:stone_types/scorchia").toJson(),
-		"result": Fluid.of("tconstruct:seared_stone", 250).toJson(),
-		"temperature": 1000,
-		"time": 20 * 10
-	})
+	tconstruct.melting(Fluid.of("tconstruct:seared_stone", 250))
+		.ingredient("#create:stone_types/scorchia")
+		.time(20 * 10)
+		.temperature(1000)
+		.byproducts([
+			Fluid.of("tconstruct:scorched_stone", 125)
+		])
 
-	event.custom({
-		"type": "tconstruct:melting",
-		"byproducts": [
-			Fluid.of("tconstruct:molten_quartz", 100).toJson()
-		],
-		"ingredient": Ingredient.of("#tconstruct:seared_tanks").toJson(),
-		"result": Fluid.of("tconstruct:seared_stone", 1000).toJson(),
-		"temperature": 600,
-		"time": 20 * 10
-	}).id("tconstruct:smeltery/melting/seared/fuel_tank")
+	tconstruct.melting(Fluid.of("tconstruct:seared_stone", 1000))
+		.ingredient("#tconstruct:seared_tanks")
+		.time(20 * 10)
+		.temperature(600)
+		.byproducts([
+			Fluid.of("tconstruct:molten_quartz", 100)
+		])
+		.id("tconstruct:smeltery/melting/seared/fuel_tank")
 
-	event.custom({
-		"type": "tconstruct:melting",
-		"byproducts": [
-			Fluid.of("tconstruct:molten_glass", 1000).toJson()
-		],
-		"ingredient": Ingredient.of("#tconstruct:scorched_tanks").toJson(),
-		"result": Fluid.of("tconstruct:scorched_stone", 1000).toJson(),
-		"temperature": 500,
-		"time": 20 * 10
-	}).id("tconstruct:smeltery/melting/scorched/fuel_tank")
-
+	tconstruct.melting(Fluid.of("tconstruct:scorched_stone", 1000))
+		.ingredient("#tconstruct:scorched_tanks")
+		.time(20 * 10)
+		.temperature(500)
+		.byproducts([
+			Fluid.of("tconstruct:molten_glass", 1000)
+		])
+		.id("tconstruct:smeltery/melting/scorched/fuel_tank")
 
 	// 机动栏杆系列
 	tconstruct.melting(Fluid.of("cmi:molten_andesite_alloy", 30))

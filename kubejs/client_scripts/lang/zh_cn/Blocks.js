@@ -127,6 +127,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addBlockLang("driller_cooler_input_bus", "钻机冷却剂输入总线")
 	addBlockLang("driller_cooler_output_bus", "钻机冷却剂输出总线")
 	addBlockLang("piggy_bank", "破旧的存钱罐")
+	addBlockLang("deposit_dust_block", "矿藏粉末块")
 
 	addBlockLang("chiseled_copper", "雕纹铜块")
 	addBlockLang("exposed_chiseled_copper", "斑驳的雕纹铜块")

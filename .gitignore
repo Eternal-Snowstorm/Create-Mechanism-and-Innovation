@@ -157,6 +157,7 @@ graphflow-out/*
 !config/treechop-common.toml
 !config/createcoolingfan-factors.json
 !config/fluidlogistics-common.toml
+!config/fluidlogistics-server.toml
 !config/mbtool-common.toml
 !config/curios-common.toml
 

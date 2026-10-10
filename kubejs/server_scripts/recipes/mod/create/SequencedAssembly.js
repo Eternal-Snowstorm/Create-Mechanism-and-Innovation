@@ -91,7 +91,7 @@ ServerEvents.recipes((event) => {
 	}
 	/**
 	 * 
-	 * @param {Number} energy
+	 * @param {number} energy
 	 * @returns 
 	 */
 	SequencedAssemblyRecipe.prototype.laserCutting = function (energy) {
@@ -147,7 +147,7 @@ ServerEvents.recipes((event) => {
 	}
 	/**
 	 * 
-	 * @param {Number} loops 
+	 * @param {number} loops 
 	 */
 	SequencedAssemblyRecipe.prototype.loop = function (loops) {
 		this.loops = loops

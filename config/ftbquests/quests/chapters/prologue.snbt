@@ -30,6 +30,7 @@
 			disable_toast: true
 			icon: "create:empty_schematic"
 			id: "1EA33F05E5B01612"
+			quest_enhance_disable_scroll_paging: false
 			shape: "hexagon"
 			subtitle: "这些是辅助你通关的工具"
 			tasks: [{
@@ -45,6 +46,7 @@
 			disable_toast: true
 			icon: "create:wrench"
 			id: "16E08617F49E62A9"
+			quest_enhance_disable_scroll_paging: false
 			shape: "hexagon"
 			subtitle: "还请大家保密!"
 			tasks: [{
@@ -60,6 +62,7 @@
 			disable_toast: true
 			icon: "create:steam_engine"
 			id: "1970EFE7924032F0"
+			quest_enhance_disable_scroll_paging: false
 			shape: "hexagon"
 			subtitle: "当前版本:Beta-2.5.0"
 			tasks: [{
@@ -89,6 +92,7 @@
 			disable_toast: true
 			icon: "cmi:re_construction"
 			id: "04615C350964977A"
+			quest_enhance_disable_scroll_paging: false
 			shape: "hexagon"
 			subtitle: "整合包开发团队"
 			tasks: [{
@@ -109,6 +113,7 @@
 			]
 			icon: "ftbquests:book"
 			id: "79AA74F5F585BC6B"
+			quest_enhance_disable_scroll_paging: false
 			shape: "hexagon"
 			subtitle: "未完成, 请注意"
 			tasks: [{
@@ -382,6 +387,7 @@
 				}
 			}
 			id: "5A4FC2CACB726A2B"
+			quest_enhance_disable_scroll_paging: false
 			shape: "hexagon"
 			subtitle: "和平发育还是战斗爽?"
 			tasks: [{
@@ -402,6 +408,7 @@
 			]
 			icon: "minecraft:apple"
 			id: "30ED8BD20D50F96D"
+			quest_enhance_disable_scroll_paging: false
 			shape: "hexagon"
 			subtitle: "他们是制作整合包时提供了帮助的人"
 			tasks: [{
@@ -415,6 +422,7 @@
 		{
 			icon: "create:goggles"
 			id: "405D0556F11BCE2C"
+			quest_enhance_disable_scroll_paging: false
 			shape: "hexagon"
 			subtitle: "感谢游玩&6机械动力:构件与革新&f！"
 			tasks: [{
@@ -428,6 +436,7 @@
 		}
 		{
 			id: "09E1B57B8D35ED4E"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "09039616DF8D6DEA"
 				title: "Test"
@@ -439,6 +448,7 @@
 		}
 		{
 			id: "550330A6594D1E98"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				auto: "invisible"
 				id: "2664A3F815D51366"
