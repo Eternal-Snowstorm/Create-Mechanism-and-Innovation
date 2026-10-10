@@ -356,11 +356,11 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiMiningLevel.STONE.tag())
 		.box(0, 0, 0, 16, 2, 16)
 		.modelJson = {
-		parent: "cmi:block/redstone_diode",
-		textures: {
-			"diode": "minecraft:block/smooth_stone"
+			parent: "cmi:block/redstone_diode",
+			textures: {
+				"diode": "minecraft:block/smooth_stone"
+			}
 		}
-	}
 
 	addBlock("brass_diode_base", "cardinal")
 		.hardness(3)
@@ -369,9 +369,9 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiMiningLevel.STONE.tag())
 		.box(0, 0, 0, 16, 2, 16)
 		.modelJson = {
-		parent: "cmi:block/redstone_diode",
-		textures: {
-			"diode": "create:block/diodes/brass_diode_base"
+			parent: "cmi:block/redstone_diode",
+			textures: {
+				"diode": "create:block/diodes/brass_diode_base"
+			}
 		}
-	}
 })

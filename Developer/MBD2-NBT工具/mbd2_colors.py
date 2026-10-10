@@ -124,7 +124,8 @@ def process(path, apply_fix):
         BACKUP.mkdir(exist_ok=True)
         dest = BACKUP / rel
         dest.parent.mkdir(parents=True, exist_ok=True)
-        if not dest.exists():
+        # 备份要跟得上源文件: 源比备份新(或备份不存在)就刷新, 避免留下过期备份
+        if not dest.exists() or path.stat().st_mtime > dest.stat().st_mtime:
             shutil.copy2(path, dest)
         path.write_bytes(regen)
         lines.append(f"    删默认色 {len(default_entries)} 条, 删默认作者 {len(author_hits)} 条; "

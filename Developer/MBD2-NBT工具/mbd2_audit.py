@@ -122,7 +122,18 @@ def audit(path):
     has_ui = getv(ms.value, "hasUI") if ms is not None else None
 
     ui = get(root, "ui")
-    if ui is not None and has_ui == 0:
+    # 规范「没有 gui 时位置/大小归零、背景删除」只适用于 **没有 UI 内容** 的机器.
+    # 部件方块(.sm bus)的 ui.children 是控制器 UI 里要渲染的槽位, 把它们归零、
+    # 删背景会让部件在控制器界面里错位/看不见, 所以这类保留是 **有意为之**,
+    # 不算违规, 只做 INFO 提示, 并跳过归零检查.
+    kids0 = get(ui.value, "children") if ui is not None else None
+    # 注意: _nbt_tool.List 不是内建 list 的子类, 必须用 List 判断
+    n_kids0 = len(kids0.value.items) if kids0 is not None and isinstance(kids0.value, List) else 0
+
+    if ui is not None and has_ui == 0 and n_kids0:
+        add("INFO 部件 UI 保留(有意)", "ui.children",
+            f"{n_kids0} 个部件; 规范清零会破坏控制器 UI, 故不动")
+    elif ui is not None and has_ui == 0:
         sp = get(ui.value, "selfPosition")
         sz = get(ui.value, "size")
         if sp is not None:
@@ -146,7 +157,7 @@ def audit(path):
     # 机器名称控件
     if ui is not None:
         kids = get(ui.value, "children")
-        if isinstance(kids, list):
+        if kids is not None and isinstance(kids.value, List):
             for i, child in enumerate(kids.value):
                 txt = get(child, "text")
                 if txt is None:
@@ -173,21 +184,27 @@ def main():
         files = [f for f in files if f"mbd2{chr(92)}{only}" in str(f) or f"/{only}/" in str(f)]
 
     total = 0
+    info = 0
     buckets = {}
     for f in files:
         rel, issues, size = audit(f)
-        if issues:
-            total += len(issues)
-            print(f"\n=== {rel}  ({size} B, {len(issues)} 处)")
-            for kind, where, value in issues:
+        real = [i for i in issues if not i[0].startswith("INFO")]
+        if real:
+            total += len(real)
+            print(f"\n=== {rel}  ({size} B, {len(real)} 处违规)")
+            for kind, where, value in real:
                 print(f"    - [{kind}] {where} = {value!r}")
                 buckets[kind] = buckets.get(kind, 0) + 1
+        elif issues:
+            info += len(issues)
         else:
             print(f"ok  {rel}  ({size} B)")
 
-    print(f"\n---- 共 {len(files)} 个文件, {total} 处问题 ----")
+    print(f"\n---- 共 {len(files)} 个文件, {total} 处真实违规, {info} 处 INFO(有意为之) ----")
     for k, v in sorted(buckets.items(), key=lambda x: -x[1]):
         print(f"  {v:3d}  {k}")
+    if info:
+        print(f"  {info:3d}  INFO 部件 UI 保留(有意)  —— 见 README「尚未处理的条目 3」")
 
 
 if __name__ == "__main__":
