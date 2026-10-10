@@ -353,6 +353,7 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiToolType.PICKAXE.tag())
 		.tagBlock(CmiMiningLevel.STONE.tag())
 
+	// 红石二极管底座
 	addBlock("redstone_diode_base")
 		.hardness(3)
 		.resistance(6)
@@ -366,6 +367,7 @@ StartupEvents.registry("block", (event) => {
 			}
 		}
 
+	// 黄铜二极管底座
 	addBlock("brass_diode_base", "cardinal")
 		.hardness(3)
 		.resistance(6)
