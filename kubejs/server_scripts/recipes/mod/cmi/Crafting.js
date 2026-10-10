@@ -1,5 +1,5 @@
 ServerEvents.recipes((event) => {
-	let { kubejs } = event.getRecipes()
+	let { kubejs, functionalstorage } = event.getRecipes()
 
 	// 木齿轮
 	kubejs.shaped("cmi:wooden_gear", [
@@ -301,5 +301,18 @@ ServerEvents.recipes((event) => {
 		M: Mechanisms.PHOTO.COM
 	}).id("mekanismgenerators:solar_panel")
 
+	// 矿藏粉末块
+	kubejs.shaped("cmi:deposit_dust_block", [
+		"AAA",
+		"AAA",
+		"AAA"
+	], {
+		A: "#forge:dusts/deposit"
+	})
 
+	event.custom({
+		"type": "functionalstorage:custom_compacting",
+		"higher_input": Item.of("cmi:deposit_dust_block"),
+		"lower_input": Item.of("cmi:deposit_dust", 9)
+	})
 })
