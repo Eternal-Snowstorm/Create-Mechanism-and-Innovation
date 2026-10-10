@@ -22,7 +22,7 @@ ClientEvents.highPriorityAssets((event) => {
 		})
 
 		if (CmiGlobal.isDebug) {
-			console.info(`[GenMBDModel] Generated: assets/cmi/models/block/${model}.json`)
+			console.info(`[GenMBDModel] Generated: assets/cmi/models/block/${model.toString().split(":").pop()}.json`)
 		}
 	}
 
