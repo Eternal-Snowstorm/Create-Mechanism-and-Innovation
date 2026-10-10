@@ -181,6 +181,7 @@ StartupEvents.registry("block", (event) => {
 
 	// 钻探轴承
 	addBlock("driller_bearing")
+		.textureAll("cmi:block/machine/driller_placeholder")
 		.soundType(SoundType.NETHERITE_BLOCK)
 		.hardness(5)
 		.resistance(5)
@@ -190,6 +191,7 @@ StartupEvents.registry("block", (event) => {
 
 	// 钻头
 	addBlock("driller_head")
+		.textureAll("cmi:block/machine/driller_placeholder")
 		.soundType(SoundType.NETHERITE_BLOCK)
 		.hardness(5)
 		.resistance(5)
@@ -199,6 +201,7 @@ StartupEvents.registry("block", (event) => {
 
 	// 液泵
 	addBlock("driller_fluid_pump")
+		.textureAll("cmi:block/machine/driller_placeholder")
 		.soundType(SoundType.NETHERITE_BLOCK)
 		.hardness(5)
 		.resistance(5)
@@ -208,6 +211,7 @@ StartupEvents.registry("block", (event) => {
 
 	// 气泵
 	addBlock("driller_gas_pump")
+		.textureAll("cmi:block/machine/driller_placeholder")
 		.soundType(SoundType.NETHERITE_BLOCK)
 		.hardness(5)
 		.resistance(5)
