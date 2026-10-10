@@ -1,0 +1,33 @@
+filename = 'trashcans-1.1.1a-forge-mc1.20.4.jar'
+name = 'Trash Cans'
+side = 'server'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20', '1.20.1', '1.20.2', '1.20.3', '1.20.4' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'Trash Cans 1.1.1a for Forge 1.20.4'
+
+[download]
+hash = '0cbfea7d1f4f5fdcecfddb41fcd0b30e5eb6f3a5'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9009341
+project-id = 394535
+
+[[x-prismlauncher-dependencies]]
+addonId = '268560'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '438332'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '454372'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '238222'
+type = 'OPTIONAL'

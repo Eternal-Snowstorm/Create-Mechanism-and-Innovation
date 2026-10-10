@@ -67,7 +67,7 @@ ServerEvents.recipes((event) => {
 	}
 	/**
 	 * 
-	 * @param {Number} energy
+	 * @param {number} energy
 	 * @returns 
 	 */
 	SequencedAssemblyRecipe.prototype.laserCutting = function (energy) {
@@ -102,7 +102,7 @@ ServerEvents.recipes((event) => {
 	}
 	/**
 	 * 
-	 * @param {Fluid_} fluid
+	 * @param {Internal.Fluid_} fluid
 	 * @returns 
 	 */
 	SequencedAssemblyRecipe.prototype.filling = function (fluid) {
@@ -113,7 +113,7 @@ ServerEvents.recipes((event) => {
 	}
 	/**
 	 * 
-	 * @param {Number} loops 
+	 * @param {number} loops 
 	 */
 	SequencedAssemblyRecipe.prototype.loop = function (loops) {
 		this.loops = loops
@@ -126,11 +126,12 @@ ServerEvents.recipes((event) => {
 		let loops = this.loops
 		let transit = this.transit
 
-		return create.sequenced_assembly(result,
+		let builder = create.sequenced_assembly(result,
 			input,
 			sequences
-		).loops(loops)
-			.transitionalItem(transit)
+		).loops(loops).transitionalItem(transit)
+
+		return builder
 	}
 
 	// 木质

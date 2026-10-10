@@ -47,7 +47,7 @@ ServerEvents.recipes((event) => {
 	/**
 	 * 设置"超频"催化下的开采产物
 	 * 
-	 * @param {Number} chance 产物输出的概率
+	 * @param {number} chance 产物输出的概率
 	 * @param {InputItem_[]} item 该催化效果下输出的产物
 	 * @returns 
 	 */
@@ -64,7 +64,7 @@ ServerEvents.recipes((event) => {
 	/**
 	 * 设置"微弱共振"催化下的开采产物
 	 * 
-	 * @param {Number} chance 产物输出的概率
+	 * @param {number} chance 产物输出的概率
 	 * @param {InputItem_[]} item 该催化效果下输出的产物
 	 * @returns 
 	 */
@@ -83,7 +83,7 @@ ServerEvents.recipes((event) => {
 	/**
 	 * 设置"共振"催化下的开采产物
 	 * 
-	 * @param {Number} chance 产物输出的概率
+	 * @param {number} chance 产物输出的概率
 	 * @param {InputItem_[]} item 该催化效果下输出的产物
 	 * @returns 
 	 */
@@ -102,7 +102,7 @@ ServerEvents.recipes((event) => {
 	/**
 	 * 设置"微弱破碎共振"催化下的开采产物
 	 * 
-	 * @param {Number} chance 产物输出的概率
+	 * @param {number} chance 产物输出的概率
 	 * @param {InputItem_[]} item 该催化效果下输出的产物
 	 * @returns 
 	 */
@@ -120,7 +120,7 @@ ServerEvents.recipes((event) => {
 	/**
 	 * 设置"破碎共振"催化下的开采产物
 	 * 
-	 * @param {Number} chance 产物输出的概率
+	 * @param {number} chance 产物输出的概率
 	 * @param {InputItem_[]} item 该催化效果下输出的产物
 	 * @returns 
 	 */
@@ -140,7 +140,7 @@ ServerEvents.recipes((event) => {
 	/**
 	 * 设置"微弱稳定共振"催化下的开采产物
 	 * 
-	 * @param {Number} chance 产物输出的概率
+	 * @param {number} chance 产物输出的概率
 	 * @param {InputItem_[]} item 该催化效果下输出的产物
 	 * @returns 
 	 */
@@ -159,7 +159,7 @@ ServerEvents.recipes((event) => {
 	/**
 	 * 设置"稳定共振"催化下的开采产物
 	 * 
-	 * @param {Number} chance 产物输出的概率
+	 * @param {number} chance 产物输出的概率
 	 * @param {InputItem_[]} item 该催化效果下输出的产物
 	 * @returns 
 	 */

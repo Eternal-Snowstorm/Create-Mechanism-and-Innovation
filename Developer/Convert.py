@@ -18,14 +18,14 @@ def is_targeted_file(rel_path, target_folders):
 	判断某个相对路径是否属于指定的目标文件夹列表
 	"""
 	if not target_folders:
-		return True  # 如果没有指定，则扫描全部（兼容旧逻辑）
+		return True  # 如果没有指定, 则扫描全部（兼容旧逻辑）
 	
-	# 标准化路径格式：去除开头/结尾斜杠，统一使用正斜杠
+	# 标准化路径格式：去除开头/结尾斜杠, 统一使用正斜杠
 	rel_path = rel_path.replace("\\", "/").strip("/")
 	
 	for folder in target_folders:
 		folder = folder.replace("\\", "/").strip("/")
-		# 精确匹配该文件夹本身，或者以该文件夹/开头
+		# 精确匹配该文件夹本身, 或者以该文件夹/开头
 		if rel_path == folder or rel_path.startswith(folder + "/"):
 			return True
 	return False
@@ -43,7 +43,7 @@ def generate_checksums(root_dir, target_folders, ignore_patterns=None,
 					   default_severity_changed="WARNING",
 					   default_required=False):
 	"""
-	只扫描 target_folders 中指定的文件夹，生成 VartaPack 格式的 JSON
+	只扫描 target_folders 中指定的文件夹, 生成 VartaPack 格式的 JSON
 	"""
 	if ignore_patterns is None:
 		ignore_patterns = ["*.tmp", "*.log", "__pycache__", ".git", "logs", "cache"]
@@ -95,7 +95,7 @@ def main():
 	parser = argparse.ArgumentParser(description="VartaPack 专用：仅扫描指定文件夹生成文件校验 JSON")
 	parser.add_argument("--root", default=".", help="整合包根目录 (默认当前目录)")
 	parser.add_argument("--targets", nargs="+", required=True,
-						help="要扫描的子文件夹，相对于 root，例如: --targets kubejs/startup_scripts config scripts")
+						help="要扫描的子文件夹, 相对于 root, 例如: --targets kubejs/startup_scripts config scripts")
 	parser.add_argument("--output", default="checksums.json", help="输出 JSON 文件名")
 	parser.add_argument("--severity-missing", default="ERROR", choices=["INFO", "WARNING", "ERROR", "CRITICAL"],
 						help="文件缺失时的默认严重级别")
@@ -104,7 +104,7 @@ def main():
 	parser.add_argument("--required", action="store_true", default=True,
 						help="默认将所有文件设为 required (必需)")
 	parser.add_argument("--ignore", nargs="*", default=[],
-						help="额外忽略模式，例如 --ignore '*.bak' 'temp/*'")
+						help="额外忽略模式, 例如 --ignore '*.bak' 'temp/*'")
 	args = parser.parse_args()
 
 	# 默认忽略常见无用文件
@@ -126,12 +126,12 @@ def main():
 	with open(args.output, "w", encoding="utf-8") as f:
 		json.dump(result, f, indent=2, ensure_ascii=False)
 
-	print(f"✅ 完成！共生成 {len(result['files'])} 个文件条目，保存至 {args.output}")
+	print(f"✅ 完成！共生成 {len(result['files'])} 个文件条目, 保存至 {args.output}")
 
 if __name__ == "__main__":
 	main()
 
 # ==========用法==========
 # 在命令行(cmd)里用cd转到.py文件所处的目录里,输入
-# python [文件名].py --root [需要检测的文件夹的根(上级)目录] --targets [需要检测的文件夹名，可以写多个，中间用空格分隔] --output [输出文件名].json
+# python [文件名].py --root [需要检测的文件夹的根(上级)目录] --targets [需要检测的文件夹名, 可以写多个, 中间用空格分隔] --output [输出文件名].json
 # =======================

@@ -92,7 +92,7 @@ ServerEvents.highPriorityData((event) => {
 			/**
 			 * 结构在主世界生成
 			 * 
-			 * @param {Number} weight 比重
+			 * @param {number} weight 比重
 			 * @returns 
 			 */
 			overworld: function (weight) {
@@ -112,7 +112,7 @@ ServerEvents.highPriorityData((event) => {
 			/**
 			 * 结构在下界生成
 			 * 
-			 * @param {Number} weight 比重
+			 * @param {number} weight 比重
 			 * @returns 
 			 */
 			nether: function (weight) {
@@ -155,7 +155,7 @@ ServerEvents.highPriorityData((event) => {
 			/**
 			 * 结构在末地生成
 			 * 
-			 * @param {Number} weight 比重
+			 * @param {number} weight 比重
 			 * @returns 
 			 */
 			end: function (weight) {
@@ -168,7 +168,7 @@ ServerEvents.highPriorityData((event) => {
 			/**
 			 * 结构在月球生成
 			 * 
-			 * @param {Number} weight 比重
+			 * @param {number} weight 比重
 			 * @returns 
 			 */
 			moon: function (weight) {
@@ -190,7 +190,7 @@ ServerEvents.highPriorityData((event) => {
 			/**
 			 * 结构在核能星球生成
 			 * 
-			 * @param {Number} weight 比重
+			 * @param {number} weight 比重
 			 * @returns 
 			 */
 			dionysus: function (weight) {
@@ -212,7 +212,7 @@ ServerEvents.highPriorityData((event) => {
 			/**
 			 * 结构在火星生成
 			 * 
-			 * @param {Number} weight 比重
+			 * @param {number} weight 比重
 			 * @returns 
 			 */
 			mars: function (weight) {
@@ -229,7 +229,7 @@ ServerEvents.highPriorityData((event) => {
 			/**
 			 * 结构在磁星生成
 			 * 
-			 * @param {Number} weight 比重
+			 * @param {number} weight 比重
 			 * @returns 
 			 */
 			hephaestus: function () {

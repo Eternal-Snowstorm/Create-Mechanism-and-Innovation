@@ -2,7 +2,7 @@ ServerEvents.highPriorityData((event) => {
 	/**
 	 * 
 	 * @param {string} name 流体ID(Tag)
-	 * @param {Number} speed 每秒消耗的流体量(mB)
+	 * @param {number} speed 每秒消耗的流体量(mB)
 	 * @returns 
 	 */
 	function FuelType(name, speed) {
@@ -28,9 +28,9 @@ ServerEvents.highPriorityData((event) => {
 
 	/**
 	 * 
-	 * @param {Number} speed 转速
-	 * @param {Number} strength 转速
-	 * @param {Number} burnRate 燃料消耗速率
+	 * @param {number} speed 转速
+	 * @param {number} strength 转速
+	 * @param {number} burnRate 燃料消耗速率
 	 * @returns 
 	 */
 	FuelType.prototype.normal = function (speed, strength, burnRate) {
@@ -44,9 +44,9 @@ ServerEvents.highPriorityData((event) => {
 
 	/**
 	 * 
-	 * @param {Number} speed 转速
-	 * @param {Number} strength 转速
-	 * @param {Number} burnRate 燃料消耗速率
+	 * @param {number} speed 转速
+	 * @param {number} strength 转速
+	 * @param {number} burnRate 燃料消耗速率
 	 * @returns 
 	 */
 	FuelType.prototype.modular = function (speed, strength, burnRate) {
@@ -60,9 +60,9 @@ ServerEvents.highPriorityData((event) => {
 
 	/**
 	 * 
-	 * @param {Number} speed 转速
-	 * @param {Number} strength 转速
-	 * @param {Number} burnRate 燃料消耗速率
+	 * @param {number} speed 转速
+	 * @param {number} strength 转速
+	 * @param {number} burnRate 燃料消耗速率
 	 * @returns 
 	 */
 	FuelType.prototype.huge = function (speed, strength, burnRate) {
@@ -76,7 +76,7 @@ ServerEvents.highPriorityData((event) => {
 
 	/**
 	 * 
-	 * @param {Number} seconds 燃烧时长
+	 * @param {number} seconds 燃烧时长
 	 * @returns 
 	 */
 	FuelType.prototype.train = function (seconds) {

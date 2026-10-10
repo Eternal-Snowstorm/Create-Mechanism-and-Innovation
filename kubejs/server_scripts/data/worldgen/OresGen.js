@@ -256,7 +256,7 @@ ServerEvents.highPriorityData((event) => {
 
 			/**
 			 * 毒化洞穴: 辐射岩
-			 * 生成 `cmi:radrock_<name>`，替换 `alexscaves:radrock`
+			 * 生成 `cmi:radrock_<name>`, 替换 `alexscaves:radrock`
 			 *
 			 * @param {number} count 每区块矿簇数量
 			 */
