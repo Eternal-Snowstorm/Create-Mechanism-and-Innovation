@@ -19,6 +19,13 @@
 	copperBucketEnabled = true
 	phantomChainEnabled = true
 	fluidHatchEnabled = true
+	fluidFactoryGaugeEnabled = true
+	fluidInventoryAccessPortEnabled = true
+	blazeCoolerEnabled = true
+	copperSchematicannonEnabled = true
+	industrialCopperBlockEnabled = true
+	fluidSchematicEnabled = true
+	frostCakeEnabled = true
 
 [blockProperties]
 	#Maximum fluid amount a fluid package can hold (in mB)
@@ -38,7 +45,7 @@
 	handPointerMaxMailboxes = 5
 	#ALLOW_BY_TAG allows fluid containers in #fluidlogistics:faucet_fillable; ALLOW_ALL allows every fluid container; DENY_ALL allows none
 	#Allowed Values: ALLOW_BY_TAG, ALLOW_ALL, DENY_ALL
-	faucetFluidContainerMode = "ALLOW_BY_TAG"
+	faucetFluidContainerMode = "ALLOW_ALL"
 	#Allow the fluid transporter to extract infinite water from waterlogged leaves
 	fluidTransporterInfiniteWaterEnabled = false
 	#Allow the faucet and smart faucet to extract infinite water from waterlogged leaves
