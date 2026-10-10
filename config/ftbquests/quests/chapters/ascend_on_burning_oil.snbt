@@ -14,6 +14,7 @@
 			dependencies: ["1570B04A1D692BCC"]
 			description: ["整合包大幅度提升了铝土刷新率, 至少从代码上看刷新率和锌差不多"]
 			id: "16B82E736AC7FDCE"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "17C274929566069F"
 				item: {
@@ -35,6 +36,7 @@
 				"2849DC36ACEA7681"
 			]
 			id: "3709AF32680BD5CD"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "78FB17A77B69DE5D"
 				item: {
@@ -54,6 +56,7 @@
 			dependencies: ["1570B04A1D692BCC"]
 			hide_dependent_lines: true
 			id: "2849DC36ACEA7681"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "09D87AA6A3F7FF38"
 				item: "immersiveindustry:electrolyzer"
@@ -65,6 +68,7 @@
 		{
 			dependencies: ["3709AF32680BD5CD"]
 			id: "2E67A0D67DC38E0A"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "4BE96ADD16A8C4EC"
 				item: {
@@ -123,6 +127,7 @@
 				"16854FB39C805578"
 			]
 			id: "4FB2832A045C402D"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "把一堆零件变成更复杂的零件"
 			tasks: [{
 				id: "1D21928CE136B538"
@@ -138,6 +143,7 @@
 				"161C0524EEDE5FC5"
 			]
 			id: "16854FB39C805578"
+			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
 			size: 2.0d
 			tasks: [{
@@ -151,6 +157,7 @@
 		{
 			dependencies: ["588CB73822918D10"]
 			id: "135EED5D795BB2D5"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "因瓦合金(笑)"
 			tasks: [{
 				id: "27E89690B6DE4CAF"
@@ -170,6 +177,7 @@
 				"1CE6C98F16861ADB"
 			]
 			id: "3B5279119699AECC"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "63DE8C9F29075321"
 				item: "cmi:thermal_mechanism_augment"
@@ -182,6 +190,7 @@
 			dependencies: ["6CCEECDF932F5041"]
 			hide_dependent_lines: true
 			id: "4A054CCC2FFE7258"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "0AC4FD56241818FE"
 				item: {
@@ -200,6 +209,7 @@
 		{
 			dependencies: ["1570B04A1D692BCC"]
 			id: "3CDC0B1303B8785C"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "4F829018AC64858A"
 				item: "thermal:redstone_servo"
@@ -211,6 +221,7 @@
 		{
 			dependencies: ["1570B04A1D692BCC"]
 			id: "490BA0C159C3FF63"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "5E0BDCFB5C3A7A7B"
 				item: "thermal:rf_coil"
@@ -222,6 +233,7 @@
 		{
 			dependencies: ["541572E2CD225DD7"]
 			id: "1CE6C98F16861ADB"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "6050878AEAB2DED8"
 				item: {
@@ -240,6 +252,7 @@
 		{
 			dependencies: ["16854FB39C805578"]
 			id: "68D40E9E67F5C986"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "4150A0993CEA5ABD"
 				item: "thermal:machine_crystallizer"
@@ -255,6 +268,7 @@
 				"0468B914C2718A62"
 			]
 			id: "6A57D13406E9D6AA"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "23ACB513D4F55A08"
 				item: {
@@ -273,6 +287,7 @@
 		{
 			dependencies: ["1570B04A1D692BCC"]
 			id: "19422BB1CF729FC7"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "26A41852C3A8A65A"
 				item: "cmi:crystal_catalyt_bucket"
@@ -284,6 +299,7 @@
 		{
 			dependencies: ["20227AC2A1D37ED9"]
 			id: "0468B914C2718A62"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "6F0ABC73BE8C8319"
 				item: {
@@ -302,6 +318,7 @@
 		{
 			dependencies: ["6A57D13406E9D6AA"]
 			id: "7986071E20EEF73C"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "3F011FD08ED46CA5"
 				item: "thermal:laser_diode"
@@ -313,6 +330,7 @@
 		{
 			dependencies: ["7986071E20EEF73C"]
 			id: "6E87F1A6C2A966BD"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "398C6C44E8EA3201"
 				item: "immersiveengineering:component_electronic"
@@ -325,6 +343,7 @@
 			dependencies: ["042CA25C2CE9F78C"]
 			icon: "cmi:light_engineering_mechanism"
 			id: "79461202D5061059"
+			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
 			size: 2.0d
 			tasks: [{
@@ -339,6 +358,7 @@
 			dependencies: ["1570B04A1D692BCC"]
 			hide_dependent_lines: true
 			id: "6B467317FA711CD2"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "6ED05BFDAA7DEB2C"
 				item: "immersiveengineering:component_iron"
@@ -355,6 +375,7 @@
 				"18830B989C4CB421"
 			]
 			id: "042CA25C2CE9F78C"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "3871D745F47A972B"
 				item: "cmi:light_engineering_mechanism_augment"
@@ -372,6 +393,7 @@
 			icon: "createdieselgenerators:pumpjack_crank"
 			icon_scale: 2.0d
 			id: "3640CEE4D21C8BB5"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "19DE357F198F5D18"
 				item: "createdieselgenerators:oil_scanner"
@@ -410,6 +432,7 @@
 		{
 			dependencies: ["6CCEECDF932F5041"]
 			id: "18830B989C4CB421"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "68F425A1BAD6DC96"
 				item: {
@@ -429,6 +452,7 @@
 		{
 			dependencies: ["3B2F46F5F77D366F"]
 			id: "7AADB534F537AA83"
+			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
 			size: 2.0d
 			subtitle: "大跃进!"
@@ -453,6 +477,7 @@
 				"7E4CDE7C3CBA9410"
 			]
 			id: "3B2F46F5F77D366F"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "熔融钢是不得不吃的一环"
 			tasks: [{
 				id: "07C4FE5E8CB1AF68"
@@ -469,6 +494,7 @@
 				"1CFE963288EAA71A"
 			]
 			id: "6DB900D5F5AF7298"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "生铁?"
 			tasks: [{
 				id: "72EF44A976706491"
@@ -481,6 +507,7 @@
 		{
 			dependencies: ["0CCAD3D0E6741560"]
 			id: "3279F199633ED633"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "66AA5B5E01D903D7"
 				item: {
@@ -499,6 +526,7 @@
 		{
 			dependencies: ["1570B04A1D692BCC"]
 			id: "0CCAD3D0E6741560"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "204B1E7083C1DC84"
 				item: {
@@ -529,6 +557,7 @@
 		{
 			dependencies: ["78250BAEED3506BA"]
 			id: "7E4CDE7C3CBA9410"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "09B8CE258FF56B4B"
 				item: "create:basin"
@@ -552,6 +581,7 @@
 				"随后将&7熔融铸铁&r进行&b冷却&r处理, 便可以得到可用于加工的&7铸铁&r材料"
 			]
 			id: "037CEC7A15BC0B2F"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "铁Plus"
 			tasks: [{
 				id: "4DCEE1A96D9C8974"
@@ -586,6 +616,7 @@
 		{
 			dependencies: ["1570B04A1D692BCC"]
 			id: "0FA1A601134C5105"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "1C5ADED58164F7A9"
 				item: {
@@ -615,6 +646,7 @@
 			icon: "immersiveindustry:crucible"
 			icon_scale: 2.0d
 			id: "1CFE963288EAA71A"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [
 				{
 					id: "630DD3536DFF8D25"
@@ -662,6 +694,7 @@
 		{
 			dependencies: ["1570B04A1D692BCC"]
 			id: "588CB73822918D10"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [
 				{
 					id: "31A2323304D3130A"
@@ -695,6 +728,7 @@
 		{
 			dependencies: ["588CB73822918D10"]
 			id: "407FD936195F18B0"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [
 				{
 					id: "45273C1A29F94F3C"
@@ -728,6 +762,7 @@
 		{
 			dependencies: ["407FD936195F18B0"]
 			id: "44580C9FC3A043D2"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "0D8C5A4E33CCFCE9"
 				item: {
@@ -746,6 +781,7 @@
 		{
 			dependencies: ["44580C9FC3A043D2"]
 			id: "1C57F09A72DA8E22"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "43C186A840904D65"
 				item: "createaddition:electrum_spool"
@@ -761,6 +797,7 @@
 				"050A77C0A80CFE30"
 			]
 			id: "6A3204F0275C1DEA"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "第一颗CPU"
 			tasks: [{
 				id: "29250608F682DF5B"
@@ -773,6 +810,7 @@
 		{
 			dependencies: ["430B1B3285C99CD3"]
 			id: "721C20E88A98122E"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "1E82041A14AC257D"
 				item: {
@@ -791,6 +829,7 @@
 		{
 			dependencies: ["6ED3E5867F2A90AB"]
 			id: "430B1B3285C99CD3"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "01D4DC16E9365AFC"
 				item: {
@@ -812,6 +851,7 @@
 			icon: "immersiveengineering:squeezer"
 			icon_scale: 2.0d
 			id: "6ED3E5867F2A90AB"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [
 				{
 					count: 4
@@ -866,6 +906,7 @@
 			dependencies: ["6095C38E6A48D0AE"]
 			icon: "cmi:smart_mechanism"
 			id: "54B7DF3F4B9BD3A4"
+			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
 			size: 2.0d
 			tasks: [
@@ -1138,6 +1179,7 @@
 		{
 			dependencies: ["407FD936195F18B0"]
 			id: "7FE4DF4D3DC699B1"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "082396FFAEE8722C"
 				item: {
@@ -1156,6 +1198,7 @@
 		{
 			dependencies: ["59831FBE15050279"]
 			id: "050A77C0A80CFE30"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "65534F07EFC45AEF"
 				item: {
@@ -1174,6 +1217,7 @@
 		{
 			dependencies: ["2902DA1D51BD15F5"]
 			id: "59831FBE15050279"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "5AD0128863855339"
 				item: {
@@ -1192,6 +1236,7 @@
 		{
 			dependencies: ["050A77C0A80CFE30"]
 			id: "2C9E29DF253C975B"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "775070654F2CF022"
 				item: "create_connected:control_chip"
@@ -1207,6 +1252,7 @@
 				"7FE4DF4D3DC699B1"
 			]
 			id: "6095C38E6A48D0AE"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "123249560536D83A"
 				item: "cmi:smart_mechanism_augment"
@@ -1219,6 +1265,7 @@
 			dependencies: ["0FA1A601134C5105"]
 			icon: "cmi:silicon_mixture"
 			id: "2902DA1D51BD15F5"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [
 				{
 					id: "7E7460A0423654B0"
@@ -1254,6 +1301,7 @@
 		{
 			dependencies: ["721C20E88A98122E"]
 			id: "38BB8180763D8FB1"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "3BEA6334CAAF0E87"
 				item: {
@@ -1273,6 +1321,7 @@
 			hide_dependency_lines: true
 			hide_until_deps_complete: false
 			id: "00C55399CC674B4A"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "1B425C9A31C49825"
 				item: "thermal:machine_refinery"
@@ -1287,6 +1336,7 @@
 			hide_dependency_lines: true
 			icon: "createdieselgenerators:crude_oil_bucket"
 			id: "7CE3BF3F7F7FC1D9"
+			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
 			size: 2.0d
 			subtitle: "霉菌"
@@ -1308,6 +1358,7 @@
 		{
 			dependencies: ["7CE3BF3F7F7FC1D9"]
 			id: "7FA0A97798CCF465"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [
 				{
 					id: "00351882645FD71B"
@@ -1347,6 +1398,7 @@
 		{
 			dependencies: ["7FA0A97798CCF465"]
 			id: "7686008595B8C539"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "5E49295616ECBE70"
 				item: "thermal:heavy_oil_bucket"
@@ -1361,6 +1413,7 @@
 				"00C55399CC674B4A"
 			]
 			id: "16FAD51B29F98F9A"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "0829F116AE03AA4A"
 				item: "thermal_extra:lubricant_bucket"
@@ -1375,6 +1428,7 @@
 				"00C55399CC674B4A"
 			]
 			id: "25726C8061FF0AB3"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "2CDD7DCAB958CBFC"
 				item: "createdieselgenerators:gasoline_bucket"
@@ -1386,6 +1440,7 @@
 		{
 			dependencies: ["7FA0A97798CCF465"]
 			id: "11B2066810421699"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "7901ED2D869D538F"
 				item: "cmi:sulfric_diesel_bucket"
@@ -1397,6 +1452,7 @@
 		{
 			dependencies: ["7FA0A97798CCF465"]
 			id: "2916D3E15559DF0C"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "46CF3BAB6BD25C65"
 				item: "cmi:kerosene_bucket"
@@ -1408,6 +1464,7 @@
 		{
 			dependencies: ["11B2066810421699"]
 			id: "55A9C7A7B27A8822"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "22F3ED8D9B1F7F29"
 				item: {
@@ -1426,6 +1483,7 @@
 		{
 			dependencies: ["11B2066810421699"]
 			id: "19F77A03547567E0"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "76CBEA89E9780792"
 				item: "createdieselgenerators:diesel_bucket"
@@ -1440,6 +1498,7 @@
 				"2916D3E15559DF0C"
 			]
 			id: "0E3481D80180E00C"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "6432C2A563904E0E"
 				item: "thermal_extra:naphtha_bucket"
@@ -1451,6 +1510,7 @@
 		{
 			dependencies: ["0E3481D80180E00C"]
 			id: "77C1F236B853FAAE"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "5B9DB50FA362B833"
 				item: "cmi:light_olefin_bucket"
@@ -1465,6 +1525,7 @@
 				"5486A9D8E0073EAB"
 			]
 			id: "5E07A1EE010AE757"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "7B1DE22539E997C1"
 				item: "cmi:light_silicone_ether_bucket"
@@ -1479,6 +1540,7 @@
 			icon: "immersiveindustry:chemical_reactor"
 			icon_scale: 2.0d
 			id: "5486A9D8E0073EAB"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [
 				{
 					count: 8
@@ -1526,6 +1588,7 @@
 		{
 			dependencies: ["5486A9D8E0073EAB"]
 			id: "693C6976F07FA0F5"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "5003F6F0E1694F3B"
 				item: "cmi:polysilicone_ether_bucket"
@@ -1541,6 +1604,7 @@
 				"05D42E0B78A3982E"
 			]
 			id: "5D4F15DF8FB903D5"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [
 				{
 					id: "2E90504FD93213E2"
@@ -1566,6 +1630,7 @@
 		{
 			dependencies: ["1570B04A1D692BCC"]
 			id: "2809F6E25BE835B0"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "1B6D05A70ECD89B5"
 				item: "thermal:machine_chiller"
@@ -1580,6 +1645,7 @@
 				"5DE46B617DB0CEC6"
 			]
 			id: "05D42E0B78A3982E"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "4613B0604744F0A8"
 				item: "cmi:vinegar_acid_bucket"
@@ -1591,6 +1657,7 @@
 		{
 			dependencies: ["664B44589F807708"]
 			id: "762D51AFDCA86F29"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "58ECA747E29861CF"
 				item: "cmi:vinegar_bucket"
@@ -1602,6 +1669,7 @@
 		{
 			dependencies: ["1570B04A1D692BCC"]
 			id: "5DE46B617DB0CEC6"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "018FA16EF8C96B5B"
 				item: "createdieselgenerators:distillation_controller"
@@ -1613,6 +1681,7 @@
 		{
 			dependencies: ["2916D3E15559DF0C"]
 			id: "6F36365885BD89B1"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "226649FEDCCAACF6"
 				item: "createdieselgenerators:gasoline_bucket"
@@ -1624,6 +1693,7 @@
 		{
 			dependencies: ["3D5497B8DC0ED5B6"]
 			id: "3B09C0DEB5D3ECB2"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "32C9986340F70115"
 				item: "mekanism:steam_bucket"
@@ -1638,6 +1708,7 @@
 				"6F36365885BD89B1"
 			]
 			id: "654FBA59B16DF4C6"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "36FDD379CBB1E1F7"
 				item: "cmi:cracked_gasoline_bucket"
@@ -1649,6 +1720,7 @@
 		{
 			dependencies: ["654FBA59B16DF4C6"]
 			id: "5B786D0B9FC5A444"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "7A0344280C9F2302"
 				item: "cmi:light_olefin_bucket"
@@ -1663,6 +1735,7 @@
 				"660DD436C6CEFCBD"
 			]
 			id: "0FF8EDFBF1C6AF7A"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "472003D510B6E410"
 				item: "cmi:benzene_bucket"
@@ -1677,6 +1750,7 @@
 				"7CE3BF3F7F7FC1D9"
 			]
 			id: "660DD436C6CEFCBD"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "4F144D9E1F5A7801"
 				item: "thermal_extra:naphtha_bucket"
@@ -1691,6 +1765,7 @@
 				"0FF8EDFBF1C6AF7A"
 			]
 			id: "27CAE5D991F9DC02"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "5A8F40914C66D275"
 				item: "cmi:phenol_bucket"
@@ -1702,6 +1777,7 @@
 		{
 			dependencies: ["135EED5D795BB2D5"]
 			id: "161C0524EEDE5FC5"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "11968EF567514C7A"
 				item: "vintageimprovements:invar_sheet"
@@ -1716,6 +1792,7 @@
 			hide_dependency_lines: true
 			icon: "createdieselgenerators:crude_oil_bucket"
 			id: "3385196C9E4B2773"
+			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
 			size: 2.0d
 			subtitle: "霉菌"
@@ -1743,6 +1820,7 @@
 			]
 			icon: "thermal:upgrade_augment_1"
 			id: "49A04F3F89F58A31"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "4F0E5B2C319DFE0A"
 				item: "thermal:upgrade_augment_3"

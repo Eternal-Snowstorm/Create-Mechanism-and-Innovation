@@ -13,6 +13,7 @@
 		{
 			dependencies: ["52AE29C9BB2B6F00"]
 			id: "2F00DD29F68238BA"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "使用冶炼炉制作合金"
 			tasks: [
 				{
@@ -54,6 +55,7 @@
 			]
 			icon: "tconstruct:smeltery_controller"
 			id: "52AE29C9BB2B6F00"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				count: 32
 				id: "24C0DB749E0A69D4"
@@ -91,6 +93,7 @@
 				"2CE848599231C333"
 			]
 			id: "6BA8D6727D497F84"
+			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
 			size: 2.0d
 			subtitle: "逛, 吃, 逛, 吃"
@@ -105,6 +108,7 @@
 		{
 			dependencies: ["2FE21275DACCE692"]
 			id: "25B06B6489D3FB78"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				count: 16
 				id: "0464910DBDAA4482"
@@ -130,6 +134,7 @@
 		{
 			dependencies: ["2E72074B83610585"]
 			id: "2FE21275DACCE692"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				count: 32
 				id: "507F84919276B4FE"
@@ -156,6 +161,7 @@
 			dependencies: ["6FE26470A8A3B7B1"]
 			icon: "create:track_station"
 			id: "2E72074B83610585"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "4AD5422AE72805BE"
 				title: "汽鸣铁道"
@@ -168,6 +174,7 @@
 			dependencies: ["6BA8D6727D497F84"]
 			icon: "create:controls"
 			id: "58F03784745D9151"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				count: 4
 				id: "711479A47664BDAF"
@@ -210,6 +217,7 @@
 		{
 			dependencies: ["2FE21275DACCE692"]
 			id: "7C2BCD18D1BCEEC9"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "你需要一只生物, 烈焰人燃烧室也可以"
 			tasks: [{
 				id: "66467CCD076737AE"
@@ -251,6 +259,7 @@
 				"{image:cmi:textures/images/ore_node/oil_shale.png width:200 height:200 align:center}"
 			]
 			id: "211642A0702308A1"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "723FC72D7D13485C"
 				type: "xp"
@@ -308,6 +317,7 @@
 		{
 			dependencies: ["2F00DD29F68238BA"]
 			id: "5BB078BA5116FE68"
+			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
 			size: 2.0d
 			subtitle: "有点烫手, 拿在手上有一点火热🥵"
@@ -326,6 +336,7 @@
 				"你可以使用管道将&6蒸汽&r导出并输送到其他设备中使用"
 			]
 			id: "12CEF39F02D4EB3A"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "&m只是方式越来越复杂&r"
 			tasks: [
 				{
@@ -410,6 +421,7 @@
 				"蒸汽不足时, 输入多少蒸汽引擎就会同时消耗多少蒸汽, 同时相对应的降低应力产出"
 			]
 			id: "5227B74E4F8FF3F5"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "&m不然这水不是白烧了&r"
 			tasks: [
 				{
@@ -454,6 +466,7 @@
 				"由于一个背罐只能够支撑&c&l20分钟&r&r, 因此如果有条件还是&l&b非常建议&r&r携带两个&e背罐&r在身上用于处理&c紧急情况&r"
 			]
 			id: "08A35C2D450B20F3"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "185850C08239F46F"
 				item: {
@@ -500,6 +513,7 @@
 		{
 			dependencies: ["08A35C2D450B20F3"]
 			id: "667B8EFCF3ACD51D"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "07D706292973EFF7"
 				type: "xp"
@@ -526,6 +540,7 @@
 		{
 			dependencies: ["667B8EFCF3ACD51D"]
 			id: "2802F9503EB14965"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [
 				{
 					id: "48CBA68351FB5DCC"
@@ -573,6 +588,7 @@
 		{
 			dependencies: ["2802F9503EB14965"]
 			id: "470156018DA261F4"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "收集114514个碎片即可解锁"
 			tasks: [
 				{
@@ -593,6 +609,7 @@
 		{
 			dependencies: ["470156018DA261F4"]
 			id: "4A19D6FEC975D2B9"
+			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
 			size: 2.0d
 			subtitle: "或许可以当暖宝宝"
@@ -615,6 +632,7 @@
 			]
 			icon: "tconstruct:foundry_controller"
 			id: "5095EB55709B5982"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [
 				{
 					id: "0ACE9A42022D1627"
@@ -660,6 +678,7 @@
 		{
 			dependencies: ["4A19D6FEC975D2B9"]
 			id: "04004B46385E2AF2"
+			quest_enhance_disable_scroll_paging: false
 			size: 1.0d
 			tasks: [{
 				id: "01452F41DB130491"
@@ -672,6 +691,7 @@
 		{
 			dependencies: ["12CEF39F02D4EB3A"]
 			id: "3D5497B8DC0ED5B6"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "4DA038AAA531C439"
 				item: "mekanism:steam_bucket"
@@ -684,6 +704,7 @@
 		{
 			dependencies: ["6FE26470A8A3B7B1"]
 			id: "354FD58AE7B802BC"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "680C74AB729DB665"
 				item: {
@@ -702,6 +723,7 @@
 		{
 			dependencies: ["5BB078BA5116FE68"]
 			id: "78250BAEED3506BA"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "67F40EB3F00CDCA9"
 				item: "vintageimprovements:vacuum_chamber"
@@ -717,6 +739,7 @@
 				"78250BAEED3506BA"
 			]
 			id: "4C2F1D5F0FAA50F3"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "更高效的方式"
 			tasks: [{
 				id: "3B1D5348B5A8BD6B"
@@ -729,6 +752,7 @@
 		{
 			dependencies: ["4C2F1D5F0FAA50F3"]
 			id: "74A6E21C20513CEE"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "00AC5371336EC8A7"
 				item: "thermal:cured_rubber"
@@ -740,6 +764,7 @@
 		{
 			dependencies: ["12CEF39F02D4EB3A"]
 			id: "3426EEB10B251CA4"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "♻️环保模式♻️"
 			tasks: [{
 				id: "3642624664D89610"
@@ -782,6 +807,7 @@
 			]
 			icon: "cmi:reinforced_coke_oven"
 			id: "7FDB7DDAD23BB4C1"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [
 				{
 					id: "0D2CBA6D8F8BB95B"
@@ -834,6 +860,7 @@
 		{
 			dependencies: ["2F00DD29F68238BA"]
 			id: "6859E72B22446793"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				count: 16
 				id: "44A5B6E611CDC265"
@@ -857,6 +884,7 @@
 				"对锅炉进行升级会保留当前锅炉的状态, 从而最大程度避免影响生产"
 			]
 			id: "23EED5BF56818EA1"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "一键安装, 直接升级"
 			tasks: [{
 				id: "3658B798B9DFED5C"

@@ -19,6 +19,7 @@
 				"14470BD1A85DE01D"
 			]
 			id: "662A1304331857B0"
+			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
 			size: 2.0d
 			tasks: [{
@@ -40,6 +41,7 @@
 				"当然, 将电动机与其他设备零件结合制作成&e构件&r可以适配更多的应用场景"
 			]
 			id: "534E0D3A9FB9955E"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "电磁感应的实际应用"
 			tasks: [{
 				id: "422114AE4890E584"
@@ -56,6 +58,7 @@
 				"工业铁的可塑性和韧性极佳, 是一种理想的&a冲压模具&r与&a设备外壳&r材料"
 			]
 			id: "17DC0AE5C56048CF"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "世界其实是铁做的"
 			tasks: [{
 				count: 8L
@@ -86,6 +89,7 @@
 				"&4多准备一点&r琥珀金, 你很快就知道为什么了"
 			]
 			id: "5F0BB5EE6AFEE840"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "低电阻合金"
 			tasks: [{
 				count: 8L
@@ -110,6 +114,7 @@
 				"7C2DCC26298ACC51"
 			]
 			id: "6CDA351D1F52C170"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "铁傀儡也许会喜欢这种饮料"
 			tasks: [{
 				id: "62A8B729BB5A7F8B"
@@ -123,6 +128,7 @@
 		{
 			dependencies: ["04004B46385E2AF2"]
 			id: "7C2DCC26298ACC51"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "老罗马风味"
 			tasks: [{
 				id: "069C486393CA376A"
@@ -135,6 +141,7 @@
 		{
 			dependencies: ["04004B46385E2AF2"]
 			id: "1EF0004B28066AF0"
+			quest_enhance_disable_scroll_paging: false
 			shape: "pentagon"
 			size: 1.5d
 			tasks: [{
@@ -170,6 +177,7 @@
 			icon: "immersiveengineering:auto_workbench"
 			icon_scale: 2.0d
 			id: "6ED98C2148C69BD7"
+			quest_enhance_disable_scroll_paging: false
 			shape: "hexagon"
 			size: 1.5d
 			subtitle: "?!强强!?"
@@ -185,6 +193,7 @@
 		{
 			dependencies: ["66F1898DB743301D"]
 			id: "68A82E2E7552EF90"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "不会爆炸"
 			tasks: [{
 				id: "52C352DB3560CDBE"
@@ -197,6 +206,7 @@
 		{
 			dependencies: ["5F0BB5EE6AFEE840"]
 			id: "27A9E301280210E8"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "01561824A41E7C8E"
 				item: {
@@ -215,6 +225,7 @@
 		{
 			dependencies: ["211642A0702308A1"]
 			id: "66F1898DB743301D"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "49ABD38B1A997B63"
 				item: {
@@ -236,6 +247,7 @@
 				"6CCEECDF932F5041"
 			]
 			id: "14470BD1A85DE01D"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "58DFE49B997026E5"
 				item: "cmi:engineering_mechanism_part"
@@ -254,6 +266,7 @@
 				"这种合金在工业生产中用途广泛, 是许多&6机械部件&r与&d高级材料&r的重要原料"
 			]
 			id: "6CCEECDF932F5041"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "又是一种合金"
 			tasks: [{
 				id: "3FD660B699767BA7"
@@ -273,6 +286,7 @@
 		{
 			dependencies: ["541572E2CD225DD7"]
 			id: "10FE6C8E2FB59714"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "21C223335813DCD2"
 				item: "immersiveengineering:electric_lantern"
@@ -329,6 +343,7 @@
 				"而多方块蓄电池组最大为8*8*8, 因此512的蓄电池可存储2147483136 FE"
 			]
 			id: "7B311FB3BDA3F3DD"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				count: 9
 				id: "162D9B48E6956223"
@@ -348,6 +363,7 @@
 		{
 			dependencies: ["211642A0702308A1"]
 			id: "541572E2CD225DD7"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "2D97AE6C82E2AAF2"
 				item: {
@@ -369,6 +385,7 @@
 				"20227AC2A1D37ED9"
 			]
 			id: "1B38A75357F7EF12"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "396BE158FA663225"
 				item: {
@@ -395,6 +412,7 @@
 				"12610CFD86470A7D"
 			]
 			id: "20227AC2A1D37ED9"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				count: 8
 				id: "3A6645D1B46CAB49"
@@ -420,6 +438,7 @@
 		{
 			dependencies: ["343FF83E544BCB9D"]
 			id: "4D6A6FE3DAF7BBB8"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "其实就是很努力的沙子"
 			tasks: [{
 				id: "142A07EDE8031266"
@@ -439,6 +458,7 @@
 		{
 			dependencies: ["597C6E45B2C2B855"]
 			id: "12610CFD86470A7D"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "沙子在分液池上走一圈"
 			tasks: [{
 				id: "3FF4ADB3B848C7B8"
@@ -451,6 +471,7 @@
 		{
 			dependencies: ["04004B46385E2AF2"]
 			id: "343FF83E544BCB9D"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "076D552EC1F0CCAE"
 				item: {
@@ -469,6 +490,7 @@
 		{
 			dependencies: ["04004B46385E2AF2"]
 			id: "597C6E45B2C2B855"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "海滩上一大堆"
 			tasks: [{
 				id: "206625DAF8971359"
@@ -491,6 +513,7 @@
 				"095B15FB9AA8B9AB"
 			]
 			id: "44F9F9937CF8A987"
+			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
 			size: 2.0d
 			tasks: [{
@@ -504,6 +527,7 @@
 		{
 			dependencies: ["1B38A75357F7EF12"]
 			id: "3E77FFA67682D3E5"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "这个吃起来像玫瑰糖"
 			tasks: [{
 				id: "1C59D2BD79C8851D"
@@ -516,6 +540,7 @@
 		{
 			dependencies: ["3E77FFA67682D3E5"]
 			id: "095B15FB9AA8B9AB"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "这个...算了这个麻嘴"
 			tasks: [{
 				id: "7B8D2F201A92B13C"
@@ -532,6 +557,7 @@
 				"73251C27B7403CF9"
 			]
 			id: "1570B04A1D692BCC"
+			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
 			size: 2.0d
 			tasks: [{
@@ -545,6 +571,7 @@
 		{
 			dependencies: ["04004B46385E2AF2"]
 			id: "2E5B74230C1BCE67"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "或许木头是最方便的"
 			tasks: [{
 				id: "01361B7E9E043C9C"
@@ -564,6 +591,7 @@
 		{
 			dependencies: ["04004B46385E2AF2"]
 			id: "5BE72CC5C35C3BF0"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "191124021833D620"
 				item: {
@@ -582,6 +610,7 @@
 		{
 			dependencies: ["04004B46385E2AF2"]
 			id: "0FD5009A9709ACE5"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "21E0C29ECEA2CB6E"
 				item: {
@@ -600,6 +629,7 @@
 		{
 			dependencies: ["04004B46385E2AF2"]
 			id: "73251C27B7403CF9"
+			quest_enhance_disable_scroll_paging: false
 			tasks: [
 				{
 					id: "52EEF1C31EEB0D66"
@@ -639,6 +669,7 @@
 			]
 			icon: "cmi:eden_crystal"
 			id: "30665E701364CEE8"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "741A0EE2BA8330F4"
 				type: "xp"
@@ -692,6 +723,7 @@
 			description: ["{image:cmi:textures/images/cmi/improved_rubber_extractor.png width:140 height:202 align:center}"]
 			icon: "cmi:improved_rubber_extractor"
 			id: "3AF743212C028BEE"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [
 				{
 					id: "26B70670A150B2C1"

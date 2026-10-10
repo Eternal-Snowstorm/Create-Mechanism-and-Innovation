@@ -19,6 +19,7 @@
 		{
 			icon: "create:wrench"
 			id: "714D1AC6D07BEEC0"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "2655761D7F974CC2"
 				type: "xp"
@@ -38,6 +39,7 @@
 			description: ["建筑手杖是一种可以快速搭建方块的工具, 搭建冶炼炉或地板时可以发挥大用"]
 			hide_dependency_lines: true
 			id: "794382603730734B"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "79AE46FA1AD74FED"
@@ -76,6 +78,7 @@
 			]
 			hide_dependency_lines: true
 			id: "21185FDCCEDBFDC8"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "短距离传输最好用的东西"
 			tasks: [
 				{
@@ -105,6 +108,7 @@
 			]
 			hide_dependency_lines: true
 			id: "48FF030A13CEF66D"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				count: 2
 				id: "22D0AA1B4C1008F6"
@@ -130,6 +134,7 @@
 			]
 			hide_dependency_lines: true
 			id: "4CCF561EE0B2C3A6"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "1C0A3CAB47B3DFB6"
 				item: "cmi:amethyst_bronze_upgrade"
@@ -163,6 +168,7 @@
 			]
 			hide_dependency_lines: true
 			id: "645BA6E93229CA27"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "7707E934906B6AEC"
 				item: "cmi:amethyst_bronze_upgrade"
@@ -190,6 +196,7 @@
 				tag: { }
 			}
 			id: "515D545E66315AF9"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "740D6D6B75B3A98A"
 				item: "cmi:amethyst_bronze_upgrade"
@@ -223,6 +230,7 @@
 			description: ["虚空升级可以让抽屉内的物品超过存储上限后输入进去的物品或流体自动销毁, 在处理极大产量的产线时尤为重要"]
 			hide_dependency_lines: true
 			id: "04D94D6A19BFCAD5"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				count: 8
 				id: "3C6D28DF35F59A36"
@@ -251,6 +259,7 @@
 			hide_dependency_lines: true
 			icon: "steampowered:cast_iron_flywheel"
 			id: "38472ADBCFC92083"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "超大应力来源"
 			tasks: [
 				{
@@ -293,6 +302,7 @@
 			hide_dependency_lines: true
 			icon: "steampowered:cast_iron_burner"
 			id: "243EF0B9E933D85A"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "蒸汽产出设备"
 			tasks: [
 				{
@@ -352,15 +362,23 @@
 		{
 			dependencies: ["714D1AC6D07BEEC0"]
 			description: [
-				"销毁器可以清除任何东西, 一般用于生产线中清除废弃的流体和物品."
+				"垃圾桶可以清除垃圾, 一般用于生产线中清除废弃的流体和物品."
 				"当然我们还是更推荐您在AE2发展起来后使用物质聚合器销毁."
 			]
 			hide_dependency_lines: true
 			id: "5E52B40EB76B5C84"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "清理垃圾和流体的好手段"
 			tasks: [{
 				id: "27B5F94D96D252FE"
-				item: "thermal:device_nullifier"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "trashcans:trash_cans"
+					}
+				}
+				title: "垃圾桶"
 				type: "item"
 			}]
 			x: 10.0d
@@ -386,6 +404,7 @@
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "7CF3605CD32CCEED"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "就是正版的加速火把!"
 			tasks: [{
 				id: "5A6E3C313B4A1442"
@@ -404,6 +423,7 @@
 			description: ["搭配输出输入升级使用有奇效"]
 			hide_dependency_lines: true
 			id: "15080FCC44C718DD"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "比流体储罐好用一百亿倍"
 			tasks: [{
 				id: "4AF4B44DD243B23F"
@@ -426,6 +446,7 @@
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "553F8AFDC9BAC40F"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "液态超经验的力量"
 			tasks: [{
 				id: "5E6DC322D45F40EF"
@@ -448,6 +469,7 @@
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "0D920683691D237D"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "液态超经验的力量"
 			tasks: [{
 				id: "4DD3608387E0F186"
@@ -473,6 +495,7 @@
 			hide_dependent_lines: true
 			icon: "immersiveengineering:earmuffs"
 			id: "6219A68A3A7C1876"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "把世界调成静音, 聆听主机的轰鸣(不是"
 			tasks: [{
 				id: "74725548CEEF2EF4"
@@ -498,6 +521,7 @@
 			hide_dependent_lines: true
 			icon: "industrial_platform:industrial_platform"
 			id: "7BA8A28AD2EA188E"
+			quest_enhance_disable_scroll_paging: false
 			rewards: [{
 				id: "49D5F0F64419194F"
 				item: "industrial_platform:industrial_platform"
@@ -517,6 +541,7 @@
 			dependencies: ["714D1AC6D07BEEC0"]
 			hide_dependency_lines: true
 			id: "3DD175AC87EB32EA"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "伤害测试器"
 			tasks: [{
 				id: "0CC98A213BBFBC9C"
@@ -531,6 +556,7 @@
 			dependencies: ["714D1AC6D07BEEC0"]
 			hide_dependency_lines: true
 			id: "10776E907DD88693"
+			quest_enhance_disable_scroll_paging: false
 			size: 1.0d
 			subtitle: "更快速的注液器"
 			tasks: [{
@@ -554,6 +580,7 @@
 			]
 			hide_dependency_lines: true
 			id: "64E519AA358DD04C"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "一键生成万格流体池(当然需要你自己填充)"
 			tasks: [{
 				id: "3F948671C7F78B31"
@@ -567,6 +594,7 @@
 			dependencies: ["714D1AC6D07BEEC0"]
 			hide_dependency_lines: true
 			id: "0E0683A73BB85ABC"
+			quest_enhance_disable_scroll_paging: false
 			subtitle: "♻️环保♻️"
 			tasks: [{
 				id: "46B8E557794AB6F7"
