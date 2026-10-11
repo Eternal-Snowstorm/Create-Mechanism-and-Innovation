@@ -35,43 +35,6 @@ ServerEvents.recipes((event) => {
 	]).damageIngredient("#minecraft:axes")
 		.keepIngredient("#forge:tools/wrench")
 
-	// 自然
-	kubejs.shapeless(Mechanisms.NATURE.COM, [
-		"minecraft:grass_block",
-		"#minecraft:flowers",
-		"minecraft:water_bucket",
-		"#forge:seeds",
-		Mechanisms.PART.MAGIC,
-		"#minecraft:axes",
-		"#forge:tools/wrench"
-	]).replaceIngredient("minecraft:water_bucket", "minecraft:bucket")
-		.damageIngredient("#minecraft:axes")
-		.keepIngredient("#forge:tools/wrench")
-
-	// 流体
-	kubejs.shapeless(Mechanisms.COPPER.COM, [
-		"cmi:copper_mechanism_basement",
-		"create:fluid_pipe",
-		"thermal:cured_rubber",
-		["#forge:glass/prism", "#forge:glass"],
-		"minecraft:water_bucket",
-		Mechanisms.PART.MECHA,
-		"#forge:tools/wrench"
-	]).replaceIngredient("minecraft:water_bucket", "minecraft:bucket")
-		.keepIngredient("#forge:tools/wrench")
-
-	// 动能
-	kubejs.shapeless(Mechanisms.ANDESITE.COM, [
-		"cmi:andesite_mechanism_basement",
-		"#create:cogwheel",
-		"#create:cogwheel",
-		"#create:large_cogwheel",
-		Mechanisms.PART.MECHA,
-		"#minecraft:axes",
-		"#forge:tools/wrench"
-	]).damageIngredient("#minecraft:axes")
-		.keepIngredient("#forge:tools/wrench")
-
 	// 磁力
 	kubejs.shapeless(Mechanisms.IRON.COM, [
 		"cmi:iron_mechanism_basement",
@@ -82,5 +45,26 @@ ServerEvents.recipes((event) => {
 		"#minecraft:axes",
 		"#forge:tools/wrench"
 	]).damageIngredient("#minecraft:axes")
+		.keepIngredient("#forge:tools/wrench")
+
+	// 动能
+	kubejs.shapeless(Mechanisms.ANDESITE.COM, [
+		"cmi:andesite_mechanism_basement",
+		"#forge:plates/andesite_alloy",
+		"#create:cogwheel",
+		"#create:large_cogwheel",
+		Mechanisms.PART.MECHA,
+		"#forge:tools/wrench"
+	]).keepIngredient("#forge:tools/wrench")
+
+	// 流体
+	kubejs.shapeless(Mechanisms.COPPER.COM, [
+		"cmi:copper_mechanism_basement",
+		"thermal:cured_rubber",
+		["#forge:glass/prism", "#forge:glass"],
+		"minecraft:water_bucket",
+		Mechanisms.PART.MECHA,
+		"#forge:tools/wrench"
+	]).replaceIngredient("minecraft:water_bucket", "minecraft:bucket")
 		.keepIngredient("#forge:tools/wrench")
 })

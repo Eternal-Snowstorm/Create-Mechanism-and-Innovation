@@ -366,6 +366,10 @@ ServerEvents.tags("block", (event) => {
 	event.get("create:windmill_sails")
 		.remove("create:sail_frame")
 
+	// 路面
+	event.get("cmi:player_path")
+		.add("#minecraft:stone_bricks")
+
 	/**
 	 * 
 	 * @param {Special.BlockTag} tag 
