@@ -137,6 +137,13 @@ ServerEvents.recipes((event) => {
 		setOutput("create:pulse_timer", 0.25),
 		setOutput("create_connected:sequenced_pulse_generator", 0.25)
 	])
+	addRecipe("vintageimprovements:redstone_module", "minecraft:furnace", [
+		setOutput("minecraft:dispenser", 0.2),
+		setOutput("minecraft:dropper", 0.2),
+		setOutput("minecraft:observer", 0.2),
+		setOutput("minecraft:piston", 0.2),
+		setOutput("create:redstone_contact", 0.2)
+	])
 
 	// 智能构件
 	addRecipe("cmi:smart_mechanism", "minecraft:stone", [
