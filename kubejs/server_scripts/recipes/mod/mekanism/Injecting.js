@@ -7,4 +7,11 @@ ServerEvents.recipes((event) => {
 		"2x #forge:ingots/uranium",
 		"cmi:fissile_uranium_compound"
 	)
+
+	// 氡气瓶
+	mekanism.injecting(
+		"alexscaves:radon_bottle",
+		"minecraft:glass_bottle",
+		"1x cmi:radon"
+	)
 })
