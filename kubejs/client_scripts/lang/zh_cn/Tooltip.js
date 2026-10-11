@@ -64,6 +64,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addCommonTooltipLang("cmi:keyxeldesu", "美工")
 	addCommonTooltipLang("cmi:sergei", "建筑")
 	addCommonTooltipLang("cmi:lirx_owo", "程序")
+	addCommonTooltipLang("cmi:delta", "程序")
 
 	addCommonTooltipLang("tconstruct:seared_heater", "焦黑加热器最多提供937°C / 1718.6°F")
 	addCommonTooltipLang("#cmi:block/machine_block", "只有装饰作用(暂时)")

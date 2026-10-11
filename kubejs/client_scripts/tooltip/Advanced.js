@@ -21,9 +21,12 @@ ItemEvents.tooltip((event) => {
 	addAdvancedTooltip("cmi:keyxeldesu")
 	addAdvancedTooltip("cmi:sergei")
 	addAdvancedTooltip("cmi:lirx_owo")
+	addAdvancedTooltip("cmi:delta")
 
 	// 繁星核心
 	addAdvancedTooltip("cmi:astral_core")
+
+	// 冲击桩
 	addAdvancedTooltip("cmi:impact_pile")
 
 	/**
