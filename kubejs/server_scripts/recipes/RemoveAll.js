@@ -228,7 +228,8 @@ ServerEvents.recipes((event) => {
 		"create_rns:nickel_deposit_block",
 		"create_rns:silver_deposit_block",
 		"create_rns:uranium_deposit_block",
-		"create_rns:osmium_deposit_block"
+		"create_rns:osmium_deposit_block",
+		"createdieselgenerators:crushing/wood_chip_casings"
 	])
 
 	let removedMods = [

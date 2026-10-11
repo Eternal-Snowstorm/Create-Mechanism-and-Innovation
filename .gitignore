@@ -130,7 +130,7 @@ graphflow-out/*
 !/config/jei/*
 !/config/immersiveengineering-client.toml
 !/config/ad_astra.jsonc
-!/config/fml.toml
+# !/config/fml.toml 我真服了啊, 每次启动游戏都会自动改
 !/config/portality
 !/config/carryon-common.toml
 !/config/cookingforblockheads-common.toml
