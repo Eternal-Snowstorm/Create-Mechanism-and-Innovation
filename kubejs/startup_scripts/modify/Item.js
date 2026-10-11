@@ -88,6 +88,20 @@ ItemEvents.modification((event) => {
 		modify.setMaxStackSize(64)
 	})
 
+	// 氡气瓶
+	event.modify("alexscaves:radon_bottle", (modify) => {
+		modify.setFoodProperties((builder) => {
+			builder.hunger(1)
+				.saturation(0.01)
+				.alwaysEdible()
+				.fastToEat()
+				.effect("kaleidoscope_nether:mysterious_poison", 20 * 120000, 5, 1)
+				.effect("minecraft:instant_damage", 1, 1, 1)
+				.effect("minecraft:nausea", 20 * 60000, 5, 1)
+				.effect("minecraft:blindness", 20 * 600, 5, 1)
+		})
+	})
+
 	if (FestivalUtils.isAprilFoolsDay()) {
 		event.modify("mekanism:alloy_infused", (modify) => {
 			modify.setNameKey("item.cmi.sweet_berry_hard_candy")

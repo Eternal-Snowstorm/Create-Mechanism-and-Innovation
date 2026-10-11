@@ -39,4 +39,5 @@ ClientEvents.lang("en_us", (event) => {
 	addMBDLang("dimensionally_transcendent_mechanism_accelerator", "Dimensionally Transcendent Mechanism Accelerator(WIP)")
 	addMBDLang("large_mixer", "Large Mixer")
 	addMBDLang("radar_antenna", "Radar Antenna")
+	addMBDLang("multi_type_driller", "Multi-Type Driller")
 })

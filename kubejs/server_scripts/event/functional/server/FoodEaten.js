@@ -30,3 +30,14 @@ addFoodEaten("create:blaze_cake", (event) => {
 		player.attack(player.damageSources().lava(), player.getHealth())
 	}
 })
+
+addFoodEaten("alexscaves:radon_bottle", (event) => {
+	let { player, level, hand } = event
+	let key = `message.${Cmi.MODID}.food.radon_bottle`
+
+	if (hand !== InteractionHand.MAIN_HAND && !level.isClientSide()) {
+		player.displayClientMessage(Component.translatable(key).blue(), true)
+	}
+
+	level.runCommandSilent(`mek radiation addEntity ${player.getUsername()} 1145.14`)
+})
