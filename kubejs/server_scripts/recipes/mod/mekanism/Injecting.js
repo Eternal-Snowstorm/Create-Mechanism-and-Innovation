@@ -12,6 +12,6 @@ ServerEvents.recipes((event) => {
 	mekanism.injecting(
 		"alexscaves:radon_bottle",
 		"minecraft:glass_bottle",
-		"cmi:radon"
+		"1x cmi:radon"
 	)
 })
