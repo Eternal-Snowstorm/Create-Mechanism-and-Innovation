@@ -15,7 +15,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	 */
 	function addMechanismLang(material, value) {
 		event.add(`item.${Cmi.MODID}.${material}_mechanism`, `${value}构件`)
-		event.add(`item.${Cmi.MODID}.incomplete_${material}_mechanism`, `${value}构件(半成品)`)
+		event.add(`item.${Cmi.MODID}.incomplete_${material}_mechanism`, `${value}构件 (半成品)`)
 	}
 
 	/**
@@ -46,15 +46,6 @@ ClientEvents.lang("zh_cn", (event) => {
 		event.add(`item.${Cmi.MODID}.${material}_mechanism_part`, `${value}构件零件`)
 	}
 
-	/**
-	 * 
-	 * @param {string} key 
-	 * @param {string} value 
-	 */
-	function addFlashDriveLang(key, value) {
-		event.add(`item.${Cmi.MODID}.${key}_mechanism_flash_drive`, `${value}构件闪存盘`)
-	}
-
 	addMechanismPartLang("basic", "基础")
 	addMechanismPartLang("mechanical", "机械")
 	addMechanismPartLang("flux", "通量")
@@ -77,7 +68,6 @@ ClientEvents.lang("zh_cn", (event) => {
 		["cobalt", "钴质"],
 		["thermal", "热力"],
 		["reinforced", "强化"],
-		// ["resonant", "谐振"],
 		["railway", "铁路"],
 		["ender", "末影"],
 		["light_engineering", "轻型工程"],
@@ -85,10 +75,6 @@ ClientEvents.lang("zh_cn", (event) => {
 		["enchanted", "附魔"],
 		["smart", "智能"],
 		["computing", "计算"],
-		["tier_1_aviation", "壹级科技航天"],
-		["tier_2_aviation", "贰级科技航天"],
-		["tier_3_aviation", "叁级科技航天"],
-		["tier_4_aviation", "肆级科技航天"],
 		["basic_mekanism", "基础通用"],
 		["advanced_mekanism", "高级通用"],
 		["elite_mekanism", "精英通用"],
@@ -110,7 +96,6 @@ ClientEvents.lang("zh_cn", (event) => {
 		["astronautic", "宇航"]
 	]
 	mechanismGroup.forEach(([material, name]) => {
-		addFlashDriveLang(material, name)
 		addMechanismLang(material, name)
 		addMechanismMachineLang(material, name)
 		addCraftingIncompleteLang(material, name)

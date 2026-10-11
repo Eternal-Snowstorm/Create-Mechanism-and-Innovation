@@ -13,6 +13,15 @@ ClientEvents.lang("zh_cn", (event) => {
 	 * @param {string} key 
 	 * @param {string} name 
 	 */
+	function addIncompleteLang(key, name) {
+		event.add(`item.${Cmi.MODID}.incomplete_${key}`, `${name} (半成品)`)
+	}
+
+	/**
+	 * 
+	 * @param {string} key 
+	 * @param {string} name 
+	 */
 	function addCellItemLang(key, name) {
 		event.add(`item.${Cmi.MODID}.${key}_cell`, `${name}硬盘`)
 	}
@@ -213,45 +222,61 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("astral_core", "繁星核心")
 
 	// 半成品
-	addItemLang("incomplete_cogwheel", "齿轮(半成品)")
-	addItemLang("incomplete_bronze_cogwheel", "青铜齿轮(半成品)")
-	addItemLang("incomplete_cast_iron_cogwheel", "铸铁齿轮(半成品)")
-	addItemLang("incomplete_steel_cogwheel", "钢齿轮(半成品)")
-	addItemLang("incomplete_large_cogwheel", "大齿轮(半成品)")
-	addItemLang("incomplete_bronze_large_cogwheel", "青铜大齿轮(半成品)")
-	addItemLang("incomplete_cast_iron_large_cogwheel", "铸铁大齿轮(半成品)")
-	addItemLang("incomplete_steel_large_cogwheel", "钢大齿轮(半成品)")
-	addItemLang("incomplete_gas_container", "气体容器(半成品)")
-	addItemLang("incomplete_advanced_control_circuit", "高级控制电路(半成品)")
-	addItemLang("incomplete_elite_control_circuit", "精英控制电路(半成品)")
-	addItemLang("incomplete_ultimate_control_circuit", "终极控制电路(半成品)")
-	addItemLang("incomplete_electron_tube", "电子管(半成品)")
-	addItemLang("incomplete_resonant_tube", "共振管(半成品)")
-	addItemLang("incomplete_carbon_nanotube", "碳纳米管(半成品)")
-	addItemLang("incomplete_tungsten_steel_plate", "复合钨钢板(半成品)")
-	addItemLang("incomplete_composite_carbon_fiber_plate", "复合碳纤板(半成品)")
-	addItemLang("incomplete_upgrade_augment_1", "硬化整合组件(半成品)")
-	addItemLang("incomplete_upgrade_augment_2", "强化整合组件(半成品)")
-	addItemLang("incomplete_upgrade_augment_3", "谐振整合组件(半成品)")
-	addItemLang("incomplete_upgrade_augment_4", "龙钢整合组件(半成品)")
-	addItemLang("incomplete_upgrade_augment_5", "深渊整合组件(半成品)")
-	addItemLang("incomplete_upgrade_augment_6", "铝整合组件(半成品)")
-	addItemLang("incomplete_upgrade_augment_7", "不锈钢整合组件(半成品)")
-	addItemLang("incomplete_upgrade_augment_8", "钛合金整合组件(半成品)")
-	addItemLang("incomplete_upgrade_augment_9", "钨钢整合组件(半成品)")
+	addIncompleteLang("cogwheel", "齿轮")
+	addIncompleteLang("bronze_cogwheel", "青铜齿轮")
+	addIncompleteLang("cast_iron_cogwheel", "铸铁齿轮")
+	addIncompleteLang("steel_cogwheel", "钢齿轮")
+	addIncompleteLang("large_cogwheel", "大齿轮")
+	addIncompleteLang("bronze_large_cogwheel", "青铜大齿轮")
+	addIncompleteLang("cast_iron_large_cogwheel", "铸铁大齿轮")
+	addIncompleteLang("steel_large_cogwheel", "钢大齿轮")
+	
+	addIncompleteLang("advanced_control_circuit", "高级控制电路")
+	addIncompleteLang("elite_control_circuit", "精英控制电路")
+	addIncompleteLang("ultimate_control_circuit", "终极控制电路")
 
-	addItemLang("incomplete_tier_1_rocket_frame", "一阶火箭框架(半成品)")
-	addItemLang("incomplete_tier_2_rocket_frame", "二阶火箭框架(半成品)")
-	addItemLang("incomplete_tier_3_rocket_frame", "三阶火箭框架(半成品)")
-	addItemLang("incomplete_tier_4_rocket_frame", "四阶火箭框架(半成品)")
-	addItemLang("incomplete_tier_1_rocket", "一阶火箭(半成品)")
-	addItemLang("incomplete_tier_2_rocket", "二阶火箭(半成品)")
-	addItemLang("incomplete_tier_3_rocket", "三阶火箭(半成品)")
-	addItemLang("incomplete_tier_4_rocket", "四阶火箭(半成品)")
+	addIncompleteLang("upgrade_augment_1", "硬化整合组件")
+	addIncompleteLang("upgrade_augment_2", "强化整合组件")
+	addIncompleteLang("upgrade_augment_3", "谐振整合组件")
+	addIncompleteLang("upgrade_augment_4", "龙钢整合组件")
+	addIncompleteLang("upgrade_augment_5", "深渊整合组件")
+	addIncompleteLang("upgrade_augment_6", "铝整合组件")
+	addIncompleteLang("upgrade_augment_7", "不锈钢整合组件")
+	addIncompleteLang("upgrade_augment_8", "钛合金整合组件")
+	addIncompleteLang("upgrade_augment_9", "钨钢整合组件")
 
-	addItemLang("incomplete_scanning_module", "扫描模块(半成品)")
-	addItemLang("incomplete_scanner", "扫描器(半成品)")
-	addItemLang("incomplete_aviation_cell", "航天硬盘(半成品)")
+	addIncompleteLang("tier_1_rocket_frame", "一阶火箭框架")
+	addIncompleteLang("tier_2_rocket_frame", "二阶火箭框架")
+	addIncompleteLang("tier_3_rocket_frame", "三阶火箭框架")
+	addIncompleteLang("tier_4_rocket_frame", "四阶火箭框架")
+	addIncompleteLang("tier_1_rocket", "一阶火箭")
+	addIncompleteLang("tier_2_rocket", "二阶火箭")
+	addIncompleteLang("tier_3_rocket", "三阶火箭")
+	addIncompleteLang("tier_4_rocket", "四阶火箭")
+	addIncompleteLang("aviation_cell", "航天硬盘")
+
+	addIncompleteLang("nuke_cooler", "冷却设备")
+	addIncompleteLang("notor_gizmo", "扫描机兵零件")
+	addIncompleteLang("motor_rotor", "电动机转子")
+	addIncompleteLang("gas_container", "气体容器")
+	addIncompleteLang("electron_tube", "电子管")
+	addIncompleteLang("resonant_tube", "共振管")
+	addIncompleteLang("carbon_nanotube", "碳纳米管")
+	addIncompleteLang("tungsten_steel_plate", "复合钨钢板")
+	addIncompleteLang("composite_carbon_fiber_plate", "复合碳纤板")
+	addIncompleteLang("thermal_mechanism_augment", "热力构件组件")
+
+	addIncompleteLang("thermal_devices", "热力设备")
+	addIncompleteLang("flywheel", "飞轮")
+	addIncompleteLang("steam_engine", "蒸汽引擎")
+
+	addIncompleteLang("logic_processor", "逻辑处理器")
+	addIncompleteLang("calculation_processor", "运算处理器")
+	addIncompleteLang("concurrent_processor", "并发处理器")
+	addIncompleteLang("engineering_processor", "工程处理器")
+	addIncompleteLang("superconducting_processor", "ECO - SA 超导处理器")
+
+	// 整合组件
 	addItemLang("combined_component_4k", "4K ME整合组件")
 	addItemLang("combined_component_16k", "16K ME整合组件")
 	addItemLang("combined_component_64k", "64K ME整合组件")
