@@ -38,9 +38,12 @@ addFoodEaten("alexscaves:radon_bottle", (event) => {
 	if (hand !== InteractionHand.MAIN_HAND && !level.isClientSide()) {
 		player.displayClientMessage(Component.translatable(key).blue(), true)
 
-		player.give("minecraft:grass_bottle")
+		if (!player.isCreative()) {
+			player.give("minecraft:glass_bottle")
+		}
 
 		level.runCommandSilent(`mek radiation addEntity ${player.getUsername()} 1145.14`)
+		level.runCommandSilent(`advancement grant ${player.getUsername()} only mekanism:radiation_poisoning`)
 	}
 
 })
