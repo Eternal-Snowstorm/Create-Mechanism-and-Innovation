@@ -33,7 +33,7 @@ ProbeJSEvents.generateDoc((event) => {
 
 	/*
 	 * `getFluidString`和`getFirstFluidId`真正来自
-	 * `dev.celestiacraft.cmi.compat.kubejs.utils.ingredient.IIngredientUtils`
+	 * `dev.celestiacraft.cmi.compat.kubejs.modify.ingredient.IIngredientUtils`
 	 */
 	let $IngredientWrapper = "dev.latvian.mods.kubejs.bindings.IngredientWrapper"
 	event.transformByName($IngredientWrapper, (document) => {
