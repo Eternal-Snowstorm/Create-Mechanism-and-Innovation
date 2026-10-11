@@ -368,7 +368,13 @@ ServerEvents.tags("block", (event) => {
 
 	// 路面
 	event.get("cmi:player_path")
-		.add("#minecraft:stone_bricks")
+		.add([
+			"#minecraft:stone_bricks",
+			"minecraft:cobblestone",
+			"minecraft:mossy_cobblestone",
+			"create:cut_andesite_bricks",
+			"minecraft:andesite"
+		])
 
 	/**
 	 * 
