@@ -134,9 +134,11 @@ ClientEvents.lang("zh_cn", (event) => {
 	addBlockLang("pink_reinforced_concrete", "粉色钢筋混凝土")
 	addBlockLang("brown_reinforced_concrete", "棕色钢筋混凝土")
 
-	// 幻晶
+	// 幻晶 & 械钢
 	addBlockLang("dreamcore_coil", "幻晶线圈")
 	addBlockLang("dtma_dreamcore_energy_core", "DTMA 幻晶能量核心")
+	addBlockLang("mechanium_casing", "械钢机壳")
+	addBlockLang("mechanium_ore", "械钢矿")
 
 	// 雕纹铜块
 	addBlockLang("chiseled_copper", "雕纹铜块")
