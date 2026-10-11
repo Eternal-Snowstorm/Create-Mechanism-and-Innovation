@@ -117,5 +117,4 @@ ClientEvents.lang("zh_cn", (event) => {
 	addFluidLang("hyper_experience", "液态超经验")
 	addFluidLang("ink", "墨水")
 	addFluidLang("molten_mechanium", "熔融械钢")
-	addFluidLang("hot_cryotheum_solution", "热冷却液")
 })

@@ -110,8 +110,6 @@ StartupEvents.registry("fluid", (event) => {
 	addAloneFluid("pure_sand")
 	// 极寒之凛冰
 	addAloneFluid("glacious_cryotheum")
-	// 热冷却液
-	addAloneFluid("hot_cryotheum_solution")
 	// 液态超经验
 	addAloneFluid("hyper_experience")
 	// 墨水
