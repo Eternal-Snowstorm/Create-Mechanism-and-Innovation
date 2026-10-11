@@ -65,6 +65,14 @@
 			"}"
 		]
 	},
+	"function": {
+		"scope": "javascript,typescript",
+		"prefix": "$function",
+		"body": [
+			"(function () {",
+			"})()"
+		]
+	},
 	"priority": {
 		"scope": "javascript,typescript",
 		"prefix": "$priority",
