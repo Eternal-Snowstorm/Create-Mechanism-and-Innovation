@@ -28,6 +28,11 @@ StartupEvents.registry("item", (event) => {
 	addItem("cmi_icon")
 		.texture(Cmi.loadResource("item/packicon"))
 
+	// 金坷垃
+	addItem("fertilizer")
+		.tag("forge:dusts")
+		.tag(`forge:dusts/fertilizer`)
+
 	// 幻晶晶体
 	addMaterial("dreamcore_crystal")
 		.glow(true)
