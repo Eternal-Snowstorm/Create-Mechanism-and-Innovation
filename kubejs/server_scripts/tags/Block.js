@@ -373,7 +373,8 @@ ServerEvents.tags("block", (event) => {
 			"minecraft:cobblestone",
 			"minecraft:mossy_cobblestone",
 			"create:cut_andesite_bricks",
-			"minecraft:andesite"
+			"minecraft:andesite",
+			"createdieselgenerators:asphalt_block"
 		])
 
 	/**
