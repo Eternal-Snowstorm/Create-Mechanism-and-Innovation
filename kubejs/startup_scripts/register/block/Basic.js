@@ -30,6 +30,25 @@ StartupEvents.registry("block", (event) => {
 		.hardness(5)
 		.resistance(5)
 
+	// 石子路面
+	addBlock("stone_pave")
+		.model(Cmi.loadResource("block/custom/stone_pave"))
+		.defaultCutout()
+		.soundType(SoundType.GRAVEL)
+		.box(0, 0, 0, 16, 2, 16)
+		.noCollision()
+		.transparent(true)
+		.hardness(1)
+		.resistance(1)
+		.item((builder) => {
+			builder.modelJson({
+				"parent": "minecraft:item/generated",
+				"textures": {
+					"layer0": "cmi:item/material/stone_pebble"
+				}
+			})
+		})
+
 	// 破旧的存钱罐
 	addBlock("piggy_bank", "cardinal")
 		.soundType(SoundType.DECORATED_POT)
@@ -361,11 +380,11 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiMiningLevel.STONE.tag())
 		.box(0, 0, 0, 16, 2, 16)
 		.modelJson = {
-			parent: "cmi:block/redstone_diode",
-			textures: {
-				"diode": "minecraft:block/smooth_stone"
-			}
+		parent: "cmi:block/redstone_diode",
+		textures: {
+			"diode": "minecraft:block/smooth_stone"
 		}
+	}
 
 	// 黄铜二极管底座
 	addBlock("brass_diode_base", "cardinal")
@@ -375,9 +394,9 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiMiningLevel.STONE.tag())
 		.box(0, 0, 0, 16, 2, 16)
 		.modelJson = {
-			parent: "cmi:block/redstone_diode",
-			textures: {
-				"diode": "create:block/diodes/brass_diode_base"
-			}
+		parent: "cmi:block/redstone_diode",
+		textures: {
+			"diode": "create:block/diodes/brass_diode_base"
 		}
+	}
 })

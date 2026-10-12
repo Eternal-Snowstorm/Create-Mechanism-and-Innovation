@@ -368,7 +368,13 @@ ServerEvents.tags("block", (event) => {
 
 	// 路面
 	event.get("cmi:player_path")
-		.add("#minecraft:stone_bricks")
+		.add([
+			"cmi:stone_pave",
+			"minecraft:dirt_path",
+			"createdieselgenerators:asphalt_block",
+			"createdieselgenerators:asphalt_stairs",
+			"createdieselgenerators:asphalt_stairs"
+		])
 
 	/**
 	 * 

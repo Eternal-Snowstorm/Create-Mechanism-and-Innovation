@@ -29,7 +29,7 @@ StartupEvents.registry("item", (event) => {
 		.texture(Cmi.loadResource("item/packicon"))
 
 	// 金坷垃
-	addItem("fertilizer")
+	addMaterial("fertilizer")
 		.tag("forge:dusts")
 		.tag(`forge:dusts/fertilizer`)
 

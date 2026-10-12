@@ -11,6 +11,7 @@ const VILLAGE_STREET_TYPES = [
 const VILLAGE_STREET_VARIANTS = 3
 const VILLAGE_TERMINATOR_VARIANTS = 3
 const VILLAGE_TERMINATOR_WEIGHT = 1
+const VILLAGE_DECOR_EMPTY_WEIGHT = 40
 const VILLAGE_GENERATORS = []
 
 /**
@@ -27,6 +28,7 @@ function VillageGen(biome) {
 	this.buildings = []
 	this.farmEntries = []
 	this.townCenters = []
+	this.decorations = []
 
 	VILLAGE_GENERATORS.push(this)
 }
@@ -108,6 +110,32 @@ VillageGen.prototype.townCenter = function (name, weight) {
 
 	this.townCenters.push({
 		id: name,
+		weight: weight
+	})
+
+	return this
+}
+
+/**
+ * 追加一个装饰, 写入装饰池(cmi:village/<群系>/decors/<id>).
+ *
+ * @param {string} id 装饰结构的 string 命名
+ * @param {number} weight 直接写入 Template Pool 的权重
+ * @returns {VillageGen} 返回自身以便链式调用
+ */
+VillageGen.prototype.decor = function (id, weight) {
+	if (typeof id != "string" || id.length == 0) {
+		console.error("[VillageGen] " + this.biome + ": .decor() 需要一个装饰命名(String), 收到: " + id)
+		return this
+	}
+
+	if (typeof weight != "number" || weight <= 0) {
+		console.error("[VillageGen] " + this.biome + ": .decor(" + id + ") 需要一个大于 0 的权重, 收到: " + weight)
+		return this
+	}
+
+	this.decorations.push({
+		id: id,
 		weight: weight
 	})
 
@@ -248,6 +276,48 @@ VillageGen.prototype.buildTownCenters = function (event) {
 }
 
 /**
+ * 生成装饰池, 替代 kubejs/data/minecraft/worldgen/template_pool/village/<群系>/decor.json.
+ *
+ * 池里只有 .decor() 指定的装饰, 原版的 feature_pool_element(树/花草/干草堆)不出现在这里.
+ *
+ * @param {*} event
+ */
+VillageGen.prototype.buildDecor = function (event) {
+	if (this.decorations.length == 0) {
+		console.info("[VillageGen] " + this.biome + ": 没有 .decor(), 装饰池保持原样")
+		return
+	}
+
+	let decorPool = {
+		elements: [],
+		fallback: "minecraft:empty"
+	}
+
+	for (let i = 0; i < this.decorations.length; i++) {
+		decorPool.elements.push({
+			element: {
+				element_type: "minecraft:legacy_single_pool_element",
+				location: "cmi:village/" + this.biome + "/decors/" + this.decorations[i].id,
+				processors: {
+					processors: []
+				},
+				projection: "rigid"
+			},
+			weight: this.decorations[i].weight
+		})
+	}
+
+	decorPool.elements.push({
+		element: {
+			element_type: "minecraft:empty_pool_element"
+		},
+		weight: VILLAGE_DECOR_EMPTY_WEIGHT
+	})
+
+	event.addJson("minecraft:worldgen/template_pool/village/" + this.biome + "/decor.json", decorPool)
+}
+
+/**
  * 生成房屋池(房屋 + 农田 + 空地).
  *
  * @param {*} event
@@ -359,6 +429,7 @@ VillageGen.prototype.build = function (event) {
 
 	this.buildHouses(event, weights)
 	this.buildTownCenters(event)
+	this.buildDecor(event)
 	this.buildStreets(event)
 	this.buildTerminators(event)
 
@@ -387,6 +458,13 @@ new VillageGen("plains")
 	.farms("sugar_cane", 0.4)
 	.townCenter("tower", 50)
 	.townCenter("sculpture", 40)
+	.decor("breakfast", 10)
+	.decor("fish", 5)
+	.decor("flower", 15)
+	.decor("meat", 10)
+	.decor("plant", 15)
+	.decor("light", 80)
+	.decor("cart", 40)
 
 ServerEvents.highPriorityData((event) => {
 	VILLAGE_GENERATORS.forEach((village) => village.build(event))

@@ -16,6 +16,11 @@ ServerEvents.recipes((event) => {
 			minecraft.stonecutting(mold, "#cmi:clay_molds")
 		})
 
+	// 石子路面
+	minecraft.stonecutting("16x cmi:stone_pave",
+		"minecraft:gravel"
+	)
+
 	// 金属梁
 	minecraft.stonecutting("2x create:metal_girder",
 		"#forge:plates/industrial_iron"

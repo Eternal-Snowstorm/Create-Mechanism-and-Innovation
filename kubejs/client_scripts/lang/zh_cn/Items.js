@@ -130,7 +130,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("entro_oxidizer", "恩特罗氧化剂")
 	addItemLang("sodium_reducing_agent", "钠还原剂")
 	addItemLang("venus_stone_dust", "金星岩粉")
-	addItemLang("fertilizer", "金坷垃")
 
 	// 晶体
 	addItemLang("charged_amethyst", "充能紫水晶")
@@ -230,7 +229,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addIncompleteLang("bronze_large_cogwheel", "青铜大齿轮")
 	addIncompleteLang("cast_iron_large_cogwheel", "铸铁大齿轮")
 	addIncompleteLang("steel_large_cogwheel", "钢大齿轮")
-	
+
 	addIncompleteLang("advanced_control_circuit", "高级控制电路")
 	addIncompleteLang("elite_control_circuit", "精英控制电路")
 	addIncompleteLang("ultimate_control_circuit", "终极控制电路")
@@ -374,6 +373,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("hammer_head", "冲压头")
 	addItemLang("kaolinite_ball", "高岭土球")
 	addItemLang("cmi_icon", "CMI 图标")
+	addItemLang("fertilizer", "金坷垃")
 
 	addItemLang("purified_quartz", "高纯石英")
 	addItemLang("silicon_rubber", "硅橡胶")

@@ -168,3 +168,4 @@ updater/.rollback/
 config/asteorbar-client.toml
 /.graphflow
 /.dsh-meow
+/.npm-cache
