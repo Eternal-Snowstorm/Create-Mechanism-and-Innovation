@@ -63,4 +63,39 @@ ServerEvents.recipes((event) => {
 		"cmi:brass_diode_base",
 		"create_connected:control_chip"
 	).id("create_connected:crafting/kinetics/sequenced_pulse_generator")
+
+	// 发射器
+	minecraft.smithing_transform("minecraft:dispenser",
+		Mechanisms.REDSTONE.COM,
+		"minecraft:furnace",
+		"#vintageimprovements:springs"
+	).id("minecraft:dispenser")
+
+	// 投掷器
+	minecraft.smithing_transform("minecraft:dropper",
+		Mechanisms.REDSTONE.COM,
+		"minecraft:furnace",
+		"#vintageimprovements:small_springs"
+	).id("minecraft:dropper")
+
+	// 活塞
+	minecraft.smithing_transform("minecraft:piston",
+		Mechanisms.REDSTONE.COM,
+		"minecraft:furnace",
+		"#minecraft:wooden_slabs"
+	).id("minecraft:piston")
+
+	// 侦测器
+	minecraft.smithing_transform("minecraft:observer",
+		Mechanisms.REDSTONE.COM,
+		"minecraft:furnace",
+		"#forge:gems/quartz"
+	).id("minecraft:observer")
+
+	// 红石触点
+	minecraft.smithing_transform("2x create:redstone_contact",
+		Mechanisms.REDSTONE.COM,
+		"minecraft:furnace",
+		"#forge:plates/iron"
+	).id("create:crafting/logistics/redstone_contact")
 })

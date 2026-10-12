@@ -131,7 +131,7 @@ ServerEvents.recipes((event) => {
 	]).id("tconstruct:common/flint")
 
 	// 光纤
-	kubejs.shapeless("cmi:optical_fiber", [
+	kubejs.shapeless("4x cmi:optical_fiber", [
 		"4x cmi:glass_wire",
 		"4x ae2:certus_quartz_dust",
 		"thermal:cured_rubber"
