@@ -46,6 +46,5 @@
 			level.runCommandSilent(`mek radiation addEntity ${player.getUsername()} 1145.14`)
 			level.runCommandSilent(`advancement grant ${player.getUsername()} only mekanism:radiation_poisoning`)
 		}
-
 	})
 })()
