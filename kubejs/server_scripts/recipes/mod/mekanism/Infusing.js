@@ -29,6 +29,13 @@ ServerEvents.recipes((event) => {
 		"2x mekanism:redstone"
 	).id("mekanism:metallurgic_infusing/alloy/atomic")
 
+	// 精晶原石
+	mekanism.metallurgic_infusing(
+		"cmi:spiritcore_ore",
+		"cmi:entro_crystal",
+		"cmi:chaotic_void"
+	)
+
 	// 碳纳米管
 	mekanism.metallurgic_infusing(
 		"cmi:carbon_nanotube",

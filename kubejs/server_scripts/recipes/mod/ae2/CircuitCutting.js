@@ -106,12 +106,6 @@ ServerEvents.recipes((event) => {
 		.fluid("minecraft:water", 100)
 		.build()
 
-	// 晶精原石
-	new CircuitCutterRecipe("cmi:spiritcore_ore")
-		.item("#forge:gems/entro", 2)
-		.fluid("cmi:crystal_etching_solution", 100)
-		.build()
-
 	// 超导汞板
 	new CircuitCutterRecipe("cmi:superconducting_mercury_plate")
 		.item("cmi:superconducting_mercury_ingot")

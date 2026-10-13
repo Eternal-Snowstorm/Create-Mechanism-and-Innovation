@@ -40,6 +40,8 @@ StartupEvents.registry("block", (event) => {
 		.transparent(true)
 		.hardness(1)
 		.resistance(1)
+		.tagBlock(CmiToolType.SHOVEL.tag())
+		.tagBlock(CmiMiningLevel.WOODEN.tag())
 		.item((builder) => {
 			builder.modelJson({
 				"parent": "minecraft:item/generated",
