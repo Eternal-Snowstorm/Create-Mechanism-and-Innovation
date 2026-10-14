@@ -1,25 +1,21 @@
 StartupEvents.modifyCreativeTab("kubejs:tab", (event) => {
-	event.setDisplayName(Component.translatable(`itemGroup.${Cmi.MODID}.all`))
-
-	let removeItemFromCreativeTab = [
-		`#${Cmi.MODID}:io_debug_block`,
+	removeItemFromCreativeTab(event, [
 		"#forge:chem_salts",
 		"#create:mechanisms",
 		"#create:incomplete_mechanisms",
-		`#${Cmi.MODID}:mechanism_parts`,
 		"#tconstruct:casts/multi_use/mechanism",
 		"#tconstruct:casts/single_use/mechanism",
 		"#tconstruct:casts/multi_use/nugget",
+		`#${Cmi.MODID}:io_debug_block`,
+		`#${Cmi.MODID}:mechanism_parts`,
 		`#${Cmi.MODID}:metals`,
 		`#${Cmi.MODID}:ores`,
 		`#${Cmi.MODID}:raw_metals`,
 		`#${Cmi.MODID}:ore_nodes`,
 		`#${Cmi.MODID}:dev_doll`,
-		`#${Cmi.MODID}:block/machine_block`
-	]
-	removeItemFromCreativeTab.forEach((item) => {
-		event.remove(item)
-	})
+		`#${Cmi.MODID}:block/machine_block`,
+		`#${Cmi.MODID}:incomplete_items`
+	]).setDisplayName(Component.translatable(`itemGroup.${Cmi.MODID}.all`))
 })
 
 StartupEvents.modifyCreativeTab("create:base", (event) => {
@@ -58,38 +54,40 @@ StartupEvents.modifyCreativeTab("functionalstorage:main", (event) => {
 })
 
 StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", (event) => {
-	event.remove([
+	removeItemFromCreativeTab(event, [
 		"@mekanism"
-	])
-
-	event.add([
+	]).add([
 		"mbd2:mbd_gadgets"
 	])
 })
+
 StartupEvents.modifyCreativeTab("minecraft:redstone_blocks", (event) => {
-	event.remove([
+	removeItemFromCreativeTab(event, [
 		"@mekanism",
 		"@mekanismgenerators",
 		"mbd2:mbd_gadgets"
 	])
 })
+
 StartupEvents.modifyCreativeTab("minecraft:functional_blocks", (event) => {
-	event.remove([
-		"@mekanism"
-	])
+	event.remove("@mekanism")
 })
+
 StartupEvents.modifyCreativeTab("minecraft:ingredients", (event) => {
-	event.remove([
+	removeItemFromCreativeTab(event, [
 		"@mekanism",
-		"@create",
 		"@thermal",
 		"@cmi",
-		"@immersiveengineering"
+		"@immersiveengineering",
+		"@create"
 	])
 })
 
+
 StartupEvents.modifyCreativeTab("thermal:thermal.items", (event) => {
-	event.addBefore("thermal:rf_coil", [
+	removeItemFromCreativeTab(event, [
+		"@cmi"
+	]).addBefore("thermal:rf_coil", [
 		"thermal:laser_diode"
 	])
 })
@@ -101,14 +99,42 @@ StartupEvents.modifyCreativeTab("thermal:thermal.devices", (event) => {
 })
 
 StartupEvents.modifyCreativeTab("cmi:mechanisms", (event) => {
-	Ingredient.of("#cmi:block/machine_block")
-		.getItemIds()
-		.forEach((machineBlock) => {
-			event.add(machineBlock)
-		})
-	Ingredient.of("#cmi:mechanism_parts")
-		.getItemIds()
-		.forEach((mechanismParts) => {
-			event.add(mechanismParts)
-		})
+	addIngredientToCreativeTab(event, Ingredient.of("#cmi:block/machine_block"))
+	addIngredientToCreativeTab(event, Ingredient.of("#cmi:mechanism_parts"))
 })
+
+/**
+ * 
+ * @param {Internal.CreativeTabEvent_} event 
+ * @param {Ingredient_[]} removeItems 
+ * @returns {Internal.CreativeTabEvent_}
+ */
+function removeItemFromCreativeTab(event, removeItems) {
+
+	removeItems.forEach((item) => {
+		event.remove(item)
+	})
+
+	return event
+}
+
+/**
+ * 
+ * @param {Internal.CreativeTabEvent_} event 
+ * @param {Internal.Ingredient} ingredient 
+ * @returns {Internal.CreativeTabEvent_}
+ */
+function addIngredientToCreativeTab(event, ingredient) {
+	if (ingredient.checkInvalidation()) {
+		console.warn("Invalid Ingredient!")
+		return
+	}
+
+	let itemIds = ingredient.getItemIds()["toArray(java.lang.Object[])"]([""])
+
+	itemIds.forEach((item) => {
+		event.add(item)
+	})
+
+	return event
+}

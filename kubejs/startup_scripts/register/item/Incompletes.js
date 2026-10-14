@@ -1,57 +1,54 @@
 StartupEvents.registry("item", (event) => {
 	/**
+	 * 创建半成品物品
 	 * @param {string} name 注册ID
-	 * @param {boolean} isSequencedAssembly 是否是序列物品
-	 * @returns 
+	 * @param {boolean} [sequenced=true] 是否为序列装配物品
+	 * @returns {Internal.BasicItemJS$Builder_ | Internal.SequencedAssemblyItemBuilder_}
 	 */
-	function addItem(name, isSequencedAssembly) {
-		if (isSequencedAssembly === undefined) {
-			return event.create(`${Cmi.MODID}:incomplete_${name}`, "create:sequenced_assembly")
-		} else if (isSequencedAssembly) {
-			return event.create(`${Cmi.MODID}:incomplete_${name}`, "create:sequenced_assembly")
-		} else {
-			return event.create(`${Cmi.MODID}:incomplete_${name}`)
-		}
+	function addItem(name, sequenced) {
+		sequenced = sequenced ?? true
+		let type = sequenced ? "create:sequenced_assembly" : "basic"
+		
+		return event.create(`${Cmi.MODID}:incomplete_${name}`, type)
+			.tag(Cmi.loadResource("incomplete_items"))
 	}
 
 	/**
+	 * 创建带默认材质的半成品物品
 	 * @param {string} name 注册ID
-	 * @param {boolean} isSequencedAssembly 是否是序列物品
-	 * @returns 
+	 * @returns {Internal.ItemBuilder_}
 	 */
-	function addIncompleteItem(name, isSequencedAssembly) {
-		if (isSequencedAssembly === undefined) {
-			return event.create(`${Cmi.MODID}:incomplete_${name}`, "create:sequenced_assembly")
-				.texture(Cmi.loadResource(`item/material/incomplete/${name}`))
-		} else if (isSequencedAssembly) {
-			return event.create(`${Cmi.MODID}:incomplete_${name}`, "create:sequenced_assembly")
-				.texture(Cmi.loadResource(`item/material/incomplete/${name}`))
-		} else {
-			return event.create(`${Cmi.MODID}:incomplete_${name}`)
-				.texture(Cmi.loadResource(`item/material/incomplete/${name}`))
-		}
+	function addIncomplete(name) {
+		return addItem(name)
+			.texture(Cmi.loadResource(`item/material/incomplete/${name}`))
 	}
 
-	addIncompleteItem("advanced_control_circuit")
-	addIncompleteItem("elite_control_circuit")
-	addIncompleteItem("ultimate_control_circuit")
-	addIncompleteItem("electron_tube")
-	addIncompleteItem("resonant_tube")
-	addIncompleteItem("upgrade_augment_1")
-	addIncompleteItem("upgrade_augment_2")
-	addIncompleteItem("upgrade_augment_3")
-	addIncompleteItem("upgrade_augment_4")
-	addIncompleteItem("upgrade_augment_5")
-	addIncompleteItem("upgrade_augment_6")
-	addIncompleteItem("upgrade_augment_7")
-	addIncompleteItem("upgrade_augment_8")
-	addIncompleteItem("upgrade_augment_9")
-	addIncompleteItem("aviation_cell")
-	addIncompleteItem("gas_container")
-	addIncompleteItem("nuke_cooler")
-	addIncompleteItem("notor_gizmo")
-	addIncompleteItem("motor_rotor")
-	addIncompleteItem("thermal_mechanism_augment")
+	let incompleteItems = [
+		"advanced_control_circuit",
+		"elite_control_circuit",
+		"ultimate_control_circuit",
+		"electron_tube",
+		"resonant_tube",
+		"upgrade_augment_1",
+		"upgrade_augment_2",
+		"upgrade_augment_3",
+		"upgrade_augment_4",
+		"upgrade_augment_5",
+		"upgrade_augment_6",
+		"upgrade_augment_7",
+		"upgrade_augment_8",
+		"upgrade_augment_9",
+		"aviation_cell",
+		"gas_container",
+		"nuke_cooler",
+		"notor_gizmo",
+		"motor_rotor",
+		"thermal_mechanism_augment"
+	]
+
+	incompleteItems.forEach((name) => {
+		addIncomplete(name)
+	})
 
 	// 热力设备
 	addItem("thermal_devices")
@@ -65,7 +62,7 @@ StartupEvents.registry("item", (event) => {
 	addItem("steam_engine")
 		.parentModel("create:block/steam_engine/item")
 
-	// ae未完成处理器
+	// AE 未完成处理器
 	addItem("logic_processor")
 		.texture("ae2:item/printed_logic_processor")
 
@@ -83,9 +80,9 @@ StartupEvents.registry("item", (event) => {
 
 	// 火箭框架(半成品)
 	for (let i = 1; i <= 4; i++) {
-		addItem(`tier_${i.toString()}_rocket_frame`)
+		addItem(`tier_${i}_rocket_frame`)
 			.modelJson({
-				"parent": `cmi:block/rocket/tier${i.toString()}/tier${i.toString()}`
+				"parent": `cmi:block/rocket/tier${i}/tier${i}`
 			})
 	}
 })

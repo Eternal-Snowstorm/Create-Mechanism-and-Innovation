@@ -6,6 +6,7 @@ JEIEvents.removeCategories((event) => {
 	}
 
 	event.remove([
-		"alexscaves:spelunkery_table"
+		"alexscaves:spelunkery_table",
+		"alexscaves:nuclear_furnace"
 	])
 })

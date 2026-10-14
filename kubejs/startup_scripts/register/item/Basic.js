@@ -436,12 +436,14 @@ StartupEvents.registry("item", (event) => {
 			"parent": "create:block/cogwheel_shaftless"
 		})
 		.tag("create:incomplete_cogwheels")
+		.tag(Cmi.loadResource("incomplete_items"))
 
 	addItem("incomplete_large_cogwheel")
 		.modelJson({
 			"parent": "create:block/large_cogwheel_shaftless"
 		})
 		.tag("create:incomplete_large_cogwheels")
+		.tag(Cmi.loadResource("incomplete_items"))
 
 	let cogwheelMaterials = [
 		"bronze",
@@ -452,10 +454,12 @@ StartupEvents.registry("item", (event) => {
 		addItem(`incomplete_${metal}_cogwheel`)
 			.modelJson(SomeModelsJson.cogwheel(metal))
 			.tag("create:incomplete_cogwheels")
+			.tag(Cmi.loadResource("incomplete_items"))
 
 		addItem(`incomplete_${metal}_large_cogwheel`)
 			.modelJson(SomeModelsJson.largeCogwheel(metal))
 			.tag("create:incomplete_large_cogwheels")
+			.tag(Cmi.loadResource("incomplete_items"))
 	})
 
 	let casingFrame = [
