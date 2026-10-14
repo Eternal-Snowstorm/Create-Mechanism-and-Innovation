@@ -495,4 +495,18 @@ ServerEvents.recipes((event) => {
 			"cmi:blitz_general_component"
 		])
 		.id("mekanism:solar_neutron_activator")
+
+	// 加压反应室
+	addRecipe()
+		.itemOutput("mekanism:pressurized_reaction_chamber")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
+		.inputItems([
+			Casing.STAINLESS_STEEL,
+			"2x #forge:plates/composite_carbon_fiber",
+			Mechanisms.ELITE.COM,
+			Mechanisms.AIR.COM,
+			"vintageimprovements:vacuum_chamber",
+			"cmi:blitz_general_component"
+		])
+		.id("mekanism:pressurized_reaction_chamber")
 })

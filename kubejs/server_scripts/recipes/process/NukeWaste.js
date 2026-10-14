@@ -27,7 +27,7 @@ ServerEvents.recipes((event) => {
 
 	mekanism.oxidizing(
 		"cmi:refined_nuke_waste",
-		MekType.Gas.of("cmi:refined_nuke_waste", 200)
+		MekType.Gas.of("cmi:refined_nuke_waste", 400)
 	)
 
 	mekanism.crystallizing(
