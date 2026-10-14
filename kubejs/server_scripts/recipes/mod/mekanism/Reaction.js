@@ -1,14 +1,6 @@
 ServerEvents.recipes((event) => {
 	let { mekanism } = event.getRecipes()
 
-	// 锇
-	mekanism.reaction(
-		"#forge:dusts/osmium",
-		"10x mekanism:hydrofluoric_acid",
-		Fluid.of("cmi:hydrochloric_acid", 50),
-		"cmi:infuse_osmium"
-	).duration(60).energyRequired(1000)
-
 	// 再处理裂变碎片
 	mekanism.reaction(
 		"ae2:matter_ball",

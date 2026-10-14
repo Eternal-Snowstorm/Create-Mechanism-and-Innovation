@@ -36,6 +36,13 @@ ServerEvents.recipes((event) => {
 		"cmi:chaotic_void"
 	)
 
+	// 灌注锇
+	mekanism.metallurgic_infusing(
+		"cmi:infuse_osmium",
+		"#forge:dusts/osmium",
+		"cmi:chaotic_void"
+	)
+
 	// 碳纳米管
 	mekanism.metallurgic_infusing(
 		"cmi:carbon_nanotube",
