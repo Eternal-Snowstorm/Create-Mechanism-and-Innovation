@@ -3,6 +3,7 @@
 		modifyCreateFluidIngredient(event)
 		modifyMBDFluidIngredient(event)
 		modifyIngredientWrapper(event)
+		modifyBlockContainerJS(event)
 	})
 
 	/**
@@ -78,6 +79,28 @@
 						newType: {
 							type: "type:primitive",
 							name: "Special.FluidTag"
+						}
+					})
+				}
+			})
+		})
+	}
+
+	/**
+	 * 
+	 * @param {Internal.DocGenerationEventJS_} event 
+	 */
+	function modifyBlockContainerJS(event) {
+		let $BlockContainerJS = "dev.latvian.mods.kubejs.level.BlockContainerJS"
+		event.transformByName($BlockContainerJS, (document) => {
+			document.getMethods().forEach((method) => {
+				if (method.getName() === "hasTag") {
+					method.addPropertyJson({
+						type: "property:modify",
+						index: 0,
+						newType: {
+							type: "type:primitive",
+							name: "Special.BlockTag"
 						}
 					})
 				}
