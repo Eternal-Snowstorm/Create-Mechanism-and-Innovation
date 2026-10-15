@@ -41,6 +41,7 @@ ClientEvents.lang("en_us", (event) => {
 	addMBDLang("radar_antenna", "Radar Antenna")
 	addMBDLang("multi_type_driller", "Multi-Type Driller")
 	addMBDLang("driller_cooler", "Multi-Type Driller Cooler")
+	addMBDLang("dummy_hive_hopper_device", "Dummy Hive Hopper Device")
 	addMBDLang("seared", "Seared")
 	addMBDLang("industrial_iron", "Industrial Iron")
 	addMBDLang("steel", "Steel")

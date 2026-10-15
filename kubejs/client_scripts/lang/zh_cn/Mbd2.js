@@ -45,6 +45,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addMBDLang("radar_antenna", "雷达天线")
 	addMBDLang("large_mixer", "大型搅拌器")
 	addMBDLang("multi_type_driller", "多元钻井机")
+	addMBDLang("dummy_hive_hopper_device", "虚设蜂箱漏斗设备")
 	addMBDLang("seared", "焦黑")
 	addMBDLang("industrial_iron", "工业铁")
 	addMBDLang("steel", "钢质")

@@ -123,6 +123,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addPaintingLang("random_mechanism", "随机构件", "随机构件")
 	addPaintingLang("qi_month", "榛名柒月", "榛名柒月")
 	addPaintingLang("sacabamBaspis", "萨卡班甲鱼", "⑨Dropper_QWQ⑨")
+	addPaintingLang("delta", "德尔塔", "德尔塔")
 
 	addStructureLang("ore_node.coal_node", "煤炭矿物节点")
 	addStructureLang("ore_node.copper_node", "铜矿物节点")
