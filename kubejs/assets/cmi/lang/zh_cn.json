@@ -15,8 +15,6 @@
 	"message.cmi.initial_item_kit": "欢迎游玩整合包! 物品已发放!",
 	"message.cmi.unsble_to_transport": "所存储的位置不在当前维度！",
 	"message.cmi.welcome": "欢迎%s来到CMI!",
-	"message.cmi.chainedcasing": "按住[Alt]将启用连锁套壳",
-	"message.cmi.chaineduncasing": "按住[Alt]将启用连锁拆壳",
 	"message.cmi.welcomeback": "欢迎回来, 长官",
 
 	"tooltip.cmi.meltingPoint": "§e熔点: %s°C / %s°F",
@@ -26,6 +24,7 @@
 	"tooltip.cmi.initial_item_kit.tip": "按住Shift查看详情",
 	"tooltip.cmi.initial_item_kit.shift": "潜行 + 右键打开, 将会获得以下物品:\n§b扳手\n§b工程师护目镜\n§b强力胶\n§b时间之瓶\n§b应力表",
 	"tooltip.cmi.stored_location": "维度: %s, X:%s, Y:%s, Z:%s",
+
 	"tooltip.cmi.mtd.mode.item": "可执行物品输出配方",
 	"tooltip.cmi.mtd.mode.fluid": "可执行流体输出配方",
 	"tooltip.cmi.mtd.mode.gas": "可执行气体输出配方",
@@ -40,13 +39,12 @@
 	"jade.theme.cmi.windows_xp_luna": "Windows XP Luna",
 	"jade.theme.cmi.windows10": "Windows 10",
 
-	"itemGroup.cmi.io_block": "配置面方块(调试用)",
+	"itemGroup.cmi.io_block": "配置面方块 (调试用)",
 	"itemGroup.cmi.all": "机械动力: 构件与革新",
-	"itemGroup.cmi.salts_and_solutions": "构件与革新: 金属盐",
 	"itemGroup.cmi.mechanisms": "构件与革新: 构件",
 	"itemGroup.cmi.materials": "构件与革新: 材料",
 	"itemGroup.cmi.developers": "构件与革新: 开发者",
-	"itemGroup.cmi.random_mechanisms": "构件与革新: 随机构件",
+	"itemGroup.cmi.buckets": "构件与革新: 桶",
 
 	"curios.identifier.mechanisms": "构件",
 

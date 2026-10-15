@@ -29,4 +29,12 @@ StartupEvents.registry("creative_mode_tab", (event) => {
 			return Ingredient.of("#cmi:dev_doll").getItemIds()
 		})
 		.displayName(Component.translatable(`itemGroup.${Cmi.MODID}.developers`))
+	
+	addCreativeTab("buckets")
+		.icon(() => Item.of("cmi:bucket"))
+		.content(() => {
+			return Ingredient.of("cmi:bucket").getItemIds()
+				.concat(Ingredient.of("#cmi:buckets").getItemIds())
+		})
+		.displayName(Component.translatable(`itemGroup.${Cmi.MODID}.buckets`))
 })
