@@ -262,7 +262,7 @@ StartupEvents.registry("block", (event) => {
 
 	// DTMA幻晶能量核心
 	addBlock("dtma_dreamcore_energy_core")
-		.textureAll(Cmi.loadResource("block/dreamcore"))
+		.model(Cmi.loadResource("block/dreamcore_core"))
 		.soundType(SoundType.STONE)
 		.hardness(6)
 		.resistance(6)
@@ -317,6 +317,10 @@ StartupEvents.registry("block", (event) => {
 			"diode": "create:block/diodes/brass_diode_base"
 		}
 	}
+
+	// 虚设蜂箱漏斗
+	addBlock("dummy_hive_hopper")
+		.model(Cmi.loadResource("block/dummy_hive_hopper"))
 
 	/**
 	 * 铜的氧化阶段配置

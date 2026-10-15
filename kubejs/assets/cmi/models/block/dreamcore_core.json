@@ -1,9 +1,7 @@
 {
-	"format_version": "1.9.0",
-	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "cmi:block/dreamcore",
-		"particle": "cmi:block/dreamcore"
+		"0": "cmi:block/dtma/dreamcore",
+		"particle": "cmi:block/dtma/dreamcore"
 	},
 	"elements": [
 		{

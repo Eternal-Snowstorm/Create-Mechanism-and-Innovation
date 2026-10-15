@@ -1,6 +1,4 @@
 {
-	"format_version": "1.9.0",
-	"credit": "Made with Blockbench",
 	"textures": {
 		"particle": "#bar",
 		"bar": "#bar"

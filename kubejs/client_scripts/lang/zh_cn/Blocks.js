@@ -106,7 +106,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addBlockLang("broken_power_supply", "损坏的电源")
 	addBlockLang("broken_transformer", "损坏的变压器")
 	addBlockLang("broken_tracking_array", "损坏的追踪阵列")
-	addBlockLang(`broken_modem`, "损坏的调制解调器")
+	addBlockLang("broken_modem", "损坏的调制解调器")
 
 	// 钻井
 	addBlockLang("driller_cooler_input_bus", "钻机冷却剂输入总线")
@@ -156,6 +156,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addBlockLang("osmium_tile", "锇砖瓦")
 	addBlockLang("compression_end_stone_dust_block", "压缩末地石粉块")
 	addBlockLang("stone_pave", "石子路面")
+	addBlockLang("dummy_hive_hopper", "虚设蜂箱漏斗")
 
 	// 矿藏
 	addOreNodeLang("vanadium", "钒矿")
