@@ -1,0 +1,5 @@
+{
+	"ldlib": {
+		"connection": "cmi:block/custom/reinforced_concrete/ctm"
+	}
+}
