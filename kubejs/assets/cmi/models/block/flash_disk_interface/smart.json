@@ -1,6 +1,0 @@
-{
-	"parent": "cmi:custom/flash_disk_interface",
-	"textures": {
-		"disk":"cmi:block/mechanism_flash_disk_on_interface/smart"
-	}
-}
