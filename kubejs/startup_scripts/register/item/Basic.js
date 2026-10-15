@@ -223,9 +223,6 @@ StartupEvents.registry("item", (event) => {
 	// 未成形的碳纳米管
 	addMaterial("incomplete_carbon_nanotube")
 
-	// 强化复合齿轮
-	addMaterial("composite_carbon_fiber_gear")
-
 	// 钛合金线圈
 	addMaterial("titanium_alloy_coil")
 

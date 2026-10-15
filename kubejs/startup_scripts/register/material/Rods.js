@@ -60,5 +60,6 @@ StartupEvents.registry("item", (event) => {
 		return builder
 	}
 
+	// 玻璃
 	addAloneRodItem("glass")
 })

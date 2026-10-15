@@ -339,7 +339,7 @@ NebulaEvents.registerMaterial((event) => {
 		.block()
 		.molten()
 
-	// fluix
+	// 福鲁伊克斯
 	event.register("fluix", MiningLevels.WOODEN)
 		.color(0x915DCD, 0x373B72)
 		.molten()

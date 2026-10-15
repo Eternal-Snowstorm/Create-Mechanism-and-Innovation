@@ -60,6 +60,9 @@ StartupEvents.registry("item", (event) => {
 		return builder
 	}
 
+	// 玻璃
 	addAloneWireItem("glass")
+
+	// 福鲁伊克斯
 	addAloneWireItem("fluix")
 })
