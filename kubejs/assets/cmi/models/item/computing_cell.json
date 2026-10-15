@@ -1,5 +1,4 @@
 {
-	"format_version": "1.9.0",
 	"credit": "Made with Blockbench, made by TedXenon",
 	"parent": "block/block",
 	"texture_size": [32, 32],
