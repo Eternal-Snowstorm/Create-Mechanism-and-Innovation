@@ -138,3 +138,7 @@ new AloneOreBlock("osmium", "stone", 3)
 // 氟石
 new AloneOreBlock("fluorite", "stone", 2)
 	.nether()
+
+// 械钢矿石
+new AloneOreBlock("mechanium", "stone", 6)
+	.stone()

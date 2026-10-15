@@ -102,15 +102,6 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiToolType.PICKAXE.tag())
 		.requiresTool(true)
 
-	// 压缩末地粉块
-	addBlock("compression_end_stone_dust_block")
-		.soundType(SoundType.SAND)
-		.hardness(6)
-		.resistance(6)
-		.tagBlock(CmiToolType.PICKAXE.tag())
-		.tagBlock(CmiMiningLevel.WOODEN.tag())
-		.requiresTool(true)
-
 	// 坩埚底座
 	addBlock("crucible_base")
 		.textureAll(Cmi.loadResource("block/crucible/top"))
@@ -271,7 +262,7 @@ StartupEvents.registry("block", (event) => {
 
 	// DTMA幻晶能量核心
 	addBlock("dtma_dreamcore_energy_core")
-		.textureAll(Cmi.loadResource("block/dreamcore_core"))
+		.textureAll(Cmi.loadResource("block/dreamcore"))
 		.soundType(SoundType.STONE)
 		.hardness(6)
 		.resistance(6)
@@ -299,81 +290,6 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiMiningLevel.WOODEN.tag())
 		.requiresTool(false)
 
-	// 械钢矿石
-	addBlock("mechanium_ore")
-		.textureAll(Cmi.loadResource("block/mechanium_ore"))
-		.soundType(SoundType.STONE)
-		.hardness(6)
-		.resistance(6)
-		.tagBlock(CmiToolType.PICKAXE.tag())
-		.tagBlock(CmiMiningLevel.STONE.tag())
-		.requiresTool(true)
-
-	// 雕纹铜块
-	addBlock("chiseled_copper")
-		.textureAll(Cmi.loadResource("block/chiseled_copper/0"))
-		.soundType(SoundType.COPPER)
-		.hardness(3)
-		.resistance(6)
-		.tagBlock(CmiToolType.PICKAXE.tag())
-		.tagBlock(CmiMiningLevel.STONE.tag())
-
-	addBlock("exposed_chiseled_copper")
-		.textureAll(Cmi.loadResource("block/chiseled_copper/1"))
-		.soundType(SoundType.COPPER)
-		.hardness(3)
-		.resistance(6)
-		.tagBlock(CmiToolType.PICKAXE.tag())
-		.tagBlock(CmiMiningLevel.STONE.tag())
-
-	addBlock("weathered_chiseled_copper")
-		.textureAll(Cmi.loadResource("block/chiseled_copper/2"))
-		.soundType(SoundType.COPPER)
-		.hardness(3)
-		.resistance(6)
-		.tagBlock(CmiToolType.PICKAXE.tag())
-		.tagBlock(CmiMiningLevel.STONE.tag())
-
-	addBlock("oxidized_chiseled_copper")
-		.textureAll(Cmi.loadResource("block/chiseled_copper/3"))
-		.soundType(SoundType.COPPER)
-		.hardness(3)
-		.resistance(6)
-		.tagBlock(CmiToolType.PICKAXE.tag())
-		.tagBlock(CmiMiningLevel.STONE.tag())
-
-	addBlock("waxed_chiseled_copper")
-		.textureAll(Cmi.loadResource("block/chiseled_copper/0"))
-		.soundType(SoundType.COPPER)
-		.hardness(3)
-		.resistance(6)
-		.tagBlock(CmiToolType.PICKAXE.tag())
-		.tagBlock(CmiMiningLevel.STONE.tag())
-
-	addBlock("waxed_exposed_chiseled_copper")
-		.textureAll(Cmi.loadResource("block/chiseled_copper/1"))
-		.soundType(SoundType.COPPER)
-		.hardness(3)
-		.resistance(6)
-		.tagBlock(CmiToolType.PICKAXE.tag())
-		.tagBlock(CmiMiningLevel.STONE.tag())
-
-	addBlock("waxed_weathered_chiseled_copper")
-		.textureAll(Cmi.loadResource("block/chiseled_copper/2"))
-		.soundType(SoundType.COPPER)
-		.hardness(3)
-		.resistance(6)
-		.tagBlock(CmiToolType.PICKAXE.tag())
-		.tagBlock(CmiMiningLevel.STONE.tag())
-
-	addBlock("waxed_oxidized_chiseled_copper")
-		.textureAll(Cmi.loadResource("block/chiseled_copper/3"))
-		.soundType(SoundType.COPPER)
-		.hardness(3)
-		.resistance(6)
-		.tagBlock(CmiToolType.PICKAXE.tag())
-		.tagBlock(CmiMiningLevel.STONE.tag())
-
 	// 红石二极管底座
 	addBlock("redstone_diode_base")
 		.hardness(3)
@@ -400,5 +316,31 @@ StartupEvents.registry("block", (event) => {
 		textures: {
 			"diode": "create:block/diodes/brass_diode_base"
 		}
+	}
+
+	/**
+	 * 铜的氧化阶段配置
+	 * [名称前缀, 纹理索引]
+	 * @type {[string, number][]}
+	 */
+	const COPPER_OXIDATION_STAGES = [
+		["", 0],
+		["exposed_", 1],
+		["weathered_", 2],
+		["oxidized_", 3]
+	]
+
+	for (let i = 0; i <= 1; i++) {
+		COPPER_OXIDATION_STAGES.forEach(([prefix, index]) => {
+			let name = `${i ? "waxed_" : ""}${prefix}chiseled_copper`
+
+			addBlock(name)
+				.textureAll(Cmi.loadResource(`block/chiseled_copper/${index}`))
+				.soundType(SoundType.COPPER)
+				.hardness(3)
+				.resistance(6)
+				.tagBlock(CmiToolType.PICKAXE.tag())
+				.tagBlock(CmiMiningLevel.STONE.tag())
+		})
 	}
 })
