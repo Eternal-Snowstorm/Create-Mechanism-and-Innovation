@@ -121,7 +121,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addPaintingLang("it_must_be_optifine", "一定是OptiFine干的", "XeKr")
 	addPaintingLang("random_mechanism_old", "随机构件(旧版)", "随机构件")
 	addPaintingLang("random_mechanism", "随机构件", "随机构件")
-	addPaintingLang("qi_month", "榛名柒月", "榛名柒月")
+	addPaintingLang("qi_month", "柒月", "柒月")
 	addPaintingLang("sacabamBaspis", "萨卡班甲鱼", "⑨Dropper_QWQ⑨")
 	addPaintingLang("delta", "德尔塔", "德尔塔")
 
