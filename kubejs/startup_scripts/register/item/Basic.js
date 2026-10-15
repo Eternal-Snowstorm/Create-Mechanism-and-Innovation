@@ -333,6 +333,10 @@ StartupEvents.registry("item", (event) => {
 	addItem("steam_steel_upgrade")
 		.texture(Cmi.loadResource("item/upgrade/steam/steel"))
 		.tag(Cmi.loadResource("steam_upgrades"))
+	
+	// 虚设蜂箱漏斗
+	addItem("dummy_hive_hopper")
+		.parentModel(Cmi.loadResource("custom/dummy_hive_hopper"))
 
 	// C10
 	// 霜原木碎块

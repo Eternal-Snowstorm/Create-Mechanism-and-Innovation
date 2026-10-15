@@ -407,6 +407,8 @@ ClientEvents.lang("zh_cn", (event) => {
 
 	addItemLang("frost_cake_base", "寒霜蛋糕胚")
 
+	addItemLang("dummy_hive_hopper", "虚设蜂箱漏斗")
+
 	let moldList = [
 		["plate", "板状"],
 		["gear", "齿轮状"],
