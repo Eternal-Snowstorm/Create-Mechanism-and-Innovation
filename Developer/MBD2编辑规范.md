@@ -18,6 +18,8 @@ Multiblocked 2 (`MBD2`) 提供了可视化的编辑界面, 不过用可视化并
  - 命名空间为 `cmi`
  - 不要出现 `new 0` 这样的默认名
  - 默认条目 `ldlib.author: Hello KilaBash!`, 默认36种颜色需要删
+ - 气体、物品槽位`width`=18, `height`=18
+ - 流体槽位`width`=18, 18<=`height`=8n+2
 
 ## 机器
 
