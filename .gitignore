@@ -169,3 +169,5 @@ config/asteorbar-client.toml
 /.graphflow
 /.dsh-meow
 /.npm-cache
+/_backup
+_userdiff.txt
