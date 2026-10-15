@@ -14,7 +14,8 @@ StartupEvents.modifyCreativeTab("kubejs:tab", (event) => {
 		`#${Cmi.MODID}:ore_nodes`,
 		`#${Cmi.MODID}:dev_doll`,
 		`#${Cmi.MODID}:block/machine_block`,
-		`#${Cmi.MODID}:incomplete_items`
+		`#${Cmi.MODID}:incomplete_items`,
+		`#${Cmi.MODID}:buckets`
 	]).setDisplayName(Component.translatable(`itemGroup.${Cmi.MODID}.all`))
 })
 

@@ -260,7 +260,7 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiMiningLevel.STONE.tag())
 		.requiresTool(true)
 
-	// DTMA幻晶能量核心
+	// DTMA 幻晶能量核心
 	addBlock("dtma_dreamcore_energy_core")
 		.model(Cmi.loadResource("block/dreamcore_core"))
 		.soundType(SoundType.STONE)

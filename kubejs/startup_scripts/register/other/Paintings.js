@@ -6,7 +6,7 @@ StartupEvents.registry("painting_variant", (event) => {
 	addPainting("bug_is_right", 32, 16)
 	addPainting("it_must_be_optifine", 16, 32)
 
-	// RandomMechanism(随机构件)
+	// RandomMechanism (随机构件)
 	addPainting("random_mechanism_old", 32, 32)
 	addPainting("random_mechanism", 32, 32)
 
@@ -16,13 +16,16 @@ StartupEvents.registry("painting_variant", (event) => {
 	// ⑨Dropper_QWQ⑨
 	addPainting("sacabambaspis", 32, 32)
 
-	//Re_Construction
+	// Re_Construction
 	addPainting("ue_sit", 32, 32)
 	addPainting("couple", 48, 48)
 	addPainting("cuo", 32, 32)
 	addPainting("win98", 128, 128)
 
-	//driver
+	// Delta
+	addPainting("delta", 16, 16)
+
+	// 驱动器
 	addPainting("driver_advanced_mek", 16, 16)
 	addPainting("driver_basic_mek", 16, 16)
 	addPainting("driver_elite_mek", 16, 16)

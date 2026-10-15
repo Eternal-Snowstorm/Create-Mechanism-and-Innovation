@@ -11,6 +11,7 @@ StartupEvents.registry("fluid", (event) => {
 		builder.stillTexture(Cmi.loadResource(`fluid/${name}/still`))
 		builder.renderType("translucent")
 		builder.bucketItem.modelJson(setFluidBucketModel(name))
+		builder.bucketItem.tag(Cmi.loadResource("buckets"))
 
 		console.log(`${Cmi.MODID}:${name}已注册!`)
 
@@ -32,6 +33,7 @@ StartupEvents.registry("fluid", (event) => {
 		builder.stillTexture(Cmi.loadResource("fluid/metal/still"))
 		builder.renderType("translucent")
 		builder.bucketItem.modelJson(setFluidBucketModel(name))
+		builder.bucketItem.tag(Cmi.loadResource("buckets"))
 
 		return builder
 	}
@@ -51,6 +53,7 @@ StartupEvents.registry("fluid", (event) => {
 		builder.stillTexture(Cmi.loadResource("fluid/chemical/still"))
 		builder.renderType("translucent")
 		builder.bucketItem.modelJson(setFluidBucketModel(name))
+		builder.bucketItem.tag(Cmi.loadResource("buckets"))
 
 		return builder
 	}

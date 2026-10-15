@@ -10,6 +10,7 @@ StartupEvents.registry("fluid", (event) => {
 		builder.tag(`forge:molten_${name}`)
 		builder.renderType("translucent")
 		builder.bucketItem.modelJson(setFluidBucketModel(name))
+		builder.bucketItem.tag(Cmi.loadResource("buckets"))
 
 		console.debug(`molten_${name}已注册!`)
 		return builder

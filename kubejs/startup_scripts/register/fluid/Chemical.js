@@ -11,6 +11,7 @@ StartupEvents.registry("fluid", (event) => {
 		builder.stillTexture(Cmi.loadResource(`fluid/${name}/still`))
 		builder.renderType("translucent")
 		builder.bucketItem.modelJson(setFluidBucketModel(name))
+		builder.bucketItem.tag(Cmi.loadResource("buckets"))
 
 		return builder
 	}
@@ -29,8 +30,9 @@ StartupEvents.registry("fluid", (event) => {
 		builder.flowingTexture(Cmi.loadResource("fluid/chemical/flow"))
 		builder.stillTexture(Cmi.loadResource("fluid/chemical/still"))
 		builder.translucent()
-		builder.bucketItem.modelJson(setFluidBucketModel(name))
 		builder.tag(`${Cmi.MODID}:${name}`)
+		builder.bucketItem.modelJson(setFluidBucketModel(name))
+		builder.bucketItem.tag(Cmi.loadResource("buckets"))
 
 		return builder
 	}
