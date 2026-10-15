@@ -329,7 +329,7 @@ StartupEvents.registry("block", (event) => {
 
 	// 任意矿藏
 	addBlock("any_deposit_block")
-		.textureAll(Cmi.loadResource("gui/block/deposit_block/any"))
+		.textureAll(Cmi.loadResource("block/gui/deposit_block/any"))
 		.soundType(SoundType.DEEPSLATE)
 		.hardness(-1)
 		.resistance(3600000)

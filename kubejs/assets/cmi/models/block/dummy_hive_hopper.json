@@ -1,12 +1,13 @@
 {
+	"format_version": "1.9.0",
 	"textures": {
-		"hopper/front": "cmi:gui/block/hive_hopper/front",
-		"hopper/side": "cmi:gui/block/hive_hopper/side",
-		"hopper/bottom": "cmi:gui/block/hive_hopper/bottom",
-		"hive/top": "cmi:gui/block/hive/top",
-		"hive/bottom": "cmi:gui/block/hive/bottom",
-		"hive/front": "cmi:gui/block/hive/front",
-		"hive/side": "cmi:gui/block/hive/side"
+		"hopper/front": "cmi:block/gui/hive_hopper/front",
+		"hopper/side": "cmi:block/gui/hive_hopper/side",
+		"hopper/bottom": "cmi:block/gui/hive_hopper/bottom",
+		"hive/top": "cmi:block/gui/hive/top",
+		"hive/bottom": "cmi:block/gui/hive/bottom",
+		"hive/front": "cmi:block/gui/hive/front",
+		"hive/side": "cmi:block/gui/hive/side"
 	},
 	"elements": [
 		{
@@ -66,9 +67,6 @@
 		},
 		"fixed": {
 			"scale": [0.5, 0.5, 0.5]
-		},
-		"on_shelf": {
-			"rotation": [0, -180, 0]
 		}
 	}
 }
