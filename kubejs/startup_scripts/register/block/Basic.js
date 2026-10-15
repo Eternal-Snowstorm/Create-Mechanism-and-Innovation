@@ -321,6 +321,21 @@ StartupEvents.registry("block", (event) => {
 	// 虚设蜂箱漏斗
 	addBlock("dummy_hive_hopper")
 		.model(Cmi.loadResource("block/dummy_hive_hopper"))
+		.box(0, 0, 0, 16, 32, 16, true)
+		.soundType(SoundType.WOOD)
+		.hardness(-1)
+		.resistance(3600000)
+		.noDrops()
+
+	// 任意矿藏
+	addBlock("any_deposit_block")
+		.textureAll(Cmi.loadResource("gui/block/deposit_block/any"))
+		.soundType(SoundType.DEEPSLATE)
+		.hardness(-1)
+		.resistance(3600000)
+		.tagBlock("create_rns:deposit_blocks")
+		.tagItem(Cmi.loadResource("deposit_blocks"))
+		.noDrops()
 
 	/**
 	 * 铜的氧化阶段配置

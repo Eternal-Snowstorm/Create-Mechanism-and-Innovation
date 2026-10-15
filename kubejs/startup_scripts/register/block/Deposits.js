@@ -38,7 +38,6 @@ StartupEvents.registry("block", (event) => {
 	const COMMON_BLOCK_TAGS = [
 		"mekanism:cardboard_blacklist",
 		"ae2:blacklisted/spatial",
-		"deepdrilling:ore_nodes",
 		"create_rns:deposit_blocks"
 	]
 

@@ -159,6 +159,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addBlockLang("dummy_hive_hopper", "虚设蜂箱漏斗")
 
 	// 矿藏
+	addOreNodeLang("any", "任意")
 	addOreNodeLang("vanadium", "钒矿")
 	addOreNodeLang("platinum", "铂矿")
 	addOreNodeLang("cheese", "奶酪")
@@ -166,7 +167,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addOreNodeLang("oil_shale", "油页岩")
 	addOreNodeLang("aluminum", "铝")
 	addOreNodeLang("osmium", "锇矿")
-
+	
 	// 制作组fumo
 	addBlockLang("re_construction", "Re_Construction")
 	addBlockLang("dkrkoo_weihe", "dkrkoo为何")
