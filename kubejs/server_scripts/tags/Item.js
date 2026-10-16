@@ -806,30 +806,25 @@ ServerEvents.tags("item", (event) => {
 
 	// 板 
 	event.get("forge:plates")
-		.add("createdeco:zinc_sheet")
-		.add("createdeco:netherite_sheet")
-		.add("createdeco:andesite_sheet")
-		.add("createdeco:industrial_iron_sheet")
 		.add("mekanism:hdpe_sheet")
 
 	event.get("forge:plates/andesite_alloy")
 		.add("vintageimprovements:andesite_sheet")
 		.add("createdeco:andesite_sheet")
 
-	event.get("forge:plates/zinc")
-		.add("createdeco:zinc_sheet")
-
-	event.get("forge:plates/netherite")
-		.add("createdeco:netherite_sheet")
-
-	event.get("forge:plates/industrial_iron")
-		.add("createdeco:industrial_iron_sheet")
+	add("forge:plates/zinc", "createdeco:zinc_sheet")
+	add("forge:plates/netherite", "createdeco:netherite_sheet")
+	add("forge:plates/industrial_iron", "createdeco:industrial_iron_sheet")
+	add("forge:plates/andesite", "createdeco:andesite_sheet")
 
 	event.get("forge:plates/polyolefin")
 		.add("thermal_extra:polyolefin_plate")
 
 	event.get("forge:plates/andesite")
 		.add("#forge:plates/andesite_alloy")
+	
+	event.get("forge:plates/andesite_alloy")
+		.add("#forge:plates/andesite")
 
 	add("forge:plates/silicon", "ae2:printed_silicon")
 
@@ -850,6 +845,7 @@ ServerEvents.tags("item", (event) => {
 
 	// 宝石
 	add("forge:gems/charged_amethyst", "create_rns:resonant_amethyst")
+	add("forge:gems/dreamcore", "cmi:dreamcore_crystal")
 
 	// 粗矿
 	event.get("forge:raw_materials/desh_scrap")
@@ -864,6 +860,7 @@ ServerEvents.tags("item", (event) => {
 	add("forge:raw_materials/scarlet_neodymium", "alexscaves:raw_scarlet_neodymium")
 	add("forge:raw_materials/azure_neodymium", "alexscaves:raw_azure_neodymium")
 	add("forge:raw_materials/astrallium", "edenring:raw_astrallium")
+	add("forge:raw_materials/dreamcore", "cmi:dreamcore_ore")
 
 	removeTagAllId("forge:raw_materials/desh")
 	removeTagAllId("forge:raw_materials/ostrum")

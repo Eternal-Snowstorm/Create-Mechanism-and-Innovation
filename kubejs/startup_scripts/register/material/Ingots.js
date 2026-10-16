@@ -19,6 +19,21 @@ StartupEvents.registry("item", (event) => {
 	/**
 	 * 
 	 * @param {string} name 
+	 * @returns 
+	 */
+	function addIngotItem(name) {
+		let builder = event.create(`${Cmi.MODID}:${name}`)
+
+		builder.texture(Cmi.loadResource(`item/material/material/ingot/${name}`))
+		builder.tag("forge:ingots")
+		builder.tag(`forge:ingots/${name}`)
+
+		return builder
+	}
+
+	/**
+	 * 
+	 * @param {string} name 
 	 * @param {string} type 
 	 * @returns 
 	 */
@@ -61,11 +76,11 @@ StartupEvents.registry("item", (event) => {
 	}
 
 	// 磁性合金
-	addNamedIngotItem("magnetic_alloy", "magnetic_alloy")
+	addIngotItem("magnetic_alloy")
 	// 聚合催化合金
-	addNamedIngotItem("polymerization_catalytic_alloy", "polymerization_catalytic_alloy")
+	addIngotItem("polymerization_catalytic_alloy")
 	// 沉积催化合金
-	addNamedIngotItem("deposition_catalytic_alloy", "deposition_catalytic_alloy")
+	addIngotItem("deposition_catalytic_alloy")
 
 	// 超载合金锭
 	addAloneIngotItem("overcharged_alloy")

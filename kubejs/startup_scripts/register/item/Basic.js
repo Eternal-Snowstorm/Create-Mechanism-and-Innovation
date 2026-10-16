@@ -33,21 +33,25 @@ StartupEvents.registry("item", (event) => {
 		.tag("forge:dusts")
 		.tag(`forge:dusts/fertilizer`)
 
-	// 幻晶晶体
-	addMaterial("dreamcore_crystal")
-		.glow(true)
-		.tag("forge:gems")
-		.tag("forge:gems/dreamcore")
+	// 幻晶
+	let dreamcoreTypes = [
+		"crystal",
+		"ore",
+		"seed",
+		"recombine",
+		"enriched",
+		"electrolized",
+		"source",
+		"pyrolysis",
+		"charged",
+		"innovation"
+	]
 
-	// 幻晶原石
-	addMaterial("dreamcore_ore")
-		.glow(true)
-		.tag("forge:raw_materials")
-		.tag("forge:raw_materials/dreamcore")
-
-	// 幻晶晶种
-	addMaterial("dreamcore_seed")
-		.glow(true)
+	dreamcoreTypes.forEach((type) => {
+		addItem(`dreamcore_${type}`)
+			.texture(Cmi.loadResource(`item/dreamcores/${type}`))
+			.glow(true)
+	})
 
 	// 黏血球
 	addItem("blood_slime_ball")
@@ -223,29 +227,20 @@ StartupEvents.registry("item", (event) => {
 	// 钛合金线圈
 	addMaterial("titanium_alloy_coil")
 
-	// 锇晶圆
-	addMaterial("osmium_wafer")
-
-	// 硅晶圆
-	addMaterial("silicon_wafer")
-
-	// 锗晶圆
-	addMaterial("germanium_wafer")
-
-	// 恩特罗合金晶圆
-	addMaterial("entro_alloy_wafer")
-
-	// 基础电子元件
-	addMaterial("basic_electronic_components")
-
-	// 高级电子元件
-	addMaterial("advanced_electronic_components")
-
-	// 精英电子元件
-	addMaterial("elite_electronic_components")
-
-	// 终极电子元件
-	addMaterial("ultimate_electronic_components")
+	// 电子元件
+	let mekTiers = [
+		"basic",
+		"advanced",
+		"elite",
+		"ultimate"
+	]
+	
+	mekTiers.forEach((tier) => {
+		addItem(`${tier}_electronic_components`)
+			.texture(Cmi.loadResource(`item/electronic_components/${tier}`))
+			.tag(Cmi.loadResource("electronic_components"))
+			.tag(Cmi.loadResource(`electronic_components/${tier}`))
+	})
 
 	// 精炼核废料
 	addMaterial("refined_nuke_waste")
@@ -321,27 +316,6 @@ StartupEvents.registry("item", (event) => {
 
 	// 霜原芽
 	addMaterial("glacian_sprout")
-
-	// 重组幻晶
-	addMaterial("dreamcore_recombine")
-
-	// 富集幻晶
-	addMaterial("dreamcore_enriched")
-
-	// 电离幻晶
-	addMaterial("dreamcore_electrolized")
-
-	// 源质幻晶
-	addMaterial("dreamcore_source")
-
-	// 热解幻晶
-	addMaterial("dreamcore_pyrolysis")
-
-	// 充能幻晶
-	addMaterial("dreamcore_charged")
-
-	// 革新幻晶
-	addMaterial("dreamcore_innovation")
 
 	/**
 	 * 
