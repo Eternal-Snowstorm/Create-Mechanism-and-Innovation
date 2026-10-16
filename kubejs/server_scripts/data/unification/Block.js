@@ -95,8 +95,8 @@ ServerEvents.highPriorityData((event) => {
 	], "thermal:coal_coke_block")
 
 	// 虚设蜂箱漏斗
-	addUnification("dummy_hive_hopper_device", [
-		"cmi:dummy_hive_hopper_device"
+	addUnification("dummy_hive_hopper_base", [
+		"cmi:dummy_hive_hopper_base"
 	], "thermal:device_hive_extractor")
 
 	addUnification("dummy_hive_hopper_beehive", [
