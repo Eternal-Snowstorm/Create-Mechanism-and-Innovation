@@ -336,6 +336,8 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock("create_rns:deposit_blocks")
 		.tagItem(Cmi.loadResource("deposit_blocks"))
 		.noDrops()
+		.notSolid()
+		.defaultCutout()
 
 	/**
 	 * 铜的氧化阶段配置

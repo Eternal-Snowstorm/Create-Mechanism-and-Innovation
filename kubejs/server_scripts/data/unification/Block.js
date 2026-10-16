@@ -94,6 +94,19 @@ ServerEvents.highPriorityData((event) => {
 		"immersiveengineering:coke"
 	], "thermal:coal_coke_block")
 
+	// 虚设蜂箱漏斗
+	addUnification("dummy_hive_hopper_device", [
+		"cmi:dummy_hive_hopper_device"
+	], "thermal:device_hive_extractor")
+
+	addUnification("dummy_hive_hopper_beehive", [
+		"cmi:dummy_hive_hopper_beehive"
+	], "minecraft:beehive")
+
+	addUnification("dummy_hive_hopper_bee_nest", [
+		"cmi:dummy_hive_hopper_bee_nest"
+	], "minecraft:bee_nest")
+
 	// 齿轮
 	let cogwheelTypes = [
 		"bronze",

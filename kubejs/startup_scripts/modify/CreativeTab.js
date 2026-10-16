@@ -7,6 +7,7 @@ StartupEvents.modifyCreativeTab("kubejs:tab", (event) => {
 		"#tconstruct:casts/single_use/mechanism",
 		"#tconstruct:casts/multi_use/nugget",
 		`${Cmi.MODID}:bucket`,
+		`${Cmi.MODID}:dummy_hive_hopper`,
 		`#${Cmi.MODID}:io_debug_block`,
 		`#${Cmi.MODID}:mechanism_parts`,
 		`#${Cmi.MODID}:metals`,
