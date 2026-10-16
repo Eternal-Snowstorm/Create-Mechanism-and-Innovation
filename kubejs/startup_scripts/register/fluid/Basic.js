@@ -13,8 +13,6 @@ StartupEvents.registry("fluid", (event) => {
 		builder.bucketItem.modelJson(setFluidBucketModel(name))
 		builder.bucketItem.tag(Cmi.loadResource("buckets"))
 
-		console.log(`${Cmi.MODID}:${name}已注册!`)
-
 		return builder
 	}
 
