@@ -385,7 +385,7 @@ ServerEvents.recipes((event) => {
 
 	// 轻工
 	new SequencedAssemblyRecipe(Mechanisms.LIGHT)
-		.input("#forge:plates/iron")
+		.input("#forge:plates/industrial_iron")
 		.curving("cmi:mechanism_mold")
 		.deploying(Mechanisms.LIGHT.AUG)
 		.filling(Fluid.of("immersiveengineering:creosote", 100))
