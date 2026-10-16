@@ -146,4 +146,6 @@ StartupEvents.registry("item", (event) => {
 	addNonDustItem("furnaced_lime")
 	// 草木灰
 	addNonDustItem("plant_ash").tag("forge:plant_ash")
+	// 硅混合物
+	addNonDustItem("silicon_mixture")
 })

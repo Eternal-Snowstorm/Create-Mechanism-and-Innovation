@@ -49,7 +49,7 @@ StartupEvents.registry("item", (event) => {
 
 	dreamcoreTypes.forEach((type) => {
 		addItem(`dreamcore_${type}`)
-			.texture(Cmi.loadResource(`item/dreamcores/${type}`))
+			.texture(Cmi.loadResource(`item/material/dreamcores/${type}`))
 			.glow(true)
 	})
 
@@ -108,50 +108,27 @@ StartupEvents.registry("item", (event) => {
 	// 热力单元
 	addItem("thermal_unit")
 		.texture(Cmi.loadResource("item/material/unit/thermal"))
+	
+	let unitTypes = [
+		"thermal",
+		"basalz",
+		"blaze",
+		"blitz",
+		"blizz"
+	]
 
-	// 大地震撼单元
-	addItem("basalz_unit")
-		.texture(Cmi.loadResource("item/material/unit/basalz"))
+	unitTypes.forEach((type) => {
+		addItem(`${type}_unit`)
+			.texture(Cmi.loadResource(`item/material/unit/${type}`))
 
-	// 烈焰燃烧单元
-	addItem("blaze_unit")
-		.texture(Cmi.loadResource("item/material/unit/blaze"))
-
-	// 狂风催化单元
-	addItem("blitz_unit")
-		.texture(Cmi.loadResource("item/material/unit/blitz"))
-
-	// 暴雪冷凝单元
-	addItem("blizz_unit")
-		.texture(Cmi.loadResource("item/material/unit/blizz"))
-
-	// 大地碎裂组件
-	addItem("basalt_general_component")
-		.modelJson(componentModel("basalt"))
-		.tag("cmi:general_components")
-
-	// 烈焰焚烬组件
-	addItem("blaze_general_component")
-		.modelJson(componentModel("blaze"))
-		.tag("cmi:general_components")
-
-	// 狂风卷袭组件
-	addItem("blitz_general_component")
-		.modelJson(componentModel("blitz"))
-		.tag("cmi:general_components")
-
-	// 暴雪冻结组件
-	addItem("blizz_general_component")
-		.modelJson(componentModel("blizz"))
-		.tag("cmi:general_components")
+		addItem(`${type}_general_component`)
+			.modelJson(componentModel(type))
+			.tag("cmi:general_components")
+	})
 
 	// 小块焦炭
-	addItem("small_coal_coke")
+	addMaterial("small_coal_coke")
 		.burnTime(200 * 2)
-		.texture(Cmi.loadResource("item/material/small_coal_coke"))
-
-	// 电离中和红石
-	addMaterial("electrolized_redstone")
 
 	// 萤石流明管道
 	addMaterial("glowstone_lumen_tube")
@@ -164,9 +141,6 @@ StartupEvents.registry("item", (event) => {
 
 	// 共振管
 	addMaterial("resonant_tube")
-
-	// 硅混合物
-	addMaterial("silicon_mixture")
 
 	// 硅橡胶
 	addMaterial("silicon_rubber")
@@ -181,11 +155,13 @@ StartupEvents.registry("item", (event) => {
 	addMaterial("grass_fiber")
 
 	// 矿物碎块
-	addMaterial("vanadium_ore_chunk")
+	addItem("vanadium_ore_chunk")
+		.texture(Cmi.loadResource("item/material/raw/nugget/vanadium"))
 		.tag("forge:raw_nuggets")
 		.tag("forge:raw_nuggets/vanadium")
 
 	addMaterial("platinum_ore_chunk")
+		.texture(Cmi.loadResource("item/material/raw/nugget/platinum"))
 		.tag("forge:raw_nuggets")
 		.tag("forge:raw_nuggets/platinum")
 
@@ -205,15 +181,12 @@ StartupEvents.registry("item", (event) => {
 	// 铁氧体磁芯	
 	addMaterial("ferrit_core")
 
-	// 光纤
-	addMaterial("optical_fiber")
-		.tag("forge:wires")
-
 	// 磁触点
 	addMaterial("magnetic_contact")
 
 	// 黑曜石元件
-	addMaterial("obsidian_cell")
+	addItem("obsidian_cell")
+		.texture(Cmi.loadResource("item/material/cell/obsidian"))
 
 	// 碳纳米管
 	addMaterial("carbon_nanotube")
@@ -237,44 +210,32 @@ StartupEvents.registry("item", (event) => {
 	
 	mekTiers.forEach((tier) => {
 		addItem(`${tier}_electronic_components`)
-			.texture(Cmi.loadResource(`item/electronic_components/${tier}`))
+			.texture(Cmi.loadResource(`item/material/electronic_components/${tier}`))
 			.tag(Cmi.loadResource("electronic_components"))
 			.tag(Cmi.loadResource(`electronic_components/${tier}`))
 	})
-
-	// 精炼核废料
-	addMaterial("refined_nuke_waste")
-
-	// 精炼辐射岩
-	addMaterial("refined_radiation_rock")
-
-	// 酸洗辐射岩
-	addMaterial("acid_washed_radiation_rock")
 
 	// 燃料棒
 	addMaterial("filled_fuel_rod")
 	addMaterial("empty_fuel_rod")
 
-	// 钚电离结晶
-	addMaterial("plutonium_ionized_crystal")
+	// 放射性物品
+	let radioactiveItems = [
+		"acid_washed_radiation_rock", // 酸洗辐射岩
+		"plutonium_ionized_crystal", // 钚电离结晶
+		"radioactive_sediment", // 放射性沉淀
+		"raw_polonium", // 粗钋
+		"raw_polonium_dust", // 粗钋粉
+		"reduced_polonium", // 还原钋
+		"refined_radiation_rock", // 精炼辐射岩
+		"refined_nuke_waste" // 精炼核废料
+	]
 
-	// 放射性沉淀
-	addMaterial("radioactive_sediment")
-
-	// 粗钋
-	addMaterial("raw_polonium")
-
-	// 粗钋粉
-	addMaterial("raw_polonium_dust")
-
-	// 还原钋
-	addMaterial("reduced_polonium")
-
-	// 电离恩特罗水晶
-	addMaterial("ionized_entro_crystal")
-
-	// 晶态熔融恩特罗水晶
-	addMaterial("crystal_molten_entro")
+	radioactiveItems.forEach((item) => {
+		addItem(item)
+			.texture(Cmi.loadResource(`item/material/radiation/${item}`))
+			.tag(Cmi.loadResource("radioactive_items"))
+	})
 
 	// 并发处理器
 	addItem("concurrent_processor")
@@ -287,8 +248,7 @@ StartupEvents.registry("item", (event) => {
 		.texture("expatternprovider:item/concurrent_processor_press")
 
 	// 寒霜蛋糕胚
-	addItem("frost_cake_base")
-		.texture(Cmi.loadResource("item/material/frost_cake_base"))
+	addMaterial("frost_cake_base")
 		.tag("create:upright_on_belt")
 
 	// 羊皮纸

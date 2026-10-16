@@ -94,5 +94,8 @@ StartupEvents.registry("item", (event) => {
 	addNonGemItem("machalite")
 	// 辉龙石
 	addNonGemItem("dragonite")
-
+	// 晶态熔融恩特罗水晶
+	addNonGemItem("crystal_molten_entro")
+	// 电离恩特罗水晶
+	addNonGemItem("ionized_entro_crystal")
 })

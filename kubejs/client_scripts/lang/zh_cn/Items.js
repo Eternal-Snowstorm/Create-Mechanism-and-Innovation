@@ -171,10 +171,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("copper_casing_framework", "铜机壳框架")
 
 	// 电子元件
-	addItemLang("redstone_wire", "红石线")
-	addItemLang("empty_exe", "空程序.exe")
-	addItemLang("empty_flash_drive", "空白闪存盘")
-	addItemLang("programmed_flash_drive", "已编程闪存盘")
 	addItemLang("motor_rotor", "电动机转子")
 	addItemLang("entro_crystal", "恩特罗水晶")
 	addItemLang("concurrent_processor", "并发处理器")
@@ -205,14 +201,9 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("ultimate_electronic_components", "终极电子元件")
 
 	// 工具
-	addItemLang("geological_hammer", "地质锤(调试工具)")
 	addItemLang("initial_item_kit", "初始套件箱")
 	addItemLang("super_knife", "纯粹小刀")
 	addItemLang("wooden_knife", "木质小刀")
-	addItemLang("wooden_faucet", "木质龙头")
-	addItemLang("cast_iron_faucet", "铸铁龙头")
-	addItemLang("steel_faucet", "钢质龙头")
-	addItemLang("overcharged_alloy_faucet", "超载合金龙头")
 	addItemLang("paxel", "镐尖斧")
 	addItemLang("handheld_crafting_table", "手持工作台")
 	addItemLang("flint_hammer", "燧石锤")
@@ -244,14 +235,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addIncompleteLang("upgrade_augment_8", "钛合金整合组件")
 	addIncompleteLang("upgrade_augment_9", "钨钢整合组件")
 
-	addIncompleteLang("tier_1_rocket_frame", "一阶火箭框架")
-	addIncompleteLang("tier_2_rocket_frame", "二阶火箭框架")
-	addIncompleteLang("tier_3_rocket_frame", "三阶火箭框架")
-	addIncompleteLang("tier_4_rocket_frame", "四阶火箭框架")
-	addIncompleteLang("tier_1_rocket", "一阶火箭")
-	addIncompleteLang("tier_2_rocket", "二阶火箭")
-	addIncompleteLang("tier_3_rocket", "三阶火箭")
-	addIncompleteLang("tier_4_rocket", "四阶火箭")
 	addIncompleteLang("aviation_cell", "航天硬盘")
 
 	addIncompleteLang("nuke_cooler", "冷却设备")
@@ -274,14 +257,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addIncompleteLang("concurrent_processor", "并发处理器")
 	addIncompleteLang("engineering_processor", "工程处理器")
 	addIncompleteLang("superconducting_processor", "ECO - SA 超导处理器")
-
-	// 整合组件
-	addItemLang("combined_component_4k", "4K ME整合组件")
-	addItemLang("combined_component_16k", "16K ME整合组件")
-	addItemLang("combined_component_64k", "64K ME整合组件")
-	addItemLang("combined_component_256k", "256K ME整合组件")
-	addItemLang("combined_spatial_component_16", "16^3 空间整合组件")
-	addItemLang("combined_spatial_component_128", "128^3 空间整合组件")
 
 	addItemLang("bucket", "桶(?)")
 	addItemLang("blood_slime_ball", "黏血球")
@@ -329,6 +304,22 @@ ClientEvents.lang("zh_cn", (event) => {
 		addItemLang(`dreamcore_${id}`, `${name}幻晶`)
 	})
 
+	let numberChinese = {
+		1: ["一", "壹"],
+		2: ["二", "贰"],
+		3: ["三", "叁"],
+		4: ["四", "肆"]
+	}
+
+	for (let i = 1; i <= 4; i++) {
+		addItemLang(`tier_${i}_rocket_nose_cone`, `${numberChinese[i][0]}阶火箭鼻锥`)
+		addItemLang(`tier_${i}_rocket_fin`, `${numberChinese[i][0]}阶火箭尾翼`)
+		addItemLang(`tier_${i}_rocket_body`, `${numberChinese[i][0]}阶火箭箭身`)
+		addCellItemLang(`tier_${i}_aviation`, `${numberChinese[i][1]}级科技航天`)
+		addIncompleteLang(`tier_${i}_rocket_frame`, `${numberChinese[i][0]}阶火箭框架`)
+		addIncompleteLang(`tier_${i}_rocket`, `${numberChinese[i][0]}阶火箭`)
+	}
+
 	addItemLang("glacian_chunk", "霜原木碎块")
 	addItemLang("culture_medium", "培养基")
 	addItemLang("glacian_sprout", "霜原芽")
@@ -336,24 +327,8 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("power_supply_repair_kit", "电源修复包")
 	addItemLang("transformer_repair_kit", "变压器修复包")
 	addItemLang("tracker_repair_kit", "追踪阵列修复包")
-	addItemLang(`modem_repair_kit`, "调制解调器修复包")
-
+	addItemLang("modem_repair_kit", "调制解调器修复包")
 	addItemLang("radar_repair_kit", "雷达修复包")
-
-	addItemLang("tier_1_rocket_nose_cone", "一阶火箭鼻锥")
-	addItemLang("tier_2_rocket_nose_cone", "二阶火箭鼻锥")
-	addItemLang("tier_3_rocket_nose_cone", "三阶火箭鼻锥")
-	addItemLang("tier_4_rocket_nose_cone", "四阶火箭鼻锥")
-
-	addItemLang("tier_1_rocket_fin", "一阶火箭尾翼")
-	addItemLang("tier_2_rocket_fin", "二阶火箭尾翼")
-	addItemLang("tier_3_rocket_fin", "三阶火箭尾翼")
-	addItemLang("tier_4_rocket_fin", "四阶火箭尾翼")
-
-	addItemLang("tier_1_rocket_body", "一阶火箭箭身")
-	addItemLang("tier_2_rocket_body", "二阶火箭箭身")
-	addItemLang("tier_3_rocket_body", "三阶火箭箭身")
-	addItemLang("tier_4_rocket_body", "四阶火箭箭身")
 
 	addItemLang("aluminum_upgrade_augment", "铝整合组件")
 	addItemLang("stainless_steel_upgrade_augment", "不锈钢整合组件")
@@ -381,13 +356,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("vanadium_ore_chunk", "钒矿物碎块")
 	addItemLang("platinum_ore_chunk", "铂矿物碎块")
 	addItemLang("obsidian_cell", "黑曜石元件")
-
-	addItemLang("sculk_chunk", "幽匿碎块")
-	addItemLang("dead_sculk", "失活幽匿")
-	addItemLang("active_sculk", "活化幽匿")
-	addItemLang("sculk_bonemeal", "幽匿骨粉")
-	addItemLang("sculk_bone", "幽匿之骨")
-	addItemLang("sculk_circuit", "幽匿电路板")
 
 	addItemLang("filled_fuel_rod", "燃料棒")
 	addItemLang("empty_fuel_rod", "空燃料棒")
@@ -429,10 +397,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addCastItemLang("nugget", "粒")
 
 	addCellItemLang("empty", "空白")
-	addCellItemLang("tier_1_aviation", "壹级科技航天")
-	addCellItemLang("tier_2_aviation", "贰级科技航天")
-	addCellItemLang("tier_3_aviation", "叁级科技航天")
-	addCellItemLang("tier_4_aviation", "肆级科技航天")
 
 	event.add("gui.cmi.cell.page_turning", "§b翻页")
 	addCellLang(

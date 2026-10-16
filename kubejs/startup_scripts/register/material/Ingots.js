@@ -108,4 +108,6 @@ StartupEvents.registry("item", (event) => {
 		.texture("expatternprovider:item/entro_ingot")
 		.tag("forge:alloys")
 		.tag("forge:alloys/entro")
+	// 电离中和红石
+	addNonIngotItem("electrolized_redstone")
 })
