@@ -88,4 +88,9 @@ StartupEvents.registry("item", (event) => {
 		.tag("forge:alloys/enriched")
 		.tag("mekanism:alloys")
 		.tag("mekanism:alloys/enriched")
+	// 恩特罗合金
+	addNonIngotItem("entro_alloy")
+		.texture("expatternprovider:item/entro_ingot")
+		.tag("forge:alloys")
+		.tag("forge:alloys/entro")
 })

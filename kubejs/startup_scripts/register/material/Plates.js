@@ -82,6 +82,10 @@ StartupEvents.registry("item", (event) => {
 	addAlonePlateItem("carbon_deposition_catalytic")
 	// 碳聚合催化片
 	addAlonePlateItem("carbon_polymerization_catalytic")
+	// 待组装钨钢板
+	addAlonePlateItem("incomplete_tungsten_steel")
+	// 待组装复合板
+	addAlonePlateItem("incomplete_composite_carbon_fiber")
 
 	// 致密坚固板
 	addNamedPlateItem("dense_sturdy_sheet", "dense_obsidian")
@@ -92,4 +96,6 @@ StartupEvents.registry("item", (event) => {
 	addNonPlateItem("flame_retardant_plastic")
 	// 石墨烯
 	addNonPlateItem("graphene")
+	// 未成形的碳纳米管
+	addNonPlateItem("incomplete_carbon_nanotube")
 })

@@ -203,22 +203,20 @@ let Material = Object.freeze({
 			ENGINEERING: Item.of("cmi:incomplete_engineering_processor"),
 			SUPERCONDUCTING: Item.of("cmi:incomplete_quantum_processor")
 		})
+	}),
+	Dreamcores: Object.freeze({
+		SEED: Item.of("cmi:dreamcore_seed"),
+		ORE: Item.of("cmi:dreamcore_ore"),
+		RECOMBINE: Item.of("cmi:dreamcore_recombine"),
+		ENRICHED: Item.of("cmi:dreamcore_enriched"),
+		ELECTROLIZED: Item.of("cmi:dreamcore_electrolized"),
+		SOURCE: Item.of("cmi:dreamcore_source"),
+		PYROLYSIS: Item.of("cmi:dreamcore_pyrolysis"),
+		CHARGED: Item.of("cmi:dreamcore_charged"),
+		MOLTEN: Fluid.of("cmi:molten_dreamcore", 100),
+		SOLIDIFIED: Fluid.of("cmi:dreamcore_solidified", 100),
+		INNOVATION: Item.of("cmi:dreamcore_innovation")
 	})
-})
-
-// 终章幻晶
-let Dreamcores = Object.freeze({
-	SEED: Item.of("cmi:dreamcore_seed"),
-	ORE: Item.of("cmi:dreamcore_ore"),
-	RECOMBINE: Item.of("cmi:dreamcore_recombine"),
-	ENRICHED: Item.of("cmi:dreamcore_enriched"),
-	ELECTROLIZED: Item.of("cmi:dreamcore_electrolized"),
-	SOURCE: Item.of("cmi:dreamcore_source"),
-	PYROLYSIS: Item.of("cmi:dreamcore_pyrolysis"),
-	CHARGED: Item.of("cmi:dreamcore_charged"),
-	MOLTEN: Fluid.of("cmi:molten_dreamcore", 100),
-	SOLIDIFIED: Fluid.of("cmi:dreamcore_solidified", 100),
-	INNOVATION: Item.of("cmi:dreamcore_innovation")
 })
 
 // 处理器

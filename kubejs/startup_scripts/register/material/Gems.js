@@ -17,6 +17,22 @@ StartupEvents.registry("item", (event) => {
 	/**
 	 * 
 	 * @param {string} name 
+	 * @param {string} type 
+	 * @returns 
+	 */
+	function addNamedGemItem(name, type) {
+		let builder = event.create(`${Cmi.MODID}:${name}`)
+
+		builder.texture(Cmi.loadResource(`item/material/material/gem/${type}`))
+		builder.tag("forge:gems")
+		builder.tag(`forge:gems/${type}`)
+
+		return builder
+	}
+
+	/**
+	 * 
+	 * @param {string} name 
 	 * @returns 
 	 */
 	function addNonGemItem(name) {
@@ -31,6 +47,16 @@ StartupEvents.registry("item", (event) => {
 	addAloneGemItem("charged_amethyst")
 	// 单晶硅
 	addAloneGemItem("single_crystal_silicon")
+	// 红源晶
+	addAloneGemItem("source_ruby")
+	// 蓝源晶
+	addAloneGemItem("source_sapphire")
+	// 绿源晶
+	addAloneGemItem("source_emeraid")
+
+	// 恩特罗水晶
+	addNamedGemItem("entro_crystal", "entro")
+		.texture("expatternprovider:item/entro_crystal")
 
 	// 黑石源质阿尔法
 	addNonGemItem("alpha_blackstone_source")
@@ -40,12 +66,6 @@ StartupEvents.registry("item", (event) => {
 	addNonGemItem("gamma_blackstone_source")
 	// 黑石源质德尔塔
 	addNonGemItem("delta_blackstone_source")
-	// 红源晶
-	addNonGemItem("source_ruby")
-	// 蓝源晶
-	addNonGemItem("source_sapphire")
-	// 绿源晶
-	addNonGemItem("source_emeraid")
 	// 灌注锇
 	addNonGemItem("infuse_osmium")
 	// 富集锇晶体

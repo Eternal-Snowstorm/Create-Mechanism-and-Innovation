@@ -220,9 +220,6 @@ StartupEvents.registry("item", (event) => {
 	// 活化石墨碎块
 	addMaterial("activated_graphite_chunk")
 
-	// 未成形的碳纳米管
-	addMaterial("incomplete_carbon_nanotube")
-
 	// 钛合金线圈
 	addMaterial("titanium_alloy_coil")
 
@@ -249,9 +246,6 @@ StartupEvents.registry("item", (event) => {
 
 	// 终极电子元件
 	addMaterial("ultimate_electronic_components")
-
-	// 待组装钨钢板
-	addMaterial("incomplete_tungsten_steel_plate")
 
 	// 精炼核废料
 	addMaterial("refined_nuke_waste")
@@ -281,25 +275,13 @@ StartupEvents.registry("item", (event) => {
 	// 还原钋
 	addMaterial("reduced_polonium")
 
-	// 待组装复合板
-	addMaterial("incomplete_composite_carbon_fiber_plate")
-
 	// 电离恩特罗水晶
 	addMaterial("ionized_entro_crystal")
 
 	// 晶态熔融恩特罗水晶
 	addMaterial("crystal_molten_entro")
 
-	// 恩特罗合金
-	addItem("entro_alloy")
-		.texture("expatternprovider:item/entro_ingot")
-
-	// 恩特罗系列
-	addItem("entro_crystal")
-		.texture("expatternprovider:item/entro_crystal")
-		.tag("forge:gems/entro")
-		.tag("forge:gems")
-
+	// 并发处理器
 	addItem("concurrent_processor")
 		.texture("expatternprovider:item/concurrent_processor")
 
