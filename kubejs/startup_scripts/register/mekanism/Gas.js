@@ -55,12 +55,6 @@ StartupEvents.registry("mekanism:gas", (event) => {
 	// 钚混合物
 	addMekanismGas("plutonium_mixture", 0x50A6AE)
 
-	// 核废料
-	addMekanismGas("nuke_waste", 0x4F412A)
-
-	// 用尽的核废料
-	addMekanismGas("spent_nuke_waste", 0x262015)
-
 	// 氢氧燃料
 	addMekanismGas("hydrogen_oxygen_fuel", 0x9CDCF7)
 

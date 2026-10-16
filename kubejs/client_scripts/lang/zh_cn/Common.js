@@ -99,8 +99,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addMekanismLang("neutralized_neodymium_slurry", "中和钕浆液")
 	addMekanismLang("radioactive_mixture", "放射性混合物")
 	addMekanismLang("plutonium_mixture", "钚混合物")
-	addMekanismLang("nuke_waste", "核废料")
-	addMekanismLang("spent_nuke_waste", "用尽的核废料")
 	addMekanismLang("hydrogen_oxygen_fuel", "氢氧燃料")
 	addMekanismLang("natural_gas", "天然气")
 	addMekanismLang("light_olefin", "轻烯烃")

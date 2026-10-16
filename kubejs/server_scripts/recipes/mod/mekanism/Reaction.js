@@ -4,7 +4,7 @@ ServerEvents.recipes((event) => {
 	// 再处理裂变碎片
 	mekanism.reaction(
 		"ae2:matter_ball",
-		"200x mekanism:spent_nuclear_waste",
+		"200x mekanism:nuclear_waste",
 		Fluid.tag("tag", "forge:molten_lead", 90),
 		"4x mekanism:reprocessed_fissile_fragment"
 	).energyRequired(1000).duration(60)

@@ -340,13 +340,6 @@ ServerEvents.genericLootTables((event) => {
 			pool.setUniformRolls(4, 8)
 		})
 	})
-	// ['mekanism:pellet_plutonium', 
-	// 	'mekanism:pellet_polonium', 
-	// 	'mekanism:reprocessed_fissile_fragment', 
-	// 	'mekanism:qio_drive_base',
-	// 	 'mekanism:sps_casing',
-	// 	  'mekanism:qio_exporter',
-	// 	 'mekanism:qio_importer']
 	event.addGeneric("cmi:gameplay/random_mechanisms/mekanism", (builder) => {
 		builder.addPool((pool) => {
 			pool.addItem("4x mekanism:alloy_infused")
