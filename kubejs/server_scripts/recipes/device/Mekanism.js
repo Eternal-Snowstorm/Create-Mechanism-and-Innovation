@@ -7,7 +7,7 @@ ServerEvents.recipes((event) => {
 
 	// 设备组件
 	addRecipe()
-		.itemOutput("cmi:basalt_general_component")
+		.itemOutput("cmi:basalz_general_component")
 		.inputFluid(Fluid.of("thermalconstruct:basalz_blood", 1000))
 		.inputItems([
 			"#forge:gears/chromeplated_steel",
@@ -280,7 +280,7 @@ ServerEvents.recipes((event) => {
 			"2x #forge:plates/industrial_iron",
 			Mechanisms.BASIC.COM,
 			"2x #forge:gears/chromeplated_steel",
-			"cmi:basalt_general_component"
+			"cmi:basalz_general_component"
 		])
 		.id("mekanism:crusher")
 
@@ -382,7 +382,7 @@ ServerEvents.recipes((event) => {
 			"2x #forge:plates/composite_tungsten_steel",
 			Mechanisms.ADVANCED.COM,
 			Mechanisms.AIR.COM,
-			"cmi:basalt_general_component"
+			"cmi:basalz_general_component"
 		])
 		.id("mekanism:purification_chamber")
 
@@ -409,7 +409,7 @@ ServerEvents.recipes((event) => {
 			Mechanisms.ADVANCED.COM,
 			Mechanisms.AIR.COM,
 			"2x #forge:gears/chromeplated_steel",
-			"cmi:basalt_general_component"
+			"cmi:basalz_general_component"
 		])
 		.id("mekanism:chemical_injection_chamber")
 
@@ -450,7 +450,7 @@ ServerEvents.recipes((event) => {
 			Mechanisms.ELITE.COM,
 			Mechanisms.AIR.COM,
 			"create:whisk",
-			"cmi:basalt_general_component"
+			"cmi:basalz_general_component"
 		])
 		.id("mekanism:chemical_dissolution_chamber")
 

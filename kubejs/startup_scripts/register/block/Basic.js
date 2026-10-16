@@ -319,7 +319,7 @@ StartupEvents.registry("block", (event) => {
 	}
 
 	// 虚设蜂箱漏斗
-	addBlock("dummy_hive_hopper")
+	addBlock("dummy_hive_hopper", "cardinal")
 		.model(Cmi.loadResource("block/dummy_hive_hopper"))
 		.box(0, 0, 0, 16, 32, 16, true)
 		.soundType(SoundType.WOOD)

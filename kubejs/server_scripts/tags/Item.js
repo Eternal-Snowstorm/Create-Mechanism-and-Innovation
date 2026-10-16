@@ -3,6 +3,11 @@ ServerEvents.tags("item", (event) => {
 	// 添加标签
 	let add = advancedAdd.bind(event)
 
+	event.get("cmi:radioactive_items")
+		.add("mekanism:pellet_polonium")
+		.add("mekanism:pellet_polonium")
+		.add("mekanism:pellet_antimatter")
+
 	// 木板变体
 	event.get("tconstruct:wood_variants/planks")
 		.add("thermal:rubberwood_planks")

@@ -6,7 +6,8 @@
 		"hive/top": "cmi:block/gui/hive/top",
 		"hive/bottom": "cmi:block/gui/hive/bottom",
 		"hive/front": "cmi:block/gui/hive/front",
-		"hive/side": "cmi:block/gui/hive/side"
+		"hive/side": "cmi:block/gui/hive/side",
+		"particle": "#hopper/bottom"
 	},
 	"elements": [
 		{

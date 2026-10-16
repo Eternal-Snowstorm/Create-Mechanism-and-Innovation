@@ -110,7 +110,6 @@ StartupEvents.registry("item", (event) => {
 		.texture(Cmi.loadResource("item/material/unit/thermal"))
 	
 	let unitTypes = [
-		"thermal",
 		"basalz",
 		"blaze",
 		"blitz",

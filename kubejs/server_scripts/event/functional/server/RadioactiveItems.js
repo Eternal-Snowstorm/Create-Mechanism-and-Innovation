@@ -27,6 +27,6 @@ PlayerEvents.tick((event) => {
 	}
 
 	if (hasRadioactive) {
-		level.runCommandSilent(`mek radiation addEntity ${player.getUsername()} 0.01`)
+		level.runCommandSilent(`mek radiation addEntity ${player.getUsername()} 0.00000001`)
 	}
 })
