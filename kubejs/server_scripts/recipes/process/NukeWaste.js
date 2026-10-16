@@ -140,6 +140,4 @@ ServerEvents.recipes((event) => {
 		"cmi:reduced_polonium",
 		MekType.Gas.of("mekanism:polonium", 100)
 	)
-
-
 })

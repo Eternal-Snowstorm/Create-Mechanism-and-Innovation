@@ -9,4 +9,12 @@ ServerEvents.recipes((event) => {
 		.blocksInStructure(0, 0, Block.getBlock("cmi:driller_fluid_pump"))
 		.blocksInStructure(0, 0, Block.getBlock("cmi:driller_gas_pump"))
 		.id("cmi:driller/test_iron_head")
+
+	/**
+	 * 
+	 * @param {Internal.Block_} deposit
+	 */
+	function DrillingRecipe(deposit) {
+		this.deposit = deposit
+	}
 })
