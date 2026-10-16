@@ -1,5 +1,4 @@
 {
-	"format_version": "1.9.0",
 	"render_type": "cutout",
 	"textures": {
 		"particle": "cmi:block/accelerator/top",

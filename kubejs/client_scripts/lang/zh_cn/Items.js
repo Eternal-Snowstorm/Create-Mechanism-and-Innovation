@@ -14,7 +14,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	 * @param {string} name 
 	 */
 	function addIncompleteLang(key, name) {
-		event.add(`item.${Cmi.MODID}.incomplete_${key}`, `${name} (半成品)`)
+		event.add(`item.${Cmi.MODID}.incomplete_${key}`, `${name}(半成品)`)
 	}
 
 	/**

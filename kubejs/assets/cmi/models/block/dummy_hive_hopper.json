@@ -1,5 +1,4 @@
 {
-	"format_version": "1.9.0",
 	"textures": {
 		"hopper/front": "cmi:block/gui/hive_hopper/front",
 		"hopper/side": "cmi:block/gui/hive_hopper/side",
@@ -63,7 +62,7 @@
 			"scale": [0.25, 0.25, 0.25]
 		},
 		"gui": {
-			"rotation": [15, -160, 0]
+			"rotation": [15.5, -157.5, 0]
 		},
 		"fixed": {
 			"scale": [0.5, 0.5, 0.5]

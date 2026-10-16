@@ -1,5 +1,4 @@
 {
-	"format_version": "1.9.0",
 	"textures": {
 		"particle": "cmi:block/dtma/dreamcore",
 		"main": "cmi:block/dtma/dreamcore"

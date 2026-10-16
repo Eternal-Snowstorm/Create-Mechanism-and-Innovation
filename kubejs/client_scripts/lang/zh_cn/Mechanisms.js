@@ -15,7 +15,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	 */
 	function addMechanismLang(material, value) {
 		event.add(`item.${Cmi.MODID}.${material}_mechanism`, `${value}构件`)
-		event.add(`item.${Cmi.MODID}.incomplete_${material}_mechanism`, `${value}构件 (半成品)`)
+		event.add(`item.${Cmi.MODID}.incomplete_${material}_mechanism`, `${value}构件(半成品)`)
 	}
 
 	/**
