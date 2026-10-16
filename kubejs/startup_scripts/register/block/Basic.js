@@ -327,18 +327,6 @@ StartupEvents.registry("block", (event) => {
 		.resistance(3600000)
 		.noDrops()
 
-	// 任意矿藏
-	addBlock("any_deposit_block")
-		.textureAll(Cmi.loadResource("block/gui/deposit_block/any"))
-		.soundType(SoundType.DEEPSLATE)
-		.hardness(-1)
-		.resistance(3600000)
-		.tagBlock("create_rns:deposit_blocks")
-		.tagItem(Cmi.loadResource("deposit_blocks"))
-		.noDrops()
-		.notSolid()
-		.defaultCutout()
-
 	/**
 	 * 铜的氧化阶段配置
 	 * [名称前缀, 纹理索引]

@@ -101,7 +101,7 @@ ServerEvents.recipes((event) => {
 		.build()
 
 	// 碳沉积催化片
-	new CircuitCutterRecipe("64x cmi:carbon_deposition_catalytic_plate")
+	new CircuitCutterRecipe("2x cmi:carbon_deposition_catalytic_plate")
 		.item("cmi:deposition_catalytic_alloy")
 		.fluid("minecraft:water", 100)
 		.build()

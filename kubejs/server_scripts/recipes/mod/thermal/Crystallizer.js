@@ -41,7 +41,7 @@ ServerEvents.recipes((event) => {
 	thermal.crystallizer("cmi:graphene", [
 		"cmi:carbon_deposition_catalytic_plate",
 		Fluid.of("cmi:hdpe", 100)
-	])
+	]).keepIngredient("cmi:carbon_deposition_catalytic_plate")
 
 	// 未成形碳纳米管
 	thermal.crystallizer("cmi:incomplete_carbon_nanotube", [
