@@ -1,19 +1,32 @@
-PlayerEvents.inventoryChanged((event) => {
-    let { item, player, level } = event
+let radioactiveItems =
+	Ingredient.of("#cmi:radioactive_items").getItemIds()["toArray(java.lang.Object[])"]([""])
 
-    let radioactiveItems = 
-        Ingredient.of(Cmi.loadResource("radioactive_items")).getItemIds()["toArray(java.lang.Object[])"]([""])
+let tickCounter = 0
 
-    if (level.isClientSide() || !player || player.isCreative() || player.isFake()) {
-        return
-    }
+PlayerEvents.tick((event) => {
+	tickCounter ++
 
-    if (item.isEmpty() || !item || !radioactiveItems.includes(item.id)) {
-        return false
-    }
-    
-    if (radioactiveItems.includes(item.id)) {
-        level.runCommandSilent(`mek radiation addEntity ${player.getUsername()} 1`)
-		level.runCommandSilent(`advancement grant ${player.getUsername()} only mekanism:radiation_poisoning`)
-    }
+	if (tickCounter < 10) {
+		return
+	}
+
+	tickCounter = 0
+
+	let { player, level } = event
+
+	if (level.isClientSide() || player.isCreative() || player.isFake()) {
+		return
+	}
+
+	let hasRadioactive = false
+	for (let stack of player.inventory.items) {
+		if (!stack.isEmpty() && radioactiveItems.includes(stack.id)) {
+			hasRadioactive = true
+			break
+		}
+	}
+
+	if (hasRadioactive) {
+		level.runCommandSilent(`mek radiation addEntity ${player.getUsername()} 0.01`)
+	}
 })
