@@ -74,7 +74,7 @@ EntityEvents.spawned("minecraft:lightning_bolt", (event) => {
 					let currentBlockId = level.getBlock(currentPos).getId()
 
 					if (currentBlockId == inputBlock) {
-						level.setBlock(currentPos, outputBlock, 3)
+						level.setBlockAndUpdate(currentPos, outputBlock)
 					}
 				}
 			}

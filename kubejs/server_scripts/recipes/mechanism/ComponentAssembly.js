@@ -112,7 +112,7 @@ ServerEvents.recipes((event) => {
 	// 轻工构件
 	thermal_extra.component_assembly(Mechanisms.LIGHT.COM, [
 		Fluid.of("immersiveengineering:creosote", 100),
-		"#forge:plates/iron",
+		"#forge:plates/industrial_iron",
 		Mechanisms.LIGHT.AUG,
 		"#forge:rods/constantan",
 		Mechanisms.PART.ENGIN

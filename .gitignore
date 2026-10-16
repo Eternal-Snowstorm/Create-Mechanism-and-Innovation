@@ -171,3 +171,4 @@ config/asteorbar-client.toml
 /.npm-cache
 /_backup
 _userdiff.txt
+/analysis

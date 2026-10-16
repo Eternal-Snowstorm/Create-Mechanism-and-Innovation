@@ -16,6 +16,7 @@ ServerEvents.recipes((event) => {
 		"immersiveengineering:crafting/blastbrick_reinforced",
 		"createdieselgenerators:bulk_fermenting/lava",
 		"immersiveengineering:crafting/treated_scaffold",
+		"mekanism:processing/uranium/reprocessing/to_fuel",
 		"jei:/mekanism/processing/lategame/antimatter/from_pellet",
 		"jei:/mekanism/evaporating/brine",
 		"jei:/mekanism/processing/lategame/antimatter_pellet/from_gas",
