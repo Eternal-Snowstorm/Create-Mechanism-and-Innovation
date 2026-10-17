@@ -10,18 +10,9 @@ ServerEvents.recipes((event) => {
 		 * @type {{item: Special.Recipes.MultiTypeDrillerCmi, fluid: Special.Recipes.MultiTypeDrillerCmi, gas: Special.Recipes.MultiTypeDrillerCmi}}
 		 */
 		this.recipe = {
-			item: cmi.multi_type_driller()
-				.blocksInStructure(9, IntWrapper.getMaxValue(), deposit)
-				.addCondition(new BlockExistCondition(Block.getBlock("cmi:driller_head")))
-				.slotName("cooler", coolerOutputFluid),
-			fluid: cmi.multi_type_driller()
-				.blocksInStructure(9, IntWrapper.getMaxValue(), deposit)
-				.addCondition(new BlockExistCondition(Block.getBlock("cmi:driller_fluid_pump")))
-				.slotName("cooler", coolerOutputFluid),
-			gas: cmi.multi_type_driller()
-				.blocksInStructure(9, IntWrapper.getMaxValue(), deposit)
-				.addCondition(new BlockExistCondition(Block.getBlock("cmi:driller_gas_pump")))
-				.slotName("cooler", coolerOutputFluid)
+			item: autoRecipe(deposit, Block.getBlock("cmi:driller_head")),
+			fluid: autoRecipe(deposit, Block.getBlock("cmi:driller_fluid_pump")),
+			gas: autoRecipe(deposit, Block.getBlock("cmi:driller_gas_pump"))
 		}
 	}
 
@@ -107,17 +98,29 @@ ServerEvents.recipes((event) => {
 	 * @returns {(recipe: Special.Recipes.MultiTypeDrillerCmi) => Special.Recipes.MultiTypeDrillerCmi}
 	 */
 	function energyPerTick(energy) {
-		return (recipe) => recipe.inputFE(energy)
+		return (recipe) => {
+			recipe.inputFE(energy)
+		}
 	}
 
 	/**
 	 * 
-	 * @param {Special.Recipes.MultiTypeDrillerCmi} recipeS 
+	 * @param {Internal.Block_} deposit - 矿藏方块
+	 * @param {Internal.Block_} block - 钻头/钻机液泵/钻机气泵
+	 * @returns {Special.Recipes.MultiTypeDrillerCmi}
 	 */
-	function coolerOutputFluid(recipeS) {
-		recipeS.perTick((recipeP) => {
-			recipeP.outputFluids(Fluid.of("neoecoae:cryotheum_solution", 5000))
-		})
+	function autoRecipe(deposit, block) {
+		return cmi.multi_type_driller()
+			.blocksInStructure(9, IntWrapper.getMaxValue(), deposit)
+			.addCondition({
+				type: "cmi:block_exist",
+				blocks: [block.id]
+			})
+			.slotName("cooler", (recipeS) => {
+				recipeS.perTick((recipeP) => {
+					recipeP.outputFluids(Fluid.of("neoecoae:cryotheum_solution", 5000))
+				})
+			})
 	}
 
 	new DrillingRecipe(Block.getBlock("create_rns:iron_deposit_block"))
@@ -148,7 +151,7 @@ ServerEvents.recipes((event) => {
 		.duration(10)
 		.energy(10000)
 		.id("cmi:driller/redstone")
-	
+
 	cmi.multi_type_driller()
 		.duration(1)
 		.isFuel(true)
