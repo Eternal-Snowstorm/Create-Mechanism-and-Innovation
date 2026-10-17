@@ -8,7 +8,6 @@ StartupEvents.modifyCreativeTab("kubejs:tab", (event) => {
 		"#tconstruct:casts/multi_use/nugget",
 		`${Cmi.MODID}:bucket`,
 		`${Cmi.MODID}:dummy_hive_hopper`,
-		`${Cmi.MODID}:any_deposit_block`,
 		`#${Cmi.MODID}:io_debug_block`,
 		`#${Cmi.MODID}:mechanism_parts`,
 		`#${Cmi.MODID}:metals`,
@@ -129,7 +128,7 @@ function removeItemFromCreativeTab(event, removeItems) {
  * @returns {Internal.CreativeTabEvent_}
  */
 function addIngredientToCreativeTab(event, ingredient) {
-	if (ingredient.checkInvalidation()) {
+	if (!ingredient.checkInvalidation()) {
 		console.warn("Invalid Ingredient!")
 		return
 	}

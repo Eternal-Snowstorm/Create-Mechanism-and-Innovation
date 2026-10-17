@@ -12,15 +12,15 @@ ServerEvents.recipes((event) => {
 		this.recipe = {
 			item: cmi.multi_type_driller()
 				.blocksInStructure(9, IntWrapper.getMaxValue(), deposit)
-				.blocksInStructure(1, 1, Block.getBlock("cmi:driller_head"))
+				.addCondition(new BlockExistCondition(Block.getBlock("cmi:driller_head")))
 				.slotName("cooler", coolerOutputFluid),
 			fluid: cmi.multi_type_driller()
 				.blocksInStructure(9, IntWrapper.getMaxValue(), deposit)
-				.blocksInStructure(1, 1, Block.getBlock("cmi:driller_fluid_pump"))
+				.addCondition(new BlockExistCondition(Block.getBlock("cmi:driller_fluid_pump")))
 				.slotName("cooler", coolerOutputFluid),
 			gas: cmi.multi_type_driller()
 				.blocksInStructure(9, IntWrapper.getMaxValue(), deposit)
-				.blocksInStructure(1, 1, Block.getBlock("cmi:driller_gas_pump"))
+				.addCondition(new BlockExistCondition(Block.getBlock("cmi:driller_gas_pump")))
 				.slotName("cooler", coolerOutputFluid)
 		}
 	}
