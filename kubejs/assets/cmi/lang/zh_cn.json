@@ -84,8 +84,5 @@
 	"tooltip.electronic_blast_furnace.type.1": "- _电力高炉_",
 	"tooltip.electronic_blast_furnace.type.2": "- _匠魂合金_",
 
-	"thermal.hive_hopper": "蜂箱漏斗",
-
-	"recipe.condition.block_exist": "方块存在",
-	"recipe.condition.block_exist.tooltip": "结构中至少存在 1 个 [%s] 方块"
+	"thermal.hive_hopper": "蜂箱漏斗"
 }

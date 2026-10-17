@@ -127,4 +127,31 @@ ServerEvents.recipes((event) => {
 		.duration(100, 1.5, 2)
 		.energy(100, 1, 2)
 		.id("cmi:driller/iron")
+
+	new DrillingRecipe(Block.getBlock("create_rns:redstone_deposit_block"))
+		.item([
+			"cmi:deposit_dust",
+			["cmi:deposit_dust", "create_rns:redstone_small_dust"],
+			"create_rns:redstone_small_dust",
+			["thermal:quartz_dust", "cmi:deposit_dust"],
+			["create_rns:redstone_small_dust", "minecraft:redstone"],
+			["minecraft:cobblestone", "minecraft:tuff", "minecraft:calcite", "create:limestone", "cmi:deposit_dust"],
+			["minecraft:redstone_ore", "minecraft:deepslate_redstone_ore"],
+			["ae2:certus_quartz_dust", "minecraft:amethyst_shard", "tconstruct:earth_slime_crystal"],
+			"create:rose_quartz"
+		])
+		.fluid([
+			Fluid.of("immersiveengineering:redstone_acid", 50),
+			Fluid.of("thermal:redstone", 50)
+		])
+		.gas("1000x mekanism:hydrogen")
+		.duration(10)
+		.energy(10000)
+		.id("cmi:driller/redstone")
+	
+	cmi.multi_type_driller()
+		.duration(1)
+		.isFuel(true)
+		.inputFluids(Fluid.of("cmi:glacious_cryotheum", 5000))
+		.id("cmi:driller/fuel")
 })
