@@ -60,6 +60,12 @@ ServerEvents.highPriorityData((event) => {
 		"tconstruct:molten_ender"
 	], "thermal:ender")
 
+	// 蜂蜜
+	addUnification("honey", [
+		"cofh_core:honey",
+		"tconstruct:honey"
+	], "create:honey")
+
 	/**
 	 * 
 	 * @param {string} name
