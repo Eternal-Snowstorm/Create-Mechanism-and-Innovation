@@ -13,14 +13,12 @@
 	"message.cmi.disabled_multiblock": "该多方块结构已被禁用",
 	"message.cmi.togni_leets": "很遗憾的告诉你, 你确诊了笨笨",
 	"message.cmi.initial_item_kit": "欢迎游玩整合包! 物品已发放!",
-	"message.cmi.unsble_to_transport": "所存储的位置不在当前维度！",
 	"message.cmi.welcome": "欢迎%s来到CMI!",
 	"message.cmi.welcomeback": "欢迎回来, 长官",
 
 	"tooltip.cmi.meltingPoint": "§e熔点: %s°C / %s°F",
 	"tooltip.cmi.fuelTemperature": "§e燃烧温度: %s°C / %s°F",
 	"tooltip.cmi.41dirt": "按下Alt + F4可以获得创造模式能量立方!",
-	"tooltip.cmi.industrial_platform.off": "§e按住Shift查看详情",
 	"tooltip.cmi.initial_item_kit.tip": "按住Shift查看详情",
 	"tooltip.cmi.initial_item_kit.shift": "潜行 + 右键打开, 将会获得以下物品:\n§b扳手\n§b工程师护目镜\n§b强力胶\n§b时间之瓶\n§b应力表",
 	"tooltip.cmi.stored_location": "维度: %s, X:%s, Y:%s, Z:%s",
@@ -39,7 +37,7 @@
 	"jade.theme.cmi.windows_xp_luna": "Windows XP Luna",
 	"jade.theme.cmi.windows10": "Windows 10",
 
-	"itemGroup.cmi.io_block": "配置面方块 (调试用)",
+	"itemGroup.cmi.io_block": "构件与革新: 配置面方块 (调试用)",
 	"itemGroup.cmi.all": "机械动力: 构件与革新",
 	"itemGroup.cmi.mechanisms": "构件与革新: 构件",
 	"itemGroup.cmi.materials": "构件与革新: 材料",
@@ -72,12 +70,6 @@
 
 	"item.cmi.paxel.description": "镐尖斧是一种多功能采掘工具, 适用于挖掘各种方块, 但对岩石和木头效果最好\n村民肯定不喜欢这个",
 	"item.cmi.togni_leets.desc": "§8cmi:steel_ingot",
-
-	"cmi.tooltip.storageupgrade.desc.item.additive": "使该容器的物品存储量增加 %s 倍",
-	"cmi.tooltip.storageupgrade.desc.fluid.additive": "使该容器的流体存储量增加 %s 倍",
-	"cmi.tooltip.storageupgrade.desc.range.additive": "将控制器的作用半径延长 %s 格",
-
-	"block.cmi.ae2.sky_stone_chest.mysterious_cube": "压印模板存储箱",
 
 	"gui.cmi.electrolyzer.need_graphite_electrode": "需要石墨电极!",
 

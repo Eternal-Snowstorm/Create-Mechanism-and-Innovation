@@ -127,5 +127,4 @@ ServerEvents.recipes((event) => {
 		.duration(100, 1.5, 2)
 		.energy(100, 1, 2)
 		.id("cmi:driller/iron")
-
 })
