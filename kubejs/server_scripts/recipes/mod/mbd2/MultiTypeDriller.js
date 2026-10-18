@@ -58,8 +58,8 @@ ServerEvents.recipes((event) => {
 	 */
 	DrillingRecipe.prototype.duration = function (duration, fluidMultiplier, gasMultiplier) {
 		this.recipe.item.duration(duration)
-		this.recipe.fluid.duration((fluidMultiplier ?? 1) * duration)
-		this.recipe.gas.duration((gasMultiplier ?? 1) * duration)
+		this.recipe.fluid.duration((fluidMultiplier || 1) * duration)
+		this.recipe.gas.duration((gasMultiplier || 1) * duration)
 
 		return this
 	}
@@ -73,11 +73,8 @@ ServerEvents.recipes((event) => {
 	 */
 	DrillingRecipe.prototype.energy = function (energy, fluidMultiplier, gasMultiplier) {
 		this.recipe.item.perTick(energyPerTick(energy))
-		this.recipe.fluid.perTick(energyPerTick((fluidMultiplier ?? 1) * energy))
-		this.recipe.gas.perTick(energyPerTick((gasMultiplier ?? 1) * energy))
-
-		console.log((fluidMultiplier ?? 1) * energy)
-		console.log(fluidMultiplier ?? 1)
+		this.recipe.fluid.perTick(energyPerTick((fluidMultiplier || 1) * energy))
+		this.recipe.gas.perTick(energyPerTick((gasMultiplier || 1) * energy))
 
 		return this
 	}
