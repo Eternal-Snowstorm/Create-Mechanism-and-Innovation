@@ -136,7 +136,7 @@ ServerEvents.recipes((event) => {
 			["minecraft:cobblestone", "minecraft:tuff", "minecraft:calcite", "create:limestone", "cmi:deposit_dust"],
 			["minecraft:iron_ore", "minecraft:deepslate_iron_ore"],
 			["minecraft:redstone", "minecraft:amethyst_shard", "tconstruct:earth_slime_crystal"],
-			["mekanism:clump_iron", "kaleidoscope_cookery:tieguanyin"]
+			"mekanism:clump_iron"
 		])
 		.fluid([
 			Fluid.of("tconstruct:molten_iron", 50),
