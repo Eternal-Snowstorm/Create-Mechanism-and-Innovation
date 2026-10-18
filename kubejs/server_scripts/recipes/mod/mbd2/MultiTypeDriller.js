@@ -182,7 +182,7 @@ ServerEvents.recipes((event) => {
 			["minecraft:coal", "minecraft:amethyst_shard", "tconstruct:earth_slime_crystal"],
 			"minecraft:diamond"
 		])
-		.fluid(Fluid.of("minecraft:water", 50))
+		.fluid(Fluid.of("create_dragon_plus:black_dye", 50))
 		.gas("20x mekanism:hydrogen")
 		.duration(100, 1.5, 2)
 		.energy(100, 1, 2)
