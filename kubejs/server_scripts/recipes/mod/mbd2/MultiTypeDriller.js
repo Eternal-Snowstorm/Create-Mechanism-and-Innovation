@@ -93,9 +93,9 @@ ServerEvents.recipes((event) => {
 	}
 
 	const DRILLER_BLOCKS = {
-		0: ForgeRegistries.BLOCKS.getValue(Cmi.loadResource("driller_head")),
-		1: ForgeRegistries.BLOCKS.getValue(Cmi.loadResource("driller_fluid_pump")),
-		2: ForgeRegistries.BLOCKS.getValue(Cmi.loadResource("driller_gas_pump"))
+		0: Cmi.loadResource("driller_head").toString(),
+		1: Cmi.loadResource("driller_fluid_pump").toString(),
+		2: Cmi.loadResource("driller_gas_pump").toString()
 	}
 
 	/**
