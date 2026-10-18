@@ -50,7 +50,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	}
 
 	// 锭
-	addItemLang("togni_leets", "钢錠")
 	addItemLang("overcharged_alloy_ingot", "超载合金锭")
 	addItemLang("electrolized_redstone", "电离中和红石")
 	addItemLang("refined_iron_bloom", "精炼铁方坯")
@@ -66,9 +65,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("deposition_catalytic_alloy", "沉积催化合金")
 
 	// 板
-	addItemLang("stone_plate", "石板")
 	addItemLang("dense_sturdy_sheet", "致密坚固板")
-	addItemLang("redstone_plate", "红石板")
 	addItemLang("inscribed_silicon", "线刻硅板")
 	addItemLang("rubber_plate", "橡胶板")
 	addItemLang("silicon_carbide_plate", "碳化硅板")
@@ -76,7 +73,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("flame_retardant_plastic", "阻燃塑料")
 	addItemLang("silicon_rubber_plate", "硅橡胶板")
 	addItemLang("composite_tungsten_steel_plate", "复合钨钢板")
-	addItemLang("composite_carbon_fiber_plate", "复合碳纤板")
 	addItemLang("composite_magnetic_conduction_plate", "复合磁导板")
 	addItemLang("ethylene_polymerization_catalytic_plate", "乙烯聚合催化片")
 	addItemLang("carbon_deposition_catalytic_plate", "碳沉积催化片")
@@ -161,24 +157,16 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("cobalt_electrolyte", "钴电解质")
 	addItemLang("pure_source", "纯净晶源")
 
-	// 机械零件
-	addItemLang("rubber_hand", "橡胶手部零件")
-	addItemLang("chromeplated_steel_gear", "镀铬钢齿轮")
-	addItemLang("composite_carbon_fiber_gear", "复合碳纤齿轮")
+	// 线
+	addItemLang("optical_fiber", "光纤")
+
+	// 机壳框架
 	addItemLang("andesite_casing_framework", "安山机壳框架")
 	addItemLang("brass_casing_framework", "黄铜机壳框架")
 	addItemLang("bronze_casing_framework", "青铜机壳框架")
 	addItemLang("copper_casing_framework", "铜机壳框架")
 
 	// 电子元件
-	addItemLang("motor_rotor", "电动机转子")
-	addItemLang("entro_crystal", "恩特罗水晶")
-	addItemLang("concurrent_processor", "并发处理器")
-	addItemLang("printed_concurrent_processor", "并发电路板")
-	addItemLang("concurrent_processor_press", "并发压印模板")
-	addItemLang("resonant_tube", "共振管")
-	addItemLang("diode", "二极管")
-	addItemLang("glowstone_lumen_tube", "萤石流明管道")
 	addItemLang("thermal_unit", "热力通量单元")
 	addItemLang("basalz_unit", "大地震撼单元")
 	addItemLang("blaze_unit", "烈焰燃烧单元")
@@ -188,28 +176,21 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("blaze_general_component", "烈焰焚烬组件")
 	addItemLang("blitz_general_component", "狂风卷袭组件")
 	addItemLang("blizz_general_component", "暴雪冻结组件")
-	addItemLang("nuke_cooler", "冷却设备")
-	addItemLang("ferrit_core", "铁氧体磁芯")
-	addItemLang("magnetic_contact", "磁触点")
-	addItemLang("osmium_wafer", "锇晶圆")
-	addItemLang("silicon_wafer", "硅晶圆")
-	addItemLang("germanium_wafer", "锗晶圆")
-	addItemLang("entro_alloy_wafer", "恩特罗合金晶圆")
 	addItemLang("basic_electronic_components", "基础电子元件")
 	addItemLang("advanced_electronic_components", "高级电子元件")
 	addItemLang("elite_electronic_components", "精英电子元件")
 	addItemLang("ultimate_electronic_components", "终极电子元件")
 
 	// 工具
-	addItemLang("initial_item_kit", "初始套件箱")
 	addItemLang("super_knife", "纯粹小刀")
 	addItemLang("wooden_knife", "木质小刀")
-	addItemLang("paxel", "镐尖斧")
-	addItemLang("handheld_crafting_table", "手持工作台")
 	addItemLang("flint_hammer", "燧石锤")
 	addItemLang("iron_hammer", "铁锤")
 	addItemLang("diamond_hammer", "钻石锤")
 	addItemLang("astral_core", "繁星核心")
+	addItemLang("hammer_head", "冲压头")
+	addItemLang("fertilizer", "金坷垃")
+	addItemLang("concurrent_processor_press", "并发压印模板")
 
 	// 半成品
 	addIncompleteLang("cogwheel", "齿轮")
@@ -258,31 +239,22 @@ ClientEvents.lang("zh_cn", (event) => {
 	addIncompleteLang("engineering_processor", "工程处理器")
 	addIncompleteLang("superconducting_processor", "ECO - SA 超导处理器")
 
+	// 装备
 	addItemLang("bucket", "桶(?)")
-	addItemLang("blood_slime_ball", "黏血球")
-	addItemLang("raw_platinum_particles", "粗制铂微粒")
-	addItemLang("platinum_crystal_nucleus", "铂晶核")
-	addItemLang("platinum_shard", "铂碎片")
+
+	// 木屑块
 	addItemLang("wood_chip_briquette", "木屑块")
 	addItemLang("compressed_wood_chip_briquette", "压缩木屑块")
 	addItemLang("densely_packed_wood_chip_briquette", "致密压缩木屑块")
 	addItemLang("creosote_wood_chip_briquette", "浸油致密压缩木屑块")
-	addItemLang("small_coal_coke", "小块焦炭")
+
+	// 食品
 	addItemLang("andesite_alloy_noodle_stage0", "安山合金刀削面(阶段0)")
 	addItemLang("andesite_alloy_noodle_stage1", "安山合金刀削面(阶段1)")
 	addItemLang("andesite_alloy_noodle_stage2", "安山合金刀削面(阶段2)")
 	addItemLang("andesite_alloy_noodle", "安山合金刀削面")
-	addItemLang("peat", "泥炭")
-	addItemLang("rubber_tree_bark", "橡胶树皮")
-	addItemLang("grass_fiber", "草纤维")
-	addItemLang("grass_string", "草绳")
-	addItemLang("sugarcane_fiber", "甘蔗纤维")
-	addItemLang("drawer_upgrade_template", "抽屉升级模板")
-	addItemLang("guide", "指南")
-	addItemLang("carbon_nanotube", "碳纳米管")
-	addItemLang("titanium_alloy_mesh", "钛合金网")
-	addItemLang("activated_graphite_chunk", "活化石墨碎块")
-	addItemLang("titanium_alloy_coil", "钛合金线圈")
+	
+	// 羊皮纸
 	addItemLang("parchment", "奇怪的羊皮纸")
 	addItemLang("torn_parchment_a", "撕开的羊皮纸(甲)")
 	addItemLang("torn_parchment_b", "撕开的羊皮纸(乙)")
@@ -291,6 +263,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("dreamcore_crystal", "幻晶晶簇")
 	addItemLang("dreamcore_ore", "幻晶原石")
 	addItemLang("dreamcore_seed", "幻晶晶种")
+
 	let dreamcoreList = [
 		["recombine", "重组"],
 		["enriched", "富集"],
@@ -304,6 +277,7 @@ ClientEvents.lang("zh_cn", (event) => {
 		addItemLang(`dreamcore_${id}`, `${name}幻晶`)
 	})
 
+	// 火箭
 	let numberChinese = {
 		1: ["一", "壹"],
 		2: ["二", "贰"],
@@ -320,61 +294,45 @@ ClientEvents.lang("zh_cn", (event) => {
 		addIncompleteLang(`tier_${i}_rocket`, `${numberChinese[i][0]}阶火箭`)
 	}
 
+	// 霜原木
 	addItemLang("glacian_chunk", "霜原木碎块")
 	addItemLang("culture_medium", "培养基")
 	addItemLang("glacian_sprout", "霜原芽")
 
+	// 修复包
 	addItemLang("power_supply_repair_kit", "电源修复包")
 	addItemLang("transformer_repair_kit", "变压器修复包")
 	addItemLang("tracker_repair_kit", "追踪阵列修复包")
 	addItemLang("modem_repair_kit", "调制解调器修复包")
 	addItemLang("radar_repair_kit", "雷达修复包")
 
+	// 整合组件
 	addItemLang("aluminum_upgrade_augment", "铝整合组件")
 	addItemLang("stainless_steel_upgrade_augment", "不锈钢整合组件")
 	addItemLang("titanium_alloy_upgrade_augment", "钛合金整合组件")
 	addItemLang("tungsten_steel_upgrade_augment", "钨钢整合组件")
 
+	// 升级组件
+	addItemLang("parallel_upgrade", "%sx 并行升级")
+
+	// 抽屉升级
 	addItemLang("amethyst_bronze_upgrade", "紫水晶青铜升级")
 	addItemLang("rose_gold_upgrade", "玫瑰金升级")
 	addItemLang("steel_upgrade", "钢升级")
 	addItemLang("hepatizon_upgrade", "黑色柯林斯青铜升级")
 
+	// 蒸汽升级
 	addItemLang("steam_cast_iron_upgrade", "铸铁蒸汽升级组件")
 	addItemLang("steam_steel_upgrade", "钢制蒸汽升级组件")
 
+	// 唱片
 	addItemLang("music_disc_mechanism", "Mechanism - Belalus")
+	addItemLang("togni_leets", "钢錠")
 
-	addItemLang("hammer_head", "冲压头")
-	addItemLang("kaolinite_ball", "高岭土球")
+	// 图标
 	addItemLang("cmi_icon", "CMI 图标")
-	addItemLang("fertilizer", "金坷垃")
 
-	addItemLang("purified_quartz", "高纯石英")
-	addItemLang("silicon_rubber", "硅橡胶")
-	addItemLang("andesite_aggregate", "安山混合物")
-	addItemLang("vanadium_ore_chunk", "钒矿物碎块")
-	addItemLang("platinum_ore_chunk", "铂矿物碎块")
-	addItemLang("obsidian_cell", "黑曜石元件")
-
-	addItemLang("filled_fuel_rod", "燃料棒")
-	addItemLang("empty_fuel_rod", "空燃料棒")
-	addItemLang("refined_nuke_waste", "精炼核废料")
-	addItemLang("refined_radiation_rock", "精炼辐射岩")
-	addItemLang("acid_washed_radiation_rock", "酸洗辐射岩")
-	addItemLang("plutonium_ionized_crystal", "钚电离结晶")
-	addItemLang("radioactive_sediment", "放射性沉淀")
-	addItemLang("raw_polonium_dust", "粗钋粉")
-	addItemLang("reduced_polonium", "还原钋")
-	addItemLang("raw_polonium", "粗钋")
-
-	addItemLang("optical_fiber", "光纤")
-	addItemLang("fluix_wire", "福鲁伊克斯线")
-
-	addItemLang("parallel_upgrade", "%sx 并行升级")
-
-	addItemLang("frost_cake_base", "寒霜蛋糕胚")
-
+	// 模具
 	let moldList = [
 		["plate", "板状"],
 		["gear", "齿轮状"],
@@ -395,6 +353,51 @@ ClientEvents.lang("zh_cn", (event) => {
 
 	addCastItemLang("mechanism", "构件")
 	addCastItemLang("nugget", "粒")
+
+	// 放射性物品
+	addItemLang("refined_nuke_waste", "精炼核废料")
+	addItemLang("refined_radiation_rock", "精炼辐射岩")
+	addItemLang("acid_washed_radiation_rock", "酸洗辐射岩")
+	addItemLang("plutonium_ionized_crystal", "钚电离结晶")
+	addItemLang("radioactive_sediment", "放射性沉淀")
+	addItemLang("raw_polonium_dust", "粗钋粉")
+	addItemLang("reduced_polonium", "还原钋")
+	addItemLang("raw_polonium", "粗钋")
+
+	// 材料
+	addItemLang("small_coal_coke", "小块焦炭")
+	addItemLang("peat", "泥炭")
+	addItemLang("rubber_tree_bark", "橡胶树皮")
+	addItemLang("grass_fiber", "草纤维")
+	addItemLang("grass_string", "草绳")
+	addItemLang("sugarcane_fiber", "甘蔗纤维")
+	addItemLang("carbon_nanotube", "碳纳米管")
+	addItemLang("titanium_alloy_mesh", "钛合金网")
+	addItemLang("activated_graphite_chunk", "活化石墨碎块")
+	addItemLang("titanium_alloy_coil", "钛合金线圈")
+	addItemLang("purified_quartz", "高纯石英")
+	addItemLang("silicon_rubber", "硅橡胶")
+	addItemLang("blood_slime_ball", "黏血球")
+	addItemLang("frost_cake_base", "寒霜蛋糕胚")
+	addItemLang("kaolinite_ball", "高岭土球")
+	addItemLang("filled_fuel_rod", "燃料棒")
+	addItemLang("empty_fuel_rod", "空燃料棒")
+	addItemLang("nuke_cooler", "冷却设备")
+	addItemLang("ferrit_core", "铁氧体磁芯")
+	addItemLang("magnetic_contact", "磁触点")
+	addItemLang("resonant_tube", "共振管")
+	addItemLang("glowstone_lumen_tube", "萤石流明管道")
+	addItemLang("motor_rotor", "电动机转子")
+	addItemLang("entro_crystal", "恩特罗水晶")
+	addItemLang("concurrent_processor", "并发处理器")
+	addItemLang("printed_concurrent_processor", "并发电路板")
+	addItemLang("drawer_upgrade_template", "抽屉升级模板")
+
+	addItemLang("vanadium_ore_chunk", "钒矿物碎块")
+	addItemLang("platinum_ore_chunk", "铂矿物碎块")
+
+	// 元件
+	addItemLang("obsidian_cell", "黑曜石元件")
 
 	addCellItemLang("empty", "空白")
 

@@ -54,6 +54,14 @@ ClientEvents.lang("zh_cn", (event) => {
 	addMaterialLang("glass", "玻璃")
 	addMaterialLang("fluix", "福鲁伊克斯")
 	addMaterialLang("dreamcore", "幻晶")
+	addMaterialLang("entro_alloy", "恩特罗合金")
+	addMaterialLang("silicon", "硅")
+	addMaterialLang("germanium", "锗")
+	addMaterialLang("mechanium", "械钢")
+	addMaterialLang("chromeplated_steel", "镀铬钢")
+	addMaterialLang("composite_carbon_fiber", "复合碳纤")
+	addMaterialLang("redstone", "红石")
+	addMaterialLang("stone", "石")
 
 	/**
 	 * 
@@ -68,6 +76,7 @@ ClientEvents.lang("zh_cn", (event) => {
 		event.add(`item.${Cmi.MODID}.${key}_gear`, `${name}齿轮`)
 		event.add(`item.${Cmi.MODID}.${key}_rod`, `${name}杆`)
 		event.add(`item.${Cmi.MODID}.${key}_wire`, `${name}线`)
+		event.add(`item.${Cmi.MODID}.${key}_wafer`, `${name}晶圆`)
 
 		event.add(`item.${Cmi.MODID}.dirty_${key}_dust`, `污浊${name}粉`)
 		event.add(`item.${Cmi.MODID}.${key}_clump`, `${name}碎块`)

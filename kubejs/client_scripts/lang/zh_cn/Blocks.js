@@ -23,16 +23,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	 * @param {string} key 
 	 * @param {string} name 
 	 */
-	function addMachineLang(key, name) {
-		event.add(`block.${Cmi.MODID}.${key}`, name)
-		event.add(`machine.${Cmi.MODID}.${key}`, name)
-	}
-
-	/**
-	 * 
-	 * @param {string} key 
-	 * @param {string} name 
-	 */
 	function addCasingLang(key, name) {
 		event.add(`block.${Cmi.MODID}.${key}_casing`, `${name}机壳`)
 	}
@@ -66,9 +56,9 @@ ClientEvents.lang("zh_cn", (event) => {
 	addCasingLang("smart", "智能")
 	addCasingLang("computing", "高级计算")
 	addCasingLang("airtight", "气密")
+	addCasingLang("mechanium", "械钢")
 
 	// 火箭
-	addBlockLang("rocket_pattern", "火箭模版")
 	addBlockLang("tier_1_rocket_frame", "一阶火箭框架")
 	addBlockLang("tier_2_rocket_frame", "二阶火箭框架")
 	addBlockLang("tier_3_rocket_frame", "三阶火箭框架")
@@ -77,7 +67,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	// 资源性方块
 	addBlockLang("peat_block", "泥炭块")
 	addBlockLang("oil_shale", "油页岩")
-	addBlockLang("combustion_medium_block", "燃烧介质块")
 	addBlockLang("radsand", "辐射沙")
 	addBlockLang("kaolinite", "高岭土")
 	addBlockLang("refractory_grout", "耐火砖泥")
@@ -92,7 +81,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addBlockLang("crucible_base", "底座")
 	addBlockLang("crucible_tuyere", "风口")
 	addBlockLang("industrial_frame", "工程块框架")
-	addBlockLang("accelerator", "构件之力催生器")
 
 	// 雷达设备
 	addBlockLang("radar", "雷达")
@@ -109,8 +97,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addBlockLang("broken_modem", "损坏的调制解调器")
 
 	// 钻井
-	addBlockLang("driller_cooler_input_bus", "钻机冷却剂输入总线")
-	addBlockLang("driller_cooler_output_bus", "钻机冷却剂输出总线")
 	addBlockLang("driller_bearing", "钻机轴承")
 	addBlockLang("driller_head", "钻头")
 	addBlockLang("driller_fluid_pump", "钻机液泵")
@@ -134,11 +120,9 @@ ClientEvents.lang("zh_cn", (event) => {
 	addBlockLang("pink_reinforced_concrete", "粉色钢筋混凝土")
 	addBlockLang("brown_reinforced_concrete", "棕色钢筋混凝土")
 
-	// 幻晶 & 械钢
+	// 幻晶
 	addBlockLang("dreamcore_coil", "幻晶线圈")
 	addBlockLang("dtma_dreamcore_energy_core", "DTMA 幻晶能量核心")
-	addBlockLang("mechanium_casing", "械钢机壳")
-	addBlockLang("mechanium_ore", "械钢矿")
 
 	// 雕纹铜块
 	addBlockLang("chiseled_copper", "雕纹铜块")
@@ -159,7 +143,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addBlockLang("dummy_hive_hopper", "虚设蜂箱漏斗")
 
 	// 矿藏
-	addOreNodeLang("any", "任意")
 	addOreNodeLang("vanadium", "钒矿")
 	addOreNodeLang("platinum", "铂矿")
 	addOreNodeLang("cheese", "奶酪")
@@ -187,6 +170,9 @@ ClientEvents.lang("zh_cn", (event) => {
 	addBlockLang("keyxeldesu", "一只键盘虾")
 	addBlockLang("sergei", "谢尔盖")
 	addBlockLang("lirx_ovo", "栗子")
+
+	// GUI 方块
+	addBlockLang("gui_block", "GUI 方块")
 
 	// 建筑方块
 	addBuildLang("brass", "黄铜")

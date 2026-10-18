@@ -96,7 +96,7 @@ ClientEvents.lang("zh_cn", (event) => {
 		["astronautic", "宇航"]
 	]
 	mechanismGroup.forEach(([material, name]) => {
-		addMechanismLang(material, name)
+		// addMechanismLang(material, name)
 		addMechanismMachineLang(material, name)
 		addCraftingIncompleteLang(material, name)
 	})
