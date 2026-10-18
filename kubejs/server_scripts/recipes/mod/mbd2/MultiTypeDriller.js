@@ -10,9 +10,9 @@ ServerEvents.recipes((event) => {
 		 * @type {{item: Special.Recipes.MultiTypeDrillerCmi, fluid: Special.Recipes.MultiTypeDrillerCmi, gas: Special.Recipes.MultiTypeDrillerCmi}}
 		 */
 		this.recipe = {
-			item: autoRecipe(deposit, Block.getBlock("cmi:driller_head")),
-			fluid: autoRecipe(deposit, Block.getBlock("cmi:driller_fluid_pump")),
-			gas: autoRecipe(deposit, Block.getBlock("cmi:driller_gas_pump"))
+			item: autoRecipe(deposit, 0),
+			fluid: autoRecipe(deposit, 1),
+			gas: autoRecipe(deposit, 2)
 		}
 	}
 
@@ -58,8 +58,8 @@ ServerEvents.recipes((event) => {
 	 */
 	DrillingRecipe.prototype.duration = function (duration, fluidMultiplier, gasMultiplier) {
 		this.recipe.item.duration(duration)
-		this.recipe.fluid.duration(duration * (fluidMultiplier ?? 1))
-		this.recipe.gas.duration(duration * (gasMultiplier ?? 1))
+		this.recipe.fluid.duration((fluidMultiplier ?? 1) * duration)
+		this.recipe.gas.duration((gasMultiplier ?? 1) * duration)
 
 		return this
 	}
@@ -73,8 +73,8 @@ ServerEvents.recipes((event) => {
 	 */
 	DrillingRecipe.prototype.energy = function (energy, fluidMultiplier, gasMultiplier) {
 		this.recipe.item.perTick(energyPerTick(energy))
-		this.recipe.fluid.perTick(energyPerTick(energy * (fluidMultiplier ?? 1)))
-		this.recipe.gas.perTick(energyPerTick(energy * (gasMultiplier ?? 1)))
+		this.recipe.fluid.perTick(energyPerTick((fluidMultiplier ?? 1) * energy))
+		this.recipe.gas.perTick(energyPerTick((gasMultiplier ?? 1) * energy))
 
 		return this
 	}
@@ -92,6 +92,12 @@ ServerEvents.recipes((event) => {
 		return this
 	}
 
+	const DRILLER_BLOCKS = {
+		0: ForgeRegistries.BLOCKS.getValue(Cmi.loadResource("driller_head")),
+		1: ForgeRegistries.BLOCKS.getValue(Cmi.loadResource("driller_fluid_pump")),
+		2: ForgeRegistries.BLOCKS.getValue(Cmi.loadResource("driller_gas_pump"))
+	}
+
 	/**
 	 * 
 	 * @param {number} energy 
@@ -106,16 +112,13 @@ ServerEvents.recipes((event) => {
 	/**
 	 * 
 	 * @param {Internal.Block_} deposit - 矿藏方块
-	 * @param {Internal.Block_} block - 钻头/钻机液泵/钻机气泵
+	 * @param {number} block - 0:钻头, 1:钻机液泵, 2:钻机气泵
 	 * @returns {Special.Recipes.MultiTypeDrillerCmi}
 	 */
 	function autoRecipe(deposit, block) {
 		return cmi.multi_type_driller()
 			.blocksInStructure(9, IntWrapper.getMaxValue(), deposit)
-			.addCondition({
-				type: "cmi:block_exist",
-				blocks: [block.id]
-			})
+			.addCondition(new BlockExistCondition(DRILLER_BLOCKS[block]))
 			.slotName("cooler", (recipeS) => {
 				recipeS.perTick((recipeP) => {
 					recipeP.outputFluids(Fluid.of("neoecoae:cryotheum_solution", 5000))
