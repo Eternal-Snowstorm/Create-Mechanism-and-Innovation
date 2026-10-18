@@ -77,6 +77,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("ethylene_polymerization_catalytic_plate", "乙烯聚合催化片")
 	addItemLang("carbon_deposition_catalytic_plate", "碳沉积催化片")
 	addItemLang("carbon_polymerization_catalytic_plate", "碳聚合催化片")
+	addItemLang("nano_composite_plate", "纳米复合板")
 
 	// 粉
 	addItemLang("andesite_dust", "安山岩粉")

@@ -76,6 +76,9 @@ ServerEvents.recipes((event) => {
 		this.recipe.fluid.perTick(energyPerTick((fluidMultiplier ?? 1) * energy))
 		this.recipe.gas.perTick(energyPerTick((gasMultiplier ?? 1) * energy))
 
+		console.log((fluidMultiplier ?? 1) * energy)
+		console.log(fluidMultiplier ?? 1)
+
 		return this
 	}
 
@@ -119,20 +122,32 @@ ServerEvents.recipes((event) => {
 		return cmi.multi_type_driller()
 			.blocksInStructure(9, IntWrapper.getMaxValue(), deposit)
 			.addCondition(BlockExistCondition["of(java.lang.String[])"](DRILLER_BLOCKS[block]))
-			.slotName("cooler", (recipeS) => {
-				recipeS.perTick((recipeP) => {
-					recipeP.outputFluids(Fluid.of("neoecoae:cryotheum_solution", 5000))
+			.slotName("cooler", (coolerRecipe) => {
+				coolerRecipe.perTick((perTickCoolerRecipe) => {
+					perTickCoolerRecipe.outputFluids(Fluid.of("neoecoae:cryotheum_solution", 5000))
 				})
 			})
 	}
 
 	new DrillingRecipe(Block.getBlock("create_rns:iron_deposit_block"))
-		.item("cmi:deposit_dust")
-		.fluid(Fluid.of("minecraft:water", 50))
-		.gas("20x mekanism:hydrogen")
+		.item([
+			"cmi:deposit_dust",
+			["cmi:deposit_dust", "thermal_extra:iron_ore_chunk"],
+			"thermal_extra:iron_ore_chunk",
+			["thermal:quartz_dust", "cmi:deposit_dust"],
+			["minecraft:raw_iron", "create:crushed_raw_iron"],
+			["minecraft:cobblestone", "minecraft:tuff", "minecraft:calcite", "create:limestone", "cmi:deposit_dust"],
+			["minecraft:iron_ore", "minecraft:deepslate_iron_ore"],
+			["minecraft:redstone", "minecraft:amethyst_shard", "tconstruct:earth_slime_crystal"],
+			["mekanism:clump_iron", "kaleidoscope_cookery:tieguanyin"]
+		])
+		.fluid([
+			Fluid.of("tconstruct:molten_iron", 50),
+			Fluid.of("thermal_extra:raw_iron", 50)
+		])
+		.gas("100x mekanism:hydrogen")
 		.duration(100, 1.5, 2)
 		.energy(100, 1, 2)
-		.id("cmi:driller/iron")
 
 	new DrillingRecipe(Block.getBlock("create_rns:redstone_deposit_block"))
 		.item([
@@ -150,14 +165,13 @@ ServerEvents.recipes((event) => {
 			Fluid.of("immersiveengineering:redstone_acid", 50),
 			Fluid.of("thermal:redstone", 50)
 		])
-		.gas("1000x mekanism:hydrogen")
+		.gas("100x mekanism:hydrogen")
 		.duration(10)
 		.energy(10000)
-		.id("cmi:driller/redstone")
 
+	// 燃料(冷却剂)
 	cmi.multi_type_driller()
 		.duration(1)
 		.isFuel(true)
 		.inputFluids(Fluid.of("cmi:glacious_cryotheum", 5000))
-		.id("cmi:driller/fuel")
 })
