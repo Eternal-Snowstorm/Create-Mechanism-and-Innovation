@@ -1,4 +1,7 @@
 ServerEvents.recipes((event) => {
+	// 清掉 create_rns 动态数据包生成的默认采矿配方, 避免同方块+同维度重复
+	event.remove({ type: "create_rns:mining" })
+
 	let { create_rns } = event.getRecipes()
 
 	/**
@@ -249,6 +252,8 @@ ServerEvents.recipes((event) => {
 		.shatterItem(0.3, ["tconstruct:cobalt_ore"])
 		.faintStabilizeItem(0.15, ["tconstruct:knightmetal_shard", "minecraft:amethyst_shard", "tconstruct:ichor_slime_crystal"])
 		.stabilizeItem(0.06, ["tconstruct:knightmetal_cluster"])
+		.build()
+		.id("cmi:mining_recipes/cobalt")
 
 	new MiningRecipe("create_rns:copper_deposit_block")
 		.defaultItem(["cmi:deposit_dust"])
@@ -260,6 +265,8 @@ ServerEvents.recipes((event) => {
 		.shatterItem(0.3, ["create:veridium", "minecraft:copper_ore", "minecraft:deepslate_copper_ore"])
 		.faintStabilizeItem(0.15, ["minecraft:clay_ball", "minecraft:amethyst_shard", "tconstruct:sky_slime_crystal"])
 		.stabilizeItem(0.06, ["minecraft:clay"])
+		.build()
+		.id("cmi:mining_recipes/copper")
 
 	new MiningRecipe("create_rns:iron_deposit_block")
 		.defaultItem(["cmi:deposit_dust"])
@@ -271,6 +278,8 @@ ServerEvents.recipes((event) => {
 		.shatterItem(0.3, ["create:crimsite", "minecraft:iron_ore", "minecraft:deepslate_iron_ore"])
 		.faintStabilizeItem(0.15, ["create_rns:redstone_small_dust", "minecraft:amethyst_shard", "tconstruct:earth_slime_crystal"])
 		.stabilizeItem(0.06, ["minecraft:redstone"])
+		.build()
+		.id("cmi:mining_recipes/iron")
 
 	new MiningRecipe("create_rns:zinc_deposit_block")
 		.defaultItem(["cmi:deposit_dust"])
@@ -282,6 +291,8 @@ ServerEvents.recipes((event) => {
 		.shatterItem(0.3, ["create:asurine", "create:zinc_ore", "create:deepslate_zinc_ore"])
 		.faintStabilizeItem(0.15, ["thermal:niter_dust", "minecraft:amethyst_shard", "tconstruct:sky_slime_crystal"])
 		.stabilizeItem(0.06, ["thermal:niter"])
+		.build()
+		.id("cmi:mining_recipes/zinc")
 
 	new MiningRecipe("create_rns:gold_deposit_block")
 		.defaultItem(["cmi:deposit_dust"])
@@ -293,6 +304,8 @@ ServerEvents.recipes((event) => {
 		.shatterItem(0.3, ["create:ochrum", "minecraft:gold_ore", "minecraft:deepslate_gold_ore"])
 		.faintStabilizeItem(0.15, ["thermal:quartz_dust", "minecraft:amethyst_shard", "tconstruct:earth_slime_crystal"])
 		.stabilizeItem(0.06, ["minecraft:quartz"])
+		.build()
+		.id("cmi:mining_recipes/gold")
 
 	new MiningRecipe("create_rns:gold_deposit_block")
 		.dimension("minecraft:the_nether")
@@ -305,6 +318,8 @@ ServerEvents.recipes((event) => {
 		.shatterItem(0.3, ["create:ochrum", "minecraft:gold_ore", "minecraft:deepslate_gold_ore"])
 		.faintStabilizeItem(0.15, ["thermal:quartz_dust", "minecraft:amethyst_shard", "tconstruct:ichor_slime_crystal"])
 		.stabilizeItem(0.06, ["minecraft:quartz"])
+		.build()
+		.id("cmi:mining_recipes/gold_nether")
 
 	new MiningRecipe("create_rns:tin_deposit_block")
 		.defaultItem(["cmi:deposit_dust"])
@@ -316,6 +331,8 @@ ServerEvents.recipes((event) => {
 		.shatterItem(0.3, ["thermal:apatite", "thermal:tin_ore", "thermal:deepslate_tin_ore"])
 		.faintStabilizeItem(0.15, ["thermal:apatite_dust", "minecraft:amethyst_shard", "tconstruct:earth_slime_crystal"])
 		.stabilizeItem(0.06, ["thermal:apatite"])
+		.build()
+		.id("cmi:mining_recipes/tin")
 
 	new MiningRecipe("create_rns:lead_deposit_block")
 		.defaultItem(["cmi:deposit_dust"])
@@ -327,6 +344,8 @@ ServerEvents.recipes((event) => {
 		.shatterItem(0.3, ["alexscaves:candy_cane", "thermal:lead_ore", "thermal:deepslate_lead_ore"])
 		.faintStabilizeItem(0.15, ["minecraft:sugar", "minecraft:amethyst_shard", "tconstruct:earth_slime_crystal"])
 		.stabilizeItem(0.06, ["alexscaves:caramel"])
+		.build()
+		.id("cmi:mining_recipes/lead")
 
 	new MiningRecipe("create_rns:nickel_deposit_block")
 		.defaultItem(["cmi:deposit_dust"])
@@ -338,6 +357,8 @@ ServerEvents.recipes((event) => {
 		.shatterItem(0.3, ["cmi:oil_shale", "thermal:nickel_ore", "thermal:deepslate_nickel_ore"])
 		.faintStabilizeItem(0.15, ["mekanism:dust_coal", "minecraft:amethyst_shard", "tconstruct:earth_slime_crystal"])
 		.stabilizeItem(0.06, ["minecraft:coal"])
+		.build()
+		.id("cmi:mining_recipes/nickel")
 
 	new MiningRecipe("create_rns:silver_deposit_block")
 		.defaultItem(["cmi:deposit_dust"])
@@ -349,8 +370,11 @@ ServerEvents.recipes((event) => {
 		.shatterItem(0.3, ["minecraft:mud", "thermal:silver_ore", "thermal:deepslate_silver_ore"])
 		.faintStabilizeItem(0.15, ["cmi:dirty_etrium_dust", "minecraft:amethyst_shard", "tconstruct:earth_slime_crystal"])
 		.stabilizeItem(0.06, ["cmi:raw_etrium"])
+		.build()
+		.id("cmi:mining_recipes/silver")
 
 	new MiningRecipe("create_rns:uranium_deposit_block")
+		.dimension("cmi:dionysus")
 		.defaultItem(["cmi:deposit_dust"])
 		.overclockItem(0.3, ["cmi:deposit_dust", "mekanism:dirty_dust_uranium"])
 		.overclockItem(0.5, ["thermal_extra:uranium_ore_chunk"])
@@ -360,6 +384,8 @@ ServerEvents.recipes((event) => {
 		.shatterItem(0.3, ["create:crushed_raw_uranium", "alexscaves:radrock_uranium_ore"])
 		.faintStabilizeItem(0.15, ["thermal:sulfur_dust", "minecraft:amethyst_shard", "tconstruct:earth_slime_crystal"])
 		.stabilizeItem(0.06, ["alexscaves:sulfur_cluster"])
+		.build()
+		.id("cmi:mining_recipes/uranium")
 
 	new MiningRecipe("create_rns:osmium_deposit_block")
 		.defaultItem(["cmi:deposit_dust"])
@@ -371,6 +397,8 @@ ServerEvents.recipes((event) => {
 		.shatterItem(0.3, ["cmi:nether_osmium_ore", "mekanism:osmium_ore", "mekanism:deepslate_osmium_ore"])
 		.faintStabilizeItem(0.15, ["mekanism:dust_fluorite", "minecraft:amethyst_shard", "tconstruct:earth_slime_crystal"])
 		.stabilizeItem(0.06, ["mekanism:fluorite_gem"])
+		.build()
+		.id("cmi:mining_recipes/osmium")
 
 	new MiningRecipe("cmi:aluminum_deposit_block")
 		.defaultItem(["cmi:deposit_dust"])
@@ -382,6 +410,8 @@ ServerEvents.recipes((event) => {
 		.shatterItem(0.3, ["create:crimsite", "immersiveengineering:ore_aluminum", "immersiveengineering:deepslate_ore_aluminum"])
 		.faintStabilizeItem(0.15, ["cmi:dreamcore_seed", "minecraft:amethyst_shard", "tconstruct:earth_slime_crystal"])
 		.stabilizeItem(0.06, ["cmi:dreamcore_ore"])
+		.build()
+		.id("cmi:mining_recipes/aluminum")
 
 	new MiningRecipe("cmi:platinum_deposit_block")
 		.defaultItem(["cmi:deposit_dust"])
@@ -393,6 +423,8 @@ ServerEvents.recipes((event) => {
 		.shatterItem(0.3, ["minecraft:end_stone", "cmi:moon_platinum_ore"])
 		.faintStabilizeItem(0.15, ["minecraft:glowstone_dust", "minecraft:amethyst_shard", "tconstruct:sky_slime_crystal"])
 		.stabilizeItem(0.06, ["minecraft:glowstone"])
+		.build()
+		.id("cmi:mining_recipes/platinum")
 
 	new MiningRecipe("cmi:oil_shale_deposit_block")
 		.defaultItem(["cmi:deposit_dust"])
@@ -404,6 +436,8 @@ ServerEvents.recipes((event) => {
 		.shatterItem(0.3, ["cmi:oil_shale"])
 		.faintStabilizeItem(0.15, ["cmi:oil_shale_dust", "minecraft:amethyst_shard", "tconstruct:earth_slime_crystal"])
 		.stabilizeItem(0.06, ["thermal:bitumen"])
+		.build()
+		.id("cmi:mining_recipes/oil_shale")
 
 	new MiningRecipe("cmi:cheese_deposit_block")
 		.defaultItem(["cmi:deposit_dust"])
@@ -415,4 +449,6 @@ ServerEvents.recipes((event) => {
 		.shatterItem(0.3, ["ad_astra:cheese_block", "tconstruct:cheese_block", "ad_astra:moon_cheese_ore"])
 		.faintStabilizeItem(0.15, ["tconstruct:cheese_ingot", "minecraft:amethyst_shard", "tconstruct:earth_slime_crystal"])
 		.stabilizeItem(0.06, ["ad_astra:cheese_block"])
+		.build()
+		.id("cmi:mining_recipes/cheese")
 })

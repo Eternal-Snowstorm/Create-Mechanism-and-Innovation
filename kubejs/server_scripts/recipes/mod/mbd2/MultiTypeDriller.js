@@ -112,10 +112,7 @@ ServerEvents.recipes((event) => {
 	function autoRecipe(deposit, block) {
 		return cmi.multi_type_driller()
 			.blocksInStructure(9, IntWrapper.getMaxValue(), deposit)
-			.addCondition({
-				type: "cmi:block_exist",
-				blocks: [block.id]
-			})
+			.blocksInStructure(1, IntWrapper.getMaxValue(), block)
 			.slotName("cooler", (recipeS) => {
 				recipeS.perTick((recipeP) => {
 					recipeP.outputFluids(Fluid.of("neoecoae:cryotheum_solution", 5000))
