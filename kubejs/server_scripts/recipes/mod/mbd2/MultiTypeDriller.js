@@ -2,6 +2,23 @@ ServerEvents.recipes((event) => {
 	let { cmi } = event.getRecipes()
 
 	/**
+	 * 每桶冷却剂支持运行时间
+	 */
+	const perCoolerBucketTicks = 20
+
+	const DRILLER_BLOCKS = {
+		0: Cmi.loadResource("driller_head").toString(),
+		1: Cmi.loadResource("driller_fluid_pump").toString(),
+		2: Cmi.loadResource("driller_gas_pump").toString()
+	}
+
+	// 燃料(冷却剂)
+	cmi.multi_type_driller()
+		.duration(perCoolerBucketTicks)
+		.isFuel(true)
+		.inputFluids(Fluid.of("cmi:glacious_cryotheum", 1000))
+
+	/**
 	 * 
 	 * @param {Internal.Block_} deposit - 矿藏方块
 	 */
@@ -92,15 +109,9 @@ ServerEvents.recipes((event) => {
 		return this
 	}
 
-	const DRILLER_BLOCKS = {
-		0: Cmi.loadResource("driller_head").toString(),
-		1: Cmi.loadResource("driller_fluid_pump").toString(),
-		2: Cmi.loadResource("driller_gas_pump").toString()
-	}
-
 	/**
 	 * 
-	 * @param {number} energy 
+	 * @param {number} energy
 	 * @returns {(recipe: Special.Recipes.MultiTypeDrillerCmi) => Special.Recipes.MultiTypeDrillerCmi}
 	 */
 	function energyPerTick(energy) {
@@ -121,7 +132,7 @@ ServerEvents.recipes((event) => {
 			.addCondition(BlockExistCondition["of(java.lang.String[])"](DRILLER_BLOCKS[block]))
 			.slotName("cooler", (coolerRecipe) => {
 				coolerRecipe.perTick((perTickCoolerRecipe) => {
-					perTickCoolerRecipe.outputFluids(Fluid.of("neoecoae:cryotheum_solution", 5000))
+					perTickCoolerRecipe.outputFluids(Fluid.of("neoecoae:cryotheum_solution", 1000 / perCoolerBucketTicks))
 				})
 			})
 	}
@@ -138,10 +149,7 @@ ServerEvents.recipes((event) => {
 			["minecraft:redstone", "minecraft:amethyst_shard", "tconstruct:earth_slime_crystal"],
 			"mekanism:clump_iron"
 		])
-		.fluid([
-			Fluid.of("tconstruct:molten_iron", 50),
-			Fluid.of("thermal_extra:raw_iron", 50)
-		])
+		.fluid(Fluid.of("tconstruct:molten_iron", 50))
 		.gas("100x mekanism:hydrogen")
 		.duration(100, 1.5, 2)
 		.energy(100, 1, 2)
@@ -166,9 +174,62 @@ ServerEvents.recipes((event) => {
 		.duration(10)
 		.energy(10000)
 
-	// 燃料(冷却剂)
-	cmi.multi_type_driller()
-		.duration(1)
-		.isFuel(true)
-		.inputFluids(Fluid.of("cmi:glacious_cryotheum", 5000))
+	new DrillingRecipe(Block.getBlock("create_rns:coal_deposit_block"))
+		.item([
+			"cmi:deposit_dust",
+			["cmi:deposit_dust", "mekanism:dust_coal"],
+			"mekanism:dust_coal",
+			["minecraft:coal", "minecraft:amethyst_shard", "tconstruct:earth_slime_crystal"],
+			"minecraft:diamond"
+		])
+		.fluid(Fluid.of("minecraft:water", 50))
+		.gas("20x mekanism:hydrogen")
+		.duration(100, 1.5, 2)
+		.energy(100, 1, 2)
+
+	new DrillingRecipe(Block.getBlock("create_rns:copper_deposit_block"))
+		.item([
+			"cmi:deposit_dust",
+			["cmi:deposit_dust", "mekanism:dirty_dust_copper"],
+			"thermal_extra:copper_ore_chunk",
+			["minecraft:raw_copper", "create:crushed_raw_copper"],
+			["minecraft:clay_ball", "minecraft:amethyst_shard", "tconstruct:sky_slime_crystal"],
+			"minecraft:clay"
+		])
+		.fluid(Fluid.of("tconstruct:molten_copper", 50))
+		.gas("100x mekanism:oxygen")
+		.duration(100, 1.5, 2)
+		.energy(100, 1, 2)
+
+	new DrillingRecipe(Block.getBlock("create_rns:quartz_deposit_block"))
+		.item([
+			"cmi:deposit_dust",
+			["cmi:deposit_dust", "thermal:quartz_dust"],
+			"thermal:quartz_dust",
+			["tconstruct:cobalt_shard", "create:cinder_flour"],
+			["ae2:certus_quartz_crystal", "minecraft:quartz"],
+			["minecraft:blackstone", "minecraft:netherrack", "cmi:deposit_dust"],
+			["minecraft:nether_quartz_ore", "cmi:quartz_ore", "cmi:deepslate_quartz_ore"]
+		])
+		.fluid(Fluid.of("tconstruct:molten_quartz", 50))
+		.gas("100x mekanism:hydrogen")
+		.duration(100, 1.5, 2)
+		.energy(100, 1, 2)
+
+	new DrillingRecipe(Block.getBlock("cmi:cheese_deposit_block"))
+		.item([
+			"cmi:deposit_dust",
+			["cmi:deposit_dust", "ad_astra:cheese"],
+			"tconstruct:cheese_ingot",
+			["ad_astra:cheese", "cmi:deposit_dust"],
+			["tconstruct:cheese_ingot", "ad_astra:cheese"],
+			["tconstruct:cheese_ingot", "minecraft:amethyst_shard"],
+			"ad_astra:cheese_block",
+			"tconstruct:cheese_block",
+			"ad_astra:moon_cheese_ore"
+		])
+		.fluid(Fluid.of("minecraft:milk", 50))
+		.gas("20x mekanism:hydrogen")
+		.duration(100, 1.5, 2)
+		.energy(100, 1, 2)
 })
