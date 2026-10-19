@@ -15,8 +15,6 @@ JEIEvents.hideItems((event) => {
 	hideItemFromJEI("vintageimprovements:belt_grinder")
 	hideItemFromJEI("@torcherino")
 	hideItemFromJEI("@pipez_optimizer")
-	hideItemFromJEI("steampowered:brass_flywheel")
-	hideItemFromJEI("steampowered:furnace_engine")
 	hideItemFromJEI("cmi:green_screen")
 	hideItemFromJEI("cmi:cmi_icon")
 	hideItemFromJEI("cmi:gold_saping")

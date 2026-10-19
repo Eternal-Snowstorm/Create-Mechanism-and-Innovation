@@ -215,7 +215,12 @@ ServerEvents.recipes((event) => {
 		"thermal:machines/smelter/smelter_alloy_rose_gold",
 		"createaddition:compat/tconstruct/tinkers_bronze",
 		"vintageimprovements:pressurizing/sulfur_dioxide",
-		"createdieselgenerators:crushing/wood_chip_casings"
+		"createdieselgenerators:crushing/wood_chip_casings",
+		"steam_letters:crafting/shaped/burner/fluid_ingot",
+		"steam_letters:crafting/shaped/bronze_basin_plate",
+		"steam_letters:crafting/shaped/bronze_basin_ingot",
+		"steam_letters:crafting/shaped/burner/fluid_ingot",
+		"steam_letters:crafting/shaped/burner/solid_plate"
 	])
 
 	let removedMods = [
@@ -232,9 +237,6 @@ ServerEvents.recipes((event) => {
 		"@pipez_optimizer",
 		"vintageimprovements:belt_grinder",
 		"createdieselgenerators:chip_wood_block",
-		"steampowered:alternator",
-		"steampowered:pressurized_gas_container",
-		"steampowered:pressurized_steam_container",
 		"#forge:ingots/steel",
 		"#forge:storage_blocks/steel",
 		"quark:grate",

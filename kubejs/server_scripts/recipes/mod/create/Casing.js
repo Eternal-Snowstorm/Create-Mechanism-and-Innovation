@@ -20,7 +20,7 @@ ServerEvents.recipes((event) => {
 	create.deploying(Casing.BRONZE, [
 		Casing.INDUSTRY,
 		"cmi:bronze_casing_framework"
-	])
+	]).id("steam_letters:item_application/bronze_casing_plate")
 
 	// 安山机壳
 	create.item_application(Casing.ANDESITE, [
@@ -44,5 +44,5 @@ ServerEvents.recipes((event) => {
 	create.item_application(Casing.BRONZE, [
 		Casing.INDUSTRY,
 		["#forge:ingots/bronze", "#forge:plates/bronze"]
-	]).id("cmi:item_application/bronze_casing")
+	]).id("steam_letters:item_application/bronze_casing_ingot")
 })

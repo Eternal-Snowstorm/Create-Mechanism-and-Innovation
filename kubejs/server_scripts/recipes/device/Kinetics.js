@@ -270,7 +270,7 @@ ServerEvents.recipes((event) => {
 	}).id("create:crafting/kinetics/contraption_controls")
 
 	// 蒸汽锤
-	kubejs.shaped("cmi:steam_hammer", [
+	kubejs.shaped("steam_letters:steam_hammer", [
 		"PCP",
 		"MGM",
 		" X "

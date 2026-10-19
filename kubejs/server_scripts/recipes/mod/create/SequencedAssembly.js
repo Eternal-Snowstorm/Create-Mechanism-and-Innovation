@@ -175,7 +175,7 @@ ServerEvents.recipes((event) => {
 		CAPACITOR: seqItems("ad_astra:etrionic_capacitor", "#forge:plates/steel", "ad_astra:etrionic_core"),
 		COOLER: seqItems("cmi:nuke_cooler", "#forge:plates/stainless_steel", "cmi:incomplete_nuke_cooler"),
 		NUKE: seqItems("cmi:nuke_cooler", "alexscaves:charred_remnant", "cmi:incomplete_nuke_cooler"),
-		GAS: seqItems("steampowered:pressurized_gas_container", "#forge:plates/aluminum", "cmi:incomplete_gas_container"),
+		GAS: seqItems("steam_letters:empty_steam_container", "#forge:plates/aluminum", "cmi:incomplete_gas_container"),
 		ROTOR: seqItems("cmi:motor_rotor", "#forge:rods/iron", "cmi:incomplete_motor_rotor"),
 		THERMAL_AUG: seqItems(Mechanisms.THERMAL.AUG, "#forge:gears/constantan", "cmi:incomplete_thermal_mechanism_augment"),
 		DIAMOND_FROM_COAL: seqItems("minecraft:diamond", "#forge:storage_blocks/coal", "minecraft:coal"),
@@ -247,6 +247,7 @@ ServerEvents.recipes((event) => {
 		.pressing()
 		.vacuumizing()
 		.build()
+		.id("steam_letters:crafting/shaped/empty_steam_container")
 
 	// 电动机转子
 	new SequencedAssemblyRecipe(Seq.ROTOR)

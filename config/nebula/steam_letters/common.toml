@@ -1,0 +1,110 @@
+
+#steam_letters.config.general.comment
+[general]
+
+	[general.steam]
+		#Range: 0.0 ~ 1.0
+		superheated_steam_consumption_multiplier = 0.25
+		#steam_letters.config.steam.output_steam_fluid.comment
+		output_steam_fluid = "steam_letters:steam"
+
+	[general.bronze_basin]
+		#Range: 1000 ~ 1000000
+		slot_capacity = 16000
+
+	[general.steam_hammer]
+		#Range: 1 ~ 64
+		steam_hammer_parallel = 64
+		#Range: 0 ~ 1000000
+		steam_consumption = 1000
+		#Range: 1000 ~ 1000000
+		steam_capacity = 10000
+
+	[general.steam_mixer]
+		#Range: 1 ~ 64
+		steam_mixer_parallel = 16
+		#Range: 0 ~ 1000000
+		steam_consumption = 1000
+		#Range: 1000 ~ 1000000
+		steam_capacity = 10000
+
+	[general.steam_saw]
+		#Range: 1 ~ 64
+		steam_saw_parallel = 16
+		#Range: 0 ~ 1000000
+		steam_consumption = 500
+		#Range: 1000 ~ 1000000
+		steam_capacity = 10000
+		#Range: 0.01 ~ 100.0
+		processing_time_multiplier = 0.25
+
+	[general.advanced_spout]
+		#Range: 2000 ~ 1000000
+		capacity = 5000
+		#Range: 1 ~ 20
+		parallel = 8
+
+	[general.steam_boiler]
+		#steam_letters.config.steam_boiler.efficiency_threshold_1.comment
+		#Range: 0 ~ 100
+		efficiency_threshold_1 = 25
+		#Range: 0 ~ 100
+		efficiency_threshold_2 = 50
+		#Range: 0 ~ 100
+		efficiency_threshold_3 = 75
+		#steam_letters.config.steam_boiler.efficiency_threshold_4.comment
+		#Range: 0 ~ 100
+		efficiency_threshold_4 = 100
+		#Range: 0.0 ~ 1.0
+		efficiency_1 = 0.25
+		#Range: 0.0 ~ 1.0
+		efficiency_2 = 0.5
+		#Range: 0.0 ~ 1.0
+		efficiency_3 = 0.75
+		#Range: 0.0 ~ 1.0
+		efficiency_4 = 1.0
+
+	[general.solar_boiler]
+		#steam_letters.config.solar_boiler.sunlight_efficiency.comment
+		#Range: 0.0 ~ 1.0
+		sunlight_efficiency = 1.0
+		#steam_letters.config.solar_boiler.artificial_light_efficiency.comment
+		#Range: 0.0 ~ 1.0
+		artificial_light_efficiency = 0.5
+		#steam_letters.config.solar_boiler.artificial_light_threshold.comment
+		#Range: 0 ~ 15
+		artificial_light_threshold = 8
+		#steam_letters.config.solar_boiler.require_daylight.comment
+		require_daylight = true
+		#steam_letters.config.solar_boiler.rain_efficiency.comment
+		#Range: 0.0 ~ 1.0
+		rain_efficiency = 0.5
+		#steam_letters.config.solar_boiler.thunder_efficiency.comment
+		#Range: 0.0 ~ 1.0
+		thunder_efficiency = 0.25
+
+	[general.steam_burner]
+		#steam_letters.config.steam_burner.heat_gain_percent_per_second.comment
+		#Range: 0.0 ~ 100.0
+		heat_gain_percent_per_second = 0.5
+		#steam_letters.config.steam_burner.heat_loss_percent_per_second.comment
+		#Range: 0.0 ~ 100.0
+		heat_loss_percent_per_second = 1.0
+
+	[general.steam_engine]
+		#steam_letters.config.steam_engine.suck_efficiency.comment
+		#Range: 0.0 ~ 1.0
+		suck_efficiency = 0.75
+		#steam_letters.config.steam_engine.superheated_consumption_multiplier.comment
+		#Range: 0.0 ~ 1.0
+		superheated_consumption_multiplier = 0.5
+		#steam_letters.config.steam_engine.heatup_acceleration.comment
+		#Range: 0.1 ~ 100.0
+		heatup_acceleration = 0.5
+		#steam_letters.config.steam_engine.superheated_acceleration_multiplier.comment
+		#Range: 1.0 ~ 100.0
+		superheated_acceleration_multiplier = 2.0
+		#steam_letters.config.steam_engine.superheated_output_multiplier.comment
+		#Range: 1.0 ~ 100.0
+		superheated_output_multiplier = 1.5
+

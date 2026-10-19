@@ -13,8 +13,7 @@ ServerEvents.highPriorityData((event) => {
 
 	// 蒸汽
 	addUnification("steam", [
-		"steampowered:steam",
-		"create_steam_ages:steam"
+		"steam_letters:steam"
 	], "mekanism:steam")
 
 	// 杂酚油

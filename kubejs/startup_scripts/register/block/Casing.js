@@ -22,15 +22,6 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiToolType.PICKAXE.tag())
 		.tagBlock(CmiMiningLevel.STONE.tag())
 
-	// 青铜
-	addCasing("bronze")
-		.textureAll(Cmi.loadResource("block/casing/bronze/casing"))
-		.soundType(SoundType.COPPER)
-		.hardness(5)
-		.resistance(5)
-		.tagBlock(CmiToolType.PICKAXE.tag())
-		.tagBlock(CmiMiningLevel.STONE.tag())
-
 	// 钢
 	addCasing("steel")
 		.textureAll(Cmi.loadResource("block/casing/steel/casing"))

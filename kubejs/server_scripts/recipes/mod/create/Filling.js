@@ -78,12 +78,6 @@ ServerEvents.recipes((event) => {
 		Fluid.of("create_enchantment_industry:experience", 180)
 	])
 
-	// 高压蒸汽容器
-	create.filling("steampowered:pressurized_steam_container", [
-		"steampowered:pressurized_gas_container",
-		CreateFluidIngredient.ofTagId("forge:steam", 1000)
-	])
-
 	// 幻晶原石
 	create.filling("cmi:dreamcore_ore", [
 		"cmi:dreamcore_seed",

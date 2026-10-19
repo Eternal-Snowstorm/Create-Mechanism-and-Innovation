@@ -153,7 +153,6 @@ ServerEvents.tags("fluid", (event) => {
 
 	// 蒸汽
 	event.get("forge:steam")
-		.add("steampowered:steam")
 		.add("mekanism:steam")
 
 	// 柴油

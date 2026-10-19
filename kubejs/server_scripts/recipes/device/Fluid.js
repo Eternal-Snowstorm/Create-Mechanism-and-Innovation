@@ -84,12 +84,12 @@ ServerEvents.recipes((event) => {
 	}).id("create:crafting/kinetics/spout")
 
 	// 高级注液器
-	kubejs.shaped("cmi:advanced_spout", [
+	kubejs.shaped("steam_letters:advanced_spout", [
 		"ABA",
 		"CDC",
 		" E "
 	], {
-		A: ["#forge:ingots/cast_iron", "#forge:plates/cast_iron"],
+		A: ["#forge:ingots/bronze", "#forge:plates/bronze"],
 		B: "vintageimprovements:redstone_module",
 		C: Mechanisms.COPPER.COM,
 		D: "create:spout",

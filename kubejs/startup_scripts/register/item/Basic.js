@@ -108,7 +108,7 @@ StartupEvents.registry("item", (event) => {
 	// 热力单元
 	addItem("thermal_unit")
 		.texture(Cmi.loadResource("item/material/unit/thermal"))
-	
+
 	let unitTypes = [
 		"basalz",
 		"blaze",
@@ -206,7 +206,7 @@ StartupEvents.registry("item", (event) => {
 		"elite",
 		"ultimate"
 	]
-	
+
 	mekTiers.forEach((tier) => {
 		addItem(`${tier}_electronic_components`)
 			.texture(Cmi.loadResource(`item/material/electronic_components/${tier}`))
@@ -298,8 +298,8 @@ StartupEvents.registry("item", (event) => {
 		 */
 		cogwheel(material) {
 			const PARENT = "cmi:item/cogwheels/cogwheel"
-			const PARTICLE = `steampowered:block/cogwheel/${material}_cogwheel`
-			const COGWHEEL = `steampowered:block/cogwheel/${material}_cogwheel`
+			const PARTICLE = `cmi:block/cogwheel/${material}/small`
+			const COGWHEEL = `cmi:block/cogwheel/${material}/small`
 
 			return {
 				"parent": PARENT,
@@ -316,8 +316,8 @@ StartupEvents.registry("item", (event) => {
 		 */
 		largeCogwheel(material) {
 			const PARENT = "cmi:item/cogwheels/large_cogwheel"
-			const PARTICLE = `steampowered:block/cogwheel/${material}_large_cogwheel`
-			const LARGE_COGWHEEL = `steampowered:block/cogwheel/${material}_large_cogwheel`
+			const PARTICLE = `cmi:block/cogwheel/${material}/large`
+			const LARGE_COGWHEEL = `cmi:block/cogwheel/${material}/large`
 
 			return {
 				"parent": PARENT,

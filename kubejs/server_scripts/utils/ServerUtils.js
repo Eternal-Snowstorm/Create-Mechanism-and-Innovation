@@ -241,7 +241,7 @@ let Processor = Object.freeze({
 let Casing = Object.freeze({
 	ANDESITE: "create:andesite_casing",
 	COPPER: "create:copper_casing",
-	BRONZE: "cmi:bronze_casing",
+	BRONZE: "steam_letters:bronze_casing",
 	BRASS: "create:brass_casing",
 	RAILWAY: "create:railway_casing",
 	INDUSTRY: "cmi:industrial_frame",

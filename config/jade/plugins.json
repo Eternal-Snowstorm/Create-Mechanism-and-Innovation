@@ -77,9 +77,6 @@
     "registry_name": "ADVANCED_TOOLTIPS",
     "mod_name": true
   },
-  "custommachinery": {
-    "machine_component_provider": true
-  },
   "ae2": {
     "part_icon": true,
     "charger": true,
@@ -138,10 +135,14 @@
     "common": true
   },
   "neoecoae": {
+    "large_workstation_current_inputs": true,
     "eco_computation_system": true,
     "eco_drive": true,
     "eco_crafting_worker": true,
-    "eco_crafting_system": true
+    "eco_storage_interface": true,
+    "eco_storage_system": true,
+    "eco_crafting_system": true,
+    "eco_computation_drive": true
   },
   "fluidlogistics": {
     "blaze_cooler_icon": true
