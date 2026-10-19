@@ -4,7 +4,7 @@ ServerEvents.recipes((event) => {
 	/**
 	 * 每桶冷却剂支持运行时间
 	 */
-	const perCoolerBucketTicks = 20
+	let perCoolerBucketTicks = 20
 
 	const DRILLER_BLOCKS = {
 		0: Cmi.loadResource("driller_head").toString(),
@@ -98,6 +98,23 @@ ServerEvents.recipes((event) => {
 
 	/**
 	 * 
+	 * @param {Internal.Biome_ | Internal.Biome_[]} biomes - 生物群系, 必须为id字符串或id字符串数组
+	 * @returns {DrillingRecipe}
+	 */
+	DrillingRecipe.prototype.biome = function (biomes) {
+		let biomeList = Array.isArray(biomes) ? biomes : [biomes]
+
+		biomeList.forEach((biome) => {
+			Object.values(this.recipe).forEach((recipe) => {
+				recipe.biome(biome)
+			})
+		})
+
+		return this
+	}
+
+	/**
+	 * 
 	 * @param {ResourceLocation_} id 
 	 * @returns {DrillingRecipe}
 	 */
@@ -127,14 +144,17 @@ ServerEvents.recipes((event) => {
 	 * @returns {Special.Recipes.MultiTypeDrillerCmi}
 	 */
 	function autoRecipe(deposit, block) {
-		return cmi.multi_type_driller()
-			.blocksInStructure(9, IntWrapper.getMaxValue(), deposit)
-			.addCondition(BlockExistCondition["of(java.lang.String[])"](DRILLER_BLOCKS[block]))
-			.slotName("cooler", (coolerRecipe) => {
-				coolerRecipe.perTick((perTickCoolerRecipe) => {
-					perTickCoolerRecipe.outputFluids(Fluid.of("neoecoae:cryotheum_solution", 1000 / perCoolerBucketTicks))
-				})
+		let recipe = cmi.multi_type_driller()
+
+		recipe.blocksInStructure(9, IntWrapper.getMaxValue(), deposit)
+		recipe.addCondition(BlockExistCondition["of(java.lang.String[])"](DRILLER_BLOCKS[block]))
+		recipe.slotName("cooler", (coolerRecipe) => {
+			coolerRecipe.perTick((perTickCoolerRecipe) => {
+				perTickCoolerRecipe.outputFluids(Fluid.of("neoecoae:cryotheum_solution", 1000 / perCoolerBucketTicks))
 			})
+		})
+
+		return recipe
 	}
 
 	new DrillingRecipe(Block.getBlock("create_rns:iron_deposit_block"))
@@ -153,6 +173,10 @@ ServerEvents.recipes((event) => {
 		.gas("100x mekanism:hydrogen")
 		.duration(100, 1.5, 2)
 		.energy(100, 1, 2)
+		.biome([
+			"minecraft:plains", 
+			"minecraft:meadow"
+		])
 
 	new DrillingRecipe(Block.getBlock("create_rns:redstone_deposit_block"))
 		.item([
