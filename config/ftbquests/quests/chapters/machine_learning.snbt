@@ -7,7 +7,12 @@
 	icon: "create:cogwheel"
 	id: "6321CD3C9CD74246"
 	order_index: 1
-	quest_enhance_decorative_lines: [ ]
+	quest_enhance_decorative_lines: [{
+		nodes: [
+			"q:29aceba79b437add"
+			"q:4770fd5523e851d4"
+		]
+	}]
 	quest_enhance_hidden_dependency_lines: [ ]
 	quest_links: [ ]
 	quests: [
@@ -231,7 +236,7 @@
 				{
 					count: 16L
 					id: "5ACD140809A480D3"
-					item: { Count: 16, id: "create:andesite_casing" }
+					item: "create:andesite_casing"
 					type: "item"
 				}
 			]
@@ -392,7 +397,7 @@
 			tasks: [{
 				count: 27L
 				id: "02C27A7E7E4E2731"
-				item: { Count: 27, id: "tconstruct:seared_bricks" }
+				item: "tconstruct:seared_bricks"
 				type: "item"
 			}]
 			x: -17.5d
@@ -1229,6 +1234,23 @@
 			}]
 			x: -11.5d
 			y: 20.5d
+		}
+		{
+			dependencies: ["29ACEBA79B437ADD"]
+			description: ["把桶/碗放在树液漏斗下面之后会发现只能收集植物胶乳但是取不出来，因为这个玩意就是收集用的，需要用其他方式把胶乳导出来。这个时候就可以&6用浇筑口&r把液体输出出来，等后面就可以用流体管道输出了。"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: "tconstruct:seared_faucet"
+			id: "4770FD5523E851D4"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "导出来"
+			tasks: [{
+				id: "77D93481AF36197F"
+				type: "checkmark"
+			}]
+			title: "一点冷知识"
+			x: -17.5d
+			y: 18.5d
 		}
 	]
 	title: "巧械奇工"

@@ -682,25 +682,25 @@
 				{
 					count: 12L
 					id: "682B20FB7EB98377"
-					item: { Count: 12, id: "create:brass_block" }
+					item: "create:brass_block"
 					type: "item"
 				}
 				{
 					count: 12L
 					id: "02E78C4D599922E6"
-					item: { Count: 12, id: "cmi:brass_stairs" }
+					item: "cmi:brass_stairs"
 					type: "item"
 				}
 				{
 					count: 4L
 					id: "265C5E18F5A85D6A"
-					item: { Count: 4, id: "minecraft:amethyst_block" }
+					item: "minecraft:amethyst_block"
 					type: "item"
 				}
 				{
 					count: 4L
 					id: "26EC5635E250B87E"
-					item: { Count: 4, id: "minecraft:amethyst_cluster" }
+					item: "minecraft:amethyst_cluster"
 					type: "item"
 				}
 				{
@@ -760,19 +760,19 @@
 				{
 					count: 3L
 					id: "0C2154218B50ABA6"
-					item: { Count: 3, id: "cmi:industrial_iron_slab" }
+					item: "cmi:industrial_iron_slab"
 					type: "item"
 				}
 				{
 					count: 6L
 					id: "20351D1728E461AE"
-					item: { Count: 6, id: "cmi:industrial_iron_stairs" }
+					item: "cmi:industrial_iron_stairs"
 					type: "item"
 				}
 				{
 					count: 11L
 					id: "03A2201DB1679FA2"
-					item: { Count: 11, id: "create:industrial_iron_block" }
+					item: "create:industrial_iron_block"
 					type: "item"
 				}
 				{

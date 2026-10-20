@@ -94,7 +94,7 @@ ServerEvents.recipes((event) => {
 		C: Mechanisms.COPPER.COM,
 		D: "create:spout",
 		E: "thermal:cured_rubber"
-	})
+	}).id("steam_letters:crafting/shaped/advanced_spout")
 
 	// 智能管道
 	kubejs.shaped("2x create:smart_fluid_pipe", [

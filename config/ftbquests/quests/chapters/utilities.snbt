@@ -611,25 +611,6 @@
 			x: 2.0d
 			y: 5.0d
 		}
-		{
-			dependencies: ["714D1AC6D07BEEC0"]
-			description: [""]
-			hide_dependency_lines: true
-			id: "60E5FD161023647E"
-			quest_enhance_disable_scroll_paging: false
-			size: 1.0d
-			tasks: [{
-				id: "091CB2E9E3745B6B"
-				item: {
-					Count: 1
-					id: "mbtool:mbtool"
-					tag: { }
-				}
-				type: "item"
-			}]
-			x: 12.0d
-			y: 7.0d
-		}
 	]
 	title: "实用工具"
 }

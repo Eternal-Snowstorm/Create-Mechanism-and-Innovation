@@ -594,7 +594,7 @@
 				{
 					count: 3L
 					id: "1B04CE11FCECC1C8"
-					item: { Count: 3, id: "tconstruct:seared_faucet" }
+					item: "tconstruct:seared_faucet"
 					type: "item"
 				}
 				{
@@ -1017,7 +1017,7 @@
 				{
 					count: 16L
 					id: "3DF1CBE5B92EA172"
-					item: { Count: 16, id: "create:andesite_alloy" }
+					item: "create:andesite_alloy"
 					type: "item"
 				}
 			]
@@ -1259,6 +1259,21 @@
 			title: "任意 开掘铲"
 			x: 17.5d
 			y: 13.5d
+		}
+		{
+			dependencies: ["26DFF62383774404"]
+			description: ["整合包默认开启了&4无限熔岩&r（像无限水一样），不需要做一万格的超大熔岩泳池了"]
+			id: "0A91D4F9A4266A20"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "无限的熔岩"
+			tasks: [{
+				id: "5048AF13395022E0"
+				item: "minecraft:lava_bucket"
+				type: "item"
+			}]
+			title: "无限燃料"
+			x: 12.0d
+			y: 16.5d
 		}
 	]
 	title: "炽焰匠心"

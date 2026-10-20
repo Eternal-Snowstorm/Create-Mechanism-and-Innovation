@@ -216,11 +216,10 @@ ServerEvents.recipes((event) => {
 		"createaddition:compat/tconstruct/tinkers_bronze",
 		"vintageimprovements:pressurizing/sulfur_dioxide",
 		"createdieselgenerators:crushing/wood_chip_casings",
-		"steam_letters:crafting/shaped/burner/fluid_ingot",
-		"steam_letters:crafting/shaped/bronze_basin_plate",
-		"steam_letters:crafting/shaped/bronze_basin_ingot",
-		"steam_letters:crafting/shaped/burner/fluid_ingot",
-		"steam_letters:crafting/shaped/burner/solid_plate"
+		"steam_letters:crafting/shaped/solar_boiler",
+		"steam_letters:crafting/shaped/boiler",
+		"steam_letters:crafting/shaped/burner/solid",
+		"steam_letters:crafting/shaped/burner/fluid"
 	])
 
 	let removedMods = [

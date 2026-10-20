@@ -6,7 +6,8 @@ ServerEvents.recipes((event) => {
 		"ae2:matter_ball",
 		"200x mekanism:nuclear_waste",
 		Fluid.tag("tag", "forge:molten_lead", 90),
-		"4x mekanism:reprocessed_fissile_fragment"
+		"4x mekanism:reprocessed_fissile_fragment",
+		"10x mekanism:depleted_nuclear_waste"
 	).energyRequired(1000).duration(60)
 		.id("mekanism:processing/uranium/reprocessing/from_plutonium")
 
