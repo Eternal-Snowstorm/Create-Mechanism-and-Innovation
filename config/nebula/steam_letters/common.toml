@@ -6,7 +6,7 @@
 		#Range: 0.0 ~ 1.0
 		superheated_steam_consumption_multiplier = 0.25
 		#steam_letters.config.steam.output_steam_fluid.comment
-		output_steam_fluid = "steam_letters:steam"
+		output_steam_fluid = "mekanism:steam"
 
 	[general.bronze_basin]
 		#Range: 1000 ~ 1000000
