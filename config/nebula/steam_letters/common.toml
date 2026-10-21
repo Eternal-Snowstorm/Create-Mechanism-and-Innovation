@@ -6,7 +6,7 @@
 	superheated_steam_consumption_multiplier = 0.25
 	#Fluid id produced by steam boilers and solar boilers.
 	#Existing tank contents are never converted when this changes.
-	output_steam_fluid = "steam_letters:steam"
+	output_steam_fluid = "mekanism:steam"
 
 [bronze_basin]
 	#Fluid capacity of each tank of a bronze basin (mB).
