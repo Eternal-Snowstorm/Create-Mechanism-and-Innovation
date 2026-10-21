@@ -106,12 +106,12 @@
 	thunder_efficiency = 0.25
 
 [steam_burner]
-	#Heat gained per second while burning fuel, as a percentage of the burner max heat.
-	#Range: 0.0 ~ 100.0
-	heat_gain_percent_per_second = 0.5
-	#Heat lost per second while no fuel is burning, as a percentage of the burner max heat.
-	#Range: 0.0 ~ 100.0
-	heat_loss_percent_per_second = 1.0
+	#Total time required to heat up while burning fuel, as time required for the burner to reach max heat.
+	#Range: 0.0 ~ 10000.0
+	heatup_seconds = 10.0
+	#Total time to lose all heat while no fuel is burning, as time required for the burner to lose all heat.
+	#Range: 0.0 ~ 10000.0
+	cooldown_seconds = 5.0
 
 [steam_engine]
 	#Efficiency (0~1) of steam drawn directly from an adjacent boiler.
@@ -121,13 +121,13 @@
 	#Steam consumption multiplier applied while the flywheel engine runs on superheated steam. 0.5 means it only needs half the steam of a normal-steam run.
 	#Range: 0.0 ~ 1.0
 	superheated_consumption_multiplier = 0.5
-	#Steam consumption ramp-up (mB/tick per tick) while the flywheel engine is heating up. 0.5 means a 12 mB/tick engine needs 24 ticks to reach full consumption.
-	#Range: 0.1 ~ 100.0
-	heatup_acceleration = 0.5
 	#Heat-up acceleration multiplier applied while running on superheated steam.
 	#Range: 1.0 ~ 100.0
 	superheated_acceleration_multiplier = 2.0
 	#Stress output multiplier applied while running on superheated steam.
 	#Range: 1.0 ~ 100.0
 	superheated_output_multiplier = 1.5
+	#Steam consumption multiplier applied while the flywheel engine runs on superheated steam. 0.5 means it only needs half the steam of a normal-steam run.
+	#Range: 0.0 ~ 10000.0
+	heatup_seconds = 2.0
 
