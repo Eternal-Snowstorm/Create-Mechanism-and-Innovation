@@ -1,5 +1,4 @@
 StartupEvents.registry("block", (event) => {
-
 	event.create("cmi:cast_iron_solar_boiler", "steam_letters:solar")
 		.material("steam_letters:cast_iron")
 		.production(24)

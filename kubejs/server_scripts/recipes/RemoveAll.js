@@ -219,7 +219,10 @@ ServerEvents.recipes((event) => {
 		"steam_letters:crafting/shaped/solar_boiler",
 		"steam_letters:crafting/shaped/boiler",
 		"steam_letters:crafting/shaped/burner/solid",
-		"steam_letters:crafting/shaped/burner/fluid"
+		"steam_letters:crafting/shaped/burner/fluid",
+		"steam_letters:fluid_fuel/blazing_blood",
+		"steam_letters:fluid_fuel/lava",
+		"fluidlogistics:copper_basin"
 	])
 
 	let removedMods = [

@@ -107,6 +107,11 @@ ServerEvents.highPriorityData((event) => {
 		"cmi:dummy_hive_hopper_bee_nest"
 	], "minecraft:bee_nest")
 
+	addUnification("advanced_basin", [
+		"fluidlogistics:copper_basin",
+		"steam_letters:bronze_basin"
+	], "steam_letters:bronze_basin")
+
 	/**
 	 * 
 	 * @param {string} name

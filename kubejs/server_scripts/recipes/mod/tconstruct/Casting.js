@@ -45,12 +45,12 @@ ServerEvents.recipes((event) => {
 		.id("tconstruct:tools/modifiers/silky_cloth")
 
 	// 铜工作台
-	tconstruct.casting_basin("fluidlogistics:copper_basin")
+	tconstruct.casting_basin("steam_letters:bronze_basin")
 		.fluid(Fluid.of("tconstruct:molten_copper", 90 * 8))
 		.cast("create:basin")
 		.cast_consumed(true)
 		.cooling_time(20 * 4)
-		.id("fluidlogistics:copper_basin")
+		.id("steam_letters:crafting/shaped/bronze_basin")
 
 	// 伊甸水晶
 	tconstruct.casting_basin("cmi:eden_crystal")

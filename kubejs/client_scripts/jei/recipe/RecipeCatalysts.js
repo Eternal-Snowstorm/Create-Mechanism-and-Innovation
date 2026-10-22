@@ -44,22 +44,8 @@ JEIAddedEvents.registerRecipeCatalysts((event) => {
 
 	addJeiRecipeCatalysts("immersiveindustry:crucible", "immersiveindustry:crucible")
 
-	// addJeiRecipeCatalysts("immersiveengineering:coke_oven", "cmi:reinforced_coke_oven")
-
 	addJeiRecipeCatalysts("createdieselgenerators:hammering", [
 		"cmi:flint_hammer",
 		"cmi:diamond_hammer"
 	])
-
-	addJeiRecipeCatalysts([
-		"create:spout_filling",
-		"createdieselgenerators:casting"
-	], "cmi:advanced_spout")
-
-	addJeiRecipeCatalysts([
-		"create:automatic_packing",
-		"create:packing",
-		"create:pressing",
-		"createdieselgenerators:compression_molding"
-	], "cmi:steam_hammer")
 })
