@@ -1,4 +1,7 @@
-(function () {
+(() => {
+	let $IRadiationManager =
+		Java.loadClass("mekanism.api.radiation.IRadiationManager")
+
 	let FOOD_EATEN = []
 
 	/**
@@ -36,15 +39,23 @@
 		let { player, level, hand } = event
 		let key = `message.${Cmi.MODID}.food.radon_bottle`
 
-		if (hand !== InteractionHand.MAIN_HAND && !level.isClientSide()) {
+		if (hand === InteractionHand.MAIN_HAND && !level.isClientSide()) {
 			player.displayClientMessage(Component.translatable(key).blue(), true)
 
 			if (!player.isCreative()) {
 				player.give("minecraft:glass_bottle")
 			}
 
-			level.runCommandSilent(`mek radiation addEntity ${player.getUsername()} 1145.14`)
-			level.runCommandSilent(`advancement grant ${player.getUsername()} only mekanism:radiation_poisoning`)
+			let advancement = player
+				.getServer()
+				.getAdvancements()
+				.getAdvancement("mekanism:radiation_poisoning")
+
+			$IRadiationManager.INSTANCE.radiate(player, 1145.14)
+
+			if (advancement !== null) {
+				player.getAdvancements().award(advancement, "poisoned")
+			}
 		}
 	})
 })()

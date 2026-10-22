@@ -2,19 +2,6 @@
 #All settings below will only take effect after restarting the server or client.
 [general]
 
-	#Steam Hammer Settings
-	[general.steam_hammer]
-		#Steam consumption per run of steam hammer (mB)
-		#type: int
-		#default: 1000
-		#Range: 0 ~ 1000000
-		steam_consumption = 1000
-		#Steam capacity in steam hammer (mB)
-		#type: int
-		#default: 10000
-		#Range: 1000 ~ 1000000
-		steam_capacity = 10000
-
 	#Accelerator Motor Settings
 	[general.accelerator_motor]
 		#Default speed when placing the Accelerator Motor (RPM)
@@ -27,23 +14,6 @@
 		#default: 128
 		#Range: 1 ~ 256
 		max_speed = 128
-
-	#Advanced Spout Settings
-	[general.advanced_spout]
-		#Filling time in ticks
-		#20 ticks = 1 second
-		#Original spout uses 20 ticks
-		#type: int
-		#default: 5
-		#Range: 1 ~ 100
-		filling_time = 5
-		#Fluid capacity in mB (millibuckets)
-		#1000 mB = 1 bucket
-		#Original spout uses 1000 mB
-		#type: int
-		#default: 5000
-		#Range: 2000 ~ 64000
-		capacity = 5000
 
 	#Void Dust Collector Settings
 	[general.void_dust_collector]
@@ -79,57 +49,6 @@
 		#default: -63
 		#Range: -63 ~ 319
 		min_work_height = -63
-
-	#Solar Boiler Settings
-	[general.solar_boilder]
-		#Water consumption and steam production per tick
-		#type: int
-		#default: 19
-		#Range: 1 ~ 1024
-		bronze_pre_tick_consum_and_production = 19
-		#Boiler's Fluid Capacity
-		#type: int
-		#default: 4000
-		#Range: 1 ~ 100000000
-		bronze_boiler_capacity = 4000
-		#Water consumption and steam production per tick
-		#type: int
-		#default: 38
-		#Range: 1 ~ 1024
-		cast_iron_pre_tick_consum_and_production = 38
-		#Boiler's Fluid Capacity
-		#type: int
-		#default: 8000
-		#Range: 1 ~ 100000000
-		cast_iron_boiler_capacity = 8000
-		#Water consumption and steam production per tick
-		#type: int
-		#default: 75
-		#Range: 1 ~ 1024
-		steel_pre_tick_consum_and_production = 75
-		#Boiler's Fluid Capacity
-		#type: int
-		#default: 12000
-		#Range: 1 ~ 100000000
-		steel_boiler_capacity = 12000
-		#Efficiency multiplier when the boiler runs on artificial light (block light)
-		#1.0 = same as natural light, 0.5 = half efficiency. Set to 0.0 to disable artificial light mode.
-		#type: double
-		#default: 0.5
-		#Range: 0.0 ~ 1.0
-		artificial_light_efficiency_multiplier = 0.5
-		#Efficiency multiplier when the boiler runs under natural light while it is raining
-		#1.0 = same as clear weather, 0.5 = half efficiency. Set to 0.0 to disable running in rain.
-		#type: double
-		#default: 0.5
-		#Range: 0.0 ~ 1.0
-		rain_efficiency_multiplier = 0.5
-		#Efficiency multiplier when the boiler runs under natural light during a thunderstorm
-		#1.0 = same as clear weather, 0.25 = quarter efficiency. Set to 0.0 to disable running in thunderstorms.
-		#type: double
-		#default: 0.25
-		#Range: 0.0 ~ 1.0
-		thunder_efficiency_multiplier = 0.25
 
 	#Space Elevator Settings
 	[general.space_elevator]

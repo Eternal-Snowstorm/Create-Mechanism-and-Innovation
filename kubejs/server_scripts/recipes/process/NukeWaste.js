@@ -5,7 +5,7 @@ ServerEvents.recipes((event) => {
 	cmi.electrolyzer()
 		.inputItems("alexscaves:unrefined_waste")
 		.outputItems("5x alexscaves:toxic_paste")
-		.outputGases("100x mekanism:nuclear_waste")
+		.outputGases("100x cmi:refined_nuke_waste")
 		.duration(20 * 5)
 
 	mekanism.oxidizing(
@@ -21,13 +21,15 @@ ServerEvents.recipes((event) => {
 
 	// 含钋/钚电解液
 	cmi.electrolyzer()
-		.inputItems("4x mekanism:reprocessed_fissile_fragment")
+		.inputGases(["200x cmi:refined_nuke_waste"])
 		.outputFluids([
 			Fluid.of("cmi:polonium_containing_electrolyte", 100),
 			Fluid.of("cmi:plutonium_containing_electrolyte", 100)
 		])
-		.outputGases("100x mekanism:spent_nuclear_waste")
 		.duration(20 * 5)
+		.perTick((recipe) => {
+			recipe.inputFE(1000)
+		})
 
 	// 放射性酸溶液
 	cmi.electrolyzer()
@@ -40,6 +42,9 @@ ServerEvents.recipes((event) => {
 		])
 		.outputGases("100x cmi:radioactive_mixture")
 		.duration(20 * 5)
+		.perTick((recipe) => {
+			recipe.inputFE(1000)
+		})
 
 	// 钚线
 	// 钚电离结晶

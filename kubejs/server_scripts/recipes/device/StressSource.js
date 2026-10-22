@@ -84,76 +84,76 @@ ServerEvents.recipes((event) => {
 	let materials = [
 		{
 			id: "bronze",
-			block: "tconstruct:seared_bricks"
+			block: "tconstruct:seared_bricks",
+			namespace: "steam_letters"
 		},
 		{
 			id: "cast_iron",
-			block: "tconstruct:scorched_bricks"
+			block: "tconstruct:scorched_bricks",
+			namespace: "cmi"
 		},
 		{
 			id: "steel",
-			block: "immersiveengineering:blastbrick"
+			block: "immersiveengineering:blastbrick",
+			namespace: "cmi"
 		}
 	]
 	materials.forEach((material) => {
-		let { id, block } = material
-
-		let ingot = `#forge:ingots/${id}`
-		let plate = `#forge:plates/${id}`
+		let { id, block, namespace } = material
 
 		// 太阳能锅炉
-		kubejs.shaped(`cmi:${id}_solar_boiler`, [
+		kubejs.shaped(`${namespace}:${id}_solar_boiler`, [
 			"ABA",
 			"ACA",
 			"DDD"
 		], {
-			A: [plate, ingot],
+			A: [`#forge:plates/${id}`, `#forge:ingots/${id}`],
 			B: "#forge:plates/silver",
 			C: Mechanisms.STEAM.COM,
 			D: block
 		})
 
 		// 锅炉
-		kubejs.shaped(`steampowered:${id}_boiler`, [
+		kubejs.shaped(`${namespace}:${id}_boiler`, [
 			"AAA",
 			"ACA",
 			"ABA"
 		], {
-			A: [plate, ingot],
+			A: [`#forge:plates/${id}`, `#forge:ingots/${id}`],
 			B: "create:fluid_pipe",
 			C: "create:fluid_tank"
 		})
 
 		// 固体燃烧室
-		kubejs.shaped(`steampowered:${id}_burner`, [
+		kubejs.shaped(`${namespace}:${id}_solid_burner`, [
 			"AAA",
 			"ABA",
 			"CCC"
 		], {
-			A: [plate, ingot],
+			A: [`#forge:plates/${id}`, `#forge:ingots/${id}`],
 			B: Mechanisms.STONE.COM,
 			C: block
 		})
 
 		// 流体燃烧室
-		kubejs.shaped(`cmi:${id}_fluid_burner`, [
+		kubejs.shaped(`${namespace}:${id}_fluid_burner`, [
 			"AAA",
 			"ABA",
 			"CCC"
 		], {
-			A: [plate, ingot],
+			A: [`#forge:plates/${id}`, `#forge:ingots/${id}`],
 			B: Mechanisms.COPPER.COM,
 			C: block
 		})
 
 		// 蒸汽引擎
-		kubejs.shaped(`steampowered:${id}_steam_engine`, [
+		kubejs.shaped(`${namespace}:${id}_steam_engine`, [
 			"ABE",
 			"MCF",
 			"ABE"
 		], {
-			A: plate,
-			B: ingot,
+			A: `#forge:plates/${id}`,
+			B: `#forge:ingots/${id}`,
 			C: Casing.BRONZE,
 			M: Mechanisms.STEAM.COM,
 			E: "create:andesite_alloy",
@@ -161,17 +161,18 @@ ServerEvents.recipes((event) => {
 		})
 
 		// 飞轮
-		kubejs.shaped(`steampowered:${id}_flywheel`, [
+		kubejs.shaped(`${namespace}:${id}_steam_flywheel`, [
 			"AB ",
 			"CFB",
 			"AB "
 		], {
 			A: "createdieselgenerators:engine_piston",
-			B: plate,
+			B: `#forge:plates/${id}`,
 			C: Casing.BRONZE,
 			F: "create:flywheel"
 		})
 	})
+
 
 	// 蒸汽引擎
 	create.sequenced_assembly("create:steam_engine", [

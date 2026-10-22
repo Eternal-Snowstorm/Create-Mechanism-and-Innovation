@@ -1,4 +1,4 @@
-(function () {
+(() => {
 	let $ModifierManager =
 		Java.loadClass("slimeknights.tconstruct.library.modifiers.ModifierManager")
 

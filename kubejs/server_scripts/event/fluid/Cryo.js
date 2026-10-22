@@ -1,4 +1,4 @@
-(function () {
+(() => {
 	let $LivingEvent$LivingTickEvent =
 		Java.loadClass("net.minecraftforge.event.entity.living.LivingEvent$LivingTickEvent")
 	let $BlockEvent$NeighborNotifyEvent =

@@ -129,7 +129,7 @@ ServerEvents.recipes((event) => {
 	addRecipe()
 		.itemOutput(Mechanisms.AIR.COM)
 		.inputItems([Mechanisms.AIR.BAS,
-			"steampowered:pressurized_gas_container",
+			"steam_letters:empty_steam_container",
 			"#forge:plates/polyolefin",
 			"ae2:quartz_glass",
 		Mechanisms.PART.GENERAL

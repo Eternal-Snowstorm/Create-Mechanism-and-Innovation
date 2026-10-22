@@ -204,6 +204,7 @@ ServerEvents.recipes((event) => {
 		.deploying("#forge:plates/bronze")
 		.deploying(Mechanisms.PART.MECHA)
 		.build()
+		.id("steam_letters:sequenced_assembly/steam_mechanism")
 
 	// 精密
 	new SequencedAssemblyRecipe(Mechanisms.PRECISION)
@@ -408,7 +409,7 @@ ServerEvents.recipes((event) => {
 	// 气密
 	new SequencedAssemblyRecipe(Mechanisms.AIR)
 		.input(Mechanisms.AIR.BAS)
-		.deploying("steampowered:pressurized_gas_container")
+		.deploying("steam_letters:empty_steam_container")
 		.deploying("#forge:plates/polyolefin")
 		.laserCutting(1000)
 		.filling(Fluid.of("cmi:silicon_rubber", 100))

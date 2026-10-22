@@ -269,19 +269,6 @@ ServerEvents.recipes((event) => {
 		M: Mechanisms.ANDESITE.COM
 	}).id("create:crafting/kinetics/contraption_controls")
 
-	// 蒸汽锤
-	kubejs.shaped("cmi:steam_hammer", [
-		"PCP",
-		"MGM",
-		" X "
-	], {
-		P: "#forge:plates/bronze",
-		M: Mechanisms.STEAM.COM,
-		C: Casing.BRONZE,
-		G: "create:mechanical_press",
-		X: "#forge:storage_blocks/bronze"
-	})
-
 	// 压缩机
 	kubejs.shaped("vintageimprovements:vacuum_chamber", [
 		" M ",

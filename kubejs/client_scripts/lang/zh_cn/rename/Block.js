@@ -3,6 +3,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	renameBlock("create:netherite_backtank", "钢制背罐")
 	renameBlock("create_jetpack:jetpack", "黄铜喷气背包")
 	renameBlock("create_jetpack:netherite_jetpack", "钢制喷气背包")
+	renameBlock("steam_letters:bronze_basin", "铜工作盆")
 
 	/**
 	 * 
@@ -11,6 +12,5 @@ ClientEvents.lang("zh_cn", (event) => {
 	 */
 	function renameBlock(block, name) {
 		event.renameBlock(block, name)
-		event.renameItem(block, name)
 	}
 })

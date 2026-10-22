@@ -593,7 +593,7 @@
 			tasks: [
 				{
 					id: "48E5C9079BDE5D65"
-					item: { Count: 64, id: "tconstruct:nether_grout" }
+					item: "tconstruct:nether_grout"
 					type: "item"
 				}
 				{
@@ -832,25 +832,25 @@
 				{
 					count: 21L
 					id: "61965F521A26CFDB"
-					item: { Count: 21, id: "tconstruct:scorched_bricks_slab" }
+					item: "tconstruct:scorched_bricks_slab"
 					type: "item"
 				}
 				{
 					count: 37L
 					id: "32B585DBF2A2E6CF"
-					item: { Count: 37, id: "tconstruct:scorched_bricks" }
+					item: "tconstruct:scorched_bricks"
 					type: "item"
 				}
 				{
 					count: 21L
 					id: "29AE0BA3AF66FA68"
-					item: { Count: 22, id: "tconstruct:seared_bricks" }
+					item: "tconstruct:seared_bricks"
 					type: "item"
 				}
 				{
 					count: 9L
 					id: "2E51BA5C723A8179"
-					item: { Count: 9, id: "ad_astra:vent" }
+					item: "ad_astra:vent"
 					type: "item"
 				}
 			]

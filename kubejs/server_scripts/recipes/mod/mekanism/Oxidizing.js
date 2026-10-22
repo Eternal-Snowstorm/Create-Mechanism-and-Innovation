@@ -19,6 +19,11 @@ ServerEvents.recipes((event) => {
 		"200x cmi:refined_nuke_waste"
 	)
 
+	mekanism.oxidizing(
+		"mekanism:reprocessed_fissile_fragment",
+		"100x cmi:refined_nuke_waste"
+	)
+
 	// 钛氧化物
 	mekanism.oxidizing(
 		"cmi:raw_titanium_mixture",

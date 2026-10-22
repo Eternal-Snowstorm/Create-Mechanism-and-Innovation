@@ -168,6 +168,11 @@ ServerEvents.highPriorityData((event) => {
 		"functionalstorage:netherite_upgrade"
 	], "cmi:hepatizon_upgrade")
 
+	// 蒸汽构件
+	addUnification("steam_mechanism", [
+		"steam_letters:steam_mechanism"
+	], "cmi:bronze_mechanism")
+
 	// 并行
 	addUnification("2_parallel", [
 		"thermal_parallel:argument_parallel"

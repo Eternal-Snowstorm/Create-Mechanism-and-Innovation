@@ -10,22 +10,6 @@ BlockEvents.modification((event) => {
 
 	modifySoundType("vintageimprovements:vacuum_chamber", SoundType.COPPER)
 
-	let materialSoundType = [
-		"bronze",
-		"cast_iron",
-		"steel"
-	]
-	materialSoundType.forEach((materials) => {
-		modifySoundType([
-			`steampowered:${materials}_cogwheel`,
-			`steampowered:${materials}_large_cogwheel`,
-			`steampowered:${materials}_burner`,
-			`steampowered:${materials}_boiler`,
-			`steampowered:${materials}_steam_engine`,
-			`steampowered:${materials}_flywheel`
-		], SoundType.LANTERN)
-	})
-
 	// 矿藏
 	let depositBlocks = [
 		"create_rns:gold_deposit_block",

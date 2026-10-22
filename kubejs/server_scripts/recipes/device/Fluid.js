@@ -84,17 +84,17 @@ ServerEvents.recipes((event) => {
 	}).id("create:crafting/kinetics/spout")
 
 	// 高级注液器
-	kubejs.shaped("cmi:advanced_spout", [
+	kubejs.shaped("steam_letters:advanced_spout", [
 		"ABA",
 		"CDC",
 		" E "
 	], {
-		A: ["#forge:ingots/cast_iron", "#forge:plates/cast_iron"],
+		A: ["#forge:ingots/bronze", "#forge:plates/bronze"],
 		B: "vintageimprovements:redstone_module",
 		C: Mechanisms.COPPER.COM,
 		D: "create:spout",
 		E: "thermal:cured_rubber"
-	})
+	}).id("steam_letters:crafting/shaped/advanced_spout")
 
 	// 智能管道
 	kubejs.shaped("2x create:smart_fluid_pipe", [
@@ -189,4 +189,14 @@ ServerEvents.recipes((event) => {
 		I: "#forge:plates/industrial_iron",
 		M: Mechanisms.COPPER.COM
 	}).id("fluidlogistics:multi_fluid_access_port")
+
+	// 蒸汽泵
+	kubejs.shaped("steam_letters:bronze_steam_pump", [
+		"P P",
+		" A ",
+		"P P"
+	], {
+		P: "#forge:plates/bronze",
+		A: "create:fluid_pipe"
+	}).id("steam_letters:crafting/shaped/steam_pump")
 })

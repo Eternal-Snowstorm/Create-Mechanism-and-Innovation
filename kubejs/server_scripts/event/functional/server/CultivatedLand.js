@@ -1,4 +1,4 @@
-(function () {
+(() => {
 	BlockEvents.rightClicked((event) => {
 		let { block, item, player, level } = event
 

@@ -1,20 +1,20 @@
-(function () {
+(() => {
 	const CAST_IRON_UPGRADES = {
-		"steampowered:bronze_boiler": "steampowered:cast_iron_boiler",
-		"steampowered:bronze_burner": "steampowered:cast_iron_burner",
-		"steampowered:bronze_steam_engine": "steampowered:cast_iron_steam_engine",
-		"steampowered:bronze_flywheel": "steampowered:cast_iron_flywheel",
-		"cmi:bronze_fluid_burner": "cmi:cast_iron_fluid_burner",
-		"cmi:bronze_solar_boiler": "cmi:cast_iron_solar_boiler"
+		"steam_letters:bronze_boiler": "cmi:cast_iron_boiler",
+		"steam_letters:bronze_solid_burner": "cmi:cast_iron_solid_burner",
+		"steam_letters:bronze_fluid_burner": "cmi:cast_iron_fluid_burner",
+		"steam_letters:bronze_solar_boiler": "cmi:cast_iron_solar_boiler",
+		"steam_letters:bronze_steam_engine": "cmi:cast_iron_steam_engine",
+		"steam_letters:bronze_steam_flywheel": "cmi:cast_iron_steam_flywheel",
 	}
 
 	const STEEL_UPGRADES = {
-		"steampowered:cast_iron_boiler": "steampowered:steel_boiler",
-		"steampowered:cast_iron_burner": "steampowered:steel_burner",
-		"steampowered:cast_iron_steam_engine": "steampowered:steel_steam_engine",
-		"steampowered:cast_iron_flywheel": "steampowered:steel_flywheel",
+		"cmi:cast_iron_boiler": "cmi:steel_boiler",
+		"cmi:cast_iron_solid_burner": "cmi:steel_solid_burner",
 		"cmi:cast_iron_fluid_burner": "cmi:steel_fluid_burner",
-		"cmi:cast_iron_solar_boiler": "cmi:steel_solar_boiler"
+		"cmi:cast_iron_solar_boiler": "cmi:steel_solar_boiler",
+		"cmi:cast_iron_steam_engine": "cmi:steel_steam_engine",
+		"cmi:cast_iron_steam_flywheel": "cmi:steel_steam_flywheel",
 	}
 
 	BlockEvents.rightClicked((event) => {

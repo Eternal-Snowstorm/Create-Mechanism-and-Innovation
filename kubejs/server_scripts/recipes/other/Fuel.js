@@ -1,5 +1,5 @@
 ServerEvents.recipes((event) => {
-	let { cmi, tconstruct } = event.getRecipes()
+	let { steam_letters, tconstruct } = event.getRecipes()
 
 	addFuel(Fluid.of("createdieselgenerators:plant_oil"), 1027)
 	addFuel(Fluid.of("immersiveengineering:ethanol"), 1132)
@@ -17,15 +17,6 @@ ServerEvents.recipes((event) => {
 	addFuel(Fluid.of("neoecoae:cryotheum_solution"), 4225)
 
 	/**
-	 * 添加匠魂流体燃料
-	 *
-	 * 速率由温度直接除100进行计算
-	 * 例如传入1500度速率则返回15(1.5倍)
-	 *
-	 * 如果想要替换默认燃料还不想破坏整体整齐性的话建议去`RemoveAll.js`去删除配方
-	 * 例如烈焰血的就是 `tconstruct:smeltery/melting/fuel/blaze`
-	 *
-	 * 当然要是硬要用 `.id()` 去替换也阻止不了你
 	 *
 	 * @param {Internal.FluidStackJS} fluid 流体id
 	 * @param {number} temperature 温度
@@ -36,6 +27,6 @@ ServerEvents.recipes((event) => {
 			.rate(temperature / 100)
 			.temperature(temperature)
 
-		cmi.fluid_burn(fluid.withAmount(10), (temperature / 10))
+		steam_letters.fluid_fuel(fluid, (temperature / 2))
 	}
 })

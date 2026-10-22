@@ -49,9 +49,22 @@ ClientEvents.lang("zh_cn", (event) => {
 		event.add(`block.${Cmi.MODID}.${key}_4`, `${name}抽屉(2x2)`)
 	}
 
+	/**
+	 * 
+	 * @param {string} id 
+	 * @param {string} name 
+	 */
+	function addSteamLang(id, name) {
+		event.add(`block.${Cmi.MODID}.${id}_solid_burner`, `${name}固体燃烧室`)
+		event.add(`block.${Cmi.MODID}.${id}_fluid_burner`, `${name}流体燃烧室`)
+		event.add(`block.${Cmi.MODID}.${id}_steam_engine`, `${name}蒸汽引擎`)
+		event.add(`block.${Cmi.MODID}.${id}_steam_flywheel`, `${name}蒸汽飞轮`)
+		event.add(`block.${Cmi.MODID}.${id}_boiler`, `${name}锅炉`)
+		event.add(`block.${Cmi.MODID}.${id}_solar_boiler`, `${name}太阳能锅炉`)
+	}
+
 	// 机壳
 	addCasingLang("iron", "铁")
-	addCasingLang("bronze", "青铜")
 	addCasingLang("steel", "钢")
 	addCasingLang("smart", "智能")
 	addCasingLang("computing", "高级计算")
@@ -150,7 +163,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addOreNodeLang("oil_shale", "油页岩")
 	addOreNodeLang("aluminum", "铝")
 	addOreNodeLang("osmium", "锇矿")
-	
+
 	// 制作组fumo
 	addBlockLang("re_construction", "Re_Construction")
 	addBlockLang("dkrkoo_weihe", "dkrkoo为何")
@@ -181,4 +194,8 @@ ClientEvents.lang("zh_cn", (event) => {
 
 	// 抽屉
 	addDrawerLang("rubberwood", "橡胶木")
+
+	// 蒸汽设备
+	addSteamLang("cast_iron", "铸铁")
+	addSteamLang("steel", "钢制")
 })

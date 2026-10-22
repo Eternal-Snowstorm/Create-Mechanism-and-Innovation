@@ -11,121 +11,7 @@
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["1570B04A1D692BCC"]
-			description: ["整合包大幅度提升了铝土刷新率, 至少从代码上看刷新率和锌差不多"]
-			id: "16B82E736AC7FDCE"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "17C274929566069F"
-				item: {
-					Count: 1
-					id: "itemfilters:tag"
-					tag: {
-						value: "forge:raw_materials/aluminum"
-					}
-				}
-				title: "铝土"
-				type: "item"
-			}]
-			x: 4.0d
-			y: 3.5d
-		}
-		{
-			dependencies: [
-				"16B82E736AC7FDCE"
-				"2849DC36ACEA7681"
-			]
-			id: "3709AF32680BD5CD"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "78FB17A77B69DE5D"
-				item: {
-					Count: 1
-					id: "itemfilters:tag"
-					tag: {
-						value: "forge:dusts/aluminum"
-					}
-				}
-				title: "铝粉"
-				type: "item"
-			}]
-			x: 4.0d
-			y: 7.5d
-		}
-		{
-			dependencies: ["1570B04A1D692BCC"]
-			hide_dependent_lines: true
-			id: "2849DC36ACEA7681"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "09D87AA6A3F7FF38"
-				item: "immersiveindustry:electrolyzer"
-				type: "item"
-			}]
-			x: 4.0d
-			y: 5.5d
-		}
-		{
-			dependencies: ["3709AF32680BD5CD"]
-			id: "2E67A0D67DC38E0A"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "4BE96ADD16A8C4EC"
-				item: {
-					Count: 1
-					id: "itemfilters:or"
-					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "itemfilters:tag"
-								tag: {
-									value: "forge:gears/aluminum"
-								}
-							}
-							{
-								Count: 1b
-								id: "itemfilters:tag"
-								tag: {
-									value: "forge:ingots/aluminum"
-								}
-							}
-							{
-								Count: 1b
-								id: "itemfilters:tag"
-								tag: {
-									value: "forge:nuggets/aluminum"
-								}
-							}
-							{
-								Count: 1b
-								id: "itemfilters:tag"
-								tag: {
-									value: "forge:plates/aluminum"
-								}
-							}
-							{
-								Count: 1b
-								id: "itemfilters:tag"
-								tag: {
-									value: "forge:rods/aluminum"
-								}
-							}
-						]
-					}
-				}
-				title: "铝"
-				type: "item"
-			}]
-			title: "铝"
-			x: 6.0d
-			y: 6.5d
-		}
-		{
-			dependencies: [
-				"2E67A0D67DC38E0A"
-				"16854FB39C805578"
-			]
+			dependencies: ["16854FB39C805578"]
 			id: "4FB2832A045C402D"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "把一堆零件变成更复杂的零件"
@@ -134,8 +20,8 @@
 				item: "thermal_extra:component_assembly"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 4.5d
+			x: 8.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -151,8 +37,8 @@
 				item: "cmi:thermal_mechanism"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 5.5d
+			x: 6.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["588CB73822918D10"]
@@ -166,8 +52,8 @@
 				type: "item"
 			}]
 			title: "殷钢"
-			x: 4.0d
-			y: 9.5d
+			x: 8.0d
+			y: 10.0d
 		}
 		{
 			dependencies: [
@@ -183,14 +69,14 @@
 				item: "cmi:thermal_mechanism_augment"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 6.5d
+			x: 4.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["6CCEECDF932F5041"]
-			hide_dependent_lines: true
 			id: "4A054CCC2FFE7258"
 			quest_enhance_disable_scroll_paging: false
+			require_sequential_tasks: false
 			tasks: [{
 				id: "0AC4FD56241818FE"
 				item: {
@@ -203,8 +89,8 @@
 				title: "康铜齿轮"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 7.5d
+			x: 2.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
@@ -215,8 +101,8 @@
 				item: "thermal:redstone_servo"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 8.5d
+			x: 4.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
@@ -227,8 +113,8 @@
 				item: "thermal:rf_coil"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 8.5d
+			x: 2.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["541572E2CD225DD7"]
@@ -246,8 +132,8 @@
 				title: "钒板"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 5.5d
+			x: 6.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["16854FB39C805578"]
@@ -259,7 +145,7 @@
 				type: "item"
 			}]
 			x: 10.0d
-			y: 4.5d
+			y: 5.0d
 		}
 		{
 			dependencies: [
@@ -281,8 +167,8 @@
 				title: "纯净石英"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 2.5d
+			x: 12.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
@@ -293,8 +179,8 @@
 				item: "cmi:crystal_catalyt_bucket"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 1.5d
+			x: 14.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["20227AC2A1D37ED9"]
@@ -312,8 +198,8 @@
 				title: "纯净石英粉"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 0.5d
+			x: 14.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["6A57D13406E9D6AA"]
@@ -324,8 +210,8 @@
 				item: "thermal:laser_diode"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 1.5d
+			x: 10.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["7986071E20EEF73C"]
@@ -336,8 +222,8 @@
 				item: "immersiveengineering:component_electronic"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 3.5d
+			x: 12.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["042CA25C2CE9F78C"]
@@ -351,12 +237,11 @@
 				item: "cmi:light_engineering_mechanism"
 				type: "item"
 			}]
-			x: 8.0d
-			y: -0.5d
+			x: 12.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
-			hide_dependent_lines: true
 			id: "6B467317FA711CD2"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -364,15 +249,14 @@
 				item: "immersiveengineering:component_iron"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 2.5d
+			x: 8.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
 				"6B467317FA711CD2"
 				"4FB2832A045C402D"
 				"7986071E20EEF73C"
-				"18830B989C4CB421"
 			]
 			id: "042CA25C2CE9F78C"
 			quest_enhance_disable_scroll_paging: false
@@ -381,8 +265,8 @@
 				item: "cmi:light_engineering_mechanism_augment"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 0.5d
+			x: 8.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -426,27 +310,7 @@
 				}
 			]
 			title: "抽油机"
-			x: 10.0d
-			y: -1.5d
-		}
-		{
-			dependencies: ["6CCEECDF932F5041"]
-			id: "18830B989C4CB421"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "68F425A1BAD6DC96"
-				item: {
-					Count: 1
-					id: "itemfilters:tag"
-					tag: {
-						value: "forge:rods/constantan"
-					}
-				}
-				title: "康铜杆"
-				type: "item"
-			}]
-			title: "康铜杆"
-			x: 4.0d
+			x: 14.0d
 			y: 1.5d
 		}
 		{
@@ -468,8 +332,8 @@
 				title: "钢锭"
 				type: "item"
 			}]
-			x: 12.0d
-			y: -0.5d
+			x: 16.0d
+			y: 3.0d
 		}
 		{
 			dependencies: [
@@ -484,8 +348,8 @@
 				item: "tconstruct:molten_steel_bucket"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 0.5d
+			x: 16.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -501,8 +365,8 @@
 				item: "cmi:refined_iron_bloom"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 2.5d
+			x: 16.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["0CCAD3D0E6741560"]
@@ -521,7 +385,7 @@
 				type: "item"
 			}]
 			x: 14.0d
-			y: 4.5d
+			y: 9.0d
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
@@ -551,8 +415,8 @@
 				title: "石灰石"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 6.5d
+			x: 12.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["78250BAEED3506BA"]
@@ -568,8 +432,8 @@
 				item: "vintageimprovements:vacuum_chamber"
 				type: "item"
 			}]
-			x: 16.0d
-			y: 1.5d
+			x: 18.0d
+			y: 7.0d
 		}
 		{
 			dependencies: [
@@ -610,8 +474,8 @@
 				title: "铸铁"
 				type: "item"
 			}]
-			x: 16.0d
-			y: 3.5d
+			x: 18.0d
+			y: 9.0d
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
@@ -629,8 +493,8 @@
 				title: "焦煤粉"
 				type: "item"
 			}]
-			x: 16.0d
-			y: 9.5d
+			x: 18.0d
+			y: 11.0d
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
@@ -666,13 +530,13 @@
 				{
 					count: 13L
 					id: "2F19D15BFD9316C0"
-					item: { Count: 13, id: "cmi:crucible_base" }
+					item: "cmi:crucible_base"
 					type: "item"
 				}
 				{
 					count: 4L
 					id: "294ADE90DEB83228"
-					item: { Count: 4, id: "immersiveindustry:burning_chamber" }
+					item: "immersiveindustry:burning_chamber"
 					type: "item"
 				}
 				{
@@ -688,8 +552,8 @@
 				}
 			]
 			title: "炼钢坩埚"
-			x: 12.0d
-			y: 3.5d
+			x: 16.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
@@ -722,128 +586,8 @@
 				}
 			]
 			title: "镍和银"
-			x: 4.0d
-			y: 11.5d
-		}
-		{
-			dependencies: ["588CB73822918D10"]
-			id: "407FD936195F18B0"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [
-				{
-					id: "45273C1A29F94F3C"
-					item: {
-						Count: 1
-						id: "itemfilters:tag"
-						tag: {
-							value: "forge:ingots/silver"
-						}
-					}
-					title: "银锭"
-					type: "item"
-				}
-				{
-					id: "49A4D71534675C10"
-					item: {
-						Count: 1
-						id: "itemfilters:tag"
-						tag: {
-							value: "forge:plates/silver"
-						}
-					}
-					title: "银版"
-					type: "item"
-				}
-			]
-			title: "银"
 			x: 6.0d
-			y: 12.5d
-		}
-		{
-			dependencies: ["407FD936195F18B0"]
-			id: "44580C9FC3A043D2"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "0D8C5A4E33CCFCE9"
-				item: {
-					Count: 1
-					id: "itemfilters:tag"
-					tag: {
-						value: "forge:ingots/electrum"
-					}
-				}
-				title: "琥珀金"
-				type: "item"
-			}]
-			x: 8.0d
-			y: 11.5d
-		}
-		{
-			dependencies: ["44580C9FC3A043D2"]
-			id: "1C57F09A72DA8E22"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "43C186A840904D65"
-				item: "createaddition:electrum_spool"
-				type: "item"
-			}]
-			x: 6.0d
-			y: 10.5d
-		}
-		{
-			dependencies: [
-				"44580C9FC3A043D2"
-				"721C20E88A98122E"
-				"050A77C0A80CFE30"
-			]
-			id: "6A3204F0275C1DEA"
-			quest_enhance_disable_scroll_paging: false
-			subtitle: "第一颗CPU"
-			tasks: [{
-				id: "29250608F682DF5B"
-				item: "ae2:logic_processor"
-				type: "item"
-			}]
-			x: 10.0d
-			y: 12.5d
-		}
-		{
-			dependencies: ["430B1B3285C99CD3"]
-			id: "721C20E88A98122E"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "1E82041A14AC257D"
-				item: {
-					Count: 1
-					id: "itemfilters:tag"
-					tag: {
-						value: "forge:ingots/hop_graphite"
-					}
-				}
-				title: "高定向热解石墨锭"
-				type: "item"
-			}]
-			x: 10.0d
-			y: 10.5d
-		}
-		{
-			dependencies: ["6ED3E5867F2A90AB"]
-			id: "430B1B3285C99CD3"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "01D4DC16E9365AFC"
-				item: {
-					Count: 1
-					id: "itemfilters:tag"
-					tag: {
-						value: "forge:dusts/hop_graphite"
-					}
-				}
-				title: "高定向热解石墨粉"
-				type: "item"
-			}]
-			x: 12.0d
-			y: 9.5d
+			y: 11.0d
 		}
 		{
 			dependencies: ["0FA1A601134C5105"]
@@ -877,19 +621,19 @@
 				{
 					count: 6L
 					id: "640B6571C9AD405C"
-					item: { Count: 6, id: "immersiveengineering:steel_scaffolding_standard" }
+					item: "immersiveengineering:steel_scaffolding_standard"
 					type: "item"
 				}
 				{
 					count: 2L
 					id: "6F8789CD10BF490D"
-					item: { Count: 2, id: "immersiveengineering:light_engineering" }
+					item: "immersiveengineering:light_engineering"
 					type: "item"
 				}
 				{
 					count: 2L
 					id: "3C1D04F6F829A78E"
-					item: { Count: 2, id: "immersiveengineering:fluid_pipe" }
+					item: "immersiveengineering:fluid_pipe"
 					type: "item"
 				}
 				{
@@ -899,8 +643,8 @@
 				}
 			]
 			title: "工业挤压机"
-			x: 14.0d
-			y: 10.5d
+			x: 18.0d
+			y: 12.75d
 		}
 		{
 			dependencies: ["6095C38E6A48D0AE"]
@@ -1177,25 +921,6 @@
 			y: 17.0d
 		}
 		{
-			dependencies: ["407FD936195F18B0"]
-			id: "7FE4DF4D3DC699B1"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "082396FFAEE8722C"
-				item: {
-					Count: 1
-					id: "itemfilters:tag"
-					tag: {
-						value: "forge:gears/silver"
-					}
-				}
-				title: "银齿轮"
-				type: "item"
-			}]
-			x: 8.0d
-			y: 13.5d
-		}
-		{
 			dependencies: ["59831FBE15050279"]
 			id: "050A77C0A80CFE30"
 			quest_enhance_disable_scroll_paging: false
@@ -1212,7 +937,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 11.5d
+			y: 12.0d
 		}
 		{
 			dependencies: ["2902DA1D51BD15F5"]
@@ -1231,25 +956,13 @@
 				type: "item"
 			}]
 			x: 14.0d
-			y: 12.5d
-		}
-		{
-			dependencies: ["050A77C0A80CFE30"]
-			id: "2C9E29DF253C975B"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "775070654F2CF022"
-				item: "create_connected:control_chip"
-				type: "item"
-			}]
-			x: 12.0d
-			y: 13.5d
+			y: 11.0d
 		}
 		{
 			dependencies: [
-				"6A3204F0275C1DEA"
-				"2C9E29DF253C975B"
-				"7FE4DF4D3DC699B1"
+				"3DFED24F6C44D5E5"
+				"28AFE3C3BEFB431A"
+				"507D9B36A230C6E4"
 			]
 			id: "6095C38E6A48D0AE"
 			quest_enhance_disable_scroll_paging: false
@@ -1259,7 +972,7 @@
 				type: "item"
 			}]
 			x: 10.0d
-			y: 14.5d
+			y: 15.0d
 		}
 		{
 			dependencies: ["0FA1A601134C5105"]
@@ -1296,25 +1009,7 @@
 			]
 			title: "硅的准备"
 			x: 16.0d
-			y: 11.5d
-		}
-		{
-			dependencies: ["721C20E88A98122E"]
-			id: "38BB8180763D8FB1"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "3BEA6334CAAF0E87"
-				item: {
-					Count: 1
-					id: "immersiveengineering:graphite_electrode"
-					tag: {
-						graphDmg: 0
-					}
-				}
-				type: "item"
-			}]
-			x: 8.0d
-			y: 9.5d
+			y: 12.0d
 		}
 		{
 			dependencies: ["16854FB39C805578"]
@@ -1328,7 +1023,7 @@
 				type: "item"
 			}]
 			x: 16.0d
-			y: 18.5d
+			y: 18.0d
 		}
 		{
 			dependencies: ["3640CEE4D21C8BB5"]
@@ -1353,7 +1048,7 @@
 				}
 			]
 			x: 8.0d
-			y: 19.5d
+			y: 19.0d
 		}
 		{
 			dependencies: ["7CE3BF3F7F7FC1D9"]
@@ -1393,7 +1088,7 @@
 			]
 			title: "原油分馏初步产物"
 			x: 10.0d
-			y: 19.5d
+			y: 19.0d
 		}
 		{
 			dependencies: ["7FA0A97798CCF465"]
@@ -1405,7 +1100,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 18.5d
+			y: 18.0d
 		}
 		{
 			dependencies: [
@@ -1420,7 +1115,7 @@
 				type: "item"
 			}]
 			x: 14.0d
-			y: 19.5d
+			y: 19.0d
 		}
 		{
 			dependencies: [
@@ -1435,7 +1130,7 @@
 				type: "item"
 			}]
 			x: 14.0d
-			y: 17.5d
+			y: 17.0d
 		}
 		{
 			dependencies: ["7FA0A97798CCF465"]
@@ -1447,7 +1142,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 20.5d
+			y: 20.0d
 		}
 		{
 			dependencies: ["7FA0A97798CCF465"]
@@ -1459,7 +1154,7 @@
 				type: "item"
 			}]
 			x: 10.0d
-			y: 21.5d
+			y: 21.0d
 		}
 		{
 			dependencies: ["11B2066810421699"]
@@ -1478,7 +1173,7 @@
 				type: "item"
 			}]
 			x: 14.0d
-			y: 21.5d
+			y: 21.0d
 		}
 		{
 			dependencies: ["11B2066810421699"]
@@ -1490,7 +1185,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 22.5d
+			y: 22.0d
 		}
 		{
 			dependencies: [
@@ -1505,7 +1200,7 @@
 				type: "item"
 			}]
 			x: 10.0d
-			y: 23.5d
+			y: 23.0d
 		}
 		{
 			dependencies: ["0E3481D80180E00C"]
@@ -1517,7 +1212,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 24.5d
+			y: 24.0d
 		}
 		{
 			dependencies: [
@@ -1532,7 +1227,7 @@
 				type: "item"
 			}]
 			x: 14.0d
-			y: 25.5d
+			y: 23.0d
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
@@ -1577,13 +1272,13 @@
 				{
 					count: 8L
 					id: "2F06E7FE3363B270"
-					item: { Count: 8, id: "immersiveengineering:treated_scaffold" }
+					item: "immersiveengineering:treated_scaffold"
 					type: "item"
 				}
 			]
 			title: "反应釜"
 			x: 14.0d
-			y: 23.5d
+			y: 25.0d
 		}
 		{
 			dependencies: ["5486A9D8E0073EAB"]
@@ -1595,7 +1290,7 @@
 				type: "item"
 			}]
 			x: 16.0d
-			y: 24.5d
+			y: 24.0d
 		}
 		{
 			dependencies: [
@@ -1625,7 +1320,7 @@
 				}
 			]
 			x: 18.0d
-			y: 23.5d
+			y: 23.0d
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
@@ -1637,7 +1332,7 @@
 				type: "item"
 			}]
 			x: 16.0d
-			y: 22.5d
+			y: 22.0d
 		}
 		{
 			dependencies: [
@@ -1652,7 +1347,7 @@
 				type: "item"
 			}]
 			x: 18.0d
-			y: 21.5d
+			y: 21.0d
 		}
 		{
 			dependencies: ["664B44589F807708"]
@@ -1664,7 +1359,7 @@
 				type: "item"
 			}]
 			x: 18.0d
-			y: 19.5d
+			y: 19.0d
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
@@ -1676,7 +1371,7 @@
 				type: "item"
 			}]
 			x: 16.0d
-			y: 20.5d
+			y: 20.0d
 		}
 		{
 			dependencies: ["2916D3E15559DF0C"]
@@ -1688,7 +1383,7 @@
 				type: "item"
 			}]
 			x: 8.0d
-			y: 21.5d
+			y: 21.0d
 		}
 		{
 			dependencies: ["3D5497B8DC0ED5B6"]
@@ -1699,8 +1394,8 @@
 				item: "mekanism:steam_bucket"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 21.5d
+			x: 4.0d
+			y: 23.0d
 		}
 		{
 			dependencies: [
@@ -1715,7 +1410,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 21.5d
+			y: 21.0d
 		}
 		{
 			dependencies: ["654FBA59B16DF4C6"]
@@ -1727,7 +1422,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 22.5d
+			y: 22.0d
 		}
 		{
 			dependencies: [
@@ -1742,7 +1437,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 19.5d
+			y: 19.0d
 		}
 		{
 			dependencies: [
@@ -1757,7 +1452,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 20.5d
+			y: 20.0d
 		}
 		{
 			dependencies: [
@@ -1772,7 +1467,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 18.5d
+			y: 18.0d
 		}
 		{
 			dependencies: ["135EED5D795BB2D5"]
@@ -1784,32 +1479,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 8.5d
-		}
-		{
-			dependencies: ["3640CEE4D21C8BB5"]
-			description: ["本整合包修改了原油生成机制，现在每个区块都会生成无限量的原油, 因此无需再四处勘探或寻找特定油田"]
-			hide_dependency_lines: true
-			icon: "createdieselgenerators:crude_oil_bucket"
-			id: "3385196C9E4B2773"
-			quest_enhance_disable_scroll_paging: false
-			shape: "gear"
-			size: 2.0d
-			subtitle: "霉菌"
-			tasks: [
-				{
-					id: "5447DEFF8CD6B310"
-					item: "createdieselgenerators:crude_oil_bucket"
-					type: "item"
-				}
-				{
-					id: "68C183634E50EF3A"
-					item: "createdieselgenerators:distillation_controller"
-					type: "item"
-				}
-			]
-			x: 20.0d
-			y: 17.0d
+			y: 9.0d
 		}
 		{
 			dependencies: ["16854FB39C805578"]
@@ -1832,8 +1502,95 @@
 				title: "如果你觉得设备运行太慢..."
 				type: "checkmark"
 			}]
+			x: 4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["6229FE133326F148"]
+			id: "28AFE3C3BEFB431A"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "0BB3CD78420BAA50"
+				item: "ae2:logic_processor"
+				type: "item"
+			}]
 			x: 8.0d
-			y: 7.5d
+			y: 14.0d
+		}
+		{
+			dependencies: ["6229FE133326F148"]
+			id: "3DFED24F6C44D5E5"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "6215EF5AFE5962D2"
+				item: "ae2:calculation_processor"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 14.0d
+		}
+		{
+			dependencies: [
+				"6229FE133326F148"
+				"1019BCBAAF646D37"
+				"668328B9C89163F6"
+			]
+			id: "507D9B36A230C6E4"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "65FABCA7543BC2F0"
+				item: "ae2:engineering_processor"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 13.0d
+		}
+		{
+			dependencies: ["050A77C0A80CFE30"]
+			id: "6229FE133326F148"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "0E42BAEE6224DCD1"
+				item: "cmi:inscribed_silicon"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 13.0d
+		}
+		{
+			dependencies: ["575444E3A9FA8314"]
+			id: "1019BCBAAF646D37"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "2A2141A28EC72B6C"
+				item: "thermal:sapphire"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 15.0d
+		}
+		{
+			id: "575444E3A9FA8314"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "铝矿副产物"
+			tasks: [{
+				id: "075C584BB3D96861"
+				item: "thermal:sapphire_dust"
+				type: "item"
+			}]
+			x: 16.0d
+			y: 16.0d
+		}
+		{
+			id: "668328B9C89163F6"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "4FBC12F1958DFE9F"
+				item: "ad_astra:etrium_ingot"
+				type: "item"
+			}]
+			x: 16.0d
+			y: 14.0d
 		}
 	]
 	title: "油燃而升"

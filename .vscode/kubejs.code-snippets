@@ -69,7 +69,7 @@
 		"scope": "javascript,typescript",
 		"prefix": "$function",
 		"body": [
-			"(function () {",
+			"(() => {",
 			"})()"
 		]
 	},

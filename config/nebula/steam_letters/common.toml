@@ -1,0 +1,133 @@
+
+[steam]
+	#Global steam consumption multiplier for machines running on superheated steam.
+	#0.25 means such a machine only needs a quarter of the normal steam.
+	#Range: 0.0 ~ 1.0
+	superheated_steam_consumption_multiplier = 0.25
+	#Fluid id produced by steam boilers and solar boilers.
+	#Existing tank contents are never converted when this changes.
+	output_steam_fluid = "mekanism:steam"
+
+[bronze_basin]
+	#Fluid capacity of each tank of a bronze basin (mB).
+	#Basins have several tanks, so the total capacity is a multiple of this.
+	#Range: 1000 ~ 1000000
+	slot_capacity = 16000
+
+[advanced_spout]
+	#Fluid capacity of an advanced spout (mB).
+	#Range: 2000 ~ 1000000
+	capacity = 5000
+	#Default parallel of newly placed advanced spouts.
+	#Can still be changed per block with a wrench.
+	#Range: 1 ~ 20
+	parallel = 8
+
+[steam_hammer]
+	#Maximum number of recipes a single steam hammer processes at once.
+	#Range: 1 ~ 64
+	steam_hammer_parallel = 64
+	#Steam consumed per finished recipe (mB).
+	#Range: 0 ~ 1000000
+	steam_consumption = 1000
+	#Steam buffer capacity of a steam hammer (mB).
+	#Range: 1000 ~ 1000000
+	steam_capacity = 10000
+
+[steam_mixer]
+	#Maximum number of recipes a single steam mixer processes at once.
+	#Range: 1 ~ 64
+	steam_mixer_parallel = 16
+	#Steam consumed per finished recipe (mB).
+	#Range: 0 ~ 1000000
+	steam_consumption = 1000
+	#Steam buffer capacity of a steam mixer (mB).
+	#Range: 1000 ~ 1000000
+	steam_capacity = 10000
+
+[steam_saw]
+	#Maximum number of recipes a single steam saw processes at once.
+	#Range: 1 ~ 64
+	steam_saw_parallel = 16
+	#Steam consumed per finished recipe (mB).
+	#Range: 0 ~ 1000000
+	steam_consumption = 500
+	#Steam buffer capacity of a steam saw (mB).
+	#Range: 1000 ~ 1000000
+	steam_capacity = 10000
+	#Working time multiplier of the steam saw (0.25 = 4 times faster than a mechanical saw).
+	#Range: 0.01 ~ 100.0
+	processing_time_multiplier = 0.25
+
+[steam_boiler]
+	#Lowest heat percentage at which the boiler starts producing steam.
+	#Range: 0 ~ 100
+	efficiency_threshold_1 = 25
+	#Heat percentage at which the boiler reaches efficiency tier 2.
+	#Range: 0 ~ 100
+	efficiency_threshold_2 = 50
+	#Heat percentage at which the boiler reaches efficiency tier 3.
+	#Range: 0 ~ 100
+	efficiency_threshold_3 = 75
+	#Heat percentage required for the boiler to run at full efficiency.
+	#Range: 0 ~ 100
+	efficiency_threshold_4 = 100
+	#Steam output multiplier of efficiency tier 1.
+	#Range: 0.0 ~ 1.0
+	efficiency_1 = 0.25
+	#Steam output multiplier of efficiency tier 2.
+	#Range: 0.0 ~ 1.0
+	efficiency_2 = 0.5
+	#Steam output multiplier of efficiency tier 3.
+	#Range: 0.0 ~ 1.0
+	efficiency_3 = 0.75
+	#Steam output multiplier of efficiency tier 4, i.e. the maximum boiler output.
+	#Range: 0.0 ~ 1.0
+	efficiency_4 = 1.0
+
+[solar_boiler]
+	#Efficiency multiplier when the boiler has direct sky light (and no weather penalty).
+	#Range: 0.0 ~ 1.0
+	sunlight_efficiency = 1.0
+	#Efficiency multiplier when the boiler is lit by block light instead of sky light.
+	#Range: 0.0 ~ 1.0
+	artificial_light_efficiency = 0.5
+	#Minimum block light level for the artificial light path to be usable.
+	#Range: 0 ~ 15
+	artificial_light_threshold = 8
+	#Whether the sky light path additionally requires daytime.
+	#Vanilla sky light level stays at 15 at night, so without this the boiler would produce at full speed in complete darkness.
+	require_daylight = true
+	#Weather multiplier while it is raining at the boiler.
+	#Range: 0.0 ~ 1.0
+	rain_efficiency = 0.5
+	#Weather multiplier while a thunder storm is raging at the boiler (includes snow during thunder).
+	#Range: 0.0 ~ 1.0
+	thunder_efficiency = 0.25
+
+[steam_burner]
+	#Total time required to heat up while burning fuel, as time required for the burner to reach max heat.
+	#Range: 0.0 ~ 10000.0
+	heatup_seconds = 10.0
+	#Total time to lose all heat while no fuel is burning, as time required for the burner to lose all heat.
+	#Range: 0.0 ~ 10000.0
+	cooldown_seconds = 5.0
+
+[steam_engine]
+	#Efficiency (0~1) of steam drawn directly from an adjacent boiler.
+	#4n mB is drawn out of the boiler per tick while only 3n mB reaches the engine, so a directly fed engine caps out at 75% of its stress output.
+	#Range: 0.0 ~ 1.0
+	suck_efficiency = 0.75
+	#Steam consumption multiplier applied while the flywheel engine runs on superheated steam. 0.5 means it only needs half the steam of a normal-steam run.
+	#Range: 0.0 ~ 1.0
+	superheated_consumption_multiplier = 0.5
+	#Heat-up acceleration multiplier applied while running on superheated steam.
+	#Range: 1.0 ~ 100.0
+	superheated_acceleration_multiplier = 2.0
+	#Stress output multiplier applied while running on superheated steam.
+	#Range: 1.0 ~ 100.0
+	superheated_output_multiplier = 1.5
+	#Steam consumption multiplier applied while the flywheel engine runs on superheated steam. 0.5 means it only needs half the steam of a normal-steam run.
+	#Range: 0.0 ~ 10000.0
+	heatup_seconds = 2.0
+

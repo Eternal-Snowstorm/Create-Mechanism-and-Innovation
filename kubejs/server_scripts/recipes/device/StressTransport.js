@@ -15,17 +15,17 @@ ServerEvents.recipes((event) => {
 			"#forge:hammers"
 		]).damageIngredient("#forge:hammers")
 
-		create.deploying(`steampowered:${material}_cogwheel`, [
+		create.deploying(`cmi:${material}_cogwheel`, [
 			`cmi:incomplete_${material}_cogwheel`,
 			"#create:shaft"
 		])
 
-		create.deploying(`steampowered:${material}_cogwheel`, [
+		create.deploying(`cmi:${material}_cogwheel`, [
 			"create:shaft",
 			`cmi:incomplete_${material}_cogwheel`
 		])
 
-		kubejs.shapeless(`steampowered:${material}_cogwheel`, [
+		kubejs.shapeless(`cmi:${material}_cogwheel`, [
 			`cmi:incomplete_${material}_cogwheel`,
 			"#create:shaft"
 		])
@@ -44,23 +44,23 @@ ServerEvents.recipes((event) => {
 			`cmi:incomplete_${material}_large_cogwheel`
 		])
 
-		create.deploying(`steampowered:${material}_large_cogwheel`, [
+		create.deploying(`cmi:${material}_large_cogwheel`, [
 			`cmi:incomplete_${material}_large_cogwheel`,
 			"#create:shaft"
 		])
 
-		create.deploying(`steampowered:${material}_large_cogwheel`, [
+		create.deploying(`cmi:${material}_large_cogwheel`, [
 			"create:shaft",
 			`cmi:incomplete_${material}_large_cogwheel`
 		])
 
-		kubejs.shapeless(`steampowered:${material}_large_cogwheel`, [
+		kubejs.shapeless(`cmi:${material}_large_cogwheel`, [
 			`cmi:incomplete_${material}_large_cogwheel`,
 			"#create:shaft"
 		])
 
-		kubejs.shapeless(`steampowered:${material}_large_cogwheel`, [
-			`steampowered:${material}_cogwheel`,
+		kubejs.shapeless(`cmi:${material}_large_cogwheel`, [
+			`cmi:${material}_cogwheel`,
 			`#forge:plates/${material}`
 		])
 	})
