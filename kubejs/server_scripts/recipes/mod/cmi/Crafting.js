@@ -315,4 +315,16 @@ ServerEvents.recipes((event) => {
 		"higher_input": Item.of("cmi:deposit_dust_block"),
 		"lower_input": Item.of("cmi:deposit_dust", 9)
 	})
+
+	// 钻井机冷却液端口
+	kubejs.shapeless("cmi:driller_cooler_input_bus", [
+		"cmi:airtight_casing",
+		"cmi:nuke_cooler",
+		"#forge:plates/industrial_iron"
+	])
+	kubejs.shapeless("cmi:driller_cooler_output_bus", [
+		"cmi:airtight_casing",
+		"cmi:nuke_cooler",
+		"#forge:plates/industrial_iron"
+	])
 })

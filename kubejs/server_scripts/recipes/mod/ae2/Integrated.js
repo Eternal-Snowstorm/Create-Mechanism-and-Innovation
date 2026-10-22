@@ -5,6 +5,17 @@ ServerEvents.recipes((event) => {
 		return neoecoae.integrated_working_station()
 	}
 
+	// 气密机壳
+	addRecipe()
+		.itemOutput("2x cmi:airtight_casing")
+		.energy(2000)
+		.inputFluid(Fluid.of("cmi:structural_plastic", 200))
+		.inputItems([
+			Casing.STAINLESS_STEEL,
+			"4x #forge:plates/osmium",
+			"4x cmi:carbon_nanotube"
+		])
+
 	// 碳聚合催化片
 	addRecipe()
 		.itemOutput("cmi:carbon_polymerization_catalytic_plate")

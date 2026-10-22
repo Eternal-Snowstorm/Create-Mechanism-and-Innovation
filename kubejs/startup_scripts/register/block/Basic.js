@@ -193,7 +193,7 @@ StartupEvents.registry("block", (event) => {
 
 	// 钻探轴承
 	addBlock("driller_bearing")
-		.textureAll("cmi:block/machine/driller_placeholder")
+		.model("cmi:block/machine/multi_type_driller/bearing")
 		.soundType(SoundType.NETHERITE_BLOCK)
 		.hardness(5)
 		.resistance(5)

@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:block/cube_column",
+	"textures": {
+		"end": "cmi:block/machine/driller/top",
+		"side": "cmi:block/machine/driller/side"
+	}
+}

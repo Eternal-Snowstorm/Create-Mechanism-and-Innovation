@@ -1,45 +1,44 @@
 ServerEvents.recipes((event) => {
 	let { kubejs } = event.getRecipes()
 
-	const ITEM_CONTAINER = Ingredient.of("#cmi:item_container")
-	const FLUID_TANKS = Ingredient.of("#cmi:fluid_tanks")
-	const BATTERIES = Ingredient.of("#cmi:batteries")
-	const CHEMICAL_TANK = Ingredient.of("#mekanism:chemical_tanks")
-	const CONTROLLER_NAMESPACE = Cmi.MODID
+	const NAMESPACE = Cmi.MODID
 
-	// 高级焦炉
-	addMachinePart("reinforced_coke_oven", {
+	// 焦黑砖
+	addMachinePart("seared", "tconstruct:seared_bricks", {
 		cIO: true
 	})
 
-	// 橡胶提取器
-	addMachinePart("improved_rubber_extractor", {
+	// 工业铁
+	addMachinePart("industrial_iron", "cmi:industrial_frame", {
 		fO: true,
 		eI: true
 	})
 
-	// 反应釜
-	addMachinePart("chemical_reactor", {
-		cIO: true
-	})
-
-	// 三相电解机
-	addMachinePart("electrolyzer", {
+	// 钢制
+	addMachinePart("steel", "cmi:steel_casing", {
 		iIO: true,
 		fIO: true,
 		gIO: true,
 		eI: true
 	})
 
-	// 炖屎炉
-	addMachinePart("electronic_blast_furnace", {
+	// 不锈钢
+	addMachinePart("stainless_steel", "mekanism:steel_casing", {
 		cIO: true
+	})
+
+	// 气密
+	addMachinePart("air_tight", "cmi:airtight_casing", {
+		cO: true,
+		gO: true,
+		eI: true
 	})
 
 	/**
 	 * 快捷添加机器接口配方
 	 *
-	 * @param {string} controllerID 控制器ID(不带命名空间)
+	 * @param {string} type 控制器ID(不带命名空间)
+	 * @param {InputItem_} casing 对应的机壳材料
 	 * @param {Object} options 配置对象
 	 * @param {boolean} [options.iI] 是否添加物品输入接口
 	 * @param {boolean} [options.iO] 是否添加物品输出接口
@@ -57,8 +56,8 @@ ServerEvents.recipes((event) => {
 	 * @param {boolean} [options.cO] 是否添加通用输出接口
 	 * @param {boolean} [options.cIO] 是否添加通用I/O接口
 	 */
-	function addMachinePart(controllerID, options) {
-		const CONTROLLER = `${CONTROLLER_NAMESPACE}:${controllerID}`
+	function addMachinePart(type, casing, options) {
+		const TYPE = `${NAMESPACE}:${type}`
 
 		/**
 		 * 添加接口配方
@@ -69,39 +68,20 @@ ServerEvents.recipes((event) => {
 		 * @param {boolean} output 是否添加输出接口
 		 */
 		function addBus(suffix, ingredient, input, output) {
-			const RESULT_PREFIX = suffix ? `${CONTROLLER}_${suffix}` : CONTROLLER
+			const RESULT_PREFIX = suffix ? `${TYPE}_${suffix}` : TYPE
 
 			const INPUT_BUS = `${RESULT_PREFIX}_input_bus`
 			const OUTPUT_BUS = `${RESULT_PREFIX}_output_bus`
 
 			if (input) {
-				kubejs.shaped(INPUT_BUS, [
-					"A",
-					"B"
-				], {
-					A: ingredient,
-					B: CONTROLLER
-				}).keepIngredient(CONTROLLER)
+				kubejs.shapeless(INPUT_BUS, [
+					casing, ingredient, "#forge:plates/industrial_iron"
+				])
 			}
 
 			if (output) {
-				kubejs.shaped(OUTPUT_BUS, [
-					"A",
-					"B"
-				], {
-					A: CONTROLLER,
-					B: ingredient
-				}).keepIngredient(CONTROLLER)
-			}
-
-			// I/O 相互转换
-			if (input && output) {
-				kubejs.shapeless(INPUT_BUS, [
-					OUTPUT_BUS
-				])
-
 				kubejs.shapeless(OUTPUT_BUS, [
-					INPUT_BUS
+					casing, ingredient, "#forge:plates/industrial_iron"
 				])
 			}
 		}
@@ -123,10 +103,10 @@ ServerEvents.recipes((event) => {
 		const GAS = getPortIO("g")
 		const COMMON = getPortIO("c")
 
-		addBus("item", ITEM_CONTAINER, ITEM.input, ITEM.output)
-		addBus("fluid", FLUID_TANKS, FLUID.input, FLUID.output)
-		addBus("energy", BATTERIES, ENERGY.input, ENERGY.output)
-		addBus("gas", CHEMICAL_TANK, GAS.input, GAS.output)
-		addBus("", [ITEM_CONTAINER, FLUID_TANKS, BATTERIES], COMMON.input, COMMON.output)
+		addBus("item", Mechanisms.WOODEN.COM, ITEM.input, ITEM.output)
+		addBus("fluid", Mechanisms.COPPER.COM, FLUID.input, FLUID.output)
+		addBus("energy", Mechanisms.COIL.COM, ENERGY.input, ENERGY.output)
+		addBus("gas", Mechanisms.AIR.COM, GAS.input, GAS.output)
+		addBus("", Mechanisms.WOODEN.COM, COMMON.input, COMMON.output)
 	}
 })

@@ -97,6 +97,7 @@ ServerEvents.recipes((event) => {
 			"cmi:osmium_tile",
 			"#forge:gears/chromeplated_steel"
 		])
+		.energy(2000)
 
 	addRecipe()
 		.itemOutput("neoecoae:integrated_working_station")
@@ -107,6 +108,7 @@ ServerEvents.recipes((event) => {
 			"mekanism:basic_control_circuit"
 		])
 		.inputFluid(Fluid.of("cmi:molten_etrium", 90))
+		.energy(2000)
 		.id("neoecoae:integrated_working_station")
 
 	// 电力高炉
@@ -119,6 +121,58 @@ ServerEvents.recipes((event) => {
 			Mechanisms.NETHER.COM,
 			Mechanisms.BASIC.COM
 		])
+		.energy(2000)
+
+	// 多元钻探机
+	addRecipe()
+		.itemOutput("cmi:multi_type_driller")
+		.inputItems([
+			"cmi:airtight_casing",
+			"ae2:semi_dark_monitor",
+			"ad_astra:etrionic_capacitor",
+			"cmi:basalz_general_component",
+			Mechanisms.BASIC.COM
+		])
+		.energy(2000)
+
+	addRecipe()
+		.itemOutput("cmi:driller_bearing")
+		.inputItems([
+			"cmi:airtight_casing",
+			"mekanismgenerators:turbine_rotor",
+			Mechanisms.BASIC.COM
+		])
+		.energy(2000)
+
+	addRecipe()
+		.itemOutput("cmi:driller_head")
+		.inputItems([
+			"cmi:airtight_casing",
+			"create_rns:mine_head",
+			"4x #forge:gems/diamond",
+			Mechanisms.BASIC.COM
+		])
+		.energy(2000)
+
+	addRecipe()
+		.itemOutput("cmi:driller_fluid_pump")
+		.inputItems([
+			"cmi:airtight_casing",
+			"thermal:drill_head",
+			Mechanisms.COPPER.COM,
+			Mechanisms.BASIC.COM
+		])
+		.energy(2000)
+
+	addRecipe()
+		.itemOutput("cmi:driller_gas_pump")
+		.inputItems([
+			"cmi:airtight_casing",
+			"thermal:drill_head",
+			Mechanisms.AIR.COM,
+			Mechanisms.BASIC.COM
+		])
+		.energy(2000)
 
 	// 感应矩阵
 	addRecipe()
@@ -130,6 +184,7 @@ ServerEvents.recipes((event) => {
 			"2x #forge:plates/vanadium"
 		])
 		.inputFluid(Fluid.of("cmi:structural_plastic", 100))
+		.energy(2000)
 		.id("mekanism:induction/casing")
 
 	addRecipe()
@@ -138,7 +193,9 @@ ServerEvents.recipes((event) => {
 			"mekanism:induction_casing",
 			Mechanisms.BASIC.COM,
 			"#forge:plates/industrial_iron"
-		]).id("mekanism:induction/port")
+		])
+		.energy(2000)
+		.id("mekanism:induction/port")
 
 	// 锅炉
 	addRecipe()
@@ -150,6 +207,7 @@ ServerEvents.recipes((event) => {
 			"2x #forge:plates/tungsten_steel"
 		])
 		.inputFluid(Fluid.of("cmi:structural_plastic", 100))
+		.energy(2000)
 		.id("mekanism:boiler_casing")
 
 	addRecipe()
@@ -158,7 +216,9 @@ ServerEvents.recipes((event) => {
 			"mekanism:boiler_casing",
 			Mechanisms.BASIC.COM,
 			"#forge:plates/industrial_iron"
-		]).id("mekanism:boiler_valve")
+		])
+		.energy(2000)
+		.id("mekanism:boiler_valve")
 
 	addRecipe()
 		.itemOutput("mekanism:pressure_disperser")
@@ -167,6 +227,7 @@ ServerEvents.recipes((event) => {
 			"2x #forge:plates/steel",
 			"2x #forge:plates/stainless_steel"
 		])
+		.energy(2000)
 		.id("mekanism:pressure_disperser")
 
 	addRecipe()
@@ -176,7 +237,9 @@ ServerEvents.recipes((event) => {
 			"2x #forge:plates/bronze",
 			"2x moreburners:nickel_coil",
 			Mechanisms.COIL.COM
-		]).id("mekanism:superheating_element")
+		])
+		.energy(2000)
+		.id("mekanism:superheating_element")
 
 	// 涡轮
 	addRecipe()
@@ -186,7 +249,9 @@ ServerEvents.recipes((event) => {
 			Mechanisms.STEAM.COM,
 			"#forge:gears/chromeplated_steel",
 			"mekanism:basic_control_circuit"
-		]).id("mekanismgenerators:rotational_complex")
+		])
+		.energy(2000)
+		.id("mekanismgenerators:rotational_complex")
 
 	addRecipe()
 		.itemOutput("2x mekanismgenerators:electromagnetic_coil")
@@ -197,6 +262,7 @@ ServerEvents.recipes((event) => {
 			Mechanisms.COIL.COM
 		])
 		.inputFluid(Fluid.of("cmi:molten_etrium", 90))
+		.energy(2000)
 		.id("mekanismgenerators:electromagnetic_coil")
 
 	addRecipe()
@@ -206,7 +272,9 @@ ServerEvents.recipes((event) => {
 			Casing.STAINLESS_STEEL,
 			"2x #forge:plates/stainless_steel",
 			"2x #forge:plates/osmium"
-		]).id("mekanismgenerators:turbine/casing")
+		])
+		.energy(2000)
+		.id("mekanismgenerators:turbine/casing")
 
 	addRecipe()
 		.itemOutput("mekanismgenerators:turbine_valve")
@@ -214,7 +282,9 @@ ServerEvents.recipes((event) => {
 			"mekanismgenerators:turbine_casing",
 			Mechanisms.BASIC.COM,
 			"#forge:plates/industrial_iron"
-		]).id("mekanismgenerators:turbine/valve")
+		])
+		.energy(2000)
+		.id("mekanismgenerators:turbine/valve")
 
 	addRecipe()
 		.itemOutput("2x mekanismgenerators:turbine_vent")
@@ -222,7 +292,9 @@ ServerEvents.recipes((event) => {
 			"ad_astra:vent",
 			"2x #forge:plates/stainless_steel",
 			"2x #forge:plates/osmium"
-		]).id("mekanismgenerators:turbine/vent")
+		])
+		.energy(2000)
+		.id("mekanismgenerators:turbine/vent")
 
 	addRecipe()
 		.itemOutput("2x mekanismgenerators:saturating_condenser")
@@ -230,7 +302,9 @@ ServerEvents.recipes((event) => {
 			"mekanismgenerators:turbine_casing",
 			"cmi:nuke_cooler",
 			"#forge:plates/invar"
-		]).id("mekanismgenerators:saturating_condenser")
+		])
+		.energy(2000)
+		.id("mekanismgenerators:saturating_condenser")
 
 	// 富集仓
 	addRecipe()
@@ -243,6 +317,7 @@ ServerEvents.recipes((event) => {
 			Mechanisms.IRON.COM,
 			"cmi:blizz_general_component"
 		])
+		.energy(2000)
 		.id("mekanism:enrichment_chamber")
 
 	// 锯木机
@@ -256,6 +331,7 @@ ServerEvents.recipes((event) => {
 			"3x thermal:saw_blade",
 			"cmi:blizz_general_component"
 		])
+		.energy(2000)
 		.id("mekanism:precision_sawmill")
 
 	// 融合机
@@ -269,6 +345,7 @@ ServerEvents.recipes((event) => {
 			Mechanisms.STONE.COM,
 			"cmi:blitz_general_component"
 		])
+		.energy(2000)
 		.id("mekanism:combiner")
 
 	// 粉碎机
@@ -282,6 +359,7 @@ ServerEvents.recipes((event) => {
 			"2x #forge:gears/chromeplated_steel",
 			"cmi:basalz_general_component"
 		])
+		.energy(2000)
 		.id("mekanism:crusher")
 
 	// 熔炼炉
@@ -295,6 +373,7 @@ ServerEvents.recipes((event) => {
 			Mechanisms.NETHER.COM,
 			"cmi:blaze_general_component"
 		])
+		.energy(2000)
 		.id("mekanism:energized_smelter")
 
 	// 裂变反应堆
@@ -305,6 +384,7 @@ ServerEvents.recipes((event) => {
 			"mekanism:structural_glass",
 			"2x #forge:plates/stainless_steel"
 		])
+		.energy(2000)
 		.id("mekanismgenerators:reactor/glass")
 
 	addRecipe()
@@ -314,6 +394,7 @@ ServerEvents.recipes((event) => {
 			Casing.STAINLESS_STEEL,
 			"2x #forge:plates/lead"
 		])
+		.energy(2000)
 		.id("mekanismgenerators:fission_reactor/casing")
 
 	addRecipe()
@@ -323,6 +404,7 @@ ServerEvents.recipes((event) => {
 			Mechanisms.ADVANCED.COM,
 			"#forge:plates/industrial_iron"
 		])
+		.energy(2000)
 		.id("mekanismgenerators:fission_reactor/port")
 
 	addRecipe()
@@ -332,6 +414,7 @@ ServerEvents.recipes((event) => {
 			Mechanisms.ADVANCED.COM,
 			Mechanisms.REDSTONE.COM
 		])
+		.energy(2000)
 		.id("mekanismgenerators:fission_reactor/logic_adapter")
 
 	addRecipe()
@@ -345,6 +428,7 @@ ServerEvents.recipes((event) => {
 			Mechanisms.NUKE.COM,
 			"4x #forge:plates/lead"
 		])
+		.energy(2000)
 		.id("mekanismgenerators:fission_reactor/control_rod_assembly")
 
 	addRecipe()
@@ -358,6 +442,7 @@ ServerEvents.recipes((event) => {
 			Mechanisms.NUKE.COM,
 			"4x #forge:plates/lead"
 		])
+		.energy(2000)
 		.id("mekanismgenerators:fission_reactor/fuel_assembly")
 
 	// 锇压缩仓
@@ -371,6 +456,7 @@ ServerEvents.recipes((event) => {
 			Mechanisms.AIR.COM,
 			"cmi:blizz_general_component"
 		])
+		.energy(2000)
 		.id("mekanism:osmium_compressor")
 
 	// 提纯仓
@@ -384,6 +470,7 @@ ServerEvents.recipes((event) => {
 			Mechanisms.AIR.COM,
 			"cmi:basalz_general_component"
 		])
+		.energy(2000)
 		.id("mekanism:purification_chamber")
 
 	// 化学氧化机
@@ -397,6 +484,7 @@ ServerEvents.recipes((event) => {
 			Mechanisms.AIR.COM,
 			"cmi:blaze_general_component"
 		])
+		.energy(2000)
 		.id("mekanism:chemical_oxidizer")
 
 	// 化学压射室
@@ -411,6 +499,7 @@ ServerEvents.recipes((event) => {
 			"2x #forge:gears/chromeplated_steel",
 			"cmi:basalz_general_component"
 		])
+		.energy(2000)
 		.id("mekanism:chemical_injection_chamber")
 
 	// 化学灌注室
@@ -424,6 +513,7 @@ ServerEvents.recipes((event) => {
 			Mechanisms.AIR.COM,
 			"cmi:blitz_general_component"
 		])
+		.energy(2000)
 		.id("mekanism:chemical_infuser")
 
 	// 同位素离心机
@@ -438,6 +528,7 @@ ServerEvents.recipes((event) => {
 			Mechanisms.NUKE.COM,
 			"cmi:blitz_general_component"
 		])
+		.energy(2000)
 		.id("mekanism:isotopic_centrifuge")
 
 	// 化学溶解室
@@ -452,6 +543,7 @@ ServerEvents.recipes((event) => {
 			"create:whisk",
 			"cmi:basalz_general_component"
 		])
+		.energy(2000)
 		.id("mekanism:chemical_dissolution_chamber")
 
 	// 化学清洗室
@@ -466,6 +558,7 @@ ServerEvents.recipes((event) => {
 			"create:whisk",
 			"cmi:blitz_general_component"
 		])
+		.energy(2000)
 		.id("mekanism:chemical_washer")
 
 	// 化学结晶室
@@ -480,6 +573,7 @@ ServerEvents.recipes((event) => {
 			"create:whisk",
 			"cmi:blizz_general_component"
 		])
+		.energy(2000)
 		.id("mekanism:chemical_crystallizer")
 
 	// 中子活化器
@@ -494,6 +588,7 @@ ServerEvents.recipes((event) => {
 			"ad_astra:photovoltaic_vesnium_cell",
 			"cmi:blitz_general_component"
 		])
+		.energy(2000)
 		.id("mekanism:solar_neutron_activator")
 
 	// 加压反应室
@@ -508,5 +603,6 @@ ServerEvents.recipes((event) => {
 			"vintageimprovements:vacuum_chamber",
 			"cmi:blitz_general_component"
 		])
+		.energy(2000)
 		.id("mekanism:pressurized_reaction_chamber")
 })
