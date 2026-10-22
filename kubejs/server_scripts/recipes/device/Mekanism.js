@@ -605,4 +605,100 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 		.id("mekanism:pressurized_reaction_chamber")
+
+	// 聚变反应堆
+	addRecipe()
+		.itemOutput("2x mekanismgenerators:fusion_reactor_frame")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
+		.inputItems([
+			Casing.STAINLESS_STEEL,
+			Mechanisms.NUKE.COM,
+			"2x #forge:plates/superconducting_mercury",
+			"2x #forge:plates/composite_magnetic_conduction",
+			"cmi:piezoelectric_ceramic"
+		])
+		.energy(2000)
+		.id("mekanismgenerators:reactor/frame")
+
+	addRecipe()
+		.itemOutput("mekanismgenerators:fusion_reactor_controller")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
+		.inputItems([
+			"mekanismgenerators:fusion_reactor_frame",
+			Mechanisms.ELITE.COM,
+			Mechanisms.NUKE.COM,
+			"#ae2:illuminated_panel"
+		])
+		.energy(2000)
+		.id("mekanismgenerators:reactor/controller")
+
+	addRecipe()
+		.itemOutput("mekanismgenerators:laser_focus_matrix")
+		.inputItems([
+			"mekanismgenerators:reactor_glass",
+			Mechanisms.ELITE.COM,
+			"4x #forge:prisms/pure_quartz"
+		])
+		.energy(2000)
+		.id("mekanismgenerators:laser_focus_matrix")
+
+	addRecipe()
+		.itemOutput("mekanismgenerators:fusion_reactor_port")
+		.inputItems([
+			Casing.STAINLESS_STEEL,
+			Mechanisms.ELITE.COM,
+			"#forge:plates/industrial_iron"
+		])
+		.energy(2000)
+		.id("mekanismgenerators:reactor/port")
+
+	addRecipe()
+		.itemOutput("mekanismgenerators:fusion_reactor_logic_adapter")
+		.inputItems([
+			Casing.STAINLESS_STEEL,
+			Mechanisms.ELITE.COM,
+			Mechanisms.REDSTONE.COM
+		])
+		.energy(2000)
+		.id("mekanismgenerators:reactor/logic_adapter")
+
+	// 激光器
+	addRecipe()
+		.itemOutput("2x mekanism:laser")
+		.inputFluid(Fluid.of("cmi:glacious_cryotheum", 1000))
+		.inputItems([
+			Casing.STAINLESS_STEEL,
+			Mechanisms.PHOTO.COM,
+			Mechanisms.ELITE.COM,
+			"2x #forge:plates/titanium_alloy",
+			"2x #forge:plates/superconducting_mercury",
+			"#forge:gems/ruby"
+		])
+		.energy(2000)
+		.id("mekanism:laser")
+
+	addRecipe()
+		.itemOutput("mekanism:laser_amplifier")
+		.inputFluid(Fluid.of("cmi:glacious_cryotheum", 1000))
+		.inputItems([
+			Mechanisms.PHOTO.COM,
+			Mechanisms.ELITE.COM,
+			"2x #forge:plates/titanium_alloy",
+			"4x #forge:prisms/pure_quartz"
+		])
+		.energy(2000)
+		.id("mekanism:laser_amplifier")
+
+	addRecipe()
+		.itemOutput("mekanism:laser_tractor_beam")
+		.inputFluid(Fluid.of("cmi:glacious_cryotheum", 1000))
+		.inputItems([
+			Mechanisms.WOODEN.COM,
+			Mechanisms.PHOTO.COM,
+			Mechanisms.ELITE.COM,
+			"2x #forge:plates/titanium_alloy",
+			"4x #forge:prisms/pure_quartz"
+		])
+		.energy(2000)
+		.id("mekanism:laser_tractor_beam")
 })
