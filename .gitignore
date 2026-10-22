@@ -72,6 +72,7 @@ CMI Dev.json
 /log4j2.xml
 /.codex
 /.agents
+/.hmcl
 .graphflow-cache/*
 graphflow-out/*
 
