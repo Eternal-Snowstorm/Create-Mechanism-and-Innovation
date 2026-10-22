@@ -1,27 +1,27 @@
-filename = 'craftingstationjei-1.20.1-Forge-2.2.0.jar'
+filename = 'craftingstationjei-1.20.1-Forge-2.2.1.jar'
 name = 'Crafting Station JEI'
 side = 'server'
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'craftingstationjei-1.20.1-Forge-2.2.0.jar'
+x-prismlauncher-version-number = 'craftingstationjei-1.20.1-Forge-2.2.1.jar'
 
 [download]
-hash = '49d69bf7ff7282bc4815dee7d07165435a073bc8'
+hash = '8f1ec5d87b1701ce7cd208bb7718667e27aba5be'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 8851289
+file-id = 9239419
 project-id = 1127715
 
 [[x-prismlauncher-dependencies]]
-addonId = '388800'
+addonId = '556861'
 type = 'OPTIONAL'
 
 [[x-prismlauncher-dependencies]]
-addonId = '580555'
+addonId = '388800'
 type = 'OPTIONAL'
 
 [[x-prismlauncher-dependencies]]
@@ -29,9 +29,9 @@ addonId = '238222'
 type = 'REQUIRED'
 
 [[x-prismlauncher-dependencies]]
-addonId = '556861'
+addonId = '233071'
 type = 'OPTIONAL'
 
 [[x-prismlauncher-dependencies]]
-addonId = '233071'
+addonId = '580555'
 type = 'OPTIONAL'
