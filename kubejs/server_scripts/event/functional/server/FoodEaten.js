@@ -1,4 +1,4 @@
-(function () {
+(() => {
 	let FOOD_EATEN = []
 
 	/**

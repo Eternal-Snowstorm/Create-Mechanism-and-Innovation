@@ -1,4 +1,4 @@
-// (function () {
+// (() => {
 // 	const CAST_IRON_UPGRADES = {
 // 		"steampowered:bronze_boiler": "steampowered:cast_iron_boiler",
 // 		"steampowered:bronze_burner": "steampowered:cast_iron_burner",

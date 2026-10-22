@@ -1,4 +1,4 @@
-(function () {
+(() => {
 	ProbeJSEvents.generateDoc((event) => {
 		modifyCreateFluidIngredient(event)
 		modifyMBDFluidIngredient(event)
