@@ -193,20 +193,22 @@ StartupEvents.registry("block", (event) => {
 
 	// 钻探轴承
 	addBlock("driller_bearing")
-		.model("cmi:block/machine/multi_type_driller/bearing")
+		.model("cmi:block/machine/multi_type_driller/driller_bearing")
 		.soundType(SoundType.NETHERITE_BLOCK)
 		.hardness(5)
 		.resistance(5)
+		.defaultCutout()
 		.tagBlock(CmiToolType.PICKAXE.tag())
 		.tagBlock(CmiMiningLevel.IRON.tag())
 		.requiresTool(true)
 
 	// 钻头
 	addBlock("driller_head")
-		.textureAll("cmi:block/machine/driller_placeholder")
+		.model("cmi:block/machine/multi_type_driller/driller_head")
 		.soundType(SoundType.NETHERITE_BLOCK)
 		.hardness(5)
 		.resistance(5)
+		.defaultCutout()
 		.tagBlock(CmiToolType.PICKAXE.tag())
 		.tagBlock(CmiMiningLevel.IRON.tag())
 		.requiresTool(true)
@@ -217,6 +219,7 @@ StartupEvents.registry("block", (event) => {
 		.soundType(SoundType.NETHERITE_BLOCK)
 		.hardness(5)
 		.resistance(5)
+		.defaultCutout()
 		.tagBlock(CmiToolType.PICKAXE.tag())
 		.tagBlock(CmiMiningLevel.IRON.tag())
 		.requiresTool(true)
@@ -227,6 +230,7 @@ StartupEvents.registry("block", (event) => {
 		.soundType(SoundType.NETHERITE_BLOCK)
 		.hardness(5)
 		.resistance(5)
+		.defaultCutout()
 		.tagBlock(CmiToolType.PICKAXE.tag())
 		.tagBlock(CmiMiningLevel.IRON.tag())
 		.requiresTool(true)
@@ -298,11 +302,11 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiMiningLevel.STONE.tag())
 		.box(0, 0, 0, 16, 2, 16)
 		.modelJson = {
-			parent: "cmi:block/redstone_diode",
-				textures: {
-					"diode": "minecraft:block/smooth_stone"
-				}
+		parent: "cmi:block/redstone_diode",
+		textures: {
+			"diode": "minecraft:block/smooth_stone"
 		}
+	}
 
 	// 黄铜二极管底座
 	addBlock("brass_diode_base", "cardinal")
@@ -312,11 +316,11 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiMiningLevel.STONE.tag())
 		.box(0, 0, 0, 16, 2, 16)
 		.modelJson = {
-			parent: "cmi:block/redstone_diode",
-			textures: {
-				"diode": "create:block/diodes/brass_diode_base"
-			}
+		parent: "cmi:block/redstone_diode",
+		textures: {
+			"diode": "create:block/diodes/brass_diode_base"
 		}
+	}
 
 	// 虚设蜂箱漏斗
 	addBlock("dummy_hive_hopper", "cardinal")
