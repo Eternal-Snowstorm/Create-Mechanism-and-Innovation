@@ -33,6 +33,11 @@ ServerEvents.tags("item", (event) => {
 		.add("vintageimprovements:incomplete_redstone_module")
 		.add("cmi:incomplete_nuclear_mechanism")
 
+	// ad流体管道
+	event.get("ad_astra:fluid_pipes")
+		.add("ad_astra:desh_fluid_pipe")
+		.add("ad_astra:ostrum_fluid_pipe")
+
 	// 霜原植物
 	event.get("cmi:glacian_plant")
 		.add("ad_astra:glacian_leaves")

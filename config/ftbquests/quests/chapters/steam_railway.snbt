@@ -337,52 +337,33 @@
 			]
 			id: "12CEF39F02D4EB3A"
 			quest_enhance_disable_scroll_paging: false
+			rewards: [{
+				count: 4
+				id: "7A618DFA911C57B7"
+				item: "steam_letters:bronze_steam_pump"
+				type: "item"
+			}]
 			subtitle: "&m只是方式越来越复杂&r"
 			tasks: [
 				{
-					id: "7036CEA74298B26E"
+					id: "4188D3211B77A4ED"
 					item: {
 						Count: 1
-						id: "itemfilters:or"
+						id: "itemfilters:tag"
 						tag: {
-							items: [
-								{
-									Count: 1b
-									id: "steampowered:bronze_burner"
-								}
-								{
-									Count: 1b
-									id: "steampowered:cast_iron_burner"
-								}
-								{
-									Count: 1b
-									id: "steampowered:steel_burner"
-								}
-								{
-									Count: 1b
-									id: "cmi:bronze_fluid_burner"
-								}
-								{
-									Count: 1b
-									id: "cmi:cast_iron_fluid_burner"
-								}
-								{
-									Count: 1b
-									id: "cmi:steel_fluid_burner"
-								}
-							]
+							value: "steam_letters:steam_burners"
 						}
 					}
 					title: "燃烧室"
 					type: "item"
 				}
 				{
-					id: "0211B2D7CD6BDA13"
+					id: "73460A5ACF421A19"
 					item: {
 						Count: 1
 						id: "itemfilters:tag"
 						tag: {
-							value: "steampowered:boiler"
+							value: "steam_letters:steam_boiler"
 						}
 					}
 					title: "锅炉"
@@ -398,7 +379,7 @@
 			description: [
 				"向&6蒸汽引擎&r中泵入蒸汽, 可以带动其前方两格内的&b蒸汽飞轮&r旋转并&d产生应力&r"
 				"这种方式能够提供&d非常可观&r的应力量, 在解锁&e大型蒸汽锅炉&r和&c燃油引擎&r之前尤为实用"
-				"{image:cmi:textures/images/create/burner_and_flywheel.png width:175 height:114 align:center}"
+				"{image:cmi:textures/images/create/burner_and_flywheel.png width:196 height:104 align:center}"
 				"{@pagebreak}"
 				"接下来讲解一下蒸汽引擎的能量生产逻辑, 方便玩家进行资源调配, 避免燃料资源浪费"
 				"燃烧室燃烧与锅炉的生产使用了温度单元(HU)进行中转"
@@ -425,24 +406,24 @@
 			subtitle: "&m不然这水不是白烧了&r"
 			tasks: [
 				{
-					id: "5E38B5BC109A214B"
+					id: "28B90C13460DB00E"
 					item: {
 						Count: 1
 						id: "itemfilters:tag"
 						tag: {
-							value: "steampowered:steam_engine"
+							value: "steam_letters:steam_engine"
 						}
 					}
-					title: "飞轮引擎"
+					title: "蒸汽飞轮引擎"
 					type: "item"
 				}
 				{
-					id: "3BAADF2990DEFD8F"
+					id: "09E2ACD94822D674"
 					item: {
 						Count: 1
 						id: "itemfilters:tag"
 						tag: {
-							value: "steampowered:flywheel"
+							value: "steam_letters:steam_flywheel"
 						}
 					}
 					title: "蒸汽飞轮"
@@ -810,13 +791,13 @@
 			quest_enhance_disable_scroll_paging: false
 			rewards: [
 				{
-					id: "0D2CBA6D8F8BB95B"
-					item: "cmi:reinforced_coke_oven_input_bus"
+					id: "2FBEBC159FA56453"
+					item: "cmi:seared_input_bus"
 					type: "item"
 				}
 				{
-					id: "5A05FC7B552863B0"
-					item: "cmi:reinforced_coke_oven_output_bus"
+					id: "17AF5E16E2872B4C"
+					item: "cmi:seared_output_bus"
 					type: "item"
 				}
 			]
@@ -870,11 +851,18 @@
 			subtitle: "这个阶段比较方便的东西"
 			tasks: [{
 				id: "46F43A21A7B02A32"
-				item: "ad_astra:desh_fluid_pipe"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "ad_astra:fluid_pipes"
+					}
+				}
+				title: "流体管道"
 				type: "item"
 			}]
 			x: 1.5d
-			y: 0.5d
+			y: 1.0d
 		}
 		{
 			dependencies: ["5227B74E4F8FF3F5"]
@@ -901,6 +889,25 @@
 			title: "升级太麻烦?"
 			x: -6.5d
 			y: -1.5d
+		}
+		{
+			dependencies: ["2F00DD29F68238BA"]
+			id: "371E3D200A96A15A"
+			quest_enhance_disable_scroll_paging: false
+			rewards: [{
+				count: 2
+				id: "6036AA3DAC58D169"
+				item: "steam_letters:bronze_steam_pump"
+				type: "item"
+			}]
+			subtitle: "只能输送蒸汽的泵?"
+			tasks: [{
+				id: "70B628DA3C3EA151"
+				item: "steam_letters:bronze_steam_pump"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 0.0d
 		}
 	]
 	title: "汽鸣铁道"

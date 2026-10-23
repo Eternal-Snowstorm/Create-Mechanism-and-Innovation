@@ -20,8 +20,8 @@
 				item: "thermal_extra:component_assembly"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 8.0d
+			x: 10.0d
+			y: 7.0d
 		}
 		{
 			dependencies: [
@@ -37,8 +37,8 @@
 				item: "cmi:thermal_mechanism"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 7.0d
+			x: 8.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["588CB73822918D10"]
@@ -52,8 +52,8 @@
 				type: "item"
 			}]
 			title: "殷钢"
-			x: 8.0d
-			y: 10.0d
+			x: 10.0d
+			y: 3.0d
 		}
 		{
 			dependencies: [
@@ -69,8 +69,8 @@
 				item: "cmi:thermal_mechanism_augment"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 6.0d
+			x: 6.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["6CCEECDF932F5041"]
@@ -89,8 +89,8 @@
 				title: "康铜齿轮"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 5.0d
+			x: 4.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
@@ -101,8 +101,8 @@
 				item: "thermal:redstone_servo"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 4.0d
+			x: 6.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
@@ -113,8 +113,8 @@
 				item: "thermal:rf_coil"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 7.0d
+			x: 6.0d
+			y: 9.0d
 		}
 		{
 			dependencies: ["541572E2CD225DD7"]
@@ -132,8 +132,8 @@
 				title: "钒板"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 5.0d
+			x: 4.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["16854FB39C805578"]
@@ -144,8 +144,8 @@
 				item: "thermal:machine_crystallizer"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 5.0d
+			x: 8.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -167,8 +167,8 @@
 				title: "纯净石英"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 6.0d
+			x: 10.0d
+			y: 9.0d
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
@@ -179,8 +179,8 @@
 				item: "cmi:crystal_catalyt_bucket"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 5.0d
+			x: 8.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["20227AC2A1D37ED9"]
@@ -198,8 +198,8 @@
 				title: "纯净石英粉"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 7.0d
+			x: 10.0d
+			y: 11.0d
 		}
 		{
 			dependencies: ["6A57D13406E9D6AA"]
@@ -210,8 +210,8 @@
 				item: "thermal:laser_diode"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 7.0d
+			x: 12.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["7986071E20EEF73C"]
@@ -223,7 +223,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 8.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["042CA25C2CE9F78C"]
@@ -238,7 +238,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 3.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
@@ -249,8 +249,8 @@
 				item: "immersiveengineering:component_iron"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 4.0d
+			x: 14.0d
+			y: 5.0d
 		}
 		{
 			dependencies: [
@@ -265,7 +265,7 @@
 				item: "cmi:light_engineering_mechanism_augment"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 12.0d
 			y: 6.0d
 		}
 		{
@@ -311,7 +311,7 @@
 			]
 			title: "抽油机"
 			x: 14.0d
-			y: 1.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["3B2F46F5F77D366F"]
@@ -333,7 +333,7 @@
 				type: "item"
 			}]
 			x: 16.0d
-			y: 3.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -415,8 +415,8 @@
 				title: "石灰石"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 10.0d
+			x: 14.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["78250BAEED3506BA"]
@@ -586,8 +586,8 @@
 				}
 			]
 			title: "镍和银"
-			x: 6.0d
-			y: 11.0d
+			x: 8.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["0FA1A601134C5105"]
@@ -1256,6 +1256,7 @@
 			]
 			shape: "hexagon"
 			size: 1.5d
+			subtitle: "月饼+西瓜（笑"
 			tasks: [
 				{
 					count: 13L
@@ -1478,8 +1479,8 @@
 				item: "vintageimprovements:invar_sheet"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 9.0d
+			x: 10.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["16854FB39C805578"]
@@ -1502,8 +1503,8 @@
 				title: "如果你觉得设备运行太慢..."
 				type: "checkmark"
 			}]
-			x: 4.0d
-			y: 8.0d
+			x: 8.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["6229FE133326F148"]
@@ -1519,6 +1520,7 @@
 		}
 		{
 			dependencies: ["6229FE133326F148"]
+			hide_dependent_lines: true
 			id: "3DFED24F6C44D5E5"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1570,6 +1572,7 @@
 			y: 15.0d
 		}
 		{
+			dependencies: ["6681D48E57C00D0D"]
 			id: "575444E3A9FA8314"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "铝矿副产物"
@@ -1582,6 +1585,7 @@
 			y: 16.0d
 		}
 		{
+			dependencies: ["6681D48E57C00D0D"]
 			id: "668328B9C89163F6"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1591,6 +1595,38 @@
 			}]
 			x: 16.0d
 			y: 14.0d
+		}
+		{
+			dependencies: ["1570B04A1D692BCC"]
+			id: "6681D48E57C00D0D"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [
+				{
+					id: "07D3BBBF83331727"
+					item: "cmi:raw_etrium"
+					type: "item"
+				}
+				{
+					id: "336D8167387394D4"
+					item: "neoecoae:raw_aluminum_ore"
+					type: "item"
+				}
+			]
+			title: "铝和埃忒恩"
+			x: 18.0d
+			y: 15.0d
+		}
+		{
+			id: "2B95E0E6947D013C"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "月饼+西瓜（笑"
+			tasks: [{
+				id: "71C840F5E444303B"
+				item: "cmi:chemical_reactor"
+				type: "item"
+			}]
+			x: 13.5d
+			y: 26.5d
 		}
 	]
 	title: "油燃而升"

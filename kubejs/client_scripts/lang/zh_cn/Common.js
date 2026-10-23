@@ -71,6 +71,23 @@ ClientEvents.lang("zh_cn", (event) => {
 		event.add(`cmi.structure.ore_node/${key}_node`, `${name}矿藏节点`)
 	}
 
+	/**
+	 * 
+	 * @param {string} key 
+	 * @param {string} name 
+	 */
+	function addCreativeTabLang(key, name) {
+		event.add(`itemGroup.${Cmi.MODID}.${key}`, name)
+	}
+
+	addCreativeTabLang("all", "机械动力: 构件与革新")
+	addCreativeTabLang("io_block", "构件与革新: 配置面方块(调试用)")
+	addCreativeTabLang("mechanisms", "构件与革新: 构件")
+	addCreativeTabLang("materials", "材料")
+	addCreativeTabLang("developers", "构件与革新: 开发者")
+	addCreativeTabLang("buckets", "构件与革新: 流体桶")
+	addCreativeTabLang("incompletes", "构件与革新: 半成品")
+
 	addMekanismLang("sulfide_gas_mixture", "硫化物混合气")
 	addMekanismLang("nitroglycerine", "硝化甘油")
 	addMekanismLang("xenon", "氙气")

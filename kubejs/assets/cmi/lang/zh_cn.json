@@ -37,13 +37,6 @@
 	"jade.theme.cmi.windows_xp_luna": "Windows XP Luna",
 	"jade.theme.cmi.windows10": "Windows 10",
 
-	"itemGroup.cmi.io_block": "构件与革新: 配置面方块 (调试用)",
-	"itemGroup.cmi.all": "机械动力: 构件与革新",
-	"itemGroup.cmi.mechanisms": "构件与革新: 构件",
-	"itemGroup.cmi.materials": "构件与革新: 材料",
-	"itemGroup.cmi.developers": "构件与革新: 开发者",
-	"itemGroup.cmi.buckets": "构件与革新: 桶",
-
 	"curios.identifier.mechanisms": "构件",
 
 	"promp.cmi.ender_mechanism.location_stored": "当前坐标已存入末影构件",

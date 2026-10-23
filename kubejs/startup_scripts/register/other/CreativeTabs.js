@@ -5,36 +5,50 @@ StartupEvents.registry("creative_mode_tab", (event) => {
 	 * @returns 
 	 */
 	function addCreativeTab(name) {
-		return event.create(`${Cmi.MODID}:${name}`)
+		let builder = event.create(`${Cmi.MODID}:${name}`)
+
+		builder.displayName(Component.translatable(`itemGroup.${Cmi.MODID}.${name}`))
+
+		return builder
 	}
 
 	addCreativeTab("io_block")
-		.icon(() => Item.of("cmi:ponder_thermal_input"))
+		.icon(() => {
+			return Item.of("cmi:ponder_thermal_input")
+		})
 		.content(() => {
 			return Ingredient.of("#cmi:io_debug_block").getItemIds()
 		})
-		.displayName(Component.translatable(`itemGroup.${Cmi.MODID}.io_block`))
 
 	addCreativeTab("materials")
-		.icon(() => Item.of("cmi:cast_iron_ingot"))
+		.icon(() => {
+			return Item.of("cmi:cast_iron_ingot")
+		})
 		.content(() => {
 			return Ingredient.of("#cmi:ores").getItemIds()
 				.concat(Ingredient.of("#cmi:raw_metals").getItemIds())
 		})
-		.displayName(Component.translatable(`itemGroup.${Cmi.MODID}.materials`))
 
 	addCreativeTab("developers")
 		.icon(() => Item.of("cmi:re_construction"))
 		.content(() => {
 			return Ingredient.of("#cmi:dev_doll").getItemIds()
 		})
-		.displayName(Component.translatable(`itemGroup.${Cmi.MODID}.developers`))
-	
+
 	addCreativeTab("buckets")
-		.icon(() => Item.of("cmi:bucket"))
+		.icon(() => {
+			return Item.of("cmi:sapphire_solution_bucket")
+		})
 		.content(() => {
 			return Ingredient.of("cmi:bucket").getItemIds()
 				.concat(Ingredient.of("#cmi:buckets").getItemIds())
 		})
-		.displayName(Component.translatable(`itemGroup.${Cmi.MODID}.buckets`))
+
+	addCreativeTab("incompletes")
+		.icon(() => {
+			return Item.of("cmi:incomplete_cobalt_mechanism")
+		})
+		.content(() => {
+			return Ingredient.of("#cmi:incomplete_items").getItemIds()
+		})
 })

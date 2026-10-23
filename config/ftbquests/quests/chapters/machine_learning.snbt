@@ -899,11 +899,13 @@
 		{
 			dependencies: ["3B5ADA1051DE6F9A"]
 			id: "46163FE283604AC6"
+			invisible: true
+			optional: true
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "是的还有个Pro Max"
 			tasks: [{
 				id: "76CF67FE710507C3"
-				item: "cmi:advanced_spout"
+				item: "steam_letters:advanced_spout"
 				type: "item"
 			}]
 			x: -1.5d
@@ -936,7 +938,7 @@
 							Mold: "cmi:plate"
 						}
 					}
-					title: "石板"
+					title: "板铸模"
 					type: "item"
 				}
 				{
@@ -1081,7 +1083,7 @@
 			subtitle: "容量更大"
 			tasks: [{
 				id: "3C9BEBD5F153DB58"
-				item: "fluidlogistics:copper_basin"
+				item: "steam_letters:bronze_basin"
 				type: "item"
 			}]
 			x: -8.5d
@@ -1237,7 +1239,10 @@
 		}
 		{
 			dependencies: ["29ACEBA79B437ADD"]
-			description: ["把桶/碗放在树液漏斗下面之后会发现只能收集植物胶乳但是取不出来，因为这个玩意就是收集用的，需要用其他方式把胶乳导出来。这个时候就可以&6用浇筑口&r把液体输出出来，等后面就可以用流体管道输出了。"]
+			description: [
+				"把桶/碗放在树液漏斗下面之后会发现只能收集植物胶乳但是取不出来，因为这个玩意就是收集用的，需要用其他方式把胶乳导出来。这个时候就可以&6用浇筑口&r把液体输出出来，等后面就可以用流体管道输出了。"
+				"{image:cmi:textures/images/example/shuyedaochu.png width:199 height:204 align:center fit:true}"
+			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
 			icon: "tconstruct:seared_faucet"

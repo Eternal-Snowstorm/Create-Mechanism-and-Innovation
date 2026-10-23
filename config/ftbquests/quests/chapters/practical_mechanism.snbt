@@ -1,0 +1,118 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "practical_mechanism"
+	group: "6A6C7C5BAEF247E2"
+	icon: "cmi:colorful_mechanism"
+	id: "67C71691EE0FB154"
+	order_index: 2
+	quest_enhance_decorative_lines: [ ]
+	quest_enhance_hidden_dependency_lines: [ ]
+	quest_links: [ ]
+	quests: [
+		{
+			id: "5561A14A949F42B6"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "5A0D22405AE2F4AE"
+				title: "一些实用但是不在主线里的构件"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5561A14A949F42B6"]
+			id: "7022767445259A4A"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "3A726E80679D90E3"
+				item: "cmi:nature_mechanism"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["5561A14A949F42B6"]
+			description: ["注意不要放进营养液化机（会消耗！）"]
+			id: "5AF90A54B8D29AE1"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "吃不完的食物"
+			tasks: [{
+				id: "63A39A8228818FD0"
+				item: "cmi:pig_iron_mechanism"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5561A14A949F42B6"]
+			id: "02F1C89456918D3A"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "无限16色染料！"
+			tasks: [{
+				id: "316747E5AFB4ACE5"
+				item: "cmi:colorful_mechanism"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5561A14A949F42B6"]
+			description: ["没有debuff版"]
+			id: "492D7D91934E1D82"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "狂乱鸡尾酒"
+			tasks: [{
+				id: "5540DDCE2BBDFA2D"
+				item: "cmi:potion_mechanism"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5561A14A949F42B6"]
+			description: ["可以用动力砂轮打磨出液态经验（无限经验！）"]
+			id: "50EEB0A4ECFCEBA3"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "4531C183C52DC06B"
+				item: "cmi:enchanted_mechanism"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5561A14A949F42B6"]
+			description: ["哈！"]
+			id: "677A1A18F7E0955E"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "哈！"
+			tasks: [{
+				id: "76469C49D1076F81"
+				item: "cmi:sculk_mechanism"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5561A14A949F42B6"]
+			id: "230DBA1D29242001"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "35507E51C78BC9F8"
+				item: "cmi:ender_mechanism"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.0d
+		}
+	]
+	title: "实用构件"
+}

@@ -1,0 +1,379 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "machine_iteration"
+	group: "050255AE19A93344"
+	icon: "immersiveengineering:auto_workbench"
+	id: "09152524BFC19470"
+	order_index: 5
+	quest_enhance_decorative_lines: [ ]
+	quest_enhance_hidden_dependency_lines: [ ]
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: [
+				"0CD54F7B95129990"
+				"4E3F0997BCE2FCD4"
+			]
+			id: "1A5E08FD7A606C72"
+			quest_enhance_disable_scroll_paging: false
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "28B4662247BF30AF"
+				item: "cmi:heavy_engineering_mechanism"
+				type: "item"
+			}]
+			x: 14.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1311CB2F207423BB"]
+			id: "3FAF92A93ACD3FEB"
+			quest_enhance_disable_scroll_paging: false
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "64A4E1DCC44C523C"
+				item: "cmi:reinforced_mechanism"
+				type: "item"
+			}]
+			x: 8.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["3994F9957791D4AC"]
+			id: "0CD54F7B95129990"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "3DB5BB4FDAAC9E02"
+				item: "cmi:heavy_engineering_mechanism_augment"
+				type: "item"
+			}]
+			x: 16.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["1628C208DB18AE01"]
+			id: "1311CB2F207423BB"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "6DCAF7BD55C11A56"
+				item: "cmi:reinforced_mechanism_augment"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["16FAD51B29F98F9A"]
+			icon: "thermal_extra:lubricant_bucket"
+			id: "4E3F0997BCE2FCD4"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "00D817A95CF71513"
+				type: "checkmark"
+			}]
+			title: "润滑油"
+			x: 12.0d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"5D62371137D6E236"
+				"67973D226A60F4DE"
+			]
+			id: "1628C208DB18AE01"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "1394ACA731B6486E"
+				item: "cmi:glowstone_lumen_tube"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["79461202D5061059"]
+			id: "5D62371137D6E236"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "03C2A7072FFD3ABC"
+				item: "thermal:lumium_ingot"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["6AF99714DB316303"]
+			id: "67973D226A60F4DE"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "70B14B7B83F98BF1"
+				item: "tconstruct:cobalt_ingot"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["79461202D5061059"]
+			id: "6AF99714DB316303"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "在下界哦"
+			tasks: [{
+				id: "221BD7EEB579C0B4"
+				item: "tconstruct:raw_cobalt"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["7AADB534F537AA83"]
+			id: "3994F9957791D4AC"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "1EC3387865CDED85"
+				item: "immersiveengineering:component_steel"
+				type: "item"
+			}]
+			x: 14.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["1A5E08FD7A606C72"]
+			id: "575D0E9BC127BF1C"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "7C545DDCD415AB7D"
+				item: "immersiveengineering:heavy_engineering"
+				type: "item"
+			}]
+			x: 14.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["575D0E9BC127BF1C"]
+			id: "6DA19D412E820D7E"
+			quest_enhance_disable_scroll_paging: false
+			shape: "hexagon"
+			size: 2.0d
+			subtitle: "更高级的合金"
+			tasks: [{
+				id: "713D71734D426AC9"
+				item: "immersiveengineering:arc_furnace"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["575D0E9BC127BF1C"]
+			id: "648B1410429417EE"
+			quest_enhance_disable_scroll_paging: false
+			shape: "hexagon"
+			size: 2.0d
+			subtitle: "再也不用浇筑齿轮了"
+			tasks: [{
+				id: "0E49004356F9A30D"
+				item: "immersiveengineering:metal_press"
+				type: "item"
+			}]
+			x: 16.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["575D0E9BC127BF1C"]
+			id: "6040D5F545A9AF4E"
+			quest_enhance_disable_scroll_paging: false
+			shape: "hexagon"
+			size: 2.0d
+			subtitle: "石油化工？！"
+			tasks: [{
+				id: "1F7BDE5EC52E0BF9"
+				item: "immersiveengineering:refinery"
+				type: "item"
+			}]
+			x: 12.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["575D0E9BC127BF1C"]
+			id: "1BC323FEFD8563EE"
+			quest_enhance_disable_scroll_paging: false
+			shape: "hexagon"
+			size: 2.0d
+			subtitle: "强力电解"
+			tasks: [{
+				id: "616ABA94B73DCEE9"
+				item: "immersiveindustry:industrial_electrolyzer"
+				type: "item"
+			}]
+			x: 16.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1BC323FEFD8563EE"]
+			id: "2198F6546DFD10CE"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "直接电解！"
+			tasks: [{
+				id: "1BDB06B9A6B7412D"
+				item: "neoecoae:aluminum_ingot"
+				type: "item"
+			}]
+			x: 16.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["6DA19D412E820D7E"]
+			id: "40C98CCFB238D7F4"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "真的不会锈"
+			tasks: [{
+				id: "7DAF09500E5D8688"
+				item: "cmi:stainless_steel_ingot"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["3FAF92A93ACD3FEB"]
+			description: ["制冰机（更快的浇筑台？）"]
+			id: "5968CB2295B8464D"
+			quest_enhance_disable_scroll_paging: false
+			shape: "hexagon"
+			size: 2.0d
+			subtitle: "🧊🧊🧊"
+			tasks: [{
+				id: "3887293B4BD1ACD2"
+				item: "thermal:machine_chiller"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3FAF92A93ACD3FEB"]
+			id: "14A9BE3930DB9A7F"
+			optional: true
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "用处没那么大的机器（大概"
+			tasks: [
+				{
+					id: "574DF144B28D334B"
+					item: "thermal:machine_insolator"
+					type: "item"
+				}
+				{
+					id: "6B2270B6E8A57CCD"
+					item: "thermal_extra:fluid_mixer"
+					type: "item"
+				}
+				{
+					id: "4BD569E3A936DF9D"
+					item: "thermal:machine_press"
+					type: "item"
+				}
+				{
+					id: "03935F56FD69EF01"
+					item: "thermal:machine_crucible"
+					type: "item"
+				}
+			]
+			title: "一些机器"
+			x: 8.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["3FAF92A93ACD3FEB"]
+			id: "6D23F6076CEF75A4"
+			quest_enhance_disable_scroll_paging: false
+			rewards: [{
+				id: "3AF1C81CE467603A"
+				item: {
+					Count: 1
+					id: "thermal_extra:cod_jerky"
+					tag: {
+						RepairCost: 0
+						display: {
+							Name: "{\"text\":\"请你吃小鱼干\"}"
+						}
+					}
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			subtitle: "低温干燥机？"
+			tasks: [{
+				id: "3F9A9415E29BAF2A"
+				item: "thermal_extra:endothermic_dehydrator"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3FAF92A93ACD3FEB"]
+			id: "0951D03AB81B63C9"
+			quest_enhance_disable_scroll_paging: false
+			shape: "hexagon"
+			size: 2.0d
+			subtitle: "更高级的流体精炼机"
+			tasks: [{
+				id: "7C090DF5CDF78858"
+				item: "thermal_extra:advanced_refinery"
+				type: "item"
+			}]
+			x: 6.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["3FAF92A93ACD3FEB"]
+			description: ["制作一些高精尖材料"]
+			id: "3BAF24E7D930B0E8"
+			quest_enhance_disable_scroll_paging: false
+			shape: "hexagon"
+			size: 2.0d
+			subtitle: "热解物品"
+			tasks: [{
+				id: "5A4EC793C9CB1045"
+				item: "thermal:machine_pyrolyzer"
+				type: "item"
+			}]
+			x: 10.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5968CB2295B8464D"]
+			id: "789B06331E701479"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "更方便的制作"
+			tasks: [{
+				id: "70772355D17F64DC"
+				item: "tconstruct:clear_glass"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["6D23F6076CEF75A4"]
+			id: "463224731EF080C5"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "钨制造"
+			tasks: [{
+				id: "6A529F0A3D2ECCBE"
+				item: "cmi:tungsten_reactant"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 2.0d
+		}
+	]
+	title: "机器迭代(WIP)"
+}

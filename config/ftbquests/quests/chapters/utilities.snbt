@@ -257,33 +257,33 @@
 				"(我知道你在想什么, 虚空飞轮&l&c亖了喵&r&r)"
 			]
 			hide_dependency_lines: true
-			icon: "steampowered:cast_iron_flywheel"
+			icon: "steam_letters:bronze_steam_flywheel"
 			id: "38472ADBCFC92083"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "超大应力来源"
 			tasks: [
 				{
-					id: "7D0557943210EEA6"
+					id: "1C90D09FE9B703FF"
 					item: {
 						Count: 1
 						id: "itemfilters:tag"
 						tag: {
-							value: "steampowered:flywheel"
+							value: "steam_letters:steam_flywheel"
 						}
 					}
 					title: "蒸汽飞轮"
 					type: "item"
 				}
 				{
-					id: "0CCF89B1A1AE56BF"
+					id: "53C8F4317D78C864"
 					item: {
 						Count: 1
 						id: "itemfilters:tag"
 						tag: {
-							value: "steampowered:steam_engine"
+							value: "steam_letters:steam_engine"
 						}
 					}
-					title: "蒸汽引擎"
+					title: "蒸汽飞轮引擎"
 					type: "item"
 				}
 			]
@@ -300,55 +300,30 @@
 				"但是当内部存储的蒸汽满了之后蒸汽锅炉便会开始一边制造噪音一边爆气"
 			]
 			hide_dependency_lines: true
-			icon: "steampowered:cast_iron_burner"
+			icon: "steam_letters:bronze_boiler"
 			id: "243EF0B9E933D85A"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "蒸汽产出设备"
 			tasks: [
 				{
-					id: "14EF53B2B6618A77"
+					id: "47D480CDA3A279AC"
 					item: {
 						Count: 1
 						id: "itemfilters:tag"
 						tag: {
-							value: "steampowered:boiler"
+							value: "steam_letters:steam_boiler"
 						}
 					}
 					title: "锅炉"
 					type: "item"
 				}
 				{
-					id: "29510CC040956C47"
+					id: "6A2C9E485AD75EAB"
 					item: {
 						Count: 1
-						id: "itemfilters:or"
+						id: "itemfilters:tag"
 						tag: {
-							items: [
-								{
-									Count: 1b
-									id: "steampowered:bronze_burner"
-								}
-								{
-									Count: 1b
-									id: "steampowered:cast_iron_burner"
-								}
-								{
-									Count: 1b
-									id: "steampowered:steel_burner"
-								}
-								{
-									Count: 1b
-									id: "cmi:bronze_fluid_burner"
-								}
-								{
-									Count: 1b
-									id: "cmi:cast_iron_fluid_burner"
-								}
-								{
-									Count: 1b
-									id: "cmi:steel_fluid_burner"
-								}
-							]
+							value: "steam_letters:steam_burners"
 						}
 					}
 					title: "燃烧室"
@@ -381,8 +356,8 @@
 				title: "垃圾桶"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 7.0d
+			x: 12.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["714D1AC6D07BEEC0"]
@@ -400,6 +375,8 @@
 				"不是繁衍。"
 				"而是未来正在不断泄漏。"
 				"终有一天, 当所有未来都被提前燃尽时, 我们才会知道, 时间究竟是一种恩赐, 还是一种燃料。"
+				"{@pagebreak}"
+				"详情见测试群群公告"
 			]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
@@ -554,21 +531,6 @@
 		}
 		{
 			dependencies: ["714D1AC6D07BEEC0"]
-			hide_dependency_lines: true
-			id: "10776E907DD88693"
-			quest_enhance_disable_scroll_paging: false
-			size: 1.0d
-			subtitle: "更快速的注液器"
-			tasks: [{
-				id: "5FD58640C3AD7E1F"
-				item: "cmi:advanced_spout"
-				type: "item"
-			}]
-			x: 12.0d
-			y: 5.0d
-		}
-		{
-			dependencies: ["714D1AC6D07BEEC0"]
 			description: [
 				"将&6流体池&f方块放置在你希望放置的位置, 然后用任意石头右键, 即可展开流体池."
 				"注意："
@@ -597,12 +559,12 @@
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "♻️环保♻️"
 			tasks: [{
-				id: "46B8E557794AB6F7"
+				id: "56F470DC8CF20FF6"
 				item: {
 					Count: 1
 					id: "itemfilters:tag"
 					tag: {
-						value: "cmi:solar_boilers"
+						value: "steam_letters:steam_solar_boiler"
 					}
 				}
 				title: "太阳能锅炉"

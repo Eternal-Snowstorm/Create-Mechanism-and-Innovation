@@ -1,0 +1,692 @@
+{
+	always_invisible: true
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "qwq"
+	group: "050255AE19A93344"
+	id: "42D2EA9CFCAB4BB9"
+	order_index: 6
+	quest_enhance_decorative_lines: [ ]
+	quest_enhance_hidden_dependency_lines: [ ]
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: [
+				"3B59B7BE633B96F0"
+				"08BF20777263045E"
+				"03DB1A952C437224"
+				"6E79B3C83BF06BEF"
+				"6686E71A943DBE99"
+				"0A280D44E85F5D34"
+			]
+			id: "2E6485B21A9B2D5F"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "5614F2F790976FBD"
+				item: "neoecoae:integrated_working_station"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["6FD9AF607E3B28C4"]
+			id: "3B59B7BE633B96F0"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "605D8E5C56AD0BD3"
+				item: "neoecoae:superconducting_processor"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["67F2E2E94632ECFE"]
+			id: "6FD9AF607E3B28C4"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "2E1323FF41D03E65"
+				item: "neoecoae:superconducting_processor_print"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["6A128F7C271B4579"]
+			id: "67F2E2E94632ECFE"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "64B620CE6181983F"
+				item: "neoecoae:energized_superconductive_ingot"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -4.5d
+		}
+		{
+			dependencies: [
+				"442FA9A18D8BF15D"
+				"213018551E4F6AD6"
+			]
+			id: "08BF20777263045E"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "5A998A1EEE6701EA"
+				item: "ae2:256k_crafting_storage"
+				type: "item"
+			}]
+			x: 0.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["54B400BED13946E3"]
+			id: "213018551E4F6AD6"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "5BCF2738537EBB85"
+				item: "ae2:crafting_unit"
+				type: "item"
+			}]
+			x: 0.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["689B395BBB6866C6"]
+			id: "442FA9A18D8BF15D"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "569A2ACFA5927EFC"
+				item: "ae2:cell_component_256k"
+				type: "item"
+			}]
+			x: 2.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["6A128F7C271B4579"]
+			id: "689B395BBB6866C6"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "4AB07AAD2B23FB46"
+				item: "ae2:cell_component_1k"
+				type: "item"
+			}]
+			x: 2.5d
+			y: -4.5d
+		}
+		{
+			description: ["链接本任务的任务的前置还未链接，暂时链接于此"]
+			id: "6A128F7C271B4579"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "注意"
+			tasks: [{
+				id: "7988BBF812DEB45D"
+				type: "checkmark"
+			}]
+			title: "点击开始eco工作站任务线"
+			x: 4.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["6A128F7C271B4579"]
+			id: "54B400BED13946E3"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "03379CF328188191"
+				item: "cmi:smart_casing"
+				type: "item"
+			}]
+			x: 0.5d
+			y: -5.5d
+		}
+		{
+			dependencies: [
+				"3437CB77F8CEE51D"
+				"4303200761CA17EF"
+			]
+			id: "03DB1A952C437224"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "432EFAAE705F0F1A"
+				item: "neoecoae:aluminum_alloy_casing"
+				type: "item"
+			}]
+			x: 2.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["6A128F7C271B4579"]
+			description: ["两铝一铬一赛特斯石英粉在电弧炉里烧（不知道为什么看来源没有"]
+			id: "4303200761CA17EF"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "1BF15DA9857D117C"
+				item: "cmi:aluminum_alloy_ingot"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["6A128F7C271B4579"]
+			id: "3437CB77F8CEE51D"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "593B7819E4D3B06D"
+				item: "neoecoae:crystal_ingot"
+				type: "item"
+			}]
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6A128F7C271B4579"]
+			id: "6E79B3C83BF06BEF"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "1C1348C23B36ED05"
+				item: "ae2:inscriber"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"78AA95E3CA8606A0"
+				"630B4C81E08F7B82"
+			]
+			id: "2D4B0D1E342A2BE1"
+			quest_enhance_disable_scroll_paging: false
+			quest_enhance_quest_background: "kaleidoscope_cookery:textures/advancement/background.png"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "1FB16AF5EB50B323"
+				item: "cmi:basic_mekanism_mechanism"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 0.5d
+		}
+		{
+			dependencies: [
+				"402808BF06429750"
+				"592BCA21F18F2269"
+			]
+			id: "78AA95E3CA8606A0"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "7EFA868AB1385E5C"
+				item: "mekanism:basic_control_circuit"
+				type: "item"
+			}]
+			x: 13.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["07FEB9EEE11846D3"]
+			id: "402808BF06429750"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "0EFD0095DED266D8"
+				item: "neoecoae:crystal_matrix"
+				type: "item"
+			}]
+			x: 13.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["48BE5E7913CB16BC"]
+			id: "5968FDE57690B0B5"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "74ECF635167AC3A8"
+				item: "neoecoae:energized_crystal_dust"
+				type: "item"
+			}]
+			x: 11.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["5968FDE57690B0B5"]
+			id: "07FEB9EEE11846D3"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "0C65132138933C6C"
+				item: "neoecoae:crystal_ingot"
+				type: "item"
+			}]
+			x: 11.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["21D270C51E152805"]
+			id: "48BE5E7913CB16BC"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "1ACCE4F00BD52770"
+				item: "neoecoae:energized_crystal"
+				type: "item"
+			}]
+			x: 13.0d
+			y: -6.5d
+		}
+		{
+			dependencies: [
+				"38C4F70ADD8A2584"
+				"5C91A6B0EEF0E16A"
+			]
+			id: "592BCA21F18F2269"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "6FFA9245C634B7E8"
+				item: "cmi:basic_electronic_components"
+				type: "item"
+			}]
+			x: 11.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"077007A321AACB43"
+				"15856673CC935E11"
+			]
+			id: "38C4F70ADD8A2584"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "5CEB07C33604BE16"
+				item: "cmi:osmium_wafer"
+				type: "item"
+			}]
+			x: 9.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["7C4610039C4583C2"]
+			id: "5C91A6B0EEF0E16A"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "060959689F3FC3A4"
+				item: "cmi:enriched_alloy"
+				type: "item"
+			}]
+			x: 9.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["2A2D5B5398B014C5"]
+			id: "7C4610039C4583C2"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "5C0115459A74A346"
+				item: "mekanism:metallurgic_infuser"
+				type: "item"
+			}]
+			x: 9.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["402F78E7DF1743FC"]
+			id: "077007A321AACB43"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "087891EE81E6084E"
+				item: "cmi:enriched_osmium_crystal"
+				type: "item"
+			}]
+			x: 7.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["21D270C51E152805"]
+			id: "402F78E7DF1743FC"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "53F7F0560311B8B1"
+				item: "cmi:pure_semi_molten_osmium"
+				type: "item"
+			}]
+			x: 7.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["21D270C51E152805"]
+			id: "15856673CC935E11"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "4DD8AA7842ED3901"
+				item: "expatternprovider:circuit_cutter"
+				type: "item"
+			}]
+			x: 7.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["202DA7D1421AC3BD"]
+			id: "4F64A9DFD0711010"
+			quest_enhance_disable_scroll_paging: false
+			shape: "hexagon"
+			tasks: [{
+				id: "6268E615985B6D91"
+				item: "cmi:electrolyzer"
+				type: "item"
+			}]
+			x: 17.0d
+			y: -2.5d
+		}
+		{
+			dependencies: [
+				"2D4B0D1E342A2BE1"
+				"4F64A9DFD0711010"
+			]
+			id: "1AEB8A6ACA26FC36"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "302512B92A4DAE8B"
+				item: "cmi:chromeplated_steel_gear"
+				type: "item"
+			}]
+			x: 15.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"481552A49309F9D9"
+				"5E3BE7A051CD0E78"
+			]
+			description: ["电镀液使用后会变回硫酸，不会消耗"]
+			id: "202DA7D1421AC3BD"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "循环使用"
+			tasks: [{
+				id: "479ACC8BCB041CB7"
+				item: "cmi:plating_solution_bucket"
+				type: "item"
+			}]
+			x: 15.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["40C1F0F504964026"]
+			id: "481552A49309F9D9"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "第一桶硫酸！"
+			tasks: [{
+				id: "2E987A84953EEED0"
+				item: "mekanism:sulfuric_acid_bucket"
+				type: "item"
+			}]
+			x: 15.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["21D270C51E152805"]
+			id: "5E3BE7A051CD0E78"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "05D061C4D26F5CF6"
+				item: "cmi:chromium_dust"
+				type: "item"
+			}]
+			x: 13.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["5128AEA2002411D9"]
+			icon: "mekanism:sulfur_trioxide_bucket"
+			id: "40C1F0F504964026"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "51B074C2D90C37A2"
+				type: "checkmark"
+			}]
+			title: "三氧化硫"
+			x: 17.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["54605A0BC5E7BAB4"]
+			icon: "mekanism:sulfur_dioxide_bucket"
+			id: "5128AEA2002411D9"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "50446939C6EAFFEA"
+				type: "checkmark"
+			}]
+			title: "二氧化硫"
+			x: 19.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["21D270C51E152805"]
+			id: "54605A0BC5E7BAB4"
+			quest_enhance_disable_scroll_paging: false
+			shape: "hexagon"
+			subtitle: "热解硫粉"
+			tasks: [{
+				id: "056D6D28A919A195"
+				item: "thermal:machine_pyrolyzer"
+				type: "item"
+			}]
+			x: 17.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["177B11EF53B286AA"]
+			id: "630B4C81E08F7B82"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "101FD930356CA499"
+				item: "cmi:silicon_rubber_plate"
+				type: "item"
+			}]
+			x: 17.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["1E5AE69BBC7AA5CF"]
+			id: "177B11EF53B286AA"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "19002BB855A0A609"
+				item: "cmi:silicon_rubber_bucket"
+				type: "item"
+			}]
+			x: 19.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0653A33CE9A4C9DB"]
+			id: "1E5AE69BBC7AA5CF"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "2245AB29311EAE50"
+				item: "cmi:polysilicone_ether_bucket"
+				type: "item"
+			}]
+			x: 19.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["3FACF1F2E75FE4B9"]
+			id: "0653A33CE9A4C9DB"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "3377F42E0FDAEF5D"
+				item: "cmi:light_silicone_ether_bucket"
+				type: "item"
+			}]
+			x: 21.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["79461202D5061059"]
+			id: "3FACF1F2E75FE4B9"
+			quest_enhance_disable_scroll_paging: false
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "1D3CD2978AA7BA8A"
+				item: "cmi:chemical_reactor"
+				type: "item"
+			}]
+			x: 21.0d
+			y: -2.5d
+		}
+		{
+			dependencies: [
+				"108276FAC1946E3F"
+				"6190E940F1BF2D16"
+			]
+			id: "2A2D5B5398B014C5"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "7CE7DE3D20FDBDD3"
+				item: "cmi:blitz_unit"
+				type: "item"
+			}]
+			x: 9.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["21D270C51E152805"]
+			id: "6190E940F1BF2D16"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "310B3F1B9876FA37"
+				item: "thermalconstruct:blitz_blood_bucket"
+				type: "item"
+			}]
+			x: 11.0d
+			y: -7.5d
+		}
+		{
+			dependencies: ["21D270C51E152805"]
+			id: "108276FAC1946E3F"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "6E0DADD45A07ABA5"
+				item: "thermal:machine_bottler"
+				type: "item"
+			}]
+			x: 7.0d
+			y: -5.5d
+		}
+		{
+			description: ["链接本任务的任务的前置还未链接，暂时链接于此"]
+			hide_dependency_lines: false
+			id: "21D270C51E152805"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "注意"
+			tasks: [{
+				id: "423A0E7ED2B4027D"
+				title: "点击开始mek任务线"
+				type: "checkmark"
+			}]
+			x: 11.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["4A878E92E1DB07B7"]
+			id: "6686E71A943DBE99"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "另一条线"
+			tasks: [{
+				id: "1EC327B10A78AFC5"
+				item: "mekanism:steel_casing"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["78AA95E3CA8606A0"]
+			hide_dependency_lines: true
+			icon: "mekanism:basic_control_circuit"
+			id: "0A280D44E85F5D34"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "194E9740BC819624"
+				type: "checkmark"
+			}]
+			x: 2.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["7C3428E9D5F8696F"]
+			id: "4A878E92E1DB07B7"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "72295222EBC8B76D"
+				item: "cmi:osmium_tile"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["402B55C12A4ED522"]
+			id: "7C3428E9D5F8696F"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "5D66062C9C4358F7"
+				item: "cmi:structural_plastic_bucket"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["0693C9D0C0185844"]
+			id: "402B55C12A4ED522"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "4FB02D3FD739D5F6"
+				item: "cmi:polyvinyl_alcohol_bucket"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["62C926D671A9DB11"]
+			id: "0693C9D0C0185844"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "51139BAB305D1812"
+				item: "cmi:vinyl_alcohol_bucket"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["639D08D2B1E91748"]
+			id: "62C926D671A9DB11"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "7F4410D119628533"
+				item: "cmi:acetylene_bucket"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["6A128F7C271B4579"]
+			id: "639D08D2B1E91748"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "5B3AAE07B910769E"
+				item: "cmi:cracked_diesel_bucket"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 4.5d
+		}
+	]
+	title: "qwq"
+}
