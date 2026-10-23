@@ -3,9 +3,10 @@ ServerEvents.tags("item", (event) => {
 	// 添加标签
 	let add = advancedAdd.bind(event)
 
+	// 放射性物品
 	event.get("cmi:radioactive_items")
 		.add("mekanism:pellet_polonium")
-		.add("mekanism:pellet_polonium")
+		.add("mekanism:pellet_plutonium")
 		.add("mekanism:pellet_antimatter")
 
 	// 木板变体
@@ -13,19 +14,11 @@ ServerEvents.tags("item", (event) => {
 		.add("thermal:rubberwood_planks")
 
 	// 构件
-	event.get("create:mechanisms")
-		.add("create:precision_mechanism")
-		.add("vintageimprovements:redstone_module")
-		.add("cmi:nuclear_mechanism")
+	add("create:mechanisms/precision", "create:precision_mechanism")
 
-	event.get("create:mechanisms/precision")
-		.add("create:precision_mechanism")
+	add("create:mechanisms/redstone", "vintageimprovements:redstone_module")
 
-	event.get("create:mechanisms/redstone")
-		.add("vintageimprovements:redstone_module")
-
-	event.get("create:mechanisms/nuclear")
-		.add("cmi:nuclear_mechanism")
+	add("create:mechanisms/nuclear", "cmi:nuclear_mechanism")
 
 	// 构件半成品
 	event.get("create:incomplete_mechanisms")
@@ -406,7 +399,6 @@ ServerEvents.tags("item", (event) => {
 		"titanium_alloy",
 		"aluminum_alloy",
 		"neodymium",
-		"neodymium",
 		"black_tungsten_alloy"
 	]
 	metalIds.forEach((metal) => {
@@ -467,6 +459,7 @@ ServerEvents.tags("item", (event) => {
 		.add("thermal:dynamo_lapidary")
 		.add("thermal:dynamo_disenchantment")
 		.add("thermal:dynamo_gourmand")
+		.add("thermal_extra:dynamo_terraceous")
 
 	// 热力机器
 	event.get("thermal:machines")
@@ -582,16 +575,6 @@ ServerEvents.tags("item", (event) => {
 	event.get("cmi:beltcasing")
 		.add("create:andesite_casing")
 		.add("create:brass_casing")
-
-	// 可被套壳
-	event.get("cmi:encasable")
-		.add("create:shaft")
-		.add("create:belt")
-
-	// 可被拆壳
-	event.get("cmi:uncasingable")
-		.add("create:brass_encased_shaft")
-		.add("create:andesite_encased_shaft")
 
 	// 天然粉末
 	event.get("cmi:natural_powders")
@@ -739,7 +722,6 @@ ServerEvents.tags("item", (event) => {
 	// 盐 
 	event.get("forge:salt")
 		.add("ratatouille:salt")
-		.add("cmi:nacl")
 
 	// 冰 
 	event.get("forge:ice")
@@ -755,6 +737,7 @@ ServerEvents.tags("item", (event) => {
 	// 史莱姆球 
 	event.get("forge:slimeballs")
 		.add("alexscaves:ferrouslime_ball")
+		.add("thermal_extra:sticky_ball")
 
 	event.get("forge:slimeball/ferrous")
 		.add("alexscaves:ferrouslime_ball")

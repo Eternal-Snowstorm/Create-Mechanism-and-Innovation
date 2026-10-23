@@ -85,14 +85,15 @@ ServerEvents.tags("block", (event) => {
 	// 热力发电机
 	event.get("thermal:dynamos")
 		.add("thermal_extra:dynamo_frost")
+		.add("thermal_extra:dynamo_terraceous")
 
 	// 镐挖掘
 	event.get(CmiToolType.PICKAXE.tag())
 		.remove("treetap:tap")
-		.add([
-			"#cmi:coils",
-			"cmi:driller_head"
-		])
+		.add("#cmi:coils")
+		.add("cmi:driller_head")
+		.add("cmi:driller_fluid_pump")
+		.add("cmi:driller_gas_pump")
 
 	// 斧挖掘
 	event.get(CmiToolType.AXE.tag())
@@ -105,6 +106,8 @@ ServerEvents.tags("block", (event) => {
 	// 需要铁工具
 	event.get(CmiMiningLevel.IRON.tag())
 		.add("cmi:driller_head")
+		.add("cmi:driller_fluid_pump")
+		.add("cmi:driller_gas_pump")
 
 	// 热力设备
 	event.add("thermal:devices")
