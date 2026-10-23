@@ -388,6 +388,127 @@ name(
 
 参数可以不解释具体作用, 但必须说明参数类型.
 
+#### 17. 私有函数作用域限制
+
+但凡脚本涉及到事件外的函数, 必须将整个脚本包裹在`(() => { ... })()`内. 例如
+
+```js
+// SteamUpgrade.js
+(() => {
+	const CAST_IRON_UPGRADES = {
+		"steam_letters:bronze_boiler": "cmi:cast_iron_boiler",
+		"steam_letters:bronze_solid_burner": "cmi:cast_iron_solid_burner",
+		"steam_letters:bronze_fluid_burner": "cmi:cast_iron_fluid_burner",
+		"steam_letters:bronze_solar_boiler": "cmi:cast_iron_solar_boiler",
+		"steam_letters:bronze_steam_engine": "cmi:cast_iron_steam_engine",
+		"steam_letters:bronze_steam_flywheel": "cmi:cast_iron_steam_flywheel",
+	}
+
+	const STEEL_UPGRADES = {
+		"cmi:cast_iron_boiler": "cmi:steel_boiler",
+		"cmi:cast_iron_solid_burner": "cmi:steel_solid_burner",
+		"cmi:cast_iron_fluid_burner": "cmi:steel_fluid_burner",
+		"cmi:cast_iron_solar_boiler": "cmi:steel_solar_boiler",
+		"cmi:cast_iron_steam_engine": "cmi:steel_steam_engine",
+		"cmi:cast_iron_steam_flywheel": "cmi:steel_steam_flywheel",
+	}
+
+	BlockEvents.rightClicked((event) => {
+		let { item, block, hand, player, level } = event
+
+		upgradeCastIron(item, block, hand, player, level)
+		upgradeSteel(item, block, hand, player, level)
+	})
+
+	/**
+	 * 
+	 * @param {Internal.ItemStack} item 
+	 * @param {Internal.BlockContainerJS_} block 
+	 * @param {InteractionHand} hand 
+	 * @param {Player} player 
+	 * @param {Internal.Level_} level
+	 * @returns 
+	 */
+	function upgradeCastIron(item, block, hand, player, level) {
+		if (item.getId() !== "cmi:steam_cast_iron_upgrade") {
+			return
+		}
+
+		/**
+		 * @type {Internal.Block_}
+		 */
+		let targetId = CAST_IRON_UPGRADES[block.getId()]
+
+		if (targetId) {
+			upgradeBlock(item, block, player, hand, level, targetId)
+		}
+	}
+
+	/**
+	 * 
+	 * @param {Internal.ItemStack} item 
+	 * @param {Internal.BlockContainerJS_} block 
+	 * @param {InteractionHand} hand 
+	 * @param {Player} player 
+	 * @param {Internal.Level_} level
+	 * @returns 
+	 */
+	function upgradeSteel(item, block, hand, player, level) {
+		if (item.getId() !== "cmi:steam_steel_upgrade") {
+			return
+		}
+
+		/**
+		 * @type {Internal.Block_}
+		 */
+		let targetId = STEEL_UPGRADES[block.getId()]
+
+		if (targetId) {
+			upgradeBlock(item, block, player, hand, level, targetId)
+		}
+	}
+
+	/**
+	 * 
+	 * @param {Internal.ItemStack} item 
+	 * @param {Internal.BlockContainerJS_} block 
+	 * @param {Player} player 
+	 * @param {InteractionHand_} hand
+	 * @param {Internal.Level_} level 
+	 * @param {Internal.Block_} targetId 
+	 */
+	function upgradeBlock(item, block, player, hand, level, targetId) {
+		let properties = block.getProperties()
+		let nbt = block.getEntityData()
+
+		if (hand !== InteractionHand.MAIN_HAND) {
+			return
+		}
+
+		player.swing()
+		level.playSound(
+			null,
+			block.x,
+			block.y,
+			block.z,
+			"minecraft:block.smithing_table.use",
+			"blocks",
+			0.5,
+			1.0
+		)
+		block.set(targetId, properties)
+
+		if (nbt) {
+			block.setEntityData(nbt)
+		}
+
+		if (!player.isCreative()) {
+			item.shrink(1)
+		}
+	}
+})()
+```
+
 ---
 
 ### 第七条 注册规范
