@@ -7,8 +7,29 @@
 	id: "42D2EA9CFCAB4BB9"
 	order_index: 6
 	quest_enhance_decorative_lines: [ ]
-	quest_enhance_hidden_dependency_lines: [ ]
-	quest_links: [ ]
+	quest_enhance_hidden_dependency_lines: [
+		{
+			dependency: "q:402808bf06429750"
+			reveal_on_hover: 0b
+			source: "l:68dc09dd9b9c1ff9"
+		}
+		{
+			dependency: "q:592bca21f18f2269"
+			reveal_on_hover: 0b
+			source: "l:68dc09dd9b9c1ff9"
+		}
+		{
+			dependency: "l:68dc09dd9b9c1ff9"
+			reveal_on_hover: 0b
+			source: "q:2d4b0d1e342a2be1"
+		}
+	]
+	quest_links: [{
+		id: "68DC09DD9B9C1FF9"
+		linked_quest: "78AA95E3CA8606A0"
+		x: 2.0d
+		y: -1.0d
+	}]
 	quests: [
 		{
 			dependencies: [
@@ -17,7 +38,7 @@
 				"03DB1A952C437224"
 				"6E79B3C83BF06BEF"
 				"6686E71A943DBE99"
-				"0A280D44E85F5D34"
+				"78AA95E3CA8606A0"
 			]
 			id: "2E6485B21A9B2D5F"
 			quest_enhance_disable_scroll_paging: false
@@ -26,8 +47,8 @@
 				item: "neoecoae:integrated_working_station"
 				type: "item"
 			}]
-			x: 0.5d
-			y: 0.5d
+			x: 0.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["6FD9AF607E3B28C4"]
@@ -38,8 +59,8 @@
 				item: "neoecoae:superconducting_processor"
 				type: "item"
 			}]
-			x: -1.5d
-			y: -0.5d
+			x: 2.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["67F2E2E94632ECFE"]
@@ -50,8 +71,8 @@
 				item: "neoecoae:superconducting_processor_print"
 				type: "item"
 			}]
-			x: -1.5d
-			y: -2.5d
+			x: 0.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["6A128F7C271B4579"]
@@ -62,8 +83,8 @@
 				item: "neoecoae:energized_superconductive_ingot"
 				type: "item"
 			}]
-			x: -1.5d
-			y: -4.5d
+			x: -2.0d
+			y: -6.0d
 		}
 		{
 			dependencies: [
@@ -77,8 +98,8 @@
 				item: "ae2:256k_crafting_storage"
 				type: "item"
 			}]
-			x: 0.5d
-			y: -1.5d
+			x: -4.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["54B400BED13946E3"]
@@ -89,20 +110,21 @@
 				item: "ae2:crafting_unit"
 				type: "item"
 			}]
-			x: 0.5d
-			y: -3.5d
+			x: -3.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["689B395BBB6866C6"]
 			id: "442FA9A18D8BF15D"
 			quest_enhance_disable_scroll_paging: false
+			subtitle: "2^8"
 			tasks: [{
 				id: "569A2ACFA5927EFC"
 				item: "ae2:cell_component_256k"
 				type: "item"
 			}]
-			x: 2.5d
-			y: -2.5d
+			x: -5.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["6A128F7C271B4579"]
@@ -113,8 +135,8 @@
 				item: "ae2:cell_component_1k"
 				type: "item"
 			}]
-			x: 2.5d
-			y: -4.5d
+			x: -5.0d
+			y: -3.0d
 		}
 		{
 			description: ["链接本任务的任务的前置还未链接，暂时链接于此"]
@@ -126,8 +148,8 @@
 				type: "checkmark"
 			}]
 			title: "点击开始eco工作站任务线"
-			x: 4.5d
-			y: 2.5d
+			x: -4.0d
+			y: -5.0d
 		}
 		{
 			dependencies: ["6A128F7C271B4579"]
@@ -138,8 +160,8 @@
 				item: "cmi:smart_casing"
 				type: "item"
 			}]
-			x: 0.5d
-			y: -5.5d
+			x: -3.0d
+			y: -3.0d
 		}
 		{
 			dependencies: [
@@ -153,8 +175,8 @@
 				item: "neoecoae:aluminum_alloy_casing"
 				type: "item"
 			}]
-			x: 2.5d
-			y: -0.5d
+			x: 0.0d
+			y: -5.0d
 		}
 		{
 			dependencies: ["6A128F7C271B4579"]
@@ -166,8 +188,8 @@
 				item: "cmi:aluminum_alloy_ingot"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 0.5d
+			x: -1.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["6A128F7C271B4579"]
@@ -178,11 +200,14 @@
 				item: "neoecoae:crystal_ingot"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -1.5d
+			x: -2.0d
+			y: -5.0d
 		}
 		{
-			dependencies: ["6A128F7C271B4579"]
+			dependencies: [
+				"6A128F7C271B4579"
+				"54B400BED13946E3"
+			]
 			id: "6E79B3C83BF06BEF"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -190,8 +215,8 @@
 				item: "ae2:inscriber"
 				type: "item"
 			}]
-			x: -1.5d
-			y: 1.5d
+			x: -1.0d
+			y: -3.0d
 		}
 		{
 			dependencies: [
@@ -599,33 +624,21 @@
 				item: "mekanism:steel_casing"
 				type: "item"
 			}]
-			x: 0.5d
-			y: 2.5d
-		}
-		{
-			dependencies: ["78AA95E3CA8606A0"]
-			hide_dependency_lines: true
-			icon: "mekanism:basic_control_circuit"
-			id: "0A280D44E85F5D34"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "194E9740BC819624"
-				type: "checkmark"
-			}]
-			x: 2.5d
-			y: 1.5d
+			x: 0.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["7C3428E9D5F8696F"]
 			id: "4A878E92E1DB07B7"
 			quest_enhance_disable_scroll_paging: false
+			subtitle: "不是砖"
 			tasks: [{
 				id: "72295222EBC8B76D"
 				item: "cmi:osmium_tile"
 				type: "item"
 			}]
-			x: -1.5d
-			y: 3.5d
+			x: -3.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["402B55C12A4ED522"]
@@ -636,8 +649,8 @@
 				item: "cmi:structural_plastic_bucket"
 				type: "item"
 			}]
-			x: 0.5d
-			y: 4.5d
+			x: -5.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["0693C9D0C0185844"]
@@ -648,8 +661,8 @@
 				item: "cmi:polyvinyl_alcohol_bucket"
 				type: "item"
 			}]
-			x: -1.5d
-			y: 5.5d
+			x: -6.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["62C926D671A9DB11"]
@@ -660,8 +673,8 @@
 				item: "cmi:vinyl_alcohol_bucket"
 				type: "item"
 			}]
-			x: 0.5d
-			y: 6.5d
+			x: -6.5d
+			y: -1.0d
 		}
 		{
 			dependencies: ["639D08D2B1E91748"]
@@ -672,8 +685,8 @@
 				item: "cmi:acetylene_bucket"
 				type: "item"
 			}]
-			x: 2.5d
-			y: 5.5d
+			x: -6.5d
+			y: -2.0d
 		}
 		{
 			dependencies: ["6A128F7C271B4579"]
@@ -684,8 +697,8 @@
 				item: "cmi:cracked_diesel_bucket"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 4.5d
+			x: -6.5d
+			y: -3.0d
 		}
 	]
 	title: "qwq"
