@@ -1,5 +1,5 @@
 ServerEvents.recipes((event) => {
-	let { create } = event.getRecipes()
+	let { create, thermal, mekanism } = event.getRecipes()
 
 	CmiMetal.getAll().forEach((material) => {
 		let metal = material.getId()
@@ -15,6 +15,13 @@ ServerEvents.recipes((event) => {
 			create.crushing([
 				highPriorityItem(DUST)
 			], INGOT)
+
+			thermal.pulverizer([
+				highPriorityItem(DUST)
+			], INGOT)
+
+			mekanism.crushing(highPriorityItem(DUST),
+				INGOT)
 		}
 
 		if (Ingredient.isNotNull(CRUSHED)) {
@@ -55,6 +62,21 @@ ServerEvents.recipes((event) => {
 			}, {
 				type: "create:crushing",
 				output: RAW_ORE
+			}, {
+				"type": "mekanism:crushing",
+				"output": DUST
+			}, {
+				"type": "thermal:pulverizer",
+				"output": DUST
+			}, {
+				"type": "mekanism:crushing",
+				"output": DUST
+			}, {
+				"type": "ae2:inscriber",
+				"output": DUST
+			}, {
+				"type": "immersiveengineering:crusher",
+				"output": DUST
 			}
 		])
 	})

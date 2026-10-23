@@ -1,6 +1,5 @@
 // priority: 11
 ServerEvents.tags("fluid", (event) => {
-
 	// 可用作火箭燃料
 	removeTagAllId("ad_astra:fuel")
 		.add("ad_astra:fuel")

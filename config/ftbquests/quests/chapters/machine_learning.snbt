@@ -888,7 +888,7 @@
 				{
 					id: "3A539E78CE899B58"
 					item: "create:hand_crank"
-					title: "你确定？"
+					title: "你确定?"
 					type: "item"
 				}
 			]
@@ -1177,7 +1177,7 @@
 				"它的效率计算规则有点复杂...如果你不想研究，可以直接翻页查看&6最小最省密堆单元&r"
 				"{@pagebreak}"
 				"{image:cmi:textures/images/example/rubber.png width:199 height:112 align:center fit:true}"
-				"去皮橡胶原木周围26格内（以其为中心，边长3格的正方体范围内）&4不要&r放第二个去皮橡胶原木，会扣效率"
+				"去皮橡胶原木周围26格内(以其为中心，边长3格的正方体范围内)&4不要&r放第二个去皮橡胶原木，会扣效率"
 			]
 			id: "29ACEBA79B437ADD"
 			quest_enhance_disable_scroll_paging: false

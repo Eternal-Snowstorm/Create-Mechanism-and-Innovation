@@ -88,7 +88,7 @@ ServerEvents.recipes((event) => {
 			return ingredientJson(input[0], input[1])
 		}
 
-		// [ingredient, ingredient, ...]：多选一（数量同为 1）
+		// [ingredient, ingredient, ...]：多选一(数量同为 1)
 		let json = new $JsonObject()
 		let array = new $JsonArray()
 

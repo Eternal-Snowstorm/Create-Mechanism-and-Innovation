@@ -179,7 +179,7 @@ ClassAssignmentManager.ASSIGNMENTS.put(MyClass.class, new PrimitiveDescJS("Speci
 > 限制: 只对带下划线别名的类有效(`Ingredient_ → Ingredient`). 
 > `number` / `string` 这类原生类型走 assign 是没用的, 用 2.1 的 `property:modify`. 
 
-### 2.3 找不到类名 / 方法名？
+### 2.3 找不到类名 / 方法名?
 
 先打印看看: 
 
