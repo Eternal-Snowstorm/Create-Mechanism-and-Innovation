@@ -190,7 +190,7 @@
 			quest_enhance_disable_scroll_paging: false
 			shape: "hexagon"
 			size: 2.0d
-			subtitle: "石油化工？！"
+			subtitle: "石油化工?！"
 			tasks: [{
 				id: "1F7BDE5EC52E0BF9"
 				item: "immersiveengineering:refinery"
@@ -242,7 +242,7 @@
 		}
 		{
 			dependencies: ["3FAF92A93ACD3FEB"]
-			description: ["制冰机（更快的浇筑台？）"]
+			description: ["制冰机(更快的浇筑台?)"]
 			id: "5968CB2295B8464D"
 			quest_enhance_disable_scroll_paging: false
 			shape: "hexagon"
@@ -261,7 +261,7 @@
 			id: "14A9BE3930DB9A7F"
 			optional: true
 			quest_enhance_disable_scroll_paging: false
-			subtitle: "用处没那么大的机器（大概"
+			subtitle: "用处没那么大的机器(大概"
 			tasks: [
 				{
 					id: "574DF144B28D334B"
@@ -308,7 +308,7 @@
 			}]
 			shape: "hexagon"
 			size: 2.0d
-			subtitle: "低温干燥机？"
+			subtitle: "低温干燥机?"
 			tasks: [{
 				id: "3F9A9415E29BAF2A"
 				item: "thermal_extra:endothermic_dehydrator"

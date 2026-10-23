@@ -68,7 +68,7 @@ ClientEvents.lang("zh_cn", (event) => {
 		"desh",
 		"戴斯",
 		"来自莫托斯的神秘金属",
-		"从莫托斯开采的神秘材料, 似乎可以做出更好的升级？"
+		"从莫托斯开采的神秘材料, 似乎可以做出更好的升级?"
 	)
 	addTConMaterialLang(
 		"ostrum",

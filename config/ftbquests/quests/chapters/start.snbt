@@ -359,7 +359,7 @@
 		}
 		{
 			dependencies: ["2613E62AF5BCD9AC"]
-			description: ["做把锹能让我更快地收集材料...或者还有&6更快的选择&f？"]
+			description: ["做把锹能让我更快地收集材料...或者还有&6更快的选择&f?"]
 			icon: {
 				Count: 1
 				id: "minecraft:stone_shovel"

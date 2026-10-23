@@ -18,7 +18,7 @@ def is_targeted_file(rel_path, target_folders):
 	判断某个相对路径是否属于指定的目标文件夹列表
 	"""
 	if not target_folders:
-		return True  # 如果没有指定, 则扫描全部（兼容旧逻辑）
+		return True  # 如果没有指定, 则扫描全部(兼容旧逻辑)
 	
 	# 标准化路径格式：去除开头/结尾斜杠, 统一使用正斜杠
 	rel_path = rel_path.replace("\\", "/").strip("/")
@@ -31,7 +31,7 @@ def is_targeted_file(rel_path, target_folders):
 	return False
 
 def should_ignore(rel_path, ignore_patterns):
-	"""根据忽略模式跳过文件（例如临时文件, 日志等）"""
+	"""根据忽略模式跳过文件(例如临时文件, 日志等)"""
 	for pattern in ignore_patterns:
 		pattern = pattern.replace("\\", "/")
 		if pattern in rel_path or Path(rel_path).match(pattern):
@@ -55,10 +55,10 @@ def generate_checksums(root_dir, target_folders, ignore_patterns=None,
 		if not file_path.is_file():
 			continue
 		
-		# 获取相对路径（使用正斜杠）
+		# 获取相对路径(使用正斜杠)
 		rel_path = str(file_path.relative_to(root_path)).replace("\\", "/")
 		
-		# 1. 先检查是否在目标文件夹内（核心过滤）
+		# 1. 先检查是否在目标文件夹内(核心过滤)
 		if not is_targeted_file(rel_path, target_folders):
 			continue
 		

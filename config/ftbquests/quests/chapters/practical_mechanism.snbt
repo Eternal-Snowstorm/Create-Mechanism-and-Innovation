@@ -35,7 +35,7 @@
 		}
 		{
 			dependencies: ["5561A14A949F42B6"]
-			description: ["注意不要放进营养液化机（会消耗！）"]
+			description: ["注意不要放进营养液化机(会消耗！)"]
 			id: "5AF90A54B8D29AE1"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "吃不完的食物"
@@ -76,7 +76,7 @@
 		}
 		{
 			dependencies: ["5561A14A949F42B6"]
-			description: ["可以用动力砂轮打磨出液态经验（无限经验！）"]
+			description: ["可以用动力砂轮打磨出液态经验(无限经验！)"]
 			id: "50EEB0A4ECFCEBA3"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{

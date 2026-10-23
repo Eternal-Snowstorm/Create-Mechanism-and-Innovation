@@ -273,7 +273,7 @@
 				"79461202D5061059"
 				"7AADB534F537AA83"
 			]
-			description: ["以&6抽油机驴头&f所在端为前臂，&6抽油机曲柄&f所在端为后臂，前后臂长度分别为&620/4&r时，抽油机效率最高（1000mb/次）"]
+			description: ["以&6抽油机驴头&f所在端为前臂，&6抽油机曲柄&f所在端为后臂，前后臂长度分别为&620/4&r时，抽油机效率最高(1000mb/次)"]
 			icon: "createdieselgenerators:pumpjack_crank"
 			icon_scale: 2.0d
 			id: "3640CEE4D21C8BB5"
@@ -285,7 +285,7 @@
 			}]
 			shape: "hexagon"
 			size: 1.5d
-			subtitle: "磕头机（笑）"
+			subtitle: "磕头机(笑)"
 			tasks: [
 				{
 					id: "63611EF2A8ACC14D"
@@ -1565,7 +1565,7 @@
 			dependencies: ["5E07A1EE010AE757"]
 			id: "2B95E0E6947D013C"
 			quest_enhance_disable_scroll_paging: false
-			subtitle: "月饼+西瓜（笑"
+			subtitle: "月饼+西瓜(笑"
 			tasks: [{
 				id: "71C840F5E444303B"
 				item: "cmi:chemical_reactor"
