@@ -207,8 +207,8 @@
 			size: 2.0d
 			subtitle: "强力电解"
 			tasks: [{
-				id: "616ABA94B73DCEE9"
-				item: "immersiveindustry:industrial_electrolyzer"
+				id: "77AAAA9241633816"
+				item: "cmi:electrolyzer"
 				type: "item"
 			}]
 			x: 16.0d
