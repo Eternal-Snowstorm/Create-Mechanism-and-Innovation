@@ -49,6 +49,4 @@ ClientEvents.lang("en_us", (event) => {
 	addMBDLang("steel", "Steel")
 	addMBDLang("stainless_steel", "Stainless Steel")
 	addMBDLang("air_tight", "Air Tight")
-
-	event.add("block.mbd2.proxy_block", "Multiblock Part Block")
 })
