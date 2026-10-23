@@ -202,17 +202,6 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiMiningLevel.IRON.tag())
 		.requiresTool(true)
 
-	// 钻头
-	addBlock("driller_head")
-		.model("cmi:block/machine/multi_type_driller/driller_head")
-		.soundType(SoundType.NETHERITE_BLOCK)
-		.hardness(5)
-		.resistance(5)
-		.defaultCutout()
-		.tagBlock(CmiToolType.PICKAXE.tag())
-		.tagBlock(CmiMiningLevel.IRON.tag())
-		.requiresTool(true)
-
 	// 液泵
 	addBlock("driller_fluid_pump")
 		.textureAll("cmi:block/machine/driller_placeholder")

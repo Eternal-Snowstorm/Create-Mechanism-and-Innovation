@@ -56,7 +56,7 @@ ServerEvents.tags("block", (event) => {
 			"tconstruct:blood_slime_tall_grass"
 		])
 
-	// 集装箱
+	// 集装箱黑名单
 	event.get("mekanism:cardboard_blacklist")
 		.add("#minecraft:leaves")
 
@@ -87,12 +87,24 @@ ServerEvents.tags("block", (event) => {
 		.add("thermal_extra:dynamo_frost")
 
 	// 镐挖掘
-	event.get("minecraft:mineable/pickaxe")
+	event.get(CmiToolType.PICKAXE.tag())
 		.remove("treetap:tap")
+		.add([
+			"#cmi:coils",
+			"cmi:driller_head"
+		])
 
 	// 斧挖掘
-	event.get("minecraft:mineable/axe")
+	event.get(CmiToolType.AXE.tag())
 		.add("treetap:tap")
+
+	// 需要石工具
+	event.get(CmiMiningLevel.STONE.tag())
+		.add("#cmi:coils")
+	
+	// 需要铁工具
+	event.get(CmiMiningLevel.IRON.tag())
+		.add("cmi:driller_head")
 
 	// 热力设备
 	event.add("thermal:devices")
@@ -140,8 +152,6 @@ ServerEvents.tags("block", (event) => {
 			"#forge:storage_blocks",
 			"#forge:sheetmetals",
 
-			"@mm",
-			"@steampowered",
 			"@createdeco",
 			"@farmersdelight",
 			"@ftbquests",
@@ -151,7 +161,6 @@ ServerEvents.tags("block", (event) => {
 			"@portality",
 			"@sophisticatedbackpacks",
 			"@pipez",
-			"@rechiseledcreate",
 
 			"#kaleidoscope_cookery:sittable",
 			"#kaleidoscope_cookery:table",
@@ -189,6 +198,7 @@ ServerEvents.tags("block", (event) => {
 			"#ad_astra:globes",
 
 			"create_rns:mine_head",
+
 			"#cmi:coils",
 
 			"immersiveengineering:craftingtable",
@@ -226,9 +236,6 @@ ServerEvents.tags("block", (event) => {
 			"immersiveengineering:turret_gun",
 			"immersiveengineering:cloche",
 			"immersiveengineering:electromagnet",
-			"immersiveengineering:coil_lv",
-			"immersiveengineering:coil_mv",
-			"immersiveengineering:coil_hv",
 			"immersiveengineering:rs_engineering",
 			"immersiveengineering:heavy_engineering",
 			"immersiveengineering:light_engineering",
@@ -329,13 +336,7 @@ ServerEvents.tags("block", (event) => {
 	event.get("forge:ores/cheese")
 		.add("ad_astra:moon_cheese_ore")
 
-	event.get("minecraft:needs_stone_tool")
-		.add("#cmi:coils")
-
-	event.get("minecraft:mineable/pickaxe")
-		.add("#cmi:coils")
-
-	// 平台填充
+	// 平台填充无掉落物
 	event.get("industrial_platform:no_drop_blocks")
 		.add([
 			"create:polished_cut_andesite",
@@ -353,10 +354,8 @@ ServerEvents.tags("block", (event) => {
 			.add([STRIPPED_LOG, STRIPPED_WOOD])
 	})
 
-	// 移除
+	// 可取树液
 	removeTagAllId("treetap:tappable")
-
-	event.get("treetap:tappable")
 		.add([
 			"thermal:stripped_rubberwood_log",
 			"thermal:stripped_rubberwood_wood"
