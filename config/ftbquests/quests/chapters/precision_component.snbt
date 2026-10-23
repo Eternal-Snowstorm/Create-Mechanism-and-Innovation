@@ -726,16 +726,6 @@
 			quest_enhance_disable_scroll_paging: false
 			rewards: [
 				{
-					id: "26B70670A150B2C1"
-					item: "cmi:improved_rubber_extractor_energy_input_bus"
-					type: "item"
-				}
-				{
-					id: "37FB38F546803123"
-					item: "cmi:improved_rubber_extractor_fluid_output_bus"
-					type: "item"
-				}
-				{
 					count: 5
 					id: "1AE0A4A43E387FF4"
 					item: "thermal:rubberwood_leaves"
@@ -745,6 +735,16 @@
 					count: 3
 					id: "44B0CBBA97A415E6"
 					item: "thermal:rubberwood_log"
+					type: "item"
+				}
+				{
+					id: "51CAC9AA47E845CA"
+					item: "cmi:industrial_iron_energy_input_bus"
+					type: "item"
+				}
+				{
+					id: "02F81AED9BB42517"
+					item: "cmi:industrial_iron_fluid_output_bus"
 					type: "item"
 				}
 			]

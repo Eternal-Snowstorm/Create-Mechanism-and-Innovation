@@ -1215,10 +1215,7 @@
 			y: 24.0d
 		}
 		{
-			dependencies: [
-				"77C1F236B853FAAE"
-				"5486A9D8E0073EAB"
-			]
+			dependencies: ["77C1F236B853FAAE"]
 			id: "5E07A1EE010AE757"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1230,59 +1227,7 @@
 			y: 23.0d
 		}
 		{
-			dependencies: ["1570B04A1D692BCC"]
-			description: ["{image:cmi:textures/images/ie/chemical_reactor.png width:103 height:147 align:center}"]
-			icon: "immersiveindustry:chemical_reactor"
-			icon_scale: 2.0d
-			id: "5486A9D8E0073EAB"
-			quest_enhance_disable_scroll_paging: false
-			rewards: [
-				{
-					count: 8
-					id: "61B0E9A04285AD6C"
-					item: "immersiveengineering:slab_sheetmetal_aluminum"
-					type: "item"
-				}
-				{
-					id: "178CA1D1BC11EC9E"
-					item: "immersiveengineering:rs_engineering"
-					type: "item"
-				}
-				{
-					id: "4B75EEC37B53E1AC"
-					item: "immersiveengineering:metal_barrel"
-					type: "item"
-				}
-			]
-			shape: "hexagon"
-			size: 1.5d
-			subtitle: "月饼+西瓜（笑"
-			tasks: [
-				{
-					count: 13L
-					id: "74B7B585BA387719"
-					item: "immersiveengineering:sheetmetal_steel"
-					type: "item"
-				}
-				{
-					count: 4L
-					id: "07BB7DFAE34EB308"
-					item: "immersiveengineering:light_engineering"
-					type: "item"
-				}
-				{
-					count: 8L
-					id: "2F06E7FE3363B270"
-					item: "immersiveengineering:treated_scaffold"
-					type: "item"
-				}
-			]
-			title: "反应釜"
-			x: 14.0d
-			y: 25.0d
-		}
-		{
-			dependencies: ["5486A9D8E0073EAB"]
+			dependencies: ["2B95E0E6947D013C"]
 			id: "693C6976F07FA0F5"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1617,6 +1562,7 @@
 			y: 15.0d
 		}
 		{
+			dependencies: ["5E07A1EE010AE757"]
 			id: "2B95E0E6947D013C"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "月饼+西瓜（笑"
@@ -1625,8 +1571,8 @@
 				item: "cmi:chemical_reactor"
 				type: "item"
 			}]
-			x: 13.5d
-			y: 26.5d
+			x: 14.0d
+			y: 25.0d
 		}
 	]
 	title: "油燃而升"
