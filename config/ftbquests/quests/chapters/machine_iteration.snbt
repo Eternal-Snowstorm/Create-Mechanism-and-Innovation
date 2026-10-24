@@ -99,7 +99,14 @@
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "03C2A7072FFD3ABC"
-				item: "thermal:lumium_ingot"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:ingots/lumium"
+					}
+				}
+				title: "流明锭"
 				type: "item"
 			}]
 			x: 6.0d
@@ -111,7 +118,14 @@
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "70B14B7B83F98BF1"
-				item: "tconstruct:cobalt_ingot"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:ingots/cobalt"
+					}
+				}
+				title: "钴锭"
 				type: "item"
 			}]
 			x: 10.0d
@@ -124,7 +138,14 @@
 			subtitle: "在下界哦"
 			tasks: [{
 				id: "221BD7EEB579C0B4"
-				item: "tconstruct:raw_cobalt"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:raw_materials/cobalt"
+					}
+				}
+				title: "粗钴"
 				type: "item"
 			}]
 			x: 8.0d
@@ -221,7 +242,14 @@
 			subtitle: "直接电解！"
 			tasks: [{
 				id: "1BDB06B9A6B7412D"
-				item: "neoecoae:aluminum_ingot"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:ingots/aluminum"
+					}
+				}
+				title: "铝锭"
 				type: "item"
 			}]
 			x: 16.0d
@@ -234,7 +262,14 @@
 			subtitle: "真的不会锈"
 			tasks: [{
 				id: "7DAF09500E5D8688"
-				item: "cmi:stainless_steel_ingot"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:ingots/stainless_steel"
+					}
+				}
+				title: "不锈钢锭"
 				type: "item"
 			}]
 			x: 12.0d
