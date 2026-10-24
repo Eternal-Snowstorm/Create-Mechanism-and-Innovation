@@ -549,6 +549,7 @@ ServerEvents.tags("item", (event) => {
 		.add("cmi:3x3_packing_mold")
 		.add("cmi:unpack_mold")
 		.add("cmi:plate_mold")
+		.add("cmi:rod_mold")
 
 	// 催生晶体
 	event.get("cmi:crystals")

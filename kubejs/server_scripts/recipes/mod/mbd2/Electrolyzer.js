@@ -82,12 +82,6 @@ ServerEvents.recipes((event) => {
 		.outputGases("10x cmi:radon")
 		.duration(20)
 
-	// 天然气临时配方
-	cmi.electrolyzer()
-		.inputItems("8x cmi:peat")
-		.outputItems("minecraft:coal")
-		.outputGases("20x cmi:natural_gas")
-
 	// 天然气分离
 	cmi.electrolyzer()
 		.inputGases("200x cmi:natural_gas")
