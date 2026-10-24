@@ -28,7 +28,7 @@ ServerEvents.tags("block", (event) => {
 	}
 
 	/**
-	 * @param {CmiToolType_} tool
+	 * @param {CmiToolType} tool
 	 * @returns {MBDBlockTag}
 	 */
 	MBDBlockTag.prototype.tool = function (tool) {
@@ -36,7 +36,7 @@ ServerEvents.tags("block", (event) => {
 	}
 
 	/**
-	 * @param {CmiMiningLevel_} level
+	 * @param {CmiMiningLevel} level
 	 * @returns {MBDBlockTag}
 	 */
 	MBDBlockTag.prototype.mining = function (level) {
