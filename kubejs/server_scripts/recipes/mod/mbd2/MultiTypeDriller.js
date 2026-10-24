@@ -32,7 +32,11 @@ ServerEvents.recipes((event) => {
 		this.deposit = deposit
 
 		/**
-		 * @type {{item: Special.Recipes.MultiTypeDrillerCmi, fluid: Special.Recipes.MultiTypeDrillerCmi, gas: Special.Recipes.MultiTypeDrillerCmi}}
+		 * @type {{
+		 *     item: Special.Recipes.MultiTypeDrillerCmi, 
+		 *     fluid: Special.Recipes.MultiTypeDrillerCmi, 
+		 *     gas: Special.Recipes.MultiTypeDrillerCmi
+		 * }}
 		 */
 		this.recipe = {}
 
