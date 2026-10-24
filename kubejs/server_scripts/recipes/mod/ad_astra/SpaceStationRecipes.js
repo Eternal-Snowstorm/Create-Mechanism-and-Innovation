@@ -1,5 +1,11 @@
 ServerEvents.recipes((event) => {
-	function addStationRecipe(namespace, name, tier) {
+	/**
+	 * 
+	 * @param {Special.Mod} namespace 
+	 * @param {string} name 
+	 * @returns 
+	 */
+	function addStationRecipe(namespace, name) {
 		return event.custom({
 			type: "ad_astra:space_station_recipe",
 			dimension: `${namespace}:${name}_orbit`,
@@ -33,12 +39,12 @@ ServerEvents.recipes((event) => {
 		}).id(`${namespace}:recipes/space_station/${name}_orbit_space_station`)
 	}
 
-	addStationRecipe("ad_astra", "earth", 1)
-	addStationRecipe("ad_astra", "moon", 1)
-	addStationRecipe("cmi", "dionysus", 1)
-	addStationRecipe("ad_astra", "mars", 2)
-	addStationRecipe("cmi", "hephaestus", 2)
-	addStationRecipe("ad_astra", "venus", 3)
-	addStationRecipe("ad_astra", "mercury", 3)
-	addStationRecipe("ad_astra", "glacio", 4)
+	addStationRecipe("ad_astra", "earth")
+	addStationRecipe("ad_astra", "moon")
+	addStationRecipe("cmi", "dionysus")
+	addStationRecipe("ad_astra", "mars")
+	addStationRecipe("cmi", "hephaestus")
+	addStationRecipe("ad_astra", "venus")
+	addStationRecipe("ad_astra", "mercury")
+	addStationRecipe("ad_astra", "glacio")
 })

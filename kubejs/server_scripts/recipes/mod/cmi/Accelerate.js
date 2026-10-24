@@ -232,13 +232,13 @@ ServerEvents.recipes((event) => {
 	/**
 	 * 设置输出项Json
 	 * 
-	 * @param {Internal.Block_} id 
+	 * @param {Internal.Block_} block 
 	 * @param {number} chance 
 	 */
-	function setOutput(id, chance) {
+	function setOutput(block, chance) {
 		return {
-			"id": id,
-			"chance": chance
+			id: block,
+			chance: chance
 		}
 	}
 
