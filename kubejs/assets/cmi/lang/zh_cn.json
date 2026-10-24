@@ -77,7 +77,5 @@
 	"tooltip.electronic_blast_furnace.type.1": "- _电力高炉_",
 	"tooltip.electronic_blast_furnace.type.2": "- _匠魂合金_",
 
-	"thermal.hive_hopper": "蜂箱漏斗",
-
-	"block.mbd2.proxy_block": "多方块部件方块"
+	"thermal.hive_hopper": "蜂箱漏斗"
 }

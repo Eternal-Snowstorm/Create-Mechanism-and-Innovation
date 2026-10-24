@@ -16,5 +16,5 @@
 	#Example: 'mekanism:basic_mechanical_pipe,mekanism:advanced_mechanical_pipe,mekanism:elite_mechanical_pipe'
 	#If a structure requires 'elite_mechanical_pipe' but you only have 'basic_mechanical_pipe',
 	#the builder will use the basic pipe as a replacement.
-	blockEquivalencySets = ["mekanism:basic_mechanical_pipe,mekanism:advanced_mechanical_pipe,mekanism:elite_mechanical_pipe,mekanism:ultimate_mechanical_pipe"]
+	blockEquivalencySets = ["mekanism:basic_mechanical_pipe,mekanism:advanced_mechanical_pipe,mekanism:elite_mechanical_pipe,mekanism:ultimate_mechanical_pipe", "cmi:steel_casing,cmi:steel_energy_input_bus,cmi:steel_gas_input_bus,cmi:steel_item_input_bus,cmi:steel_fluid_input_bus,cmi:steel_item_output_bus,cmi:steel_fluid_output_bus,cmi:steel_gas_output_bus"]
 

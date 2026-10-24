@@ -176,4 +176,12 @@ ServerEvents.recipes((event) => {
 		"#cmi:phosphorus_fertilizer",
 		"#cmi:pottasium_fertilizer"
 	])
+
+	// 金属沙
+	create.mixing("8x alexcaves:metal_swarf", [
+		"2x #forge:gravel",
+		"2x #forge:sand",
+		"2x cmi:deposit_dust",
+		"2x #forge:dusts/iron"
+	]).id("alexcaves:metal_swarf")
 })

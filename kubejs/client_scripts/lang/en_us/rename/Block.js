@@ -4,6 +4,7 @@ ClientEvents.lang("en_us", (event) => {
 	renameBlock("create_jetpack:jetpack", "Brass Jetpack")
 	renameBlock("create_jetpack:netherite_jetpack", "Steel Jetpack")
 	renameBlock("steam_letters:bronze_basin", "Copper Basin")
+	renameBlock("mbd2:proxy_part_block", "Multiblock Part Block")
 
 	/**
 	 * 

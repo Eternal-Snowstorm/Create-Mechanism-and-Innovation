@@ -41,6 +41,9 @@ ClientEvents.lang("en_us", (event) => {
 	addMBDLang("radar_antenna", "Radar Antenna")
 	addMBDLang("multi_type_driller", "Multi-Types Driller")
 	addMBDLang("driller_cooler", "Multi-Types Driller Cooler")
+	addMBDLang("driller_head", "Driller Head")
+	addMBDLang("driller_fluid_pump", "Driller Fluid Pump")
+	addMBDLang("driller_gas_pump", "Driller Gas Pump")
 	addMBDLang("dummy_hive_hopper_base", "Dummy Hive Hopper - Base")
 	addMBDLang("dummy_hive_hopper_bee_nest", "Dummy Hive Hopper - Bee Nest")
 	addMBDLang("dummy_hive_hopper_beehive", "Dummy Hive Hopper - Beehive")
@@ -49,6 +52,4 @@ ClientEvents.lang("en_us", (event) => {
 	addMBDLang("steel", "Steel")
 	addMBDLang("stainless_steel", "Stainless Steel")
 	addMBDLang("air_tight", "Air Tight")
-
-	event.add("block.mbd2.proxy_block", "Multiblock Part Block")
 })
