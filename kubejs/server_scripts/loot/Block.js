@@ -19,4 +19,12 @@ LootJS.modifiers((event) => {
 				.applyOreBonus("minecraft:fortune")
 				.simulateExplosionDecay()
 		])
+
+	event.addBlockLootModifier("minecraft:weeping_vines")
+		.removeLoot(Ingredient.all)
+		.addLoot("minecraft:weeping_vines")
+
+	event.addBlockLootModifier("minecraft:twisting_vines")
+		.removeLoot(Ingredient.all)
+		.addLoot("minecraft:twisting_vines")
 })
