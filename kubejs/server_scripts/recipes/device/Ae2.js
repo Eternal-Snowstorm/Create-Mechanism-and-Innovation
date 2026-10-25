@@ -1,5 +1,6 @@
 ServerEvents.recipes((event) => {
-	let { kubejs, thermal_extra, neoecoae } = event.getRecipes()
+	let { kubejs, thermal_extra } = event.getRecipes()
+	let neoecoae = global.neoecoaeIWSCompat(event)
 	const DRIVE = /^ae2:(?!.*portable)(?!.*spatial).*cell(?!.*workbench$).+$/;
 
 	event.remove([

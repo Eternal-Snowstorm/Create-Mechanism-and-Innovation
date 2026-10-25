@@ -1,0 +1,7 @@
+new Schema("neoecoae:integrated_working_station")
+	.simpleKey("inputItems", "inputItemArray", null)
+	.simpleKey("inputFluid", "inputFluid", null)
+	.simpleKey("itemOutput", "outputItem", null)
+	.simpleKey("fluidOutput", "outputFluid", null)
+	.simpleKey("energy", "intNumber", 1000)
+	.simpleKey("processingTicks", "intNumber", 100)

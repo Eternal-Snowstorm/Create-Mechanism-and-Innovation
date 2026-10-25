@@ -1,19 +1,19 @@
-filename = 'AEInfinityBooster-1.20.1-1.0.0+51.jar'
+filename = 'aeinfinitybooster-forge-2.1.0+mc1.20.1.jar'
 name = 'AEInfinityBooster'
-side = ''
+side = 'server'
 x-prismlauncher-loaders = [ 'forge' ]
-x-prismlauncher-mc-versions = [ '1.20', '1.20.1' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'AEInfinityBooster v1.20.1-1.0.0+51'
+x-prismlauncher-version-number = '2.1.0 for Forge 1.20.1'
 
 [download]
-hash = '75a5e5d6b656034f0e33f627899c58de5b7c6e12'
+hash = '8d073b0c045aa359ca6fa6c2a0f4cc8213e81bd0'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 6482257
+file-id = 9295403
 project-id = 559313
 
 [[x-prismlauncher-dependencies]]
