@@ -20,9 +20,11 @@ ServerEvents.recipes((event) => {
 
 	// 燃料(冷却剂)
 	cmi.multi_type_driller()
-		.duration(perCoolerBucketTicks)
-		.isFuel(true)
-		.inputFluids(Fluid.of("cmi:glacious_cryotheum", 1000))
+		.perTick((recipe) => {
+			recipe.inputFluids(Fluid.of("cmi:glacious_cryotheum", 1000 * 5))
+				.duration(perCoolerBucketTicks)
+				.isFuel(true)
+		})
 
 	/**
 	 * 
