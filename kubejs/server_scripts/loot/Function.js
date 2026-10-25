@@ -1,6 +1,6 @@
 // priority: 15
 
-let LootUtils = {
+const LootUtils = {
 	/**
 	 * 
 	 * @param {Internal.ItemStack_} lootItem 

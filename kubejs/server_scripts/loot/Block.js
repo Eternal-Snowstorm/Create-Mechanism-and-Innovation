@@ -5,7 +5,7 @@ LootJS.modifiers((event) => {
 
 	event.addBlockLootModifier("ae2:mysterious_cube")
 		.removeLoot(Ingredient.all)
-		.addLoot(Item.of("ae2:mysterious_cube"))
+		.addLoot("ae2:mysterious_cube")
 
 	event.addBlockLootModifier("cmi:galena_compressed_iron_ore")
 		.removeLoot(Ingredient.all)
