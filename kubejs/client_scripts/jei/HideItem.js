@@ -28,8 +28,6 @@ JEIEvents.hideItems((event) => {
 	hideItemFromJEI("cmi:mystic_pomelo")
 	hideItemFromJEI("cmi:qi_month_spawn_egg")
 	hideItemFromJEI("cmi:paxel")
-	hideItemFromJEI("#cmi:incomplete_mechanisms")
-	hideItemFromJEI("#cmi:incomplete_items")
 	hideItemFromJEI("cmi:dummy_hive_hopper")
 	hideItemFromJEI("tconstruct:fake_ingot")
 	hideItemFromJEI("@citadel")

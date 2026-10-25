@@ -21,10 +21,8 @@ LootJS.modifiers((event) => {
 		])
 
 	event.addBlockLootModifier("minecraft:weeping_vines")
-		.removeLoot(Ingredient.all)
-		.addLoot("minecraft:weeping_vines")
+		.addAlternativesLoot("minecraft:weeping_vines")
 
 	event.addBlockLootModifier("minecraft:twisting_vines")
-		.removeLoot(Ingredient.all)
-		.addLoot("minecraft:twisting_vines")
+		.addAlternativesLoot("minecraft:twisting_vines")
 })
