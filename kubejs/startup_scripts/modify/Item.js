@@ -102,6 +102,11 @@ ItemEvents.modification((event) => {
 		})
 	})
 
+	// 扳手
+	event.modify("create:wrench", (modify) => {
+		modify.setRarity("alexscaves:rainbow")
+	})
+
 	if (FestivalUtils.isAprilFoolsDay()) {
 		event.modify("mekanism:alloy_infused", (modify) => {
 			modify.setNameKey("item.cmi.sweet_berry_hard_candy")
