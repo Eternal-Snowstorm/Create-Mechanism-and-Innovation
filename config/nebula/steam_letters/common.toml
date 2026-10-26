@@ -92,6 +92,27 @@
 	#Steam output multiplier of efficiency tier 4, i.e. the maximum boiler output.
 	#Range: 0.0 ~ 1.0
 	efficiency_4 = 1.0
+	#Heat percentage at which superheated production reaches tier 2.
+	#Range: 100 ~ 1000
+	superheated_threshold_1 = 125
+	#Heat percentage at which superheated production reaches tier 3.
+	#Range: 100 ~ 1000
+	superheated_threshold_2 = 150
+	#Heat percentage at which superheated production reaches tier 4, i.e. its full rate.
+	#Range: 100 ~ 1000
+	superheated_threshold_3 = 175
+	#Superheated steam output multiplier while heat stays right above the maximum heat.
+	#Range: 0.0 ~ 4.0
+	superheated_production_1 = 0.75
+	#Superheated steam output multiplier of tier 2.
+	#Range: 0.0 ~ 4.0
+	superheated_production_2 = 0.85
+	#Superheated steam output multiplier of tier 3.
+	#Range: 0.0 ~ 4.0
+	superheated_production_3 = 0.95
+	#Superheated steam output multiplier of tier 4, i.e. the maximum superheated output.
+	#Range: 0.0 ~ 4.0
+	superheated_production_4 = 1.0
 
 [solar_boiler]
 	#Whether or not fluids inside the solar boiler will be rendered.
@@ -135,7 +156,9 @@
 	#Steam consumption multiplier applied while the flywheel engine runs on superheated steam. 0.5 means it only needs half the steam of a normal-steam run.
 	#Range: 0.0 ~ 1.0
 	superheated_consumption_multiplier = 0.5
-	#Steam consumption multiplier applied while the flywheel engine runs on superheated steam. 0.5 means it only needs half the steam of a normal-steam run.
+	#Seconds required for the flywheel engine to heat up before it outputs its full stress.
+	#The demand climbs through 25%, 50% and 75% of the full load during the heat-up.
+	#0 means no heat-up at all.
 	#Range: 0.0 ~ 10000.0
 	heatup_seconds = 2.0
 	#Heat-up acceleration multiplier applied while running on superheated steam.
