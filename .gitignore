@@ -174,3 +174,4 @@ config/asteorbar-client.toml
 /_backup
 _userdiff.txt
 /analysis
+hotbar.nbt
