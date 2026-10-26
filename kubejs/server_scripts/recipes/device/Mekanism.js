@@ -1,6 +1,5 @@
 ServerEvents.recipes((event) => {
-	let { thermal_extra } = event.getRecipes()
-	let neoecoae = global.neoecoaeIWSCompat(event)
+	let { thermal_extra,neoecoae } = event.getRecipes()
 
 	function addRecipe() {
 		return neoecoae.integrated_working_station()

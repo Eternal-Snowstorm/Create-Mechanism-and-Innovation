@@ -7,6 +7,14 @@
 	#Fluid id produced by steam boilers and solar boilers.
 	#Existing tank contents are never converted when this changes.
 	output_steam_fluid = "mekanism:steam"
+	#Fluid id produced by steam boilers while their burner is in the superheated state.
+	#Must differ from output_steam_fluid, otherwise the config fails to load.
+	#Existing tank contents are never converted when this changes.
+	output_superheated_steam_fluid = "steam_letters:superheated_steam"
+	#How a boiler clears the normal steam already sitting in its output tank
+	#before it starts producing superheated steam.
+	#false: destroy that steam. true: convert it in place to the same amount of superheated steam.
+	do_overheated_steam_replace = false
 
 [bronze_basin]
 	#Fluid capacity of each tank of a bronze basin (mB).
@@ -86,7 +94,7 @@
 	efficiency_4 = 1.0
 
 [solar_boiler]
-	#Whether or not fluids inside the boiler will be rendered.
+	#Whether or not fluids inside the solar boiler will be rendered.
 	render_fluid = true
 	#Efficiency multiplier when the boiler has direct sky light (and no weather penalty).
 	#Range: 0.0 ~ 1.0
@@ -114,6 +122,10 @@
 	#Total time to lose all heat while no fuel is burning, as time required for the burner to lose all heat.
 	#Range: 0.0 ~ 10000.0
 	cooldown_seconds = 30.0
+	#Heat gain multiplier applied while the burning fuel is marked as superheated.
+	#It only applies below max heat; above max heat the normal speed is used.
+	#Range: 1.0 ~ 100.0
+	superheated_heatup_multiplier = 4.0
 
 [steam_engine]
 	#Efficiency (0~1) of steam drawn directly from an adjacent boiler.

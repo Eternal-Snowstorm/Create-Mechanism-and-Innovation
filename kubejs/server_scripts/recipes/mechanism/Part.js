@@ -1,6 +1,5 @@
 ServerEvents.recipes((event) => {
-	let { kubejs, thermal_extra } = event.getRecipes()
-	let neoecoae = global.neoecoaeIWSCompat(event)
+	let { kubejs, thermal_extra, neoecoae } = event.getRecipes()
 
 	// 基础
 	kubejs.shapeless("4x cmi:basic_mechanism_part", [
