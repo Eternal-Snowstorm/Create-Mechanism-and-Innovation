@@ -28,12 +28,10 @@ ServerEvents.recipes((event) => {
 	// 盈能水晶粉
 	thermal_extra.nitratic_igniter("neoecoae:energized_crystal_dust", [
 		"#forge:gems/energized_crystal"
-	])
-		.id("neoecoae:inscriber/energized_crystal_dust")
+	]).id("neoecoae:inscriber/energized_crystal_dust")
 
 	// 盈能福鲁伊克斯粉
 	thermal_extra.nitratic_igniter("neoecoae:energized_fluix_crystal_dust", [
 		"#forge:gems/energized_fluix_crystal"
-	])
-		.id("neoecoae:inscriber/energized_fluix_crystal_dust")
+	]).id("neoecoae:inscriber/energized_fluix_crystal_dust")
 })
