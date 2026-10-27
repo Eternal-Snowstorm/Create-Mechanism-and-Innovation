@@ -12,7 +12,7 @@ ServerEvents.recipes((event) => {
 			"energy": 2000,
 			"ingredient": Ingredient.of(inputItem).toJson(),
 			"result": {
-				"fluid": "neoecoae:cryotheum_solution",
+				"fluid": "ad_astra:cryo_fuel",
 				"millibuckets": amount
 			}
 		})

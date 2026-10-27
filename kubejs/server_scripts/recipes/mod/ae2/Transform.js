@@ -71,6 +71,14 @@ ServerEvents.recipes((event) => {
 		.explosion()
 		.build("ae2:transform/entangled_singularity")
 
+	// 天外寒冰
+	new TransformRecipe("neoecoae:cryotheum_crystal", 1)
+		.fluidTag("minecraft:water")
+		.input("neoecoae:cryotheum")
+		.input("#forge:dusts/sky_stone")
+		.input("#forge:dusts/energized_crystal")
+		.build("neoecoae:cryotheum_crystal")
+
 	// 砖泥
 	new TransformRecipe("tconstruct:grout", 2)
 		.fluidTag("minecraft:water")

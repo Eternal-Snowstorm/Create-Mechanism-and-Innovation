@@ -14,7 +14,7 @@ ServerEvents.recipes((event) => {
 	addFuel(Fluid.of("createdieselgenerators:gasoline"), 2043)
 	addFuel(Fluid.of("createdieselgenerators:diesel"), 2113)
 	addFuel(Fluid.of("tconstruct:blazing_blood"), 2638)
-	addFuel(Fluid.of("neoecoae:cryotheum_solution"), 4225)
+	addFuel(Fluid.of("ad_astra:cryo_fuel"), 4225)
 
 	/**
 	 *

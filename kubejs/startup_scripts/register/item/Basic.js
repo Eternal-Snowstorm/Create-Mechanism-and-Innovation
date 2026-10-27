@@ -125,6 +125,10 @@ StartupEvents.registry("item", (event) => {
 			.tag("cmi:general_components")
 	})
 
+	// 可燃冰
+	addMaterial("flammable_ice")
+		.burnTime(20 * 40)
+
 	// 小块焦炭
 	addMaterial("small_coal_coke")
 		.burnTime(200 * 2)

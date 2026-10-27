@@ -23,7 +23,7 @@ ServerEvents.tags("fluid", (event) => {
 		.removeAll()
 		.add([
 			"ad_astra:fuel",
-			"neoecoae:cryotheum_solution",
+			"ad_astra:cryo_fuel",
 			"cmi:methane_fuel",
 			"cmi:hydrazines_fuel"
 		])
@@ -32,7 +32,7 @@ ServerEvents.tags("fluid", (event) => {
 	event.get("ad_astra:tier_2_rocket_fuel")
 		.removeAll()
 		.add([
-			"neoecoae:cryotheum_solution",
+			"ad_astra:cryo_fuel",
 			"cmi:methane_fuel",
 			"cmi:hydrazines_fuel"
 		])

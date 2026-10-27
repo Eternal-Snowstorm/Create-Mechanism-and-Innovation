@@ -189,14 +189,4 @@ ServerEvents.recipes((event) => {
 		I: "#forge:plates/industrial_iron",
 		M: Mechanisms.COPPER.COM
 	}).id("fluidlogistics:multi_fluid_access_port")
-
-	// 蒸汽泵
-	kubejs.shaped("steam_letters:bronze_steam_pump", [
-		"P P",
-		" A ",
-		"P P"
-	], {
-		P: "#forge:plates/bronze",
-		A: "create:fluid_pipe"
-	}).id("steam_letters:crafting/shaped/steam_pump")
 })

@@ -8,17 +8,18 @@ ServerEvents.recipes((event) => {
 		Fluid.tag("tag", "forge:molten_lead", 90),
 		"4x mekanism:reprocessed_fissile_fragment",
 		"10x mekanism:depleted_nuclear_waste"
-	).energyRequired(1000).duration(60)
+	).energyRequired(1000)
+		.duration(60)
 		.id("mekanism:processing/uranium/reprocessing/from_plutonium")
 
-	// 天外寒冰
+	// 可燃冰
 	mekanism.reaction(
 		"neoecoae:cryotheum",
 		"50x cmi:methane",
 		Fluid.of("mekanism:oxygen", 50),
-		"neoecoae:cryotheum_crystal"
-	).energyRequired(5000).duration(80)
-		.id("neoecoae:cryotheum_crystal")
+		"cmi:flammable_ice"
+	).energyRequired(5000)
+		.duration(80)
 
 	// 氮氧化物
 	mekanism.reaction(
@@ -27,5 +28,6 @@ ServerEvents.recipes((event) => {
 		Fluid.of("cmi:nitric_acid", 400),
 		"thermal:niter_dust",
 		"100x cmi:nitrogen_oxide"
-	).energyRequired(5000).duration(80)
+	).energyRequired(5000)
+		.duration(80)
 })

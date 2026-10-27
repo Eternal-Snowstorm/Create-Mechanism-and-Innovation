@@ -3,25 +3,12 @@ ServerEvents.recipes((event) => {
 
 	// 糖浆
 	create.compacting([
-		Fluid.of("thermal:syrup", 50),
+		Fluid.of("thermal:syrup", 100),
 		"cmi:sugarcane_fiber"
 	], "minecraft:sugar_cane")
 
-	create.compacting([
-		Fluid.of("thermal:syrup", 150),
-		"cmi:sugarcane_fiber"
-	], [
-		"minecraft:sugar_cane",
-		"minecraft:sugar"
-	])
-
-	create.compacting(Fluid.of("thermal:syrup", 50), [
-		"#forge:vegetables/beetroot"
-	])
-
 	create.compacting(Fluid.of("thermal:syrup", 100), [
-		"#forge:vegetables/beetroot",
-		"minecraft:sugar"
+		"#forge:vegetables/beetroot"
 	])
 
 	// 纸
@@ -34,7 +21,7 @@ ServerEvents.recipes((event) => {
 
 	// 糖
 	create.mixing("minecraft:sugar", [
-		Fluid.of("thermal:syrup", 10)
+		Fluid.of("thermal:syrup", 25)
 	]).heatRequirement(CmiHeatLevel.GRILLED)
 
 	/**

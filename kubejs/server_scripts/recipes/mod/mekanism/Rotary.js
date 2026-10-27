@@ -55,11 +55,10 @@ ServerEvents.recipes((event) => {
 		.gasOutput(MekType.Gas.of("cmi:mercury", 200))
 
 	mekanism.rotary()
-		.fluidInput(Fluid.of("neoecoae:cryotheum_solution", 200))
-		.fluidOutput(Fluid.of("neoecoae:cryotheum_solution", 200))
+		.fluidInput(Fluid.of("ad_astra:cryo_fuel", 200))
+		.fluidOutput(Fluid.of("ad_astra:cryo_fuel", 200))
 		.gasInput(MekType.Gas.of("cmi:hydrogen_oxygen_fuel", 200))
 		.gasOutput(MekType.Gas.of("cmi:hydrogen_oxygen_fuel", 200))
-		.id("neoecoae:integrated_working_station/cryotheum_solution")
 
 	mekanism.rotary()
 		.fluidInput(Fluid.of("cmi:nitrogen_oxide", 200))

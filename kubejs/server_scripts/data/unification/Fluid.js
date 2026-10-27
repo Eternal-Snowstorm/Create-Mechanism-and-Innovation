@@ -33,11 +33,6 @@ ServerEvents.highPriorityData((event) => {
 		"mekanismgenerators:bioethanol"
 	], "createdieselgenerators:biodiesel")
 
-	// 凛冰
-	addUnification("cryo", [
-		"ad_astra:cryo_fuel"
-	], "neoecoae:cryotheum_solution")
-
 	// 三氧化硫
 	addUnification("sulfur_trioxide", [
 		"vintageimprovements:sulfur_trioxide"

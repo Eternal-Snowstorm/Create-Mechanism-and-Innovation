@@ -168,3 +168,45 @@
 	#Range: 1.0 ~ 100.0
 	superheated_output_multiplier = 1.5
 
+[boiler_steam]
+	#Steam produced per unit of continuous boiler level, in mB per tick.
+	#One level is meant to feed exactly one fully loaded steam engine,
+	#so this should stay equal to the engine's own consumption.
+	#Range: 0.0 ~ 1000.0
+	base_consumption = 12.0
+	#Steam produced per mB of water drawn out of the boiler's water buffer.
+	#Create consumes the water that flows through it without storing it, so the
+	#buffer keeps the water and this ratio is the only link between that water
+	#and the steam output.
+	#1.2 keeps the water requirement of a given level exactly equal to the
+	#10 mB per tick the level itself demands.
+	#Range: 0.0 ~ 100.0
+	steam_per_water = 1.2
+	#Water the boiler holds per block of its structure, in mB.
+	#Water is no longer consumed the moment it flows in, so a full steam buffer
+	#does not force the boiler to swallow water for nothing.
+	#0 disables the water buffer, and the boiler falls back to counting only
+	#the water that flows through it.
+	#Range: 0 ~ 100000
+	water_per_block = 1000
+	#Steam buffer capacity, as a multiplier of 1000 mB per boiler block.
+	#0 makes the boiler unable to store any steam.
+	#Range: 0.0 ~ 100.0
+	buffer_multiplier = 1.0
+	#true: steam engines and bronze pumps share one quota, so a boiler of
+	#level L feeds min(1, L / (engines + pumps)) to every attached engine. Adding
+	#a pump to a full quota therefore lowers the stress of every engine.
+	#Also covers Create's own steam engines, which never consume fluid and
+	#derive their stress from this efficiency alone.
+	#false: the boiler only limits the total steam flow and leaves the quota to scarcity.
+	strict_quota = true
+	#Continuous level required before the boiler produces superheated steam.
+	#18 needs 18 heat, at least 72 blocks of boiler and 180 mB/t of water.
+	#Range: 0.0 ~ 18.0
+	superheated_at_level = 18.0
+	#Water cost multiplier of superheated steam.
+	#Matches the engine's superheated output multiplier, so switching to
+	#superheated steam does not create free capacity.
+	#Range: 1.0 ~ 100.0
+	superheated_water_multiplier = 1.5
+

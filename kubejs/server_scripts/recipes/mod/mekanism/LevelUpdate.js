@@ -28,5 +28,4 @@ ServerEvents.recipes(event => {
 	removeMekanismUpgrade("injecting_factory", "mekanism:chemical_injection_chamber")
 	removeMekanismUpgrade("infusing_factory", "mekanism:metallurgic_infuser")
 	removeMekanismUpgrade("sawing_factory", "mekanism:precision_sawmill")
-	removeMekanismUpgrade("energy_cube", "immersiveengineering:capacitor_mv")
 })

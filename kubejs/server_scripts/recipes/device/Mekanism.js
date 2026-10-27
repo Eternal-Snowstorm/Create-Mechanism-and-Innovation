@@ -1,5 +1,5 @@
 ServerEvents.recipes((event) => {
-	let { thermal_extra,neoecoae } = event.getRecipes()
+	let { thermal_extra, neoecoae } = event.getRecipes()
 
 	function addRecipe() {
 		return neoecoae.integrated_working_station()
@@ -49,6 +49,14 @@ ServerEvents.recipes((event) => {
 			"cmi:blizz_unit"
 		])
 		.energy(2000)
+
+	// 能量板
+	thermal_extra.component_assembly("mekanism:energy_tablet", [
+		"#forge:plates/vanadium",
+		"#forge:plates/industrial_iron",
+		"#forge:plates/signalum",
+		Fluid.of("cmi:molten_etrium", 90)
+	]).id("mekanism:energy_tablet")
 
 	// 热力蒸馏装置
 	thermal_extra.component_assembly("mekanism:thermal_evaporation_block", [
@@ -114,6 +122,55 @@ ServerEvents.recipes((event) => {
 		.inputFluid(Fluid.of("cmi:molten_etrium", 90))
 		.energy(2000)
 		.id("neoecoae:integrated_working_station")
+
+	// 能量单元
+	addRecipe()
+		.itemOutput("mekanism:basic_energy_cube")
+		.inputItems([
+			"2x mekanism:energy_tablet",
+			"4x #forge:plates/industrial_iron",
+			Casing.STAINLESS_STEEL,
+			"2x #mekanism:alloys/enriched"
+		])
+		.inputFluid(Fluid.of("cmi:molten_etrium", 90))
+		.energy(2000)
+		.id("mekanism:energy_cube/basic")
+
+	addRecipe()
+		.itemOutput("mekanism:advanced_energy_cube")
+		.inputItems([
+			"2x mekanism:energy_tablet",
+			"4x #forge:plates/industrial_iron",
+			"mekanism:basic_energy_cube",
+			"2x #mekanism:alloys/infused"
+		])
+		.inputFluid(Fluid.of("cmi:molten_etrium", 90))
+		.energy(2000)
+		.id("mekanism:energy_cube/advanced")
+
+	addRecipe()
+		.itemOutput("mekanism:elite_energy_cube")
+		.inputItems([
+			"2x mekanism:energy_tablet",
+			"4x #forge:plates/industrial_iron",
+			"mekanism:advanced_energy_cube",
+			"2x #mekanism:alloys/reinforced"
+		])
+		.inputFluid(Fluid.of("cmi:molten_etrium", 90))
+		.energy(2000)
+		.id("mekanism:energy_cube/elite")
+
+	addRecipe()
+		.itemOutput("mekanism:ultimate_energy_cube")
+		.inputItems([
+			"2x mekanism:energy_tablet",
+			"4x #forge:plates/industrial_iron",
+			"mekanism:elite_energy_cube",
+			"2x #mekanism:alloys/atomic"
+		])
+		.inputFluid(Fluid.of("cmi:molten_etrium", 90))
+		.energy(2000)
+		.id("mekanism:energy_cube/ultimate")
 
 	// 电力高炉
 	addRecipe()

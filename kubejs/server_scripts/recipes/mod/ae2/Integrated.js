@@ -78,6 +78,37 @@ ServerEvents.recipes((event) => {
 			"8x #forge:wires/fluix"
 		])
 
+	// 极寒之凛冰
+	addRecipe()
+		.fluidOutput(Fluid.of("cmi:glacious_cryotheum", 1000))
+		.inputFluid(Fluid.of("immersiveengineering:redstone_acid", 1000))
+		.inputItems([
+			"2x neoecoae:cryotheum_crystal",
+			"2x ae2:charged_certus_quartz_crystal"
+		])
+		.energy(4000)
+		.id("neoecoae:integrated_working_station/cryotheum_solution")
+
+	addRecipe()
+		.fluidOutput(Fluid.of("cmi:glacious_cryotheum", 1000))
+		.inputFluid(Fluid.of("neoecoae:cryotheum_solution", 1000))
+		.inputItems([
+			"4x neoecoae:cryotheum"
+		])
+		.energy(4000)
+
+	// 计算机壳
+	addRecipe()
+		.itemOutput("cmi:computing_casing")
+		.inputFluid(Fluid.of("cmi:structural_plastic", 200))
+		.inputItems([
+			"#forge:gems/entro",
+			"#forge:plates/silicon_rubber",
+			"#forge:plates/stainless_steel",
+			"#forge:plates/platinum"
+		])
+		.energy(2000)
+
 	// 雷达天线临时配方
 	addRecipe()
 		.itemOutput("cmi:power_supply")

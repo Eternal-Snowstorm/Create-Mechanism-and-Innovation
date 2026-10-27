@@ -366,6 +366,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("raw_polonium", "粗钋")
 
 	// 材料
+	addItemLang("flammable_ice", "可燃冰")
 	addItemLang("small_coal_coke", "小块焦炭")
 	addItemLang("peat", "泥炭")
 	addItemLang("rubber_tree_bark", "橡胶树皮")
