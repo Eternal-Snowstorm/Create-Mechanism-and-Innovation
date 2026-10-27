@@ -3,7 +3,7 @@ ServerEvents.tags("fluid", (event) => {
 	// 可用作火箭燃料
 	removeTagAllId("ad_astra:fuel")
 		.add("ad_astra:fuel")
-		.add("ad_astra:cryo_fuel")
+		.add("cmi:hydrogen_oxygen_fuel")
 
 	// 月球车燃油
 	removeTagAllId("ad_astra:tier_1_rover_fuel")
@@ -23,7 +23,7 @@ ServerEvents.tags("fluid", (event) => {
 		.removeAll()
 		.add([
 			"ad_astra:fuel",
-			"ad_astra:cryo_fuel",
+			"cmi:hydrogen_oxygen_fuel",
 			"cmi:methane_fuel",
 			"cmi:hydrazines_fuel"
 		])
@@ -32,7 +32,7 @@ ServerEvents.tags("fluid", (event) => {
 	event.get("ad_astra:tier_2_rocket_fuel")
 		.removeAll()
 		.add([
-			"ad_astra:cryo_fuel",
+			"cmi:hydrogen_oxygen_fuel",
 			"cmi:methane_fuel",
 			"cmi:hydrazines_fuel"
 		])
@@ -109,7 +109,7 @@ ServerEvents.tags("fluid", (event) => {
 	// 匠魂流体燃料
 	event.get("tconstruct:fuels")
 		.add("#forge:oil")
-		.add("ad_astra:cryo_fuel")
+		.add("cmi:hydrogen_oxygen_fuel")
 		.add("ad_astra:fuel")
 		.add("cmi:delta_unstable_solution")
 		.add("cmi:turbid_waste_liquid")

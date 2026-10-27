@@ -138,5 +138,6 @@
 	function isFluid(level, pos) {
 		return level.getBlockState(pos).getBlock().getId() === "neoecoae:cryotheum_solution"
 			|| level.getBlockState(pos).getBlock().getId() === "cmi:glacious_cryotheum"
+			|| level.getBlockState(pos).getBlock().getId() === "cmi:hydrogen_oxygen_fuel"
 	}
 })()

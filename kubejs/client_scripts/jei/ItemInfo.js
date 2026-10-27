@@ -5,7 +5,7 @@ JEIEvents.information((event) => {
 	}
 
 	addJEIInfo("minecraft:andesite")
-	addJEIInfo("ad_astra:cryo_fuel_bucket")
+	addJEIInfo("cmi:hydrogen_oxygen_fuel_bucket")
 	addJEIInfo("cmi:bucket")
 	addJEIInfo("#ad_astra:power_consumption_machines")
 	addJEIInfo("cmi:andesite_alloy_noodle")

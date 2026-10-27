@@ -52,7 +52,7 @@ ServerEvents.recipes((event) => {
 	// 液氧甲烷燃料
 	cmi.chemical_reactor()
 		.outputFluids(Fluid.of("cmi:methane_fuel", 100))
-		.inputFluids(Fluid.of("ad_astra:cryo_fuel", 100))
+		.inputFluids(Fluid.of("cmi:hydrogen_oxygen_fuel", 100))
 		.inputItems("8x cmi:flammable_ice")
 		.inputFE(16000)
 		.duration(160)

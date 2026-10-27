@@ -10,7 +10,6 @@ ClientEvents.lang("zh_cn", (event) => {
 		event.add(`item.${Cmi.MODID}.${key}_bucket`, `${name}桶`)
 	}
 
-	addFluidLang("steam", "蒸汽")
 	addFluidLang("blood", "血液")
 	addFluidLang("pure_sand", "纯净沙")
 	addFluidLang("delta_unstable_solution", "Δ(Delta)型不稳定源质溶液")
@@ -113,6 +112,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addFluidLang("hydrazines", "联氨")
 	addFluidLang("hydrazines_fuel", "联氨燃油")
 	addFluidLang("glacious_cryotheum", "极寒之凛冰")
+	addFluidLang("hydrogen_oxygen_fuel", "液态氢氧燃料")
 	addFluidLang("hyper_experience", "液态超经验")
 	addFluidLang("ink", "墨水")
 })
