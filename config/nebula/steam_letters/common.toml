@@ -116,7 +116,7 @@
 
 [solar_boiler]
 	#Whether or not fluids inside the solar boiler will be rendered.
-	render_fluid = true
+	render_fluid = false
 	#Efficiency multiplier when the boiler has direct sky light (and no weather penalty).
 	#Range: 0.0 ~ 1.0
 	sunlight_efficiency = 1.0

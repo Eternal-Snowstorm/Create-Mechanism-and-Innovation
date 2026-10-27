@@ -127,7 +127,7 @@ StartupEvents.registry("item", (event) => {
 
 	// 可燃冰
 	addMaterial("flammable_ice")
-		.burnTime(20 * 40)
+		.burnTime(200 * 4)
 
 	// 小块焦炭
 	addMaterial("small_coal_coke")
