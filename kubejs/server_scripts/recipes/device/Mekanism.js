@@ -15,6 +15,7 @@ ServerEvents.recipes((event) => {
 			"#forge:plates/osmium",
 			"cmi:basalz_unit"
 		])
+		.energy(2000)
 
 	addRecipe()
 		.itemOutput("cmi:blaze_general_component")
@@ -25,6 +26,7 @@ ServerEvents.recipes((event) => {
 			"#forge:plates/osmium",
 			"cmi:blaze_unit"
 		])
+		.energy(2000)
 
 	addRecipe()
 		.itemOutput("cmi:blitz_general_component")
@@ -35,6 +37,7 @@ ServerEvents.recipes((event) => {
 			"#forge:plates/osmium",
 			"cmi:blitz_unit"
 		])
+		.energy(2000)
 
 	addRecipe()
 		.itemOutput("cmi:blizz_general_component")
@@ -45,6 +48,7 @@ ServerEvents.recipes((event) => {
 			"#forge:plates/osmium",
 			"cmi:blizz_unit"
 		])
+		.energy(2000)
 
 	// 热力蒸馏装置
 	thermal_extra.component_assembly("mekanism:thermal_evaporation_block", [
