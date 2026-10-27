@@ -74,5 +74,4 @@ ServerEvents.recipes((event) => {
 		Item.of("minecraft:leather", 3),
 		Item.of("minecraft:leather", 2).withChance(0.5)
 	], "minecraft:saddle")
-
 })
