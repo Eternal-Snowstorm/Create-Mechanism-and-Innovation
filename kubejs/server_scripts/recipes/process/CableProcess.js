@@ -1,5 +1,5 @@
 ServerEvents.recipes((event) => {
-    let { kubejs, create, thermal_extra } = event.getRecipes()
+    let { kubejs } = event.getRecipes()
 
     // 传送带
     kubejs.shaped("4x create:belt_connector", [
@@ -20,14 +20,24 @@ ServerEvents.recipes((event) => {
     }).id("minecraft:hopper")
 
     // 溜槽
-    kubejs.shaped("4x create:chute", [
+    kubejs.shaped("16x create:chute", [
         "X X",
         " M ",
         "X X"
     ], {
         X: "#forge:plates/industrial_iron",
         M: Mechanisms.WOODEN.COM
-    }).id("create:crafting/kinetics/chute")
+    })
+
+	// 黄铜溜槽
+	kubejs.shaped("16x create_connected:brass_chute", [
+        "X X",
+        " M ",
+        "X X"
+    ], {
+        X: "#forge:plates/brass",
+        M: Mechanisms.WOODEN.COM
+    })
 
     // 流体管道
     kubejs.shaped("8x create:fluid_pipe", [

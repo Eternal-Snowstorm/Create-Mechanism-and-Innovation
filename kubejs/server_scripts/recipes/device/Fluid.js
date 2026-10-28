@@ -170,14 +170,24 @@ ServerEvents.recipes((event) => {
 	}).id("fluidlogistics:smart_hopper")
 
 	// 流体溜槽
-	kubejs.shaped("fluidlogistics:fluid_transporter", [
+	kubejs.shaped("4x fluidlogistics:fluid_transporter", [
+		"A",
+		"B",
+		"A"
+	], {
+		A: "#forge:plates/copper",
+		B: "#forge:ingots/copper"
+	}).id("fluidlogistics:fluid_transporter")
+
+	// 流体溜槽
+	kubejs.shaped("16x fluidlogistics:fluid_transporter", [
 		"A A",
 		" B ",
 		"A A"
 	], {
 		A: "#forge:plates/copper",
 		B: Mechanisms.COPPER.COM
-	}).id("fluidlogistics:fluid_transporter")
+	})
 
 	// 流体接口
 	kubejs.shaped("fluidlogistics:multi_fluid_access_port", [

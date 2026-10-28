@@ -5,12 +5,14 @@ ServerEvents.recipes((event) => {
 	thermal.compression_fuel(Fluid.of("cmi:turbid_waste_liquid", 1000), 10000)
 
 	// 浓缩海水
-	mekanism.evaporating(Fluid.of("cmi:sea_water", 10),
+	mekanism.evaporating(
+		Fluid.of("cmi:sea_water", 10),
 		Fluid.of("cmi:concentrated_sea_water", 1)
 	)
 
 	// 卤水
-	mekanism.evaporating(Fluid.of("cmi:concentrated_sea_water", 10),
+	mekanism.evaporating(
+		Fluid.of("cmi:concentrated_sea_water", 10),
 		Fluid.of("cmi:brine", 1)
 	)
 
@@ -49,7 +51,8 @@ ServerEvents.recipes((event) => {
 	})
 
 	// 液态锂
-	mekanism.evaporating(Fluid.of("cmi:lithium_containing_electrolyte", 10),
+	mekanism.evaporating(
+		Fluid.of("cmi:lithium_containing_electrolyte", 10),
 		Fluid.of("mekanism:lithium", 1)
 	).id("mekanism:evaporating/lithium")
 })

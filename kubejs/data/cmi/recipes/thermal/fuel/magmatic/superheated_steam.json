@@ -1,0 +1,8 @@
+{
+	"type": "thermal:magmatic_fuel",
+	"ingredient": {
+		"fluid_tag": "forge:superheated_steam",
+		"amount": 1000
+	},
+	"energy": 400000
+}

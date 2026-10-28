@@ -104,7 +104,7 @@ ServerEvents.recipes((event) => {
 		"create:chute",
 		Mechanisms.ANDESITE.COM,
 		"#forge:plates/brass"
-	]).id('create:crafting/kinetics/smart_chute')
+	]).id("create:crafting/kinetics/smart_chute")
 
 	// 打包机
 	kubejs.shaped("2x create:packager", [
