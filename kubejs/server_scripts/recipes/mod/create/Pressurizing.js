@@ -1,5 +1,5 @@
 ServerEvents.recipes((event) => {
-	let { create, vintageimprovements } = event.getRecipes()
+	let { vintageimprovements } = event.getRecipes()
 
 	// 不稳红石
 	vintageimprovements.pressurizing(Fluid.of("thermal:redstone", 125), [
@@ -16,8 +16,9 @@ ServerEvents.recipes((event) => {
 		["#forge:dusts/iron", "#create:crushed_raw_materials/iron"]
 	]).heated().processingTime(80)
 
-	// 细雪
-	vintageimprovements.vacuumizing(Fluid.of("tconstruct:powdered_snow", 1000), [
-		"minecraft:snow_block"
-	]).id("vintageimprovements:vacuumizing/powder_snow")
+	// 过热蒸汽
+	vintageimprovements.pressurizing(Fluid.of("steam_letters:superheated_steam"), [
+		CreateFluidIngredient.ofTagId("forge:steam", 1000),
+		CreateFluidIngredient.ofTagId("forge:steam", 1000)
+	]).secondaryFluidInput(1).heatRequirement(CmiHeatLevel.GRILLED)
 })
