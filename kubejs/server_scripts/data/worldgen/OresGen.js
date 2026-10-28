@@ -309,6 +309,10 @@ ServerEvents.highPriorityData((event) => {
 	addOreGeneratingType("platinum_ore", "moon", 4)
 		.moon(4)
 
+	// 铬
+	addOreGeneratingType("chromium_ore", "moon", 4)
+		.moon(4)
+
 	// 钨
 	addOreGeneratingType("tungsten_ore", "nether", 4)
 		.nether(4)

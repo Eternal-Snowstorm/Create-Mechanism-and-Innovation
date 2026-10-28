@@ -13,8 +13,8 @@ ServerEvents.recipes((event) => {
 
 	// 水处理
 	cmi.electrolyzer()
-		.outputGases("500x mekanism:hydrogen")
-		.outputGases("1000x mekanism:oxygen")
+		.outputGases("1000x mekanism:hydrogen")
+		.outputGases("500x mekanism:oxygen")
 		.inputFluids(MBDFluidIngredient.ofTagId("minecraft:water", 1000))
 		.duration(20)
 		.perTick((recipe) => {
