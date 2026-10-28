@@ -77,5 +77,11 @@
 	"tooltip.electronic_blast_furnace.type.1": "- _电力高炉_",
 	"tooltip.electronic_blast_furnace.type.2": "- _匠魂合金_",
 
+	"tooltip.reinforced_coke_oven.1": "首次运行时配方处理时间为原速的_4_倍, 且只有_1_并行",
+	"tooltip.reinforced_coke_oven.2": "每完成一次配方, 配方所需时间_-20%_, 并行数_+1_, 最高_16_并行",
+	"tooltip.reinforced_coke_oven.3": "- 每完成一次配方炉温_+250_, 炉温上限_2500_度",
+	"tooltip.reinforced_coke_oven.4": "- 炉温每提升_250_度, 配方所需时间_-25%_",
+	"tooltip.reinforced_coke_oven.5": "- 以上加成只在持续运行时有效, 中断_3_秒就全部清零",
+
 	"thermal.hive_hopper": "蜂箱漏斗"
 }

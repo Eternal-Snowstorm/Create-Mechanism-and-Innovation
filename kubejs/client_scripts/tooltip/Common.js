@@ -36,7 +36,6 @@ ItemEvents.tooltip((event) => {
 	addCommonTooltip("cmi:obsidian_cell")
 	addCommonTooltip("minecraft:sugar_cane")
 	addCommonTooltip("#cmi:machine_port")
-	addCommonTooltip("#cmi:machine_core")
 	addCommonTooltip("#forge:tools/wrench")
 	addCommonTooltip("#railways:filled_paint_pitchers")
 	addCommonTooltip("cmi:steam_cast_iron_upgrade")

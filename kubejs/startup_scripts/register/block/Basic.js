@@ -33,6 +33,7 @@ StartupEvents.registry("block", (event) => {
 	// 石子路面
 	addBlock("stone_pave")
 		.model(Cmi.loadResource("block/custom/stone_pave"))
+		.mapColor($MapColor.STONE)
 		.defaultCutout()
 		.soundType(SoundType.GRAVEL)
 		.box(0, 0, 0, 16, 2, 16)

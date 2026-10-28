@@ -73,6 +73,53 @@ ItemEvents.tooltip((event) => {
 		tooltip.add(Component.translatable("tooltip.moreburners.electric_burner.2"))
 	})
 
+	event.addAdvanced("cmi:reinforced_coke_oven", (item, advanced, tooltip) => {
+		CmiLang.isShiftDown(tooltip)
+
+		if (event.isShift()) {
+			tooltip.add(Component.empty())
+
+			tooltip.addAll(TooltipHelper.cutStringTextComponent(
+				Component.translatable("tooltip.reinforced_coke_oven.1").getString(),
+				$FontHelper$Palette.STANDARD_CREATE.primary(),
+				$FontHelper$Palette.STANDARD_CREATE.highlight(),
+				0
+			))
+
+			tooltip.add(Component.empty())
+
+			tooltip.addAll(TooltipHelper.cutStringTextComponent(
+				Component.translatable("tooltip.reinforced_coke_oven.2").getString(),
+				$FontHelper$Palette.STANDARD_CREATE.primary(),
+				$FontHelper$Palette.STANDARD_CREATE.highlight(),
+				0
+			))
+
+			tooltip.addAll(TooltipHelper.cutStringTextComponent(
+				Component.translatable("tooltip.reinforced_coke_oven.3").getString(),
+				$FontHelper$Palette.STANDARD_CREATE.primary(),
+				$FontHelper$Palette.STANDARD_CREATE.highlight(),
+				1
+			))
+
+			tooltip.addAll(TooltipHelper.cutStringTextComponent(
+				Component.translatable("tooltip.reinforced_coke_oven.4").getString(),
+				$FontHelper$Palette.STANDARD_CREATE.primary(),
+				$FontHelper$Palette.STANDARD_CREATE.highlight(),
+				1
+			))
+
+			tooltip.addAll(TooltipHelper.cutStringTextComponent(
+				Component.translatable("tooltip.reinforced_coke_oven.5").getString(),
+				$FontHelper$Palette.STANDARD_CREATE.primary(),
+				$FontHelper$Palette.STANDARD_CREATE.highlight(),
+				1
+			))
+
+			tooltip.add(Component.empty())
+		}
+	})
+
 	event.addAdvanced("cmi:electronic_blast_furnace", (item, advanced, tooltip) => {
 		CmiLang.isShiftDown(tooltip)
 
