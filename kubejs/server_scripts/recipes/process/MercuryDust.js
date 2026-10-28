@@ -9,7 +9,7 @@ ServerEvents.recipes((event) => {
 		Fluid.of("mekanism:sulfuric_acid", 50),
 		"cmi:acid_washed_mercury_rock",
 		"10x cmi:mercury_mixture" // MekType.Gas.of("cmi:mercury_mixture", 10)
-	).duration(60).energyRequired(12000)
+	).duration(60).energyRequired(4000)
 
 	// 朱砂产汞
 	mekanism.reaction("#forge:dusts/cinnabar",
@@ -18,7 +18,7 @@ ServerEvents.recipes((event) => {
 		.fluidInput(Fluid.of("mekanism:sulfuric_acid", 50))
 		.gasOutput("10x cmi:mercury_mixture")
 		.duration(60)
-		.energyRequired(12000)
+		.energyRequired(4000)
 
 	// 过热汞混合物
 	mekanism.chemical_infusing(
@@ -34,7 +34,7 @@ ServerEvents.recipes((event) => {
 		Fluid.of("cmi:molten_etrium", 90),
 		"cmi:superconducting_mercury_ingot",
 		"100x mekanism:sulfur_trioxide" // MekType.Gas.of("mekanism:sulfur_trioxide", 100)
-	).duration(60).energyRequired(12000)
+	).duration(60).energyRequired(4000)
 
 	// 电解
 	cmi.electrolyzer()
@@ -51,7 +51,7 @@ ServerEvents.recipes((event) => {
 		"1000x cmi:mercury", // MekType.Gas.of("cmi:mercury", 1000)
 		Fluid.tag("tag", "forge:ender", 1000),
 		"mekanism:teleportation_core"
-	).duration(60).energyRequired(12000)
+	).duration(60).energyRequired(4000)
 
 	// 灌注量子
 	mekanism.infusion_conversion(

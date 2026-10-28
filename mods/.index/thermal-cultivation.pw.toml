@@ -1,0 +1,21 @@
+filename = 'thermal_cultivation-1.20.1-11.0.1.24.jar'
+name = 'Thermal Cultivation'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'thermal_cultivation-1.20.1-11.0.1.24.jar'
+
+[download]
+hash = '1973b5142aedca44aefa66d2406643e7d00205c7'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5372746
+project-id = 271835
+
+[[x-prismlauncher-dependencies]]
+addonId = '222880'
+type = 'REQUIRED'

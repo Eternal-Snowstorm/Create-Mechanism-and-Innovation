@@ -46,7 +46,7 @@ ServerEvents.recipes((event) => {
 		.outputFluids(Fluid.of("cmi:sapphire_solution", 200))
 		.duration(20 * 5)
 		.perTick((recipe) => {
-			recipe.inputFE(25000 / 20)
+			recipe.inputFE(4000 / 20)
 		})
 
 	// 液氧甲烷燃料
