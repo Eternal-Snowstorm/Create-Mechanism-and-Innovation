@@ -55,61 +55,73 @@ ServerEvents.recipes((event) => {
 	// 锇晶圆
 	new CircuitCutterRecipe("cmi:osmium_wafer")
 		.item("cmi:enriched_osmium_crystal")
-		.fluid("minecraft:water", 100)
+		.fluid("immersiveengineering:redstone_acid", 100)
 		.build()
 
 	// 硅晶圆
 	new CircuitCutterRecipe("cmi:silicon_wafer")
 		.item("cmi:single_crystal_silicon")
-		.fluid("minecraft:water", 100)
+		.fluid("immersiveengineering:redstone_acid", 100)
 		.build()
 
 	// 锗晶圆
 	new CircuitCutterRecipe("cmi:germanium_wafer")
 		.item("cmi:germanium_crystal")
-		.fluid("minecraft:water", 100)
+		.fluid("immersiveengineering:redstone_acid", 100)
 		.build()
 
 	// 恩特罗合金晶圆
 	new CircuitCutterRecipe("cmi:entro_alloy_wafer")
 		.item("cmi:entro_alloy")
-		.fluid("minecraft:water", 100)
+		.fluid("immersiveengineering:redstone_acid", 100)
 		.build()
 
 	// 逻辑电路板
 	new CircuitCutterRecipe(Item.of(Print.LOGIC, 9))
 		.item("#forge:storage_blocks/electrum")
-		.fluid("minecraft:water", 100)
+		.fluid("immersiveengineering:redstone_acid", 100)
 		.build("expatternprovider:cutter/logic")
+
+	// 计算电路板
+	new CircuitCutterRecipe(Item.of(Print.CALCULATION, 9))
+		.item("#forge:storage_blocks/certus_quartz")
+		.fluid("immersiveengineering:redstone_acid", 100)
+		.build("expatternprovider:cutter/calculation")
 
 	// 工程电路板
 	new CircuitCutterRecipe(Item.of(Print.ENGINEERING, 9))
 		.item("#forge:storage_blocks/etrium")
-		.fluid("minecraft:water", 100)
+		.fluid("immersiveengineering:redstone_acid", 100)
 		.build("expatternprovider:cutter/engineering")
 
 	// 并发电路板
 	new CircuitCutterRecipe(Item.of(Print.CONCURRENT, 9))
 		.item("#forge:storage_blocks/entro")
-		.fluid("minecraft:water", 100)
+		.fluid("immersiveengineering:redstone_acid", 100)
 		.build()
+
+	// 超导电路板
+	new CircuitCutterRecipe(Item.of(Print.SUPERCONDUCTING, 9))
+		.item("neoecoae:energized_superconductive_block")
+		.fluid("immersiveengineering:redstone_acid", 100)
+		.build("neoecoae:circuit_cutter/superconducting_processor_print")
 
 	// 乙烯聚合催化片
 	new CircuitCutterRecipe("2x cmi:ethylene_polymerization_catalytic_plate")
 		.item("cmi:polymerization_catalytic_alloy")
-		.fluid("minecraft:water", 100)
+		.fluid("immersiveengineering:redstone_acid", 100)
 		.build()
 
 	// 碳沉积催化片
 	new CircuitCutterRecipe("2x cmi:carbon_deposition_catalytic_plate")
 		.item("cmi:deposition_catalytic_alloy")
-		.fluid("minecraft:water", 100)
+		.fluid("immersiveengineering:redstone_acid", 100)
 		.build()
 
 	// 超导汞板
 	new CircuitCutterRecipe("cmi:superconducting_mercury_plate")
 		.item("cmi:superconducting_mercury_ingot")
-		.fluid("minecraft:water", 100)
+		.fluid("immersiveengineering:redstone_acid", 100)
 		.build()
 
 })
