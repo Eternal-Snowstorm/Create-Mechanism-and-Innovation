@@ -1,7 +1,7 @@
 ServerEvents.recipes((event) => {
 	let { mekanism } = event.getRecipes()
 
-    // 铀黄饼
+	// 铀黄饼
 	mekanism.injecting(
 		"mekanism:yellow_cake_uranium",
 		"2x #forge:ingots/uranium",
@@ -14,4 +14,11 @@ ServerEvents.recipes((event) => {
 		"minecraft:glass_bottle",
 		"1x cmi:radon"
 	)
+
+	// 反物质球
+	mekanism.injecting(
+		"mekanism:pellet_antimatter",
+		"ae2:matter_ball",
+		"1x mekanism:antimatter"
+	).id("mekanism:processing/uranium/reprocessing/from_plutonium")
 })

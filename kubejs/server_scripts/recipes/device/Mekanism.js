@@ -706,7 +706,7 @@ ServerEvents.recipes((event) => {
 	addRecipe()
 		.itemOutput("mekanismgenerators:fusion_reactor_port")
 		.inputItems([
-			Casing.STAINLESS_STEEL,
+			"mekanismgenerators:fusion_reactor_frame",
 			Mechanisms.ELITE.COM,
 			"#forge:plates/industrial_iron"
 		])
@@ -762,4 +762,61 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 		.id("mekanism:laser_tractor_beam")
+
+	// 超临界
+	addRecipe()
+		.itemOutput("mekanism:sps_casing")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
+		.inputItems([
+			Mechanisms.ULTIMATE.COM,
+			Mechanisms.NUKE.COM,
+			"2x neoecoae:energized_superconductive_ingot",
+			"2x #forge:plates/superconducting_mercury",
+			"4x cmi:titanium_alloy_coil",
+			"2x mekanism:hdpe_sheet",
+			"2x neoecoae:cryotheum_crystal"
+		])
+		.energy(2000)
+		.id("mekanism:sps_casing")
+
+	addRecipe()
+		.itemOutput("mekanism:sps_port")
+		.inputItems([
+			"mekanism:sps_casing",
+			Mechanisms.ULTIMATE.COM,
+			"#forge:plates/industrial_iron"
+		])
+		.energy(2000)
+		.id("mekanism:sps_port")
+
+	addRecipe()
+		.itemOutput("mekanism:supercharged_coil")
+		.inputFluid(Fluid.of("cmi:glacious_cryotheum", 1000))
+		.inputItems([
+			Casing.STAINLESS_STEEL,
+			Mechanisms.COIL.COM,
+			Mechanisms.ULTIMATE.COM,
+			"2x #forge:plates/titanium_alloy",
+			"2x #forge:plates/superconducting_mercury",
+			"4x cmi:titanium_alloy_coil",
+			"2x neoecoae:cryotheum_crystal"
+		])
+		.energy(2000)
+		.id("mekanism:supercharged_coil")
+
+	// 反质子核
+	addRecipe()
+		.itemOutput("mekanism:antiprotonic_nucleosynthesizer")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
+		.inputItems([
+			Mechanisms.ULTIMATE.COM,
+			Mechanisms.ANTI.COM,
+			"2x neoecoae:energized_superconductive_ingot",
+			"2x #forge:plates/superconducting_mercury",
+			"mekanismgenerators:reactor_glass",
+			"2x mekanism:hdpe_sheet",
+			"2x neoecoae:cryotheum_crystal"
+		])
+		.energy(2000)
+		.id("mekanism:antiprotonic_nucleosynthesizer")
 })
