@@ -149,7 +149,7 @@ ServerEvents.recipes((event) => {
 			Fluid.of("cmi:bromine", 100)
 		])
 		.inputItems("2x #cmi:delta_blackstone_source")
-		.energy(4000)
+		.inputFE(4000)
 
 	// 铂溶液
 	event.custom({
