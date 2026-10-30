@@ -226,5 +226,5 @@
     { "path": "mods/YungsApi-1.20-Forge-4.0.6.jar", "sha1": "af584b690f5646c6032002b58abc4591beed3833", "url": "https://edge.forgecdn.net/files/5769/971/YungsApi-1.20-Forge-4.0.6.jar", "project": "curseforge:421850", "replaces": "" }
   ],
   "delete": [],
-  "changelog": "https://gitee.com/eternalsnowstorm/mechanism-and-innovation/raw/master/UpdateLogs.md"
+  "changelog": "https://raw.githubusercontent.com/Eternal-Snowstorm/Create-Mechanism-and-Innovation/main/UpdateLogs.md"
 }

@@ -1,15 +1,24 @@
 # 客户端使用说明(链接远程仓库与同步版本)
 
-玩家在整合包客户端使用本目录脚本,把 **Gitee 镜像仓库**(GitHub 完整历史的镜像)的内容同步到本地整合包根目录(习惯上叫 `.minecraft`,`**名字不限**`),并按更新清单下载 / 校验 mods。
+玩家在整合包客户端使用本目录脚本,把**远程仓库**的内容同步到本地整合包根目录(习惯上叫 `.minecraft`,`**名字不限**`),并按更新清单下载 / 校验 mods。
 
 ## 一, 客户端有哪些可执行文件
 
 | 文件 | 作用 |
 |---|---|
-| `updater/setup-gitee-sync.bat` / `.sh` | **首次**:链接 Gitee 远程仓库并落地内容 |
-| `updater/update-from-gitee.bat` / `.sh` | **日常**:同步最新版本 |
+| `updater/setup-gitee-sync.bat` / `.sh` | **首次**:建立远程仓库(优先 GitHub,失败则用 Gitee 镜像)并落地内容 |
+| `updater/update-from-gitee.bat` / `.sh` | **日常**:同步最新版本(同样优先 GitHub) |
 | `updater/sync.ps1` | 上面两个 `.bat` 实际调用的同步逻辑与中文提示(Windows) |
 | `updater/mods-sync.ps1` / `.sh` | 由同步逻辑自动调用,按清单下载 / 校验 mods |
+
+> **更新源:GitHub 优先, Gitee 兜底。** 两个同步脚本都会先探测 GitHub 主仓库
+> (`origin`, `https://github.com/Eternal-Snowstorm/Create-Mechanism-and-Innovation`);
+> **连不上 GitHub, 或本地压根没建立 GitHub 远程**时, 自动回退到 Gitee 镜像
+> (`gitee`, `https://gitee.com/eternalsnowstorm/mechanism-and-innovation`)。
+> 想手动指定源, 可加参数 `--source auto|github|gitee`(Windows 上也写 `--source` 即可, 两个 `.bat` 会把参数原样转给 `sync.ps1`), 默认 `auto`。
+>
+> 脚本文件名仍保留 `…-gitee-…`:改名会让既有的双击习惯、文档链接与快捷方式失效;
+> 名字没变, 但内部逻辑已经是 GitHub 优先。
 
 > **关于 `.bat` 的编码**:所有 `.bat` 都刻意保持**纯 ASCII**(注释只用英文)。
 > 原因是 `cmd.exe` 按**字节偏移**解析批处理文件:文件里若混入中文字节并在中途执行
@@ -48,7 +57,7 @@ cd "<整合包根目录>"
 bash updater/setup-gitee-sync.sh
 ```
 
-作用:如本地还不是 Git 仓库则 `git init`;绑定远程 `https://gitee.com/eternalsnowstorm/mechanism-and-innovation`;拉取并应用 Gitee 内容;按清单校验 / 下载 mods。
+作用:如本地还不是 Git 仓库则 `git init`;补齐远程(缺 `origin` 时添加 GitHub 主仓库,并把 `gitee` 指向 Gitee 镜像);**优先从 GitHub 拉取并应用**,连不上时自动回退 Gitee;最后按清单校验 / 下载 mods。
 
 ## 四, 日常:同步最新版本
 
@@ -154,6 +163,9 @@ bash updater/update-from-gitee.sh
 | 下载失败,提示发送日志 | **按提示把 `updater/logs` 下最新的 `.log` 发给开发者**,再重跑一次本脚本即可重试 |
 | 想回滚到更新前 | 见 `updater/.rollback/<时间戳>/` 中的备份(仅失败时保留) |
 | 更新后游戏缺 mod / 崩溃 | 先看 `updater/logs` 最新日志,确认是否有"失败"条目,并把日志发给开发者 |
+| 提示"连不上 GitHub, 本次改用 Gitee 镜像" | 属**正常回退**(国内网络常见),下次仍会先试 GitHub;想固定只用镜像可在命令后加 `--source gitee` |
+| 想强制只用 GitHub, 不要回退 | 命令后加 `--source github`;连不上会**直接报错**,而不是悄悄换源 |
+| 想让日常更新优先走 GitHub | 先运行一次 `setup-gitee-sync.sh`(`.bat`)—— 它会在缺 `origin` 时补建 GitHub 远程 |
 
 ## 八, 开发者排障提示
 

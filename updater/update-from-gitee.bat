@@ -12,13 +12,15 @@ rem
 rem  All user-facing Chinese messages live in sync.ps1 (UTF-8 encoded).
 rem
 rem  Usage: double-click this file, or run from cmd:
-rem      updater\update-from-gitee.bat
+rem      updater\update-from-gitee.bat [--source auto|github|gitee]
+rem  Extra arguments are forwarded to sync.ps1 as-is (both -Source and
+rem  --source spellings are accepted by PowerShell).
 rem ===========================================================================
 setlocal
 chcp 936 >nul
 cd /d "%~dp0.."
 
-powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0sync.ps1" -Mode update
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0sync.ps1" -Mode update %*
 set "RC=%ERRORLEVEL%"
 
 echo.

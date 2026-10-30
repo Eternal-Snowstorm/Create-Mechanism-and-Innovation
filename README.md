@@ -183,10 +183,12 @@ ship with the pack — don't ask, just bring it along.
 
 ### Daily updates
 
-`updater/` ships cross-platform scripts that sync the
-[Gitee mirror repository](https://gitee.com/eternalsnowstorm/mechanism-and-innovation) down to your machine, then
-download/verify mods from **third-party direct links** (CurseForge / Modrinth CDN) per `updater/update.tsv`
-(a failed download restores that mod's previous jar and writes a log to `updater/logs/`):
+`updater/` ships cross-platform scripts that pull this repository onto your machine — **GitHub first**
+([the main repository](https://github.com/Eternal-Snowstorm/Create-Mechanism-and-Innovation)), automatically falling
+back to the [Gitee mirror](https://gitee.com/eternalsnowstorm/mechanism-and-innovation) when GitHub is unreachable or
+no GitHub remote exists yet. They then download/verify mods from **third-party direct links**
+(CurseForge / Modrinth CDN) per `updater/update.tsv` (a failed download restores that mod's previous jar and writes
+a log to `updater/logs/`):
 
 ```bat
 :: Windows (first time)
@@ -200,6 +202,10 @@ updater\update-from-gitee.bat
 bash updater/setup-gitee-sync.sh
 bash updater/update-from-gitee.sh
 ```
+
+Force one source with `--source auto|github|gitee` (default `auto`; on Windows `-Source`). The script names still
+read `…-gitee-…` on purpose — renaming would break existing double-click habits, shortcuts and doc links — but the
+logic itself is GitHub-first.
 
 They only touch replaceable folders — `mods / config / kubejs / defaultconfigs / resourcepacks` — and **never touch
 your saves or `options.txt`**. Not a single block. Full details in `updater/CLIENT-GUIDE.md`, design discussion in

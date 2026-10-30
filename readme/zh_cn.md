@@ -147,7 +147,7 @@
 
 ### 日常更新
 
-`updater/` 内提供跨平台脚本, 把 [Gitee 镜像仓库](https://gitee.com/eternalsnowstorm/mechanism-and-innovation)的内容同步到本地, 再按 `updater/update.tsv` 清单从**第三方直链**(CurseForge / Modrinth CDN)下载 / 校验 mods(个别下载失败会自动恢复旧版本并写日志到 `updater/logs/`):
+`updater/` 内提供跨平台脚本, 把本仓库内容同步到本地 —— **优先 GitHub 主仓库**, 连不上或本地尚未建立 GitHub 远程时自动回退 [Gitee 镜像](https://gitee.com/eternalsnowstorm/mechanism-and-innovation); 随后再按 `updater/update.tsv` 清单从**第三方直链**(CurseForge / Modrinth CDN)下载 / 校验 mods(个别下载失败会自动恢复旧版本并写日志到 `updater/logs/`):
 
 ```bat
 :: Windows(首次)
@@ -161,6 +161,8 @@ updater\update-from-gitee.bat
 bash updater/setup-gitee-sync.sh
 bash updater/update-from-gitee.sh
 ```
+
+想手动指定更新源可加参数 `--source auto|github|gitee`(默认 `auto`, Windows 上用 `-Source`); 脚本文件名仍保留 `…-gitee-…` 是为了不破坏既有的双击习惯、快捷方式与文档链接 —— 名字没变, 内部逻辑已是 GitHub 优先。
 
 脚本只处理 `mods / config / kubejs / defaultconfigs / resourcepacks` 等可替换目录, **不会碰存档与 `options.txt`** —— 存档什么的, 一根毛都不会动; 详细说明见 `updater/CLIENT-GUIDE.md`, 方案讨论见 `热更新方案.md`。
 
