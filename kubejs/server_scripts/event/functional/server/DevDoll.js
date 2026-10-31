@@ -3,6 +3,11 @@ BlockEvents.rightClicked((event) => {
 
 	let { x, y, z } = block
 
+	// 
+	if (level.isClientSide) {
+		return
+	}
+
 	// 判断玩家条件
 	if (!player || player.isFake() || !player.isCrouching()) {
 		return
@@ -19,20 +24,18 @@ BlockEvents.rightClicked((event) => {
 	}
 
 	// 执行逻辑
-	if (!level.isClientSide()) {
-		player.swing()
+	player.swing()
 
-		level.playSound(
-			null,
-			player.x,
-			player.y,
-			player.z,
-			"thermal:misc.tinker",
-			"blocks",
-			0.1,
-			1
-		)
+	level.playSound(
+		null,
+		player.x,
+		player.y,
+		player.z,
+		"thermal:misc.tinker",
+		"blocks",
+		0.1,
+		1
+	)
 
-		level.runCommandSilent(`particle minecraft:heart ${x} ${y + 1} ${z} 0.5 1 0.5 ${Math.random() * 2} 2`)
-	}
+	level.runCommandSilent(`particle minecraft:heart ${x} ${y + 1} ${z} 0.5 1 0.5 ${Math.random() * 2} 2`)
 })
