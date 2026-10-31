@@ -1,6 +1,3 @@
-let $ParticleTypes =
-	Java.loadClass("net.minecraft.core.particles.ParticleTypes")
-
 CreateEvents.spoutHandler((event) => {
 	const FLUID = "cmi:crystal_catalyt"
 
@@ -38,7 +35,7 @@ CreateEvents.spoutHandler((event) => {
 				)
 
 				// block.level.server.getLevel().sendParticles(
-				// 	$ParticleTypes.BLOCK,
+				// 	ParticleTypes.BLOCK,
 				// 	block.pos.x(),
 				// 	block.pos.y(),
 				// 	block.pos.z(),
