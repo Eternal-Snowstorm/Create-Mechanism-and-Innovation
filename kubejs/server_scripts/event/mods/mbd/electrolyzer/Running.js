@@ -75,7 +75,7 @@
 		if (stack.getId() !== "immersiveengineering:graphite_electrode") {
 			return false
 		}
-		if (stack.hasTag() && stack.getTag().getBoolean("Unbreakable")) {
+		if (stack.hasNBT() && stack.getNbt().getBoolean("Unbreakable")) {
 			return false
 		}
 		return true
