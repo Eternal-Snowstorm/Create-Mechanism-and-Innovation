@@ -134,18 +134,8 @@
   "nebula_libs": {
     "common": true
   },
-  "neoecoae": {
-    "large_workstation_current_inputs": true,
-    "eco_computation_system": true,
-    "eco_drive": true,
-    "eco_crafting_worker": true,
-    "eco_storage_interface": true,
-    "eco_storage_system": true,
-    "eco_crafting_system": true,
-    "eco_computation_drive": true
-  },
   "fluidlogistics": {
-    "blaze_cooler_icon": true
+    "snow_golem_freezer_icon": true
   },
   "expatternprovider": {
     "jade_chamber": true,

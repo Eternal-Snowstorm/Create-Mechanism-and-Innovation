@@ -1,25 +1,29 @@
-filename = 'ftbxaerocompat-forge-1.1.3.jar'
-name = "FTB Chunks x Xaero's Compat"
+filename = 'ftbxaerocompat-forge-1.3.0-1.20.1.jar'
+name = "FTB Chunks x Xaero's Map Compat"
 side = ''
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = "[Forge] FTB Chunks x Xaero's Map Compat 1.1.3"
+x-prismlauncher-version-number = "[Forge] FTB Chunks x Xaero's Map Compat 1.3.0+1.20.1"
 
 [download]
-hash = '8a3c74b6a5e285ec755097a76a97a469f2490726'
+hash = '46fe3c89bbe44dae8f48133d0c92adae33971cd1'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 7655063
+file-id = 9365988
 project-id = 1357724
+
+[[x-prismlauncher-dependencies]]
+addonId = '317780'
+type = 'REQUIRED'
 
 [[x-prismlauncher-dependencies]]
 addonId = '314906'
 type = 'REQUIRED'
 
 [[x-prismlauncher-dependencies]]
-addonId = '317780'
-type = 'REQUIRED'
+addonId = '263420'
+type = 'OPTIONAL'

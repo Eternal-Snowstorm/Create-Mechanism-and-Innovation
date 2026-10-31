@@ -1,28 +1,20 @@
-filename = 'appliedenergistics2-forge-15.4.11.jar'
+filename = 'appliedenergistics2-forge-15.4.12.jar'
 name = 'Applied Energistics 2'
 side = 'server'
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'AE2 15.4.11 [FORGE]'
+x-prismlauncher-version-number = 'AE2 15.4.12 [FORGE]'
 
 [download]
-hash = 'e0d777a400fe3c3082681d28de4e7f6a0b3e7b50'
+hash = '4e81984691e35c729880a11f72deb52dcc74d41f'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 8991271
+file-id = 9357405
 project-id = 223794
-
-[[x-prismlauncher-dependencies]]
-addonId = '310111'
-type = 'OPTIONAL'
-
-[[x-prismlauncher-dependencies]]
-addonId = '238222'
-type = 'OPTIONAL'
 
 [[x-prismlauncher-dependencies]]
 addonId = '245211'
@@ -33,9 +25,17 @@ addonId = '440979'
 type = 'OPTIONAL'
 
 [[x-prismlauncher-dependencies]]
+addonId = '324717'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
 addonId = '1173950'
 type = 'REQUIRED'
 
 [[x-prismlauncher-dependencies]]
-addonId = '324717'
+addonId = '238222'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '310111'
 type = 'OPTIONAL'
