@@ -1,70 +1,83 @@
-let $IEItemNBTHelper =
-	Java.loadClass("blusunrize.immersiveengineering.common.util.ItemNBTHelper")
-let $IEServerConfig =
-	Java.loadClass("blusunrize.immersiveengineering.common.config.IEServerConfig")
+(() => {
+	// 不毁NBT {Unbreakable: 1b}
 
-const INPUT_GRAPHITE_ELECTRODE = "electrolyzer_input_graphite_electrode"
+	let $IEItemNBTHelper =
+		Java.loadClass("blusunrize.immersiveengineering.common.util.ItemNBTHelper")
+	let $IEServerConfig =
+		Java.loadClass("blusunrize.immersiveengineering.common.config.IEServerConfig")
 
-MBDMachineEvents.onBeforeRecipeWorking(($) => {
-	let event = $.getEvent()
-	let machine = event.getMachine()
+	const INPUT_GRAPHITE_ELECTRODE = "electrolyzer_input_graphite_electrode"
 
-	if (!MBDHelpers.isMachine(machine, "cmi:electrolyzer")) {
-		return
-	}
+	MBDMachineEvents.onBeforeRecipeWorking(($) => {
+		let event = $.getEvent()
+		let machine = event.getMachine()
 
-	/** 
-	 * @type {ItemStackTransfer_}
-	 */
-	let electrode = machine.getTraitByName(INPUT_GRAPHITE_ELECTRODE).storage
-	let stack = electrode.getStackInSlot(0)
+		if (!MBDHelpers.isMachine(machine, "cmi:electrolyzer")) {
+			return
+		}
 
-	if (isGraphiteElectrode(stack)) {
-		return
-	}
+		/** 
+		 * @type {ItemStackTransfer_}
+		 */
+		let electrode = machine.getTraitByName(INPUT_GRAPHITE_ELECTRODE).storage
+		let stack = electrode.getStackInSlot(0)
 
-	event.setCanceled(true)
-})
+		if (isGraphiteElectrode(stack)) {
+			return
+		}
 
-MBDMachineEvents.onRecipeWorking(($) => {
-	let event = $.getEvent()
-	let machine = event.getMachine()
+		event.setCanceled(true)
+	})
 
-	const DAMAGE_NBT_NAME = "graphDmg"
+	MBDMachineEvents.onRecipeWorking(($) => {
+		let event = $.getEvent()
+		let machine = event.getMachine()
 
-	if (!MBDHelpers.isMachine(machine, "cmi:electrolyzer")) {
-		return
-	}
+		const DAMAGE_NBT_NAME = "graphDmg"
+
+		if (!MBDHelpers.isMachine(machine, "cmi:electrolyzer")) {
+			return
+		}
+
+		/**
+		 * @type {ItemStackTransfer_}
+		 */
+		let electrode = machine.getTraitByName(INPUT_GRAPHITE_ELECTRODE).storage
+		let stack = electrode.getStackInSlot(0)
+
+		if (!isGraphiteElectrode(stack)) {
+			event.setCanceled(true)
+			return
+		}
+
+		const DAMAGE = $IEItemNBTHelper.getInt(stack, DAMAGE_NBT_NAME) + 1
+		const GET_DAMAGE = $IEServerConfig.MACHINES.arcfurnace_electrodeDamage
+		const MAX_DAMAGE = $IEServerConfig.getOrDefault(GET_DAMAGE)
+
+		$IEItemNBTHelper.putInt(stack, DAMAGE_NBT_NAME, DAMAGE)
+
+		if (DAMAGE >= MAX_DAMAGE) {
+			electrode.setStackInSlot(0, Item.getEmpty())
+		} else {
+			electrode.setStackInSlot(0, stack.copy())
+		}
+	})
 
 	/**
-	 * @type {ItemStackTransfer_}
+	 * 
+	 * @param {Internal.ItemStack} stack 
+	 * @returns 
 	 */
-	let electrode = machine.getTraitByName(INPUT_GRAPHITE_ELECTRODE).storage
-	let stack = electrode.getStackInSlot(0)
-
-	if (!isGraphiteElectrode(stack)) {
-		event.setCanceled(true)
-		return
+	function isGraphiteElectrode(stack) {
+		if (stack.isEmpty()) {
+			return false
+		}
+		if (stack.getId() !== "immersiveengineering:graphite_electrode") {
+			return false
+		}
+		if (stack.hasTag() && stack.getTag().getBoolean("Unbreakable")) {
+			return false
+		}
+		return true
 	}
-
-	const DAMAGE = $IEItemNBTHelper.getInt(stack, DAMAGE_NBT_NAME) + 1
-	const GET_DAMAGE = $IEServerConfig.MACHINES.arcfurnace_electrodeDamage
-	const MAX_DAMAGE = $IEServerConfig.getOrDefault(GET_DAMAGE)
-
-	$IEItemNBTHelper.putInt(stack, DAMAGE_NBT_NAME, DAMAGE)
-
-	if (DAMAGE >= MAX_DAMAGE) {
-		electrode.setStackInSlot(0, Item.getEmpty())
-	} else {
-		electrode.setStackInSlot(0, stack.copy())
-	}
-})
-
-/**
- * 
- * @param {Internal.ItemStack} stack 
- * @returns 
- */
-function isGraphiteElectrode(stack) {
-	return !stack.isEmpty() && stack.getId() === "immersiveengineering:graphite_electrode"
-}
+})()
