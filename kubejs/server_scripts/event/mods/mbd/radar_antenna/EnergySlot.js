@@ -15,7 +15,7 @@ MBDMachineEvents.onTick("cmi:radar_antenna", ($) => {
 
 	/**
 	 * 能量物品特性的物品
-	 * @type {Internal.ItemStack_}
+	 * @type {Internal.ItemStack}
 	 */
 	let stack = itemSlot.storage.getStackInSlot(0)
 
@@ -36,30 +36,31 @@ MBDMachineEvents.onTick("cmi:radar_antenna", ($) => {
 	}
 
 	// 从物品抽能量
-	stack.getCapability(ForgeCapabilities.ENERGY).ifPresent((itemEnergy) => {
-		/**
-		 * 试着给机器1000FE看能收多少
-		 * @type {number}
-		 */
-		let canAccept = energyTrait.storage.receiveEnergy(1000, true)
+	stack.getCapability(ForgeCapabilities.ENERGY)
+		.ifPresent((itemEnergy) => {
+			/**
+			 * 试着给机器1000FE看能收多少
+			 * @type {number}
+			 */
+			let canAccept = energyTrait.storage.receiveEnergy(1000, true)
 
-		// 一点都不能收退出逻辑
-		if (canAccept <= 0) {
-			return
-		}
+			// 一点都不能收退出逻辑
+			if (canAccept <= 0) {
+				return
+			}
 
-		/**
-		 * 从物品抽出输1000FE能接受的FE量
-		 * @type {number}
-		 */
-		let extracted = itemEnergy.extractEnergy(canAccept, false)
+			/**
+			 * 从物品抽出输1000FE能接受的FE量
+			 * @type {number}
+			 */
+			let extracted = itemEnergy.extractEnergy(canAccept, false)
 
-		// 物品没有能量退出逻辑
-		if (extracted <= 0) {
-			return
-		}
+			// 物品没有能量退出逻辑
+			if (extracted <= 0) {
+				return
+			}
 
-		// 把能量给机器
-		energyTrait.storage.receiveEnergy(extracted, false)
-	})
+			// 把能量给机器
+			energyTrait.storage.receiveEnergy(extracted, false)
+		})
 })
