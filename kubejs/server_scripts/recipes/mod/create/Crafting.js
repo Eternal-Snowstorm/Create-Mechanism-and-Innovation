@@ -321,4 +321,17 @@ ServerEvents.recipes((event) => {
 		P: "#forge:plates/steel",
 		G: "#forge:gears/cast_iron"
 	})
+
+	// 暂时修复蒸汽锻锤配方
+	kubejs.shaped("steam_letters:steam_hammer", [
+		"ABA",
+		"DCD",
+		" E "
+	], {
+		A: "#forge:plates/bronze",
+		B: Casing.BRONZE,
+		C: "create:mechanical_press",
+		D: Mechanisms.STEAM.COM,
+		E: "#forge:storage_blocks/bronze"
+	}).id("steam_letters:crafting/shaped/bronze/steam_hammer")
 })

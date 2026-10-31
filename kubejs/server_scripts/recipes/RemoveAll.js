@@ -222,7 +222,17 @@ ServerEvents.recipes((event) => {
 		"steam_letters:crafting/shaped/burner/fluid",
 		"steam_letters:fluid_fuel/blazing_blood",
 		"steam_letters:fluid_fuel/lava",
-		"fluidlogistics:copper_basin"
+		"fluidlogistics:copper_basin",
+		"steam_letters:crafting/shaped/steam/boiler",
+		"steam_letters:crafting/shaped/steam/burner/solid",
+		"steam_letters:crafting/shaped/steam/burner/fluid",
+		"steam_letters:crafting/shaped/steam/solar",
+		"steam_letters:crafting/shaped/bronze/engine",
+		"steam_letters:crafting/shaped/bronze/flywheel",
+		"steam_letters:crafting/shaped/bronze/basin/plate_update",
+		"steam_letters:crafting/shaped/bronze/basin/plate",
+		"steam_letters:crafting/shaped/bronze/basin/ingot",
+		"steam_letters:crafting/shaped/bronze/basin/ingot_update"
 	])
 
 	let removedMods = [
