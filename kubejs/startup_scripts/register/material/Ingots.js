@@ -98,7 +98,7 @@ StartupEvents.registry("item", (event) => {
 	addNonIngotItem("piezoelectric_ceramic")
 	// 富集合金
 	addNonIngotItem("enriched_alloy")
-		.rarity("extra_green")
+		.rarity(Rarity["create(java.lang.String,net.minecraft.ChatFormatting)"]("green", ChatFormatting.DARK_GREEN))
 		.tag("forge:alloys")
 		.tag("forge:alloys/enriched")
 		.tag("mekanism:alloys")
