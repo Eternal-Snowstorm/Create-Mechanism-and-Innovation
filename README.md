@@ -244,7 +244,7 @@ your saves or `options.txt`**. Not a single block. Full details in `updater/CLIE
 		- **mbd2**
  - **LICENSE.md**
  - **README.md**
- - **readme/README.zh-CN.md**
+ - **readme/zh_cn.md**
  - **UpdateLogs.md**
  - **updater**
 
