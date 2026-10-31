@@ -55,6 +55,9 @@ ServerEvents.recipes((event) => {
 		let inputItem = recipes.getOriginalRecipeIngredients()[0].getItemIds()[0]
 		let id = recipes.getId()
 
+		if (inputItem == "thermal:rubberwood_log") {
+			return
+		}
 		create.cutting([
 			Item.of(outputItem, 1),
 			"farmersdelight:tree_bark"
@@ -84,5 +87,5 @@ ServerEvents.recipes((event) => {
 		"cmi:rubber_tree_bark"
 	], [
 		"thermal:rubberwood_log"
-	])
+	]).id("create:cutting/runtime_generated/compat/thermal/rubberwood_log_to_stripped_rubberwood_log")
 })
