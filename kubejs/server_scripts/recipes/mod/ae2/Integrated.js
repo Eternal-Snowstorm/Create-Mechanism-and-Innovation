@@ -155,4 +155,14 @@ ServerEvents.recipes((event) => {
 			"ae2:terminal",
 			Mechanisms.SMART.COM
 		])
+	
+	// 营养注射器
+	addRecipe()
+		.itemOutput("cmi:nutrition_syringe")
+		.inputItems([
+			Mechanisms.PIG_IRON.COM,
+			"thermal:jar",
+			"#forge:rods/glass"
+		])
+		.energy(10000)
 })

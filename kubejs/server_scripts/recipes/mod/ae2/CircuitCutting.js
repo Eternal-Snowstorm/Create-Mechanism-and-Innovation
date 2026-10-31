@@ -83,7 +83,7 @@ ServerEvents.recipes((event) => {
 		.build("expatternprovider:cutter/logic")
 
 	// 计算电路板
-	new CircuitCutterRecipe(Item.of(Print.CALCULATION, 9))
+	new CircuitCutterRecipe(Item.of(Print.CALCULATION, 4))
 		.item("#forge:storage_blocks/certus_quartz")
 		.fluid("immersiveengineering:redstone_acid", 100)
 		.build("expatternprovider:cutter/calculation")
@@ -123,5 +123,4 @@ ServerEvents.recipes((event) => {
 		.item("cmi:superconducting_mercury_ingot")
 		.fluid("immersiveengineering:redstone_acid", 100)
 		.build()
-
 })
