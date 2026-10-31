@@ -9,7 +9,7 @@ body:
     label: "检查项"
     description: "请检查以下项目, 并勾选确认。"
     options:
-    - label: "我已在 [Issues 页面](https://github.com/VechniMetel/CodeNameCIM2/issues) 中搜索, 确认了这一建议未被提交过。"
+    - label: "我已在 [Issues 页面](https://github.com/VechniMetel/Create-Mechanism-and-Innovation/issues) 中搜索, 确认了这一建议未被提交过。"
       required: true
 - type: textarea
   id: "yml-2"
