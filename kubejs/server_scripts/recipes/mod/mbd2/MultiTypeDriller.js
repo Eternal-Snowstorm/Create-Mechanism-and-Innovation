@@ -4,7 +4,7 @@ ServerEvents.recipes((event) => {
 	/**
 	 * 每桶冷却剂支持运行时间
 	 */
-	let perCoolerBucketTicks = 20
+	let perCoolerBucketTicks = 1
 
 	let types = [
 		"item",
