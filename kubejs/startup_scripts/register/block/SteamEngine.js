@@ -1,7 +1,7 @@
 StartupEvents.registry("block", (event) => {
 	const Materials = {
-		castIron: "steam_letters:cast_iron",
-		steel: "steam_letters:steel"
+		castIron: SlApis.loadResource("cast_iron"),
+		steel: SlApis.loadResource("steel")
 	}
 
 	event.create("cmi:cast_iron_solar_boiler", "steam_letters:solar")
