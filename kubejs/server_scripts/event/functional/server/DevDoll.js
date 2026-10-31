@@ -1,3 +1,6 @@
+let $ServerLevel =
+	Java.loadClass("net.minecraft.server.level.ServerLevel")
+
 BlockEvents.rightClicked((event) => {
 	let { block, player, level, item, hand } = event
 	let { x, y, z } = block
@@ -10,7 +13,7 @@ BlockEvents.rightClicked((event) => {
 		return
 	}
 
-	if (!block.hasTag(Cmi.loadResource("dev_doll").toString())) {
+	if (!block.hasTag(Cmi.loadResource("dev_doll"))) {
 		return
 	}
 
