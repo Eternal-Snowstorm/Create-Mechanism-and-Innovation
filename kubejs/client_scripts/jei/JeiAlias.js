@@ -7,4 +7,7 @@ NebulaEvents.registerJeiAliases((event) => {
 		"alias.cmi.fluid_transporter.1",
 		"alias.cmi.fluid_transporter.2"
 	])
+
+	// 盐 & 盐巴
+	event.addIngredientAlias("#forge:dusts/salt", "alias.cmi.salts")
 })
