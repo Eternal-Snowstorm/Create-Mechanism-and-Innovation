@@ -1,3 +1,4 @@
+// ignored: true
 ClientEvents.lang("zh_cn", (event) => {
 	/**
 	 * 

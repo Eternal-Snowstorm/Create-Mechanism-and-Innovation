@@ -1,4 +1,4 @@
-/*
+// ignored: true
 BlockEvents.rightClicked((event) => {
 	let { block, item, player, level } = event
 
@@ -29,4 +29,3 @@ BlockEvents.rightClicked((event) => {
 		}
 	}
 })
-*/

@@ -1,4 +1,4 @@
-/*
+// ignored: true
 EntityEvents.hurt((event) => {
 	const { source, entity } = event
 	const player = source.getPlayer()
@@ -36,4 +36,3 @@ EntityEvents.hurt((event) => {
 		data.multiHitActive = false
 	})
 })
-*/
