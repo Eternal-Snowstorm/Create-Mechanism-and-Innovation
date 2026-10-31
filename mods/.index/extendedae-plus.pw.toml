@@ -1,5 +1,5 @@
 filename = 'extendedae_plus-1.6.3.jar'
-name = 'ExtendedAE Plus'
+name = 'ExtendedAE-Plus'
 side = 'server'
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
