@@ -3,8 +3,8 @@ BlockEvents.rightClicked((event) => {
 
 	let { x, y, z } = block
 
-	// 
-	if (level.isClientSide) {
+	// 服务端执行
+	if (level.isClientSide()) {
 		return
 	}
 
