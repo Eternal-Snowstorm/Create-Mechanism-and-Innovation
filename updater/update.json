@@ -42,7 +42,7 @@
     { "path": "mods/bigcontraptions-1.0.jar", "sha1": "3bebfb40c2d232ac69214126012dd28106c3a917", "url": "https://edge.forgecdn.net/files/5108/576/bigcontraptions-1.0.jar", "project": "curseforge:877334", "replaces": "" },
     { "path": "mods/create_central_kitchen-1.20.1-for-create-6.0.8-1.5.1.jar", "sha1": "0b086193c1df819730ca6c06d5de3c7a8ed3b4f3", "url": "https://edge.forgecdn.net/files/8760/859/create_central_kitchen-1.20.1-for-create-6.0.8-1.5.1.jar", "project": "curseforge:820977", "replaces": "" },
     { "path": "mods/create_connected-1.2.3-mc1.20.1-all.jar", "sha1": "98b4a41c452476496713df16ce4d52fc9f476508", "url": "https://edge.forgecdn.net/files/8290/615/create_connected-1.2.3-mc1.20.1-all.jar", "project": "curseforge:947914", "replaces": "" },
-    { "path": "mods/createcoolingfan-forge-1.20.1-1.3.0.jar", "sha1": "b0dcd905c0ce2e22561881537235f67cce3d23dc", "url": "https://edge.forgecdn.net/files/8615/633/createcoolingfan-forge-1.20.1-1.3.0.jar", "project": "curseforge:1603577", "replaces": "" },
+    { "path": "mods/createcoolingfan-forge-1.20.1-1.4.0.jar", "sha1": "352be93ac9606caa4d876e3812aaca5eb4f4501d", "url": "https://edge.forgecdn.net/files/9383/498/createcoolingfan-forge-1.20.1-1.4.0.jar", "project": "curseforge:1603577", "replaces": "mods/createcoolingfan-forge-1.20.1-1.3.0.jar" },
     { "path": "mods/create_jetpack_curios-1.2.0-forge-1.20.1.jar", "sha1": "0aab00450801572cd81fdf3d30221bfc4827a9dc", "url": "https://edge.forgecdn.net/files/5887/734/create_jetpack_curios-1.2.0-forge-1.20.1.jar", "project": "curseforge:1057194", "replaces": "" },
     { "path": "mods/CreateCyberGoggles-1.20.1-7.2.3-Forge.jar", "sha1": "8e345f8aa5f50af65123feb60dc1aa11303f8390", "url": "https://edge.forgecdn.net/files/8622/914/CreateCyberGoggles-1.20.1-7.2.3-Forge.jar", "project": "curseforge:1233804", "replaces": "" },
     { "path": "mods/createdeco-2.0.3-1.20.1-forge.jar", "sha1": "54c8ad5686b846310bca9e69982a455e668dede3", "url": "https://edge.forgecdn.net/files/6373/226/createdeco-2.0.3-1.20.1-forge.jar", "project": "curseforge:509285", "replaces": "" },
@@ -226,5 +226,5 @@
     { "path": "mods/YungsApi-1.20-Forge-4.0.6.jar", "sha1": "af584b690f5646c6032002b58abc4591beed3833", "url": "https://edge.forgecdn.net/files/5769/971/YungsApi-1.20-Forge-4.0.6.jar", "project": "curseforge:421850", "replaces": "" }
   ],
   "delete": [],
-  "changelog": "https://raw.githubusercontent.com/Eternal-Snowstorm/Create-Mechanism-and-Innovation/main/UpdateLogs.md"
+  "changelog": "https://gitee.com/eternalsnowstorm/mechanism-and-innovation/raw/master/UpdateLogs.md"
 }
