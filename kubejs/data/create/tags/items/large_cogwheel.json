@@ -1,8 +1,5 @@
 {
 	"values": [
-		"create:large_cogwheel",
-		"steampowered:bronze_large_cogwheel",
-		"steampowered:cast_iron_large_cogwheel",
-		"steampowered:steel_large_cogwheel"
+		"create:large_cogwheel"
 	]
 }
