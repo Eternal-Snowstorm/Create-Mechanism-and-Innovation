@@ -75,6 +75,7 @@ CMI Dev.json
 /.hmcl
 .graphflow-cache/*
 graphflow-out/*
+/bookmarks.json
 
 # Mods
 /mods/*
