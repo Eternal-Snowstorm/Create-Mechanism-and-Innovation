@@ -23,8 +23,6 @@
 		let electrode = machine.getTraitByName(INPUT_GRAPHITE_ELECTRODE).storage
 		let stack = electrode.getStackInSlot(0)
 
-		// 这里只要求"槽位里是石墨电极"，不看 Unbreakable。
-		// 不可破坏电极同样要能开工，是否消耗由 onRecipeWorking 决定。
 		if (isGraphiteElectrode(stack)) {
 			return
 		}
@@ -53,7 +51,6 @@
 			return
 		}
 
-		// 不可破坏电极：不累计伤害、不消耗，配方照常推进
 		if (isUnbreakableElectrode(stack)) {
 			return
 		}
