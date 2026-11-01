@@ -65,6 +65,8 @@ ServerEvents.highPriorityData((event) => {
 		"tconstruct:honey"
 	], "create:honey")
 
+	// TODO: 流体桶物品没有统一
+
 	/**
 	 * 
 	 * @param {string} name

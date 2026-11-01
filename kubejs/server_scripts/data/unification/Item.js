@@ -4,50 +4,10 @@ ServerEvents.highPriorityData((event) => {
 		"#forge:coal_coke"
 	], "thermal:coal_coke")
 
-	// 硫磺
-	addUnification("sulfur", [
-		"#forge:gems/sulfur"
-	], "thermal:sulfur")
-
-	// 硝酸盐
-	addUnification("niter_dust", [
-		"#forge:dusts/niter"
-	], "thermal:niter_dust")
-
 	// 电容
 	addUnification("capacitor", [
 		"createaddition:capacitor"
 	], "cmi:simple_battery")
-
-	// 石英粉
-	addUnification("quartz_dust", [
-		"#forge:dusts/quartz"
-	], "thermal:quartz_dust")
-
-	// 青金石粉
-	addUnification("lapis_dust", [
-		"#forge:dusts/lapis"
-	], "thermal:lapis_dust")
-
-	// 绿宝石粉
-	addUnification("emerald_dust", [
-		"#forge:dusts/emerald"
-	], "thermal:emerald_dust")
-
-	// 钻石粉
-	addUnification("diamond_dust", [
-		"#forge:dusts/diamond"
-	], "thermal:diamond_dust")
-
-	// 硫粉
-	addUnification("sulfur_dust", [
-		"#forge:dusts/sulfur"
-	], "thermal:sulfur_dust")
-
-	// 黑曜石粉
-	addUnification("obsidian_dust", [
-		"#forge:dusts/obsidian"
-	], "create:powdered_obsidian")
 
 	// 矿渣
 	addUnification("slag", [
@@ -61,8 +21,9 @@ ServerEvents.highPriorityData((event) => {
 
 	// 稻米
 	addUnification("rice", [
-		"#forge:seeds/rice"
-	], "kaleidoscope_cookery:rice")
+		"#forge:seeds/rice",
+		"thermal:rice"
+	], "farmersdelight:rice")
 
 	// 稻穗
 	addUnification("rice_panicle", [
@@ -141,16 +102,6 @@ ServerEvents.highPriorityData((event) => {
 		"thermal:press_unpacking_die"
 	], "cmi:unpack_mold")
 
-	// 木屑
-	addUnification("wood_dust", [
-		"#forge:dusts/wood"
-	], "createdieselgenerators:wood_chip")
-
-	// 共振紫水晶
-	addUnification("charged_amethyst", [
-		"#forge:gems/charged_amethyst"
-	], "cmi:charged_amethyst")
-
 	// 抽屉升级
 	addUnification("drawer_upgrade_t1", [
 		"functionalstorage:copper_upgrade"
@@ -186,6 +137,8 @@ ServerEvents.highPriorityData((event) => {
 		"thermal_parallel:argument_parallel_3"
 	], "cmi:16_parallel_upgrade")
 
+	// TODO: 热力农业的物品/方块需要统一
+
 	/**
 	 * 
 	 * @param {string} name
@@ -195,10 +148,12 @@ ServerEvents.highPriorityData((event) => {
 	function addUnification(name, items, result) {
 		if (items === null) {
 			console.error(`Items ${items} cannot be null`)
+			return
 		}
 
 		if (result === null) {
 			console.error(`Result ${result} cannot be null`)
+			return
 		}
 
 		let itemUnification = [

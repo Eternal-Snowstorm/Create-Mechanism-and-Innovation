@@ -1,4 +1,47 @@
 ServerEvents.highPriorityData((event) => {
+	// 农作物箱
+	addUnification("carrot_crate", [
+		"#forge:storage_blocks/carrot"
+	], "farmersdelight:carrot_crate")
+
+	addUnification("potato_crate", [
+		"#forge:storage_blocks/potato"
+	], "farmersdelight:potato_crate")
+
+	addUnification("beetroot_crate", [
+		"#forge:storage_blocks/beetroot"
+	], "farmersdelight:beetroot_crate")
+
+	addUnification("onion_crate", [
+		"thermal:onion_block"
+	], "farmersdelight:onion_crate")
+
+	addUnification("rice_bag", [
+		"thermal:rice_block"
+	], "farmersdelight:rice_bag")
+
+	addUnification("tomato_crate", [
+		"thermal:tomato_block"
+	], "farmersdelight:tomato_crate")
+
+	addUnification("straw_bale", [
+		"#forge:storage_blocks/rice_panicle"
+	], "kaleidoscope_cookery:straw_block")
+
+	// 虚设蜂箱漏斗
+	addUnification("dummy_hive_hopper_base", [
+		"cmi:dummy_hive_hopper_base"
+	], "thermal:device_hive_extractor")
+
+	addUnification("dummy_hive_hopper_beehive", [
+		"cmi:dummy_hive_hopper_beehive"
+	], "minecraft:beehive")
+
+	addUnification("dummy_hive_hopper_bee_nest", [
+		"cmi:dummy_hive_hopper_bee_nest"
+	], "minecraft:bee_nest")
+
+	// 矿石方块
 	addUnification("uranium_ore", [
 		"#forge:ores/uranium"
 	], "alexscaves:radrock_uranium_ore")
@@ -49,30 +92,17 @@ ServerEvents.highPriorityData((event) => {
 		"tconstruct:steel_cluster"
 	], "minecraft:air")
 
-	addUnification("carrot_crate", [
-		"#forge:storage_blocks/carrot",
-	], "farmersdelight:carrot_crate")
-
-	addUnification("potato_crate", [
-		"#forge:storage_blocks/potato",
-	], "farmersdelight:potato_crate")
-
-	addUnification("beetroot_crate", [
-		"#forge:storage_blocks/beetroot",
-	], "farmersdelight:beetroot_crate")
-
-	addUnification("straw_bale", [
-		"#forge:storage_blocks/rice_panicle"
-	], "kaleidoscope_cookery:straw_block")
-
+	// 工作站
 	addUnification("crafting_station", [
 		"tconstruct:crafting_station"
 	], "craftingstationjei:crafting_station")
 
+	// 流体舱口
 	addUnification("fluid_hatch", [
 		"create_dragons_plus:fluid_hatch"
 	], "fluidlogistics:fluid_hatch")
 
+	// 煤炭矿藏
 	addUnification("coal_deposit", [
 		"cmi:coal_deposit_block"
 	], "create_rns:coal_deposit_block")
@@ -90,49 +120,28 @@ ServerEvents.highPriorityData((event) => {
 		"immersiveengineering:coil_hv"
 	], "cmi:steel_coil")
 
-	addUnification("coke_block", [
-		"immersiveengineering:coke"
-	], "thermal:coal_coke_block")
-
-	// 虚设蜂箱漏斗
-	addUnification("dummy_hive_hopper_base", [
-		"cmi:dummy_hive_hopper_base"
-	], "thermal:device_hive_extractor")
-
-	addUnification("dummy_hive_hopper_beehive", [
-		"cmi:dummy_hive_hopper_beehive"
-	], "minecraft:beehive")
-
-	addUnification("dummy_hive_hopper_bee_nest", [
-		"cmi:dummy_hive_hopper_bee_nest"
-	], "minecraft:bee_nest")
-
+	// 工作盆
 	addUnification("advanced_basin", [
-		"fluidlogistics:copper_basin",
-		"steam_letters:bronze_basin"
+		"fluidlogistics:copper_basin"
 	], "steam_letters:bronze_basin")
 
 	/**
 	 * 
-	 * @param {string} name
-	 * @param {Special.Block | Special.BlockTags | (Special.Block | Special.BlockTags)[]} blocks
-	 * @param {Special.Block} result
+	 * @param {string} name 
+	 * @param {Special.Block | Special.BlockTags | (Special.Block | Special.BlockTags)[]} blocks 
+	 * @param {Special.Block} result 
 	 */
 	function addUnification(name, blocks, result) {
 		if (blocks === null) {
 			console.error(`Blocks ${blocks} cannot be null`)
+			return
 		}
 
 		if (result === null) {
 			console.error(`Result ${result} cannot be null`)
+			return
 		}
 
-		let blockUnification = [
-			{
-				matchBlock: blocks,
-				resultBlock: result
-			}
-		]
 		let itemUnification = [
 			{
 				matchItems: blocks,
@@ -140,7 +149,6 @@ ServerEvents.highPriorityData((event) => {
 			}
 		]
 
-		event.addJson(`oeb:replacements/${name}.json`, blockUnification)
 		event.addJson(`oei:replacements/${name}.json`, itemUnification)
 	}
 })
