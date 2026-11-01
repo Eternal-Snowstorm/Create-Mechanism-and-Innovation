@@ -7,7 +7,7 @@
 $ErrorActionPreference = 'Stop'
 
 # =============================================================================
-#  sync.ps1 —— 玩家端同步流程(供 update-from-gitee.bat / setup-gitee-sync.bat 调用)
+#  sync.ps1 —— 玩家端同步流程(供 setup-gitee-sync.bat 调用; -Mode update 保留给手动排障)
 #
 #  【更新源优先级】优先 GitHub 主仓库, 连不上或没建立 GitHub 远程时回退 Gitee 镜像:
 #    1) GitHub : 远程 origin, 分支自动探测(读不到 symref 时按 main)
@@ -322,7 +322,7 @@ if ($modsRc -ne 0) {
 Write-Host ''
 if ($Mode -eq 'setup') {
   Write-Host ('完成! 本客户端已与 ' + $usedSource + ' 同步。')
-  Write-Host '以后运行 update-from-gitee.bat 即可拉取更新(仍会优先尝试 GitHub)。'
+  Write-Host '以后运行 updater\Update-CMI.bat 即可拉取更新(仍会优先尝试 GitHub)。'
 } else {
   Write-Host ('完成! 本客户端内容已更新到 ' + $usedSource + ' 最新版。')
 }

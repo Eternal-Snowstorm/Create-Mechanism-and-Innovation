@@ -1,20 +1,25 @@
 @echo off
 rem ===========================================================================
-rem  CMI pack updater - daily update entry point (Windows)
+rem  CMI pack updater - one-click GitHub sync entry point (Windows)
 rem
-rem  This file is intentionally kept PURE ASCII (English comments only).
-rem  Reason: cmd.exe parses .bat files by byte offset, so a file that mixes
-rem  multi-byte characters (Chinese) with a mid-file "chcp" can be parsed out
-rem  of sync; storing Chinese as UTF-8 instead shows mojibake on a cp936
-rem  console. Keeping the entry point ASCII makes it readable in any editor
-rem  and in any encoding, including UTF-8.
+rem  Double-click this file to bring this pack up to date with the GitHub repo.
+rem  It only calls update-cmi.ps1 next to it; keep both files in one folder.
 rem
-rem  All user-facing Chinese messages live in sync.ps1 (UTF-8 encoded).
+rem  PURE ASCII on purpose (same reason as updater\setup-gitee-sync.bat):
+rem  cmd.exe parses .bat files by byte offset, so multi-byte characters mixed
+rem  with a mid-file "chcp" can break parsing; and UTF-8 Chinese would show as
+rem  mojibake on a cp936 console. All Chinese messages live in update-cmi.ps1.
 rem
-rem  Usage: double-click this file, or run from cmd:
-rem      updater\update-from-gitee.bat [--source auto|github|gitee]
-rem  Extra arguments are forwarded to sync.ps1 as-is (both -Source and
-rem  --source spellings are accepted by PowerShell).
+rem  NOTE ON ENCODING OF THE .ps1 (important):
+rem  We do NOT hand the script to "powershell -File", because Windows PowerShell
+rem  5.1 parses a .ps1 that has NO BOM as the system ANSI codepage (GBK here) and
+rem  every Chinese message turns into mojibake / a parse error. Instead we read
+rem  the file explicitly as UTF-8 and run the resulting scriptblock, so it works
+rem  whether or not the file kept its BOM. (-ScriptDir replaces $PSScriptRoot,
+rem  which is empty inside a scriptblock.)
+rem
+rem  Shipped with the pack: this file lives in updater/ and IS tracked by git,
+rem  so every player receives it. Keep it next to update-cmi.ps1.
 rem ===========================================================================
 setlocal
 chcp 936 >nul
@@ -54,9 +59,25 @@ timeout /t 2 >NUL
 echo Development Preview
 echo .
 timeout /t 2 >NUL
-cd /d "%~dp0.."
 
-powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0sync.ps1" -Mode update %*
+set "PS1=%~dp0update-cmi.ps1"
+if not exist "%PS1%" (
+  echo [ERROR] update-cmi.ps1 is missing.
+  echo         Keep Update-CMI.bat and update-cmi.ps1 in the same folder.
+  echo.
+  pause
+  exit /b 1
+)
+
+where powershell >nul 2>nul
+if errorlevel 1 (
+  echo [ERROR] Windows PowerShell not found on this system.
+  echo.
+  pause
+  exit /b 1
+)
+
+powershell -NoProfile -ExecutionPolicy Bypass -Command "$src = Get-Content -LiteralPath '%~dp0update-cmi.ps1' -Raw -Encoding UTF8; & ([scriptblock]::Create($src)) -ScriptDir '%~dp0'"
 set "RC=%ERRORLEVEL%"
 
 echo.

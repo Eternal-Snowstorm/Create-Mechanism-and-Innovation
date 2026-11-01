@@ -194,18 +194,18 @@ a log to `updater/logs/`):
 :: Windows (first time)
 updater\setup-gitee-sync.bat
 :: Windows (daily)
-updater\update-from-gitee.bat
+updater\Update-CMI.bat
 ```
 
 ```bash
-# Linux / macOS
+# Linux / macOS (first time and daily — the same script, safe to re-run)
 bash updater/setup-gitee-sync.sh
-bash updater/update-from-gitee.sh
 ```
 
-Force one source with `--source auto|github|gitee` (default `auto`; on Windows `-Source`). The script names still
-read `…-gitee-…` on purpose — renaming would break existing double-click habits, shortcuts and doc links — but the
-logic itself is GitHub-first.
+Force one source with `--source auto|github|gitee` (default `auto`; on Windows `-Source`) — that flag is accepted
+by the first-time setup entry only; the daily `Update-CMI.bat` always falls back automatically. The setup script
+name still reads `…-gitee-…` on purpose — renaming would break existing double-click habits, shortcuts and doc
+links — but the logic itself is GitHub-first.
 
 They only touch replaceable folders — `mods / config / kubejs / defaultconfigs / resourcepacks` — and **never touch
 your saves or `options.txt`**. Not a single block. Full details in `updater/CLIENT-GUIDE.md`, design discussion in

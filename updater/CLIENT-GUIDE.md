@@ -6,18 +6,22 @@
 
 | 文件 | 作用 |
 |---|---|
+| `updater/Update-CMI.bat` | **日常**:一键更新的双击入口(带开场画面;自动定位整合包根目录) |
+| `updater/update-cmi.ps1` | 上面那个 `.bat` 调用的逻辑:GitHub 优先、连不上自动走 Gitee 镜像,覆盖前先备份本地改动 |
 | `updater/setup-gitee-sync.bat` / `.sh` | **首次**:建立远程仓库(优先 GitHub,失败则用 Gitee 镜像)并落地内容 |
-| `updater/update-from-gitee.bat` / `.sh` | **日常**:同步最新版本(同样优先 GitHub) |
-| `updater/sync.ps1` | 上面两个 `.bat` 实际调用的同步逻辑与中文提示(Windows) |
+| `updater/sync.ps1` | `setup-gitee-sync.bat` 实际调用的同步逻辑与中文提示(Windows);`-Mode update` 保留给手动排障 |
 | `updater/mods-sync.ps1` / `.sh` | 由同步逻辑自动调用,按清单下载 / 校验 mods |
+| `updater/CLIENT-README.md` | 合作者版说明(更新源、前置条件、常见问题、开发组自测命令) |
 
-> **更新源:GitHub 优先, Gitee 兜底。** 两个同步脚本都会先探测 GitHub 主仓库
+> **更新源:GitHub 优先, Gitee 兜底。** 日常用的 `Update-CMI.bat` 会先探测 GitHub 主仓库
 > (`origin`, `https://github.com/Eternal-Snowstorm/Create-Mechanism-and-Innovation`);
 > **连不上 GitHub, 或本地压根没建立 GitHub 远程**时, 自动回退到 Gitee 镜像
 > (`gitee`, `https://gitee.com/eternalsnowstorm/mechanism-and-innovation`)。
-> 想手动指定源, 可加参数 `--source auto|github|gitee`(Windows 上也写 `--source` 即可, 两个 `.bat` 会把参数原样转给 `sync.ps1`), 默认 `auto`。
+> 首次建仓的 `setup-gitee-sync.bat` / `.sh` 用同一套顺序, 同样先试 GitHub 再回退 Gitee。
+> 想手动指定源, 只有首次建仓入口接受参数 `--source auto|github|gitee`
+> (`setup-gitee-sync.bat` 会把参数原样转给 `sync.ps1`), 默认 `auto`; 日常更新一律自动兜底。
 >
-> 脚本文件名仍保留 `…-gitee-…`:改名会让既有的双击习惯、文档链接与快捷方式失效;
+> 首次建仓的脚本文件名仍保留 `…-gitee-…`:改名会让既有的双击习惯、文档链接与快捷方式失效;
 > 名字没变, 但内部逻辑已经是 GitHub 优先。
 
 > **关于 `.bat` 的编码**:所有 `.bat` 都刻意保持**纯 ASCII**(注释只用英文)。
@@ -26,6 +30,12 @@
 > 存成 UTF-8 又会在代码页 936 的控制台上显示乱码(UTF-8 BOM 更会让首行直接报错)。
 > 因此中文注释与提示统一放在 UTF-8 的 `sync.ps1` / `mods-sync.ps1` 中,
 > `.bat` 只负责 `chcp` + 调用它们 —— 这样 `.bat` 用**任何编码(含 UTF-8)打开都不会乱码**。
+
+> **关于开场画面**:Windows 版 `Update-CMI.bat` 在显示中文提示之前,会先播放一段
+> 立方体 ASCII 字符画(约 4 秒,来自合作者提供的观赏性脚本,随更新脚本一起分发)。
+> 画面本身也是纯 ASCII,只用到 `/`、`}`、`_`、`.` 等字符,因此在任何代码页下都不会乱码;
+> 它只是为了好看,不影响同步逻辑,网络慢时也照常先播完再探测远程。
+> `setup-gitee-sync.bat` 与 Linux/macOS 下的 `.sh` 脚本不含该画面。
 
 > 客户端目录 = 装着 `updater/` 文件夹的那一层(习惯上叫 `.minecraft`,叫什么名字都行——脚本统一按"`updater` 的上一级"自动定位,与目录名无关)。
 
@@ -63,18 +73,20 @@ bash updater/setup-gitee-sync.sh
 
 ### Windows
 
-双击 `updater\update-from-gitee.bat`;或命令行:
+双击 `updater\Update-CMI.bat`;或命令行:
 
 ```bat
 cd /d "<整合包根目录>"
-updater\update-from-gitee.bat
+updater\Update-CMI.bat
 ```
 
 ### Linux / macOS
 
+日常更新与首次建仓用同一个脚本(幂等,可反复运行:内部先补齐远程,再拉取并应用最新内容):
+
 ```bash
 cd "<整合包根目录>"
-bash updater/update-from-gitee.sh
+bash updater/setup-gitee-sync.sh
 ```
 
 一次更新分两步:
@@ -126,7 +138,7 @@ bash updater/update-from-gitee.sh
 
 **你要做的**:把上面提示的那个 `.log` 文件发给开发者就行。
 
-也可以**直接重新运行一次** `update-from-gitee`——脚本只会重新下载失败的那几个 mod,
+也可以**直接重新运行一次** `updater\Update-CMI.bat`(Linux/macOS 下重跑 `setup-gitee-sync.sh`)——脚本只会重新下载失败的那几个 mod,
 已经最新的文件会跳过,不会重复下载。
 
 > 若失败时仍有"未恢复"的旧文件备份,它们会保留在 `updater\.rollback\<时间戳>\`,
@@ -163,9 +175,9 @@ bash updater/update-from-gitee.sh
 | 下载失败,提示发送日志 | **按提示把 `updater/logs` 下最新的 `.log` 发给开发者**,再重跑一次本脚本即可重试 |
 | 想回滚到更新前 | 见 `updater/.rollback/<时间戳>/` 中的备份(仅失败时保留) |
 | 更新后游戏缺 mod / 崩溃 | 先看 `updater/logs` 最新日志,确认是否有"失败"条目,并把日志发给开发者 |
-| 提示"连不上 GitHub, 本次改用 Gitee 镜像" | 属**正常回退**(国内网络常见),下次仍会先试 GitHub;想固定只用镜像可在命令后加 `--source gitee` |
-| 想强制只用 GitHub, 不要回退 | 命令后加 `--source github`;连不上会**直接报错**,而不是悄悄换源 |
-| 想让日常更新优先走 GitHub | 先运行一次 `setup-gitee-sync.sh`(`.bat`)—— 它会在缺 `origin` 时补建 GitHub 远程 |
+| 提示"连不上 GitHub, 本次改用 Gitee 镜像" | 属**正常回退**(国内网络常见),下次仍会先试 GitHub;日常入口不提供强制单源开关 |
+| 想强制只用 GitHub, 不要回退 | 改用首次建仓入口并加 `--source github`(它才会**直接报错**,而不是悄悄换源);日常更新一律自动兜底 |
+| 想让日常更新优先走 GitHub | 确认 `.git/config` 里的 `origin` 指向 GitHub 主仓库;缺失时跑一次 `setup-gitee-sync.sh`(`.bat`)补建 |
 
 ## 八, 开发者排障提示
 

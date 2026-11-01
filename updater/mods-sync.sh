@@ -2,7 +2,7 @@
 # =============================================================================
 #  mods-sync.sh —— 玩家端: 按 update.tsv 校验/下载 mods, 按 delete.tsv 清理旧版本
 #
-#  调用时机: git 同步完成之后(由 update-from-gitee.sh / setup-gitee-sync.sh 调用)
+#  调用时机: git 同步完成之后(由 setup-gitee-sync.sh 调用; Windows 侧由 sync.ps1 或 update-cmi.ps1 调用)
 #
 #  流程:
 #    1) 解析清单 update.tsv(5 列: sha1 | path | url | project | replaces)
