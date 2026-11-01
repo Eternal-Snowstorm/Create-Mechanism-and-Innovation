@@ -1,5 +1,6 @@
 (() => {
 	// 不毁NBT {Unbreakable: 1b}
+	// /give @s immersiveengineering:graphite_electrode{Unbreakable: 1b}
 
 	let $IEItemNBTHelper =
 		Java.loadClass("blusunrize.immersiveengineering.common.util.ItemNBTHelper")
@@ -22,6 +23,8 @@
 		let electrode = machine.getTraitByName(INPUT_GRAPHITE_ELECTRODE).storage
 		let stack = electrode.getStackInSlot(0)
 
+		// 这里只要求"槽位里是石墨电极"，不看 Unbreakable。
+		// 不可破坏电极同样要能开工，是否消耗由 onRecipeWorking 决定。
 		if (isGraphiteElectrode(stack)) {
 			return
 		}
@@ -50,6 +53,11 @@
 			return
 		}
 
+		// 不可破坏电极：不累计伤害、不消耗，配方照常推进
+		if (isUnbreakableElectrode(stack)) {
+			return
+		}
+
 		const DAMAGE = $IEItemNBTHelper.getInt(stack, DAMAGE_NBT_NAME) + 1
 		const GET_DAMAGE = $IEServerConfig.MACHINES.arcfurnace_electrodeDamage
 		const MAX_DAMAGE = $IEServerConfig.getOrDefault(GET_DAMAGE)
@@ -75,9 +83,15 @@
 		if (stack.getId() !== "immersiveengineering:graphite_electrode") {
 			return false
 		}
-		if (stack.hasNBT() && stack.getNbt().getBoolean("Unbreakable")) {
-			return false
-		}
 		return true
+	}
+
+	/**
+	 * 
+	 * @param {Internal.ItemStack} stack 
+	 * @returns 
+	 */
+	function isUnbreakableElectrode(stack) {
+		return stack.hasNBT() && stack.getNbt().getBoolean("Unbreakable")
 	}
 })()

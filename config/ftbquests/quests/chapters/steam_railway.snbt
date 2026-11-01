@@ -729,25 +729,12 @@
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "♻️环保模式♻️"
 			tasks: [{
-				id: "3642624664D89610"
+				id: "41561817FCB9C83A"
 				item: {
 					Count: 1
-					id: "itemfilters:or"
+					id: "itemfilters:tag"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "cmi:bronze_solar_boiler"
-							}
-							{
-								Count: 1b
-								id: "cmi:cast_iron_solar_boiler"
-							}
-							{
-								Count: 1b
-								id: "cmi:steel_solar_boiler"
-							}
-						]
+						value: "steam_letters:steam_solar_boiler"
 					}
 				}
 				title: "太阳能锅炉"
@@ -760,7 +747,7 @@
 		{
 			dependencies: ["470156018DA261F4"]
 			description: [
-				"高级焦炉的工作时间比普通焦炉快一倍, 并且自带4个并行. 因此在相同的工作时间下, 一个高级焦炉可以顶8台普通焦炉"
+				"高级焦炉首次工作时间为普通焦炉的4倍, 随着配方运行次数的增加逐步减少所需时间并提高并行数量. 因此可以先用高级焦炉去运行时间短的配方, 再把原料换成长时间的配方, 通过这样的方式可以尽快的提升高级焦炉的效率"
 				""
 				"因此无需堆叠大量普通焦炉, 即可获得相当于8台普通焦炉的持续产能, 使工业产线更加紧凑与高效"
 				""
