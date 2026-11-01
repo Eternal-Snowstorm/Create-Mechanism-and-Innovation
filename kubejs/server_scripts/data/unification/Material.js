@@ -1,5 +1,4 @@
 ServerEvents.highPriorityData((event) => {
-
 	/**
 	 *
 	 * @param {string} name 
