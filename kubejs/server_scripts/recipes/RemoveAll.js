@@ -232,7 +232,10 @@ ServerEvents.recipes((event) => {
 		"steam_letters:crafting/shaped/bronze/basin/plate_update",
 		"steam_letters:crafting/shaped/bronze/basin/plate",
 		"steam_letters:crafting/shaped/bronze/basin/ingot",
-		"steam_letters:crafting/shaped/bronze/basin/ingot_update"
+		"steam_letters:crafting/shaped/bronze/basin/ingot_update",
+		"steam_letters:sequenced_assembly/steam_mechanism_1",
+		"steam_letters:sequenced_assembly/steam_mechanism_2",
+		"steam_letters:crafting/shaped/bronze/advanced_spout"
 	])
 
 	let removedMods = [

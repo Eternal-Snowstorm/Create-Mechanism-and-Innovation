@@ -168,19 +168,19 @@
 			quest_enhance_disable_scroll_paging: false
 			rewards: [
 				{
-					count: 64
+					count: 256
 					id: "7091F902F16472C4"
 					item: "create:shaft"
 					type: "item"
 				}
 				{
-					count: 32
+					count: 128
 					id: "0650C9017D3B2F37"
 					item: "create:cogwheel"
 					type: "item"
 				}
 				{
-					count: 16
+					count: 128
 					id: "4FEFC573D1958403"
 					item: "create:large_cogwheel"
 					type: "item"
@@ -760,7 +760,6 @@
 			subtitle: "搭配磁铁非常好玩"
 			tasks: [{
 				count: 4L
-				icon: "thermal:iron_dust"
 				id: "60A9ACA253B643E1"
 				item: {
 					Count: 1
@@ -1150,7 +1149,7 @@
 		{
 			dependencies: ["28DFB902C00FCB4D"]
 			description: [
-				"这是一台早期的发电机, 虽然发电效率低下, 输出只有 &b100FE/Tick&r, 却能够为设备提供基础的充电服务"
+				"这是一台早期的发电机, 虽然发电效率低下, 却能够为设备提供基础的充电服务"
 				""
 				"在发电机内部放入燃料即可发电. 将工匠工作台紧贴发电机放置, 即可为工匠工作台充电"
 				"将需要充电的物品放入工匠工作台电力条下方的物品槽中, 即可为物品充电"

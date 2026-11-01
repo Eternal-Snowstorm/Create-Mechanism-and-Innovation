@@ -10,7 +10,10 @@ ClientEvents.lang("zh_cn", (event) => {
 	renameBlock("ad_astra:steel_cable", "铜电缆")
 	renameBlock("ad_astra:desh_cable", "琥珀金电缆")
 
-	renameBlock("mbd2:proxy_part_block", "多方块部件方块")	
+	renameBlock("mbd2:proxy_part_block", "多方块部件方块")
+
+	renameBlock("edenring:parignum", "藻衣")
+	renameBlock("edenring:eden_vine", "悬生藤")
 
 	/**
 	 * 

@@ -1,0 +1,16 @@
+{
+  "version": "3.1.1",
+  "lastModified": "2026-11-01T15:30:31.265Z",
+  "folders": [],
+  "bookmarks": [
+    {
+      "id": "mvxzlechb6ka5y521vo",
+      "name": "RemoveAll",
+      "file": "kubejs/server_scripts/recipes/RemoveAll.js",
+      "line": 0,
+      "character": 0,
+      "lineContent": "ServerEvents.recipes((event) => {",
+      "sortOrder": 0
+    }
+  ]
+}

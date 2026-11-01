@@ -261,7 +261,7 @@ function asItemSlots(item) {
 	// Ingredient 本身不带数量, 候选里的 "2x " 前缀会让解析失败(KubeJS 的
 	// IngredientJS.parse 不认数量前缀), 所以候选统一剥掉数量 —— 同一槽位的
 	// "任选其一" 本来也只能共用一个数量, MBD2 的 SizedIngredient 也是这么存的.
-	return $IngredientJS.of(item.map((candidate) => {
+	return Ingredient.of(item.map((candidate) => {
 		return String(candidate).replace(/^\d+x /, "")
 	}))
 }
@@ -279,7 +279,10 @@ function splitStackString(item) {
 		return { id: String(item), count: 1 }
 	}
 
-	return { id: match[2], count: parseInt(match[1], 10) }
+	return {
+		id: match[2],
+		count: parseInt(match[1], 10)
+	}
 }
 
 /**

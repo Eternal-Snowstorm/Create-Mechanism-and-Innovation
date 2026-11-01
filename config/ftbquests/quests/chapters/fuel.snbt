@@ -64,7 +64,7 @@
 			subtitle: "原木粉碎"
 			tasks: [{
 				id: "7BBC98D119AFC393"
-				item: "createdieselgenerators:wood_chip"
+				item: "mekanism:sawdust"
 				type: "item"
 			}]
 			x: 0.5d

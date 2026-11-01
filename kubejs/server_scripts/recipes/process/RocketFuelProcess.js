@@ -1,20 +1,40 @@
 ServerEvents.recipes((event) => {
-	let { create, thermal } = event.getRecipes()
+	let { cmi, thermal } = event.getRecipes()
 
 	// 光合反应液
-	create.mixing(Fluid.of("cmi:photosyn_fluid", 125), [
-		Fluid.of("minecraft:water", 500),
-		"minecraft:glowstone_dust",
-		"16x #minecraft:leaves",
-		"16x createaddition:biomass"
-	]).heated()
+	cmi.chemical_reactor()
+		.outputFluids(Fluid.of("cmi:photosyn_fluid", 1000))
+		.inputFluids(Fluid.of("minecraft:water", 500))
+		.inputItems([
+			"minecraft:glowstone_dust",
+			"16x #minecraft:leaves",
+			"16x createaddition:biomass"
+		])
+		.perTick((recipe) => {
+			recipe.inputFE(2000)
+		})
 
-	create.mixing(Fluid.of("cmi:photosyn_fluid", 125), [
-		Fluid.of("minecraft:water", 500),
-		"minecraft:glowstone_dust",
-		"16x #minecraft:saplings",
-		"16x createaddition:biomass"
-	]).heated()
+	cmi.chemical_reactor()
+		.outputFluids(Fluid.of("cmi:photosyn_fluid", 1000))
+		.inputFluids(Fluid.of("minecraft:water", 500))
+		.inputItems([
+			"minecraft:glowstone_dust",
+			"16x #minecraft:saplings",
+			"16x createaddition:biomass"
+		])
+		.perTick((recipe) => {
+			recipe.inputFE(2000)
+		})
+
+	cmi.chemical_reactor()
+		.outputFluids(Fluid.of("cmi:photosyn_fluid", 1000))
+		.inputFluids(Fluid.of("minecraft:water", 100))
+		.inputItems([
+			["edenring:volvox_block", "edenring:volvox_block_dense"]
+		])
+		.perTick((recipe) => {
+			recipe.inputFE(2000)
+		})
 
 	// 少量氧气
 	thermal.refinery(Fluid.of("mekanism:oxygen", 25), [

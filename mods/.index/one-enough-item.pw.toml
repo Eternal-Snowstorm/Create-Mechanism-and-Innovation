@@ -1,19 +1,19 @@
-filename = 'OneEnoughItem-1.0.8.jar'
-name = 'One Enough Item'
+filename = 'OneEnoughItem-forge-1.20.1-1.0.9-hotfix1.jar'
+name = 'OneEnoughItem'
 side = 'server'
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'OneEnoughItem-1.0.8.jar'
+x-prismlauncher-version-number = 'OneEnoughItem 1.0.9-hotfix1 - forge 1.20.1'
 
 [download]
-hash = 'cc24a959278990277483fe200286e3307d7f6d7e'
+hash = '41c6fb845ee252e35293ff6891c36bf7454764d3'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 7939113
+file-id = 9392163
 project-id = 1312660
 
 [[x-prismlauncher-dependencies]]

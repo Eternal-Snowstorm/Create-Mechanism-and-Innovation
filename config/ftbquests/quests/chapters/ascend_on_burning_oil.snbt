@@ -1421,7 +1421,7 @@
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "11968EF567514C7A"
-				item: "vintageimprovements:invar_sheet"
+				item: "thermal:invar_plate"
 				type: "item"
 			}]
 			x: 10.0d

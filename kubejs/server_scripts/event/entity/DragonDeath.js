@@ -1,7 +1,5 @@
 let $EntityLeaveLevelEvent =
 	Java.loadClass("net.minecraftforge.event.entity.EntityLeaveLevelEvent")
-let $CmiTips =
-	Java.loadClass("dev.celestiacraft.cmi.client.tip.CmiTips")
 let $ServerPlayer =
 	Java.loadClass("net.minecraft.server.level.ServerPlayer")
 

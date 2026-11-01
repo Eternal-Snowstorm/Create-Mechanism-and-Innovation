@@ -7,29 +7,8 @@
 	id: "42D2EA9CFCAB4BB9"
 	order_index: 6
 	quest_enhance_decorative_lines: [ ]
-	quest_enhance_hidden_dependency_lines: [
-		{
-			dependency: "q:402808bf06429750"
-			reveal_on_hover: 0b
-			source: "l:68dc09dd9b9c1ff9"
-		}
-		{
-			dependency: "q:592bca21f18f2269"
-			reveal_on_hover: 0b
-			source: "l:68dc09dd9b9c1ff9"
-		}
-		{
-			dependency: "l:68dc09dd9b9c1ff9"
-			reveal_on_hover: 0b
-			source: "q:2d4b0d1e342a2be1"
-		}
-	]
-	quest_links: [{
-		id: "68DC09DD9B9C1FF9"
-		linked_quest: "78AA95E3CA8606A0"
-		x: 2.0d
-		y: -1.0d
-	}]
+	quest_enhance_hidden_dependency_lines: [ ]
+	quest_links: [ ]
 	quests: [
 		{
 			dependencies: [
@@ -42,6 +21,7 @@
 			]
 			id: "2E6485B21A9B2D5F"
 			quest_enhance_disable_scroll_paging: false
+			shape: "hexagon"
 			tasks: [{
 				id: "5614F2F790976FBD"
 				item: "neoecoae:integrated_working_station"
@@ -699,6 +679,243 @@
 			}]
 			x: -6.5d
 			y: -3.0d
+		}
+		{
+			dependencies: [
+				"3BAF24E7D930B0E8"
+				"43925D3BD829A358"
+				"59A28A0E79B017AD"
+			]
+			id: "2159FE1180EFBED8"
+			quest_enhance_disable_scroll_paging: false
+			shape: "gear"
+			tasks: [{
+				id: "6A3CE9B923D4A7F5"
+				item: "cmi:air_tight_mechanism"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 8.5d
+		}
+		{
+			id: "3FD126EFABFB9480"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "6ED4AFD913550B30"
+				title: "点击开始气密构件任务"
+				type: "checkmark"
+			}]
+			x: -5.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"2159FE1180EFBED8"
+				"3FD126EFABFB9480"
+			]
+			id: "542564DC1EC9F219"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "19CFCCDB8EEF0247"
+				item: "steam_letters:empty_steam_container"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["4157E48DBF2C0F3B"]
+			id: "28321E91F5739CBF"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "20AD84E5CF2D35C2"
+				item: "thermal_extra:polyolefin_plate"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["39A8D6D82997EB8D"]
+			id: "43925D3BD829A358"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "4D49842E46524A59"
+				item: "ae2:quartz_glass"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["3FD126EFABFB9480"]
+			id: "39A8D6D82997EB8D"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "01B6EE21A8D06356"
+				item: "thermal:machine_smelter"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"3FD126EFABFB9480"
+				"28321E91F5739CBF"
+			]
+			id: "59A28A0E79B017AD"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "7391404F7EC956AA"
+				item: "cmi:air_tight_mechanism_basement"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["3FD126EFABFB9480"]
+			description: [
+				"液态乙烯+铝板在炼油厂里炼"
+				"或者润滑油加蒸汽裂化后精炼"
+			]
+			icon: "thermal_extra:polyolefin_bucket"
+			id: "4157E48DBF2C0F3B"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "086788478E0D2DF5"
+				type: "checkmark"
+			}]
+			title: "聚烯烃"
+			x: -3.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["75976F12CFFBC1F3"]
+			description: [
+				"&a团藻块&r通常成群悬浮于&e伊甸星环&r的半空中, 形成规模不一的群落. 它们的内部储存着大量水分, 似乎是为了应对不时之需. (尽管这些水呈现出绿色, 但实际上并不存在任何问题)"
+				""
+				"在伊甸这样一个长期缺乏阳光的环境中, 它们进化出了惊人的光合作用能力. 经过简单加工, 便能从中提取出大量&b光合反应液&r."
+				""
+				"以现有的科技水平, 我们仍然无法完全理解它们的繁衍方式与生存机制. 而与它们共同生存的&a悬生藤&r, &a藻衣&r和&a共生霉菌&r, 似乎都在它们的繁衍与生长过程中扮演着某种重要角色."
+				""
+				"或许在&b未来&r, 我们终有机会揭开这些谜团."
+				"{image:cmi:textures/images/eden/volvox_ball.png width:1 height:1 align:center fit:true}"
+			]
+			id: "642E22913AC26E70"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "光合作用最强之人"
+			tasks: [{
+				id: "10B60D22F178A257"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "edenring:volvox_block"
+							}
+							{
+								Count: 1b
+								id: "edenring:volvox_block_dense"
+							}
+						]
+					}
+				}
+				title: "团藻块"
+				type: "item"
+			}]
+			title: "团藻"
+			x: 19.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["75976F12CFFBC1F3"]
+			id: "48482A7ED327492E"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "一个当前时期可以被动生产的方式"
+			tasks: [
+				{
+					id: "17C80620798CE021"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:dusts/glowstone"
+						}
+					}
+					title: "荧石粉"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "5BB7FAC35C9E19D8"
+					item: {
+						Count: 1
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									id: "itemfilters:tag"
+									tag: {
+										value: "minecraft:saplings"
+									}
+								}
+								{
+									Count: 1b
+									id: "itemfilters:tag"
+									tag: {
+										value: "minecraft:leaves"
+									}
+								}
+							]
+						}
+					}
+					title: "植物原料"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "4BD557970495AAE6"
+					item: { Count: 16, id: "createaddition:biomass" }
+					type: "item"
+				}
+			]
+			x: 22.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["3FACF1F2E75FE4B9"]
+			id: "75976F12CFFBC1F3"
+			quest_enhance_disable_scroll_paging: false
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "20B760C6AE3B3868"
+				item: "cmi:reinforced_chemical_reactor"
+				type: "item"
+			}]
+			x: 21.0d
+			y: 0.5d
+		}
+		{
+			dependencies: [
+				"642E22913AC26E70"
+				"48482A7ED327492E"
+			]
+			dependency_requirement: "one_completed"
+			id: "1C91019F4B632C30"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "1903C23E022E8BA7"
+				item: "cmi:photosyn_fluid_bucket"
+				type: "item"
+			}]
+			x: 21.0d
+			y: 6.5d
 		}
 	]
 	title: "qwq"

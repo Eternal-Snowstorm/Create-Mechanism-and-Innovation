@@ -776,7 +776,7 @@
 			rewards: [{
 				count: 64
 				id: "7921A777ABA1D383"
-				item: "minecraft:cooked_beef"
+				item: "kaleidoscope_nether:ruby_steak"
 				type: "item"
 			}]
 			shape: "gear"
@@ -1104,7 +1104,11 @@
 		}
 		{
 			dependencies: ["6AF60377F2DAB309"]
-			description: ["                  这是你应得的"]
+			description: [
+				"                  这是你应得的"
+				""
+				"现在矿脉锤连锁时会寻找周边16个相同的方块连锁挖掘，值得注意的是，不计算斜角连接"
+			]
 			hide_dependency_lines: true
 			icon: {
 				Count: 1

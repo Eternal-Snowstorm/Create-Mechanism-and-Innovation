@@ -241,7 +241,7 @@
 				""
 				"如果运气不错, 你还能在&a主世界&r发现&6油页岩&r矿点; 该矿点会产出&5沥青&r, 而&5沥青&r可以作为列车的燃料使用"
 				""
-				"&b矿藏扫描仪&r用于寻找矿藏"
+				"&b{create_rns:deposit_scanner, 1}矿藏扫描仪&r用于寻找矿藏"
 				""
 				"&l&b向后翻页可以查看这些矿点的图片&r&r"
 				""
@@ -667,7 +667,6 @@
 			id: "354FD58AE7B802BC"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
-				icon: "alexscaves:sulfur_dust"
 				id: "680C74AB729DB665"
 				item: {
 					Count: 1
@@ -729,7 +728,7 @@
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "♻️环保模式♻️"
 			tasks: [{
-				id: "41561817FCB9C83A"
+				id: "2BEAD5AB935987A3"
 				item: {
 					Count: 1
 					id: "itemfilters:tag"
@@ -876,6 +875,29 @@
 			}]
 			x: 1.5d
 			y: 0.0d
+		}
+		{
+			dependencies: ["6BA8D6727D497F84"]
+			icon: "railway_automation:track_placer"
+			id: "09E6EA6DD3C19844"
+			quest_enhance_disable_scroll_paging: false
+			rewards: [{
+				id: "4A705F318F9A1BD9"
+				item: {
+					Count: 1
+					id: "createdieselgenerators:track_layers_bag"
+					tag: { }
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "5AF3CA0ED44780FE"
+				item: "railway_automation:track_placer"
+				type: "item"
+			}]
+			title: "自动铺铁轨?!"
+			x: -0.5d
+			y: 4.0d
 		}
 	]
 	title: "汽鸣铁道"
