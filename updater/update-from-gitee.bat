@@ -18,6 +18,42 @@ rem  --source spellings are accepted by PowerShell).
 rem ===========================================================================
 setlocal
 chcp 936 >nul
+
+rem ===========================================================================
+rem  Opening banner: ASCII "cube" artwork supplied by a collaborator (cmi.bat).
+rem  Kept pure ASCII so it renders identically on any console code page.
+rem ===========================================================================
+echo                     __________________________________     _____
+echo                    /                                 /}   /    /}
+echo                   /    ________________________     / }  /____/_}__
+echo                  /    /}                      /    / /  }    /    /}
+echo                 /    / }_____________________/____/ /   }___/____/_}__
+echo                /    / /                     }    } /       }    /    /}
+echo               /    / /         _____        }____}/_____   }___/____/_}__
+echo              /    / /         /    /}             /    /}     }    /    /}
+echo             /    / /         /    /_}__     _____/    / }     }___/____/ }
+echo            /    / /         /         /}   /         / /         }    } /
+echo           /    /_/___      /    _____/_}__/____     / /  ________}____}/
+echo          /          /}    /    /}   /    /}   /    / /  /          /}
+echo         /__________/ }   /    / }__/____/ }__/    / /  /    ______/ }
+echo        }          } /   /    / /  }    } /  /    / /  /    /}    } /
+echo       _}__________}/   /    / /   }____}/  /    / /  /    / }____}/
+echo      /    /}          /    / /            /    / /  /    / /
+echo     /____/_}__       /____/ /            /____/ /  /    / /
+echo    }    /    /}     }    } /            }    } /  /    / /
+echo    }___/____/_}__   }____}/             }____}/  /    / /
+echo       }    /    /}                              /    / /
+echo       }___/____/_}__       ____________________/    /_/___
+echo          }    /    /}     /                              /}
+echo          }___/____/ }    /______________________________/ }
+echo             }     } /   }                              } /
+echo             }_____}/    }______________________________}/
+echo .
+echo .
+timeout /t 2 >NUL
+echo Development Preview
+echo .
+timeout /t 2 >NUL
 cd /d "%~dp0.."
 
 powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0sync.ps1" -Mode update %*
