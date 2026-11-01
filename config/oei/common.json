@@ -2,7 +2,7 @@
   "Clear_Food_Properties": false,
   "Default_Rules_data": {},
   "Default_Rules_tag": {},
-  "Deeper_Replace": false,
+  "Deeper_Replace": true,
   "Enable_Lite": false,
   "__cfg_version": 1
 }

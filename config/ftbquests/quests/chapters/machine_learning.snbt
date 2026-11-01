@@ -760,6 +760,7 @@
 			subtitle: "搭配磁铁非常好玩"
 			tasks: [{
 				count: 4L
+				icon: "thermal:iron_dust"
 				id: "60A9ACA253B643E1"
 				item: {
 					Count: 1

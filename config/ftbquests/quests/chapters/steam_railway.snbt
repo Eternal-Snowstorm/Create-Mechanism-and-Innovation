@@ -667,6 +667,7 @@
 			id: "354FD58AE7B802BC"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
+				icon: "alexscaves:sulfur_dust"
 				id: "680C74AB729DB665"
 				item: {
 					Count: 1
