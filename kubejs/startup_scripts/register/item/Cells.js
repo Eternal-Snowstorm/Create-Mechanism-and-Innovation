@@ -3,8 +3,8 @@ StartupEvents.registry("item", (event) => {
 		return {
 			"parent": "minecraft:item/generated",
 			"textures": {
-				"layer0": "cmi:item/material/cell/cell_inside",
-				"layer1": "cmi:item/material/cell/cell_casing"
+				"layer0": "cmi:item/material/cell/inside",
+				"layer1": "cmi:item/material/cell/casing"
 			}
 		}
 	}

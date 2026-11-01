@@ -2,7 +2,7 @@
 	"render_type": "cutout",
 	"texture_size": [64, 64],
 	"textures": {
-		"main": "cmi:block/space/machine/normal/radar"
+		"main": "cmi:block/radar/normal/radar"
 	},
 	"elements": [
 		{

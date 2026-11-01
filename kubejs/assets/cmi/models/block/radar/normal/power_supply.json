@@ -2,8 +2,8 @@
 	"render_type": "cutout",
 	"texture_size": [64, 64],
 	"textures": {
-		"main": "cmi:block/space/machine/normal/power_supper",
-		"particle": "cmi:block/space/machine/radar_components"
+		"main": "cmi:block/radar/normal/power_supper",
+		"particle": "cmi:block/radar/radar_components"
 	},
 	"elements": [
 		{

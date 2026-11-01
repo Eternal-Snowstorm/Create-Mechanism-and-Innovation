@@ -2,8 +2,8 @@
 	"render_type": "cutout",
 	"texture_size": [64, 64],
 	"textures": {
-		"main": "cmi:block/space/machine/normal/tracking_array",
-		"particle": "cmi:block/space/machine/radar_components"
+		"main": "cmi:block/radar/normal/tracking_array",
+		"particle": "cmi:block/radar/radar_components"
 	},
 	"elements": [
 		{

@@ -2,8 +2,8 @@
 	"render_type": "cutout",
 	"texture_size": [64, 64],
 	"textures": {
-		"main": "cmi:block/space/machine/broken/transformer",
-		"particle": "cmi:block/space/machine/radar_components"
+		"main": "cmi:block/radar/broken/transformer",
+		"particle": "cmi:block/radar/radar_components"
 	},
 	"elements": [
 		{
