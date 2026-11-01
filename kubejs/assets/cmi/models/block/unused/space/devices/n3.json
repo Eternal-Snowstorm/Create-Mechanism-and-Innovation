@@ -1,0 +1,7 @@
+{
+	"parent": "cmi:block/unused/space/devices/base",
+	"textures": {
+		"main": "cmi:block/unused/devices/number/n3",
+		"1":"cmi:n3/is/ue"
+	}
+}
