@@ -23,7 +23,7 @@ ServerEvents.highPriorityData((event) => {
 	 * @param {Internal.Item_} item - 替换为的物品
 	 * @private
 	 */
-	MaterialUnification.prototype._addUnification = function (name, match, item) {
+	MaterialUnification.prototype.addUnification = function (name, match, item) {
 		if (this.registered.includes(name)) {
 			console.warn(`[MaterialUnification] 已存在: ${name}, 跳过重复注册`)
 			return
@@ -38,7 +38,7 @@ ServerEvents.highPriorityData((event) => {
 	 * @returns {MaterialUnification} 返回自身, 支持链式调用
 	 */
 	MaterialUnification.prototype.replaceIngot = function (ingotId) {
-		this._addUnification(
+		this.addUnification(
 			`${this.materialName}_ingot`,
 			`#forge:ingots/${this.materialName}`,
 			ingotId
@@ -52,7 +52,7 @@ ServerEvents.highPriorityData((event) => {
 	 * @returns {MaterialUnification}
 	 */
 	MaterialUnification.prototype.replaceNugget = function (nuggetId) {
-		this._addUnification(
+		this.addUnification(
 			`${this.materialName}_nugget`,
 			`#forge:nuggets/${this.materialName}`,
 			nuggetId
@@ -66,7 +66,7 @@ ServerEvents.highPriorityData((event) => {
 	 * @returns {MaterialUnification}
 	 */
 	MaterialUnification.prototype.replaceBlock = function (blockId) {
-		this._addUnification(
+		this.addUnification(
 			`${this.materialName}_block`,
 			`#forge:storage_blocks/${this.materialName}`,
 			blockId
@@ -80,7 +80,7 @@ ServerEvents.highPriorityData((event) => {
 	 * @returns {MaterialUnification}
 	 */
 	MaterialUnification.prototype.replacePlate = function (plateId) {
-		this._addUnification(
+		this.addUnification(
 			`${this.materialName}_plate`,
 			`#forge:plates/${this.materialName}`,
 			plateId
@@ -94,7 +94,7 @@ ServerEvents.highPriorityData((event) => {
 	 * @returns {MaterialUnification}
 	 */
 	MaterialUnification.prototype.replaceDust = function (dustId) {
-		this._addUnification(
+		this.addUnification(
 			`${this.materialName}_dust`,
 			`#forge:dusts/${this.materialName}`,
 			dustId
@@ -108,7 +108,7 @@ ServerEvents.highPriorityData((event) => {
 	 * @returns {MaterialUnification}
 	 */
 	MaterialUnification.prototype.replaceRod = function (rodId) {
-		this._addUnification(
+		this.addUnification(
 			`${this.materialName}_rod`,
 			`#forge:rods/${this.materialName}`,
 			rodId
@@ -122,7 +122,7 @@ ServerEvents.highPriorityData((event) => {
 	 * @returns {MaterialUnification}
 	 */
 	MaterialUnification.prototype.replaceWire = function (wireId) {
-		this._addUnification(
+		this.addUnification(
 			`${this.materialName}_wire`,
 			`#forge:wires/${this.materialName}`,
 			wireId
@@ -136,7 +136,7 @@ ServerEvents.highPriorityData((event) => {
 	 * @returns {MaterialUnification}
 	 */
 	MaterialUnification.prototype.replaceRawOre = function (rawOreId) {
-		this._addUnification(
+		this.addUnification(
 			`raw_${this.materialName}`,
 			`#forge:raw_materials/${this.materialName}`,
 			rawOreId
@@ -150,7 +150,7 @@ ServerEvents.highPriorityData((event) => {
 	 * @returns {MaterialUnification}
 	 */
 	MaterialUnification.prototype.replaceRawOreBlock = function (rawOreBlockId) {
-		this._addUnification(
+		this.addUnification(
 			`raw_${this.materialName}_block`,
 			`#forge:storage_blocks/raw_${this.materialName}`,
 			rawOreBlockId
@@ -166,7 +166,7 @@ ServerEvents.highPriorityData((event) => {
 	 * @returns {MaterialUnification}
 	 */
 	MaterialUnification.prototype.replaceType = function (suffix, tagSuffix, itemId) {
-		this._addUnification(
+		this.addUnification(
 			`${this.materialName}_${suffix}`,
 			`#forge:${tagSuffix}/${this.materialName}`,
 			itemId
@@ -391,7 +391,7 @@ ServerEvents.highPriorityData((event) => {
 
 	// 安山合金
 	new MaterialUnification("andesite_alloy")
-		._addUnification("andesite_alloy_plate", [
+		.addUnification("andesite_alloy_plate", [
 			"#forge:plates/andesite",
 			"#forge:plates/andesite_alloy"
 		], "vintageimprovements:andesite_sheet")
