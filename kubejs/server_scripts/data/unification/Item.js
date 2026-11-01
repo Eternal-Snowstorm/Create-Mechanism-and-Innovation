@@ -142,24 +142,24 @@ ServerEvents.highPriorityData((event) => {
 	/**
 	 * 
 	 * @param {string} name
-	 * @param {Special.Item | Special.ItemTags | (Special.Item | Special.ItemTags)[]} items
-	 * @param {Special.Item} result
+	 * @param {Special.Item | Special.ItemTags | (Special.Item | Special.ItemTags)[]} from
+	 * @param {Special.Item} to
 	 */
-	function addUnification(name, items, result) {
-		if (items === null) {
-			console.error(`Items ${items} cannot be null`)
+	function addUnification(name, from, to) {
+		if (from === null) {
+			console.error(`Items ${from} cannot be null`)
 			return
 		}
 
-		if (result === null) {
-			console.error(`Result ${result} cannot be null`)
+		if (to === null) {
+			console.error(`Result ${to} cannot be null`)
 			return
 		}
 
 		let itemUnification = [
 			{
-				matchItems: items,
-				resultItems: result
+				matchItems: from,
+				resultItems: to
 			}
 		]
 

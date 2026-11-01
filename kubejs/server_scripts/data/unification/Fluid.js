@@ -70,22 +70,22 @@ ServerEvents.highPriorityData((event) => {
 	/**
 	 * 
 	 * @param {string} name
-	 * @param {Internal.Fluid | Internal.FluidTags | (Internal.Fluid | Internal.FluidTags)[]} fluids
-	 * @param {Internal.Fluid} result
+	 * @param {Internal.Fluid | Internal.FluidTags | (Internal.Fluid | Internal.FluidTags)[]} from
+	 * @param {Internal.Fluid} to
 	 */
-	function addUnification(name, fluids, result) {
-		if (fluids === null) {
-			console.error(`Fluids ${fluids} cannot be null`)
+	function addUnification(name, from, to) {
+		if (from === null) {
+			console.error(`Fluids ${from} cannot be null`)
 		}
 
-		if (result === null) {
-			console.error(`Result ${result} cannot be null`)
+		if (to === null) {
+			console.error(`Result ${to} cannot be null`)
 		}
 
 		let fluidUnification = [
 			{
-				matchFluid: fluids,
-				resultFluid: result
+				matchFluid: from,
+				resultFluid: to
 			}
 		]
 
