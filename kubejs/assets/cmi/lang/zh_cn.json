@@ -37,8 +37,6 @@
 	"jade.theme.cmi.windows_xp_luna": "Windows XP Luna",
 	"jade.theme.cmi.windows10": "Windows 10",
 
-	"curios.identifier.mechanisms": "构件",
-
 	"promp.cmi.ender_mechanism.location_stored": "当前坐标已存入末影构件",
 	"promp.cmi.ender_mechanism.teleport_failed": "不支持跨维度传送！",
 
