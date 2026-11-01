@@ -232,10 +232,10 @@ ServerEvents.highPriorityData((event) => {
 	new MaterialUnification("tin")
 		.replaceIngot("thermal:tin_ingot")
 		.replaceDust("thermal:tin_dust")
-		.replaceNugget("steam_letters:tin_nugget")
+		.replaceNugget("thermal:tin_nugget")
 		.replaceBlock("thermal:tin_block")
 		.replaceRawOreBlock("thermal:raw_tin_block")
-		.replacePlate("steam_letters:tin_plate")
+		.replacePlate("thermal:tin_plate")
 		.replaceRod("thermal_extra:tin_rod")
 		.replaceRawOre("thermal:raw_tin")
 
@@ -262,11 +262,11 @@ ServerEvents.highPriorityData((event) => {
 
 	// 青铜
 	new MaterialUnification("bronze")
-		.replaceIngot("steam_letters:bronze_ingot")
+		.replaceIngot("thermal:bronze_ingot")
 		.replaceDust("thermal:bronze_dust")
 		.replaceNugget("thermal:bronze_nugget")
 		.replaceBlock("thermal:bronze_block")
-		.replacePlate("steam_letters:bronze_plate")
+		.replacePlate("thermal:bronze_plate")
 		.replaceRod("thermal_extra:bronze_rod")
 
 	// 钻石

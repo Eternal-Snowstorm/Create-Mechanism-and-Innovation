@@ -67,15 +67,16 @@
 	},
 	"function": {
 		"scope": "javascript,typescript",
-		"prefix": "$function",
+		"prefix": "#function",
 		"body": [
 			"(() => {",
+			"",
 			"})()"
 		]
 	},
 	"priority": {
 		"scope": "javascript,typescript",
-		"prefix": "$priority",
+		"prefix": "#priority",
 		"body": [
 			"// priority: $1",
 			"$0"
@@ -83,7 +84,7 @@
 	},
 	"ignored": {
 		"scope": "javascript,typescript",
-		"prefix": "$ignored",
+		"prefix": "#ignored",
 		"body": [
 			"// ignored: ${1|true,false|}",
 			"$0"
@@ -91,7 +92,7 @@
 	},
 	"packmode": {
 		"scope": "javascript,typescript",
-		"prefix": "$packmode",
+		"prefix": "#packmode",
 		"body": [
 			"// packmode: $1",
 			"$0"
@@ -99,7 +100,7 @@
 	},
 	"requires": {
 		"scope": "javascript,typescript",
-		"prefix": "$requires",
+		"prefix": "#requires",
 		"body": [
 			"// requires: $1",
 			"$0"
@@ -115,7 +116,7 @@
 	},
 	"license": {
 		"scope": "javascript,typescript",
-		"prefix": "$license",
+		"prefix": "#license",
 		"body": [
 			"/**",
 			" * @author Team Nebula",
@@ -126,7 +127,7 @@
 	},
 	"disable ts-except-error": {
 		"scope": "typescript",
-		"prefix": "$disable-ts-except-error",
+		"prefix": "#disable-ts-except-error",
 		"body": [
 			"// @ts-expect-error",
 			"$0"

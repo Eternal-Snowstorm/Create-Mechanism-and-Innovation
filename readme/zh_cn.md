@@ -153,16 +153,15 @@
 :: Windows(首次)
 updater\setup-gitee-sync.bat
 :: Windows(日常)
-updater\update-from-gitee.bat
+updater\Update-CMI.bat
 ```
 
 ```bash
-# Linux / macOS
+# Linux / macOS(首次与日常同一个脚本, 可反复运行)
 bash updater/setup-gitee-sync.sh
-bash updater/update-from-gitee.sh
 ```
 
-想手动指定更新源可加参数 `--source auto|github|gitee`(默认 `auto`, Windows 上用 `-Source`); 脚本文件名仍保留 `…-gitee-…` 是为了不破坏既有的双击习惯、快捷方式与文档链接 —— 名字没变, 内部逻辑已是 GitHub 优先。
+想手动指定更新源可加参数 `--source auto|github|gitee`(默认 `auto`, Windows 上用 `-Source`)—— 该参数只对首次建仓入口生效, 日常用的 `Update-CMI.bat` 一律自动兜底; 首次建仓脚本的文件名仍保留 `…-gitee-…` 是为了不破坏既有的双击习惯、快捷方式与文档链接 —— 名字没变, 内部逻辑已是 GitHub 优先。
 
 脚本只处理 `mods / config / kubejs / defaultconfigs / resourcepacks` 等可替换目录, **不会碰存档与 `options.txt`** —— 存档什么的, 一根毛都不会动; 详细说明见 `updater/CLIENT-GUIDE.md`, 方案讨论见 `热更新方案.md`。
 

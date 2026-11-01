@@ -1,7 +1,7 @@
 # =============================================================================
 #  setup-gitee-sync.sh —— 玩家端: 首次同步(建立 git 仓库与远程, 再拉取完整内容)
 #
-#  【更新源优先级】与 update-from-gitee.sh 一致: 优先 GitHub 主仓库, 连不上则回退 Gitee:
+#  【更新源优先级】与 Windows 版 sync.ps1 一致: 优先 GitHub 主仓库, 连不上则回退 Gitee:
 #    1) GitHub : 远程 origin, 分支自动探测(读不到 symref 时按 main)
 #    2) Gitee  : 远程 gitee,  分支 master
 #    与 update 的唯一区别: setup 会主动做初始化工作 ——
@@ -312,4 +312,4 @@ fi
 
 echo ""
 echo "完成! 本客户端已与 $used_source 同步。"
-echo "以后运行 update-from-gitee.sh 即可拉取更新(仍会优先尝试 GitHub)。"
+echo "以后重新运行本脚本(bash updater/setup-gitee-sync.sh)即可拉取更新(仍会优先尝试 GitHub)。"

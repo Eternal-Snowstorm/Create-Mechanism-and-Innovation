@@ -1,0 +1,18 @@
+filename = 'JEIGuess-0.6.7.jar'
+name = 'JEI Guess'
+side = 'server'
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'JEIGuess-0.6.7.jar'
+
+[download]
+hash = '2f9f4d5748265af05430480489ee21c244f46e68'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9374872
+project-id = 1696705

@@ -6,7 +6,7 @@ rem  Links this client to the repository (GitHub first; the Gitee mirror is
 rem  used when GitHub is unreachable or has no remote yet), applies its
 rem  content, then downloads / verifies mods against the update manifest.
 rem
-rem  PURE ASCII on purpose - see updater\update-from-gitee.bat for the reason.
+rem  PURE ASCII on purpose - see updater\Update-CMI.bat for the reason.
 rem  All user-facing Chinese messages live in sync.ps1 (UTF-8 encoded).
 rem
 rem  Usage: double-click this file, or run from cmd:
