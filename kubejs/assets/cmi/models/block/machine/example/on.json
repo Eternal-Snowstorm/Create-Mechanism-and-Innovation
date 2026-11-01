@@ -1,8 +1,0 @@
-{
-	"parent": "minecraft:block/orientable",
-	"textures": {
-		"front": "cmi:block/machine/example/on",
-		"side": "cmi:block/machine/example/side",
-		"top": "cmi:block/machine/example/top"
-	}
-}
