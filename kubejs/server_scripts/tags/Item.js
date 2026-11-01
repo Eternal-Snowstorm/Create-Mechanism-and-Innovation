@@ -724,7 +724,7 @@ ServerEvents.tags("item", (event) => {
 	event.get("forge:salt")
 		.add("ratatouille:salt")
 
-	// 冰 
+	// 🧊🧊🧊
 	event.get("forge:ice")
 		.add("minecraft:ice")
 		.add("minecraft:packed_ice")
@@ -751,6 +751,10 @@ ServerEvents.tags("item", (event) => {
 		.add("#forge:ingots/andesite_alloy")
 		.add("#forge:ingots/melodium")
 		.add("#forge:ingots/stellarium")
+		.add("thermal_extra:raw_meat_ingot")
+		.add("thermal_extra:cooked_meat_ingot")
+		.add("neoecoae:energized_superconductive_ingot")
+		.add("neoecoae:crystal_ingot")
 
 	event.get("forge:ingots/andesite_alloy")
 		.add("create:andesite_alloy")
@@ -801,6 +805,8 @@ ServerEvents.tags("item", (event) => {
 	// 板 
 	event.get("forge:plates")
 		.add("mekanism:hdpe_sheet")
+		.add("immersiveengineering:plate_duroplast")
+		.add("alexscaves:polymer_plate")
 
 	event.get("forge:plates/andesite_alloy")
 		.add("vintageimprovements:andesite_sheet")
@@ -828,6 +834,10 @@ ServerEvents.tags("item", (event) => {
 		.add("immersiveengineering:stick_aluminum")
 
 	// 粉 
+	event.get("forge:dusts")
+		.add("alexscaves:moth_dust")
+		.add("thermal_extra:ancient_dust")
+
 	event.get("forge:dusts/niter")
 		.add("immersiveengineering:dust_saltpeter")
 
@@ -840,6 +850,15 @@ ServerEvents.tags("item", (event) => {
 	// 宝石
 	add("forge:gems/charged_amethyst", "create_rns:resonant_amethyst")
 	add("forge:gems/dreamcore", "cmi:dreamcore_crystal")
+
+	// 硬币
+	add("forge:coins/iron", "createdeco:iron_coin")
+	add("forge:coins/gold", "createdeco:gold_coin")
+	add("forge:coins/brass", "createdeco:brass_coin")
+	add("forge:coins/netherite", "createdeco:netherite_coin")
+	add("forge:coins/zinc", "createdeco:zinc_coin")
+	add("forge:coins/industrial_iron", "createdeco:industrial_iron_coin")
+	add("forge:coins/copper", "createdeco:copper_coin")
 
 	// 粗矿
 	event.get("forge:raw_materials/desh_scrap")

@@ -236,7 +236,6 @@ ServerEvents.recipes((event) => {
 	])
 
 	let removedMods = [
-		"steampowered",
 		"create_steam_ages"
 	]
 	removedMods.forEach((mod) => {
