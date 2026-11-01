@@ -1,5 +1,5 @@
 (() => {
-	// 不毁NBT {Unbreakable: 1b}
+	// 妙妙小工具
 	// /give @s immersiveengineering:graphite_electrode{Unbreakable: 1b}
 
 	let $IEItemNBTHelper =
