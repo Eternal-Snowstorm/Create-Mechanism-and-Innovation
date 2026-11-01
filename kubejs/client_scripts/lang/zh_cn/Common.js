@@ -88,13 +88,10 @@ ClientEvents.lang("zh_cn", (event) => {
 	addCreativeTabLang("buckets", "构件与革新: 流体桶")
 	addCreativeTabLang("incompletes", "构件与革新: 半成品")
 
-	addMekanismLang("sulfide_gas_mixture", "硫化物混合气")
 	addMekanismLang("nitroglycerine", "硝化甘油")
-	addMekanismLang("xenon", "氙气")
 	addMekanismLang("radon", "氡气")
 	addMekanismLang("refined_nuke_waste", "精炼核废料")
 	addMekanismLang("mercury", "汞")
-	addMekanismLang("geyser_jet", "间歇泉喷射气")
 	addMekanismLang("radon_mixture", "氡混合气体")
 	addMekanismLang("helium_3", "氦-3")
 	addMekanismLang("silicon_gas_modulator", "硅基气相调节剂")
@@ -135,7 +132,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addPaintingLang("random_mechanism_old", "随机构件(旧版)", "随机构件")
 	addPaintingLang("random_mechanism", "随机构件", "随机构件")
 	addPaintingLang("qi_month", "柒月", "柒月")
-	addPaintingLang("sacabamBaspis", "萨卡班甲鱼", "⑨Dropper_QWQ⑨")
+	addPaintingLang("sacabambaspis", "萨卡班甲鱼", "⑨Dropper_QWQ⑨")
 	addPaintingLang("delta", "德尔塔", "德尔塔")
 
 	addStructureLang("ore_node.coal_node", "煤炭矿物节点")

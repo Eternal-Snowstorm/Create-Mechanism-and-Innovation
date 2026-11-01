@@ -56,7 +56,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("enriched_alloy", "富集合金")
 	addItemLang("silicon_carbide", "碳化硅")
 	addItemLang("entro_alloy", "恩特罗合金")
-	addItemLang("refractory_brick_bloom", "耐火砖坯")
 	addItemLang("pure_semi_molten_osmium", "半熔融锇")
 	addItemLang("activated_graphite_ingot", "活化石墨锭")
 	addItemLang("magnetic_alloy", "磁性合金")
@@ -77,7 +76,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("ethylene_polymerization_catalytic_plate", "乙烯聚合催化片")
 	addItemLang("carbon_deposition_catalytic_plate", "碳沉积催化片")
 	addItemLang("carbon_polymerization_catalytic_plate", "碳聚合催化片")
-	addItemLang("nano_composite_plate", "纳米复合板")
 
 	// 粉
 	addItemLang("andesite_dust", "安山岩粉")
@@ -90,12 +88,10 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("galena_dust", "方铅岩粉")
 	addItemLang("machalite_dust", "燕雀石粉")
 	addItemLang("dragonite_dust", "辉龙石粉")
-	addItemLang("purified_quartz_dust", "高纯石英粉")
 	addItemLang("rubber_dust", "橡胶粉")
 	addItemLang("furnaced_lime", "生石灰")
 	addItemLang("sludge_extract", "淤泥提取物")
 	addItemLang("silicon_mixture", "硅混合物")
-	addItemLang("magnesium_hydroxide", "氢氧化镁")
 	addItemLang("brominated_flame_retardants", "溴系阻燃剂")
 	addItemLang("plant_ash", "草木灰")
 	addItemLang("deposit_dust", "矿藏粉末")
@@ -112,7 +108,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("ionized_red_dust", "电离红色沙尘")
 	addItemLang("magnetic_sediment", "磁性沉淀")
 	addItemLang("refractory_material_powder", "耐火材料粉")
-	addItemLang("raw_titanium_dust", "粗钛粉")
 	addItemLang("raw_tungsten_dust", "粗钨粉")
 	addItemLang("raw_titanium_mixture", "粗钛混合物")
 	addItemLang("tungsten_mixture", "钨混合物")
@@ -138,7 +133,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("source_sapphire", "蓝源晶")
 	addItemLang("source_emeraid", "绿源晶")
 	addItemLang("enriched_osmium_crystal", "富集锇结晶")
-	addItemLang("purified_silicon_crystal", "纯化硅晶")
 	addItemLang("single_crystal_silicon", "单晶硅")
 	addItemLang("enriched_silicon", "富集硅")
 	addItemLang("pure_sapphire_compound", "纯净蓝宝石化合物")
@@ -154,7 +148,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("ionized_entro_crystal", "电离恩特罗水晶")
 	addItemLang("crystal_molten_entro", "晶态熔融恩特罗水晶")
 	addItemLang("spiritcore_ore", "精晶原石")
-	addItemLang("titanium_crystal", "钛晶体")
 	addItemLang("cobalt_electrolyte", "钴电解质")
 	addItemLang("pure_source", "纯净晶源")
 
@@ -186,7 +179,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("super_knife", "纯粹小刀")
 	addItemLang("wooden_knife", "木质小刀")
 	addItemLang("flint_hammer", "燧石锤")
-	addItemLang("iron_hammer", "铁锤")
 	addItemLang("diamond_hammer", "钻石锤")
 	addItemLang("astral_core", "繁星核心")
 	addItemLang("hammer_head", "冲压头")
@@ -327,7 +319,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("steam_steel_upgrade", "钢制蒸汽升级组件")
 
 	// 唱片
-	addItemLang("music_disc_mechanism", "Mechanism - Belalus")
 	addItemLang("togni_leets", "钢錠")
 
 	// 图标
@@ -377,7 +368,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("titanium_alloy_mesh", "钛合金网")
 	addItemLang("activated_graphite_chunk", "活化石墨碎块")
 	addItemLang("titanium_alloy_coil", "钛合金线圈")
-	addItemLang("purified_quartz", "高纯石英")
 	addItemLang("silicon_rubber", "硅橡胶")
 	addItemLang("blood_slime_ball", "黏血球")
 	addItemLang("frost_cake_base", "寒霜蛋糕胚")

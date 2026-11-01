@@ -151,7 +151,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addBlockLang("entro_block", "恩特罗块")
 	addBlockLang("deposit_dust_block", "矿藏粉末块")
 	addBlockLang("osmium_tile", "锇砖瓦")
-	addBlockLang("compression_end_stone_dust_block", "压缩末地石粉块")
 	addBlockLang("stone_pave", "石子路面")
 	addBlockLang("dummy_hive_hopper", "虚设蜂箱漏斗")
 
@@ -182,7 +181,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addBlockLang("flash_yi", "闪电羿")
 	addBlockLang("keyxeldesu", "一只键盘虾")
 	addBlockLang("sergei", "谢尔盖")
-	addBlockLang("lirx_ovo", "栗子")
+	addBlockLang("lirx_owo", "栗子")
 
 	// GUI 方块
 	addBlockLang("gui_block", "GUI 方块")
