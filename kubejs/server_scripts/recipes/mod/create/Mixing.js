@@ -184,5 +184,5 @@ ServerEvents.recipes((event) => {
 		"2x cmi:deposit_dust",
 		"2x #forge:dusts/iron"
 	]).heatRequirement(CmiHeatLevel.GRILLED)
-		// .id("alexcaves:metal_swarf")
+		.id("alexcaves:metal_swarf")
 })
