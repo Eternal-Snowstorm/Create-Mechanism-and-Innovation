@@ -35,7 +35,7 @@
 	#Maximum number of recipes a single steam hammer processes at once.
 	#Range: 1 ~ 64
 	steam_hammer_parallel = 64
-	#Steam consumed per finished recipe (mB).
+	#Steam consumed per working cycle (mB).
 	#Range: 0 ~ 1000000
 	steam_consumption = 1000
 	#Steam buffer capacity of a steam hammer (mB).
@@ -46,7 +46,7 @@
 	#Maximum number of recipes a single steam mixer processes at once.
 	#Range: 1 ~ 64
 	steam_mixer_parallel = 16
-	#Steam consumed per finished recipe (mB).
+	#Steam consumed per working cycle (mB).
 	#Range: 0 ~ 1000000
 	steam_consumption = 1000
 	#Steam buffer capacity of a steam mixer (mB).
