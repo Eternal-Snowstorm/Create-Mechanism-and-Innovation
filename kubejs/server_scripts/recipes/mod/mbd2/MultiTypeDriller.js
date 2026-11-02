@@ -1,10 +1,9 @@
 ServerEvents.recipes((event) => {
 	let { cmi } = event.getRecipes()
 
-	/**
-	 * 每桶冷却剂支持运行时间
-	 */
-	let perCoolerBucketTicks = 1
+	let perCoolerBucketTicks = 100
+
+	let coolerPerTick = 1000 / perCoolerBucketTicks
 
 	let types = [
 		"item",
@@ -18,12 +17,13 @@ ServerEvents.recipes((event) => {
 		2: Cmi.loadResource("driller_gas_pump").toString()
 	}
 
-	// 燃料(冷却剂)
+	// 燃料(冷却剂): duration 固定为 1, 每 tick 结算一次, 实现持续消耗
 	cmi.multi_type_driller()
-		.perTick((recipe) => {
-			recipe.inputFluids(Fluid.of("cmi:glacious_cryotheum", 1000 * 5))
-				.duration(perCoolerBucketTicks)
+		.slotName("cooler", (recipe) => {
+			recipe.inputFluids(Fluid.of("cmi:glacious_cryotheum", coolerPerTick))
+				.duration(1)
 				.isFuel(true)
+				.id("cmi:multi_type_driller/cooler_fuel")
 		})
 
 	/**
@@ -240,7 +240,7 @@ ServerEvents.recipes((event) => {
 		recipe.addCondition(BlockExistCondition["of(java.lang.String[])"](DRILLER_BLOCKS[block]))
 		recipe.slotName("cooler", (coolerRecipe) => {
 			coolerRecipe.perTick((perTickCoolerRecipe) => {
-				perTickCoolerRecipe.outputFluids(Fluid.of("neoecoae:cryotheum_solution", 1000 / perCoolerBucketTicks))
+				perTickCoolerRecipe.outputFluids(Fluid.of("neoecoae:cryotheum_solution", coolerPerTick))
 			})
 		})
 

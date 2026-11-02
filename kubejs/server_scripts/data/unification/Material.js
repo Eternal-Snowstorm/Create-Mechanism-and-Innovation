@@ -350,6 +350,7 @@ ServerEvents.highPriorityData((event) => {
 
 	// 康铜
 	new MaterialUnification("constantan")
+		.replaceIngot("thermal:constantan_ingot")
 		.replaceDust("thermal:constantan_dust")
 		.replaceNugget("thermal:constantan_nugget")
 		.replaceBlock("thermal:constantan_block")
