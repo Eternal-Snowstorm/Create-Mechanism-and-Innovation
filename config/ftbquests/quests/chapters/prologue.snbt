@@ -288,13 +288,6 @@
 							abilities: 1
 							upgrades: 129
 						}
-						"tinkerleveling:level": 1
-						"tinkerleveling:uuid": [I;
-							148698228
-							-721206332
-							-1885687601
-							-1780182765
-						]
 						upgrades: -78
 					}
 					tic_stats: {
@@ -307,10 +300,6 @@
 						"tconstruct:overslime": 412.5f
 					}
 					tic_upgrades: [
-						{
-							level: 1
-							name: "tinkerleveling:leveling"
-						}
 						{
 							level: 1
 							name: "tconstruct:diamond"

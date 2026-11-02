@@ -77,6 +77,7 @@ ServerEvents.recipes((event) => {
 		"ae2:sky_dust",
 		Item.of("ae2:sky_dust").withChance(0.5),
 		Item.of("ae2:sky_dust", 2).withChance(0.25),
+		Item.of("ae2:sky_stone_block").withChance(1),
 		Item.of("ae2:sky_stone_block").withChance(0.5)
 	], "ae2:sky_stone_block")
 

@@ -1,21 +1,21 @@
-filename = 'jei_plus_plus-1.0.7-1.20.1.jar'
+filename = 'jei_plus_plus-1.0.8a-1.20.1.jar'
 name = 'JEI++'
 side = 'server'
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'jei_plus_plus-1.0.7-1.20.1.jar'
+x-prismlauncher-version-number = 'JEI++ 1.0.8a - Forge 1.20.1'
 
 [download]
-hash = '307f3bc9e1eb7c6a4b2c2fa6afece2420e9080d6'
+hash = '0d850c4540b1b3cb7c586695b746e33e62bdecc3'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 9060789
+file-id = 9332331
 project-id = 1645653
 
 [[x-prismlauncher-dependencies]]
 addonId = '238222'
-type = 'REQUIRED'
+type = 'OPTIONAL'
