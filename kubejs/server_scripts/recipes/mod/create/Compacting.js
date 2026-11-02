@@ -24,13 +24,6 @@ ServerEvents.recipes((event) => {
 		"minecraft:sugar"
 	]).id("create:compacting/blaze_cake")
 
-	// 寒霜蛋糕胚
-	fluidlogistics.cooling_compacting("cmi:frost_cake_base", [
-		Fluid.of("minecraft:milk", 250),
-		Fluid.of("tconstruct:powdered_snow", 250),
-		"minecraft:sugar"
-	])
-
 	// 附魔蛋糕胚
 	create.compacting("create_enchantment_industry:experience_cake_base", [
 		Fluid.of("minecraft:milk", 250),

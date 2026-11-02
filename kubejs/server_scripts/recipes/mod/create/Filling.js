@@ -24,29 +24,10 @@ ServerEvents.recipes((event) => {
 		Fluid.of("minecraft:lava", 500)
 	]).id("create:filling/blaze_cake")
 
-	// 烈焰蛋糕
 	create.filling("2x create:blaze_cake", [
 		"create:blaze_cake_base",
 		Fluid.of("tconstruct:blazing_blood", 500)
 	]).id("create:filling/blaze_cake2")
-
-	// 寒霜蛋糕
-	create.filling("fluidlogistics:frost_cake", [
-		"cmi:frost_cake_base",
-		Fluid.of("tconstruct:powdered_snow", 500)
-	]).id("fluidlogistics:cooling/frost_cake")
-
-	// 寒霜蛋糕
-	create.filling("2x fluidlogistics:frost_cake", [
-		"cmi:frost_cake_base",
-		Fluid.of("thermalconstruct:blizz_blood", 500)
-	]).id("fluidlogistics:cooling/frost_cake2")
-
-	// 寒霜蛋糕
-	create.filling("4x fluidlogistics:frost_cake", [
-		"cmi:frost_cake_base",
-		Fluid.of("neoecoae:cryotheum_solution", 500)
-	]).id("fluidlogistics:cooling/frost_cake3")
 
 	// 超级刀
 	create.filling("cmi:super_knife", [

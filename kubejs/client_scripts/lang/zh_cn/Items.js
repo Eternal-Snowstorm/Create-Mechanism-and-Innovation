@@ -370,7 +370,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("titanium_alloy_coil", "钛合金线圈")
 	addItemLang("silicon_rubber", "硅橡胶")
 	addItemLang("blood_slime_ball", "黏血球")
-	addItemLang("frost_cake_base", "寒霜蛋糕胚")
 	addItemLang("kaolinite_ball", "高岭土球")
 	addItemLang("filled_fuel_rod", "燃料棒")
 	addItemLang("empty_fuel_rod", "空燃料棒")
