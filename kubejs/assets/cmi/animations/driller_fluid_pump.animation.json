@@ -22,6 +22,27 @@
 				}
 			},
 			"timeline": {}
+		},
+		"working": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"bone2": {
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 6, 0],
+							"easing": "easeInCirc"
+						},
+						"1.0": {
+							"vector": [0, 0, 0],
+							"easing": "easeOutSine"
+						}
+					}
+				}
+			}
 		}
 	}
 }
