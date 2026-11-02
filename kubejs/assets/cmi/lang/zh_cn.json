@@ -27,16 +27,6 @@
 	"tooltip.cmi.mtd.mode.fluid": "可执行流体输出配方",
 	"tooltip.cmi.mtd.mode.gas": "可执行气体输出配方",
 
-	"jade.theme.cmi.stardew_valley": "星露谷物语",
-	"jade.theme.cmi.war_thunder": "战争雷霆",
-	"jade.theme.cmi.windows_aero_lite": "Windows Aero Lite",
-	"jade.theme.cmi.windows_aero": "Windows Aero",
-	"jade.theme.cmi.windows_basic": "Windows Basic",
-	"jade.theme.cmi.windows_classic": "Windows Classic",
-	"jade.theme.cmi.windows_plex": "Windows Plex",
-	"jade.theme.cmi.windows_xp_luna": "Windows XP Luna",
-	"jade.theme.cmi.windows10": "Windows 10",
-
 	"promp.cmi.ender_mechanism.location_stored": "当前坐标已存入末影构件",
 	"promp.cmi.ender_mechanism.teleport_failed": "不支持跨维度传送！",
 
