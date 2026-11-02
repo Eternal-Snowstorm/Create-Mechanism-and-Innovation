@@ -176,3 +176,4 @@ config/asteorbar-client.toml
 _userdiff.txt
 /analysis
 hotbar.nbt
+/config/jei
