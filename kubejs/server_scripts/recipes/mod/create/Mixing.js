@@ -178,7 +178,7 @@ ServerEvents.recipes((event) => {
 	])
 
 	// 金属沙
-	create.mixing(Item.of("alexcaves:metal_swarf", 8), [
+	create.mixing("8x alexscaves:metal_swarf", [
 		"2x #forge:gravel",
 		"2x #forge:sand",
 		"2x cmi:deposit_dust",

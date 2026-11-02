@@ -237,9 +237,9 @@ ServerEvents.recipes((event) => {
 		.slots("abilities", 1)
 		.level(1)
 		.inputs([
-			"cmi:blackstone_source_alpha",
-			"cmi:blackstone_source_beta",
-			"cmi:blackstone_source_gamma",
+			"cmi:alpha_blackstone_source",
+			"cmi:beta_blackstone_source",
+			"cmi:gamma_blackstone_source",
 			"#forge:gems/charged_amethyst",
 			"#forge:gems/charged_amethyst"
 		])

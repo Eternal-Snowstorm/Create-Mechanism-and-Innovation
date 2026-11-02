@@ -20,5 +20,5 @@ ServerEvents.recipes((event) => {
 		"mekanism:pellet_antimatter",
 		"ae2:matter_ball",
 		"1x mekanism:antimatter"
-	).id("mekanism:processing/uranium/reprocessing/from_plutonium")
+	).id("mekanism:processing/uranium/processing/from_plutonium")
 })

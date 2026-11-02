@@ -255,7 +255,7 @@ ServerEvents.highPriorityData((event) => {
 	new MaterialUnification("uranium")
 		.replaceIngot("mekanism:ingot_uranium")
 		.replaceDust("mekanism:dust_uranium")
-		.replaceNugget("alexcaves:uranium_shard")
+		.replaceNugget("alexscaves:uranium_shard")
 		.replaceBlock("immersiveengineering:storage_uranium")
 		.replaceRawOreBlock("immersiveengineering:raw_block_uranium")
 		.replaceRawOre("alexscaves:uranium")
@@ -308,8 +308,9 @@ ServerEvents.highPriorityData((event) => {
 
 	// 硫磺
 	new MaterialUnification("sulfur")
-		.replaceDust("alexcaves:sulfur_dust")
+		.replaceDust("alexscaves:sulfur_dust")
 		.replaceBlock("vintageimprovements:sulfur_block")
+		.replaceType("gem", "gems", "thermal:sulfur")
 
 	// 木
 	new MaterialUnification("wood")
