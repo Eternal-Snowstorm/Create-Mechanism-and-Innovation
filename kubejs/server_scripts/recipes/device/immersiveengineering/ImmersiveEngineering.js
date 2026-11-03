@@ -1,7 +1,10 @@
+// Immersive Engineering · 工程方块与坩埚结构（散热器/重型与轻型工程块/红石工程块/发电机/坩埚/炉砖）
 ServerEvents.recipes((event) => {
 	let { kubejs, minecraft } = event.getRecipes()
 
+
 	minecraft.stonecutting(Casing.INDUSTRY, "#forge:plates/industrial_iron")
+
 
 	kubejs.shaped("4x immersiveengineering:radiator", [
 		"ABA",
@@ -13,6 +16,7 @@ ServerEvents.recipes((event) => {
 		C: "#forge:rods/invar"
 	}).id("immersiveengineering:crafting/radiator")
 
+
 	kubejs.shaped("4x immersiveengineering:heavy_engineering", [
 		"ABA",
 		"B B",
@@ -21,6 +25,7 @@ ServerEvents.recipes((event) => {
 		A: Casing.INDUSTRY,
 		B: Mechanisms.HEAVY.COM
 	}).id("immersiveengineering:crafting/heavy_engineering")
+
 
 	kubejs.shaped("4x immersiveengineering:light_engineering", [
 		"ABA",
@@ -31,6 +36,7 @@ ServerEvents.recipes((event) => {
 		B: Mechanisms.LIGHT.COM
 	}).id("immersiveengineering:crafting/light_engineering")
 
+
 	kubejs.shaped("4x immersiveengineering:rs_engineering", [
 		"ABA",
 		"B B",
@@ -39,6 +45,7 @@ ServerEvents.recipes((event) => {
 		A: Casing.INDUSTRY,
 		B: Mechanisms.REDSTONE.COM
 	}).id("immersiveengineering:crafting/rs_engineering")
+
 
 	kubejs.shaped("4x immersiveengineering:generator", [
 		"ABA",
@@ -49,6 +56,7 @@ ServerEvents.recipes((event) => {
 		B: Mechanisms.COIL.COM
 	}).id("immersiveengineering:crafting/generator")
 
+
 	kubejs.shaped("4x cmi:crucible_base", [
 		"ABA",
 		"B B",
@@ -58,10 +66,12 @@ ServerEvents.recipes((event) => {
 		B: "#forge:plates/cast_iron"
 	})
 
+
 	kubejs.shapeless("cmi:crucible_tuyere", [
 		"cmi:crucible_base",
 		"immersiveengineering:component_iron"
 	])
+
 
 	kubejs.shaped("4x immersiveindustry:burning_chamber", [
 		"ABA",
@@ -72,12 +82,14 @@ ServerEvents.recipes((event) => {
 		B: "#forge:plates/invar"
 	}).id("immersiveindustry:crafting/burning_chamber")
 
+
 	kubejs.shaped("immersiveengineering:blastbrick", [
 		"AA",
 		"AA"
 	], {
 		A: "immersiveindustry:refractory_kiln_brick"
 	}).id("immersiveengineering:crafting/blastbrick")
+
 
 	kubejs.shaped("2x immersiveindustry:car_kiln_brick", [
 		"BBB",
@@ -88,6 +100,7 @@ ServerEvents.recipes((event) => {
 		B: "immersiveindustry:refractory_kiln_brick",
 		P: "#forge:plates/steel"
 	}).id("immersiveindustry:crafting/car_kiln_brick")
+
 
 	kubejs.shaped("2x immersiveindustry:rotary_kiln_cylinder", [
 		"AAA",

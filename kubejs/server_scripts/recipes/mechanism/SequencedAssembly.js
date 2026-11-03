@@ -424,7 +424,7 @@ ServerEvents.recipes((event) => {
 		.deploying(Processor.SUPERCONDUCTING)
 		.laserCutting(1000)
 		.filling(Fluid.of("cmi:structural_plastic", 200))
-		.deploying("cmi:nuke_cooler")
+		.deploying("fluxnetworks:flux_core")
 		.deploying(Mechanisms.PART.GENERAL)
 		.build()
 

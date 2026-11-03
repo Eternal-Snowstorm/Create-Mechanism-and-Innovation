@@ -254,9 +254,10 @@ ServerEvents.highPriorityData((event) => {
 	// 铀
 	new MaterialUnification("uranium")
 		.replaceIngot("mekanism:ingot_uranium")
+		.replacePlate("vintageimprovements:uranium_sheet")
 		.replaceDust("mekanism:dust_uranium")
 		.replaceNugget("alexscaves:uranium_shard")
-		.replaceBlock("immersiveengineering:storage_uranium")
+		.replaceBlock("cmi:uranium_block")
 		.replaceRawOreBlock("immersiveengineering:raw_block_uranium")
 		.replaceRawOre("alexscaves:uranium")
 
@@ -439,7 +440,7 @@ ServerEvents.highPriorityData((event) => {
 	// 紫水晶青铜
 	new MaterialUnification("amethyst_bronze")
 		.replacePlate("vintageimprovements:amethyst_bronze_sheet")
-	
+
 	// 钨
 	new MaterialUnification("tungsten")
 		.replaceIngot("cmi:tungsten_ingot")

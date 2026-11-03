@@ -180,7 +180,7 @@ StartupEvents.registry("block", (event) => {
 
 	// 铀块
 	addBlock("uranium_block")
-		.model("cmi:block/uranium_block")
+		.model("immersiveengineering:block/storage_uranium")
 		.soundType(SoundType.NETHERITE_BLOCK)
 		.hardness(5)
 		.resistance(5)

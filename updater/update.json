@@ -75,6 +75,7 @@
     { "path": "mods/FastSuite-1.20.1-5.1.2.jar", "sha1": "32ea4495b0e646f8f060e4e97d17044dd9fdefbd", "url": "https://edge.forgecdn.net/files/7527/943/FastSuite-1.20.1-5.1.2.jar", "project": "curseforge:475117", "replaces": "" },
     { "path": "mods/ferritecore-6.0.1-forge.jar", "sha1": "417fb6ce8f52abf40bd9d0390371790f9576f8ba", "url": "https://edge.forgecdn.net/files/4810/975/ferritecore-6.0.1-forge.jar", "project": "curseforge:429235", "replaces": "" },
     { "path": "mods/flerovium-forge-1.20.1-1.2.19-all.jar", "sha1": "6f1536b97ce65a4a0fba2887aa2b1fa46be252b7", "url": "https://edge.forgecdn.net/files/8284/677/flerovium-forge-1.20.1-1.2.19-all.jar", "project": "curseforge:1142875", "replaces": "" },
+    { "path": "mods/FluxNetworks-1.20.1-7.2.1.15.jar", "sha1": "65cea2d3da2a6d6fd274ef1dad37a516466be22c", "url": "https://edge.forgecdn.net/files/5234/697/FluxNetworks-1.20.1-7.2.1.15.jar", "project": "curseforge:248020", "replaces": "" },
     { "path": "mods/ftb-chunks-forge-2001.3.8.jar", "sha1": "ee2d0cdac6d2ca31f43da30f76dff8c6bae9d687", "url": "https://edge.forgecdn.net/files/8216/874/ftb-chunks-forge-2001.3.8.jar", "project": "curseforge:314906", "replaces": "" },
     { "path": "mods/ftb-essentials-forge-2001.2.4.jar", "sha1": "4f898578e3cc321397dbc59a0c44e2927000bd32", "url": "https://edge.forgecdn.net/files/7609/948/ftb-essentials-forge-2001.2.4.jar", "project": "curseforge:410811", "replaces": "" },
     { "path": "mods/ftb-library-forge-2001.2.13.jar", "sha1": "a5427d5ff07eb044144ed0b54308370d88bce17e", "url": "https://edge.forgecdn.net/files/8226/927/ftb-library-forge-2001.2.13.jar", "project": "curseforge:404465", "replaces": "" },
@@ -223,5 +224,5 @@
     { "path": "mods/YungsApi-1.20-Forge-4.0.6.jar", "sha1": "af584b690f5646c6032002b58abc4591beed3833", "url": "https://edge.forgecdn.net/files/5769/971/YungsApi-1.20-Forge-4.0.6.jar", "project": "curseforge:421850", "replaces": "" }
   ],
   "delete": [],
-  "changelog": "https://gitee.com/eternalsnowstorm/mechanism-and-innovation/raw/master/UpdateLogs.md"
+  "changelog": "https://raw.githubusercontent.com/Eternal-Snowstorm/Create-Mechanism-and-Innovation/main/UpdateLogs.md"
 }

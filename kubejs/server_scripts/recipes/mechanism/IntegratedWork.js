@@ -143,7 +143,7 @@ ServerEvents.recipes((event) => {
 		.inputItems([Mechanisms.COMPUTE.BAS,
 		Processor.CONCURRENT,
 		Processor.SUPERCONDUCTING,
-			"cmi:nuke_cooler",
+			"fluxnetworks:flux_core",
 		Mechanisms.PART.GENERAL
 		])
 		.inputFluid(Fluid.of("cmi:structural_plastic", 200))

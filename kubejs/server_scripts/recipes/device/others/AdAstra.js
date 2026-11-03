@@ -1,5 +1,7 @@
+// Ad Astra · 太空机器（燃煤发电机/高炉/太阳能板）
 ServerEvents.recipes((event) => {
 	let { kubejs, thermal_extra } = event.getRecipes()
+
 
 	// 燃煤发电机
 	kubejs.shaped("ad_astra:coal_generator", [
@@ -13,6 +15,7 @@ ServerEvents.recipes((event) => {
 		D: "#forge:plates/industrial_iron",
 	}).id("ad_astra:coal_generator")
 
+
 	// 电力高炉
 	thermal_extra.component_assembly("ad_astra:etrionic_blast_furnace", [
 		"#forge:storage_blocks/steel",
@@ -20,12 +23,14 @@ ServerEvents.recipes((event) => {
 		Mechanisms.COIL.COM
 	]).id("ad_astra:etrionic_blast_furnace")
 
+
 	thermal_extra.component_assembly("ad_astra:solar_panel", [
 		"ad_astra:photovoltaic_etrium_cell",
 		Casing.STEEL,
 		"#forge:plates/vanadium",
 		"#forge:plates/steel"
 	]).id("ad_astra:solar_panel")
+
 
 	thermal_extra.component_assembly("mekanismgenerators:advanced_solar_generator", [
 		"ad_astra:photovoltaic_vesnium_cell",

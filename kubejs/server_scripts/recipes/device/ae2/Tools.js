@@ -1,0 +1,99 @@
+// AE2 · 工具与卡片（基础/高级卡、无线增幅器、熵变操纵器、法杖、染色器、物质炮、元件工作台、放置工具）
+ServerEvents.recipes((event) => {
+	let { kubejs, thermal_extra, neoecoae } = event.getRecipes()
+
+
+	// 卡
+	thermal_extra.component_assembly("4x ae2:basic_card", [
+		"#forge:plates/iron",
+		Mechanisms.SMART.COM,
+		"thermal:cured_rubber",
+		"#forge:ingots/electrum"
+	]).id("ae2:materials/basiccard")
+
+
+	thermal_extra.component_assembly("4x ae2:advanced_card", [
+		"#forge:plates/silver",
+		Mechanisms.SMART.COM,
+		"thermal:cured_rubber",
+		"#forge:ingots/etrium"
+	]).id("ae2:materials/advancedcard")
+
+
+	thermal_extra.component_assembly("ae2:wireless_booster", [
+		"#forge:plates/silver",
+		"create:transmitter",
+		"#forge:dusts/fluix",
+		"#forge:plates/etrium"
+	]).id("ae2:network/wireless_booster")
+
+
+	// 熵变机械臂
+	thermal_extra.component_assembly("ae2:entropy_manipulator", [
+		Mechanisms.SMART.COM,
+		Mechanisms.NATURE.COM,
+		"ae2:fluix_crystal",
+		"ae2:energy_cell",
+		"#forge:rods/silver"
+	]).id("ae2:tools/misctools_entropy_manipulator")
+
+
+	// 充能手杖
+	thermal_extra.component_assembly("ae2:charged_staff", [
+		Mechanisms.COIL.COM,
+		"ae2:charged_certus_quartz_crystal",
+		"#forge:rods/silver"
+	]).id("ae2:tools/misctools_charged_staff")
+
+
+	// 染色器
+	thermal_extra.component_assembly("ae2:color_applicator", [
+		Mechanisms.SMART.COM,
+		Mechanisms.COLOR.COM,
+		"#forge:plates/silver",
+		"ae2:energy_cell",
+		"#forge:rods/silver"
+	]).id("ae2:tools/network_color_applicator")
+
+
+	// 物质炮
+	thermal_extra.component_assembly("ae2:matter_cannon", [
+		Mechanisms.SMART.COM,
+		Mechanisms.ANDESITE.COM,
+		"#forge:ingots/silver",
+		"ae2:energy_cell",
+		"#forge:rods/silver"
+	]).id("ae2:tools/matter_cannon")
+
+
+	// 元件工作台
+	thermal_extra.component_assembly("ae2:cell_workbench", [
+		Casing.SMART,
+		"ae2:calculation_processor"
+	]).id("ae2:network/blocks/cell_workbench")
+
+
+	// 放置工具
+	thermal_extra.component_assembly("meplacementtool:me_placement_tool", [
+		"#forge:rods/silver",
+		"ae2:wireless_terminal",
+		"constructionwand:iron_wand"
+	]).id("meplacementtool:me_placement_tool")
+
+
+	// 多方块放置工具
+	thermal_extra.component_assembly("meplacementtool:multiblock_placement_tool", [
+		"#forge:rods/silver",
+		"ae2:wireless_terminal",
+		"constructionwand:infinity_wand"
+	]).id("meplacementtool:multiblock_placement_tool")
+
+
+	//  线缆放置工具
+	thermal_extra.component_assembly("meplacementtool:me_cable_placement_tool", [
+		"#forge:rods/silver",
+		"ae2:wireless_terminal",
+		Mechanisms.COLOR.COM,
+		"ae2:smart_dense_cable"
+	]).id("meplacementtool:me_cable_placement_tool")
+})
