@@ -2,14 +2,12 @@
 ServerEvents.recipes((event) => {
 	let { kubejs, create } = event.getRecipes()
 
-
 	// 动力辊压机
 	verticalDevice(kubejs, "create:mechanical_press", "create:crafting/kinetics/mechanical_press", {
 		M: Mechanisms.ANDESITE.COM,
 		C: Casing.ANDESITE,
 		X: "cmi:hammer_head"
 	})
-
 
 	// 动力搅拌器
 	verticalDevice(kubejs, "create:mechanical_mixer", "create:crafting/kinetics/mechanical_mixer", {
@@ -18,7 +16,6 @@ ServerEvents.recipes((event) => {
 		X: "create:whisk",
 	})
 
-
 	// 鼓风机
 	verticalDevice(kubejs, "create:encased_fan", "create:crafting/kinetics/encased_fan", {
 		M: Mechanisms.ANDESITE.COM,
@@ -26,14 +23,12 @@ ServerEvents.recipes((event) => {
 		X: "create:propeller",
 	})
 
-
 	// 石磨
 	verticalDevice(kubejs, "create:millstone", "create:crafting/kinetics/millstone", {
 		M: Mechanisms.ANDESITE.COM,
 		C: Casing.ANDESITE,
 		X: "#forge:stone",
 	})
-
 
 	// 动力收割机
 	kubejs.shaped("create:mechanical_harvester", [
@@ -46,7 +41,6 @@ ServerEvents.recipes((event) => {
 		X: "#forge:rods/andesite",
 	}).id("create:crafting/kinetics/mechanical_harvester")
 
-
 	// 动力犁
 	kubejs.shaped("create:mechanical_plough", [
 		"XXX",
@@ -58,7 +52,6 @@ ServerEvents.recipes((event) => {
 		X: "#forge:plates/andesite_alloy",
 	}).id("create:crafting/kinetics/mechanical_plough")
 
-
 	// 动力压路机
 	kubejs.shaped("2x create:mechanical_roller", [
 		"CX ",
@@ -69,7 +62,6 @@ ServerEvents.recipes((event) => {
 		C: Casing.ANDESITE,
 		X: "#forge:plates/andesite_alloy",
 	}).id("create:crafting/kinetics/mechanical_roller")
-
 
 	// 振动台
 	kubejs.shaped("vintageimprovements:vibrating_table", [
@@ -83,7 +75,6 @@ ServerEvents.recipes((event) => {
 		Y: "#minecraft:planks",
 	}).id("vintageimprovements:craft/vibrating_table")
 
-
 	// 轧机
 	kubejs.shaped("createaddition:rolling_mill", [
 		" M ",
@@ -96,7 +87,6 @@ ServerEvents.recipes((event) => {
 		Y: "#create:shaft",
 	}).id("createaddition:crafting/rolling_mill")
 
-
 	// 卷簧机
 	kubejs.shaped("vintageimprovements:spring_coiling_machine", [
 		"X",
@@ -108,14 +98,12 @@ ServerEvents.recipes((event) => {
 		X: "vintageimprovements:spring_coiling_machine_wheel",
 	}).id("vintageimprovements:craft/spring_coiling_machine")
 
-
 	// 冲压机
 	verticalDevice(kubejs, "vintageimprovements:curving_press", "vintageimprovements:craft/curving_press", {
 		M: Mechanisms.ANDESITE.COM,
 		C: Casing.ANDESITE,
 		X: ["#forge:plates/iron", "#forge:plates/andesite_alloy"]
 	})
-
 
 	// 动力锯
 	verticalDevice(kubejs, "create:mechanical_saw", "create:crafting/kinetics/mechanical_saw", {
@@ -124,14 +112,12 @@ ServerEvents.recipes((event) => {
 		X: "thermal:saw_blade"
 	})
 
-
 	// 动力钻头
 	verticalDevice(kubejs, "create:mechanical_drill", "create:crafting/kinetics/mechanical_drill", {
 		M: Mechanisms.ANDESITE.COM,
 		C: Casing.ANDESITE,
 		X: "thermal:drill_head"
 	})
-
 
 	// 离心机
 	kubejs.shaped("vintageimprovements:centrifuge", [
@@ -146,7 +132,6 @@ ServerEvents.recipes((event) => {
 		C: Casing.ANDESITE
 	}).id("vintageimprovements:craft/centrifuge")
 
-
 	// 压缩机
 	kubejs.shaped("vintageimprovements:vacuum_chamber", [
 		" M ",
@@ -159,7 +144,6 @@ ServerEvents.recipes((event) => {
 		Y: "#vintageimprovements:springs/bronze"
 	}).id("vintageimprovements:craft/vacuum_chamber")
 
-
 	// 可控燃烧室
 	kubejs.shaped("createdieselgenerators:burner", [
 		" B ",
@@ -171,7 +155,6 @@ ServerEvents.recipes((event) => {
 		M: Mechanisms.NETHER.COM,
 		C: "create:empty_blaze_burner"
 	}).id("createdieselgenerators:crafting/burner")
-
 
 	// 特斯拉线圈
 	create.mechanical_crafting("createaddition:tesla_coil", [
@@ -189,7 +172,6 @@ ServerEvents.recipes((event) => {
 		C: Casing.BRASS
 	}).id("createaddition:mechanical_crafting/tesla_coil")
 
-
 	// 激光雕刻机
 	create.mechanical_crafting("vintageimprovements:laser", [
 		"VCV",
@@ -206,7 +188,6 @@ ServerEvents.recipes((event) => {
 		L: "vintageimprovements:laser_item"
 	}).id("vintageimprovements:craft/laser")
 
-
 	// 磨砂机
 	kubejs.shaped("cmi:mechanical_belt_grinder", [
 		"B",
@@ -217,7 +198,6 @@ ServerEvents.recipes((event) => {
 		C: Casing.BRASS,
 		M: Mechanisms.PRECISION.COM
 	})
-
 
 	// 马达
 	kubejs.shaped("cmi:accelerator_motor", [

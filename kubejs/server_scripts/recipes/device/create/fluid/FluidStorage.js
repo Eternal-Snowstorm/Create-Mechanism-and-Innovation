@@ -2,7 +2,6 @@
 ServerEvents.recipes((event) => {
 	let { kubejs } = event.getRecipes()
 
-
 	// 流体储罐
 	kubejs.shaped("create:fluid_tank", [
 		"A",
@@ -13,7 +12,6 @@ ServerEvents.recipes((event) => {
 		B: "#forge:glass/prism"
 	}).id("create:crafting/kinetics/fluid_tank")
 
-
 	kubejs.shaped("2x create:fluid_tank", [
 		" A ",
 		"ABA",
@@ -22,7 +20,6 @@ ServerEvents.recipes((event) => {
 		A: "#forge:plates/copper",
 		B: "#forge:glass"
 	}).id("create:crafting/kinetics/fluid_tank2")
-
 
 	// 多流体储罐
 	kubejs.shaped("fluidlogistics:multi_fluid_tank", [
@@ -34,7 +31,6 @@ ServerEvents.recipes((event) => {
 		B: "#forge:glass"
 	}).id("fluidlogistics:multi_fluid_tank")
 
-
 	kubejs.shaped("fluidlogistics:horizontal_multi_fluid_tank", [
 		"A A",
 		" B ",
@@ -44,14 +40,12 @@ ServerEvents.recipes((event) => {
 		B: "#forge:glass"
 	}).id("fluidlogistics:horizontal_multi_fluid_tank")
 
-
 	kubejs.shaped("create_connected:fluid_vessel", [
 		"ABA"
 	], {
 		A: "#forge:plates/copper",
 		B: "#forge:glass/prism"
 	}).id("create_connected:crafting/kinetics/fluid_vessel")
-
 
 	kubejs.shaped("2x create_connected:fluid_vessel", [
 		"A A",

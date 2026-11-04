@@ -2,14 +2,12 @@
 ServerEvents.recipes((event) => {
 	let { kubejs, thermal_extra, neoecoae } = event.getRecipes()
 
-
 	// 缓存元件
 	thermal_extra.component_assembly("expatternprovider:ingredient_buffer", [
 		Casing.SMART,
 		"ae2:quartz_glass",
 		Mechanisms.WOODEN.COM
 	]).id("expatternprovider:ingredient_buffer")
-
 
 	// 无线连接器
 	thermal_extra.component_assembly("expatternprovider:wireless_connect", [
@@ -18,14 +16,12 @@ ServerEvents.recipes((event) => {
 		"#ae2:glass_cable"
 	]).id("expatternprovider:wireless_connector")
 
-
 	// 无线集线器
 	thermal_extra.component_assembly("expatternprovider:wireless_hub", [
 		"expatternprovider:wireless_connect",
 		"ae2:wireless_receiver",
 		Mechanisms.SMART.COM
 	]).id("expatternprovider:wireless_hub")
-
 
 	// 量子环
 	neoecoae.integrated_working_station()
@@ -39,7 +35,6 @@ ServerEvents.recipes((event) => {
 		])
 		.id("ae2:network/blocks/quantum_ring")
 
-
 	// 量子链接仓
 	neoecoae.integrated_working_station()
 		.itemOutput("ae2:quantum_link")
@@ -52,7 +47,6 @@ ServerEvents.recipes((event) => {
 		])
 		.id("ae2:network/blocks/quantum_link")
 
-
 	// 无限范围增幅
 	thermal_extra.component_assembly("aeinfinitybooster:infinity_card", [
 		"ae2:wireless_booster",
@@ -61,7 +55,6 @@ ServerEvents.recipes((event) => {
 		"#forge:plates/silicon"
 	]).id("aeinfinitybooster:infinity_card")
 
-
 	// 维度卡
 	thermal_extra.component_assembly("aeinfinitybooster:dimension_card", [
 		"aeinfinitybooster:infinity_card",
@@ -69,7 +62,6 @@ ServerEvents.recipes((event) => {
 		"#forge:gems/energized_fluix_crystal",
 		"#forge:plates/silicon_carbide"
 	]).id("aeinfinitybooster:dimension_card")
-
 
 	// ME光束成型器
 	thermal_extra.component_assembly("me_beam_former:beam_former_part", [
@@ -80,7 +72,6 @@ ServerEvents.recipes((event) => {
 		"#ae2:glass_cable"
 	]).id("me_beam_former:beam_former_part")
 
-
 	// 大型光束成型器
 	thermal_extra.component_assembly("me_beam_former:beam_former_block", [
 		"me_beam_former:beam_former_part",
@@ -88,7 +79,6 @@ ServerEvents.recipes((event) => {
 		Mechanisms.SMART.COM,
 		"ae2:fluix_pearl"
 	]).id("me_beam_former:beam_former_block")
-
 
 	// 全向光束成型器
 	thermal_extra.component_assembly("me_beam_former:omni_beam_former_block", [
@@ -108,7 +98,6 @@ ServerEvents.recipes((event) => {
 			"cmi:silicon_rubber"
 		])
 		.inputFluid(Fluid.of("thermal:resin", 100))
-
 
 	// 无线能源感应塔
 	neoecoae.integrated_working_station()

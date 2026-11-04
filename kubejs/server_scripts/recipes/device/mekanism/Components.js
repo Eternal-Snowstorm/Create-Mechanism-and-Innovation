@@ -2,7 +2,6 @@
 ServerEvents.recipes((event) => {
 	let { thermal_extra, neoecoae } = event.getRecipes()
 
-
 	// 设备组件
 	addRecipe(neoecoae)
 		.itemOutput("cmi:basalz_general_component")
@@ -15,7 +14,6 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 
-
 	addRecipe(neoecoae)
 		.itemOutput("cmi:blaze_general_component")
 		.inputFluid(Fluid.of("tconstruct:blazing_blood", 1000))
@@ -26,7 +24,6 @@ ServerEvents.recipes((event) => {
 			"cmi:blaze_unit"
 		])
 		.energy(2000)
-
 
 	addRecipe(neoecoae)
 		.itemOutput("cmi:blitz_general_component")
@@ -39,7 +36,6 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 
-
 	addRecipe(neoecoae)
 		.itemOutput("cmi:blizz_general_component")
 		.inputFluid(Fluid.of("thermalconstruct:blizz_blood", 1000))
@@ -50,7 +46,6 @@ ServerEvents.recipes((event) => {
 			"cmi:blizz_unit"
 		])
 		.energy(2000)
-
 
 	addRecipe(neoecoae)
 		.itemOutput("2x mekanism:steel_casing")

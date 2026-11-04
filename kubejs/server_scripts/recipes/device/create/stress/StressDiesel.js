@@ -2,7 +2,6 @@
 ServerEvents.recipes((event) => {
 	let { kubejs, create } = event.getRecipes()
 
-
 	// 小引擎
 	kubejs.shaped("createdieselgenerators:diesel_engine", [
 		"ABA",
@@ -15,7 +14,6 @@ ServerEvents.recipes((event) => {
 		D: "tconstruct:seared_brick"
 	}).id("creatediselgenerators:diesel_engine")
 
-
 	// 中引擎
 	kubejs.shaped("createdieselgenerators:large_diesel_engine", [
 		"ABA",
@@ -27,7 +25,6 @@ ServerEvents.recipes((event) => {
 		C: "cmi:light_engineering_mechanism",
 		D: "tconstruct:scorched_brick"
 	}).id("creatediselgenerators:large_diesel_engine")
-
 
 	// 大引擎
 	kubejs.shaped("createdieselgenerators:huge_diesel_engine", [

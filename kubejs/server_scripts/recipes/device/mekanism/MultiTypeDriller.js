@@ -2,7 +2,6 @@
 ServerEvents.recipes((event) => {
 	let { thermal_extra, neoecoae } = event.getRecipes()
 
-
 	// 多元钻探机
 	addRecipe(neoecoae)
 		.itemOutput("cmi:multi_type_driller")
@@ -15,7 +14,6 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 
-
 	addRecipe(neoecoae)
 		.itemOutput("cmi:driller_bearing")
 		.inputItems([
@@ -24,7 +22,6 @@ ServerEvents.recipes((event) => {
 			Mechanisms.BASIC.COM
 		])
 		.energy(2000)
-
 
 	addRecipe(neoecoae)
 		.itemOutput("cmi:driller_head")
@@ -36,7 +33,6 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 
-
 	addRecipe(neoecoae)
 		.itemOutput("cmi:driller_fluid_pump")
 		.inputItems([
@@ -46,7 +42,6 @@ ServerEvents.recipes((event) => {
 			Mechanisms.BASIC.COM
 		])
 		.energy(2000)
-
 
 	addRecipe(neoecoae)
 		.itemOutput("cmi:driller_gas_pump")

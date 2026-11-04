@@ -2,7 +2,6 @@
 ServerEvents.recipes((event) => {
 	let { thermal_extra, neoecoae } = event.getRecipes()
 
-
 	// 电力高炉
 	addRecipe(neoecoae)
 		.itemOutput("cmi:electronic_blast_furnace")
@@ -14,7 +13,6 @@ ServerEvents.recipes((event) => {
 			Mechanisms.BASIC.COM
 		])
 		.energy(2000)
-
 
 	// 富集仓
 	addRecipe(neoecoae)
@@ -30,7 +28,6 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanism:enrichment_chamber")
 
-
 	// 锯木机
 	addRecipe(neoecoae)
 		.itemOutput("mekanism:precision_sawmill")
@@ -44,7 +41,6 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 		.id("mekanism:precision_sawmill")
-
 
 	// 融合机
 	addRecipe(neoecoae)
@@ -60,7 +56,6 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanism:combiner")
 
-
 	// 粉碎机
 	addRecipe(neoecoae)
 		.itemOutput("mekanism:crusher")
@@ -75,7 +70,6 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanism:crusher")
 
-
 	// 熔炼炉
 	addRecipe(neoecoae)
 		.itemOutput("mekanism:energized_smelter")
@@ -89,7 +83,6 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 		.id("mekanism:energized_smelter")
-
 
 	// 锇压缩仓
 	addRecipe(neoecoae)

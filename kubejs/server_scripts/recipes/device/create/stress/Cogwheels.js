@@ -2,7 +2,6 @@
 ServerEvents.recipes((event) => {
 	let { kubejs, create } = event.getRecipes()
 
-
 	// 传动
 	// 齿轮
 	let cogwheelMaterials = [
@@ -68,36 +67,30 @@ ServerEvents.recipes((event) => {
 		])
 	})
 
-
 	// 齿轮
 	kubejs.shapeless("cmi:incomplete_cogwheel", [
 		"#minecraft:planks",
 		"#minecraft:axes"
 	]).damageIngredient("#minecraft:axes", 1)
 
-
 	create.cutting("2x cmi:incomplete_cogwheel", [
 		"cmi:incomplete_large_cogwheel"
 	])
-
 
 	create.deploying("create:cogwheel", [
 		"cmi:incomplete_cogwheel",
 		"#create:shaft"
 	]).id("create:deploying/cogwheel")
 
-
 	create.deploying("create:cogwheel", [
 		"create:shaft",
 		"cmi:incomplete_cogwheel"
 	])
 
-
 	kubejs.shapeless("create:cogwheel", [
 		"cmi:incomplete_cogwheel",
 		"#create:shaft"
 	]).id("create:crafting/kinetics/cogwheel")
-
 
 	// 大齿轮
 	kubejs.shapeless("cmi:incomplete_large_cogwheel", [
@@ -105,29 +98,24 @@ ServerEvents.recipes((event) => {
 		"#minecraft:axes"
 	]).damageIngredient("#minecraft:axes", 1)
 
-
 	create.cutting("2x cmi:incomplete_large_cogwheel", [
 		"#forge:gears/wooden"
 	])
-
 
 	create.deploying("create:large_cogwheel", [
 		"cmi:incomplete_large_cogwheel",
 		"#create:shaft"
 	]).id("create:deploying/large_cogwheel")
 
-
 	create.deploying("create:large_cogwheel", [
 		"create:shaft",
 		"cmi:incomplete_large_cogwheel"
 	])
 
-
 	kubejs.shapeless("create:large_cogwheel", [
 		"cmi:incomplete_large_cogwheel",
 		"#create:shaft"
 	]).id("create:crafting/kinetics/large_cogwheel")
-
 
 	kubejs.shapeless("create:large_cogwheel", [
 		"create:cogwheel",

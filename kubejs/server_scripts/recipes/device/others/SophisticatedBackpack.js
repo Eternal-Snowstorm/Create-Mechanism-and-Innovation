@@ -2,7 +2,6 @@
 ServerEvents.recipes((event) => {
 	let { kubejs } = event.getRecipes()
 
-
 	// 背包
 	kubejs.shaped("sophisticatedbackpacks:backpack", [
 		"XYX",
@@ -13,7 +12,6 @@ ServerEvents.recipes((event) => {
 		X: "#forge:string",
 		Y: ["#forge:leather", "tconstruct:silky_cloth"]
 	}).id("sophisticatedbackpacks:backpack")
-
 
 	// 空白升级
 	kubejs.shaped("sophisticatedbackpacks:upgrade_base", [

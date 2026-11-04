@@ -2,7 +2,6 @@
 ServerEvents.recipes((event) => {
 	let { thermal_extra, neoecoae } = event.getRecipes()
 
-
 	// 提纯仓
 	addRecipe(neoecoae)
 		.itemOutput("mekanism:purification_chamber")
@@ -16,7 +15,6 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 		.id("mekanism:purification_chamber")
-
 
 	// 化学氧化机
 	addRecipe(neoecoae)
@@ -32,7 +30,6 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanism:chemical_oxidizer")
 
-
 	// 化学压射室
 	addRecipe(neoecoae)
 		.itemOutput("mekanism:chemical_injection_chamber")
@@ -47,7 +44,6 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 		.id("mekanism:chemical_injection_chamber")
-
 
 	// 化学灌注室
 	addRecipe(neoecoae)

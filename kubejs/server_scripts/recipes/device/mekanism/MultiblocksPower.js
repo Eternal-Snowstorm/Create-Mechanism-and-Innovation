@@ -2,7 +2,6 @@
 ServerEvents.recipes((event) => {
 	let { thermal_extra, neoecoae } = event.getRecipes()
 
-
 	// 热力蒸馏装置
 	thermal_extra.component_assembly("mekanism:thermal_evaporation_block", [
 		"mekanism:dynamic_tank",
@@ -10,20 +9,17 @@ ServerEvents.recipes((event) => {
 		"#forge:plates/constantan"
 	]).id("mekanism:thermal_evaporation/block")
 
-
 	thermal_extra.component_assembly("mekanism:thermal_evaporation_controller", [
 		"mekanism:thermal_evaporation_block",
 		Mechanisms.THERMAL.COM,
 		"ae2:semi_dark_monitor"
 	]).id("mekanism:thermal_evaporation/controller")
 
-
 	thermal_extra.component_assembly("mekanism:thermal_evaporation_valve", [
 		"mekanism:dynamic_valve",
 		"#forge:plates/steel",
 		"#forge:plates/constantan"
 	]).id("mekanism:thermal_evaporation/valve")
-
 
 	// 感应矩阵
 	addRecipe(neoecoae)
@@ -38,7 +34,6 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanism:induction/casing")
 
-
 	addRecipe(neoecoae)
 		.itemOutput("mekanism:induction_port")
 		.inputItems([
@@ -48,7 +43,6 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 		.id("mekanism:induction/port")
-
 
 	// 锅炉
 	addRecipe(neoecoae)
@@ -63,7 +57,6 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanism:boiler_casing")
 
-
 	addRecipe(neoecoae)
 		.itemOutput("mekanism:boiler_valve")
 		.inputItems([
@@ -73,7 +66,6 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 		.id("mekanism:boiler_valve")
-
 
 	addRecipe(neoecoae)
 		.itemOutput("mekanism:pressure_disperser")
@@ -85,7 +77,6 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanism:pressure_disperser")
 
-
 	addRecipe(neoecoae)
 		.itemOutput("2x mekanism:superheating_element")
 		.inputItems([
@@ -96,7 +87,6 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 		.id("mekanism:superheating_element")
-
 
 	// 涡轮
 	addRecipe(neoecoae)
@@ -110,7 +100,6 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanismgenerators:rotational_complex")
 
-
 	addRecipe(neoecoae)
 		.itemOutput("2x mekanismgenerators:electromagnetic_coil")
 		.inputItems([
@@ -123,7 +112,6 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanismgenerators:electromagnetic_coil")
 
-
 	addRecipe(neoecoae)
 		.itemOutput("2x mekanismgenerators:turbine_casing")
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
@@ -135,7 +123,6 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanismgenerators:turbine/casing")
 
-
 	addRecipe(neoecoae)
 		.itemOutput("mekanismgenerators:turbine_valve")
 		.inputItems([
@@ -146,7 +133,6 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanismgenerators:turbine/valve")
 
-
 	addRecipe(neoecoae)
 		.itemOutput("2x mekanismgenerators:turbine_vent")
 		.inputItems([
@@ -156,7 +142,6 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 		.id("mekanismgenerators:turbine/vent")
-
 
 	addRecipe(neoecoae)
 		.itemOutput("2x mekanismgenerators:saturating_condenser")

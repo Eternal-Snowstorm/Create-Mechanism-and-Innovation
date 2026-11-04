@@ -2,7 +2,6 @@
 ServerEvents.recipes((event) => {
 	let { thermal_extra, create, thermal, kubejs } = event.recipes
 
-
 	// 烧煤的
 	addComponRecipe(thermal_extra, "thermal:dynamo_stirling", [
 		Mechanisms.COIL.COM,
@@ -11,7 +10,6 @@ ServerEvents.recipes((event) => {
 		"#forge:plates/invar",
 		"#forge:plates/stone"
 	]).id("thermal:dynamo_stirling")
-
 
 	// 烧岩浆的
 	addComponRecipe(thermal_extra, "thermal:dynamo_magmatic", [
@@ -22,7 +20,6 @@ ServerEvents.recipes((event) => {
 		"minecraft:nether_bricks"
 	]).id("thermal:dynamo_magmatic")
 
-
 	// 烧油的
 	addComponRecipe(thermal_extra, "thermal:dynamo_compression", [
 		Mechanisms.COIL.COM,
@@ -31,7 +28,6 @@ ServerEvents.recipes((event) => {
 		"#forge:plates/invar",
 		"#forge:plates/steel"
 	]).id("thermal:dynamo_compression")
-
 
 	// 燃烧我的卡路里
 	addComponRecipe(thermal_extra, "thermal:dynamo_gourmand", [
@@ -42,7 +38,6 @@ ServerEvents.recipes((event) => {
 		"#forge:plates/bronze"
 	]).id("thermal:dynamo_gourmand")
 
-
 	// 烧冰的
 	addComponRecipe(thermal_extra, "thermal_extra:dynamo_frost", [
 		Mechanisms.COIL.COM,
@@ -51,7 +46,6 @@ ServerEvents.recipes((event) => {
 		"#forge:plates/invar",
 		"#forge:plates/silver"
 	]).id("thermal_extra:crafting/dynamo_frost")
-
 
 	// 烧宝石的
 	addComponRecipe(thermal_extra, "thermal:dynamo_lapidary", [
@@ -62,7 +56,6 @@ ServerEvents.recipes((event) => {
 		"#forge:gems/diamond"
 	]).id("thermal:dynamo_lapidary")
 
-
 	// 烧钱的
 	addComponRecipe(thermal_extra, "thermal:dynamo_numismatic", [
 		Mechanisms.COIL.COM,
@@ -71,7 +64,6 @@ ServerEvents.recipes((event) => {
 		"#forge:plates/invar",
 		"#forge:plates/electrum"
 	]).id("thermal:dynamo_numismatic")
-
 
 	// 烧附魔书的
 	addComponRecipe(thermal_extra, "thermal:dynamo_disenchantment", [

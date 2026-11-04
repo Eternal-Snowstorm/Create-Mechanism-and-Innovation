@@ -2,13 +2,11 @@
 ServerEvents.recipes((event) => {
 	let { kubejs } = event.getRecipes()
 
-
 	// 流体储罐阀门
 	kubejs.shapeless("2x fluidlogistics:fluid_hatch", [
 		"2x #forge:plates/copper",
 		"#forge:plates/industrial_iron"
 	]).id("create_dragons_plus:crafting/fluid_hatch")
-
 
 	// 分液池
 	kubejs.shaped("create:item_drain", [
@@ -21,14 +19,12 @@ ServerEvents.recipes((event) => {
 		C: Casing.COPPER
 	}).id("create:crafting/kinetics/item_drain")
 
-
 	// 注液器
 	verticalDevice(kubejs, "create:spout", "create:crafting/kinetics/spout", {
 		M: Mechanisms.COPPER.COM,
 		X: "thermal:cured_rubber",
 		C: Casing.COPPER
 	})
-
 
 	// 高级注液器
 	kubejs.shaped("steam_letters:advanced_spout", [
@@ -43,7 +39,6 @@ ServerEvents.recipes((event) => {
 		E: "thermal:cured_rubber"
 	}).id("steam_letters:crafting/shaped/advanced_spout")
 
-
 	// 智能管道
 	kubejs.shaped("2x create:smart_fluid_pipe", [
 		"B",
@@ -54,7 +49,6 @@ ServerEvents.recipes((event) => {
 		P: "create:fluid_pipe",
 		M: Mechanisms.COPPER.COM
 	}).id("create:crafting/kinetics/smart_fluid_pipe")
-
 
 	// 阀门
 	kubejs.shaped("2x create:fluid_valve", [
@@ -67,7 +61,6 @@ ServerEvents.recipes((event) => {
 		M: Mechanisms.COPPER.COM
 	}).id("create:crafting/kinetics/fluid_valve")
 
-
 	// 软管滑轮
 	kubejs.shaped("create:hose_pulley", [
 		"C",
@@ -78,7 +71,6 @@ ServerEvents.recipes((event) => {
 		X: "thermal:cured_rubber_block",
 		C: Casing.COPPER
 	}).id("create:crafting/kinetics/hose_pulley")
-
 
 	// 抽油机油泵
 	kubejs.shaped("createdieselgenerators:pumpjack_hole", [
@@ -92,7 +84,6 @@ ServerEvents.recipes((event) => {
 		A: "create:fluid_pipe"
 	}).id("createdieselgenerators:crafting/pumpjack_hole")
 
-
 	// 智能龙头
 	kubejs.shaped("fluidlogistics:smart_faucet", [
 		"A",
@@ -104,13 +95,11 @@ ServerEvents.recipes((event) => {
 		C: "#forge:plates/copper"
 	}).id("fluidlogistics:smart_faucet")
 
-
 	// 流体泵
 	kubejs.shapeless("fluidlogistics:fluid_pump", [
 		"create:fluid_pipe",
 		"#create:shaft"
 	]).id("fluidlogistics:fluid_pump")
-
 
 	// 流体漏斗
 	kubejs.shaped("fluidlogistics:smart_hopper", [
@@ -123,7 +112,6 @@ ServerEvents.recipes((event) => {
 		M: Mechanisms.COPPER.COM
 	}).id("fluidlogistics:smart_hopper")
 
-
 	// 流体溜槽
 	kubejs.shaped("4x fluidlogistics:fluid_transporter", [
 		"A",
@@ -134,7 +122,6 @@ ServerEvents.recipes((event) => {
 		B: "#forge:ingots/copper"
 	}).id("fluidlogistics:fluid_transporter")
 
-
 	// 流体溜槽
 	kubejs.shaped("16x fluidlogistics:fluid_transporter", [
 		"A A",
@@ -144,7 +131,6 @@ ServerEvents.recipes((event) => {
 		A: "#forge:plates/copper",
 		B: Mechanisms.COPPER.COM
 	})
-
 
 	// 流体接口
 	kubejs.shaped("fluidlogistics:multi_fluid_access_port", [

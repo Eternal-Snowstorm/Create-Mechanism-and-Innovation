@@ -2,19 +2,6 @@
 ServerEvents.recipes((event) => {
 	let { kubejs, thermal_extra, neoecoae } = event.getRecipes()
 
-
-	// 内存卡
-	kubejs.shaped("ae2:memory_card", [
-		"PMP",
-		"WEW"
-	], {
-		P: "#forge:plates/iron",
-		M: Mechanisms.SMART.COM,
-		W: "#forge:wires/signalum",
-		E: "#forge:plates/electrum"
-	}).id("ae2:tools/network_memory_card")
-
-
 	// 照明面板
 	thermal_extra.component_assembly("ae2:semi_dark_monitor", [
 		"ae2:quartz_glass",
@@ -22,7 +9,6 @@ ServerEvents.recipes((event) => {
 		"#forge:plates/silver",
 		"#forge:plates/signalum"
 	]).id("ae2:network/parts/panels_semi_dark_monitor")
-
 
 	// ME终端
 	thermal_extra.component_assembly("ae2:terminal", [
@@ -32,13 +18,11 @@ ServerEvents.recipes((event) => {
 		Mechanisms.SMART.COM
 	]).id("ae2:network/parts/terminals")
 
-
 	// 合成终端
 	kubejs.shapeless("ae2:crafting_terminal", [
 		"ae2:terminal",
 		"create:crafting_blueprint"
 	]).id("ae2:network/parts/terminals_crafting")
-
 
 	// 样板编码
 	thermal_extra.component_assembly("ae2:pattern_encoding_terminal", [
@@ -47,7 +31,6 @@ ServerEvents.recipes((event) => {
 		"#forge:ingots/overcharged_alloy"
 	]).id("ae2:network/parts/terminals_pattern_encoding")
 
-
 	// 样板管理
 	thermal_extra.component_assembly("ae2:pattern_access_terminal", [
 		"#ae2:illuminated_panel",
@@ -55,13 +38,11 @@ ServerEvents.recipes((event) => {
 		"create:transmitter"
 	]).id("ae2:network/parts/terminals_pattern_access")
 
-
 	// 监控器
 	thermal_extra.component_assembly("ae2:storage_monitor", [
 		"#ae2:illuminated_panel",
 		Mechanisms.SMART.COM
 	]).id("ae2:network/parts/monitors_storage")
-
 
 	// 交换监控器
 	thermal_extra.component_assembly("ae2:conversion_monitor", [
@@ -69,7 +50,6 @@ ServerEvents.recipes((event) => {
 		"ae2:annihilation_core",
 		"ae2:formation_core"
 	]).id("ae2:network/parts/monitors_conversion")
-
 
 	// ME箱子
 	thermal_extra.component_assembly("ae2:chest", [

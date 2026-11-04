@@ -2,7 +2,6 @@
 ServerEvents.recipes((event) => {
 	let { kubejs } = event.getRecipes()
 
-
 	// 发信器
 	// 红石
 	kubejs.shaped("2x create:redstone_link", [
@@ -37,7 +36,6 @@ ServerEvents.recipes((event) => {
 		C: Casing.BRASS
 	}).id("create:crafting/logistics/display_link")
 
-
 	// 发报机
 	kubejs.shaped("create:stock_ticker", [
 		" G ",
@@ -51,7 +49,6 @@ ServerEvents.recipes((event) => {
 		C: Casing.ANDESITE
 	}).id("create:crafting/logistics/stock_ticker")
 
-
 	// 请求器
 	kubejs.shaped("create:redstone_requester", [
 		" T ",
@@ -63,7 +60,6 @@ ServerEvents.recipes((event) => {
 		M: Mechanisms.ANDESITE.COM,
 		C: Casing.ANDESITE
 	}).id("create:crafting/logistics/redstone_requester")
-
 
 	// 工厂仪表
 	kubejs.shaped("create:factory_gauge", [

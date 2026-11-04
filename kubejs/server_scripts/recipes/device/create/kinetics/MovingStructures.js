@@ -13,14 +13,12 @@ ServerEvents.recipes((event) => {
 		X: "#minecraft:planks",
 	}).id("create:crafting/kinetics/mechanical_bearing")
 
-
 	// 动力活塞
 	verticalDevice(kubejs, "create:mechanical_piston", "create:crafting/kinetics/mechanical_piston", {
 		M: Mechanisms.ANDESITE.COM,
 		C: Casing.ANDESITE,
 		X: "create:piston_extension_pole",
 	})
-
 
 	// 起重机轴承
 	verticalDevice(kubejs, "create:gantry_carriage", "create:crafting/kinetics/gantry_carriage", {
@@ -29,14 +27,12 @@ ServerEvents.recipes((event) => {
 		X: "#create:cogwheel",
 	})
 
-
 	// 机械手
 	verticalDevice(kubejs, "create:deployer", "create:crafting/kinetics/deployer", {
 		M: Mechanisms.ANDESITE.COM,
 		C: Casing.ANDESITE,
 		X: "create:brass_hand"
 	})
-
 
 	// 发条轴承
 	kubejs.shaped("create:clockwork_bearing", [

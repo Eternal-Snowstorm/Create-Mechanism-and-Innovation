@@ -2,11 +2,6 @@
 ServerEvents.recipes((event) => {
 	let { kubejs, create } = event.getRecipes()
 
-	let Inc = {
-		ENGINE: "cmi:incomplete_steam_engine"
-	}
-
-
 	// 风车轴承
 	kubejs.shaped("create:windmill_bearing", [
 		"X",
@@ -18,7 +13,6 @@ ServerEvents.recipes((event) => {
 		X: "#forge:plates/stone",
 	}).id("create:crafting/kinetics/windmill_bearing")
 
-
 	// 水车
 	kubejs.shaped("create:water_wheel", [
 		" A ",
@@ -29,7 +23,6 @@ ServerEvents.recipes((event) => {
 		B: Casing.ANDESITE
 	}).id("create:crafting/kinetics/water_wheel")
 
-
 	// 大水车
 	kubejs.shaped("create:large_water_wheel", [
 		"A A",
@@ -39,7 +32,6 @@ ServerEvents.recipes((event) => {
 		A: "immersiveengineering:waterwheel_segment",
 		B: "create:water_wheel"
 	}).id("create:crafting/kinetics/large_water_wheel")
-
 
 	kubejs.shaped("create:large_water_wheel", [
 		"AAA",

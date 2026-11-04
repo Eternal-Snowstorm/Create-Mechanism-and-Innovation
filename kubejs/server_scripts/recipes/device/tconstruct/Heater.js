@@ -1,11 +1,8 @@
 // TConstruct · 冶炼炉与焦黑/焦褐加热结构（熔炉、加热器、控制器、储罐、量器、铸模箱、烈焰人燃烧室）
 ServerEvents.recipes((event) => {
 	let { kubejs, minecraft } = event.getRecipes()
-
 	const BRICK = "tconstruct:seared_brick"
-
 	const PRISM = "#forge:glass/prism"
-
 
 	// 焦黑融化器
 	kubejs.shaped("tconstruct:seared_melter", [
@@ -17,7 +14,6 @@ ServerEvents.recipes((event) => {
 		X: "#tconstruct:seared_tanks"
 	}).id("tconstruct:smeltery/seared/melter")
 
-
 	// 焦黑加热器
 	kubejs.shaped("tconstruct:seared_heater", [
 		"BBB",
@@ -27,7 +23,6 @@ ServerEvents.recipes((event) => {
 		M: Mechanisms.STONE.COM,
 		B: BRICK
 	}).id("tconstruct:smeltery/seared/heater")
-
 
 	// 冶炼炉控制器
 	kubejs.shaped("tconstruct:smeltery_controller", [
@@ -42,7 +37,6 @@ ServerEvents.recipes((event) => {
 		E: Mechanisms.IRON.COM
 	}).id("tconstruct:smeltery/casting/seared/smeltery_controller")
 
-
 	// 焦黑燃料储罐
 	kubejs.shaped("tconstruct:seared_fuel_tank", [
 		" B ",
@@ -52,7 +46,6 @@ ServerEvents.recipes((event) => {
 		P: PRISM,
 		B: BRICK
 	}).id("tconstruct:smeltery/seared/fuel_tank")
-
 
 	// 焦黑材料储罐
 	kubejs.shaped("tconstruct:seared_ingot_tank", [
@@ -64,7 +57,6 @@ ServerEvents.recipes((event) => {
 		B: BRICK
 	}).id("tconstruct:smeltery/seared/ingot_tank")
 
-
 	// 焦黑燃料量器
 	minecraft.stonecutting("tconstruct:seared_fuel_gauge", [
 		"tconstruct:seared_fuel_tank"
@@ -74,7 +66,6 @@ ServerEvents.recipes((event) => {
 		"tconstruct:seared_fuel_gauge"
 	])
 
-
 	// 焦黑材料量器
 	minecraft.stonecutting("tconstruct:seared_ingot_gauge", [
 		"tconstruct:seared_ingot_tank"
@@ -83,7 +74,6 @@ ServerEvents.recipes((event) => {
 	minecraft.stonecutting("tconstruct:seared_ingot_tank", [
 		"tconstruct:seared_ingot_gauge"
 	])
-
 
 	// 焦褐合金炉
 	kubejs.shaped("tconstruct:scorched_alloyer", [
@@ -95,7 +85,6 @@ ServerEvents.recipes((event) => {
 		M: Mechanisms.NETHER.COM
 	}).id("tconstruct:smeltery/scorched/alloyer")
 
-
 	// 焦褐燃料储罐
 	kubejs.shaped("tconstruct:scorched_fuel_tank", [
 		" B ",
@@ -105,7 +94,6 @@ ServerEvents.recipes((event) => {
 		P: "#forge:glass",
 		B: "tconstruct:scorched_brick"
 	}).id("tconstruct:smeltery/scorched/fuel_tank")
-
 
 	// 焦褐材料储罐
 	kubejs.shaped("tconstruct:scorched_ingot_tank", [
@@ -117,7 +105,6 @@ ServerEvents.recipes((event) => {
 		B: "tconstruct:scorched_brick"
 	}).id("tconstruct:smeltery/scorched/ingot_tank")
 
-
 	// 焦褐燃料量器
 	minecraft.stonecutting("tconstruct:scorched_fuel_gauge", [
 		"tconstruct:scorched_fuel_tank"
@@ -127,7 +114,6 @@ ServerEvents.recipes((event) => {
 		"tconstruct:scorched_fuel_gauge"
 	])
 
-
 	// 焦褐材料量器
 	minecraft.stonecutting("tconstruct:scorched_ingot_gauge", [
 		"tconstruct:scorched_ingot_tank"
@@ -136,7 +122,6 @@ ServerEvents.recipes((event) => {
 	minecraft.stonecutting("tconstruct:scorched_ingot_tank", [
 		"tconstruct:scorched_ingot_gauge"
 	])
-
 
 	// 铸模箱
 	kubejs.shaped("tconstruct:cast_chest", [
@@ -150,7 +135,6 @@ ServerEvents.recipes((event) => {
 		Y: "#forge:chests"
 	}).id("tconstruct:tables/cast_chest")
 
-
 	// 空烈焰人燃烧室
 	kubejs.shaped("create:empty_blaze_burner", [
 		"ABA",
@@ -161,7 +145,6 @@ ServerEvents.recipes((event) => {
 		B: Mechanisms.IRON.COM,
 		C: "minecraft:nether_bricks"
 	}).id("create:crafting/kinetics/empty_blaze_burner")
-
 
 	// 烈焰人燃烧室
 	kubejs.shaped("create:blaze_burner", [

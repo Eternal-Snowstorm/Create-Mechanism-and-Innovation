@@ -1,8 +1,9 @@
 // Create · 蒸汽动力（青铜/铸铁/钢三系锅炉与蒸汽引擎装配线）
 ServerEvents.recipes((event) => {
 	let { kubejs, create } = event.getRecipes()
-
-	let Inc = "cmi:incomplete_steam_engine"
+	let Inc = {
+		ENGINE: "cmi:incomplete_steam_engine"
+	}
 
 	let materials = [
 		{
@@ -97,32 +98,30 @@ ServerEvents.recipes((event) => {
 		})
 	})
 
-
-
 	// 蒸汽引擎
 	create.sequenced_assembly("create:steam_engine", [
 		Casing.COPPER
 	], [
-		create.deploying(Inc, [
-			Inc,
+		create.deploying(Inc.ENGINE, [
+			Inc.ENGINE.ENGINE,
 			"cmi:bronze_mechanism"
 		]),
-		create.cutting(Inc, [
-			Inc
+		create.cutting(Inc.ENGINE, [
+			Inc.ENGINE
 		]),
-		create.deploying(Inc, [
-			Inc,
+		create.deploying(Inc.ENGINE, [
+			Inc.ENGINE,
 			"createdieselgenerators:engine_piston"
 		]),
-		create.deploying(Inc, [
-			Inc,
+		create.deploying(Inc.ENGINE, [
+			Inc.ENGINE,
 			"#forge:plates/steel"
 		]),
-		create.deploying(Inc, [
-			Inc,
+		create.deploying(Inc.ENGINE, [
+			Inc.ENGINE,
 			"create:precision_mechanism"
 		])
-	]).transitionalItem(Inc)
+	]).transitionalItem(Inc.ENGINE)
 		.loops(1)
 		.id("create:crafting/kinetics/steam_engine")
 })

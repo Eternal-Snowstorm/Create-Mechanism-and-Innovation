@@ -2,7 +2,6 @@
 ServerEvents.recipes((event) => {
 	let { thermal_extra, neoecoae } = event.getRecipes()
 
-
 	// 同位素离心机
 	addRecipe(neoecoae)
 		.itemOutput("mekanism:isotopic_centrifuge")
@@ -17,7 +16,6 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 		.id("mekanism:isotopic_centrifuge")
-
 
 	// 化学溶解室
 	addRecipe(neoecoae)
@@ -34,7 +32,6 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanism:chemical_dissolution_chamber")
 
-
 	// 化学清洗室
 	addRecipe(neoecoae)
 		.itemOutput("mekanism:chemical_washer")
@@ -49,7 +46,6 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 		.id("mekanism:chemical_washer")
-
 
 	// 化学结晶室
 	addRecipe(neoecoae)

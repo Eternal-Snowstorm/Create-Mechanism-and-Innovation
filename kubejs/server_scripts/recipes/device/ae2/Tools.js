@@ -2,7 +2,6 @@
 ServerEvents.recipes((event) => {
 	let { kubejs, thermal_extra, neoecoae } = event.getRecipes()
 
-
 	// 卡
 	thermal_extra.component_assembly("4x ae2:basic_card", [
 		"#forge:plates/iron",
@@ -11,14 +10,12 @@ ServerEvents.recipes((event) => {
 		"#forge:ingots/electrum"
 	]).id("ae2:materials/basiccard")
 
-
 	thermal_extra.component_assembly("4x ae2:advanced_card", [
 		"#forge:plates/silver",
 		Mechanisms.SMART.COM,
 		"thermal:cured_rubber",
 		"#forge:ingots/etrium"
 	]).id("ae2:materials/advancedcard")
-
 
 	thermal_extra.component_assembly("ae2:wireless_booster", [
 		"#forge:plates/silver",
@@ -27,6 +24,16 @@ ServerEvents.recipes((event) => {
 		"#forge:plates/etrium"
 	]).id("ae2:network/wireless_booster")
 
+	// 内存卡
+	kubejs.shaped("ae2:memory_card", [
+		"PMP",
+		"WEW"
+	], {
+		P: "#forge:plates/iron",
+		M: Mechanisms.SMART.COM,
+		W: "#forge:wires/signalum",
+		E: "#forge:plates/electrum"
+	}).id("ae2:tools/network_memory_card")
 
 	// 熵变机械臂
 	thermal_extra.component_assembly("ae2:entropy_manipulator", [
@@ -37,14 +44,12 @@ ServerEvents.recipes((event) => {
 		"#forge:rods/silver"
 	]).id("ae2:tools/misctools_entropy_manipulator")
 
-
 	// 充能手杖
 	thermal_extra.component_assembly("ae2:charged_staff", [
 		Mechanisms.COIL.COM,
 		"ae2:charged_certus_quartz_crystal",
 		"#forge:rods/silver"
 	]).id("ae2:tools/misctools_charged_staff")
-
 
 	// 染色器
 	thermal_extra.component_assembly("ae2:color_applicator", [
@@ -55,7 +60,6 @@ ServerEvents.recipes((event) => {
 		"#forge:rods/silver"
 	]).id("ae2:tools/network_color_applicator")
 
-
 	// 物质炮
 	thermal_extra.component_assembly("ae2:matter_cannon", [
 		Mechanisms.SMART.COM,
@@ -65,13 +69,11 @@ ServerEvents.recipes((event) => {
 		"#forge:rods/silver"
 	]).id("ae2:tools/matter_cannon")
 
-
 	// 元件工作台
 	thermal_extra.component_assembly("ae2:cell_workbench", [
 		Casing.SMART,
 		"ae2:calculation_processor"
 	]).id("ae2:network/blocks/cell_workbench")
-
 
 	// 放置工具
 	thermal_extra.component_assembly("meplacementtool:me_placement_tool", [
@@ -80,14 +82,12 @@ ServerEvents.recipes((event) => {
 		"constructionwand:iron_wand"
 	]).id("meplacementtool:me_placement_tool")
 
-
 	// 多方块放置工具
 	thermal_extra.component_assembly("meplacementtool:multiblock_placement_tool", [
 		"#forge:rods/silver",
 		"ae2:wireless_terminal",
 		"constructionwand:infinity_wand"
 	]).id("meplacementtool:multiblock_placement_tool")
-
 
 	//  线缆放置工具
 	thermal_extra.component_assembly("meplacementtool:me_cable_placement_tool", [

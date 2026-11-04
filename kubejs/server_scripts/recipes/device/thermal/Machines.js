@@ -2,7 +2,6 @@
 ServerEvents.recipes((event) => {
 	let { thermal_extra, create, thermal, kubejs } = event.recipes
 
-
 	// 磨粉机
 	addComponRecipe(thermal_extra, "thermal:machine_pulverizer", [
 		Casing.THERMAL,
@@ -10,7 +9,6 @@ ServerEvents.recipes((event) => {
 		"cmi:thermal_unit",
 		"#forge:gears/iron"
 	]).id("thermal:machine_pulverizer")
-
 
 	// 灌装机
 	addComponRecipe(thermal_extra, "thermal:machine_bottler", [
@@ -20,7 +18,6 @@ ServerEvents.recipes((event) => {
 		Mechanisms.COPPER.COM
 	]).id("thermal:machine_bottler")
 
-
 	// 合成器
 	addComponRecipe(thermal_extra, "thermal:machine_crafter", [
 		Casing.THERMAL,
@@ -28,7 +25,6 @@ ServerEvents.recipes((event) => {
 		"cmi:thermal_unit",
 		"create:crafting_blueprint"
 	]).id("thermal:machine_crafter")
-
 
 	// 锯木机
 	addComponRecipe(thermal_extra, "thermal:machine_sawmill", [
@@ -38,7 +34,6 @@ ServerEvents.recipes((event) => {
 		"thermal:saw_blade"
 	]).id("thermal:machine_sawmill")
 
-
 	// 粉末
 	addComponRecipe(thermal_extra, "cmi:void_dust_collector", [
 		Casing.THERMAL,
@@ -46,7 +41,6 @@ ServerEvents.recipes((event) => {
 		"cmi:thermal_unit",
 		"thermal:drill_head"
 	])
-
 
 	// 离心机
 	addComponRecipe(thermal_extra, "thermal:machine_centrifuge", [
@@ -56,7 +50,6 @@ ServerEvents.recipes((event) => {
 		"#vintageimprovements:springs"
 	]).id("thermal:machine_centrifuge")
 
-
 	// 电炉
 	addComponRecipe(thermal_extra, "thermal:machine_furnace", [
 		Casing.THERMAL,
@@ -64,7 +57,6 @@ ServerEvents.recipes((event) => {
 		"cmi:blaze_unit",
 		"create:blaze_burner"
 	]).id("thermal:machine_furnace")
-
 
 	// 感应炉
 	addComponRecipe(thermal_extra, "thermal:machine_smelter", [
@@ -74,7 +66,6 @@ ServerEvents.recipes((event) => {
 		"create:whisk"
 	]).id("thermal:machine_smelter")
 
-
 	// 精炼机
 	addComponRecipe(thermal_extra, "thermal:machine_refinery", [
 		Casing.THERMAL,
@@ -82,7 +73,6 @@ ServerEvents.recipes((event) => {
 		"cmi:blaze_unit",
 		Mechanisms.IRON.COM
 	]).id("thermal:machine_refinery")
-
 
 	// 结晶器
 	addComponRecipe(thermal_extra, "thermal:machine_crystallizer", [
@@ -92,7 +82,6 @@ ServerEvents.recipes((event) => {
 		"create:propeller"
 	]).id("thermal:machine_crystallizer")
 
-
 	// 脱水机
 	addComponRecipe(thermal_extra, "thermal_extra:endothermic_dehydrator", [
 		Casing.THERMAL,
@@ -100,7 +89,6 @@ ServerEvents.recipes((event) => {
 		"cmi:blaze_unit",
 		Mechanisms.NETHER.COM
 	]).id("thermal_extra:crafting/endothermic_dehydrator")
-
 
 	// 熔岩炉
 	addComponRecipe(thermal_extra, "thermal:machine_crucible", [
@@ -110,7 +98,6 @@ ServerEvents.recipes((event) => {
 		Mechanisms.STONE.COM
 	]).id("thermal:machine_crucible")
 
-
 	// 高级精炼机
 	addComponRecipe(thermal_extra, "thermal_extra:advanced_refinery", [
 		"thermal:machine_refinery",
@@ -118,7 +105,6 @@ ServerEvents.recipes((event) => {
 		"cmi:blaze_unit",
 		Mechanisms.IRON.COM
 	]).id("thermal_extra:crafting/advanced_refinery")
-
 
 	// TNT
 	addComponRecipe(thermal_extra, "thermal_extra:nitratic_igniter", [
@@ -128,7 +114,6 @@ ServerEvents.recipes((event) => {
 		"#forge:gears/titanium"
 	]).id("thermal_extra:crafting/nitratic_igniter")
 
-
 	// 热解炉
 	addComponRecipe(thermal_extra, "thermal:machine_pyrolyzer", [
 		Casing.THERMAL,
@@ -136,7 +121,6 @@ ServerEvents.recipes((event) => {
 		"cmi:basalz_unit",
 		"create:blaze_burner"
 	]).id("thermal:machine_pyrolyzer")
-
 
 	// 冲压机
 	addComponRecipe(thermal_extra, "thermal:machine_press", [
@@ -146,7 +130,6 @@ ServerEvents.recipes((event) => {
 		"cmi:hammer_head"
 	]).id("thermal:machine_press")
 
-
 	// 有机灌注
 	addComponRecipe(thermal_extra, "thermal:machine_insolator", [
 		Casing.THERMAL,
@@ -154,7 +137,6 @@ ServerEvents.recipes((event) => {
 		"cmi:blitz_unit",
 		Mechanisms.NATURE.COM
 	]).id("thermal:machine_insolator")
-
 
 	// 酿造
 	addComponRecipe(thermal_extra, "thermal:machine_brewer", [
@@ -164,7 +146,6 @@ ServerEvents.recipes((event) => {
 		Mechanisms.POTION.COM
 	]).id("thermal:machine_brewer")
 
-
 	// 冷冻机
 	addComponRecipe(thermal_extra, "thermal:machine_chiller", [
 		Casing.THERMAL,
@@ -172,7 +153,6 @@ ServerEvents.recipes((event) => {
 		"cmi:blizz_unit",
 		"create:propeller"
 	]).id("thermal:machine_chiller")
-
 
 	// 混合机
 	addComponRecipe(thermal_extra, "thermal_extra:fluid_mixer", [

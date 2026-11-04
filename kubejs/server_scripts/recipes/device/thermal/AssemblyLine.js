@@ -3,7 +3,6 @@ ServerEvents.recipes((event) => {
 	let { thermal_extra, create, thermal } = event.recipes
 	let inc = "cmi:incomplete_thermal_devices"
 
-
 	// 装配机
 	create.sequenced_assembly("thermal_extra:component_assembly", Casing.THERMAL, [
 		create.deploying(inc, [inc, Mechanisms.THERMAL.COM]),
@@ -13,14 +12,12 @@ ServerEvents.recipes((event) => {
 		.loops(1)
 		.id("thermal_extra:crafting/component_assembly")
 
-
 	addComponRecipe(thermal_extra, "thermal_extra:component_assembly", [
 		Casing.THERMAL,
 		Mechanisms.THERMAL.COM,
 		"thermal:rf_coil",
 		"create:brass_hand"
 	])
-
 
 	// 热力单元
 	addComponRecipe(thermal_extra, "cmi:thermal_unit", [

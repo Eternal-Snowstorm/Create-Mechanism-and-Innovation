@@ -2,7 +2,6 @@
 ServerEvents.recipes((event) => {
 	let { thermal_extra, neoecoae } = event.getRecipes()
 
-
 	// 中子活化器
 	addRecipe(neoecoae)
 		.itemOutput("mekanism:solar_neutron_activator")
@@ -18,7 +17,6 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanism:solar_neutron_activator")
 
-
 	// 加压反应室
 	addRecipe(neoecoae)
 		.itemOutput("mekanism:pressurized_reaction_chamber")
@@ -33,7 +31,6 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 		.id("mekanism:pressurized_reaction_chamber")
-
 
 	// 反质子核
 	addRecipe(neoecoae)

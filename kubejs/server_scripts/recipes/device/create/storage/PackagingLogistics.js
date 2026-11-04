@@ -2,7 +2,6 @@
 ServerEvents.recipes((event) => {
 	let { kubejs } = event.getRecipes()
 
-
 	// 打包机
 	kubejs.shaped("2x create:packager", [
 		"PMP",
@@ -16,7 +15,6 @@ ServerEvents.recipes((event) => {
 		C: Casing.ANDESITE
 	}).id("create:crafting/logistics/packager")
 
-
 	// 流体打包机
 	kubejs.shaped("2x fluidlogistics:fluid_packager", [
 		"PMP",
@@ -29,7 +27,6 @@ ServerEvents.recipes((event) => {
 		B: "fluidlogistics:waterproof_cardboard_block",
 		C: Casing.COPPER
 	}).id("fluidlogistics:fluid_packager")
-
 
 	// 蛙港
 	kubejs.shaped("create:package_frogport", [
