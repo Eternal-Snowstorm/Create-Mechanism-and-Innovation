@@ -314,7 +314,7 @@ ServerEvents.recipes((event) => {
 		.laserCutting(4000)
 		.build()
 
-	// 量子处理器
+	// 超导处理器
 	new SequencedAssemblyRecipe(Seq.SUPERCONDUCTING)
 		.curving("neoecoae:superconducting_processor_press")
 		.deploying("neoecoae:crystal_matrix")
