@@ -143,4 +143,40 @@ ServerEvents.recipes((event) => {
 		"#ae2:glass_cable",
 		Mechanisms.ENDER.COM
 	]).id("ae2:network/blocks/spatial_io_port")
+
+	// 拓展充能器
+	thermal_extra.component_assembly("expatternprovider:ex_charger", [
+		Mechanisms.SMART.COM,
+		"ae2:charger"
+	]).id("expatternprovider:ex_charger")
+
+	// 装罐机
+	thermal_extra.component_assembly("expatternprovider:caner", [
+		Casing.SMART,
+		Mechanisms.COPPER.COM
+	]).id("expatternprovider:caner")
+
+	// 拓展压印机
+	addRecipe(neoecoae)
+		.itemOutput("expatternprovider:ex_inscriber")
+		.inputItems([
+			Casing.COMPUTE,
+			"ae2:inscriber",
+			Mechanisms.COMPUTE.COM,
+			"neoecoae:energized_fluix_crystal"
+		])
+		.energy(2000)
+		.id("expatternprovider:ex_inscriber")
+
+	// 拓展IO端口
+	addRecipe(neoecoae)
+		.itemOutput("expatternprovider:ex_io_port")
+		.inputItems([
+			Casing.COMPUTE,
+			"ae2:io_port",
+			Mechanisms.COMPUTE.COM,
+			"neoecoae:energized_fluix_crystal"
+		])
+		.energy(2000)
+		.id("expatternprovider:ex_io_port")
 })

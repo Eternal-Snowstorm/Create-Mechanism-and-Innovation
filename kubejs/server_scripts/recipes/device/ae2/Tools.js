@@ -38,7 +38,7 @@ ServerEvents.recipes((event) => {
 	// 熵变机械臂
 	thermal_extra.component_assembly("ae2:entropy_manipulator", [
 		Mechanisms.SMART.COM,
-		Mechanisms.NATURE.COM,
+		Mechanisms.NETHER.COM,
 		"ae2:fluix_crystal",
 		"ae2:energy_cell",
 		"#forge:rods/silver"
