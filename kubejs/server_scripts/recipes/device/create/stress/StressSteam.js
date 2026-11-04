@@ -103,7 +103,7 @@ ServerEvents.recipes((event) => {
 		Casing.COPPER
 	], [
 		create.deploying(Inc.ENGINE, [
-			Inc.ENGINE.ENGINE,
+			Inc.ENGINE,
 			"cmi:bronze_mechanism"
 		]),
 		create.cutting(Inc.ENGINE, [
