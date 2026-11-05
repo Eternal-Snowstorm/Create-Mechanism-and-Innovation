@@ -49,8 +49,6 @@ ServerEvents.recipes((event) => {
 		Mechanisms.SMART.COM
 	]).id("ae2:network/crafting/cpu_crafting_unit")
 
-	// 合成存储器
-
 	// 并行处理单元
 	kubejs.shapeless("ae2:crafting_accelerator", [
 		"ae2:crafting_unit",
