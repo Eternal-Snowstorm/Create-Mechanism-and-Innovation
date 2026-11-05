@@ -91,6 +91,7 @@ graphflow-out/*
 !/mods/achievement_toast-1.20.1-forge-*.jar
 !/mods/easyrepair-forge-1.20.1-*.jar
 !/mods/Steam-Letters-*.jar
+!/mods/neoecoae*.jar
 
 # ResourcePacks
 /resourcepacks/*
