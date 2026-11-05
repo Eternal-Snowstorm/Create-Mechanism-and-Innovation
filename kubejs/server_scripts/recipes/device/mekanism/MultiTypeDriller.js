@@ -3,7 +3,7 @@ ServerEvents.recipes((event) => {
 	let { thermal_extra, neoecoae } = event.getRecipes()
 
 	// 多元钻探机
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("cmi:multi_type_driller")
 		.inputItems([
 			"cmi:airtight_casing",
@@ -14,7 +14,7 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("cmi:driller_bearing")
 		.inputItems([
 			"cmi:airtight_casing",
@@ -23,7 +23,7 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("cmi:driller_head")
 		.inputItems([
 			"cmi:airtight_casing",
@@ -33,7 +33,7 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("cmi:driller_fluid_pump")
 		.inputItems([
 			"cmi:airtight_casing",
@@ -43,7 +43,7 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("cmi:driller_gas_pump")
 		.inputItems([
 			"cmi:airtight_casing",

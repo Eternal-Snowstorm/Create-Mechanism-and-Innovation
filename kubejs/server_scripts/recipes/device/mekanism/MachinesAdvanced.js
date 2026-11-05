@@ -3,7 +3,7 @@ ServerEvents.recipes((event) => {
 	let { thermal_extra, neoecoae } = event.getRecipes()
 
 	// 提纯仓
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:purification_chamber")
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
 		.inputItems([
@@ -17,7 +17,7 @@ ServerEvents.recipes((event) => {
 		.id("mekanism:purification_chamber")
 
 	// 化学氧化机
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:chemical_oxidizer")
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
 		.inputItems([
@@ -31,7 +31,7 @@ ServerEvents.recipes((event) => {
 		.id("mekanism:chemical_oxidizer")
 
 	// 化学压射室
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:chemical_injection_chamber")
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
 		.inputItems([
@@ -46,7 +46,7 @@ ServerEvents.recipes((event) => {
 		.id("mekanism:chemical_injection_chamber")
 
 	// 化学灌注室
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:chemical_infuser")
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
 		.inputItems([

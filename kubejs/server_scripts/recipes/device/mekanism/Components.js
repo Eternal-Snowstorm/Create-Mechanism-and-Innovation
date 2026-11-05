@@ -3,7 +3,7 @@ ServerEvents.recipes((event) => {
 	let { thermal_extra, neoecoae } = event.getRecipes()
 
 	// 设备组件
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("cmi:basalz_general_component")
 		.inputFluid(Fluid.of("thermalconstruct:basalz_blood", 1000))
 		.inputItems([
@@ -14,7 +14,7 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("cmi:blaze_general_component")
 		.inputFluid(Fluid.of("tconstruct:blazing_blood", 1000))
 		.inputItems([
@@ -25,7 +25,7 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("cmi:blitz_general_component")
 		.inputFluid(Fluid.of("thermalconstruct:blitz_blood", 1000))
 		.inputItems([
@@ -36,7 +36,7 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("cmi:blizz_general_component")
 		.inputFluid(Fluid.of("thermalconstruct:blizz_blood", 1000))
 		.inputItems([
@@ -47,7 +47,7 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("2x mekanism:steel_casing")
 		.inputItems([
 			"2x #forge:plates/stainless_steel",

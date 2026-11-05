@@ -2,13 +2,6 @@
 ServerEvents.recipes((event) => {
 	let { kubejs, thermal_extra, neoecoae } = event.getRecipes()
 
-	// 缓存元件
-	thermal_extra.component_assembly("expatternprovider:ingredient_buffer", [
-		Casing.SMART,
-		"ae2:quartz_glass",
-		Mechanisms.WOODEN.COM
-	]).id("expatternprovider:ingredient_buffer")
-
 	// 无线连接器
 	thermal_extra.component_assembly("expatternprovider:wireless_connect", [
 		Casing.SMART,
@@ -87,17 +80,6 @@ ServerEvents.recipes((event) => {
 		"cmi:magnetic_contact",
 		Mechanisms.COMPUTE.COM
 	]).id("me_beam_former:omni_beam_former_block")
-
-	// 计算机壳
-	neoecoae.integrated_working_station()
-		.itemOutput("cmi:computing_casing")
-		.inputItems([
-			"#forge:plates/stainless_steel",
-			"#forge:plates/platinum",
-			"cmi:entro_crystal",
-			"cmi:silicon_rubber"
-		])
-		.inputFluid(Fluid.of("thermal:resin", 100))
 
 	// 无线能源感应塔
 	neoecoae.integrated_working_station()

@@ -35,6 +35,24 @@ ServerEvents.recipes((event) => {
 		E: "#forge:plates/electrum"
 	}).id("ae2:tools/network_memory_card")
 
+	// 网络工具
+	kubejs.shapeless("ae2:network_tool", [
+		"#ae2:quartz_wrench",
+		Mechanisms.SMART.COM
+	]).id("ae2:tools/network_tool")
+
+	// 样板编辑器
+	kubejs.shapeless("expatternprovider:pattern_modifier", [
+		"ae2:blank_pattern",
+		Mechanisms.SMART.COM
+	]).id("expatternprovider:pattern_modifier")
+
+	// 无线连接工具
+	kubejs.shapeless("expatternprovider:wireless_tool", [
+		"ae2:wireless_receiver",
+		Mechanisms.SMART.COM
+	]).id("expatternprovider:wireless_tool")
+
 	// 熵变机械臂
 	thermal_extra.component_assembly("ae2:entropy_manipulator", [
 		Mechanisms.SMART.COM,
@@ -56,7 +74,6 @@ ServerEvents.recipes((event) => {
 		Mechanisms.SMART.COM,
 		Mechanisms.COLOR.COM,
 		"#forge:plates/silver",
-		"ae2:energy_cell",
 		"#forge:rods/silver"
 	]).id("ae2:tools/network_color_applicator")
 
@@ -65,15 +82,16 @@ ServerEvents.recipes((event) => {
 		Mechanisms.SMART.COM,
 		Mechanisms.ANDESITE.COM,
 		"#forge:ingots/silver",
-		"ae2:energy_cell",
 		"#forge:rods/silver"
 	]).id("ae2:tools/matter_cannon")
 
-	// 元件工作台
-	thermal_extra.component_assembly("ae2:cell_workbench", [
-		Casing.SMART,
-		"ae2:calculation_processor"
-	]).id("ae2:network/blocks/cell_workbench")
+	// 封装胶带
+	thermal_extra.component_assembly("expatternprovider:me_packing_tape", [
+		Mechanisms.SMART.COM,
+		"create:bound_cardboard_block",
+		"#forge:ingots/silver",
+		"#forge:rods/silver"
+	]).id("expatternprovider:tape")
 
 	// 放置工具
 	thermal_extra.component_assembly("meplacementtool:me_placement_tool", [

@@ -2,14 +2,6 @@
 ServerEvents.recipes((event) => {
 	let { kubejs, thermal_extra, neoecoae } = event.getRecipes()
 
-	// 照明面板
-	thermal_extra.component_assembly("ae2:semi_dark_monitor", [
-		"ae2:quartz_glass",
-		Mechanisms.PHOTO.COM,
-		"#forge:plates/silver",
-		"#forge:plates/signalum"
-	]).id("ae2:network/parts/panels_semi_dark_monitor")
-
 	// ME终端
 	thermal_extra.component_assembly("ae2:terminal", [
 		"#ae2:illuminated_panel",
@@ -50,11 +42,4 @@ ServerEvents.recipes((event) => {
 		"ae2:annihilation_core",
 		"ae2:formation_core"
 	]).id("ae2:network/parts/monitors_conversion")
-
-	// ME箱子
-	thermal_extra.component_assembly("ae2:chest", [
-		Casing.SMART,
-		"ae2:terminal",
-		"#ae2:glass_cable"
-	]).id("ae2:network/blocks/storage_chest")
 })

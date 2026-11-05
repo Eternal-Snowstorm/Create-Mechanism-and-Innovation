@@ -543,13 +543,16 @@ ServerEvents.tags("item", (event) => {
 
 	// 模具
 	event.get("thermal:crafting/dies")
-		.add("cmi:coin_mold")
+		.add("cmi:plate_mold")
 		.add("cmi:gear_mold")
+		.add("cmi:rod_mold")
+		.add("cmi:wire_mold")
+		.add("cmi:coin_mold")
+		.add("cmi:bullet_mold")
+		.add("cmi:mechanism_mold")
 		.add("cmi:2x2_packing_mold")
 		.add("cmi:3x3_packing_mold")
 		.add("cmi:unpack_mold")
-		.add("cmi:plate_mold")
-		.add("cmi:rod_mold")
 
 	// 催生晶体
 	event.get("cmi:crystals")
@@ -822,7 +825,7 @@ ServerEvents.tags("item", (event) => {
 
 	event.get("forge:plates/andesite")
 		.add("#forge:plates/andesite_alloy")
-	
+
 	event.get("forge:plates/andesite_alloy")
 		.add("#forge:plates/andesite")
 

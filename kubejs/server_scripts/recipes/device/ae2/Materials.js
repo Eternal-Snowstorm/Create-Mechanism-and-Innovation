@@ -2,43 +2,15 @@
 ServerEvents.recipes((event) => {
 	let { kubejs, thermal_extra, neoecoae } = event.getRecipes()
 
-	// 福鲁伊克斯色ME玻璃线缆
-	kubejs.shaped("8x ae2:fluix_glass_cable", [
-		"AAA",
-		"ABA",
-		"AAA"
-	], {
-		B: "ae2:fluix_crystal",
-		A: "cmi:optical_fiber"
-	}).id("ae2:network/cables/glass_fluix")
+	// 无线接收器
+	thermal_extra.component_assembly("ae2:wireless_receiver", [
+		"ae2:fluix_pearl",
+		"create:transmitter",
+		"#forge:plates/iron",
+		Mechanisms.ENDER.COM
+	]).id("ae2:network/wireless_part")
 
-	// 石英纤维
-	kubejs.shaped("ae2:quartz_fiber", [
-		"AA",
-		"AA"
-	], {
-		A: "cmi:optical_fiber"
-	}).id("ae2:network/parts/quartz_fiber_part")
-
-	// 网络工具
-	kubejs.shapeless("ae2:network_tool", [
-		"#ae2:quartz_wrench",
-		Mechanisms.SMART.COM
-	]).id("ae2:tools/network_tool")
-
-	// 样板编辑器
-	kubejs.shapeless("expatternprovider:pattern_modifier", [
-		"ae2:blank_pattern",
-		Mechanisms.SMART.COM
-	]).id("expatternprovider:pattern_modifier")
-
-	// 无线连接工具
-	kubejs.shapeless("expatternprovider:wireless_tool", [
-		"ae2:wireless_receiver",
-		Mechanisms.SMART.COM
-	]).id("expatternprovider:wireless_tool")
-
-	// 机壳
+	// 智能机壳
 	thermal_extra.component_assembly("2x cmi:smart_casing", [
 		"#forge:plates/iron",
 		"#forge:plates/silver",
@@ -46,6 +18,17 @@ ServerEvents.recipes((event) => {
 		"thermal:cured_rubber",
 		Fluid.of("thermal:resin", 100)
 	])
+
+	// 计算机壳
+	neoecoae.integrated_working_station()
+		.itemOutput("cmi:computing_casing")
+		.inputFluid(Fluid.of("thermal:resin", 100))
+		.inputItems([
+			"#forge:plates/stainless_steel",
+			"#forge:plates/platinum",
+			"cmi:entro_crystal",
+			"cmi:silicon_rubber"
+		])
 
 	// 样板
 	thermal_extra.component_assembly("4x ae2:blank_pattern", [

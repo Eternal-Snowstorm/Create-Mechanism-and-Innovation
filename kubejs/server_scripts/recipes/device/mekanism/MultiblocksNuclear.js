@@ -3,7 +3,7 @@ ServerEvents.recipes((event) => {
 	let { thermal_extra, neoecoae } = event.getRecipes()
 
 	// 裂变反应堆
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("2x mekanismgenerators:reactor_glass")
 		.inputFluid(Fluid.of("tconstruct:molten_lead", 90))
 		.inputItems([
@@ -13,7 +13,7 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanismgenerators:reactor/glass")
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanismgenerators:fission_reactor_casing")
 		.inputFluid(Fluid.tag("tag", "forge:cements", 1000))
 		.inputItems([
@@ -23,7 +23,7 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanismgenerators:fission_reactor/casing")
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanismgenerators:fission_reactor_port")
 		.inputItems([
 			"mekanismgenerators:fission_reactor_casing",
@@ -33,7 +33,7 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanismgenerators:fission_reactor/port")
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanismgenerators:fission_reactor_logic_adapter")
 		.inputItems([
 			"mekanismgenerators:fission_reactor_casing",
@@ -43,7 +43,7 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanismgenerators:fission_reactor/logic_adapter")
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanismgenerators:control_rod_assembly")
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
 		.inputItems([
@@ -57,7 +57,7 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanismgenerators:fission_reactor/control_rod_assembly")
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanismgenerators:fission_fuel_assembly")
 		.inputFluid(Fluid.tag("tag", "forge:cements", 1000))
 		.inputItems([
@@ -72,7 +72,7 @@ ServerEvents.recipes((event) => {
 		.id("mekanismgenerators:fission_reactor/fuel_assembly")
 
 	// 聚变反应堆
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("2x mekanismgenerators:fusion_reactor_frame")
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
 		.inputItems([
@@ -85,7 +85,7 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanismgenerators:reactor/frame")
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanismgenerators:fusion_reactor_controller")
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
 		.inputItems([
@@ -97,7 +97,7 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanismgenerators:reactor/controller")
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanismgenerators:laser_focus_matrix")
 		.inputItems([
 			"mekanismgenerators:reactor_glass",
@@ -107,7 +107,7 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanismgenerators:laser_focus_matrix")
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanismgenerators:fusion_reactor_port")
 		.inputItems([
 			"mekanismgenerators:fusion_reactor_frame",
@@ -117,7 +117,7 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanismgenerators:reactor/port")
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanismgenerators:fusion_reactor_logic_adapter")
 		.inputItems([
 			Casing.STAINLESS_STEEL,
@@ -128,7 +128,7 @@ ServerEvents.recipes((event) => {
 		.id("mekanismgenerators:reactor/logic_adapter")
 
 	// 激光器
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("2x mekanism:laser")
 		.inputFluid(Fluid.of("cmi:glacious_cryotheum", 1000))
 		.inputItems([
@@ -142,7 +142,7 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanism:laser")
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:laser_amplifier")
 		.inputFluid(Fluid.of("cmi:glacious_cryotheum", 1000))
 		.inputItems([
@@ -154,7 +154,7 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanism:laser_amplifier")
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:laser_tractor_beam")
 		.inputFluid(Fluid.of("cmi:glacious_cryotheum", 1000))
 		.inputItems([
@@ -168,7 +168,7 @@ ServerEvents.recipes((event) => {
 		.id("mekanism:laser_tractor_beam")
 
 	// 超临界
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:sps_casing")
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
 		.inputItems([
@@ -183,7 +183,7 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanism:sps_casing")
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:sps_port")
 		.inputItems([
 			"mekanism:sps_casing",
@@ -193,7 +193,7 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanism:sps_port")
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:supercharged_coil")
 		.inputFluid(Fluid.of("cmi:glacious_cryotheum", 1000))
 		.inputItems([

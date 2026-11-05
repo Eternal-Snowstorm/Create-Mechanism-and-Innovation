@@ -3,7 +3,7 @@ ServerEvents.recipes((event) => {
 	let { thermal_extra, neoecoae } = event.getRecipes()
 
 	// 电力高炉
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("cmi:electronic_blast_furnace")
 		.inputItems([
 			Casing.STAINLESS_STEEL,
@@ -15,7 +15,7 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 
 	// 富集仓
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:enrichment_chamber")
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
 		.inputItems([
@@ -29,7 +29,7 @@ ServerEvents.recipes((event) => {
 		.id("mekanism:enrichment_chamber")
 
 	// 锯木机
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:precision_sawmill")
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
 		.inputItems([
@@ -43,7 +43,7 @@ ServerEvents.recipes((event) => {
 		.id("mekanism:precision_sawmill")
 
 	// 融合机
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:combiner")
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
 		.inputItems([
@@ -57,7 +57,7 @@ ServerEvents.recipes((event) => {
 		.id("mekanism:combiner")
 
 	// 粉碎机
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:crusher")
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
 		.inputItems([
@@ -71,7 +71,7 @@ ServerEvents.recipes((event) => {
 		.id("mekanism:crusher")
 
 	// 熔炼炉
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:energized_smelter")
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
 		.inputItems([
@@ -85,7 +85,7 @@ ServerEvents.recipes((event) => {
 		.id("mekanism:energized_smelter")
 
 	// 锇压缩仓
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:osmium_compressor")
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
 		.inputItems([
