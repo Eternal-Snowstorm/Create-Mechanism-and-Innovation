@@ -146,18 +146,30 @@ ServerEvents.recipes((event) => {
 
 	// 拓展充能器
 	thermal_extra.component_assembly("expatternprovider:ex_charger", [
+		Casing.SMART,
 		Mechanisms.SMART.COM,
+		"#forge:gems/fluix",
 		"ae2:charger"
 	]).id("expatternprovider:ex_charger")
 
 	// 装罐机
 	thermal_extra.component_assembly("expatternprovider:caner", [
 		Casing.SMART,
+		Mechanisms.SMART.COM,
+		"#forge:gems/fluix",
 		Mechanisms.COPPER.COM
 	]).id("expatternprovider:caner")
 
+	// 水晶修复器
+	thermal_extra.component_assembly("expatternprovider:crystal_fixer", [
+		Casing.SMART,
+		Mechanisms.SMART.COM,
+		"#forge:gems/fluix",
+		"neoecoae:energized_crystal"
+	]).id("expatternprovider:crystal_fixer")
+
 	// 拓展压印机
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("expatternprovider:ex_inscriber")
 		.inputItems([
 			Casing.COMPUTE,
@@ -169,7 +181,7 @@ ServerEvents.recipes((event) => {
 		.id("expatternprovider:ex_inscriber")
 
 	// 拓展IO端口
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("expatternprovider:ex_io_port")
 		.inputItems([
 			Casing.COMPUTE,
@@ -179,4 +191,32 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 		.id("expatternprovider:ex_io_port")
+
+	// 电路切片机
+	neoecoae.integrated_working_station()
+		.itemOutput("expatternprovider:circuit_cutter")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
+		.inputItems([
+			Casing.COMPUTE,
+			"3x thermal:saw_blade",
+			Mechanisms.COMPUTE.COM,
+			"neoecoae:energized_fluix_crystal"
+		])
+		.energy(2000)
+		.id("expatternprovider:circuit_cutter")
+
+	// 拓展电路切片机
+	neoecoae.integrated_working_station()
+		.itemOutput("extendedae_plus:circuit_cutter_plus")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
+		.inputItems([
+			Casing.COMPUTE,
+			"expatternprovider:circuit_cutter",
+			Mechanisms.COMPUTE.COM,
+			"neoecoae:energized_fluix_crystal",
+			Mechanisms.GOLD.COM,
+			"4x extendedae_plus:oblivion_singularity"
+		])
+		.energy(2000)
+		.id("extendedae_plus:circuit_cutter_plus")
 })
