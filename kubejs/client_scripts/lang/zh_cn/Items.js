@@ -82,7 +82,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("lime_dust", "石灰粉")
 	addItemLang("asurine_dust", "皓蓝石粉")
 	addItemLang("crimsite_dust", "绯红岩粉")
-	addItemLang("ochrum_dust", "赭金沙粉")
+	addItemLang("ochrum_dust", "赭金砂粉")
 	addItemLang("veridium_dust", "辉绿岩粉")
 	addItemLang("calcite_dust", "方解石粉")
 	addItemLang("galena_dust", "方铅岩粉")

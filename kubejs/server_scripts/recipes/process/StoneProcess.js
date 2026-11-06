@@ -62,12 +62,11 @@ ServerEvents.recipes((event) => {
 		"4x cmi:crimsite_dust"
 	])
 
-	// 赭金沙
+	// 赭金砂
 	create.crushing([
 		"2x cmi:ochrum_dust",
 		Item.of("cmi:ochrum_dust").withChance(0.5)
-	], "#create:stone_types/ochrum"
-	)
+	], "#create:stone_types/ochrum")
 
 	vintageimprovements.vacuumizing([
 		"thermal_extra:gold_ore_chunk",
