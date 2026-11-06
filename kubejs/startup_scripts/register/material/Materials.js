@@ -346,7 +346,6 @@ NebulaEvents.registerMaterial((event) => {
 
 	// 铀
 	event.register("uranium", MiningLevels.DIAMOND)
-		.color(0x5F6D55, 0x6D7C61)
 		.isMetal()
 		.ingotWithTexture(Cmi.loadResource("item/material/material/ingot/uranium"))
 		.plateWithTexture(Cmi.loadResource("item/material/material/plate/uranium"))
