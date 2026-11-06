@@ -783,9 +783,13 @@ ServerEvents.tags("item", (event) => {
 	// 粒 
 	event.get("forge:nuggets")
 		.add("createdeco:industrial_iron_nugget")
+		.remove("alexscaves:uranium_shard")
 
 	event.get("forge:nuggets/industrial_iron")
 		.add("createdeco:industrial_iron_nugget")
+
+	event.get("forge:nuggets/uranium")
+		.remove("alexscaves:uranium_shard")
 
 	removeTagAllId("forge:nuggets/netherite")
 		.add("tconstruct:netherite_nugget")
@@ -849,6 +853,8 @@ ServerEvents.tags("item", (event) => {
 
 	event.get("forge:dusts/salt")
 		.add("#forge:salt")
+
+	add("forge:dusts/flux", "fluxnetworks:flux_dust")
 
 	// 宝石
 	add("forge:gems/charged_amethyst", "create_rns:resonant_amethyst")
@@ -963,12 +969,10 @@ ServerEvents.tags("item", (event) => {
 		"zinc"
 	]
 	rawNuggetMetals.forEach((metal) => {
-		event.get(`forge:raw_nuggets/${metal}`)
-			.add(`thermal_extra:${metal}_ore_chunk`)
-
-		event.get(`forge:raw_nuggets`)
-			.add(`thermal_extra:${metal}_ore_chunk`)
+		add(`forge:raw_nuggets/${metal}`, `thermal_extra:${metal}_ore_chunk`)
 	})
+
+	add("forge:raw_nuggets/uranium", "alexscaves:uranium_shard")
 
 	// 遍历装备
 	let armorTypes = [

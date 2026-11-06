@@ -44,13 +44,9 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiToolType.SHOVEL.tag())
 		.tagBlock(CmiMiningLevel.WOODEN.tag())
 		.item((builder) => {
-			builder.modelJson({
-				"parent": "minecraft:item/generated",
-				"textures": {
-					"layer0": "cmi:item/material/stone_pebble"
-				}
-			})
+			builder.texture("cmi:item/material/stone_pebble")
 		})
+
 
 	// 破旧的存钱罐
 	addBlock("piggy_bank", "cardinal")
@@ -173,38 +169,32 @@ StartupEvents.registry("block", (event) => {
 		.resistance(5)
 		.tagBlock(CmiToolType.PICKAXE.tag())
 		.tagBlock(CmiMiningLevel.STONE.tag())
-		.item((item) => {
-			item.tag("forge:storage_blocks/entro")
-				.tag("forge:storage_blocks")
-		})
+		.tagBoth("forge:storage_blocks/entro")
+		.tagBoth("forge:storage_blocks")
 
 	// 铀块
 	addBlock("uranium_block")
-		.model(`cmi:block/custom/uranium_block`)
+		.model("cmi:block/custom/uranium_block")
 		.soundType(SoundType.NETHERITE_BLOCK)
 		.hardness(5)
 		.resistance(5)
 		.defaultTranslucent()
 		.tagBlock(CmiToolType.PICKAXE.tag())
 		.tagBlock(CmiMiningLevel.STONE.tag())
-		.item((item) => {
-			item.tag("forge:storage_blocks/uranium")
-				.tag("forge:storage_blocks")
-		})
+		.tagBoth("forge:storage_blocks/uranium")
+		.tagBoth("forge:storage_blocks")
 
 	// 水晶块
 	addBlock("crystal_block")
-		.model(`cmi:block/custom/crystal_block`)
+		.model("cmi:block/custom/crystal_block")
 		.soundType(SoundType.STONE)
 		.hardness(5)
 		.resistance(5)
 		.defaultTranslucent()
 		.tagBlock(CmiToolType.PICKAXE.tag())
 		.tagBlock(CmiMiningLevel.STONE.tag())
-		.item((item) => {
-			item.tag("forge:storage_blocks/crystal")
-				.tag("forge:storage_blocks")
-		})
+		.tagBoth("forge:storage_blocks/crystal")
+		.tagBoth("forge:storage_blocks")
 
 	// 钻探轴承
 	addBlock("driller_bearing")

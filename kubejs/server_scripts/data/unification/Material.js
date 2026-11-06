@@ -253,10 +253,10 @@ ServerEvents.highPriorityData((event) => {
 
 	// 铀
 	new MaterialUnification("uranium")
-		.replaceIngot("mekanism:ingot_uranium")
-		.replacePlate("vintageimprovements:uranium_sheet")
-		.replaceDust("mekanism:dust_uranium")
-		.replaceNugget("alexscaves:uranium_shard")
+		.replaceIngot("cmi:uranium_ingot")
+		.replacePlate("cmi:uranium_plate")
+		.replaceDust("cmi:uranium_dust")
+		.replaceNugget("cmi:uranium_nugget")
 		.replaceBlock("cmi:uranium_block")
 		.replaceRawOreBlock("immersiveengineering:raw_block_uranium")
 		.replaceRawOre("alexscaves:uranium")
