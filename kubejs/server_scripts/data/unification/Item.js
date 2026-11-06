@@ -137,6 +137,23 @@ ServerEvents.highPriorityData((event) => {
 		"thermal_parallel:argument_parallel_3"
 	], "cmi:16_parallel_upgrade")
 
+	// 铀
+	addUnification("uranium_shard", [
+		"#mekanism:shards/uranium"
+	], "cmi:uranium_shard")
+
+	addUnification("uranium_clump", [
+		"#mekanism:clumps/uranium"
+	], "cmi:uranium_clump")
+
+	addUnification("uranium_crystal", [
+		"#mekanism:crystals/uranium"
+	], "cmi:uranium_crystal")
+
+	addUnification("uranium_dirty_dust", [
+		"#mekanism:dirty_dusts/uranium"
+	], "cmi:dirty_uranium_dust")
+
 	// TODO: 热力农业的物品/方块需要统一
 
 	/**
