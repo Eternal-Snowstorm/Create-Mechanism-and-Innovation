@@ -364,7 +364,7 @@ ServerEvents.recipes((event) => {
 		.slots("upgrades", 1)
 		.inputs([
 			"nebula_tinker:demonization_stone",
-			"#create:shadow_steel"
+			"create:shadow_steel"
 		])
 		.build(NebulaTinker.loadResource("tinker/modifier/upgrades/demonization"))
 
