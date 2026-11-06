@@ -35,7 +35,7 @@ ServerEvents.recipes((event) => {
 		Fluid.of("cmi:molten_etrium", 90)
 	])
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("neoecoae:integrated_working_station")
 		.inputItems([
 			"thermal_extra:component_assembly",

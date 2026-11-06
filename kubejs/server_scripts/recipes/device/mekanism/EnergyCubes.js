@@ -3,7 +3,7 @@ ServerEvents.recipes((event) => {
 	let { thermal_extra, neoecoae } = event.getRecipes()
 
 	// 能量单元
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:basic_energy_cube")
 		.inputItems([
 			"2x mekanism:energy_tablet",
@@ -15,7 +15,7 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanism:energy_cube/basic")
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:advanced_energy_cube")
 		.inputItems([
 			"2x mekanism:energy_tablet",
@@ -27,7 +27,7 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanism:energy_cube/advanced")
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:elite_energy_cube")
 		.inputItems([
 			"2x mekanism:energy_tablet",
@@ -39,7 +39,7 @@ ServerEvents.recipes((event) => {
 		.energy(2000)
 		.id("mekanism:energy_cube/elite")
 
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:ultimate_energy_cube")
 		.inputItems([
 			"2x mekanism:energy_tablet",

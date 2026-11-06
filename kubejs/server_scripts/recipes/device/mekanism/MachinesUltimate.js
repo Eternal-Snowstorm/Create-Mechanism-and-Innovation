@@ -3,7 +3,7 @@ ServerEvents.recipes((event) => {
 	let { thermal_extra, neoecoae } = event.getRecipes()
 
 	// 中子活化器
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:solar_neutron_activator")
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
 		.inputItems([
@@ -18,7 +18,7 @@ ServerEvents.recipes((event) => {
 		.id("mekanism:solar_neutron_activator")
 
 	// 加压反应室
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:pressurized_reaction_chamber")
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
 		.inputItems([
@@ -33,7 +33,7 @@ ServerEvents.recipes((event) => {
 		.id("mekanism:pressurized_reaction_chamber")
 
 	// 反质子核
-	addRecipe(neoecoae)
+	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:antiprotonic_nucleosynthesizer")
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
 		.inputItems([

@@ -21,15 +21,6 @@ function addComponRecipe(thermal_extra, output, inputs) {
 }
 
 /**
- * Mekanism 系整合工作站配方入口（neoecoae:integrated_working_station）
- *
- * @param {Internal.RecipeType_} neoecoae event 解构出的 neoecoae 配方命名空间
- */
-function addRecipe(neoecoae) {
-	return neoecoae.integrated_working_station()
-}
-
-/**
  * 三行竖排设备模板：M（机制本体）/ C（机壳）/ X（功能件）
  *
  * 用于 Create、Thermal 系绝大多数单方块设备的统一外形，避免每个设备重复写 6 行 keys。

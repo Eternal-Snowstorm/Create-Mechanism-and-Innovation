@@ -180,7 +180,7 @@ StartupEvents.registry("block", (event) => {
 
 	// 铀块
 	addBlock("uranium_block")
-		.model("immersiveengineering:block/storage_uranium")
+		.model(`cmi:block/custom/uranium_block`)
 		.soundType(SoundType.NETHERITE_BLOCK)
 		.hardness(5)
 		.resistance(5)
@@ -189,6 +189,20 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiMiningLevel.STONE.tag())
 		.item((item) => {
 			item.tag("forge:storage_blocks/uranium")
+				.tag("forge:storage_blocks")
+		})
+
+	// 水晶块
+	addBlock("crystal_block")
+		.model(`cmi:block/custom/crystal_block`)
+		.soundType(SoundType.STONE)
+		.hardness(5)
+		.resistance(5)
+		.defaultTranslucent()
+		.tagBlock(CmiToolType.PICKAXE.tag())
+		.tagBlock(CmiMiningLevel.STONE.tag())
+		.item((item) => {
+			item.tag("forge:storage_blocks/crystal")
 				.tag("forge:storage_blocks")
 		})
 

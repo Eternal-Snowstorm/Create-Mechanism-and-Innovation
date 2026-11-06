@@ -1,6 +1,13 @@
 ServerEvents.recipes((event) => {
 	let { mekanism } = event.getRecipes()
 
+	// 水晶锭
+	mekanism.metallurgic_infusing(
+		"neoecoae:crystal_ingot",
+		"#forge:dusts/energized_fluix_crystal",
+		"mekanism:diamond"
+	).id("neoecoae:transform/crystal_ingot")
+
 	// 富集合金
 	mekanism.metallurgic_infusing(
 		"cmi:enriched_alloy",

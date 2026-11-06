@@ -106,6 +106,12 @@ ServerEvents.recipes((event) => {
 		.fluid("immersiveengineering:redstone_acid", 100)
 		.build("neoecoae:circuit_cutter/superconducting_processor_print")
 
+	// 水晶晶格
+	new CircuitCutterRecipe(Item.of("neoecoae:crystal_matrix", 4))
+		.item("cmi:crystal_block")
+		.fluid("immersiveengineering:redstone_acid", 100)
+		.build()
+
 	// 乙烯聚合催化片
 	new CircuitCutterRecipe("2x cmi:ethylene_polymerization_catalytic_plate")
 		.item("cmi:polymerization_catalytic_alloy")

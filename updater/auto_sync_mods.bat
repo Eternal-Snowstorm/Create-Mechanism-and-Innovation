@@ -1,2 +1,2 @@
-powershell -NoProfile -ExecutionPolicy Bypass -File ".\mods-sync.ps1"
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0mods-sync.ps1"
 pause

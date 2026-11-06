@@ -31,7 +31,7 @@ ServerEvents.recipes((event) => {
 		.energy(8000)
 
 	// 铝合金
-	immersiveengineering.arc_furnace("#forge:ingots/aluminum_alloy")
+	immersiveengineering.arc_furnace("3x #forge:ingots/aluminum_alloy")
 		.input("2x #forge:ingots/aluminum")
 		.slag("#forge:slag")
 		.additives([
