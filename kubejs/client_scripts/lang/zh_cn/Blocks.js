@@ -83,6 +83,8 @@ ClientEvents.lang("zh_cn", (event) => {
 	addBlockLang("radsand", "辐射沙")
 	addBlockLang("kaolinite", "高岭土")
 	addBlockLang("refractory_grout", "耐火砖泥")
+	addBlockLang("uranium_block", "铀块")
+	addBlockLang("crystal_block", "水晶块")
 
 	// 功能性方块
 	addBlockLang("impact_pile", "冲击桩")

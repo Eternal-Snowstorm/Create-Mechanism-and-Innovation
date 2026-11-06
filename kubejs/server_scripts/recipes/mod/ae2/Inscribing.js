@@ -90,6 +90,13 @@ ServerEvents.recipes((event) => {
 		.top("ae2:silicon_press")
 		.inscribe()
 
+	// 水晶晶格
+	new InscriberRecipe("neoecoae:crystal_matrix")
+		.middle("neoecoae:crystal_ingot")
+		.top("ae2:silicon_press")
+		.inscribe()
+		.id("neoecoae:crystal_matrix")
+
 	// 线刻硅板
 	new InscriberRecipe("cmi:inscribed_silicon")
 		.middle("ae2:printed_silicon")

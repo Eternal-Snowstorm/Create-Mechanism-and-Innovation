@@ -327,4 +327,16 @@ ServerEvents.recipes((event) => {
 		"cmi:nuke_cooler",
 		"#forge:plates/industrial_iron"
 	])
+
+	//  水晶块
+	kubejs.shaped("cmi:crystal_block", [
+		"AA",
+		"AA"
+	], {
+		A: "neoecoae:crystal_ingot"
+	})
+
+	kubejs.shapeless("4x neoecoae:crystal_ingot", [
+		"cmi:crystal_block"
+	])
 })
