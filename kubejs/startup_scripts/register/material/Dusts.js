@@ -68,7 +68,7 @@ StartupEvents.registry("item", (event) => {
 	addColorDustItem("asurine", 0x4e73ea)
 	// 绯红岩粉
 	addColorDustItem("crimsite", 0xbb3c26)
-	// 赭金沙粉
+	// 赭金砂粉
 	addColorDustItem("ochrum", 0x9b8005)
 	// 辉绿岩粉
 	addColorDustItem("veridium", 0x049146)
