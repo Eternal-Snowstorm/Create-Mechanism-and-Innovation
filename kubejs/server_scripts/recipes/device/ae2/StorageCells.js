@@ -1,6 +1,6 @@
 // AE2 · 存储元件（清空原配方后重写外壳与 1k→256k 递推、空间元件）
 ServerEvents.recipes((event) => {
-	let { kubejs, thermal_extra, neoecoae } = event.getRecipes()
+	let { kubejs, create, thermal_extra, neoecoae } = event.getRecipes()
 	const DRIVE = /^ae2:(?!.*portable)(?!.*spatial).*cell(?!.*workbench$).+$/;
 
 	event.remove([
@@ -130,4 +130,85 @@ ServerEvents.recipes((event) => {
 		"ae2:spatial_cell_component_2",
 		"ae2:spatial_cell_component_16"
 	])
+
+	// 无限水元件
+	let waterCell = Item.of("expatternprovider:infinity_cell")
+		.withNBT({
+			record: {
+				"#c": "ae2:f",
+				id: "minecraft:water"
+			}
+		})
+	create.sequenced_assembly(waterCell, [
+		"ae2:fluid_cell_housing"
+	], [
+		create.filling("ae2:fluid_cell_housing", [
+			"ae2:fluid_cell_housing",
+			Fluid.of("minecraft:water", 1000)
+		]),
+		create.deploying("ae2:fluid_cell_housing", [
+			"ae2:fluid_cell_housing",
+			"ae2:cell_component_16k"
+		]),
+		create.filling("ae2:fluid_cell_housing", [
+			"ae2:fluid_cell_housing",
+			Fluid.of("minecraft:water", 1000)
+		]),
+	]).transitionalItem("ae2:fluid_cell_housing")
+		.loops(1)
+		.id("expatternprovider:water_cell")
+
+	// 无限圆石元件
+	let cobblestoneCell = Item.of("expatternprovider:infinity_cell")
+		.withNBT({
+			record: {
+				"#c": "ae2:i",
+				id: "minecraft:cobblestone"
+			}
+		})
+	create.sequenced_assembly(cobblestoneCell, [
+		"ae2:item_cell_housing"
+	], [
+		create.filling("ae2:item_cell_housing", [
+			"ae2:item_cell_housing",
+			Fluid.of("minecraft:water", 1000)
+		]),
+		create.deploying("ae2:item_cell_housing", [
+			"ae2:item_cell_housing",
+			"ae2:cell_component_16k"
+		]),
+		create.filling("ae2:item_cell_housing", [
+			"ae2:item_cell_housing",
+			Fluid.of("minecraft:lava", 1000)
+		])
+	]).transitionalItem("ae2:item_cell_housing")
+		.loops(1)
+		.id("expatternprovider:cobblestone_cell")
+
+	// 黑曜石元件
+	let obsidianCell = Item.of("cmi:obsidian_cell")
+		.withNBT({
+			record: {
+				"#c": "ae2:i",
+				id: "minecraft:obsidian"
+			}
+		})
+	create.sequenced_assembly(obsidianCell, [
+		"ae2:item_cell_housing"
+	], [
+		create.filling("ae2:item_cell_housing", [
+			"ae2:item_cell_housing",
+			Fluid.of("minecraft:lava", 1000)
+		]),
+		create.deploying("ae2:item_cell_housing", [
+			"ae2:item_cell_housing",
+			"ae2:cell_component_16k"
+		]),
+		create.filling("ae2:item_cell_housing", [
+			"ae2:item_cell_housing",
+			Fluid.of("minecraft:water", 1000)
+		])
+	]).transitionalItem("ae2:item_cell_housing")
+		.loops(1)
+		.id("cmi:obsidian_cell")
 })

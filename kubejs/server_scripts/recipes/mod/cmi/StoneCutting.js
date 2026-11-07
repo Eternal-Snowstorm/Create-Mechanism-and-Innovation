@@ -9,26 +9,8 @@ ServerEvents.recipes((event) => {
 			minecraft.stonecutting(id, "#cmi:dev_doll")
 		})
 
-	// 黏土模具
-	Ingredient.of("#cmi:clay_molds")
-		.getItemIds()
-		.forEach((mold) => {
-			minecraft.stonecutting(mold, "#cmi:clay_molds")
-		})
-
 	// 石子路面
 	minecraft.stonecutting("16x cmi:stone_pave",
 		"minecraft:gravel"
 	)
-
-	// 金属梁
-	minecraft.stonecutting("2x create:metal_girder",
-		"#forge:plates/industrial_iron"
-	).id("create:crafting/kinetics/metal_girder")
-	minecraft.stonecutting("2x createdieselgenerators:andesite_girder",
-		"#forge:plates/andesite_alloy"
-	).id("createdieselgenerators:crafting/andesite_girder")
-
-	// 红石二极管基底
-	minecraft.stonecutting("2x cmi:redstone_diode_base", "minecraft:smooth_stone_slab")
 })

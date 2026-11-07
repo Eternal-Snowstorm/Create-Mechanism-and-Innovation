@@ -8,16 +8,6 @@ ServerEvents.recipes((event) => {
 		"#forge:plates/andesite"
 	]).id("ae2:network/parts/cable_anchor")
 
-	// 福鲁伊克斯色ME玻璃线缆
-	kubejs.shaped("8x ae2:fluix_glass_cable", [
-		"AAA",
-		"ABA",
-		"AAA"
-	], {
-		B: "ae2:fluix_crystal",
-		A: "cmi:optical_fiber"
-	}).id("ae2:network/cables/glass_fluix")
-
 	// 石英纤维
 	kubejs.shaped("ae2:quartz_fiber", [
 		"AA",

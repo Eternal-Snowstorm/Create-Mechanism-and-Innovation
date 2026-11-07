@@ -119,6 +119,19 @@ ServerEvents.recipes((event) => {
 		X: "thermal:drill_head"
 	})
 
+	// 粉碎轮
+	create.mechanical_crafting("4x create:crushing_wheel", [
+		" AAA ",
+		"AABAA",
+		"ABCBA",
+		"AABAA",
+		" AAA "
+	], {
+		A: "create:andesite_alloy",
+		B: "thermal:iron_gear",
+		C: "cmi:andesite_mechanism"
+	}).id("create:mechanical_crafting/crushing_wheel")
+
 	// 离心机
 	kubejs.shaped("vintageimprovements:centrifuge", [
 		"P P",
@@ -209,4 +222,44 @@ ServerEvents.recipes((event) => {
 		C: Casing.ANDESITE,
 		M: Mechanisms.ANDESITE.COM
 	})
+
+	// 交流发电机
+	create.mechanical_crafting("createaddition:alternator", [
+		" ABA ",
+		"ACDCA",
+		" AEA "
+	], {
+		A: "#forge:plates/industrial_iron",
+		B: "create:shaft",
+		C: "cmi:simple_battery",
+		D: "cmi:coil_mechanism",
+		E: "#forge:plates/electrum"
+	}).id("createaddition:mechanical_crafting/alternator")
+
+	// 电动马达
+	create.mechanical_crafting("createaddition:electric_motor", [
+		" ABA ",
+		"ACDCA",
+		" AEA "
+	], {
+		A: "#forge:plates/brass",
+		B: "create:shaft",
+		C: "cmi:simple_battery",
+		D: "cmi:coil_mechanism",
+		E: "#forge:plates/electrum"
+	}).id("createaddition:mechanical_crafting/electric_motor")
+
+	// 电磁炉
+	create.mechanical_crafting("2x moreburners:electric_burner", [
+		"ABA",
+		"CDC",
+		"EFE"
+	], {
+		A: "#forge:ingots/andesite_alloy",
+		B: "moreburners:copper_coil",
+		C: Casing.ANDESITE,
+		D: "create:empty_blaze_burner",
+		E: Mechanisms.COIL.COM,
+		F: "#forge:plates/iron"
+	}).id("moreburners:electric_burner")
 })

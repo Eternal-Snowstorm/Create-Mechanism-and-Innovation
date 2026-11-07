@@ -97,26 +97,6 @@ ServerEvents.recipes((event) => {
 		C: "#forge:nuggets/iron"
 	})
 
-	// 铁机械零件
-	kubejs.shaped("2x immersiveengineering:component_iron", [
-		"P P",
-		" G ",
-		"P P"
-	], {
-		P: "#forge:plates/iron",
-		G: "#forge:gears/copper"
-	}).id("immersiveengineering:crafting/component_iron")
-
-	// 钢机械零件
-	kubejs.shaped("2x immersiveengineering:component_steel", [
-		"P P",
-		" G ",
-		"P P"
-	], {
-		P: "#forge:plates/steel",
-		G: "#forge:gears/electrum"
-	}).id("immersiveengineering:crafting/component_steel")
-
 	// 风帆
 	kubejs.shaped("immersive_aircraft:sail", [
 		"AA ",
@@ -137,58 +117,6 @@ ServerEvents.recipes((event) => {
 		C: "#forge:leather",
 		D: "farmersdelight:rope"
 	}).id("immersiveengineering:crafting/glider")
-
-	// 铁机壳
-	kubejs.shaped("4x cmi:iron_casing", [
-		"ABA",
-		"BCB",
-		"ABA"
-	], {
-		A: "#forge:plates/iron",
-		B: Casing.INDUSTRY,
-		C: "#forge:gears/copper"
-	})
-
-	// 铁机壳
-	kubejs.shaped("8x cmi:steel_casing", [
-		"ABA",
-		"BCB",
-		"ABA"
-	], {
-		A: "#forge:plates/steel",
-		B: Casing.INDUSTRY,
-		C: "#forge:gears/electrum"
-	})
-
-	// 铜线圈
-	kubejs.shaped("4x cmi:copper_coil", [
-		"A A",
-		" B ",
-		"A A"
-	], {
-		A: "#forge:wires/copper",
-		B: "createaddition:spool"
-	}).id("immersiveengineering:crafting/coil_lv")
-
-	// 琥珀金线圈
-	kubejs.shaped("4x cmi:electrum_coil", [
-		"A A",
-		" B ",
-		"A A"
-	], {
-		A: "#forge:wires/electrum",
-		B: "createaddition:spool"
-	}).id("immersiveengineering:crafting/coil_mv")
-
-	// 钢线圈
-	kubejs.shaped("4x cmi:steel_coil", [
-		"A A",
-		" B ",
-		"A A"
-	], {
-		A: "#forge:wires/steel",
-		B: "createaddition:spool"
-	}).id("immersiveengineering:crafting/coil_hv")
 
 	// 电解机
 	kubejs.shaped("immersiveindustry:electrolyzer", [

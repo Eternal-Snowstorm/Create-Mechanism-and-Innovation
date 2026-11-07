@@ -1,16 +1,6 @@
 ServerEvents.recipes((event) => {
 	let { kubejs } = event.getRecipes()
 
-	// 红石伺服器
-	kubejs.shaped("thermal:redstone_servo", [
-		"A A",
-		" B ",
-		"A A"
-	], {
-		A: "#forge:wires/signalum",
-		B: "#forge:plates/iron"
-	}).id("thermal:redstone_servo")
-
 	// 炸弹系列
 	kubejs.shaped("4x thermal:explosive_grenade", [
 		"BAB",
@@ -20,17 +10,6 @@ ServerEvents.recipes((event) => {
 		A: "cmi:trinitrotoluene",
 		B: "#forge:nuggets/iron"
 	}).id("thermal:explosive_grenade_4")
-
-	// 机器框架
-	kubejs.shaped("4x thermal:machine_frame", [
-		"ABA",
-		"BCB",
-		"ABA"
-	], {
-		A: "#forge:plates/invar",
-		B: Casing.INDUSTRY,
-		C: "#forge:gears/tin"
-	}).id("thermal:machine_frame")
 
 	// 信素
 	kubejs.shapeless("4x thermal:signalum_dust", [

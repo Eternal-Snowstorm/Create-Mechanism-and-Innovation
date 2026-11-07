@@ -1,16 +1,6 @@
 ServerEvents.recipes((event) => {
 	let { kubejs } = event.getRecipes()
 
-	// 木齿轮
-	kubejs.shaped("cmi:wooden_gear", [
-		" A ",
-		"ABA",
-		" A "
-	], {
-		A: "#minecraft:planks",
-		B: "#forge:rods/wooden"
-	})
-
 	// 玻璃瓶
 	kubejs.shaped("3x minecraft:glass_bottle", [
 		"A A",
@@ -81,26 +71,6 @@ ServerEvents.recipes((event) => {
 		A: "cmi:trinitrotoluene"
 	}).id("minecraft:tnt")
 
-	// 橡胶手
-	kubejs.shaped("create:brass_hand", [
-		" A ",
-		"BBB",
-		" B "
-	], {
-		A: "#forge:ingots/andesite_alloy",
-		B: "thermal:cured_rubber"
-	}).id("create:crafting/kinetics/brass_hand")
-
-	// 冲击桩
-	kubejs.shaped("cmi:impact_pile", [
-		"A",
-		"B",
-		"B"
-	], {
-		A: "#forge:plates/invar",
-		B: "#forge:rods/netherite"
-	})
-
 	// 群系指南针
 	kubejs.shaped("naturescompass:naturescompass", [
 		"AAA",
@@ -131,38 +101,6 @@ ServerEvents.recipes((event) => {
 		"AA"
 	], {
 		A: "cmi:peat"
-	})
-
-	// 红石线圈
-	kubejs.shaped("4x immersiveengineering:wirecoil_redstone", [
-		" A ",
-		"ABA",
-		" A "
-	], {
-		A: "#forge:wires/signalum",
-		B: "#forge:rods/wooden"
-	}).id("immersiveengineering:crafting/wirecoil_redstone")
-
-	// 红石通量线圈
-	kubejs.shaped("2x thermal:rf_coil", [
-		"BAC",
-		"A A",
-		"CAB"
-	], {
-		A: "#forge:wires/signalum",
-		B: "#forge:rods/gold",
-		C: "#forge:plates/gold"
-	}).id("thermal:rf_coil")
-
-	// 萤石流明管道
-	kubejs.shaped("2x cmi:glowstone_lumen_tube", [
-		"CAB",
-		"A A",
-		"BAC"
-	], {
-		A: "#forge:wires/lumium",
-		B: "#forge:rods/cobalt",
-		C: "#forge:plates/cobalt"
 	})
 
 	// 黄铜楼梯
@@ -231,17 +169,6 @@ ServerEvents.recipes((event) => {
 		"cmi:entro_block"
 	])
 
-	// 繁星核心
-	kubejs.shaped("cmi:astral_core", [
-		"ABA",
-		"BCB",
-		"ABA"
-	], {
-		A: "#forge:ingots/brass",
-		B: "#forge:plates/electrum",
-		C: "#forge:gems/charged_amethyst"
-	})
-
 	// 合成蓝图
 	kubejs.shapeless("create:crafting_blueprint", [
 		"#forge:nuggets/iron",
@@ -255,51 +182,6 @@ ServerEvents.recipes((event) => {
 		"#forge:nuggets/iron",
 		"minecraft:paper"
 	]).id("create:crafting/schematics/empty_schematic")
-
-	// 地图定位器
-	kubejs.shaped("railway_automation:map_locator", [
-		" A ",
-		" B ",
-		" C "
-	], {
-		A: "#forge:ingots/andesite_alloy",
-		B: "minecraft:map",
-		C: "#minecraft:planks"
-	}).id("railway_automation:map_locator")
-
-	// 铁路放置器
-	kubejs.shaped("railway_automation:track_placer", [
-		" M ",
-		"ECE",
-		"PRP"
-	], {
-		M: Mechanisms.RAILWAY.COM,
-		E: "create:transmitter",
-		C: Casing.RAILWAY,
-		P: "#forge:plates/iron",
-		R: "#create:tracks"
-	}).id("railway_automation:track_placer")
-
-	// 黏土模具
-	kubejs.shapeless("4x cmi:blank_clay_mold", [
-		"minecraft:clay"
-	])
-
-	kubejs.shapeless("cmi:blank_clay_mold", [
-		"minecraft:clay_ball"
-	])
-
-	// 太阳能板
-	kubejs.shaped("mekanismgenerators:solar_panel", [
-		"ABA",
-		"CMC",
-		" C "
-	], {
-		A: "#forge:glass_panes",
-		B: "#forge:plates/silicon",
-		C: "#forge:plates/copper",
-		M: Mechanisms.PHOTO.COM
-	}).id("mekanismgenerators:solar_panel")
 
 	// 矿藏粉末块
 	kubejs.shaped("cmi:deposit_dust_block", [

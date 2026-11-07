@@ -1,7 +1,7 @@
 ServerEvents.recipes((event) => {
 	let { kubejs } = event.getRecipes()
 
-	// 存储
+	// 存储构件
 	kubejs.shapeless(Mechanisms.WOODEN.COM, [
 		"#minecraft:planks",
 		"#forge:rods/wooden",
@@ -11,7 +11,7 @@ ServerEvents.recipes((event) => {
 		"#forge:tools/wrench"
 	]).keepIngredient("#forge:tools/wrench")
 
-	// 热能
+	// 热能构件
 	kubejs.shapeless(Mechanisms.STONE.COM, [
 		"#forge:plates/stone",
 		"#forge:clay",
@@ -23,7 +23,7 @@ ServerEvents.recipes((event) => {
 	]).damageIngredient("#minecraft:axes")
 		.keepIngredient("#forge:tools/wrench")
 
-	// 红石
+	// 红石构件
 	kubejs.shapeless(Mechanisms.REDSTONE.COM, [
 		"#forge:plates/lead",
 		"#forge:dusts/redstone",
@@ -35,7 +35,7 @@ ServerEvents.recipes((event) => {
 	]).damageIngredient("#minecraft:axes")
 		.keepIngredient("#forge:tools/wrench")
 
-	// 磁力
+	// 磁力构件
 	kubejs.shapeless(Mechanisms.IRON.COM, [
 		"cmi:iron_mechanism_basement",
 		"#forge:nuggets/iron",
@@ -47,7 +47,7 @@ ServerEvents.recipes((event) => {
 	]).damageIngredient("#minecraft:axes")
 		.keepIngredient("#forge:tools/wrench")
 
-	// 动能
+	// 动能构件
 	kubejs.shapeless(Mechanisms.ANDESITE.COM, [
 		"cmi:andesite_mechanism_basement",
 		"#forge:plates/andesite_alloy",
@@ -57,7 +57,7 @@ ServerEvents.recipes((event) => {
 		"#forge:tools/wrench"
 	]).keepIngredient("#forge:tools/wrench")
 
-	// 流体
+	// 流体构件
 	kubejs.shapeless(Mechanisms.COPPER.COM, [
 		"cmi:copper_mechanism_basement",
 		"thermal:cured_rubber",

@@ -102,7 +102,6 @@ ServerEvents.recipes((event) => {
 		B: "mekanism:basic_chemical_tank"
 	}).id("mekanism:chemical_tank/advanced")
 
-
 	kubejs.shaped("mekanism:elite_chemical_tank", [
 		"A",
 		"B",

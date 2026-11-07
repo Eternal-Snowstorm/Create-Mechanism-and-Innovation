@@ -8,7 +8,6 @@ ServerEvents.recipes((event) => {
 	addFuel("forge:diesel", 2113)
 	addFuel("tconstruct:blazing_blood", 2638)
 
-
 	function addFuel(tag, temperature) {
 		return event.custom({
 			type: "immersiveengineering:generator_fuel",

@@ -262,7 +262,6 @@ ServerEvents.recipes((event) => {
 		.energy(100, 1, 2)
 		.id("cmi:multi_type_driller/coal")
 
-
 	new DrillingRecipe("create_rns:redstone_deposit_block")
 		.item(["cmi:deposit_dust"],
 			["cmi:deposit_dust", "create_rns:redstone_small_dust"],

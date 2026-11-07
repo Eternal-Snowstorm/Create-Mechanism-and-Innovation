@@ -68,36 +68,4 @@ ServerEvents.recipes((event) => {
 	]).blueprint("specialBullet")
 		.id("immersiveengineering:blueprint/bullet_potion")
 
-	// 铁机械零件
-	immersiveengineering.blueprint("4x immersiveengineering:component_iron", [
-		"4x #forge:plates/iron",
-		"#forge:gears/copper"
-	]).blueprint("components")
-		.id("immersiveengineering:blueprint/component_iron")
-
-	// 钢机械零件
-	immersiveengineering.blueprint("4x immersiveengineering:component_steel", [
-		"4x #forge:plates/steel",
-		"#forge:gears/electrum"
-	]).blueprint("components")
-		.id("immersiveengineering:blueprint/component_steel")
-
-	// 真空管
-	immersiveengineering.blueprint("2x immersiveengineering:electron_tube", [
-		"#forge:plates/nickel",
-		"#forge:wires/copper",
-		"create:polished_rose_quartz"
-	]).blueprint("components")
-		.id("immersiveengineering:blueprint/electron_tube")
-
-	Ingredient.of("#cmi:molds")
-		.getItemIds()
-		.forEach((mold) => {
-			let replace = mold.replace("cmi:", "")
-
-			immersiveengineering.blueprint(mold, [
-				"4x #forge:plates/industrial_iron"
-			]).blueprint("molds")
-				.id(`cmi:blueprint/${replace}`)
-		})
 })

@@ -185,7 +185,6 @@ ServerEvents.recipes((event) => {
 		return this.builder
 	}
 
-
 	new MiningRecipe("create_rns:coal_deposit_block")
 		.defaultItem(["cmi:deposit_dust"])
 		.overclockItem(5.0E-4, ["cmi:deposit_dust", "mekanism:dust_coal"])
@@ -198,7 +197,6 @@ ServerEvents.recipes((event) => {
 		.stabilizeItem(0.06, ["minecraft:diamond"])
 		.build()
 		.id("cmi:mining_recipes/coal")
-
 
 	new MiningRecipe("create_rns:redstone_deposit_block")
 		.defaultItem(["cmi:deposit_dust"])
