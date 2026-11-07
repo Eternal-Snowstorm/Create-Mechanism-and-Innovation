@@ -25,4 +25,7 @@ StartupEvents.registry("item", (event) => {
 
 	// 恩特罗合金晶圆
 	addAloneWaferItem("entro_alloy")
+
+	// 革新晶晶圆
+	addAloneWaferItem("innovation_crystal")
 })

@@ -37,7 +37,7 @@ StartupEvents.registry("creative_mode_tab", (event) => {
 
 	addCreativeTab("buckets")
 		.icon(() => {
-			return Item.of("cmi:sapphire_solution_bucket")
+			return Item.of("cmi:creative_solution_bucket")
 		})
 		.content(() => {
 			return Ingredient.of("cmi:bucket").getItemIds()

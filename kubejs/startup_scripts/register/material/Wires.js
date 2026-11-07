@@ -66,6 +66,9 @@ StartupEvents.registry("item", (event) => {
 	// 福鲁伊克斯
 	addAloneWireItem("fluix")
 
+	// 幻晶
+	addAloneWireItem("dreamcore")
+
 	// 光纤
 	addNamedWireItem("optical_fiber", "optical")
 })

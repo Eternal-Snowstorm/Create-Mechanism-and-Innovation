@@ -1,4 +1,5 @@
 {
+	"format_version": "1.9.0",
 	"textures": {
 		"particle": "cmi:block/dtma/dreamcore",
 		"main": "cmi:block/dtma/dreamcore"
@@ -22,12 +23,12 @@
 			"to": [15.5, 15.5, 15.5],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0.5, 0.5, 0.5]},
 			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "texture": "#main"},
-				"east": {"uv": [0, 0, 16, 16], "texture": "#main"},
-				"south": {"uv": [0, 0, 16, 16], "texture": "#main"},
-				"west": {"uv": [0, 0, 16, 16], "texture": "#main"},
-				"up": {"uv": [0, 0, 16, 16], "texture": "#main"},
-				"down": {"uv": [0, 0, 16, 16], "texture": "#main"}
+				"north": {"uv": [0, 0, 15, 15], "texture": "#main"},
+				"east": {"uv": [0, 0, 15, 15], "texture": "#main"},
+				"south": {"uv": [0, 0, 15, 15], "texture": "#main"},
+				"west": {"uv": [0, 0, 15, 15], "texture": "#main"},
+				"up": {"uv": [0, 0, 15, 15], "texture": "#main"},
+				"down": {"uv": [0, 0, 15, 15], "texture": "#main"}
 			}
 		}
 	],

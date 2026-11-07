@@ -229,6 +229,33 @@ ServerEvents.recipes((event) => {
 		setOutput("create:asurine", 0.05)
 	])
 
+	// 核构件
+	addRecipe("cmi:nuclear_mechanism", "alexscaves:metal_barrel", [
+		setOutput("alexscaves:waste_drum", 0.2),
+		setOutput("alexscaves:rusty_barrel", 0.5)
+	])
+	addRecipe("cmi:nuclear_mechanism", "minecraft:cobblestone", [
+		setOutput("alexscaves:radrock", 0.5)
+	])
+	addRecipe("cmi:nuclear_mechanism", "minecraft:sand", [
+		setOutput("cmi:radsand", 0.5)
+	])
+	addRecipe("cmi:nuclear_mechanism", "minecraft:blast_furnace", [
+		setOutput("alexscaves:nuclear_furnace_component", 0.05)
+	])
+	addRecipe("cmi:nuclear_mechanism", "minecraft:tnt", [
+		setOutput("thermal:nuke_tnt", 0.1)
+	])
+	addRecipe("cmi:nuclear_mechanism", "alexscaves:nuclear_siren", [
+		setOutput("mekanism:industrial_alarm", 0.5)
+	])
+
+	// 反物质构件
+	addRecipe("cmi:antimatter_mechanism", "minecraft:stone", [
+		setOutput("cmi:antistone", 1)
+	])
+	
+
 	/**
 	 * 设置输出项Json
 	 * 

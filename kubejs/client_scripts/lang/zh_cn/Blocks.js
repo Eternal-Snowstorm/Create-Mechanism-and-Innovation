@@ -85,6 +85,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addBlockLang("refractory_grout", "耐火砖泥")
 	addBlockLang("uranium_block", "铀块")
 	addBlockLang("crystal_block", "水晶块")
+	addBlockLang("innovation_crystal_block", "革新晶块")
 
 	// 功能性方块
 	addBlockLang("impact_pile", "冲击桩")
@@ -155,6 +156,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addBlockLang("osmium_tile", "锇砖瓦")
 	addBlockLang("stone_pave", "石子路面")
 	addBlockLang("dummy_hive_hopper", "虚设蜂箱漏斗")
+	addBlockLang("antistone", "反相石")
 
 	// 矿藏
 	addOreNodeLang("vanadium", "钒矿")
@@ -187,6 +189,7 @@ ClientEvents.lang("zh_cn", (event) => {
 
 	// GUI 方块
 	addBlockLang("gui_block", "GUI 方块")
+	addBlockLang("green_screen", "绿幕")
 
 	// 建筑方块
 	addBuildLang("brass", "黄铜")

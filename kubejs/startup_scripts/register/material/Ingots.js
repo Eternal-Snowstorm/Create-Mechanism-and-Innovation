@@ -81,7 +81,9 @@ StartupEvents.registry("item", (event) => {
 	addIngotItem("polymerization_catalytic_alloy")
 	// 沉积催化合金
 	addIngotItem("deposition_catalytic_alloy")
-
+	
+	// 械钢锭
+	addAloneIngotItem("mechanium")
 	// 超载合金锭
 	addAloneIngotItem("overcharged_alloy")
 		.rarity("epic")

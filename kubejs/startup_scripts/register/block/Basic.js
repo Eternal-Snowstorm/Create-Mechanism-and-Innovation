@@ -44,7 +44,12 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiToolType.SHOVEL.tag())
 		.tagBlock(CmiMiningLevel.WOODEN.tag())
 		.item((builder) => {
-			builder.texture("cmi:item/material/stone_pebble")
+			builder.modelJson({
+				"parent": "minecraft:item/generated",
+				"textures": {
+					"layer0": "cmi:item/material/stone_pebble"
+				}
+			})
 		})
 
 
@@ -245,6 +250,7 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiToolType.PICKAXE.tag())
 		.tagBlock(CmiMiningLevel.STONE.tag())
 		.requiresTool(true)
+		.defaultTranslucent()
 
 	// 幻晶线圈
 	addBlock("dreamcore_coil")
@@ -274,10 +280,10 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiMiningLevel.STONE.tag())
 		.box(0, 0, 0, 16, 2, 16)
 		.modelJson = {
-		parent: "cmi:block/redstone_diode",
-		textures: {
-			"diode": "minecraft:block/smooth_stone"
-		}
+			parent: "cmi:block/redstone_diode",
+			textures: {
+				"diode": "minecraft:block/smooth_stone"
+			}
 	}
 
 	// 黄铜二极管底座
@@ -288,10 +294,10 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiMiningLevel.STONE.tag())
 		.box(0, 0, 0, 16, 2, 16)
 		.modelJson = {
-		parent: "cmi:block/redstone_diode",
-		textures: {
-			"diode": "create:block/diodes/brass_diode_base"
-		}
+			parent: "cmi:block/redstone_diode",
+			textures: {
+				"diode": "create:block/diodes/brass_diode_base"
+			}
 	}
 
 	// 虚设蜂箱漏斗
@@ -302,6 +308,30 @@ StartupEvents.registry("block", (event) => {
 		.hardness(-1)
 		.resistance(3600000)
 		.noDrops()
+
+	// 反相石
+	addBlock("antistone")
+		.textureAll(Cmi.loadResource("block/antistone"))
+		.soundType(SoundType.STONE)
+		.resistance(404404)
+		.requiresTool(false)
+		.lightLevel(1)
+		.mapColor($MapColor.TERRACOTTA_WHITE)
+		.tagBoth("forge:stone")
+		.bounciness(1)
+		.hardness(0.1)
+
+	// 革新晶块
+	addBlock("innovation_crystal_block")
+		.hardness(3)
+		.resistance(6)
+		.textureAll(Cmi.loadResource("block/dtma/innovation_crystal_block"))
+		.requiresTool(true)
+		.tagBlock(CmiToolType.PICKAXE.tag())
+		.tagBlock(CmiMiningLevel.NETHER.tag())
+		.soundType(SoundType.AMETHYST)
+		.lightLevel(0.1)
+		.tagBoth("forge:storage_blocks")
 
 	/**
 	 * 铜的氧化阶段配置

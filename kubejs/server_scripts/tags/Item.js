@@ -8,6 +8,7 @@ ServerEvents.tags("item", (event) => {
 		.add("mekanism:pellet_polonium")
 		.add("mekanism:pellet_plutonium")
 		.add("mekanism:pellet_antimatter")
+		.add("cmi:uranium_block")
 
 	// 木板变体
 	event.get("tconstruct:wood_variants/planks")
@@ -700,6 +701,17 @@ ServerEvents.tags("item", (event) => {
 	// 箱子 
 	event.get("forge:chests")
 		.add("ae2:smooth_sky_stone_chest")
+
+	// 桶
+	event.get("forge:barrels")
+		.add("immersiveengineering:gunpowder_barrel")
+		.add("immersiveengineering:wooden_barrel")
+		.add("immersiveengineering:metal_barrel")
+		.add("createdieselgenerators:oil_barrel")
+		.add("edenring:auritis_barrel")
+		.add("edenring:balloon_mushroom_barrel")
+		.add("edenring:pulse_tree_barrel")
+		.add("edenring:brain_tree_barrel")
 
 	// 沙子 
 	event.get("forge:sand")
