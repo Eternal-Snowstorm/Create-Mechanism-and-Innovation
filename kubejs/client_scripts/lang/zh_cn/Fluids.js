@@ -106,4 +106,5 @@ ClientEvents.lang("zh_cn", (event) => {
 	addFluidLang("hydrogen_oxygen_fuel", "液态氢氧燃料")
 	addFluidLang("hyper_experience", "液态超经验")
 	addFluidLang("ink", "墨水")
+	addFluidLang("creative_solution", "创造溶液")
 })

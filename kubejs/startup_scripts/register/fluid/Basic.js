@@ -117,4 +117,6 @@ StartupEvents.registry("fluid", (event) => {
 	addAloneFluid("hyper_experience")
 	// 墨水
 	addAloneFluid("ink")
+	// 创造溶液
+	addAloneFluid("creative_solution")
 })
