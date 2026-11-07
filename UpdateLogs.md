@@ -823,7 +823,7 @@
  - 使用`磨制石英棱镜`取代前期`玻璃`
  - 部分构件更名
  - 矿点采用rns样式
- - 更多自然生成结
+ - 更多自然生成
  - `Fancymenu`
  - 重写了几乎所有处理线
  - 润色`README`中文文案, 并将英文内容重写为段意对应的口语化翻译
@@ -831,10 +831,17 @@
  - 统一`README`系列文件行尾为`CRLF`, 修复表格分隔符与多余空行
  - 全面移除`Custom Machine`, 改为`MBD2`机器, 如雷达天线
  - `MBD2`机器全面规范
+ - 根据现状补全了`New AE2`
+ - `Github`仓库名称
+ - 使用`NebulaEvents.registerMaterial`注册材料
+ - 更新`OreUI For Everyone`
+ - 拆分`PackResource.zip`, 并移除里面的冗余内容
+ - `GTM-RubberWood.zip`
+ - `Better Create Glass Pipes.zip`
 
 ### 新增内容
  - 三种加工用的`锤子`
- - 新增虚空涌泉
+ - 虚空涌泉
  - 加工设备`蒸汽锻锤`
  - 转速源设备`变速马达`
  - 加工设备`动力磨砂机`
@@ -856,10 +863,15 @@
  - 用于热力冲压机的一次性黏土模具
  - `MBD2`机器: 多元钻探机, 三相电解机等
  - `DTMA`
- - `Mechanium`(械钢)
+ - `Mechanium`
  - 氡气瓶小彩蛋
  - 终章幻晶链条
- - 霜原树 (glacian) 产线
+ - 霜原树产线
+ - 多彩构件随机染色
+ - 热力组件
+ - 村庄! 建筑!
+ - 开发组玩偶(可以摸摸头哦)
+ - 大一统
 
  **mod**
  - `拓展转向架`
@@ -880,6 +892,11 @@
  - `扫描器`
  - `多方块建造器`
  - `ModernUI`
+ - `Create: Steam Letters`
+ - `通量网络`
+ - `neoecoae`
+ - `Functional Storage JS`
+ - `One Enough`系列
 
 ### 删除内容
  - `Jade theme`
@@ -899,3 +916,4 @@
  - `FTB Ultimine`
  - `Masterful Machinary`
  - `mbd2`
+ - `AAE`
