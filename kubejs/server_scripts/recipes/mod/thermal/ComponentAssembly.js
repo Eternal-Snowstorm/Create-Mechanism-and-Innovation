@@ -252,6 +252,12 @@ ServerEvents.highPriorityData((event) => {
 		Fluid.of("tconstruct:molten_rose_gold", 90)
 	])
 
+	// 光谱的钥匙
+	addComponRecipe("meplacementtool:key_of_spectrum", [
+		Mechanisms.COLOR.COM,
+		"ae2:basic_card"
+	]).id("meplacementtool:key_of_spectrum")
+
 	/**
 	 * 取配方ID, 没写 .id() 的配方共用一个随机 UUID 前缀, 再用下标区分
 	 * 

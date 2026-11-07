@@ -444,4 +444,6 @@ ServerEvents.highPriorityData((event) => {
 	// 钨
 	new MaterialUnification("tungsten")
 		.replaceIngot("cmi:tungsten_ingot")
+		.replaceBlock("cmi:tungsten_block")
+		.replaceDust("cmi:tungsten_dust")
 })

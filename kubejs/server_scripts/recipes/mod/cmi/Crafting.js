@@ -342,8 +342,8 @@ ServerEvents.recipes((event) => {
 
 	// CMI 图标
 	kubejs.shaped("cmi:cmi_icon", [
-		["cmi:innovation_crystal_wafer", "", ""],
-		["", "cmi:dreamcore_wire", ""]
-		["", "", "cmi:mechanium_ingot"]
+		["cmi:innovation_crystal_wafer", "-", "-"],
+		["-", "cmi:dreamcore_wire", "-"],
+		["-", "-", "cmi:mechanium_ingot"]
 	])
 })

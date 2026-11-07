@@ -30,4 +30,9 @@ ServerEvents.recipes((event) => {
 		["#forge:gems/lapis", "#forge:dusts/lapis"],
 		"minecraft:sugar"
 	]).id("create_enchantment_industry:compacting/experience_cake_base")
+
+	// 绿幕
+	create.compacting("2x cmi:green_screen", [
+		"4x #forge:dyes/green"
+	])
 })

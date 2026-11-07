@@ -647,6 +647,11 @@ ServerEvents.tags("item", (event) => {
 		.add("ad_astra:venus_stone")
 		.add("ad_astra:venus_cobblestone")
 
+	// 金星砂岩
+	event.get("ad_astra:venus_sandstone")
+		.add("ad_astra:venus_sandstone")
+		.add("ad_astra:venus_sandstone_bricks")
+
 	// 锤子
 	event.get("forge:hammers")
 		.add("#createdieselgenerators:hammers")
@@ -856,6 +861,7 @@ ServerEvents.tags("item", (event) => {
 	event.get("forge:dusts")
 		.add("alexscaves:moth_dust")
 		.add("thermal_extra:ancient_dust")
+		.add("kaleidoscope_nether:star_dust")
 
 	event.get("forge:dusts/niter")
 		.add("immersiveengineering:dust_saltpeter")
@@ -867,6 +873,8 @@ ServerEvents.tags("item", (event) => {
 		.add("#forge:salt")
 
 	add("forge:dusts/flux", "fluxnetworks:flux_dust")
+	add("forge:dusts/fertilizer", "immersiveengineering:fertilizer")
+	add("forge:dusts/fertilizer", "thermal:phytogro")
 
 	// 宝石
 	add("forge:gems/charged_amethyst", "create_rns:resonant_amethyst")

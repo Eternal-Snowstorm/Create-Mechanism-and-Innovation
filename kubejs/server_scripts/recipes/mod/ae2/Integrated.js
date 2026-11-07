@@ -170,7 +170,7 @@ ServerEvents.recipes((event) => {
 	addRecipe()
 		.itemOutput("2x cmi:dreamcore_coil")
 		.inputItems([
-			Mechanisms.ANTI,
+			Mechanisms.ANTI.COM,
 			Material.Dreamcores.WIRE.withCount(16),
 			"8x cmi:mechanium_ingot"
 		])
@@ -180,7 +180,7 @@ ServerEvents.recipes((event) => {
 	addRecipe()
 		.itemOutput("cmi:dtma_dreamcore_energy_core")
 		.inputItems([
-			Mechanisms.ANTI,
+			Mechanisms.ANTI.COM,
 			"fluxnetworks:gargantuan_flux_storage",
 			"4x cmi:dreamcore_coil",
 			"16x cmi:innovation_crystal_wafer",
