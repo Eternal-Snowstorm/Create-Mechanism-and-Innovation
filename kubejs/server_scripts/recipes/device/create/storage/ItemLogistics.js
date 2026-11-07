@@ -2,6 +2,44 @@
 ServerEvents.recipes((event) => {
 	let { kubejs } = event.getRecipes()
 
+    // 漏斗
+    kubejs.shaped("3x minecraft:hopper", [
+        "X X",
+        "XMX",
+        " X "
+    ], {
+        M: Mechanisms.WOODEN.COM,
+        X: ["#forge:plates/tin", "#forge:plates/iron"],
+    }).id("minecraft:hopper")
+
+	// 传送带
+	kubejs.shaped("4x create:belt_connector", [
+		"AAA",
+		"AAA"
+	], {
+		A: "thermal:cured_rubber"
+	}).id("create:crafting/kinetics/belt_connector")
+
+	// 溜槽
+	kubejs.shaped("16x create:chute", [
+		"X X",
+		" M ",
+		"X X"
+	], {
+		X: "#forge:plates/industrial_iron",
+		M: Mechanisms.WOODEN.COM
+	})
+
+	// 黄铜溜槽
+	kubejs.shaped("16x create_connected:brass_chute", [
+		"X X",
+		" M ",
+		"X X"
+	], {
+		X: "#forge:plates/brass",
+		M: Mechanisms.WOODEN.COM
+	})
+
 	// 物品舱口
 	kubejs.shapeless("2x create:item_hatch", [
 		"2x #forge:plates/andesite_alloy",
