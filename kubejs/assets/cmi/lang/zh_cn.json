@@ -71,5 +71,15 @@
 	"tooltip.reinforced_coke_oven.4": "- 炉温每提升_250_度, 配方所需时间_-25%_",
 	"tooltip.reinforced_coke_oven.5": "- 以上加成只在持续运行时有效, 中断_3_秒就全部清零",
 
+	"resourcepack.betterie.description": "§b更好的沉浸工程, 作者: 一只键盘虾",
+	"resourcepack.cmi_tconstruct_material.description": "CMI 匠魂材料资源包",
+	"resourcepack.copper_casing_treated_wood.description": "铜机壳防腐木版",
+	"resourcepack.i18n.description": "中微子自制汉化材质包, 基于i18n汉化包与MC百科网友提供改进",
+	"resourcepack.new_ae2.description": "§bAE2新版材质, 但适配 1.20.1",
+	"resourcepack.ore_ui_cmi_addon.description": "§bOreUI 经典蓝图按钮\n§d作者: Re_Construction",
+	"resourcepack.gtm_rubber_wood.description": "橡胶木, 但是 GTM 风格!",
+	"resourcepack.cmi_squarefully.description": "中微子的整合包自用资源包, 置于方纹主包上方",
+	"resourcepack.modpack.description": "§b整合包资源包",
+
 	"thermal.hive_hopper": "蜂箱漏斗"
 }
