@@ -31,7 +31,7 @@ ServerEvents.recipes((event) => {
 	 * @param {Internal.Block_} deposit - 矿藏方块
 	 */
 	function DrillingRecipe(deposit) {
-		this.deposit = deposit
+		this.deposit = Block.getBlock(deposit)
 
 		/**
 		 * @type {{
@@ -247,7 +247,7 @@ ServerEvents.recipes((event) => {
 		return recipe
 	}
 
-	new DrillingRecipe(Block.getBlock("create_rns:coal_deposit_block"))
+	new DrillingRecipe("create_rns:coal_deposit_block")
 		.item(["cmi:deposit_dust"],
 			["cmi:deposit_dust", "mekanism:dust_coal"],
 			["mekanism:dust_coal"],
@@ -263,7 +263,7 @@ ServerEvents.recipes((event) => {
 		.id("cmi:multi_type_driller/coal")
 
 
-	new DrillingRecipe(Block.getBlock("create_rns:redstone_deposit_block"))
+	new DrillingRecipe("create_rns:redstone_deposit_block")
 		.item(["cmi:deposit_dust"],
 			["cmi:deposit_dust", "create_rns:redstone_small_dust"],
 			["create_rns:redstone_small_dust"],
@@ -278,7 +278,7 @@ ServerEvents.recipes((event) => {
 		.energy(100, 1, 2)
 		.id("cmi:multi_type_driller/redstone")
 
-	new DrillingRecipe(Block.getBlock("create_rns:quartz_deposit_block"))
+	new DrillingRecipe("create_rns:quartz_deposit_block")
 		.item(["cmi:deposit_dust"],
 			["cmi:deposit_dust", "thermal:quartz_dust"],
 			["thermal:quartz_dust"],
@@ -293,7 +293,7 @@ ServerEvents.recipes((event) => {
 		.energy(100, 1, 2)
 		.id("cmi:multi_type_driller/quartz")
 
-	new DrillingRecipe(Block.getBlock("cmi:vanadium_deposit_block"))
+	new DrillingRecipe("cmi:vanadium_deposit_block")
 		.item(["cmi:deposit_dust"],
 			["cmi:deposit_dust", "cmi:dirty_vanadium_dust"],
 			["cmi:vanadium_ore_chunk"],
@@ -308,7 +308,7 @@ ServerEvents.recipes((event) => {
 		.energy(100, 1, 2)
 		.id("cmi:multi_type_driller/vanadium")
 
-	new DrillingRecipe(Block.getBlock("create_rns:cobalt_deposit_block"))
+	new DrillingRecipe("create_rns:cobalt_deposit_block")
 		.item(["cmi:deposit_dust"],
 			["cmi:deposit_dust", "cmi:dirty_cobalt_dust"],
 			["tconstruct:cobalt_shard"],
@@ -323,7 +323,7 @@ ServerEvents.recipes((event) => {
 		.energy(100, 1, 2)
 		.id("cmi:multi_type_driller/cobalt")
 
-	new DrillingRecipe(Block.getBlock("create_rns:copper_deposit_block"))
+	new DrillingRecipe("create_rns:copper_deposit_block")
 		.item(["cmi:deposit_dust"],
 			["cmi:deposit_dust", "mekanism:dirty_dust_copper"],
 			["thermal_extra:copper_ore_chunk"],
@@ -338,7 +338,7 @@ ServerEvents.recipes((event) => {
 		.energy(100, 1, 2)
 		.id("cmi:multi_type_driller/copper")
 
-	new DrillingRecipe(Block.getBlock("create_rns:iron_deposit_block"))
+	new DrillingRecipe("create_rns:iron_deposit_block")
 		.item(["cmi:deposit_dust"],
 			["cmi:deposit_dust", "mekanism:dirty_dust_iron"],
 			["thermal_extra:iron_ore_chunk"],
@@ -353,7 +353,7 @@ ServerEvents.recipes((event) => {
 		.energy(100, 1, 2)
 		.id("cmi:multi_type_driller/iron")
 
-	new DrillingRecipe(Block.getBlock("create_rns:zinc_deposit_block"))
+	new DrillingRecipe("create_rns:zinc_deposit_block")
 		.item(["cmi:deposit_dust"],
 			["cmi:deposit_dust", "cmi:dirty_zinc_dust"],
 			["thermal_extra:zinc_ore_chunk"],
@@ -368,7 +368,7 @@ ServerEvents.recipes((event) => {
 		.energy(100, 1, 2)
 		.id("cmi:multi_type_driller/zinc")
 
-	new DrillingRecipe(Block.getBlock("create_rns:gold_deposit_block"))
+	new DrillingRecipe("create_rns:gold_deposit_block")
 		.item(["cmi:deposit_dust"],
 			["cmi:deposit_dust", "mekanism:dirty_dust_gold"],
 			["thermal_extra:gold_ore_chunk"],
@@ -383,7 +383,7 @@ ServerEvents.recipes((event) => {
 		.energy(100, 1, 2)
 		.id("cmi:multi_type_driller/gold")
 
-	new DrillingRecipe(Block.getBlock("create_rns:tin_deposit_block"))
+	new DrillingRecipe("create_rns:tin_deposit_block")
 		.item(["cmi:deposit_dust"],
 			["cmi:deposit_dust", "mekanism:dirty_dust_tin"],
 			["thermal_extra:tin_ore_chunk"],
@@ -398,7 +398,7 @@ ServerEvents.recipes((event) => {
 		.energy(100, 1, 2)
 		.id("cmi:multi_type_driller/tin")
 
-	new DrillingRecipe(Block.getBlock("create_rns:lead_deposit_block"))
+	new DrillingRecipe("create_rns:lead_deposit_block")
 		.item(["cmi:deposit_dust"],
 			["cmi:deposit_dust", "mekanism:dirty_dust_lead"],
 			["thermal_extra:lead_ore_chunk"],
@@ -413,7 +413,7 @@ ServerEvents.recipes((event) => {
 		.energy(100, 1, 2)
 		.id("cmi:multi_type_driller/lead")
 
-	new DrillingRecipe(Block.getBlock("create_rns:nickel_deposit_block"))
+	new DrillingRecipe("create_rns:nickel_deposit_block")
 		.item(["cmi:deposit_dust"],
 			["cmi:deposit_dust", "cmi:dirty_nickel_dust"],
 			["thermal_extra:nickel_ore_chunk"],
@@ -428,7 +428,7 @@ ServerEvents.recipes((event) => {
 		.energy(100, 1, 2)
 		.id("cmi:multi_type_driller/nickel")
 
-	new DrillingRecipe(Block.getBlock("create_rns:silver_deposit_block"))
+	new DrillingRecipe("create_rns:silver_deposit_block")
 		.item(["cmi:deposit_dust"],
 			["cmi:deposit_dust", "cmi:dirty_silver_dust"],
 			["thermal_extra:silver_ore_chunk"],
@@ -443,7 +443,7 @@ ServerEvents.recipes((event) => {
 		.energy(100, 1, 2)
 		.id("cmi:multi_type_driller/silver")
 
-	new DrillingRecipe(Block.getBlock("create_rns:uranium_deposit_block"))
+	new DrillingRecipe("create_rns:uranium_deposit_block")
 		.item(["cmi:deposit_dust"],
 			["cmi:deposit_dust", "mekanism:dirty_dust_uranium"],
 			["thermal_extra:uranium_ore_chunk"],
@@ -460,7 +460,7 @@ ServerEvents.recipes((event) => {
 		.energy(100, 1, 2)
 		.id("cmi:multi_type_driller/uranium")
 
-	new DrillingRecipe(Block.getBlock("create_rns:osmium_deposit_block"))
+	new DrillingRecipe("create_rns:osmium_deposit_block")
 		.item(["cmi:deposit_dust"],
 			["cmi:deposit_dust", "mekanism:dirty_dust_osmium"],
 			["thermal_extra:osmium_ore_chunk"],
@@ -475,7 +475,7 @@ ServerEvents.recipes((event) => {
 		.energy(100, 1, 2)
 		.id("cmi:multi_type_driller/osmium")
 
-	new DrillingRecipe(Block.getBlock("cmi:aluminum_deposit_block"))
+	new DrillingRecipe("cmi:aluminum_deposit_block")
 		.item(["cmi:deposit_dust"],
 			["cmi:deposit_dust", "cmi:dirty_aluminum_dust"],
 			["thermal_extra:aluminum_ore_chunk"],
@@ -490,7 +490,7 @@ ServerEvents.recipes((event) => {
 		.energy(100, 1, 2)
 		.id("cmi:multi_type_driller/aluminum")
 
-	new DrillingRecipe(Block.getBlock("cmi:platinum_deposit_block"))
+	new DrillingRecipe("cmi:platinum_deposit_block")
 		.item(["cmi:deposit_dust"],
 			["cmi:deposit_dust", "cmi:dirty_platinum_dust"],
 			["cmi:platinum_ore_chunk"],
@@ -505,7 +505,7 @@ ServerEvents.recipes((event) => {
 		.energy(100, 1, 2)
 		.id("cmi:multi_type_driller/platinum")
 
-	new DrillingRecipe(Block.getBlock("cmi:oil_shale_deposit_block"))
+	new DrillingRecipe("cmi:oil_shale_deposit_block")
 		.item(["cmi:deposit_dust"],
 			["cmi:deposit_dust", "cmi:oil_shale_dust"],
 			["cmi:oil_shale_dust"],
@@ -521,7 +521,7 @@ ServerEvents.recipes((event) => {
 		.energy(100, 1, 2)
 		.id("cmi:multi_type_driller/oil_shale")
 
-	new DrillingRecipe(Block.getBlock("cmi:cheese_deposit_block"))
+	new DrillingRecipe("cmi:cheese_deposit_block")
 		.item(["cmi:deposit_dust"],
 			["cmi:deposit_dust", "ad_astra:cheese"],
 			["tconstruct:cheese_ingot"],
@@ -537,7 +537,7 @@ ServerEvents.recipes((event) => {
 		.energy(100, 1, 2)
 		.id("cmi:multi_type_driller/cheese")
 
-	new DrillingRecipe(Block.getBlock("cmi:peat_block"))
+	new DrillingRecipe("cmi:peat_block")
 		.gas("100x cmi:natural_gas")
 		.duration(100, 1.5, 2)
 		.energy(100, 1, 2)
