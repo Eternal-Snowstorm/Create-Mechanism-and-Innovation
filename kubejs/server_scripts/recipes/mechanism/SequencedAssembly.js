@@ -515,4 +515,15 @@ ServerEvents.recipes((event) => {
 		.deploying("cmi:titanium_alloy_coil")
 		.deploying(Mechanisms.PART.QUANTUM)
 		.build()
+
+	// 创造
+	new SequencedAssemblyRecipe(Mechanisms.CREATIVE)
+		.input("cmi:cmi_icon")
+		.deploying("cmi:dtma_dreamcore_energy_core")
+		.deploying("cmi:mechanium_casing")
+		.laserCutting(10000)
+		.filling(Fluid.of("cmi:creative_solution", 100))
+		.deploying("cmi:dreamcore_coil")
+		.deploying(Mechanisms.PART.FINAL)
+		.build()
 })

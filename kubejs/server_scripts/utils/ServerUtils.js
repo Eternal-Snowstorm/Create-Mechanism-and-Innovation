@@ -179,6 +179,12 @@ const Mechanisms = Object.freeze({
 		INC: Item.of("cmi:incomplete_antimatter_mechanism"),
 		BAS: Item.of("cmi:antimatter_mechanism_basement")
 	}),
+	// C10
+	CREATIVE: Object.freeze({
+		COM: Item.of("cmi:creative_mechanism"),
+		INC: Item.of("cmi:incomplete_creative_mechanism")
+	}),
+	// 部件
 	PART: Object.freeze({
 		BASIC: Item.of("cmi:basic_mechanism_part"),
 		MAGIC: Item.of("cmi:magical_mechanism_part"),
