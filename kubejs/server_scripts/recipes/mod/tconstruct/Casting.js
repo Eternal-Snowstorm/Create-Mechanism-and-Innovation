@@ -169,4 +169,11 @@ ServerEvents.recipes((event) => {
 		.cast("immersiveengineering:blastbrick")
 		.cast_consumed(true)
 		.cooling_time(20 * 2)
+
+	// 坚固板
+	tconstruct.casting_table("cmi:mechanium_ingot")
+		.fluid(Fluid.of("cmi:molten_mechanium", 90))
+		.cast("#tconstruct:casts/multi_use/ingot")
+		.cooling_time(20 * 10)
+		.cast_consumed(false)
 })

@@ -215,7 +215,8 @@ let Material = Object.freeze({
 		CHARGED: Item.of("cmi:dreamcore_charged"),
 		MOLTEN: Fluid.of("cmi:molten_dreamcore", 100),
 		SOLIDIFIED: Fluid.of("cmi:dreamcore_solidified", 100),
-		INNOVATION: Item.of("cmi:dreamcore_innovation")
+		INNOVATION: Item.of("cmi:dreamcore_innovation"),
+		WIRE: Item.of("cmi:dreamcore_wire")
 	})
 })
 

@@ -254,7 +254,12 @@ ServerEvents.recipes((event) => {
 	addRecipe("cmi:antimatter_mechanism", "minecraft:stone", [
 		setOutput("cmi:antistone", 1)
 	])
-	
+	addRecipe("cmi:antimatter_mechanism", "cmi:entro_block", [
+		setOutput("cmi:innovation_crystal_block", 1)
+	])
+	addRecipe("cmi:antimatter_mechanism", "cmi:antistone", [
+		setOutput("cmi:mechanium_ore", 0.2)
+	])
 
 	/**
 	 * 设置输出项Json

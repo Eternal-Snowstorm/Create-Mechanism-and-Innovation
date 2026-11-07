@@ -165,4 +165,41 @@ ServerEvents.recipes((event) => {
 			"#forge:rods/glass"
 		])
 		.energy(10000)
+
+	// 幻晶线圈
+	addRecipe()
+		.itemOutput("2x cmi:dreamcore_coil")
+		.inputItems([
+			Mechanisms.ANTI,
+			Material.Dreamcores.WIRE.withCount(16),
+			"8x cmi:mechanium_ingot"
+		])
+		.energy(100000)
+
+	// DTMA 能量核心
+	addRecipe()
+		.itemOutput("cmi:dtma_dreamcore_energy_core")
+		.inputItems([
+			Mechanisms.ANTI,
+			"fluxnetworks:gargantuan_flux_storage",
+			"4x cmi:dreamcore_coil",
+			"16x cmi:innovation_crystal_wafer",
+			Material.Dreamcores.WIRE.withCount(16),
+			"16x cmi:mechanium_ingot",
+			"cmi:cmi_icon"
+		])
+		.energy(1000000)
+
+	// 械钢机壳
+	addRecipe()
+		.itemOutput("4x cmi:mechanium_casing")
+		.inputItems([
+			Casing.IRON,
+			Casing.STEEL,
+			Casing.STAINLESS_STEEL,
+			Casing.ALUMINUM_ALLOY,
+			Casing.BLACK_TUNGSTEN,
+			"4x cmi:mechanium_ingot"
+		])
+		.energy(100000)
 })

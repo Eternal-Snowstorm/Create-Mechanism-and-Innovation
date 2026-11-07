@@ -129,4 +129,10 @@ ServerEvents.recipes((event) => {
 		.item("cmi:superconducting_mercury_ingot")
 		.fluid("immersiveengineering:redstone_acid", 100)
 		.build()
+
+	// 革新晶晶圆
+	new CircuitCutterRecipe(Item.of("cmi:innovation_crystal_wafer", 4))
+		.item("cmi:innovation_crystal_block")
+		.fluid("cmi:molten_mechanium", 4 * 90)
+		.build()
 })

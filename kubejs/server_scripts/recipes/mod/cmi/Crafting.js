@@ -328,7 +328,7 @@ ServerEvents.recipes((event) => {
 		"#forge:plates/industrial_iron"
 	])
 
-	//  水晶块
+	// 水晶块
 	kubejs.shaped("cmi:crystal_block", [
 		"AA",
 		"AA"
@@ -338,5 +338,12 @@ ServerEvents.recipes((event) => {
 
 	kubejs.shapeless("4x neoecoae:crystal_ingot", [
 		"cmi:crystal_block"
+	])
+
+	// CMI 图标
+	kubejs.shaped("cmi:cmi_icon", [
+		["cmi:innovation_crystal_wafer", "", ""],
+		["", "cmi:dreamcore_wire", ""]
+		["", "", "cmi:mechanium_ingot"]
 	])
 })

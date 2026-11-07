@@ -27,4 +27,13 @@ ServerEvents.recipes((event) => {
 		.outputItems("cmi:composite_magnetic_conduction_plate")
 		.inputFE(114514)
 		.duration(20 * 3)
+
+	// 械钢
+	cmi.electronic_blast_furnace()
+		.inputItems("cmi:mechanium_ore")
+		.outputFluids([
+			Fluid.of("cmi:molten_mechanium", 120)
+		])
+		.inputFE(676767)
+		.duration(20 * 10)
 })
