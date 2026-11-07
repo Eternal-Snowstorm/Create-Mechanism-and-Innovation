@@ -59,6 +59,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addMaterialLang("composite_carbon_fiber", "复合碳纤")
 	addMaterialLang("redstone", "红石")
 	addMaterialLang("stone", "石")
+	addMaterialLang("innovation_crystal", "革新晶")
 
 	/**
 	 * 

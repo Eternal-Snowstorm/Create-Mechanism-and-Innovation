@@ -222,6 +222,7 @@ let Material = Object.freeze({
 		MOLTEN: Fluid.of("cmi:molten_dreamcore", 100),
 		SOLIDIFIED: Fluid.of("cmi:dreamcore_solidified", 100),
 		INNOVATION: Item.of("cmi:dreamcore_innovation"),
+		// UNCERTAIN_PLAN
 		WIRE: Item.of("cmi:dreamcore_wire")
 	})
 })

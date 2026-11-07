@@ -67,6 +67,7 @@ StartupEvents.registry("item", (event) => {
 	addAloneWireItem("fluix")
 
 	// 幻晶
+	// UNCERTAIN_PLAN
 	addAloneWireItem("dreamcore")
 
 	// 光纤

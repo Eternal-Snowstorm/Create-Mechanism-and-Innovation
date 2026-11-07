@@ -27,5 +27,6 @@ StartupEvents.registry("item", (event) => {
 	addAloneWaferItem("entro_alloy")
 
 	// 革新晶晶圆
+	// UNCERTAIN_PLAN
 	addAloneWaferItem("innovation_crystal")
 })

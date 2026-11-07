@@ -131,6 +131,7 @@ ServerEvents.recipes((event) => {
 		.build()
 
 	// 革新晶晶圆
+	// UNCERTAIN_PLAN
 	new CircuitCutterRecipe(Item.of("cmi:innovation_crystal_wafer", 4))
 		.item("cmi:innovation_crystal_block")
 		.fluid("cmi:molten_mechanium", 4 * 90)

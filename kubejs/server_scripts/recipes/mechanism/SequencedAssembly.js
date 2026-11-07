@@ -517,6 +517,7 @@ ServerEvents.recipes((event) => {
 		.build()
 
 	// 创造
+	// UNCERTAIN_PLAN
 	new SequencedAssemblyRecipe(Mechanisms.CREATIVE)
 		.input("cmi:cmi_icon")
 		.deploying("cmi:dtma_dreamcore_energy_core")

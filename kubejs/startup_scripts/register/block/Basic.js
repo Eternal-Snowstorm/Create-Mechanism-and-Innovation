@@ -310,6 +310,7 @@ StartupEvents.registry("block", (event) => {
 		.noDrops()
 
 	// 反相石
+	// UNCERTAIN_PLAN
 	addBlock("antistone")
 		.textureAll(Cmi.loadResource("block/antistone"))
 		.soundType(SoundType.STONE)
@@ -322,6 +323,7 @@ StartupEvents.registry("block", (event) => {
 		.hardness(0.1)
 
 	// 革新晶块
+	// UNCERTAIN_PLAN
 	addBlock("innovation_crystal_block")
 		.hardness(3)
 		.resistance(6)

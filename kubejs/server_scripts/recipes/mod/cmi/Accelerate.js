@@ -251,6 +251,7 @@ ServerEvents.recipes((event) => {
 	])
 
 	// 反物质构件
+	// UNCERTAIN_PLAN
 	addRecipe("cmi:antimatter_mechanism", "minecraft:stone", [
 		setOutput("cmi:antistone", 1)
 	])

@@ -83,6 +83,7 @@ StartupEvents.registry("item", (event) => {
 	addIngotItem("deposition_catalytic_alloy")
 	
 	// 械钢锭
+	// UNCERTAIN_PLAN
 	addAloneIngotItem("mechanium")
 	// 超载合金锭
 	addAloneIngotItem("overcharged_alloy")

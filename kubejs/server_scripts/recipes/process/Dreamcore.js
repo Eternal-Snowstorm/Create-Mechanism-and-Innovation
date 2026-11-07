@@ -61,11 +61,4 @@ ServerEvents.recipes((event) => {
 	kubejs.shapeless(Mechanisms.PART.FINAL.withCount(2), [
 		Material.Dreamcores.INNOVATION
 	])
-
-	// 幻晶线
-	tconstruct.casting_table(Material.Dreamcores.WIRE.withCount(2))
-		.cast("#tconstruct:casts/multi_use/wire")
-		.fluid(Material.Dreamcores.SOLIDIFIED)
-		.cooling_time(20 * 10)
-		.cast_consumed(false)
 })
