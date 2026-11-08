@@ -30,7 +30,7 @@ ItemEvents.rightClicked((event) => {
 	})
 	if (cell) {
 		player.swing()
-		ItemUIFactory.INSTANCE.openUI(player, event.hand, cell.uiId)
+		ItemUIFactory.INSTANCE.openUI(player, event.getHand(), cell.uiId)
 	}
 })
 
