@@ -64,4 +64,24 @@ ServerEvents.recipes((event) => {
 		"4x #forge:gems/sapphire",
 		"cmi:gear_mold"
 	])
+
+	thermal.bottler("cmi:blaze_unit", [
+		"cmi:thermal_unit",
+		Fluid.of("tconstruct:blazing_blood", 100)
+	])
+
+	thermal.bottler("cmi:basalz_unit", [
+		"cmi:thermal_unit",
+		Fluid.of("thermalconstruct:basalz_blood", 100)
+	])
+
+	thermal.bottler("cmi:blitz_unit", [
+		"cmi:thermal_unit",
+		Fluid.of("thermalconstruct:blitz_blood", 100)
+	])
+
+	thermal.bottler("cmi:blizz_unit", [
+		"cmi:thermal_unit",
+		Fluid.of("thermalconstruct:blizz_blood", 100)
+	])
 })

@@ -153,8 +153,16 @@ Remove-Item Env:GIT_CONFIG_COUNT,Env:GIT_CONFIG_KEY_0,Env:GIT_CONFIG_VALUE_0
    powershell -NoProfile -ExecutionPolicy Bypass -File updater\dev\_bomprobe.ps1
    ```
 
-4. **不要用 `2>&1` 合并原生命令的 stderr**：PowerShell 5.1 会把它们包装成
-   `ErrorRecord` 塞进成功流，产生 `git.exe : ...` 噪声。要丢弃 stderr 就用 `2>$null`。
+4. **原生命令的 stderr 重定向要格外小心 —— `2>$null` 也一样危险**：PowerShell 5.1 只要对
+   原生命令做了 stderr 重定向（`2>&1` 合并、`2>$null` 丢弃都算），就会把每一行 stderr 包装成
+   `ErrorRecord` 送进错误流。叠加脚本顶部的 `$ErrorActionPreference = 'Stop'`（`sync.ps1` 与
+   `mods-sync.ps1` 都是 Stop），这条 `ErrorRecord` 会变成**终止错误**当场结束整个脚本。
+   `setup-gitee-sync` 曾因此出过事故：连不上 GitHub 时 git 必然往 stderr 写
+   `fatal: unable to access ...`，探测一出错脚本就直接退出，后面的 Gitee 回退分支永远走不到。
+   正确写法见 `sync.ps1` 的 `Invoke-GitText`：在函数内部把 `$ErrorActionPreference` 临时降为
+   `'Continue'`（stderr 仍然被 `2>$null` 丢弃），退出码照常从 `$LASTEXITCODE` 读，`finally`
+   里恢复原值，并用 `catch` 兜底成非零退出码。（`update-cmi.ps1` 整体是 `Continue`，所以它那里
+   的 `2>$null` 本来就安全 —— 差别就在这个变量上，不要照抄。）
 
 5. **写日志的 cmdlet 记得带 `-ErrorAction`**：默认 `Continue` 下「日志目录不可写」
    并不是终止错误，`try/catch` 抓不住，会退化成每条提示都刷一次英文报错。

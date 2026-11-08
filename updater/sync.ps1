@@ -74,13 +74,28 @@ function Write-Fail([string]$Message, [string[]]$Hints = @()) {
 }
 
 # 调用 git 并返回 stdout(丢弃 stderr)。
-# 注意: 这里不能写成 "... 2>&1" —— Windows PowerShell 5.1 会把经 2>&1 合并过来的
-# 原生命令 stderr 包装成 ErrorRecord 写进成功流, 叠加顶部的 $ErrorActionPreference='Stop'
-# 会抛出 NativeCommandError 当场终止脚本; 而"本地还没有这个远程"正是首次 setup 的
-# 必经分支, 结果是远程永远建不起来。2>$null 只是丢弃, 是安全的。
+# 【务必保留下面这段"临时降级 ErrorActionPreference"的写法 —— 它是修复过的 bug】
+#   Windows PowerShell 5.1 有个坑: 原生命令的 stderr 一旦被重定向(2>$null、2>&1 都算),
+#   PowerShell 就会把每一行 stderr 包装成 ErrorRecord 塞进错误流; 再叠加脚本顶部的
+#   $ErrorActionPreference='Stop', 这条 ErrorRecord 会变成 **terminating error** 当场
+#   终止整个脚本。而"连不上 GitHub"必然让 git 往 stderr 写 "fatal: unable to access ...",
+#   于是探测失败的那一刻脚本就退出了, 后面的"回退 Gitee 镜像"分支永远走不到 ——
+#   这正是"建立同步时 GitHub 连接不畅, 脚本直接退出、不尝试 Gitee"的根因。
+#   修法: 只在本函数内部把 $ErrorActionPreference 临时降为 'Continue'(stderr 依旧被丢弃),
+#   退出码仍可从 $LASTEXITCODE 正常读到; 函数结束在 finally 里恢复成原值。
+#   catch 里的兜底是双保险: 万一某天又被抛成终止错误, 也只记成非零退出码, 绝不连坐整个脚本。
 function Invoke-GitText([string[]]$Arguments) {
-  $out = & git @Arguments 2>$null
-  $script:GitExitCode = $LASTEXITCODE
+  $prevErrorActionPreference = $ErrorActionPreference
+  $ErrorActionPreference = 'Continue'
+  try {
+    $out = & git @Arguments 2>$null
+    $script:GitExitCode = $LASTEXITCODE
+  } catch {
+    if ($LASTEXITCODE -gt 0) { $script:GitExitCode = $LASTEXITCODE } else { $script:GitExitCode = 1 }
+    $out = $null
+  } finally {
+    $ErrorActionPreference = $prevErrorActionPreference
+  }
   return (($out | Out-String).Trim())
 }
 

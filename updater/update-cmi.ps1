@@ -84,7 +84,10 @@ function Write-Log {
 #   默认        : 捕获 stdout 作为字符串返回, 并抑制 stderr
 # 注意: 这里绝不能用 "2>&1" —— Windows PowerShell 5.1 会把合并过来的原生命令 stderr
 #       包装成 ErrorRecord 写进成功流, 产生 "git.exe : ..." 之类的噪声文本。
-#       2>$null 只是丢弃 stderr, 是安全的。
+#       "2>$null" 在本文件里之所以安全, 前提是本脚本顶部用的是 $ErrorActionPreference = 'Continue';
+#       若哪天改成 'Stop' 就完全不同了(updater/sync.ps1 正是如此): 那种情况下仅凭 stderr 被重定向
+#       就会抛 NativeCommandError 当场终止整个脚本 —— 请照抄 sync.ps1 里 Invoke-GitText 的写法
+#       (在函数内部把 $ErrorActionPreference 临时降为 'Continue', 结束再恢复)。
 function Invoke-Git {
   param(
     [string[]]$Arguments,

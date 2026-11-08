@@ -1,0 +1,103 @@
+ServerEvents.recipes((event) => {
+	let { thermal, create } = event.getRecipes()
+
+	// 磷灰石
+	thermal.crystallizer("thermal:apatite", [
+		"#forge:dusts/apatite",
+		Fluid.of("cmi:crystal_catalyt", 200)
+	]).id("thermal:machines/crystallizer/crystallizer_apatite")
+
+	// 朱砂
+	thermal.crystallizer("thermal:cinnabar", [
+		"#forge:dusts/cinnabar",
+		Fluid.of("cmi:crystal_catalyt", 200)
+	]).id("thermal:machines/crystallizer/crystallizer_cinnabar")
+
+	// 硫
+	thermal.crystallizer("thermal:sulfur", [
+		"#forge:dusts/sulfur",
+		Fluid.of("cmi:crystal_catalyt", 200)
+	]).id("thermal:machines/crystallizer/crystallizer_sulfur")
+
+	// 硝石
+	thermal.crystallizer("thermal:niter", [
+		"#forge:dusts/niter",
+		Fluid.of("cmi:crystal_catalyt", 200)
+	]).id("thermal:machines/crystallizer/crystallizer_niter")
+
+	// 钴电解质
+	thermal.crystallizer("cmi:cobalt_electrolyte", [
+		"#forge:dusts/cobalt",
+		Fluid.of("immersiveengineering:redstone_acid", 100)
+	])
+
+	// 富集锇结晶
+	thermal.crystallizer("cmi:enriched_osmium_crystal", [
+		"cmi:pure_semi_molten_osmium",
+		Fluid.of("minecraft:water", 1000)
+	])
+
+	// 石墨烯
+	thermal.crystallizer("cmi:graphene", [
+		"cmi:carbon_deposition_catalytic_plate",
+		Fluid.of("cmi:hdpe", 100)
+	]).keepIngredient("cmi:carbon_deposition_catalytic_plate")
+
+	// 未成形碳纳米管
+	thermal.crystallizer("cmi:incomplete_carbon_nanotube", [
+		"cmi:graphene",
+		Fluid.of("cmi:polymeric_carbon_solution", 50)
+	])
+
+	// 纯净石英
+	thermal.crystallizer("cmi:pure_quartz_prism", [
+		"#forge:dusts/pure_quartz",
+		Fluid.of("cmi:crystal_catalyt", 200)
+	]).energy(4000)
+
+	// 幻晶原石
+	thermal.crystallizer("2x cmi:dreamcore_ore", [
+		"cmi:dreamcore_seed",
+		Fluid.of("cmi:crystal_catalyt", 200)
+	]).energy(4000)
+
+	// RGB宝石
+	thermal.crystallizer("thermal:sapphire", [
+		"#forge:dusts/sapphire",
+		Fluid.of("cmi:crystal_catalyt", 200)
+	])
+
+	thermal.crystallizer("thermal:ruby", [
+		"#forge:dusts/ruby",
+		Fluid.of("cmi:crystal_catalyt", 200)
+	])
+
+	thermal.crystallizer("minecraft:emerald", [
+		"#forge:dusts/emerald",
+		Fluid.of("cmi:crystal_catalyt", 200)
+	]).id("thermal:machines/crystallizer/crystallizer_emerald")
+
+	// 单晶硅
+	thermal.chiller("cmi:single_crystal_silicon", [
+		Fluid.of("cmi:molten_pure_silicon", 250),
+		"#tconstruct:casts/multi_use/gem"
+	]).energy(8000).keepIngredient([
+		"thermalconstruct:bronze_cast_gem",
+		"tconstruct:gem_cast"
+	])
+
+	// 赛特斯石英晶
+	create.crushing([
+		"2x ae2:certus_quartz_crystal",
+		Item.of("ae2:certus_quartz_crystal").withChance(0.25),
+		Item.of("create:experience_nugget").withChance(0.75),
+		Item.of("minecraft:cobblestone").withChance(0.12)
+	], "cmi:certus_quartz_ore")
+
+	create.crushing([
+		"2x ae2:certus_quartz_crystal",
+		Item.of("ae2:certus_quartz_crystal").withChance(0.25),
+		Item.of("create:experience_nugget").withChance(0.75),
+		Item.of("minecraft:cobbled_deepslate").withChance(0.12)
+	], "cmi:deepslate_certus_quartz_ore")
+})

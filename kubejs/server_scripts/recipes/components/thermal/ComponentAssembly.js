@@ -126,6 +126,13 @@ ServerEvents.highPriorityData((event) => {
 		return new ComponRecipe(output, inputs)
 	}
 
+	// 热力单元
+	addComponRecipe("cmi:thermal_unit", [
+		Fluid.of("thermal:resin", 50),
+		"#forge:plates/signalum",
+		"#forge:plates/invar"
+	])
+
 	// 二极管
 	addComponRecipe("4x thermal:laser_diode", [
 		"#forge:wires/electrum",
@@ -266,7 +273,7 @@ ServerEvents.highPriorityData((event) => {
 	 * @param {ComponRecipe} recipe 已登记的配方
 	 * @param {number} index 配方在列表中的下标
 	 * @returns 数据包路径
-	 */	
+	 */
 	function getRecipeId(recipe, index) {
 		return recipe.recipeId
 			? dataPath(recipe.recipeId)

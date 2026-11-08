@@ -93,4 +93,17 @@ ServerEvents.recipes((event) => {
 			M: Mechanisms.RAILWAY.COM
 		}).id(`create:crafting/logistics/${color}_postbox`)
 	})
+
+	// 铁路放置器
+	kubejs.shaped("railway_automation:track_placer", [
+		" M ",
+		"ECE",
+		"PRP"
+	], {
+		M: Mechanisms.RAILWAY.COM,
+		E: "create:transmitter",
+		C: Casing.RAILWAY,
+		P: "#forge:plates/iron",
+		R: "#create:tracks"
+	}).id("railway_automation:track_placer")
 })
