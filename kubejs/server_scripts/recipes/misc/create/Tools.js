@@ -137,14 +137,4 @@ ServerEvents.recipes((event) => {
 		B: "minecraft:map",
 		C: "#minecraft:planks"
 	}).id("railway_automation:map_locator")
-
-	// 铁锤子
-	kubejs.shaped("createdieselgenerators:hammer", [
-		"AAA",
-		"ABA",
-		" B "
-	], {
-		A: "#forge:ingots/iron",
-		B: "#forge:rods/wooden"
-	}).id("createdieselgenerators:crafting/hammer")
 })
