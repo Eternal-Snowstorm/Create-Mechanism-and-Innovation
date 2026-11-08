@@ -150,13 +150,10 @@ ItemEvents.modification((event) => {
 	}
 
 	ForgeRegistries.ITEMS.getEntries().forEach((entry) => {
-		/**
-		 * @type {Internal.Item_}
-		 */
 		let item = entry.getValue()
 
 		event.modify(item, (modify) => {
-			if (item.getMaxStackSize() <= 16 && item.getMaxStackSize() !== 1) {
+			if ((item.getMaxStackSize() <= 16) && (item.getMaxStackSize() !== 1)) {
 				modify.setMaxStackSize(64)
 			}
 		})
