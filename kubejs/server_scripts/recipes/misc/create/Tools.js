@@ -1,5 +1,5 @@
 ServerEvents.recipes((event) => {
-	let { create } = event.getRecipes()
+	let { create, kubejs } = event.getRecipes()
 
 	// 多方块搭建器
 	create.mechanical_crafting("mbtool:mbtool", [
@@ -126,4 +126,25 @@ ServerEvents.recipes((event) => {
 		B: "#forge:ingots/brass",
 		H: "#forge:ingots/hepatizon"
 	})
+	
+	// 地图定位器
+	kubejs.shaped("railway_automation:map_locator", [
+		" A ",
+		" B ",
+		" C "
+	], {
+		A: "#forge:ingots/andesite_alloy",
+		B: "minecraft:map",
+		C: "#minecraft:planks"
+	}).id("railway_automation:map_locator")
+
+	// 铁锤子
+	kubejs.shaped("createdieselgenerators:hammer", [
+		"AAA",
+		"ABA",
+		" B "
+	], {
+		A: "#forge:ingots/iron",
+		B: "#forge:rods/wooden"
+	}).id("createdieselgenerators:crafting/hammer")
 })

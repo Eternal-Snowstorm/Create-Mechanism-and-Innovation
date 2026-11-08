@@ -12,6 +12,11 @@ ServerEvents.recipes((event) => {
 		"cmi:brass_casing_framework"
 	])
 
+	create.deploying(Casing.BRONZE, [
+		Casing.INDUSTRY,
+		"cmi:bronze_casing_framework"
+	]).id("steam_letters:item_application/bronze_casing_plate")
+
 	create.deploying(Casing.COPPER, [
 		"#forge:treated_wood",
 		"cmi:copper_casing_framework"
@@ -28,6 +33,12 @@ ServerEvents.recipes((event) => {
 		"#forge:treated_wood",
 		["#forge:ingots/copper", "#forge:plates/copper"]
 	]).id("create:item_application/copper_casing_from_log")
+
+	// 青铜机壳
+	create.item_application(Casing.BRONZE, [
+		Casing.INDUSTRY,
+		["#forge:ingots/bronze", "#forge:plates/bronze"]
+	]).id("steam_letters:item_application/bronze_casing_ingot")
 
 	// 黄铜机壳
 	create.item_application(Casing.BRASS, [

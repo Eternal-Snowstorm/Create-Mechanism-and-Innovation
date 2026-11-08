@@ -11,6 +11,16 @@ ServerEvents.recipes((event) => {
 		B: "#forge:rods/wooden"
 	})
 
+	// 铁锤子
+	kubejs.shaped("createdieselgenerators:hammer", [
+		"AAA",
+		"ABA",
+		" B "
+	], {
+		A: "#forge:ingots/iron",
+		B: "#forge:rods/wooden"
+	}).id("createdieselgenerators:crafting/hammer")
+
 	// 钻石锤子
 	kubejs.shaped("cmi:diamond_hammer", [
 		"AAA",

@@ -86,4 +86,61 @@ ServerEvents.recipes((event) => {
 	minecraft.stonecutting("2x create:metal_girder",
 		"#forge:plates/industrial_iron"
 	).id("create:crafting/kinetics/metal_girder")
+
+	// 安山梁
+	minecraft.stonecutting("2x createdieselgenerators:andesite_girder",
+		"#forge:plates/andesite_alloy"
+	).id("createdieselgenerators:crafting/andesite_girder")
+
+	// 线轴
+	kubejs.shaped("16x createaddition:spool", [
+		"A",
+		"B",
+		"A"
+	], {
+		A: "#forge:plates/iron",
+		B: "#forge:rods/iron"
+	}).id("createaddition:crafting/spool")
+	
+	// 铜线圈
+	kubejs.shaped("moreburners:copper_coil", [
+		"ABA",
+		"ABA",
+		"ABA"
+	], {
+		A: "#forge:wires/copper",
+		B: "#forge:rods/copper"
+	}).id("moreburners:copper_coil")
+
+	// 电阻线圈
+	kubejs.shaped("moreburners:nickel_coil", [
+		"AAA",
+		"ABA",
+		"AAA"
+	], {
+		A: "#forge:plates/nickel",
+		B: "moreburners:copper_coil"
+	}).id("moreburners:resistance_coil")
+
+	// 激光发射器
+	kubejs.shaped("vintageimprovements:laser_item", [
+		" A ",
+		"BDB",
+		" E "
+	], {
+		A: "#forge:dusts/redstone",
+		B: "#forge:plates/copper",
+		D: "createaddition:capacitor",
+		E: Mechanisms.PHOTO.COM
+	}).id("vintageimprovements:mechanical_crafting/laser")
+
+	// 卷簧轮
+	kubejs.shaped("vintageimprovements:spring_coiling_machine_wheel", [
+		" A ",
+		"ABA",
+		" A "
+	], {
+		A: ["#forge:plates/iron", "#forge:plates/andesite_alloy"],
+		B: "#forge:ingots/andesite_alloy"
+	}).id("vintageimprovements:craft/spring_coiling_machine_wheel")
 })

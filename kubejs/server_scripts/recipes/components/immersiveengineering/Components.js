@@ -1,6 +1,14 @@
 ServerEvents.recipes((event) => {
 	let { kubejs, immersiveengineering, thermal } = event.getRecipes()
 
+	// 真空管
+	immersiveengineering.blueprint("2x immersiveengineering:electron_tube", [
+		"#forge:plates/nickel",
+		"#forge:wires/copper",
+		"create:polished_rose_quartz"
+	]).blueprint("components")
+		.id("immersiveengineering:blueprint/electron_tube")
+
 	// 铁机械零件
 	immersiveengineering.blueprint("4x immersiveengineering:component_iron", [
 		"4x #forge:plates/iron",
