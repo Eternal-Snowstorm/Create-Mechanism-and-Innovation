@@ -1,0 +1,37 @@
+filename = 'neoecoae-20.5.5.jar'
+name = 'Neo Eco AE Extension'
+side = ''
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '20.5.5'
+
+[download]
+hash = 'c68f32ba2f7733edd369b15154db4677499970bc878e62be341c469358ca34e45605276ec608927a4dc446d91062aa2d06d98181557483202799ca1ee1678e3d'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/udZtKfzP/versions/eLBVfyxA/neoecoae-20.5.5.jar'
+
+[update.modrinth]
+mod-id = 'udZtKfzP'
+version = 'eLBVfyxA'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'ERXg8PW9'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'Ck4E7v7R'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'XxWD5pD3'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'B1CBVXHX'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'oMgZ004U'
+type = 'OPTIONAL'
