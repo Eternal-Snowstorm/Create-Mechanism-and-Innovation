@@ -2,18 +2,6 @@
 ServerEvents.recipes((event) => {
 	let { thermal_extra, neoecoae } = event.getRecipes()
 
-	// 电力高炉
-	neoecoae.integrated_working_station()
-		.itemOutput("cmi:electronic_blast_furnace")
-		.inputItems([
-			Casing.STAINLESS_STEEL,
-			"ae2:semi_dark_monitor",
-			"ad_astra:etrionic_capacitor",
-			Mechanisms.NETHER.COM,
-			Mechanisms.BASIC.COM
-		])
-		.energy(2000)
-
 	// 富集仓
 	neoecoae.integrated_working_station()
 		.itemOutput("mekanism:enrichment_chamber")

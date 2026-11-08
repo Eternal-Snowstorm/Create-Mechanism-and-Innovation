@@ -18,31 +18,4 @@ ServerEvents.recipes((event) => {
 		"thermal:rf_coil",
 		"create:brass_hand"
 	])
-
-	// 热力单元
-	addComponRecipe(thermal_extra, "cmi:thermal_unit", [
-		Fluid.of("thermal:resin", 50),
-		"#forge:plates/signalum",
-		"#forge:plates/invar"
-	])
-
-	thermal.bottler("cmi:blaze_unit", [
-		"cmi:thermal_unit",
-		Fluid.of("tconstruct:blazing_blood", 100)
-	])
-
-	thermal.bottler("cmi:basalz_unit", [
-		"cmi:thermal_unit",
-		Fluid.of("thermalconstruct:basalz_blood", 100)
-	])
-
-	thermal.bottler("cmi:blitz_unit", [
-		"cmi:thermal_unit",
-		Fluid.of("thermalconstruct:blitz_blood", 100)
-	])
-
-	thermal.bottler("cmi:blizz_unit", [
-		"cmi:thermal_unit",
-		Fluid.of("thermalconstruct:blizz_blood", 100)
-	])
 })

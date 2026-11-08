@@ -126,6 +126,13 @@ ServerEvents.highPriorityData((event) => {
 		return new ComponRecipe(output, inputs)
 	}
 
+	// 热力单元
+	addComponRecipe(thermal_extra, "cmi:thermal_unit", [
+		Fluid.of("thermal:resin", 50),
+		"#forge:plates/signalum",
+		"#forge:plates/invar"
+	])
+
 	// 二极管
 	addComponRecipe("4x thermal:laser_diode", [
 		"#forge:wires/electrum",
