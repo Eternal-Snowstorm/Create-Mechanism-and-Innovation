@@ -22,13 +22,55 @@ ServerEvents.recipes((event) => {
 	// 计算机壳
 	neoecoae.integrated_working_station()
 		.itemOutput("cmi:computing_casing")
-		.inputFluid(Fluid.of("thermal:resin", 100))
+		.inputFluid(Fluid.of("cmi:structural_plastic", 200))
 		.inputItems([
+			"#forge:gems/entro",
+			"#forge:plates/silicon_rubber",
 			"#forge:plates/stainless_steel",
-			"#forge:plates/platinum",
-			"cmi:entro_crystal",
-			"cmi:silicon_rubber"
+			"2x #forge:plates/platinum"
 		])
+		.energy(2000)
+
+	// 铝合金机壳
+	neoecoae.integrated_working_station()
+		.itemOutput("2x neoecoae:aluminum_alloy_casing")
+		.inputFluid(Fluid.of("cmi:structural_plastic", 400))
+		.inputItems([
+			"cmi:computing_casing",
+			"2x #forge:plates/silicon_rubber",
+			"4x #forge:plates/aluminum_alloy",
+			"mekanism:structural_glass",
+			"2x neoecoae:crystal_ingot"
+		])
+		.energy(2000)
+		.id("neoecoae:aluminum_alloy_casing")
+
+	// 黑钨合金机壳
+	neoecoae.integrated_working_station()
+		.itemOutput("neoecoae:black_tungsten_alloy_casing")
+		.inputFluid(Fluid.of("cmi:structural_plastic", 400))
+		.inputItems([
+			"cmi:computing_casing",
+			"2x #forge:plates/silicon_rubber",
+			"4x #forge:plates/black_tungsten_alloy",
+			"mekanism:structural_glass",
+			"2x neoecoae:crystal_ingot"
+		])
+		.energy(2000)
+		.id("neoecoae:black_tungsten_alloy_casing")
+
+	// 超低温铝合金机壳
+	neoecoae.integrated_working_station()
+		.itemOutput("neoecoae:cryogenic_aluminum_alloy_casing")
+		.inputFluid(Fluid.of("cmi:glacious_cryotheum", 200))
+		.inputItems([
+			"neoecoae:aluminum_alloy_casing",
+			"2x #forge:plates/silicon_rubber",
+			"4x neoecoae:cryotheum_crystal",
+			"4x #forge:plates/energized_superconductive"
+		])
+		.energy(2000)
+		.id("neoecoae:cryogenic_aluminum_alloy_casing")
 
 	// 样板
 	thermal_extra.component_assembly("4x ae2:blank_pattern", [

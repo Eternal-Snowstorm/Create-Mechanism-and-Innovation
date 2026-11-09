@@ -73,6 +73,8 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("silicon_rubber_plate", "硅橡胶板")
 	addItemLang("composite_tungsten_steel_plate", "复合钨钢板")
 	addItemLang("composite_magnetic_conduction_plate", "复合磁导板")
+	addItemLang("energized_superconductive_plate", "盈能超导板")
+	addItemLang("black_tungsten_alloy_plate", "黑钨合金板")
 	addItemLang("ethylene_polymerization_catalytic_plate", "乙烯聚合催化片")
 	addItemLang("carbon_deposition_catalytic_plate", "碳沉积催化片")
 	addItemLang("carbon_polymerization_catalytic_plate", "碳聚合催化片")
@@ -246,7 +248,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("andesite_alloy_noodle_stage1", "安山合金刀削面(阶段1)")
 	addItemLang("andesite_alloy_noodle_stage2", "安山合金刀削面(阶段2)")
 	addItemLang("andesite_alloy_noodle", "安山合金刀削面")
-	
+
 	// 羊皮纸
 	addItemLang("parchment", "奇怪的羊皮纸")
 	addItemLang("torn_parchment_a", "撕开的羊皮纸(甲)")

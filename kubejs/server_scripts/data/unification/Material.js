@@ -446,4 +446,10 @@ ServerEvents.highPriorityData((event) => {
 		.replaceIngot("cmi:tungsten_ingot")
 		.replaceBlock("cmi:tungsten_block")
 		.replaceDust("cmi:tungsten_dust")
+
+	// 铝合金
+	new MaterialUnification("aluminum_alloy")
+		.replaceIngot("cmi:aluminum_alloy_ingot")
+		.replaceDust("cmi:aluminum_alloy_dust")
+		.replaceBlock("cmi:aluminum_alloy_block")
 })

@@ -78,18 +78,6 @@ ServerEvents.recipes((event) => {
 			"8x #forge:wires/fluix"
 		])
 
-	// 计算机壳
-	addRecipe()
-		.itemOutput("cmi:computing_casing")
-		.inputFluid(Fluid.of("cmi:structural_plastic", 200))
-		.inputItems([
-			"#forge:gems/entro",
-			"#forge:plates/silicon_rubber",
-			"#forge:plates/stainless_steel",
-			"#forge:plates/platinum"
-		])
-		.energy(2000)
-
 	// 雷达天线临时配方
 	addRecipe()
 		.itemOutput("cmi:power_supply")

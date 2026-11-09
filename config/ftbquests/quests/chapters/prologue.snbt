@@ -93,19 +93,22 @@
 		}
 		{
 			description: [
-				"[主创] Unknown_Entity_"
+				"[主创] Re_Construction_"
 				"[程序] 逐日炎雪_中微子"
-				"[程序] 榛名柒月"
+				"[程序] 柒月"
 				"[程序] 随机构件"
-				"[程序] 燕栖"
-				"[程序] FiberOptics"
 				"[程序] 117458866249"
 				"[美工] 一只键盘虾"
 				"[美工] Dropper_QWQ"
+				"[策划] 幽灵猫"
+				"[建筑] 谢尔盖"
 				"[技术] MF."
 				"[技术] 芒果凍布丁"
+				"[技术] 燕栖"
+				"[技术] FiberOptics"
 				"[任务] 闪电羿"
 				"[任务] Decahydroflowey"
+				"[任务] 蓝心"
 			]
 			disable_toast: true
 			icon: "cmi:re_construction"
@@ -430,6 +433,9 @@
 				"[程序] Jason(齿轮盛宴作者)"
 				"[音乐] DontkillBelalus"
 				"[结构] 咸到老时变成鱼(知名建筑up主)"
+				"[测试] Aooo531"
+				"[测试] 肖克洛夫Shocknov"
+				"[测试] 幻想星辰"
 			]
 			icon: "minecraft:apple"
 			id: "30ED8BD20D50F96D"

@@ -554,7 +554,7 @@
 			subtitle: "硫磺粉末"
 			tasks: [{
 				id: "1D3ABB165889ABB1"
-				item: "thermal:sulfur_dust"
+				item: "alexscaves:sulfur_dust"
 				type: "item"
 			}]
 			x: -11.5d

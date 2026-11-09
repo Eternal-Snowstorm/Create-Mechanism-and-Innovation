@@ -76,6 +76,10 @@ StartupEvents.registry("item", (event) => {
 	addAlonePlateItem("composite_magnetic_conduction")
 	// 纳米复合板
 	addAlonePlateItem("nano_composite")
+	// 盈能超导板
+	addAlonePlateItem("energized_superconductive")
+	// 黑钨合金板
+	addAlonePlateItem("black_tungsten_alloy")
 	// 乙烯聚合催化片
 	addAlonePlateItem("ethylene_polymerization_catalytic")
 	// 碳沉积催化片

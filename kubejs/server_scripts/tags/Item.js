@@ -14,6 +14,12 @@ ServerEvents.tags("item", (event) => {
 	event.get("tconstruct:wood_variants/planks")
 		.add("thermal:rubberwood_planks")
 
+	event.get("minecraft:planks/crimson")
+	.add("minecraft:crimson_planks")
+
+	event.get("minecraft:planks/warped")
+	.add("minecraft:warped_planks")
+
 	// 构件
 	add("create:mechanisms/precision", "create:precision_mechanism")
 
