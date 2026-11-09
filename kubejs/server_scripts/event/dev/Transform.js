@@ -2,6 +2,7 @@
 	ProbeJSEvents.generateDoc((event) => {
 		modifyCreateFluidIngredient(event)
 		modifyMBDFluidIngredient(event)
+		modifyThermalFluidIngredient(event)
 		modifyIngredientWrapper(event)
 		modifyBlockContainerJS(event)
 	})
@@ -35,6 +36,28 @@
 	function modifyMBDFluidIngredient(event) {
 		let $MBDFluidIngredient = "dev.celestiacraft.cmi.compat.mbd2.MBDFluidIngredient"
 		event.transformByName($MBDFluidIngredient, (document) => {
+			document.getMethods().forEach((method) => {
+				if (method.getName() === "ofTagId") {
+					method.addPropertyJson({
+						type: "property:modify",
+						index: 0,
+						newType: {
+							type: "type:primitive",
+							name: "Special.FluidTag"
+						}
+					})
+				}
+			})
+		})
+	}
+
+	/**
+	 * 
+	 * @param {Internal.DocGenerationEventJS_} event 
+	 */
+	function modifyThermalFluidIngredient(event) {
+		let $ThermalFluidIngredient = "dev.celestiacraft.cmi.compat.thermal.ThermalFluidIngredient"
+		event.transformByName($ThermalFluidIngredient, (document) => {
 			document.getMethods().forEach((method) => {
 				if (method.getName() === "ofTagId") {
 					method.addPropertyJson({
