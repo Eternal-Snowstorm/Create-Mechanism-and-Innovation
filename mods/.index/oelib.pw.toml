@@ -1,18 +1,18 @@
-filename = 'oelib-forge-1.20.1-0.3.0-hotfix3.jar'
+filename = 'oelib-forge-1.20.1-0.3.2.jar'
 name = 'OELib'
 side = 'server'
 x-prismlauncher-dependencies = []
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'OELib 0.3.0-hotfix3-Forge-1.20.1'
+x-prismlauncher-version-number = 'OELib 0.3.2-Forge-1.20.1'
 
 [download]
-hash = 'a51673d632184938761ef7ff7020149796071725'
+hash = '554864d1e39d131ec3412199f8c9fa3222f791f7'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 9342397
+file-id = 9486539
 project-id = 1319210

@@ -14,11 +14,15 @@ mods/Industrial Platform-1.20.1-2.0.0.jar
 mods/Ksyxis-1.4.3.jar
 mods/Ksyxis-1.4.4.jar
 mods/Ksyxis-1.4.5.jar
+mods/Mantle-1.20.1-1.11.117.jar
 mods/MultiBuilderTool-1.20.1-1.0.27.jar
 mods/OELib-forge-1.20.1-0.2.4.1.jar
 mods/OneEnoughBlock-1.1.3.1-hotfix.jar
+mods/OneEnoughBlock-forge-1.20.1-1.1.4-hotfix1.jar
 mods/OneEnoughFluid-1.1.1-hotfix.jar
+mods/OneEnoughFluid-forge-1.20.1-1.1.2-hotfix1.jar
 mods/OneEnoughItem-1.0.8.jar
+mods/OneEnoughItem-forge-1.20.1-1.0.9-hotfix1.jar
 mods/SophisticatedSorter-forge-1.20.1-1.1.0-hotfix.jar
 mods/Storage Tweaks-1.0.0.jar
 mods/TConstruct-1.20.1-3.12.0.220.jar
@@ -27,7 +31,9 @@ mods/ThermalExtra-3.3.1-1.20.1.jar
 mods/ThermalExtra-3.3.2-1.20.1.jar
 mods/[1.20.1] forge-JECT-2.4.0.jar
 mods/ad_astra-forge-1.20.1-1.15.20.jar
+mods/aeinfinitybooster-forge-2.1.0+mc1.20.1.jar
 mods/alltheleaks-1.1.3+1.20.1-forge.jar
+mods/alltheleaks-1.1.4+1.20.1-forge.jar
 mods/appliedenergistics2-forge-15.4.10.jar
 mods/appliedenergistics2-forge-15.4.11.jar
 mods/auratip-forge-1.20.1-1.1.1-beta.jar
@@ -40,6 +46,7 @@ mods/collective-1.20.1-8.42.jar
 mods/colorwheel-forge-1.2.9+mc1.20.1.jar
 mods/colorwheel-forge-1.3.0+mc1.20.1.jar
 mods/colorwheel-forge-1.3.0-beta3+mc1.20.1.jar
+mods/colorwheel-forge-1.3.1-mc1.20.1.jar
 mods/compressedengineering-1.4.10.jar
 mods/compressedengineering-1.4.9.jar
 mods/craftingstationjei-1.20.1-Forge-2.1.2.jar
@@ -74,6 +81,7 @@ mods/jei-1.20.1-forge-15.58.0.209.jar
 mods/jei-1.20.1-forge-15.59.0.210.jar
 mods/jei-1.20.1-forge-15.59.0.211.jar
 mods/jei-1.20.1-forge-15.59.0.212.jar
+mods/jei-1.20.1-forge-15.74.0.233.jar
 mods/jei_plus_plus-1.0.5-1.20.1.jar
 mods/jei_plus_plus-1.0.7-1.20.1.jar
 mods/jei_plus_plus-1.0.8a-1.20.1.jar
@@ -90,6 +98,9 @@ mods/neoecoae-20.4.2.jar
 mods/neoecoae-20.5.1.jar
 mods/neoecoae-20.5.3.jar
 mods/neoecoae-20.5.4.jar
+mods/neoecoae-20.5.5.jar
+mods/oelib-forge-1.20.1-0.3.0-hotfix3.jar
+mods/pipez_optimizer-1.0.10-1.20.1.jar
 mods/pipez_optimizer-1.0.3-1.20.1.jar
 mods/pipez_optimizer-1.0.4-1.20.1.jar
 mods/pipez_optimizer-1.0.5-1.20.1.jar
@@ -100,6 +111,7 @@ mods/polymorph-forge-0.49.10+1.20.1.jar
 mods/powerful_dummy-20-0.0.9.jar
 mods/quest_enhance-1.20.1-forge-3.11.jar
 mods/quest_enhance-1.20.1-forge-3.13.jar
+mods/quest_enhance-1.20.1-forge-3.14.jar
 mods/quest_enhance-1.20.1-forge-3.8.jar
 mods/quest_enhance-1.20.1-forge-3.9.jar
 mods/quick-pack-forge-1.5.0+1.20.1-all-srg.jar
@@ -107,6 +119,7 @@ mods/sophisticatedbackpacks-1.20.1-3.26.0.2119.jar
 mods/sophisticatedbackpacks-1.20.1-3.26.12.2206.jar
 mods/sophisticatedbackpacks-1.20.1-3.26.14.2226.jar
 mods/sophisticatedbackpacks-1.20.1-3.26.18.2237.jar
+mods/sophisticatedbackpacks-1.20.1-3.26.19.2239.jar
 mods/sophisticatedbackpacks-1.20.1-3.26.2.2139.jar
 mods/sophisticatedbackpacks-1.20.1-3.26.3.2157.jar
 mods/sophisticatedbackpacks-1.20.1-3.26.6.2176.jar
@@ -116,13 +129,17 @@ mods/sophisticatedcore-1.20.1-1.5.1.2335.jar
 mods/sophisticatedcore-1.20.1-1.5.12.2412.jar
 mods/sophisticatedcore-1.20.1-1.5.15.2427.jar
 mods/sophisticatedcore-1.20.1-1.5.19.2441.jar
+mods/sophisticatedcore-1.20.1-1.5.21.2444.jar
 mods/sophisticatedcore-1.20.1-1.5.4.2362.jar
 mods/sophisticatedcore-1.20.1-1.5.6.2383.jar
 mods/steampowered-1.20.1-3.1.0.jar
+mods/stellarcreateoptimization-forge-1.20.1-1.1.1fix.jar
 mods/supermartijn642corelib-1.1.25-forge-mc1.20.1.jar
 mods/supermartijn642corelib-1.1.25a-forge-mc1.20.1.jar
+mods/supermartijn642corelib-1.1.26-forge-mc1.20.1.jar
 mods/thermalconstruct-1.20.1-0.0.4.jar
 mods/time-in-a-bottle-4.0.4-mc1.20.1.jar
+mods/titanium-1.20.1-3.8.35.jar
 mods/trashcans-1.1.1a-forge-mc1.20.4.jar
 mods/tslatentitystatus-forge-1.20.1-1.6.3.jar
 mods/tsmodify-0.92-all.jar

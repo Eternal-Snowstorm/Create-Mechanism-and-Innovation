@@ -1,19 +1,19 @@
-filename = 'OneEnoughFluid-forge-1.20.1-1.1.2-hotfix1.jar'
+filename = 'OneEnoughFluid-forge-1.20.1-1.1.3.jar'
 name = 'OneEnoughFluid'
 side = 'server'
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'OneEnoughFluid 1.1.2-hotfix1 - forge 1.20.1'
+x-prismlauncher-version-number = 'OneEnoughFluid 1.1.3 - forge 1.20.1'
 
 [download]
-hash = '5eb3b498d60d38e6c43febb843ad4c4fc691aee0'
+hash = 'dabe080d90c6fb85ad7f0243196f51ac7693128e'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 9392167
+file-id = 9405260
 project-id = 1366406
 
 [[x-prismlauncher-dependencies]]

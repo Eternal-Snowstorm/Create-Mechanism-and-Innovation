@@ -1,19 +1,19 @@
-filename = 'quest_enhance-1.20.1-forge-3.14.jar'
+filename = 'quest_enhance-1.20.1-forge-3.15.jar'
 name = 'Quest Enhance'
 side = 'server'
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = '1.20.1-forge-Quest Enhance-3.14'
+x-prismlauncher-version-number = '1.20.1-forge-Quest Enhance-3.15'
 
 [download]
-hash = 'c6e4cae8f3a97c63ebde52e6e32b6f32bed81854'
+hash = '1b02317f5d5f46aa55a73dd027e3412f3dfe9e4e'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 9328426
+file-id = 9452879
 project-id = 1610171
 
 [[x-prismlauncher-dependencies]]

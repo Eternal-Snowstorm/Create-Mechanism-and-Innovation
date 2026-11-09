@@ -1,19 +1,19 @@
-filename = 'OneEnoughBlock-forge-1.20.1-1.1.4-hotfix1.jar'
+filename = 'OneEnoughBlock-forge-1.20.1-1.1.5.jar'
 name = 'OneEnoughBlock'
 side = 'server'
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'OneEnoughBlock 1.1.4-hotfix1 - forge 1.20.1'
+x-prismlauncher-version-number = 'OneEnoughBlock 1.1.5 - forge 1.20.1'
 
 [download]
-hash = '72bbfcbb504cd899cea079b23525f9b4dad4a537'
+hash = '70750fc549d7e829ad1726a429f7304741b8e54a'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 9392164
+file-id = 9405259
 project-id = 1356867
 
 [[x-prismlauncher-dependencies]]

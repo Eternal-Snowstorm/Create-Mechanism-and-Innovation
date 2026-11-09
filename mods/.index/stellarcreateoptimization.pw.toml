@@ -1,18 +1,18 @@
-filename = 'stellarcreateoptimization-forge-1.20.1-1.1.1fix.jar'
+filename = 'stellarcreateoptimization-forge-1.20.1-1.1.2-beta2.jar'
 name = 'StellarCreateOptimization'
 side = 'server'
 x-prismlauncher-dependencies = []
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
-x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'stellarcreateoptimization-forge-1.20.1-1.1.1fix.jar'
+x-prismlauncher-release-type = 'beta'
+x-prismlauncher-version-number = 'stellarcreateoptimization-forge-1.20.1-1.1.2-beta2.jar'
 
 [download]
-hash = '759637ac16fefc15f179f90a6390122c7e54fba8'
+hash = 'a80a1dbaaf1b2b52fbd8aa52838b6a0d94fc67ca'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 9076130
+file-id = 9510103
 project-id = 1637437
