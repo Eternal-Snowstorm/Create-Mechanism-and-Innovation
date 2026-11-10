@@ -1,3 +1,6 @@
+let $ITrackBlock =
+	Java.loadClass("com.simibubi.create.content.trains.track.ITrackBlock")
+
 ServerEvents.recipes((event) => {
 	let inputs = [
 		["minecraft:copper_ingot", "#forge:ingots/copper"],
@@ -28,6 +31,54 @@ ServerEvents.recipes((event) => {
 			if (!recipe.hasOutput("#forge:dyes")) {
 				recipe.replaceInput(`minecraft:${color}_dye`, `#forge:dyes/${color}`)
 			}
+		})
+	})
+
+	// 列车轨道
+	event.forEachRecipe({}, (recipe) => {
+		let json = recipe.json
+
+		if (!json) {
+			return
+		}
+
+		let raw = json.has("results")
+			? json.get("results")
+			: json.get("result")
+
+		if (!raw || raw.isJsonNull()) {
+			return
+		}
+
+		/**
+		 * @type {Internal.JsonElement_[]}
+		 */
+		let entries = raw.isJsonArray()
+			? raw
+			: [raw]
+
+		entries.forEach((entry) => {
+			/**
+			 * @type {Internal.JsonElement_[]}
+			 */
+			let outputs = entry.isJsonArray() ? entry : [entry]
+
+			outputs.forEach((result) => {
+				if (!result.isJsonObject() || !result.has("item")) {
+					return
+				}
+
+				let block = Block.getBlock(result.get("item").getAsString())
+
+				if (block instanceof $ITrackBlock) {
+					/**
+					 * @type {number}
+					 */
+					let outputCount = (result.has("count") ? result.get("count").getAsInt() : 1)
+
+					result["addProperty(java.lang.String,java.lang.Number)"]("count", outputCount * 4)
+				}
+			})
 		})
 	})
 
