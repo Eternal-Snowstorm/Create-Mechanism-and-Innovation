@@ -196,7 +196,8 @@ bash updater/setup-gitee-sync.sh
  - **ldlib**
 	- **assets**
 		- **mbd2**
- - **LICENSE.md**
+ - **LICENSE**
+ - **LICENSE-ASSETS**
  - **README.md**
  - **readme/README.zh-CN.md**
  - **UpdateLogs.md**
@@ -213,6 +214,17 @@ bash updater/setup-gitee-sync.sh
  - [**功能性存储抽屉升级注册**](../kubejs/startup_scripts/register/other/Drawer.js)
  - [**柴油动力燃料添加**](../kubejs/server_scripts/data/FuelTypes.js)
  - [**金属材料配方集成处理**](../kubejs/server_scripts/recipes/material/metal)
+
+---
+
+## 许可协议
+
+- **本项目以 [CMI 最终用户许可协议](../LICENSE)（EULA 3.1）授权** —— 本整合包及其自制内容(代码, KubeJS 脚本, 数据, 配置, 文档与美术资源)的唯一许可协议.
+- **团队自制美术资源**(`kubejs/assets/cmi`, `icon.png`, `resourcepacks/CMI Squarefully.zip`)—— [CC BY-NC-SA 4.0](../LICENSE-ASSETS), 与 EULA 并行有效.
+- **第三方内容**(mods, 第三方资源包, Minecraft 原版素材, 第三方音频与字体)保留其原始许可, **不**在本项目授权范围内.
+- 美术资源的排除条款与署名要求见 [`LICENSE-ASSETS`](../LICENSE-ASSETS).
+
+> EULA **禁止任何形式的付费分发**（第 4.1 条）. 免费再分发须保留版权声明与许可文件、注明来源、标明修改且不得收费（第 5.1 条）; 商业使用须事先取得书面许可（第 10 条）.
 
 ---
 
