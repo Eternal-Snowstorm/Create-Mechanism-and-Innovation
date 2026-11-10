@@ -242,7 +242,8 @@ your saves or `options.txt`**. Not a single block. Full details in `updater/CLIE
  - **ldlib**
 	- **assets**
 		- **mbd2**
- - **LICENSE.md**
+ - **LICENSE**
+ - **LICENSE-ASSETS**
  - **README.md**
  - **readme/zh_cn.md**
  - **UpdateLogs.md**
@@ -259,6 +260,17 @@ your saves or `options.txt`**. Not a single block. Full details in `updater/CLIE
  - [**Functional Storage drawer upgrade registration**](kubejs/startup_scripts/register/other/Drawer.js)
  - [**Diesel fuel registration**](kubejs/server_scripts/data/FuelTypes.js)
  - [**Metal material recipe integration**](kubejs/server_scripts/recipes/material/metal)
+
+---
+
+## License
+
+- **This project is released under the [CMI End User License Agreement](LICENSE) (EULA v3.1)** — the sole license governing the pack and its Project Content (code, KubeJS scripts, data, configuration, docs and art assets).
+- **Art assets made by the team** (`kubejs/assets/cmi`, `icon.png`, `resourcepacks/CMI Squarefully.zip`) — [CC BY-NC-SA 4.0](LICENSE-ASSETS), in parallel with the EULA.
+- **Third-party content** (mods, third-party resource packs, Minecraft vanilla assets, third-party audio and fonts) keeps its original license and is **not** covered by this project's licenses.
+- Exclusions and attribution rules for art assets are in [`LICENSE-ASSETS`](LICENSE-ASSETS).
+
+> The EULA **prohibits any paid distribution** of the pack (Section 4.1). Free redistribution is allowed provided that copyright notices and license files are kept, the source is attributed, modifications are disclosed, and no fee is charged (Section 5.1). Commercial use requires prior written permission (Section 10).
 
 ---
 
