@@ -1,5 +1,5 @@
 /*
- * 🙌 注意：这个 Event 不能热重载
+ * 🙌 注意: 这个 Event 不能热重载
  * 🙌 NOTE: This event does NOT support hot reload.
  */
 let $BlockAccessor =
@@ -52,7 +52,7 @@ JadeEvents.onClientRegistration((event) => {
 
 			/**
 			 * 这里并不是"真的"进行类型转换
-			 * 只是告诉编辑器：从现在开始把 accessor 当作 BlockAccessor
+			 * 只是告诉编辑器: 从现在开始把 accessor 当作 BlockAccessor
 			 * 这样才能获得方法补全
 			 *
 			 * This is NOT a real runtime cast.

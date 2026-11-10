@@ -1,6 +1,5 @@
-// Create: Railways · 列车设备（车站/燃料罐/加油接口/观测器/信号机/车钩/控制台/邮筒）
 ServerEvents.recipes((event) => {
-	let { kubejs, create } = event.getRecipes()
+	let { kubejs } = event.getRecipes()
 
 	// 车站
 	kubejs.shaped("2x create:track_station", [

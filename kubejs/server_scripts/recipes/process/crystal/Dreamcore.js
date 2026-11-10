@@ -1,5 +1,5 @@
 ServerEvents.recipes((event) => {
-	let { mekanism, thermal, thermal_extra, create, createaddition, vintageimprovements, tconstruct, cmi, kubejs, createdieselgenerators } = event.recipes
+	let { mekanism, thermal, thermal_extra, create, createaddition, vintageimprovements, tconstruct, cmi, kubejs, createdieselgenerators } = event.getRecipes()
 
 	// 重组幻晶
 	mekanism.nucleosynthesizing(

@@ -1,4 +1,4 @@
-// Create · 加工设备（辊压/搅拌/鼓风/磨盘/锯/钻/离心等）
+// Create · 加工设备(辊压/搅拌/鼓风/磨盘/锯/钻/离心等)
 ServerEvents.recipes((event) => {
 	let { kubejs, create } = event.getRecipes()
 

@@ -1,6 +1,5 @@
-// Mekanism · 多方块钻机（主机与轴承/钻头/流体泵/气体泵）
 ServerEvents.recipes((event) => {
-	let { thermal_extra, neoecoae } = event.getRecipes()
+	let { neoecoae } = event.getRecipes()
 
 	// 多元钻探机
 	neoecoae.integrated_working_station()

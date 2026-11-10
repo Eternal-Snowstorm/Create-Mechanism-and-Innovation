@@ -119,7 +119,7 @@
 			y: -3.0d
 		}
 		{
-			description: ["链接本任务的任务的前置还未链接，暂时链接于此"]
+			description: ["链接本任务的任务的前置还未链接, 暂时链接于此"]
 			id: "6A128F7C271B4579"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "注意"
@@ -402,7 +402,7 @@
 				"481552A49309F9D9"
 				"5E3BE7A051CD0E78"
 			]
-			description: ["电镀液使用后会变回硫酸，不会消耗"]
+			description: ["电镀液使用后会变回硫酸, 不会消耗"]
 			id: "202DA7D1421AC3BD"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "循环使用"
@@ -581,7 +581,7 @@
 			y: -5.5d
 		}
 		{
-			description: ["链接本任务的任务的前置还未链接，暂时链接于此"]
+			description: ["链接本任务的任务的前置还未链接, 暂时链接于此"]
 			hide_dependency_lines: false
 			id: "21D270C51E152805"
 			quest_enhance_disable_scroll_paging: false

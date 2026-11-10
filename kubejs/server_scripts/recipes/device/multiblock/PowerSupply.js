@@ -1,4 +1,3 @@
-// Mekanism · 能源多方块（热力蒸发塔/感应矩阵/锅炉/汽轮机）
 ServerEvents.recipes((event) => {
 	let { thermal_extra, neoecoae } = event.getRecipes()
 

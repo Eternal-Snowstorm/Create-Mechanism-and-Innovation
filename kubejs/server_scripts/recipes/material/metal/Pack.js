@@ -55,6 +55,5 @@ ServerEvents.recipes((event) => {
 		} else {
 			// console.warn(`No raw material or raw material block found for ${metal}!`)
 		}
-
 	})
 })

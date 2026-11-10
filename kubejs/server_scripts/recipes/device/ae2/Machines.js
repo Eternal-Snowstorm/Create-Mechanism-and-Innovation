@@ -1,4 +1,3 @@
-// AE2 · 网络机器（压印器/充能器/控制器/驱动器/能量元件/冷凝器/IO 端口/加速器/合成单元/分子装配室）
 ServerEvents.recipes((event) => {
 	let { kubejs, thermal_extra, neoecoae } = event.getRecipes()
 

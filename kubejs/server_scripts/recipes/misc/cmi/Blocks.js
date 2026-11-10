@@ -63,8 +63,8 @@ ServerEvents.recipes((event) => {
 	})
 
 	event.custom({
-		"type": "functionalstorage:custom_compacting",
-		"higher_input": Item.of("cmi:deposit_dust_block"),
-		"lower_input": Item.of("cmi:deposit_dust", 9)
+		type: "functionalstorage:custom_compacting",
+		higher_input: Item.of("cmi:deposit_dust_block"),
+		lower_input: Item.of("cmi:deposit_dust", 9)
 	})
 })

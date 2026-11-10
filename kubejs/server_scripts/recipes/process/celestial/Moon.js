@@ -33,5 +33,4 @@ ServerEvents.recipes((event) => {
 		.inputFluids(Fluid.of("cmi:polysilicone_ether", 500))
 		.outputFluids(Fluid.of("cmi:molten_pure_silicon", 1000))
 		.duration(20 * 5)
-
 })

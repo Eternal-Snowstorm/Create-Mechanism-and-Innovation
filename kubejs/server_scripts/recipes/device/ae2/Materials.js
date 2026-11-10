@@ -1,6 +1,5 @@
-// AE2 · 基础材料（线缆、石英纤维、工具、智能机壳、空白模板、湮灭/形成核心）
 ServerEvents.recipes((event) => {
-	let { kubejs, thermal_extra, neoecoae } = event.getRecipes()
+	let { thermal_extra, neoecoae } = event.getRecipes()
 
 	// 无线接收器
 	thermal_extra.component_assembly("ae2:wireless_receiver", [

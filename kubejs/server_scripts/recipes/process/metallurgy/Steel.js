@@ -1,5 +1,5 @@
 ServerEvents.recipes((event) => {
-	let { create, vintageimprovements, tconstruct, cmi } = event.getRecipes()
+	let { vintageimprovements, cmi } = event.getRecipes()
 
 	// 熔融铸铁
 	vintageimprovements.pressurizing(

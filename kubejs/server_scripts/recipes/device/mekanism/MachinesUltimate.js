@@ -1,6 +1,5 @@
-// Mekanism · 终极机器（太阳能中子活化器/加压反应室/反质子核合成器）
 ServerEvents.recipes((event) => {
-	let { thermal_extra, neoecoae } = event.getRecipes()
+	let { neoecoae } = event.getRecipes()
 
 	// 中子活化器
 	neoecoae.integrated_working_station()

@@ -160,7 +160,7 @@
 		}
 		{
 			dependencies: ["2613E62AF5BCD9AC"]
-			description: ["它兼备&6镐&f、&6斧&f和&6锹&f的功能, 几乎能满足所有的挖掘需求。唯一的缺点就是没有攻击力"]
+			description: ["它兼备&6镐&f, &6斧&f和&6锹&f的功能, 几乎能满足所有的挖掘需求. 唯一的缺点就是没有攻击力"]
 			icon: {
 				Count: 1
 				id: "cmi:paxel"
@@ -497,7 +497,7 @@
 				id: "0BD42EA1C12522C2"
 				observe_type: 1
 				timer: 0L
-				title: "观察：主世界石英矿"
+				title: "观察: 主世界石英矿"
 				to_observe: "cmi:overworld_quartz_ore"
 				type: "observation"
 			}]
@@ -883,7 +883,7 @@
 		}
 		{
 			dependencies: ["26DFF62383774404"]
-			description: ["村庄的工匠小屋中有大量的&6冶炼炉元件&r，或许可以帮助你快速发展"]
+			description: ["村庄的工匠小屋中有大量的&6冶炼炉元件&r, 或许可以帮助你快速发展"]
 			id: "35D993D8B21B6A08"
 			quest_enhance_disable_scroll_paging: false
 			size: 1.5d
@@ -933,7 +933,7 @@
 		}
 		{
 			dependencies: ["35D993D8B21B6A08"]
-			description: ["工匠砧可以制作更多工具，以及一些具有&4特殊功能&r的工具"]
+			description: ["工匠砧可以制作更多工具, 以及一些具有&4特殊功能&r的工具"]
 			id: "6AF60377F2DAB309"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "你应该能找到"
@@ -1107,7 +1107,7 @@
 			description: [
 				"                  这是你应得的"
 				""
-				"现在矿脉锤连锁时会寻找周边16个相同的方块连锁挖掘，值得注意的是，不计算斜角连接"
+				"现在矿脉锤连锁时会寻找周边16个相同的方块连锁挖掘, 值得注意的是, 不计算斜角连接"
 			]
 			hide_dependency_lines: true
 			icon: {

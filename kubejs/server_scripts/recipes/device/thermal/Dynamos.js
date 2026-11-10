@@ -1,6 +1,5 @@
-// Thermal · 动力发电机（斯特林/岩浆/压缩/美食/霜冻/宝石/铸币/祛魔）
 ServerEvents.recipes((event) => {
-	let { thermal_extra, create, thermal, kubejs } = event.recipes
+	let { thermal_extra } = event.getRecipes()
 
 	// 烧煤的
 	addComponRecipe(thermal_extra, "thermal:dynamo_stirling", [

@@ -1,4 +1,3 @@
-// Functional Storage · 存储控制器与控制器扩展器
 ServerEvents.recipes((event) => {
 	let { kubejs } = event.getRecipes()
 

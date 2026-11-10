@@ -1,4 +1,3 @@
-// Create · 物品储存与物流（物品舱口/保险库/筒仓/储存接口/漏斗/溜槽）
 ServerEvents.recipes((event) => {
 	let { kubejs } = event.getRecipes()
 

@@ -9,19 +9,19 @@
 #      · 没有 origin 就尝试 git remote add origin <GitHub 仓库>, 并探测是否可用
 #      · gitee 远程缺失或指向别的仓库时, 重建为官方镜像地址
 #
-#  【为什么还叫 setup-gitee-sync】文件名保留是为了不破坏既有文档链接、快捷方式与
-#    玩家双击习惯; 内部逻辑已改为 GitHub 优先。
+#  【为什么还叫 setup-gitee-sync】文件名保留是为了不破坏既有文档链接, 快捷方式与
+#    玩家双击习惯; 内部逻辑已改为 GitHub 优先. 
 #
-#  【手动指定源】--source auto|github|gitee, 默认 auto。
+#  【手动指定源】--source auto|github|gitee, 默认 auto. 
 #
 #  用法:
 #    bash updater/setup-gitee-sync.sh [--source auto|github|gitee]
 # =============================================================================
 set -uo pipefail
 # 注意: 这里刻意不用 set -e —— 本脚本要按退出码分叉("GitHub 失败就回退 Gitee"),
-# set -e 会在第一条失败的命令处直接中止, 回退分支就永远走不到了。
+# set -e 会在第一条失败的命令处直接中止, 回退分支就永远走不到了. 
 
-cd "$(dirname "$0")/.." || { echo "[错误] 无法进入整合包目录。"; exit 1; }
+cd "$(dirname "$0")/.." || { echo "[错误] 无法进入整合包目录. "; exit 1; }
 
 # GitHub 主仓库
 GH_REMOTE="origin"
@@ -110,7 +110,7 @@ fetch_remote() {
   return 1
 }
 
-# 拉取 + 落地。结果写入 SYNC_RESULT: ok / fetch-fail / apply-fail
+# 拉取 + 落地. 结果写入 SYNC_RESULT: ok / fetch-fail / apply-fail
 sync_from() {
   local remote="$1" branch="$2"
   SYNC_RESULT=""
@@ -132,7 +132,7 @@ parse_args() {
     case "$1" in
       --source)
         if [ "$#" -lt 2 ]; then
-          echo "[错误] --source 需要一个取值: auto / github / gitee。"
+          echo "[错误] --source 需要一个取值: auto / github / gitee. "
           exit 1
         fi
         SOURCE="$2"
@@ -171,7 +171,7 @@ show_source_line() {
 }
 
 check_git() {
-  command -v git >/dev/null 2>&1 || fail "[错误] 未检测到 Git。请先安装 Git 再运行本脚本。" \
+  command -v git >/dev/null 2>&1 || fail "[错误] 未检测到 Git. 请先安装 Git 再运行本脚本. " \
     "Windows / Linux / macOS 的安装方式见: https://git-scm.com/downloads"
 }
 
@@ -191,8 +191,8 @@ check_git
 if [ ! -d .git ]; then
   echo ""
   echo "正在初始化 Git 仓库 ..."
-  git init -q || fail "[错误] 初始化 Git 仓库失败。" \
-    "请确认整合包目录可以正常读写, 且没有被杀毒软件锁定。"
+  git init -q || fail "[错误] 初始化 Git 仓库失败. " \
+    "请确认整合包目录可以正常读写, 且没有被杀毒软件锁定. "
 fi
 
 # --- 2. 准备远程: gitee 镜像始终可用, GitHub 有就优先 -------------------------
@@ -206,9 +206,9 @@ else
     echo "[提示] 未找到 gitee 远程, 正在添加 ..."
   fi
   git remote remove "$GT_REMOTE" >/dev/null 2>&1 || true
-  git remote add "$GT_REMOTE" "$GT_URL" || fail "[错误] 添加 gitee 远程失败。" \
+  git remote add "$GT_REMOTE" "$GT_URL" || fail "[错误] 添加 gitee 远程失败. " \
     "可以先手动执行: git remote add gitee $GT_URL" \
-    "再重新运行本脚本。"
+    "再重新运行本脚本. "
 fi
 
 prefer_github=0
@@ -216,7 +216,7 @@ gh_branch=""
 
 if [ "$SOURCE" = "gitee" ]; then
   echo ""
-  echo "[提示] 已按 --source gitee 强制使用 Gitee 镜像。"
+  echo "[提示] 已按 --source gitee 强制使用 Gitee 镜像. "
 else
   origin_url="$(remote_url "$GH_REMOTE")"
   if [ -z "$origin_url" ]; then
@@ -225,16 +225,16 @@ else
     if git remote add "$GH_REMOTE" "$GH_URL" 2>/dev/null; then
       origin_url="$(remote_url "$GH_REMOTE")"
     fi
-    [ -n "$origin_url" ] || echo "[提示] 添加 GitHub 远程失败, 本次改用 Gitee 镜像。"
+    [ -n "$origin_url" ] || echo "[提示] 添加 GitHub 远程失败, 本次改用 Gitee 镜像. "
   fi
 
   if [ -z "$origin_url" ]; then
     if [ "$SOURCE" = "github" ]; then
-      fail "[错误] 无法建立 GitHub 远程(origin), 无法按 --source github 同步。" \
+      fail "[错误] 无法建立 GitHub 远程(origin), 无法按 --source github 同步. " \
         "请检查整合包目录权限;" \
-        "或改用 --source auto / --source gitee。"
+        "或改用 --source auto / --source gitee. "
     fi
-    echo "[提示] 本次改用 Gitee 镜像同步(以后仍会优先尝试 GitHub)。"
+    echo "[提示] 本次改用 Gitee 镜像同步(以后仍会优先尝试 GitHub). "
   elif ! is_pack_url "$origin_url"; then
     echo "[提示] 现有 origin 远程指向其它仓库, 本次不使用它: $origin_url"
     echo "       若想改用官方 GitHub 仓库, 可执行: git remote set-url origin $GH_URL"
@@ -245,12 +245,12 @@ else
       prefer_github=1
       echo "       GitHub 可用, 目标分支: $gh_branch"
     elif [ "$SOURCE" = "github" ]; then
-      fail "[错误] 连不上 GitHub, 或当前网络无法访问它。" \
+      fail "[错误] 连不上 GitHub, 或当前网络无法访问它. " \
         "1) 用浏览器打开 https://github.com/ 确认能不能访问;" \
         "2) 若平时需要代理 / VPN 才能上 GitHub, 请先开好再重试;" \
-        "3) 也可以改用 Gitee 镜像: 在命令后加 --source gitee。"
+        "3) 也可以改用 Gitee 镜像: 在命令后加 --source gitee. "
     else
-      echo "[提示] 连不上 GitHub, 本次改用 Gitee 镜像同步(下次仍会先试 GitHub)。"
+      echo "[提示] 连不上 GitHub, 本次改用 Gitee 镜像同步(下次仍会先试 GitHub). "
     fi
   fi
 fi
@@ -265,16 +265,16 @@ if [ "$prefer_github" -eq 1 ]; then
   if [ "$SYNC_RESULT" = "ok" ]; then
     used_source="GitHub"
   elif [ "$SYNC_RESULT" = "apply-fail" ]; then
-    fail "[错误] GitHub 内容已下载, 但写入本客户端失败。" \
+    fail "[错误] GitHub 内容已下载, 但写入本客户端失败. " \
       "如果游戏或启动器还开着, 请完全退出后重试;" \
-      "若反复失败, 请把本终端的输出发给开发者。"
+      "若反复失败, 请把本终端的输出发给开发者. "
   elif [ "$SOURCE" = "auto" ]; then
     echo ""
     echo "[提示] 从 GitHub 下载失败, 改用 Gitee 镜像重试 ..."
   else
-    fail "[错误] 从 GitHub 拉取失败, 请检查网络后重试。" \
+    fail "[错误] 从 GitHub 拉取失败, 请检查网络后重试. " \
       "若平时需要代理 / VPN 才能上 GitHub, 请先开好再重试;" \
-      "也可以改用 Gitee 镜像: 在命令后加 --source gitee。"
+      "也可以改用 Gitee 镜像: 在命令后加 --source gitee. "
   fi
 fi
 
@@ -285,16 +285,16 @@ if [ -z "$used_source" ]; then
   if [ "$SYNC_RESULT" = "ok" ]; then
     used_source="Gitee"
   elif [ "$SYNC_RESULT" = "apply-fail" ]; then
-    fail "[错误] Gitee 内容已下载, 但写入本客户端失败。" \
+    fail "[错误] Gitee 内容已下载, 但写入本客户端失败. " \
       "如果游戏或启动器还开着, 请完全退出后重试;" \
-      "若反复失败, 请把本终端的输出发给开发者。"
+      "若反复失败, 请把本终端的输出发给开发者. "
   elif [ "$prefer_github" -eq 1 ]; then
-    fail "[错误] GitHub 与 Gitee 都无法访问, 本次同步未完成。" \
+    fail "[错误] GitHub 与 Gitee 都无法访问, 本次同步未完成. " \
       "请检查网络连接后重试;" \
-      "若只希望用其中一个源, 可显式指定: --source github 或 --source gitee。"
+      "若只希望用其中一个源, 可显式指定: --source github 或 --source gitee. "
   else
-    fail "[错误] 从 Gitee 拉取失败, 请检查网络后重试。" \
-      "若反复失败, 请把本终端的输出发给开发者。"
+    fail "[错误] 从 Gitee 拉取失败, 请检查网络后重试. " \
+      "若反复失败, 请把本终端的输出发给开发者. "
   fi
 fi
 
@@ -303,13 +303,13 @@ echo ""
 echo "正在按更新清单下载 / 校验 mods [第三方直链] ..."
 if ! bash updater/mods-sync.sh; then
   echo ""
-  echo "[提示] 本次有部分 mod 没能更新成功。"
-  echo "       失败的 mod 已自动恢复为旧版本, 游戏仍可正常启动。"
+  echo "[提示] 本次有部分 mod 没能更新成功. "
+  echo "       失败的 mod 已自动恢复为旧版本, 游戏仍可正常启动. "
   echo "       请把 updater/logs/ 目录下最新的那个日志文件发送给开发者, 以便排查;"
-  echo "       也可以直接重新运行本脚本重试 [只会重新下载失败的那几个]。"
+  echo "       也可以直接重新运行本脚本重试 [只会重新下载失败的那几个]. "
   exit 1
 fi
 
 echo ""
-echo "完成! 本客户端已与 $used_source 同步。"
-echo "以后重新运行本脚本(bash updater/setup-gitee-sync.sh)即可拉取更新(仍会优先尝试 GitHub)。"
+echo "完成! 本客户端已与 $used_source 同步. "
+echo "以后重新运行本脚本(bash updater/setup-gitee-sync.sh)即可拉取更新(仍会优先尝试 GitHub). "

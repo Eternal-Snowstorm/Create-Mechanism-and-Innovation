@@ -1,4 +1,3 @@
-// Create · 传动件（齿轮箱/垂直齿轮箱/并联齿轮箱/六向齿轮箱/链条齿轮/曲柄/过载离合器）
 ServerEvents.recipes((event) => {
 	let { kubejs } = event.getRecipes()
 

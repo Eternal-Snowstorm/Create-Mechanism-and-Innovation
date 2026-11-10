@@ -423,7 +423,7 @@ function mergeIngredientSlots(entries) {
  *
  * 传了 slotName 时, 把这个槽位包进 builder.slotName(slotName, builder => ...) 里
  * 不传时保持原来的直接写法.
- * 注：MBD2 的 slotName 回调只影响配方匹配,
+ * 注: MBD2 的 slotName 回调只影响配方匹配,
  * 不会改变 uiName
  *
  * @param {Internal.MBDRecipeSchema$MBDRecipeJS_} builder 

@@ -1,4 +1,3 @@
-// Sophisticated Backpacks · 背包与升级基座
 ServerEvents.recipes((event) => {
 	let { kubejs } = event.getRecipes()
 

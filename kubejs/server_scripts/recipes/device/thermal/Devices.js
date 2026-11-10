@@ -1,6 +1,5 @@
-// Thermal · 无动力装置（采树/捕鱼/造水/堆肥/造石/收集/经验凝结/销毁/药水扩散/蜂巢提取）
 ServerEvents.recipes((event) => {
-	let { thermal_extra, create, thermal, kubejs } = event.recipes
+	let { kubejs } = event.getRecipes()
 
 	// 树脂提取
 	verticalDevice(kubejs, "thermal:device_tree_extractor", "thermal:device_tree_extractor", {

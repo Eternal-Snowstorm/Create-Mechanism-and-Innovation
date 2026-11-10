@@ -1,4 +1,3 @@
-// AE2 · 终局与扩展（量子环/量子链接、expatternprovider、无限与维度卡、光束成型器、计算机壳、无线能量塔）
 ServerEvents.recipes((event) => {
 	let { kubejs, thermal_extra, neoecoae } = event.getRecipes()
 

@@ -1,4 +1,4 @@
-// Create · 运动与结构（轴承/活塞/起重机/发条/机械手）
+// Create · 运动与结构(轴承/活塞/起重机/发条/机械手)
 ServerEvents.recipes((event) => {
 	let { kubejs, create } = event.getRecipes()
 

@@ -1,6 +1,5 @@
-// Create: Diesel Generators · 柴油引擎（小型/大型/巨型）
 ServerEvents.recipes((event) => {
-	let { kubejs, create } = event.getRecipes()
+	let { kubejs } = event.getRecipes()
 
 	// 小引擎
 	kubejs.shaped("createdieselgenerators:diesel_engine", [

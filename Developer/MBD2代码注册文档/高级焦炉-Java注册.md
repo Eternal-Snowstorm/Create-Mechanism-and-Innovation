@@ -1,6 +1,6 @@
 # 高级焦炉 (reinforced_coke_oven) — Java 版
-> 完整实例: 按 ldlib/assets/mbd2 里的 NBT 逐字段还原, 一个类全部搞定。
-> 先读《MB2-Java注册文档.md》教程, 本文只给成品代码。
+> 完整实例: 按 ldlib/assets/mbd2 里的 NBT 逐字段还原, 一个类全部搞定. 
+> 先读《MB2-Java注册文档.md》教程, 本文只给成品代码. 
 
 ## 这台机器是什么
 
@@ -250,8 +250,8 @@ public final class ReinforcedCokeOven {
 
 ## 要点
 
-- 模型文件 (on/off/common_input/common_output) 已在 kubejs/assets 里, 直接引用原路径。
-- 结构摆好后, 输入/输出总线放进 `2` 槽位, 控制器在 `6` 槽位 (中间层)。
+- 模型文件 (on/off/common_input/common_output) 已在 kubejs/assets 里, 直接引用原路径. 
+- 结构摆好后, 输入/输出总线放进 `2` 槽位, 控制器在 `6` 槽位 (中间层). 
 - 想整机走 NBT (含编辑器 UI): 把 .mb/.sm/.rt 放进 resources 后
-  `event.registerFromResource(...)` 一行即可, 见教程进阶章节。
-- 机器事件 (工作冒烟等) 参考教程第四步, CMI Core 已有 `CokeOvenWorking`。
+  `event.registerFromResource(...)` 一行即可, 见教程进阶章节. 
+- 机器事件 (工作冒烟等) 参考教程第四步, CMI Core 已有 `CokeOvenWorking`. 

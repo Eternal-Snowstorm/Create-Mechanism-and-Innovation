@@ -67,7 +67,7 @@ ServerEvents.recipes((event) => {
 		.outputItems("mekanism:salt")
 		.duration(20 * 5)
 
-	// 含锂电解液（大电解机）
+	// 含锂电解液(大电解机)
 	event.custom({
 		"type": "immersiveindustry:electrolyzer",
 		"fluid": {

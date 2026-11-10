@@ -3,99 +3,99 @@
 Create: Mechanism and Innovation (CMI)
 Copyright (C) 2025-2026 CMI 开发团队 (Create: Mechanism and Innovation contributors)
 
-本文件是 `LICENSE`（CMI 最终用户许可协议）的组成部分，用于界定本仓库内美术资源的授权范围、条件与署名要求。
+本文件是 `LICENSE`(CMI 最终用户许可协议)的组成部分, 用于界定本仓库内美术资源的授权范围, 条件与署名要求. 
 
 ---
 
 ## 1. 适用协议
 
-本仓库内由 CMI 开发团队自行制作的美术资源，以
+本仓库内由 CMI 开发团队自行制作的美术资源, 以
 **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International**
-（CC BY-NC-SA 4.0）授权。
+(CC BY-NC-SA 4.0)授权. 
 
-- 协议摘要（Deed）：<https://creativecommons.org/licenses/by-nc-sa/4.0/>
-- 完整法律文本（Legal Code）：<https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode>
-- 简体中文译本（仅供参考，不具法律效力）：<https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.zh-Hans>
+- 协议摘要(Deed): <https://creativecommons.org/licenses/by-nc-sa/4.0/>
+- 完整法律文本(Legal Code): <https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode>
+- 简体中文译本(仅供参考, 不具法律效力): <https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.zh-Hans>
 
-本文件仅用于说明适用范围与署名要求；授权条款以官方 Legal Code 为准，本文件与 Legal Code 冲突时以 Legal Code 为准。
-
----
-
-## 2. 覆盖范围（纳入 CC BY-NC-SA 4.0）
-
-以下路径内由本项目团队自行制作的原始美术资源：
-
-- `kubejs/assets/cmi/textures/`：方块、物品、流体、GUI、环境、画作、字体图标等贴图
-- `kubejs/assets/cmi/models/`、`kubejs/assets/cmi/geo/`、`kubejs/assets/cmi/animations/`：模型、几何体与动画
-- `kubejs/assets/cmi/font/`：自制图标字体定义
-- `kubejs/assets/cmi/optifine/`、`kubejs/assets/cmi/planet_renderers/`、`kubejs/assets/cmi/tinkering/` 中的自制美术与渲染配置
-- `icon.png`：整合包图标
-- `resourcepacks/CMI Squarefully.zip`：方纹（Squareful）风格适配资源包中由本项目自制的纹理
-
-音频资源仅限由本项目团队自行制作并随仓库分发的文件（参见第 3 节的排除说明）。
-
-未列入上述清单的同类文件，不自动纳入本协议。
+本文件仅用于说明适用范围与署名要求；授权条款以官方 Legal Code 为准, 本文件与 Legal Code 冲突时以 Legal Code 为准. 
 
 ---
 
-## 3. 明确排除（不纳入 CC BY-NC-SA 4.0）
+## 2. 覆盖范围(纳入 CC BY-NC-SA 4.0)
 
-以下内容不受本协议约束，各自保留原许可或版权，使用者须自行遵守：
+以下路径内由本项目团队自行制作的原始美术资源: 
+
+- `kubejs/assets/cmi/textures/`: 方块, 物品, 流体, GUI, 环境, 画作, 字体图标等贴图
+- `kubejs/assets/cmi/models/`, `kubejs/assets/cmi/geo/`, `kubejs/assets/cmi/animations/`: 模型, 几何体与动画
+- `kubejs/assets/cmi/font/`: 自制图标字体定义
+- `kubejs/assets/cmi/optifine/`, `kubejs/assets/cmi/planet_renderers/`, `kubejs/assets/cmi/tinkering/` 中的自制美术与渲染配置
+- `icon.png`: 整合包图标
+- `resourcepacks/CMI Squarefully.zip`: 方纹(Squareful)风格适配资源包中由本项目自制的纹理
+
+音频资源仅限由本项目团队自行制作并随仓库分发的文件(参见第 3 节的排除说明). 
+
+未列入上述清单的同类文件, 不自动纳入本协议. 
+
+---
+
+## 3. 明确排除(不纳入 CC BY-NC-SA 4.0)
+
+以下内容不受本协议约束, 各自保留原许可或版权, 使用者须自行遵守: 
 
 - `mods/` 内的全部第三方模组及其内嵌资源
-- `resourcepacks/` 内由第三方发布的资源包，包括但不限于：
-  `CreateSophisticatedBackpacks.zip`、`Pretty X Smart Pipez.zip`、
-  `Updated_Engineering_1.20.1_v1.8.zip`、`Better Create Glass Pipes.zip`、
-  `Cu Again 2.1.zip`、`GTM-RubberWood.zip`、`彩色边框.zip`、
-  XKSP 系列（姹紫嫣红 / 枝繁叶茂 / 瑶草琪花 / 精雕细琢）、
+- `resourcepacks/` 内由第三方发布的资源包, 包括但不限于: 
+  `CreateSophisticatedBackpacks.zip`, `Pretty X Smart Pipez.zip`, 
+  `Updated_Engineering_1.20.1_v1.8.zip`, `Better Create Glass Pipes.zip`, 
+  `Cu Again 2.1.zip`, `GTM-RubberWood.zip`, `彩色边框.zip`, 
+  XKSP 系列(姹紫嫣红 / 枝繁叶茂 / 瑶草琪花 / 精雕细琢), 
   `squareful-create 3D.zip` 等
-- Minecraft 原版素材及其派生素材（Mojang Studios / Microsoft 版权）
-- 属于第三方的音频素材，例如 `kubejs/assets/cmi/sounds/event/winxp_err.ogg`、
-  `winxp_start.ogg`、`winxp_shutdown.ogg`（微软版权），以及 `sounds/meme/`、
+- Minecraft 原版素材及其派生素材(Mojang Studios / Microsoft 版权)
+- 属于第三方的音频素材, 例如 `kubejs/assets/cmi/sounds/event/winxp_err.ogg`, 
+  `winxp_start.ogg`, `winxp_shutdown.ogg`(微软版权), 以及 `sounds/meme/`, 
   `sounds/music/` 中来源于第三方的音频
-- `ldlib/` 下的资源（第三方库资源，保留其原许可）
-- 代码、KubeJS 脚本、数据与配置（适用本项目 EULA，见 `LICENSE`）
+- `ldlib/` 下的资源(第三方库资源, 保留其原许可)
+- 代码, KubeJS 脚本, 数据与配置(适用本项目 EULA, 见 `LICENSE`)
 - 后续引入的第三方字体与第三方音效
 
-> 注意：`kubejs/assets/cmi/sounds/` 中音频的实际来源需由维护者核实。未核实来源的文件不得按本协议再授权；分发时应按原版权处理或替换。
+> 注意: `kubejs/assets/cmi/sounds/` 中音频的实际来源需由维护者核实. 未核实来源的文件不得按本协议再授权；分发时应按原版权处理或替换. 
 
 ---
 
 ## 4. 授权要点
 
-你可以：
+你可以: 
 
-- **共享**：以任何媒介或格式复制、分发本协议覆盖的美术资源
-- **改编**：修改、转换、以该资源为基础进行创作
+- **共享**: 以任何媒介或格式复制, 分发本协议覆盖的美术资源
+- **改编**: 修改, 转换, 以该资源为基础进行创作
 
-但必须遵守下列条件：
+但必须遵守下列条件: 
 
-- **署名（BY）**：注明资源来自 CMI 开发团队，附项目链接与协议链接，并说明是否作过修改
-- **非商业（NC）**：不得将本协议覆盖的资源用于主要目的为商业优势或金钱报酬的用途 ——
-  包括但不限于售卖整合包、付费下载、置于付费墙之后、以该资源作为付费商品或付费服务的主要卖点
-- **相同方式共享（SA）**：若你修改、转换或基于该资源创作，你的贡献必须以
-  CC BY-NC-SA 4.0（或官方列出的兼容许可）授权
+- **署名(BY)**: 注明资源来自 CMI 开发团队, 附项目链接与协议链接, 并说明是否作过修改
+- **非商业(NC)**: 不得将本协议覆盖的资源用于主要目的为商业优势或金钱报酬的用途 ——
+  包括但不限于售卖整合包, 付费下载, 置于付费墙之后, 以该资源作为付费商品或付费服务的主要卖点
+- **相同方式共享(SA)**: 若你修改, 转换或基于该资源创作, 你的贡献必须以
+  CC BY-NC-SA 4.0(或官方列出的兼容许可)授权
 
-你不得增加法律条款或技术措施，限制他人依本协议享有的权利。
+你不得增加法律条款或技术措施, 限制他人依本协议享有的权利. 
 
 ---
 
-## 5. 与本项目 EULA 的关系（重要）
+## 5. 与本项目 EULA 的关系(重要)
 
-- CC BY-NC-SA 4.0 是针对美术资源的独立授权，与 CMI EULA 并行有效。依 CC 取得的权利不因 EULA 终止而终止；但违反 CC 许可的行为仍可能导致该授权终止。
-- 两者在商业限制上方向一致：EULA 第 4.1 条禁止对本整合包及其自制内容收取任何费用，CC 的 NC 条件禁止商业性使用。使用美术资源时须同时满足两者中更严格的要求。
-- 不得将美术资源并入以其它许可发布的代码作品中再行分发；如确需合并，须同时满足本项目 EULA 与 CC BY-NC-SA 4.0 的全部条件，而 NC 条件通常使这种合并无法成立。
-- EULA 第 5.2 条的「必须开源」要求仅适用于使用本项目自制代码或资源文件创建衍生项目的情形；纯粹依本协议使用美术资源的场景不适用该条。
-- 分发整合包时应完整保留 `LICENSE` 与 `LICENSE-ASSETS` 两个文件，不得删除本文件的排除条款。
+- CC BY-NC-SA 4.0 是针对美术资源的独立授权, 与 CMI EULA 并行有效. 依 CC 取得的权利不因 EULA 终止而终止；但违反 CC 许可的行为仍可能导致该授权终止. 
+- 两者在商业限制上方向一致: EULA 第 4.1 条禁止对本整合包及其自制内容收取任何费用, CC 的 NC 条件禁止商业性使用. 使用美术资源时须同时满足两者中更严格的要求. 
+- 不得将美术资源并入以其它许可发布的代码作品中再行分发；如确需合并, 须同时满足本项目 EULA 与 CC BY-NC-SA 4.0 的全部条件, 而 NC 条件通常使这种合并无法成立. 
+- EULA 第 5.2 条的「必须开源」要求仅适用于使用本项目自制代码或资源文件创建衍生项目的情形；纯粹依本协议使用美术资源的场景不适用该条. 
+- 分发整合包时应完整保留 `LICENSE` 与 `LICENSE-ASSETS` 两个文件, 不得删除本文件的排除条款. 
 
 ---
 
 ## 6. 署名格式
 
-推荐格式（中文）：
+推荐格式(中文): 
 
-> 美术资源来自 Create: Mechanism and Innovation (CMI) 开发团队，以 CC BY-NC-SA 4.0 授权。
-> 来源：<https://github.com/Eternal-Snowstorm/Create-Mechanism-and-Innovation>。修改：是 / 否。
+> 美术资源来自 Create: Mechanism and Innovation (CMI) 开发团队, 以 CC BY-NC-SA 4.0 授权. 
+> 来源: <https://github.com/Eternal-Snowstorm/Create-Mechanism-and-Innovation>. 修改: 是 / 否. 
 
 English:
 
@@ -129,6 +129,6 @@ The full legal terms are those of the official CC BY-NC-SA 4.0 Legal Code:
 
 ## 8. 免责声明
 
-本协议覆盖的美术资源按「现状」提供，不附带任何明示或默示的担保，包括但不限于
-适销性、特定用途适用性与非侵权担保。在任何情况下，作者与授权方均不就因使用或
-无法使用该资源而产生的任何索赔、损害或其他责任承担责任。
+本协议覆盖的美术资源按「现状」提供, 不附带任何明示或默示的担保, 包括但不限于
+适销性, 特定用途适用性与非侵权担保. 在任何情况下, 作者与授权方均不就因使用或
+无法使用该资源而产生的任何索赔, 损害或其他责任承担责任. 

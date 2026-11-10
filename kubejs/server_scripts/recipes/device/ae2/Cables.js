@@ -1,5 +1,5 @@
 ServerEvents.recipes((event) => {
-	let { kubejs, thermal_extra, minecraft, neoecoae } = event.getRecipes()
+	let { kubejs } = event.getRecipes()
 
 	// 福鲁伊克斯色ME玻璃线缆
 	kubejs.shaped("8x ae2:fluix_glass_cable", [
@@ -27,5 +27,4 @@ ServerEvents.recipes((event) => {
 		A: "ae2:fluix_glass_cable",
 		B: "thermal:cured_rubber"
 	}).id("ae2:network/cables/covered_fluix")
-
 })

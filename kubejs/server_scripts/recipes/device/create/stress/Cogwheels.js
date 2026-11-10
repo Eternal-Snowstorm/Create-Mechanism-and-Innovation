@@ -1,4 +1,3 @@
-// Create · 齿轮（青铜/铸铁/钢三系小齿轮与大齿轮）
 ServerEvents.recipes((event) => {
 	let { kubejs, create } = event.getRecipes()
 
@@ -9,7 +8,6 @@ ServerEvents.recipes((event) => {
 		"cast_iron",
 		"steel",
 	]
-
 	cogwheelMaterials.forEach((material) => {
 		// 小齿轮
 		kubejs.shapeless(`cmi:incomplete_${material}_cogwheel`, [

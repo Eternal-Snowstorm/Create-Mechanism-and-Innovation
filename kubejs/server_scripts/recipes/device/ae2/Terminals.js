@@ -1,4 +1,3 @@
-// AE2 · 终端与显示器（终端/合成终端/编码终端/读取终端/监控器/箱子）
 ServerEvents.recipes((event) => {
 	let { kubejs, thermal_extra, neoecoae } = event.getRecipes()
 

@@ -22,7 +22,7 @@
 #    bash updater/mods-sync.sh [--dry-run]
 #
 #  安全: 只操作 mods/ config/ kubejs/ defaultconfigs/ resourcepacks/,
-#        绝不触碰 saves, options.txt 与服务器数据。
+#        绝不触碰 saves, options.txt 与服务器数据. 
 # =============================================================================
 set -uo pipefail
 
@@ -102,9 +102,9 @@ trim() {
   printf '%s' "$s"
 }
 
-# 黑名单: 文件名以 "[]" 开头的 mod 不参与同步(与 dev/make-update-json.sh 的约定一致)。
+# 黑名单: 文件名以 "[]" 开头的 mod 不参与同步(与 dev/make-update-json.sh 的约定一致). 
 # 这类文件由玩家自行持有, 既不在 update.tsv 里, 也绝不能被 delete.tsv / replaces
-# 流程删除 —— 否则历史 delete.tsv 里一旦混入同样的路径, 每次更新都会把它清掉。
+# 流程删除 —— 否则历史 delete.tsv 里一旦混入同样的路径, 每次更新都会把它清掉. 
 is_blacklisted() {
   local b="${1##*/}"
   case "$b" in
@@ -182,11 +182,11 @@ done
 
 # 2c. 自愈: 清单中的 mod 在 mods/ 下残留的其它版本(同名主干)
 #     若历史 delete.tsv 漏记了某个下架项, 新旧两个 jar 会并存, Forge 会以
-#     "Duplicate mods" 直接崩溃启动; 这里按 mod 名主干兜底清理。
+#     "Duplicate mods" 直接崩溃启动; 这里按 mod 名主干兜底清理. 
 #     只扫 mods/*.jar, 并且只清理"与清单中某个 mod 同主干"的文件 ——
-#     玩家自己添加的, 与清单无关的 mod 不会被碰。
+#     玩家自己添加的, 与清单无关的 mod 不会被碰. 
 #     注意: mod_key 用 printf '%s' 输出(不带换行), 这里必须自己补 \n,
-#           否则所有 key 会粘成一行, 下面的整行匹配就永远失效。
+#           否则所有 key 会粘成一行, 下面的整行匹配就永远失效. 
 LIST_KEYS="$(mktemp)"
 for i in "${!M_PATH[@]}"; do
   case "${M_PATH[$i]}" in
@@ -360,7 +360,7 @@ if [ "$DRY_RUN" = "0" ] && [ -d "$BACKUP_DIR" ]; then
     if [ -n "$(ls -A "$BACKUP_DIR" 2>/dev/null)" ]; then
       log "[mods] 部分更新失败, 未恢复的旧文件备份保留在: $BACKUP_DIR"
     else
-      log "[mods] 失败项的旧版本均已恢复, 无需保留额外备份。"
+      log "[mods] 失败项的旧版本均已恢复, 无需保留额外备份. "
     fi
   fi
 fi
@@ -378,9 +378,9 @@ log "[mods] 完成: 总数 $total, 已最新 $skipped, 已下载 $downloaded, �
 if [ "$failed" -gt 0 ]; then
   log ""
   log "============================================================"
-  log "[提示] 本次有 $failed 个 mod 没能更新成功。"
+  log "[提示] 本次有 $failed 个 mod 没能更新成功. "
   if [ "$RESTORED" -gt 0 ]; then
-    log "       相关 mod 的旧版本已自动恢复($RESTORED 个文件), 游戏仍可正常启动。"
+    log "       相关 mod 的旧版本已自动恢复($RESTORED 个文件), 游戏仍可正常启动. "
   fi
   log "       请把下面这个日志文件发送给开发者, 以便我们排查原因:"
   log "       $LOG_FILE"

@@ -1,4 +1,3 @@
-// Create · 包装物流（打包机/流体打包机/包裹蛙港）
 ServerEvents.recipes((event) => {
 	let { kubejs } = event.getRecipes()
 

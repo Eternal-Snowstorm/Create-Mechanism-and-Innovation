@@ -75,7 +75,7 @@
 		}
 		{
 			dependencies: ["23C01A41EBA593FC"]
-			description: ["拥有了生物柴油后，你就可以在匠魂炉中融化铁了"]
+			description: ["拥有了生物柴油后, 你就可以在匠魂炉中融化铁了"]
 			icon: "tconstruct:molten_iron_bucket"
 			id: "06012DC3A4BBF58B"
 			quest_enhance_disable_scroll_paging: false
@@ -320,7 +320,7 @@
 		}
 		{
 			dependencies: ["580C6E604C71F620"]
-			description: ["应力消耗大户，注意控制转速"]
+			description: ["应力消耗大户, 注意控制转速"]
 			id: "63BF49635AEF3AF8"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -988,7 +988,7 @@
 				" - 结构最小尺寸为 3×3×3"
 				" - 储罐内部必须保持 中空"
 				" - 至少在任意一个外侧面安装1个{mekanism:dynamic_valve, 1}动态储罐阀门"
-				" - 储罐的框架需使用有效的动态储罐方块构成。"
+				" - 储罐的框架需使用有效的动态储罐方块构成. "
 				"{@pagebreak}"
 			]
 			icon: "mekanism:dynamic_valve"
@@ -1052,7 +1052,7 @@
 			dependencies: ["28DFB902C00FCB4D"]
 			description: [
 				"{image:cmi:textures/images/create/bulk_fermenter.png width:113 height:128 align:center}"
-				"尺寸为3*3*6时，发酵速度最大"
+				"尺寸为3*3*6时, 发酵速度最大"
 			]
 			icon: "createdieselgenerators:bulk_fermenter"
 			id: "7E097A0AFDB21208"
@@ -1173,11 +1173,11 @@
 		{
 			dependencies: ["00A42257F183E046"]
 			description: [
-				"将树液漏斗放置在&6去皮的橡胶原木&r上，用桶/碗右键漏斗即可缓慢收集胶乳"
-				"它的效率计算规则有点复杂...如果你不想研究，可以直接翻页查看&6最小最省密堆单元&r"
+				"将树液漏斗放置在&6去皮的橡胶原木&r上, 用桶/碗右键漏斗即可缓慢收集胶乳"
+				"它的效率计算规则有点复杂...如果你不想研究, 可以直接翻页查看&6最小最省密堆单元&r"
 				"{@pagebreak}"
 				"{image:cmi:textures/images/example/rubber.png width:199 height:112 align:center fit:true}"
-				"去皮橡胶原木周围26格内(以其为中心，边长3格的正方体范围内)&4不要&r放第二个去皮橡胶原木，会扣效率"
+				"去皮橡胶原木周围26格内(以其为中心, 边长3格的正方体范围内)&4不要&r放第二个去皮橡胶原木, 会扣效率"
 			]
 			id: "29ACEBA79B437ADD"
 			quest_enhance_disable_scroll_paging: false
@@ -1240,7 +1240,7 @@
 		{
 			dependencies: ["29ACEBA79B437ADD"]
 			description: [
-				"把桶/碗放在树液漏斗下面之后会发现只能收集植物胶乳但是取不出来，因为这个玩意就是收集用的，需要用其他方式把胶乳导出来。这个时候就可以&6用浇筑口&r把液体输出出来，等后面就可以用流体管道输出了。"
+				"把桶/碗放在树液漏斗下面之后会发现只能收集植物胶乳但是取不出来, 因为这个玩意就是收集用的, 需要用其他方式把胶乳导出来. 这个时候就可以&6用浇筑口&r把液体输出出来, 等后面就可以用流体管道输出了. "
 				"{image:cmi:textures/images/example/shuyedaochu.png width:199 height:204 align:center fit:true}"
 			]
 			hide_dependency_lines: true

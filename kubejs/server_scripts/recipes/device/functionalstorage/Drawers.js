@@ -157,5 +157,4 @@ ServerEvents.recipes((event) => {
 	function getWoodenDrawerItem(woodType, drawerType) {
 		return Item.of(getWoodenDrawerId(woodType, drawerType), drawerType)
 	}
-
 })

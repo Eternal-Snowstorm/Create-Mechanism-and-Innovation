@@ -344,7 +344,7 @@
 		{
 			dependencies: ["7E5C1B2C00000013"]
 			description: [
-				"它兼备&6镐&f, &6斧&f和&6锹&f的功能, 几乎能满足所有的挖掘需求。唯一的缺点就是没有攻击力"
+				"它兼备&6镐&f, &6斧&f和&6锹&f的功能, 几乎能满足所有的挖掘需求. 唯一的缺点就是没有攻击力"
 				"推荐把它当作这一阶段的主力工具, 一把顶三把, 能省下不少背包格子"
 			]
 			icon: {
@@ -755,7 +755,7 @@
 				id: "7E5C5B2C00003101"
 				observe_type: 1
 				timer: 0L
-				title: "观察：主世界石英矿"
+				title: "观察: 主世界石英矿"
 				to_observe: "cmi:overworld_quartz_ore"
 				type: "observation"
 			}]

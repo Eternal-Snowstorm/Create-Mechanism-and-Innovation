@@ -1,6 +1,5 @@
-// AE2 · 存储元件（清空原配方后重写外壳与 1k→256k 递推、空间元件）
 ServerEvents.recipes((event) => {
-	let { kubejs, create, thermal_extra, neoecoae } = event.getRecipes()
+	let { kubejs, create, thermal_extra } = event.getRecipes()
 	const DRIVE = /^ae2:(?!.*portable)(?!.*spatial).*cell(?!.*workbench$).+$/;
 
 	event.remove([

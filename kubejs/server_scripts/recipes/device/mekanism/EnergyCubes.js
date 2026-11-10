@@ -1,6 +1,5 @@
-// Mekanism · 能量单元（基础/高级/精英/终极）
 ServerEvents.recipes((event) => {
-	let { thermal_extra, neoecoae } = event.getRecipes()
+	let { neoecoae } = event.getRecipes()
 
 	// 能量单元
 	neoecoae.integrated_working_station()

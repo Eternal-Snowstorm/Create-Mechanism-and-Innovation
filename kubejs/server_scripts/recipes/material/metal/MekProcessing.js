@@ -1,3 +1,8 @@
+/**
+ * 
+ * @param {string} material 
+ * @returns 
+ */
 function getSlurry(material) {
 	let slurry = null
 
@@ -11,6 +16,11 @@ function getSlurry(material) {
 	return slurry
 }
 
+/**
+ * 
+ * @param {string} material 
+ * @returns 
+ */
 function getDirtySlurry(material) {
 	let dirtySlurry = null
 

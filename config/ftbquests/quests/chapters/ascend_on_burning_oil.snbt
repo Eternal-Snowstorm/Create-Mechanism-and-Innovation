@@ -273,7 +273,7 @@
 				"79461202D5061059"
 				"7AADB534F537AA83"
 			]
-			description: ["以&6抽油机驴头&f所在端为前臂，&6抽油机曲柄&f所在端为后臂，前后臂长度分别为&620/4&r时，抽油机效率最高(1000mb/次)"]
+			description: ["以&6抽油机驴头&f所在端为前臂, &6抽油机曲柄&f所在端为后臂, 前后臂长度分别为&620/4&r时, 抽油机效率最高(1000mb/次)"]
 			icon: "createdieselgenerators:pumpjack_crank"
 			icon_scale: 2.0d
 			id: "3640CEE4D21C8BB5"
@@ -500,7 +500,7 @@
 			dependencies: ["1570B04A1D692BCC"]
 			description: [
 				"&l炼钢坩埚结构说明&r"
-				"你需要使用&7高炉砖&r、&c燃烧室&r以及&7坩埚底座&r来搭建完整的多方块结构, 并在指定位置安装&6高炉预热器&r以提高温度"
+				"你需要使用&7高炉砖&r, &c燃烧室&r以及&7坩埚底座&r来搭建完整的多方块结构, 并在指定位置安装&6高炉预热器&r以提高温度"
 				""
 				"&l预热器安装&r"
 				"在坩埚侧面安装&6高炉预热器&r, 并为其提供&d能量&r"
@@ -1027,7 +1027,7 @@
 		}
 		{
 			dependencies: ["3640CEE4D21C8BB5"]
-			description: ["本整合包修改了原油生成机制，现在每个区块都会生成无限量的原油, 因此无需再四处勘探或寻找特定油田"]
+			description: ["本整合包修改了原油生成机制, 现在每个区块都会生成无限量的原油, 因此无需再四处勘探或寻找特定油田"]
 			hide_dependency_lines: true
 			icon: "createdieselgenerators:crude_oil_bucket"
 			id: "7CE3BF3F7F7FC1D9"

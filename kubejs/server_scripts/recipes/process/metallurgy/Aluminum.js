@@ -1,5 +1,5 @@
 ServerEvents.recipes((event) => {
-	let { create, vintageimprovements, cmi } = event.getRecipes()
+	let { vintageimprovements, cmi } = event.getRecipes()
 
 	// 赤泥
 	vintageimprovements.pressurizing("cmi:red_mud", [

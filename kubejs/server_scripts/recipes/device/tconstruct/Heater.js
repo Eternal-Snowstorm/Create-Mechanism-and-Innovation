@@ -1,4 +1,3 @@
-// TConstruct · 冶炼炉与焦黑/焦褐加热结构（熔炉、加热器、控制器、储罐、量器、铸模箱、烈焰人燃烧室）
 ServerEvents.recipes((event) => {
 	let { kubejs, minecraft } = event.getRecipes()
 	const BRICK = "tconstruct:seared_brick"

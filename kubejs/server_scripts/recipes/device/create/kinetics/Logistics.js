@@ -1,4 +1,3 @@
-// Create · 物流与操作（置物台/弹射/装箱/吊车/控制）
 ServerEvents.recipes((event) => {
 	let { kubejs, create } = event.getRecipes()
 

@@ -240,7 +240,7 @@ VillageGen.prototype.log = function (weights) {
 
 	entries.push("空地 权重" + weights.emptyWeight)
 
-	console.info("[VillageGen] " + this.biome + " 房屋池：" + entries.join(", "))
+	console.info("[VillageGen] " + this.biome + " 房屋池: " + entries.join(", "))
 }
 
 /**
@@ -491,5 +491,7 @@ new VillageGen("taiga")
 	.farms("potato", 0.4)
 
 ServerEvents.highPriorityData((event) => {
-	VILLAGE_GENERATORS.forEach((village) => village.build(event))
+	VILLAGE_GENERATORS.forEach((village) => {
+		village.build(event)
+	})
 })

@@ -1,27 +1,27 @@
 name: "新增内容建议"
 description: "新增内容"
 title: (将此栏[替换]为你的标题)
-labels: ["Feature", "待查看", "优先级：无"]
+labels: ["Feature", "待查看", "优先级: 无"]
 body:
 - type: checkboxes
   id: "yml-1"
   attributes:
     label: "检查项"
-    description: "请检查以下项目, 并勾选确认。"
+    description: "请检查以下项目, 并勾选确认. "
     options:
-    - label: "我已在 [Issues 页面](https://github.com/VechniMetel/Create-Mechanism-and-Innovation/issues) 中搜索, 确认了这一建议未被提交过。"
+    - label: "我已在 [Issues 页面](https://github.com/VechniMetel/Create-Mechanism-and-Innovation/issues) 中搜索, 确认了这一建议未被提交过. "
       required: true
 - type: textarea
   id: "yml-2"
   attributes:
     label: 描述
-    description: "详细描述具体内容。"
+    description: "详细描述具体内容. "
   validations:
     required: true
 - type: textarea
   id: "yml-3"  
   attributes:
     label: "其他补充信息(可选)"
-    description: "如有其他需要说明的内容, 请在此补充。"
+    description: "如有其他需要说明的内容, 请在此补充. "
   validations:
     required: false  

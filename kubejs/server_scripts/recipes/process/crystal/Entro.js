@@ -155,5 +155,4 @@ ServerEvents.recipes((event) => {
 			Fluid.of("cmi:liquid_crystal_entro", 100)
 		])
 		.duration(20)
-
 })

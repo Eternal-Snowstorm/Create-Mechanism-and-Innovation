@@ -42,8 +42,8 @@ ServerEvents.recipes((event) => {
 	/**
 	 * 创建 TCon 输入材料 JSON
 	 *
-	 * 无 count：输出普通材料 {"tag": ...} / {"item": ...}
-	 * 有 count：包装成 TCon SizedIngredient 格式
+	 * 无 count: 输出普通材料 {"tag": ...} / {"item": ...}
+	 * 有 count: 包装成 TCon SizedIngredient 格式
 	 * {"ingredient": <材料>, "amount_needed": <数量>}
 	 *
 	 * @param {Internal.Ingredient_} ingredient
@@ -67,11 +67,11 @@ ServerEvents.recipes((event) => {
 	 * 创建 Modifier 输入材料 JSON
 	 *
 	 * 每个槽位只写一种材料, 支持:
-	 * - `"minecraft:iron_ingot"`：单材料, 消耗 1 个
-	 * - `["minecraft:iron_ingot", 3]`：单材料, 消耗 3 个
-	 * - `["minecraft:iron_ingot", "#forge:ingots/gold"]`：同数量多选一
+	 * - `"minecraft:iron_ingot"`: 单材料, 消耗 1 个
+	 * - `["minecraft:iron_ingot", 3]`: 单材料, 消耗 3 个
+	 * - `["minecraft:iron_ingot", "#forge:ingots/gold"]`: 同数量多选一
 	 *
-	 * 注意：匠魂不支持同一槽位不同备选带不同数量；
+	 * 注意: 匠魂不支持同一槽位不同备选带不同数量；
 	 * 需要不同消耗时请拆成多条配方, 每槽写一个 [材料, 数量]
 	 *
 	 * @param {Internal.Ingredient_ | [Internal.Ingredient_, number] | Internal.Ingredient_[]} input
@@ -88,7 +88,7 @@ ServerEvents.recipes((event) => {
 			return ingredientJson(input[0], input[1])
 		}
 
-		// [ingredient, ingredient, ...]：多选一(数量同为 1)
+		// [ingredient, ingredient, ...]: 多选一(数量同为 1)
 		let json = new $JsonObject()
 		let array = new $JsonArray()
 
@@ -201,9 +201,9 @@ ServerEvents.recipes((event) => {
 	 * 设置输入材料
 	 *
 	 * 每个元素对应一个输入槽位, 支持:
-	 * - `"minecraft:iron_ingot"`：单材料, 消耗 1 个
-	 * - `["minecraft:iron_ingot", 3]`：单材料, 消耗 3 个
-	 * - `["minecraft:iron_ingot", "#forge:ingots/gold"]`：同数量多选一
+	 * - `"minecraft:iron_ingot"`: 单材料, 消耗 1 个
+	 * - `["minecraft:iron_ingot", 3]`: 单材料, 消耗 3 个
+	 * - `["minecraft:iron_ingot", "#forge:ingots/gold"]`: 同数量多选一
 	 *
 	 * @param {(Internal.Ingredient_ | [Internal.Ingredient_, number] | Internal.Ingredient_[])[]} inputs
 	 * @returns {ModifierRecipeBuilder}

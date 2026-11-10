@@ -1,4 +1,3 @@
-// Immersive Engineering · 工程方块与坩埚结构（散热器/重型与轻型工程块/红石工程块/发电机/坩埚/炉砖）
 ServerEvents.recipes((event) => {
 	let { kubejs, minecraft } = event.getRecipes()
 

@@ -1,6 +1,5 @@
-// Thermal · 单方块机器（磨粉/灌注/合成/锯木/离心/熔炉/熔炼/精炼/结晶/坩埚/压印/热解/发酵/冷却/流体混合等）
 ServerEvents.recipes((event) => {
-	let { thermal_extra, create, thermal, kubejs } = event.recipes
+	let { thermal_extra } = event.getRecipes()
 
 	// 磨粉机
 	addComponRecipe(thermal_extra, "thermal:machine_pulverizer", [

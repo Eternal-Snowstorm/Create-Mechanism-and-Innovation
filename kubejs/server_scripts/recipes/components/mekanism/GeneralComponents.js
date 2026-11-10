@@ -1,6 +1,5 @@
-// Mekanism · 通用组件（四色气体组件与钢制机壳）
 ServerEvents.recipes((event) => {
-	let { thermal_extra, neoecoae } = event.getRecipes()
+	let { neoecoae } = event.getRecipes()
 
 	// 设备组件
 	neoecoae.integrated_working_station()

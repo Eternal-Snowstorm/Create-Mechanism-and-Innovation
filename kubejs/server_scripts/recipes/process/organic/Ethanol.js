@@ -1,7 +1,7 @@
 ServerEvents.recipes((event) => {
 	let { createdieselgenerators, immersiveengineering } = event.getRecipes()
 
-	// 乙醇（发酵罐）
+	// 乙醇(发酵罐)
 	immersiveengineering.fermenter(
 		"#forge:fermentable",
 		Fluid.of("immersiveengineering:ethanol", 100),
@@ -39,7 +39,7 @@ ServerEvents.recipes((event) => {
 	})
 
 	/**
-	 * 乙醇发酵配方（发酵桶）
+	 * 乙醇发酵配方(发酵桶)
 	 * 
 	 * @param {(Internal.InputFluid_|InputItem_)[]} input 输入物品
 	 * @param {number} amount 输出流体量

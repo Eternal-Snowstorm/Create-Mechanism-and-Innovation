@@ -7,7 +7,7 @@ ServerEvents.recipes((event) => {
 		Fluid.of("minecraft:water", 200)
 	])
 
-	// 醋（发酵罐）
+	// 醋(发酵罐)
 	immersiveengineering.fermenter(
 		"#forge:seeds/rice",
 		Fluid.of("cmi:vinegar", 500),

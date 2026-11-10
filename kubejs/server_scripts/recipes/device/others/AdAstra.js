@@ -1,4 +1,3 @@
-// Ad Astra · 太空机器（燃煤发电机/高炉/太阳能板）
 ServerEvents.recipes((event) => {
 	let { kubejs, thermal_extra } = event.getRecipes()
 

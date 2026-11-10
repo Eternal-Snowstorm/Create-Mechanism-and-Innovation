@@ -1,5 +1,6 @@
 ServerEvents.recipes((event) => {
 	let { minecraft, mekanism, immersiveengineering, thermal, cmi } = event.getRecipes()
+
 	let types = [
 		"forge:ores",
 		"forge:raw_materials",

@@ -276,7 +276,7 @@ const SmeltingRecipes = {
 	},
 
 	/**
-	 * 注册：高炉 + 熔炉
+	 * 注册: 高炉 + 熔炉
 	 *
 	 * @param {Internal.RecipesEventJS} event 配方事件
 	 * @param {OutputItem_} output 输出产物
@@ -301,7 +301,7 @@ const SmeltingRecipes = {
 	},
 
 	/**
-	 * 注册：烟熏 + 熔炉
+	 * 注册: 烟熏 + 熔炉
 	 *
 	 * @param {Internal.RecipesEventJS} event 配方事件
 	 * @param {OutputItem_} output 输出产物

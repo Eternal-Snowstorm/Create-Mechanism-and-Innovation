@@ -1,5 +1,11 @@
 ServerEvents.recipes((event) => {
-	// leftover 封装
+	/**
+	 * leftover 封装
+	 * 
+	 * @param {Internal.ItemStack_} item 
+	 * @param {number} count 
+	 * @returns 
+	 */
 	function addLeftover(item, count) {
 		return Item.of(item, count).toJson()
 	}

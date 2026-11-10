@@ -1,6 +1,6 @@
 # MB2 注册文档索引
 > 调研对象: multiblocked2-1.20.1-1.0.39.jar + ldlib/assets/mbd2 (.sm/.mb/.rt NBT 定义)
-> 所有类名/方法名/事件名均经 javap 反编译与 kubejs/probe 生成文件验证。
+> 所有类名/方法名/事件名均经 javap 反编译与 kubejs/probe 生成文件验证. 
 
 ## 文档
 
@@ -13,11 +13,11 @@
 
 ## 三句话结论
 
-1. Java 能注册一切 (机器/多方块/特性/配方类型/配方), 入口是 `MBDRegistryEvent.Machine` 等 mod bus 事件。
+1. Java 能注册一切 (机器/多方块/特性/配方类型/配方), 入口是 `MBDRegistryEvent.Machine` 等 mod bus 事件. 
 2. KubeJS 同样能注册 (`MBDRegistryEvents.machine` / `.recipeType`), 但机器 Builder 是裸 Java 反射,
-   `machineSettings` 是**无参 Supplier 工厂**而非 builder 回调 —— 回调参数必为 any/undefined, 必须 return 配置对象。
+   `machineSettings` 是**无参 Supplier 工厂**而非 builder 回调 —— 回调参数必为 any/undefined, 必须 return 配置对象. 
 3. Java, 磁盘 NBT (ldlib/assets/mbd2), KubeJS 三条来源共存于同一注册表, 顺序为
-   Java → 磁盘 NBT → KubeJS, **同名后来者覆盖**; 混合注册细节见两份文档各自的最后一节。
+   Java → 磁盘 NBT → KubeJS, **同名后来者覆盖**; 混合注册细节见两份文档各自的最后一节. 
 
 ## 速记: 两侧类型名不同!
 

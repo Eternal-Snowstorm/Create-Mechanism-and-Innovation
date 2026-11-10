@@ -1,4 +1,3 @@
-// Create · 蒸汽动力（青铜/铸铁/钢三系锅炉与蒸汽引擎装配线）
 ServerEvents.recipes((event) => {
 	let { kubejs, create } = event.getRecipes()
 	let Inc = {

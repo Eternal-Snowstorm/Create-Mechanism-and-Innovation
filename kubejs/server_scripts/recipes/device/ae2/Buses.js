@@ -1,4 +1,3 @@
-// AE2 · 总线与平面（接口/样板供应器/P2P 隧道/存储总线/输入输出总线/切换总线/形成湮灭平面）
 ServerEvents.recipes((event) => {
 	let { kubejs, thermal_extra, minecraft, neoecoae } = event.getRecipes()
 

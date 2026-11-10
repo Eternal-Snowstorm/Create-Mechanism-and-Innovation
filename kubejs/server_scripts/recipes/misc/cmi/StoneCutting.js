@@ -10,7 +10,5 @@ ServerEvents.recipes((event) => {
 		})
 
 	// 石子路面
-	minecraft.stonecutting("16x cmi:stone_pave",
-		"minecraft:gravel"
-	)
+	minecraft.stonecutting("16x cmi:stone_pave", "minecraft:gravel")
 })

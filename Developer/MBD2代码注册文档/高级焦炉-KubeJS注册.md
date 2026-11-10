@@ -1,6 +1,6 @@
 # 高级焦炉 (reinforced_coke_oven) — KubeJS 版
-> 完整实例: 与 Java 版等价, 按 ldlib/assets/mbd2 里的 NBT 逐字段还原。
-> 先读《MB2-KubeJS注册文档.md》教程, 本文只给成品脚本。
+> 完整实例: 与 Java 版等价, 按 ldlib/assets/mbd2 里的 NBT 逐字段还原. 
+> 先读《MB2-KubeJS注册文档.md》教程, 本文只给成品脚本. 
 
 ## 这台机器是什么
 
@@ -36,7 +36,7 @@ let $ForgeRegistries                      = Java.loadClass("net.minecraftforge.r
 let $Shapes                               = Java.loadClass("net.minecraft.world.phys.shapes.Shapes")
 
 /**
- * 设置 Java 对象的 private 字段 (绕开 MB2 缺失的 setter)。
+ * 设置 Java 对象的 private 字段 (绕开 MB2 缺失的 setter). 
  * @param {any} obj - Java 对象实例
  * @param {string} fieldName - 字段名
  * @param {any} value - 新值 (String→字符串; 数字→number; 枚举/对象→Java 对象)
@@ -245,8 +245,8 @@ function registerBus(event, id, model, traitFilter, io, autoAllSides) {
 
 ## 要点
 
-- 模型文件 (on/off/common_input/common_output) 已在 kubejs/assets 里, 直接引用原路径。
-- 结构摆好后, 输入/输出总线放进 `2` 槽位, 控制器在 `6` 槽位 (中间层)。
+- 模型文件 (on/off/common_input/common_output) 已在 kubejs/assets 里, 直接引用原路径. 
+- 结构摆好后, 输入/输出总线放进 `2` 槽位, 控制器在 `6` 槽位 (中间层). 
 - 多方块那一段用了 removeMachine 四步流程 (为什么见教程第三步); 总线没有结构需求,
-  直接 `event.create` 交给事件自动注册。
-- 想整机走 NBT (含编辑器 UI): 把 .mb/.sm/.rt 放进 `ldlib/assets/mbd2` 自动加载, 本脚本删掉即可。
+  直接 `event.create` 交给事件自动注册. 
+- 想整机走 NBT (含编辑器 UI): 把 .mb/.sm/.rt 放进 `ldlib/assets/mbd2` 自动加载, 本脚本删掉即可. 

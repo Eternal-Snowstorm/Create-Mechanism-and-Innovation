@@ -1,4 +1,3 @@
-// Create · 流体储存（流体罐、流体容器、多流体储罐）
 ServerEvents.recipes((event) => {
 	let { kubejs } = event.getRecipes()
 

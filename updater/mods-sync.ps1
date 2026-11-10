@@ -5,7 +5,7 @@
 $ErrorActionPreference = 'Stop'
 
 # 注意: 不要强制 [Console]::OutputEncoding, 否则会与本脚本调用方(.bat 的 chcp 936)
-# 的控制台代码页冲突, 导致中文乱码。PowerShell 默认跟随控制台代码页, 这正是所需行为。
+# 的控制台代码页冲突, 导致中文乱码. PowerShell 默认跟随控制台代码页, 这正是所需行为. 
 
 # 客户端根目录 = updater 的上一级(文件夹名不必是 .minecraft)
 if (-not $Root) { $Root = Split-Path -Parent $PSScriptRoot }
@@ -55,7 +55,7 @@ function Test-SafePath([string]$p) {
 }
 
 # mod 名主干: 与 make-update-json.sh / mods-sync.sh 保持一致,
-# 用于把"下载失败的新 jar"匹配到它在备份里被替换掉的旧版本。
+# 用于把"下载失败的新 jar"匹配到它在备份里被替换掉的旧版本. 
 function Get-ModKey([string]$path) {
   $b = Split-Path -Leaf $path
   $b = $b -replace '\.jar$', ''
@@ -65,9 +65,9 @@ function Get-ModKey([string]$path) {
   return $b.ToLowerInvariant()
 }
 
-# 黑名单: 文件名以 "[]" 开头的 mod 不参与同步(与 dev/make-update-json.sh 的约定一致)。
+# 黑名单: 文件名以 "[]" 开头的 mod 不参与同步(与 dev/make-update-json.sh 的约定一致). 
 # 这类文件由玩家自行持有, 既不在 update.tsv 里, 也绝不能被 delete.tsv / replaces
-# 流程删除 —— 否则历史 delete.tsv 里一旦混入同样的路径, 每次更新都会把它清掉。
+# 流程删除 —— 否则历史 delete.tsv 里一旦混入同样的路径, 每次更新都会把它清掉. 
 function Test-ModBlacklisted([string]$p) {
   if ([string]::IsNullOrWhiteSpace($p)) { return $false }
   $leaf = $p.Replace('\', '/')
@@ -82,7 +82,7 @@ function Get-Sha1([string]$file) {
 
 # --- 1. 解析清单 --------------------------------------------------------
 # 清单为 5 列(TAB 分隔): sha1 | path | url | project | replaces
-# 兼容旧的 3 列格式(sha1 | path | url)。
+# 兼容旧的 3 列格式(sha1 | path | url). 
 if (-not (Test-Path -LiteralPath $manifest)) {
   Write-Log '[mods] 未找到 update.tsv, 跳过 mods 同步'
   exit 0
@@ -112,7 +112,7 @@ foreach ($it in $items) { [void]$protected.Add($it.Path) }
 
 # --- 2. 汇总待下架 / 待替换的旧 jar -------------------------------------
 # 黑名单保护: 下面三处待删来源(delete.tsv / replaces / 同主干自愈)统一跳过
-# 文件名以 "[]" 开头的文件, 让玩家自有的黑名单 mod 永远不被删除或替换。
+# 文件名以 "[]" 开头的文件, 让玩家自有的黑名单 mod 永远不被删除或替换. 
 $script:BlacklistSkipped = 0
 $pendingList = New-Object 'System.Collections.Generic.List[string]'
 $pendingSeen = New-Object 'System.Collections.Generic.HashSet[string]'
@@ -144,9 +144,9 @@ foreach ($it in $items) {
 
 # 2c. 自愈: 清单中的 mod 在 mods\ 下残留的其它版本(同名主干)
 #     若历史 delete.tsv 漏记了某个下架项, 新旧两个 jar 会并存, Forge 会以
-#     "Duplicate mods" 直接崩溃启动; 这里按 mod 名主干兜底清理。
+#     "Duplicate mods" 直接崩溃启动; 这里按 mod 名主干兜底清理. 
 #     只扫 mods\*.jar, 并且只清理"与清单中某个 mod 同主干"的文件 ——
-#     玩家自己添加的, 与清单无关的 mod 不会被碰。
+#     玩家自己添加的, 与清单无关的 mod 不会被碰. 
 $listKeys = New-Object 'System.Collections.Generic.HashSet[string]'
 foreach ($it in $items) {
   if (-not $it.Path.StartsWith('mods/')) { continue }
@@ -317,7 +317,7 @@ if ((-not $DryRun) -and (Test-Path -LiteralPath $backupDir)) {
     if ($left.Count -gt 0) {
       Write-Log ("[mods] 部分更新失败, 未恢复的旧文件备份保留在: " + $backupDir)
     } else {
-      Write-Log '[mods] 失败项的旧版本均已恢复, 无需保留额外备份。'
+      Write-Log '[mods] 失败项的旧版本均已恢复, 无需保留额外备份. '
     }
   }
 }
@@ -334,9 +334,9 @@ if ($DryRun) { Write-Log '[mods] (dry-run 模式, 未做任何实际改动)'; ex
 if ($failed -gt 0) {
   Write-Log ''
   Write-Log '============================================================'
-  Write-Log ("[提示] 本次有 " + $failed + " 个 mod 没能更新成功。")
+  Write-Log ("[提示] 本次有 " + $failed + " 个 mod 没能更新成功. ")
   if ($restored -gt 0) {
-    Write-Log ("       相关 mod 的旧版本已自动恢复(" + $restored + " 个文件), 游戏仍可正常启动。")
+    Write-Log ("       相关 mod 的旧版本已自动恢复(" + $restored + " 个文件), 游戏仍可正常启动. ")
   }
   Write-Log '       请把下面这个日志文件发送给开发者, 以便我们排查原因:'
   Write-Log ("       " + $logFile)

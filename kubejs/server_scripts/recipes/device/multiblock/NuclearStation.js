@@ -1,4 +1,3 @@
-// Mekanism · 核能多方块（裂变反应堆/聚变反应堆/工业激光/SPS）
 ServerEvents.recipes((event) => {
 	let { neoecoae } = event.getRecipes()
 

@@ -1,4 +1,3 @@
-// Create: Ruins and Structures · 采矿与共振
 ServerEvents.recipes((event) => {
 	let { kubejs, create } = event.getRecipes()
 

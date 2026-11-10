@@ -28,7 +28,7 @@ ServerEvents.recipes((event) => {
 		.slag("thermal:slag")
 		.time(20 * 30)
 
-	// 硅（电弧炉）
+	// 硅(电弧炉)
 	immersiveengineering.arc_furnace("#forge:silicon")
 		.input("cmi:silicon_mixture")
 		.slag("#forge:slag")

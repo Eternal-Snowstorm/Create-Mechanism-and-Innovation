@@ -1,6 +1,6 @@
 # MB2 KubeJS 注册指南
 > 适用: Minecraft 1.20.1 / Forge / Multiblocked2 1.20.1-1.0.39 / KubeJS 6
-> 本文是教程式指南: 先跑通最小示例, 再逐步加功能。所有 API 均经字节码验证。
+> 本文是教程式指南: 先跑通最小示例, 再逐步加功能. 所有 API 均经字节码验证. 
 
 ---
 
@@ -12,7 +12,7 @@
 MBDRegistryEvents.machine(event => {
     const builder = event.create("single", "cmi:my_first_machine")
 
-    // 每个字段都有默认值 —— 什么都不配也能注册。这里只设一个模型:
+    // 每个字段都有默认值 —— 什么都不配也能注册. 这里只设一个模型:
     builder.rootState(
         Java.loadClass("com.lowdragmc.mbd2.common.machine.definition.config.MachineState")
             .builder().name("base")
@@ -22,12 +22,12 @@ MBDRegistryEvents.machine(event => {
 })
 ```
 
-进游戏拿 `/give @s cmi:my_first_machine`, 放下来 —— 这就是你的第一台 MB2 机器。
-事件结束后 MB2 会自动构建并注册, 不需要任何 build/register 调用。
+进游戏拿 `/give @s cmi:my_first_machine`, 放下来 —— 这就是你的第一台 MB2 机器. 
+事件结束后 MB2 会自动构建并注册, 不需要任何 build/register 调用. 
 
 **先记住三件事** (后文会反复用到):
 
-1. 机器类型名: `"single"` 单方块 / `"multiblock"` 多方块 (有 Create 时还有 `"kinetic"`)。
+1. 机器类型名: `"single"` 单方块 / `"multiblock"` 多方块 (有 Create 时还有 `"kinetic"`). 
 2. 类引用太长, 统一用变量 (本文约定 `$类名`, 嵌套类 `$父类$子类`):
 
 ```js
@@ -40,7 +40,7 @@ let $ConfigRecipeLogicSettings = Java.loadClass("com.lowdragmc.mbd2.common.machi
 3. Builder 的参数分两类, **都不是带参回调**:
    - `rootState` / `blockProperties` / `itemProperties` / `recipeLogicSettings` → **先 new 好对象再传进去**
    - `machineSettings` / `partSettings` / `multiblockSettings` → **无参箭头函数, 末尾必须 return 配置对象**
-   - 写 `(setting) => {...}` 时 `setting` 显示 any 就是这个原因 (期望签名里没有参数)。
+   - 写 `(setting) => {...}` 时 `setting` 显示 any 就是这个原因 (期望签名里没有参数). 
 
 ---
 
@@ -97,7 +97,7 @@ MBDRegistryEvents.machine(event => {
 
 常用特性类名:
 `$ItemSlotCapabilityTraitDefinition` (物品槽) / `$FluidTankCapabilityTraitDefinition` (流体槽) /
-`$ForgeEnergyCapabilityTraitDefinition` (FE 能量) —— 都是 `new` + setter, 然后 `settings.traitDefinition(...)`。
+`$ForgeEnergyCapabilityTraitDefinition` (FE 能量) —— 都是 `new` + setter, 然后 `settings.traitDefinition(...)`. 
 
 ---
 
@@ -118,7 +118,7 @@ MBDRegistryEvents.recipeType(event => {
 ```
 
 配方 builder 常用方法: `duration(tick)` `inputItems("物品id")` `outputItems("2x 物品id")`
-`inputFluids(...)` `outputFluids(...)` `inputFE(数量)` `addData(键, 值)` `isFuel(true)`。
+`inputFluids(...)` `outputFluids(...)` `inputFE(数量)` `addData(键, 值)` `isFuel(true)`. 
 
 ---
 
@@ -172,16 +172,16 @@ MBDRegistryEvents.machine(event => {
 ```
 
 **为什么这四步**: 事件结束后 MB2 会对每个 `event.create` 的 builder 自动
-`register(id, builder.build())` —— 一个没有结构的版本, 会覆盖你的。
+`register(id, builder.build())` —— 一个没有结构的版本, 会覆盖你的. 
 `event.removeMachine(id)` 把 builder 摘出自动队列 (注意顺序: 先 remove 再手动 register,
-反了注册表条目会被 removeMachine 删掉)。
+反了注册表条目会被 removeMachine 删掉). 
 
 结构写法要点:
-- 控制器位置: `$Predicates.controller($Predicates.any())` 标记。
+- 控制器位置: `$Predicates.controller($Predicates.any())` 标记. 
 - 方块谓词: `$Predicates.blocks(Block.getBlock("modid:block"))`, 空气 `$Predicates.air()`,
-  任意 `$Predicates.any()`, 多选一 `.or(...)`。
+  任意 `$Predicates.any()`, 多选一 `.or(...)`. 
 - 结构想改 NBT 也行: 把编辑器导出的 `.mb` 放进 `ldlib/assets/mbd2/multiblock/` 自动加载,
-  那样纯 `event.create` + 配置就够, 不需要上面四步。
+  那样纯 `event.create` + 配置就够, 不需要上面四步. 
 
 ---
 
@@ -195,7 +195,7 @@ MBDMachineEvents.onRecipeWorking(event => {
 ```
 
 常用事件: `onTick` `onRecipeWorking` `onRecipeFinish` `onStructureFormed` `onStructureInvalid`
-`onRightClick` `onStateChanged` (完整清单见文末附录)。
+`onRightClick` `onStateChanged` (完整清单见文末附录). 
 
 ---
 
@@ -203,7 +203,7 @@ MBDMachineEvents.onRecipeWorking(event => {
 
 ### GUI 的组成与约定 id
 
-机器 GUI = `uiCreator` (`Function<MBDMachine, WidgetGroup>`) 返回的 widget 树 (LDLib 框架)。
+机器 GUI = `uiCreator` (`Function<MBDMachine, WidgetGroup>`) 返回的 widget 树 (LDLib 框架). 
 `bindMachineUI` 打开界面时按 widget 的 id 正则自动接功能:
 
 | widget id (正则) | 自动挂载 |
@@ -214,13 +214,13 @@ MBDMachineEvents.onRecipeWorking(event => {
 | `^ui:xei_lookup$` | XEI 配方查看按钮 |
 | `ui:<trait名>_<序号>` | trait 槽位 (自动绑定) |
 
-widget 设 id: `widget.setId("ui:machine_name")`。
+widget 设 id: `widget.setId("ui:machine_name")`. 
 
 ### 关键结论: GUI 数据只来自 NBT, 纯代码注册的坑
 
 - `uiCreator` 只在 NBT 反序列化 (`loadProductiveTag`) 里被赋值; **纯代码 Builder 注册的机器
-  `uiCreator == null`, 而 `hasUI` 默认 true, `createUI` 无 null 检查 → 开 GUI 直接 NPE**。
-- 所以纯代码机器要么 `hasUI(false)` (前四步示例已统一这样), 要么注入 uiCreator, 要么靠 NBT。
+  `uiCreator == null`, 而 `hasUI` 默认 true, `createUI` 无 null 检查 → 开 GUI 直接 NPE**. 
+- 所以纯代码机器要么 `hasUI(false)` (前四步示例已统一这样), 要么注入 uiCreator, 要么靠 NBT. 
 
 ### 路径 A: JS 构建 GUI 并注入 uiCreator
 
@@ -266,7 +266,7 @@ function createMachineUI(machine) {
 setPrivateField(def, "uiCreator", createMachineUI)   // JS 函数自动适配 Function<MBDMachine, WidgetGroup>
 ```
 
-注意: 注入后 `bindMachineUI` 不会自动执行 (它只由 NBT 路径调用), 槽位/进度条要自己接 (如上)。
+注意: 注入后 `bindMachineUI` 不会自动执行 (它只由 NBT 路径调用), 槽位/进度条要自己接 (如上). 
 
 ### 路径 B: 运行时改 GUI (MBDMachineEvents.onUI, server 事件)
 
@@ -299,7 +299,7 @@ MBDMachineEvents.onRecipeUI(event => {
 
 ### 部件 (输入/输出总线)
 
-部件 = 单方块 + `partSettings` 开 enable + 代理控制器 trait。代理过滤器 `traitNameFilter` 是
+部件 = 单方块 + `partSettings` 开 enable + 代理控制器 trait. 代理过滤器 `traitNameFilter` 是
 private 字段没有 setter, 用反射设 (MB2 jar 未混淆, 字段名稳定):
 
 ```js
@@ -307,7 +307,7 @@ let $ConfigPartSettings = Java.loadClass("com.lowdragmc.mbd2.common.machine.defi
 let $ConfigPartSettings$ProxyCapability = Java.loadClass("com.lowdragmc.mbd2.common.machine.definition.config.ConfigPartSettings$ProxyCapability")
 
 /**
- * 设置 Java 对象的 private 字段。
+ * 设置 Java 对象的 private 字段. 
  * @param {any} obj - Java 对象实例
  * @param {string} fieldName - 字段名 (javap -p 查证)
  * @param {any} value - 新值 (String→字符串; 数字→number; 枚举/对象→Java 对象)
@@ -346,8 +346,8 @@ MBDRegistryEvents.machine(event => {
 
 ### 与 Java / 磁盘 NBT 共存
 
-三条来源写同一个注册表, 顺序: Java → `ldlib/assets/mbd2` 磁盘 NBT → KubeJS。
-**同名后来者覆盖**。机器事件对任何来源的机器都生效。
+三条来源写同一个注册表, 顺序: Java → `ldlib/assets/mbd2` 磁盘 NBT → KubeJS. 
+**同名后来者覆盖**. 机器事件对任何来源的机器都生效. 
 
 ---
 

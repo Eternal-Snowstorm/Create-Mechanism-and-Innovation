@@ -4,10 +4,14 @@ ServerEvents.recipes((event) => {
 
 	// CMI 图标
 	kubejs.shaped("cmi:cmi_icon", [
-		["cmi:innovation_crystal_wafer", "-", "-"],
-		["-", "cmi:dreamcore_wire", "-"],
-		["-", "-", "cmi:mechanium_ingot"]
-	])
+		"A  ",
+		" B ",
+		"  C"
+	], {
+		A: "cmi:innovation_crystal_wafer",
+		B: "cmi:dreamcore_wire",
+		C: "cmi:mechanium_ingot"
+	})
 
 	// 幻晶线
 	tconstruct.casting_table(Material.Dreamcores.WIRE.withCount(2))

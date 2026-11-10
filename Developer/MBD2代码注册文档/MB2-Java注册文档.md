@@ -1,6 +1,6 @@
 # MB2 Java 注册指南
 > 适用: Minecraft 1.20.1 / Forge / Multiblocked2 1.20.1-1.0.39
-> 教程式指南: 先跑通最小示例, 再逐步加功能。所有 API 均经 javap 验证。
+> 教程式指南: 先跑通最小示例, 再逐步加功能. 所有 API 均经 javap 验证. 
 
 依赖 (build.gradle):
 
@@ -37,11 +37,11 @@ public final class MB2Registration {
 **三个基础认知**:
 
 1. Java 侧的机器类型名与 KubeJS 不同: `"single_machine"` 单方块 / `"multiblock"` 多方块
-   (仅在 `registerFromResource/registerFromFile` 用到; builder 注册不需要)。
+   (仅在 `registerFromResource/registerFromFile` 用到; builder 注册不需要). 
 2. Builder 参数同样分两类: `rootState/blockProperties/itemProperties/recipeLogicSettings` 传对象,
-   `machineSettings/partSettings/multiblockSettings` 传 `() -> 配置对象` 工厂 (不是 builder 回调)。
+   `machineSettings/partSettings/multiblockSettings` 传 `() -> 配置对象` 工厂 (不是 builder 回调). 
 3. 链式调用注意: 多数 setter 返回父类 `MBDMachineDefinition.Builder`, 后面没有
-   `multiblockSettings()` (编译错误); 多方块建议分步调用 builder (见第三步)。
+   `multiblockSettings()` (编译错误); 多方块建议分步调用 builder (见第三步). 
 
 ---
 
@@ -106,7 +106,7 @@ private static MBDMachineDefinition createElectrolyzer() {
 ```
 
 常用特性类: `ItemSlotCapabilityTraitDefinition` / `FluidTankCapabilityTraitDefinition` /
-`ForgeEnergyCapabilityTraitDefinition` —— `new` + setter, 最后 `settings.addTraitDefinition(...)`。
+`ForgeEnergyCapabilityTraitDefinition` —— `new` + setter, 最后 `settings.addTraitDefinition(...)`. 
 
 ---
 
@@ -132,8 +132,8 @@ public static void registerRecipeTypes(MBDRegistryEvent.MBDRecipeType event) {
 }
 ```
 
-配方 builder 常用: `duration / inputItems / outputItems / inputFluids / outputFluids / inputFE / addData / isFuel`。
-想代理别的模组配方 (如 IE 焦炉): `new MBDRecipeType(rl, 代理的RecipeType)`。
+配方 builder 常用: `duration / inputItems / outputItems / inputFluids / outputFluids / inputFE / addData / isFuel`. 
+想代理别的模组配方 (如 IE 焦炉): `new MBDRecipeType(rl, 代理的RecipeType)`. 
 
 ---
 
@@ -180,11 +180,11 @@ private static MultiblockMachineDefinition createSmallMachine() {
 ```
 
 结构要点:
-- `blockPatternFactory` 是 definition 的方法, 不是 builder 的 —— 所以先 build 再挂。
-- 控制器位置: `Predicates.controller(Predicates.any())`。
-- 谓词: `Predicates.blocks/states/fluids/air/any` + `.or()` + `setMinLayerLimited` 等限量。
+- `blockPatternFactory` 是 definition 的方法, 不是 builder 的 —— 所以先 build 再挂. 
+- 控制器位置: `Predicates.controller(Predicates.any())`. 
+- 谓词: `Predicates.blocks/states/fluids/air/any` + `.or()` + `setMinLayerLimited` 等限量. 
 - 现成 .mb 文件不想用代码写: `event.registerFromResource(类.class, "multiblock", "cmi/mbd2/multiblock/xxx.mb")`
-  (文件放 resources/assets/cmi/mbd2/...), UI/结构/事件图全部原样保留。
+  (文件放 resources/assets/cmi/mbd2/...), UI/结构/事件图全部原样保留. 
 
 ---
 
@@ -210,7 +210,7 @@ private static void onRecipeWorking(MachineOnRecipeWorkingEvent e) {
 ```
 
 事件常量全在 `MBDServerEvents` 上: `TICK / ON_RECIPE_WORKING / ON_RECIPE_FINISH /
-STRUCTURE_FORMED / STRUCTURE_INVALID / RIGHT_CLICK / STATE_CHANGED ...` (与 KubeJS 事件同名)。
+STRUCTURE_FORMED / STRUCTURE_INVALID / RIGHT_CLICK / STATE_CHANGED ...` (与 KubeJS 事件同名). 
 
 ---
 
@@ -218,7 +218,7 @@ STRUCTURE_FORMED / STRUCTURE_INVALID / RIGHT_CLICK / STATE_CHANGED ...` (与 Kub
 
 ### GUI 的组成与约定 id
 
-机器 GUI = `uiCreator` (`Function<MBDMachine, WidgetGroup>`) 返回的 widget 树 (LDLib GUI 框架)。
+机器 GUI = `uiCreator` (`Function<MBDMachine, WidgetGroup>`) 返回的 widget 树 (LDLib GUI 框架). 
 `bindMachineUI` 打开界面时按 widget 的 id 正则自动接功能:
 
 | widget id (正则) | 自动挂载 |
@@ -229,13 +229,13 @@ STRUCTURE_FORMED / STRUCTURE_INVALID / RIGHT_CLICK / STATE_CHANGED ...` (与 Kub
 | `^ui:xei_lookup$` | XEI 配方查看按钮 (ButtonWidget) |
 | `ui:<trait名>_<序号>` | trait 槽位 (initTraitUI 自动绑) |
 
-widget 设 id: `widget.setId("ui:machine_name")`。
+widget 设 id: `widget.setId("ui:machine_name")`. 
 
 ### 关键结论: GUI 数据只来自 NBT, 纯代码注册的坑
 
 - `uiCreator` 字段只在 `loadProductiveTag` (NBT 反序列化) 里被赋值; **纯代码 Builder 注册的机器
-  `uiCreator == null`, 而 `hasUI` 默认 true, `createUI` 无 null 检查 → 开 GUI 直接 NPE**。
-- 所以纯代码机器要么 `hasUI(false)` (前四步的示例), 要么按下面路径注入 uiCreator。
+  `uiCreator == null`, 而 `hasUI` 默认 true, `createUI` 无 null 检查 → 开 GUI 直接 NPE**. 
+- 所以纯代码机器要么 `hasUI(false)` (前四步的示例), 要么按下面路径注入 uiCreator. 
 
 ### 路径 A: 反射注入 uiCreator (纯代码写 GUI)
 
@@ -281,7 +281,7 @@ private static WidgetGroup createMachineUI(MBDMachine machine) {
 
 注意: 路径 A 注入后 `bindMachineUI` **不会**自动执行 (它只由 NBT 加载路径调用), 所以功能要自己接
 (进度条 supplier / 槽位 handler 如上); 想用约定 id 自动挂载, 反射调一次
-`bindMachineUI` (protected) 或干脆用 NBT 注册。
+`bindMachineUI` (protected) 或干脆用 NBT 注册. 
 
 ### Widget 构造器速查 (LDLib 1.0.52)
 
@@ -298,7 +298,7 @@ private static WidgetGroup createMachineUI(MBDMachine machine) {
 | `ProgressTexture` | `(IGuiTexture 空, IGuiTexture 满)`; `setFillDirection(...)` |
 
 通用 (Widget 基类): `setId(String)` `setSelfPosition(x,y)` `setSize(w,h)` `setBackground(IGuiTexture...)`
-`setHoverTooltips(String...)`。
+`setHoverTooltips(String...)`. 
 
 ### 路径 B: 运行时改 GUI (MachineUIEvent)
 
@@ -320,7 +320,7 @@ public static void onMachineUI(MachineUIEvent event) {
 
 .rt 的 `ui`/`fuelUI` 同样只来自 NBT; 代码侧可读: `MBDRecipeType.createRecipeUI(MBDRecipe)`
 (public) 拿构建好的 WidgetGroup; 运行时改: `RecipeUIEvent` (public `root` + `getRoot/setRoot`),
-同样 post 在 FORGE 总线。
+同样 post 在 FORGE 总线. 
 
 ---
 
@@ -357,8 +357,8 @@ private static void setPrivateField(Object target, String fieldName, Object valu
 
 ### 与 KubeJS / 磁盘 NBT 共存
 
-三条来源写同一个注册表, 顺序: Java → `ldlib/assets/mbd2` 磁盘 NBT → KubeJS。
-**同名后来者覆盖**, 迁移机器时先删旧 .sm/.mb 再改 Java 注册。
+三条来源写同一个注册表, 顺序: Java → `ldlib/assets/mbd2` 磁盘 NBT → KubeJS. 
+**同名后来者覆盖**, 迁移机器时先删旧 .sm/.mb 再改 Java 注册. 
 
 ---
 
@@ -375,5 +375,5 @@ private static void setPrivateField(Object target, String fieldName, Object valu
 | `ConfigMultiblockSettings` | `showUIOnlyFormed / showUIWhenClickStructure / catalyst` |
 | `MBDRecipeBuilder` | `duration / inputItems / outputItems / inputFluids / outputFluids / inputFE / addData / saveAsBuiltinRecipe` |
 
-完整实例 (5x5x5 高级焦炉逐字段还原) 见 [《高级焦炉-Java注册.md》](./高级焦炉-Java注册.md)。
+完整实例 (5x5x5 高级焦炉逐字段还原) 见 [《高级焦炉-Java注册.md》](./高级焦炉-Java注册.md). 
 ```

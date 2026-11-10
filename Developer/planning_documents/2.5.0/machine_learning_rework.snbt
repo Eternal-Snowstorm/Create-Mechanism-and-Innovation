@@ -42,7 +42,7 @@
 				id: "7E5C5B2D00000201"
 				observe_type: 1
 				timer: 0L
-				title: "观察：橡胶木"
+				title: "观察: 橡胶木"
 				to_observe: "thermal:rubberwood_log"
 				type: "observation"
 			}]
@@ -758,7 +758,7 @@
 				id: "7E5C5B2D00003401"
 				observe_type: 1
 				timer: 0L
-				title: "观察：焦炉"
+				title: "观察: 焦炉"
 				to_observe: "immersiveengineering:coke_oven"
 				type: "observation"
 			}]

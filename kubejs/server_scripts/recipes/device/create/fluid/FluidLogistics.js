@@ -1,4 +1,3 @@
-// Create · 流体物流（舱口/排水口/注液口/智能管道/阀门/软管/泵/漏斗/运输机/访问端口）
 ServerEvents.recipes((event) => {
 	let { kubejs } = event.getRecipes()
 

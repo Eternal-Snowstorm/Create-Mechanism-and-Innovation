@@ -17,6 +17,5 @@ ServerEvents.recipes((event) => {
 		"cmi:rubber_tree_bark"
 	], [
 		"thermal:rubberwood_log"
-	], "#farmersdelight:tools/knives"
-	)
+	], "#farmersdelight:tools/knives")
 })

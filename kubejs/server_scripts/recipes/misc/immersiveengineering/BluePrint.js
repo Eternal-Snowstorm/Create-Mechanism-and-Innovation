@@ -67,5 +67,4 @@ ServerEvents.recipes((event) => {
 		"minecraft:glass_bottle"
 	]).blueprint("specialBullet")
 		.id("immersiveengineering:blueprint/bullet_potion")
-
 })

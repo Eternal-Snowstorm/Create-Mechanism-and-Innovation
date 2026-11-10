@@ -1,6 +1,5 @@
-// Create · 自然应力源（风车轴承、水车、大水车）
 ServerEvents.recipes((event) => {
-	let { kubejs, create } = event.getRecipes()
+	let { kubejs } = event.getRecipes()
 
 	// 风车轴承
 	kubejs.shaped("create:windmill_bearing", [

@@ -20,7 +20,7 @@ def is_targeted_file(rel_path, target_folders):
 	if not target_folders:
 		return True  # 如果没有指定, 则扫描全部(兼容旧逻辑)
 	
-	# 标准化路径格式：去除开头/结尾斜杠, 统一使用正斜杠
+	# 标准化路径格式: 去除开头/结尾斜杠, 统一使用正斜杠
 	rel_path = rel_path.replace("\\", "/").strip("/")
 	
 	for folder in target_folders:
@@ -92,7 +92,7 @@ def generate_checksums(root_dir, target_folders, ignore_patterns=None,
 	return result
 
 def main():
-	parser = argparse.ArgumentParser(description="VartaPack 专用：仅扫描指定文件夹生成文件校验 JSON")
+	parser = argparse.ArgumentParser(description="VartaPack 专用: 仅扫描指定文件夹生成文件校验 JSON")
 	parser.add_argument("--root", default=".", help="整合包根目录 (默认当前目录)")
 	parser.add_argument("--targets", nargs="+", required=True,
 						help="要扫描的子文件夹, 相对于 root, 例如: --targets kubejs/startup_scripts config scripts")

@@ -1,4 +1,3 @@
-// Create · 红石与库存信号（红石链接/库存链接/显示链接/行情板/请求器/工厂仪表）
 ServerEvents.recipes((event) => {
 	let { kubejs } = event.getRecipes()
 

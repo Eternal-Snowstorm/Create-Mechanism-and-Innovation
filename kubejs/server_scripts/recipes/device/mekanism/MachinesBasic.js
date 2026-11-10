@@ -1,6 +1,5 @@
-// Mekanism · 基础级机器（电子高炉/富集室/精密锯木/合并机/粉碎机/通电熔炼/锇压缩机）
 ServerEvents.recipes((event) => {
-	let { thermal_extra, neoecoae } = event.getRecipes()
+	let { neoecoae } = event.getRecipes()
 
 	// 富集仓
 	neoecoae.integrated_working_station()

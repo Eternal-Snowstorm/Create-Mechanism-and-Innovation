@@ -1,4 +1,3 @@
-// Mekanism · 工作站与机壳（能量板、冶金灌注机、整合工作站）
 ServerEvents.recipes((event) => {
 	let { thermal_extra, neoecoae } = event.getRecipes()
 

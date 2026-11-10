@@ -81,24 +81,6 @@ ServerEvents.recipes((event) => {
 	kubejs.shapeless("9x thermal:sapphire", [
 		"#forge:storage_blocks/sapphire"
 	])
-	// //溶解
-	// create.mixing(Fluid.of("cmi:titanium_solution", 200), [
-	// 	Fluid.of("mekanism:sulfuric_acid", 200),
-	// 	"#forge:dusts/sapphire"
-	// ])
-	// // 精炼
-	// thermal.refinery([
-	// 	"cmi:titanium_dust",
-	// 	Fluid.of("mekanism:sulfur_trioxide", 50)
-	// ], [
-	// 	Fluid.of("cmi:titanium_solution", 200)
-	// ])
-	// thermal_extra.advanced_refinery([
-	// 	"cmi:titanium_dust",
-	// 	Fluid.of("mekanism:sulfur_trioxide", 100)
-	// ], [
-	// 	Fluid.of("cmi:titanium_solution", 200)
-	// ])
 
 	// Gamma
 	// 晶体催生

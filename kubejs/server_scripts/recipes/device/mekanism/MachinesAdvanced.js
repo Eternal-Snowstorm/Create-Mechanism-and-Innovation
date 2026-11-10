@@ -1,6 +1,5 @@
-// Mekanism · 高级机器（净化室/化学氧化机/化学注入室/化学灌注机）
 ServerEvents.recipes((event) => {
-	let { thermal_extra, neoecoae } = event.getRecipes()
+	let { neoecoae } = event.getRecipes()
 
 	// 提纯仓
 	neoecoae.integrated_working_station()

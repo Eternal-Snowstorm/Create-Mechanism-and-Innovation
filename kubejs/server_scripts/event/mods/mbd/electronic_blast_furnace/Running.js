@@ -82,7 +82,7 @@
 		 * tryParallel 在「连并行 1 都匹配不上」时会直接 return null(字节码: min > max 时
 		 * 返回 null; 且判定同时要求 matchRecipe 与 matchTickRecipe 都成功, 也就是
 		 * 物品与每 tick 能量都得够). 于是 applyParallel 返回 null, 这时若把 null 交给
-		 * event.setRecipe, 机器这一 tick 的配方就被清空 —— 表现为材料明明在场、
+		 * event.setRecipe, 机器这一 tick 的配方就被清空 —— 表现为材料明明在场, 
 		 * 能量也够, 机器却永远不启动. 所以必须判空后再设置.
 		 */
 		if (copy != null) {

@@ -1,6 +1,5 @@
-// Thermal · 部件装配线与热力单元（component_assembly 自身、thermal/blaze/basalz/blitz/blizz 单元）
 ServerEvents.recipes((event) => {
-	let { thermal_extra, create, thermal } = event.recipes
+	let { thermal_extra, create, thermal } = event.getRecipes()
 	let inc = "cmi:incomplete_thermal_devices"
 
 	// 装配机

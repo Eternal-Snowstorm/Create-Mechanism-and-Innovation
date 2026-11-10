@@ -20,6 +20,12 @@ ServerEvents.recipes((event) => {
 	addCrushedSplashing("ardite", "minecraft:glowstone_dust")
 	addCrushedSplashing("aluminum", "thermal:sapphire_dust")
 
+	/**
+	 * 
+	 * @param {string} material 
+	 * @param {string} product 
+	 * @returns 
+	 */
 	function addCrushedSplashing(material, product) {
 		let crushed = `#create:crushed_raw_materials/${material}`
 		let dust = Ingredient.of(`#mekanism:dirty_dusts/${material}`).getItemIds()

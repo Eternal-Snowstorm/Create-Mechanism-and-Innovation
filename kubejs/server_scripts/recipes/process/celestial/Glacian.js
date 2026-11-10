@@ -1,5 +1,5 @@
 ServerEvents.recipes((event) => {
-	let { mekanism, cmi } = event.recipes
+	let { mekanism, cmi } = event.getRecipes()
 
 	// 霜原木碎块
 	mekanism.crushing(

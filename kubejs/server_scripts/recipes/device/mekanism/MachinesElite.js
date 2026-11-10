@@ -1,6 +1,5 @@
-// Mekanism · 精英机器（同位素离心机/化学溶解室/化学清洗机/化学结晶器）
 ServerEvents.recipes((event) => {
-	let { thermal_extra, neoecoae } = event.getRecipes()
+	let { neoecoae } = event.getRecipes()
 
 	// 同位素离心机
 	neoecoae.integrated_working_station()

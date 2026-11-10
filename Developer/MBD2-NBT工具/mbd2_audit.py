@@ -122,8 +122,8 @@ def audit(path):
     has_ui = getv(ms.value, "hasUI") if ms is not None else None
 
     ui = get(root, "ui")
-    # 规范「没有 gui 时位置/大小归零、背景删除」只适用于 **没有 UI 内容** 的机器.
-    # 部件方块(.sm bus)的 ui.children 是控制器 UI 里要渲染的槽位, 把它们归零、
+    # 规范「没有 gui 时位置/大小归零, 背景删除」只适用于 **没有 UI 内容** 的机器.
+    # 部件方块(.sm bus)的 ui.children 是控制器 UI 里要渲染的槽位, 把它们归零, 
     # 删背景会让部件在控制器界面里错位/看不见, 所以这类保留是 **有意为之**,
     # 不算违规, 只做 INFO 提示, 并跳过归零检查.
     kids0 = get(ui.value, "children") if ui is not None else None

@@ -1,5 +1,4 @@
 ServerEvents.recipes((event) => {
-	// region define Recipe
 	/**
 	 * IE 园艺玻璃罩配方构造器
 	 *
@@ -92,8 +91,6 @@ ServerEvents.recipes((event) => {
 		}
 		return Item.of(id, count).toJson()
 	}
-
-	// region add Recipes
 
 	// 橡树
 	new ClocheRecipeBuilder()

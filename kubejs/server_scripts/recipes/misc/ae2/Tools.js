@@ -1,6 +1,5 @@
-// AE2 · 工具与卡片（基础/高级卡、无线增幅器、熵变操纵器、法杖、染色器、物质炮、元件工作台、放置工具）
 ServerEvents.recipes((event) => {
-	let { kubejs, thermal_extra, neoecoae } = event.getRecipes()
+	let { kubejs, thermal_extra } = event.getRecipes()
 
 	// 卡
 	thermal_extra.component_assembly("4x ae2:basic_card", [
