@@ -10,22 +10,22 @@ ServerEvents.recipes((event) => {
 	]).energy(ENERGY)
 
 	// 二极管
-	thermal_extra.component_assembly(Item.of("thermal:laser_diode", 4), [
+	thermal_extra.component_assembly("4x thermal:laser_diode", [
 		"#forge:wires/electrum",
 		"#forge:plates/invar",
 		"#forge:prisms/pure_quartz"
 	]).energy(ENERGY)
 
 	// 电子元件
-	thermal_extra.component_assembly(Item.of("immersiveengineering:component_electronic", 2), [
-		"thermal:laser_diode",
+	thermal_extra.component_assembly("2x immersiveengineering:component_electronic", [
+		"4x thermal:laser_diode",
 		"#forge:treated_wood_slab",
 		"#forge:gems/quartz",
 		"#forge:wires/electrum"
 	]).energy(ENERGY).id("immersiveengineering:blueprint/component_electronic")
 
 	// 锇砖瓦
-	thermal_extra.component_assembly(Item.of("cmi:osmium_tile", 2), [
+	thermal_extra.component_assembly("2x cmi:osmium_tile", [
 		"#forge:plates/aluminum",
 		"#forge:plates/osmium",
 		Fluid.of("cmi:structural_plastic", 200)
@@ -72,7 +72,7 @@ ServerEvents.recipes((event) => {
 	]).energy(ENERGY)
 
 	// PZ管道
-	thermal_extra.component_assembly(Item.of("pipez:item_pipe", 16), [
+	thermal_extra.component_assembly("16x pipez:item_pipe", [
 		"#forge:gears/invar",
 		Mechanisms.THERMAL.COM,
 		"#forge:plates/industrial_iron",
@@ -80,7 +80,7 @@ ServerEvents.recipes((event) => {
 		"thermal:cured_rubber"
 	]).energy(ENERGY).id("pipez:item_pipe")
 
-	thermal_extra.component_assembly(Item.of("pipez:fluid_pipe", 16), [
+	thermal_extra.component_assembly("16x pipez:fluid_pipe", [
 		"#forge:gears/invar",
 		Mechanisms.THERMAL.COM,
 		"#forge:plates/industrial_iron",
@@ -88,7 +88,7 @@ ServerEvents.recipes((event) => {
 		"thermal:cured_rubber"
 	]).energy(ENERGY).id("pipez:fluid_pipe")
 
-	thermal_extra.component_assembly(Item.of("pipez:energy_pipe", 16), [
+	thermal_extra.component_assembly("16x pipez:energy_pipe", [
 		"#forge:gears/invar",
 		Mechanisms.THERMAL.COM,
 		"#forge:plates/industrial_iron",
@@ -96,7 +96,7 @@ ServerEvents.recipes((event) => {
 		"thermal:cured_rubber"
 	]).energy(ENERGY).id("pipez:energy_pipe")
 
-	thermal_extra.component_assembly(Item.of("pipez:gas_pipe", 16), [
+	thermal_extra.component_assembly("16x pipez:gas_pipe", [
 		"#forge:gears/invar",
 		Mechanisms.THERMAL.COM,
 		"#forge:plates/industrial_iron",
@@ -104,7 +104,7 @@ ServerEvents.recipes((event) => {
 		"thermal:cured_rubber"
 	]).energy(ENERGY).id("pipez:gas_pipe")
 
-	thermal_extra.component_assembly(Item.of("pipez:universal_pipe", 16), [
+	thermal_extra.component_assembly("16x pipez:universal_pipe", [
 		"pipez:item_pipe",
 		"pipez:fluid_pipe",
 		"pipez:energy_pipe",
@@ -112,7 +112,7 @@ ServerEvents.recipes((event) => {
 	]).energy(ENERGY).id("pipez:universal_pipe")
 
 	// 红石伺服器
-	thermal_extra.component_assembly(Item.of("thermal:redstone_servo", 2), [
+	thermal_extra.component_assembly("2x thermal:redstone_servo", [
 		Fluid.of("immersiveengineering:redstone_acid", 200),
 		"#forge:plates/iron"
 	]).energy(ENERGY).id("thermal_extra:machine/component_assembly/redstone_servo")
