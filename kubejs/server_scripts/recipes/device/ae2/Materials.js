@@ -92,4 +92,17 @@ ServerEvents.recipes((event) => {
 		"#forge:dusts/fluix",
 		"#forge:ingots/shadow_steel"
 	]).id("ae2:materials/formationcore")
+
+	// 散热单元
+	neoecoae.integrated_working_station()
+		.itemOutput("neoecoae:phase_change_air_cooler")
+		.inputFluid(Fluid.of("cmi:glacious_cryotheum", 1000))
+		.inputItems([
+			"4x #forge:plates/aluminum_alloy",
+			"8x neoecoae:cryotheum_crystal",
+			"4x #forge:plates/invar",
+			"2x #forge:gems/energized_fluix_crystal",
+			Mechanisms.COMPUTE.COM
+		])
+		.id("neoecoae:phase_change_air_cooler")
 })

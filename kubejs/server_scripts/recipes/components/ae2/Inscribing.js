@@ -112,9 +112,9 @@ ServerEvents.recipes((event) => {
 
 	// 磁触点
 	new InscriberRecipe("cmi:magnetic_contact")
-		.bottom("cmi:piezoelectric_ceramic")
+		.top("#forge:plates/platinum")
 		.middle("cmi:ferrit_core")
-		.top("cmi:composite_magnetic_conduction_plate")
+		.bottom("#forge:plates/energized_superconductive")
 		.press()
 
 	// 控制芯片
