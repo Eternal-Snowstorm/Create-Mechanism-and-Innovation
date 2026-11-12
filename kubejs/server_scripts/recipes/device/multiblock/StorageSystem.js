@@ -47,7 +47,7 @@ ServerEvents.recipes((event) => {
 			Mechanisms.COMPUTE.COM,
 			"2x neoecoae:crystal_ingot",
 			"4x #forge:dusts/energized_fluix_crystal",
-			"#forge:alloys/elite"
+			"4x #forge:alloys/elite"
 		])
 		.id("neoecoae:storage_system_l9")
 
@@ -82,7 +82,7 @@ ServerEvents.recipes((event) => {
 			"neoecoae:energy_cell_l6",
 			"4x #forge:dusts/energized_fluix_crystal",
 			"4x #forge:plates/vanadium",
-			"#forge:alloys/elite"
+			"4x #forge:alloys/elite"
 		])
 		.id("neoecoae:energy_cell_l9")
 
