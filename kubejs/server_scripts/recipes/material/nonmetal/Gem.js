@@ -86,6 +86,13 @@ ServerEvents.recipes((event) => {
 		"tconstruct:gem_cast"
 	])
 
+	// 天外寒冰
+	thermal.smelter("neoecoae:cryotheum_crystal", [
+		"neoecoae:cryotheum",
+		"ae2:sky_dust",
+		"#forge:dusts/energized_crystal"
+	])
+
 	// 赛特斯石英晶
 	create.crushing([
 		"2x ae2:certus_quartz_crystal",

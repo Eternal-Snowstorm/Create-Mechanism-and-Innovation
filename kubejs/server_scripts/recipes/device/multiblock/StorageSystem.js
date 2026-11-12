@@ -60,7 +60,8 @@ ServerEvents.recipes((event) => {
 			"4x #forge:dusts/energized_fluix_crystal",
 			"4x #forge:plates/vanadium",
 			"ae2:dense_energy_cell",
-			"4x #forge:alloys/enriched"
+			"4x #forge:alloys/enriched",
+			"neoecoae:eco_cell_component_16m"
 		])
 		.id("neoecoae:energy_cell_l4")
 
@@ -71,7 +72,8 @@ ServerEvents.recipes((event) => {
 			"neoecoae:energy_cell_l4",
 			"4x #forge:dusts/energized_fluix_crystal",
 			"4x #forge:plates/vanadium",
-			"4x #mekanism:alloys/infused"
+			"4x #mekanism:alloys/infused",
+			"neoecoae:eco_cell_component_64m"
 		])
 		.id("neoecoae:energy_cell_l6")
 
@@ -82,7 +84,8 @@ ServerEvents.recipes((event) => {
 			"neoecoae:energy_cell_l6",
 			"4x #forge:dusts/energized_fluix_crystal",
 			"4x #forge:plates/vanadium",
-			"4x #forge:alloys/elite"
+			"4x #forge:alloys/elite",
+			"neoecoae:eco_cell_component_256m"
 		])
 		.id("neoecoae:energy_cell_l9")
 

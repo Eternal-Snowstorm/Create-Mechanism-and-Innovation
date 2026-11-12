@@ -28,11 +28,23 @@ ServerEvents.recipes((event) => {
 		.slag("#forge:slag")
 		.additives([
 			"#forge:ingots/chromium",
-			"#forge:dusts/certus_quartz"
+			"2x #forge:dusts/energized_crystal"
 		])
 		.time(100)
 		.energy(8000)
 		.id("neoecoae:aluminum_alloy_dust")
+
+	// 黑钨合金
+	immersiveengineering.arc_furnace("3x #forge:ingots/black_tungsten_alloy")
+		.input("2x #forge:ingots/tungsten")
+		.slag("#forge:slag")
+		.additives([
+			"#forge:ingots/titanium",
+			"2x #forge:dusts/energized_fluix_crystal"
+		])
+		.time(100)
+		.energy(8000)
+		.id("neoecoae:black_tungsten_alloy_dust")
 
 	// 黄铜
 	immersiveengineering.arc_furnace("4x create:brass_ingot")

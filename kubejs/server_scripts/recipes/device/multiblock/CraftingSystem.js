@@ -27,6 +27,82 @@ ServerEvents.recipes((event) => {
 		])
 		.id("neoecoae:crafting_worker")
 
+	// 控制器
+	neoecoae.integrated_working_station()
+		.itemOutput("neoecoae:crafting_system_l4")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
+		.inputItems([
+			"neoecoae:crafting_casing",
+			Mechanisms.COMPUTE.COM,
+			"2x neoecoae:crystal_ingot",
+			"4x #forge:dusts/energized_fluix_crystal",
+			"#ae2:illuminated_panel",
+			"4x #forge:alloys/enriched"
+		])
+		.id("neoecoae:crafting_system_l4")
+
+	neoecoae.integrated_working_station()
+		.itemOutput("neoecoae:crafting_system_l6")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 290))
+		.inputItems([
+			"neoecoae:crafting_system_l4",
+			Mechanisms.COMPUTE.COM,
+			"2x neoecoae:crystal_ingot",
+			"4x #forge:dusts/energized_fluix_crystal",
+			"4x #mekanism:alloys/infused"
+		])
+		.id("neoecoae:crafting_system_l6")
+
+	neoecoae.integrated_working_station()
+		.itemOutput("neoecoae:crafting_system_l9")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 200))
+		.inputItems([
+			"neoecoae:crafting_system_l6",
+			Mechanisms.COMPUTE.COM,
+			"2x neoecoae:crystal_ingot",
+			"4x #forge:dusts/energized_fluix_crystal",
+			"4x #forge:alloys/elite"
+		])
+		.id("neoecoae:crafting_system_l9")
+
+	// 并行元件
+	neoecoae.integrated_working_station()
+		.itemOutput("neoecoae:crafting_parallel_core_l4")
+		.inputFluid(Fluid.of("cmi:molten_etrium", 180))
+		.inputItems([
+			"neoecoae:crafting_casing",
+			"4x #forge:dusts/energized_fluix_crystal",
+			Mechanisms.GOLD.COM,
+			"ae2:molecular_assembler",
+			"4x #forge:alloys/enriched",
+			"neoecoae:eco_cell_component_16m"
+		])
+		.id("neoecoae:crafting_parallel_core_l4")
+
+	neoecoae.integrated_working_station()
+		.itemOutput("neoecoae:crafting_parallel_core_l6")
+		.inputFluid(Fluid.of("cmi:molten_etrium", 180))
+		.inputItems([
+			"neoecoae:crafting_parallel_core_l4",
+			"4x #forge:dusts/energized_fluix_crystal",
+			Mechanisms.GOLD.COM,
+			"4x #mekanism:alloys/infused",
+			"neoecoae:eco_cell_component_64m"
+		])
+		.id("neoecoae:crafting_parallel_core_l6")
+
+	neoecoae.integrated_working_station()
+		.itemOutput("neoecoae:crafting_parallel_core_l9")
+		.inputFluid(Fluid.of("cmi:molten_etrium", 180))
+		.inputItems([
+			"neoecoae:crafting_parallel_core_l6",
+			"4x #forge:dusts/energized_fluix_crystal",
+			Mechanisms.GOLD.COM,
+			"4x #forge:alloys/elite",
+			"neoecoae:eco_cell_component_256m"
+		])
+		.id("neoecoae:crafting_parallel_core_l9")
+
 	// 样板总线
 	neoecoae.integrated_working_station()
 		.itemOutput("neoecoae:crafting_pattern_bus")
@@ -39,18 +115,6 @@ ServerEvents.recipes((event) => {
 			Mechanisms.COMPUTE.COM
 		])
 		.id("neoecoae:crafting_pattern_bus")
-
-	// 通讯接口
-	neoecoae.integrated_working_station()
-		.itemOutput("neoecoae:crafting_interface")
-		.inputFluid(Fluid.of("cmi:silicon_rubber", 400))
-		.inputItems([
-			"neoecoae:crafting_casing",
-			"8x #forge:wires/fluix",
-			"#ae2:glass_cable",
-			Mechanisms.COMPUTE.COM
-		])
-		.id("neoecoae:crafting_interface")
 
 	// 流体输入
 	neoecoae.integrated_working_station()
@@ -86,4 +150,42 @@ ServerEvents.recipes((event) => {
 			"4x #forge:plates/invar"
 		])
 		.id("neoecoae:crafting_vent")
+
+	// 通讯接口
+	neoecoae.integrated_working_station()
+		.itemOutput("neoecoae:crafting_interface")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 400))
+		.inputItems([
+			"neoecoae:crafting_casing",
+			"8x #forge:wires/fluix",
+			"#ae2:glass_cable",
+			Mechanisms.COMPUTE.COM
+		])
+		.id("neoecoae:crafting_interface")
+
+	// 网络交换模块
+	neoecoae.integrated_working_station()
+		.itemOutput("neoecoae:crafting_network_switch")
+		.inputFluid(Fluid.of("cmi:glacious_cryotheum", 1000))
+		.inputItems([
+			"neoecoae:crafting_interface",
+			"2x extendedae_plus:oblivion_singularity",
+			"4x #forge:plates/energized_superconductive",
+			"ae2:quantum_link",
+			Mechanisms.COMPUTE.COM
+		])
+		.id("neoecoae:crafting_network_switch")
+
+	neoecoae.integrated_working_station()
+		.itemOutput("neoecoae:crafting_high_energy_network_switch")
+		.inputFluid(Fluid.of("cmi:glacious_cryotheum", 1000))
+		.inputItems([
+			"neoecoae:crafting_network_switch",
+			"2x extendedae_plus:oblivion_singularity",
+			"4x neoecoae:cryotheum_crystal",
+			"4x #forge:plates/energized_superconductive",
+			"4x neoecoae:crystal_matrix",
+			Mechanisms.COMPUTE.COM
+		])
+		.id("neoecoae:crafting_high_energy_network_switch")
 })

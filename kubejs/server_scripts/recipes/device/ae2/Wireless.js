@@ -22,7 +22,7 @@ ServerEvents.recipes((event) => {
 			Casing.COMPUTE,
 			Mechanisms.COMPUTE.COM,
 			"4x #forge:plates/silicon_carbide",
-			"2x #forge:plates/superconducting_mercury",
+			"2x #forge:plates/energized_superconductive",
 			"2x #forge:gems/energized_fluix_crystal"
 		])
 		.id("ae2:network/blocks/quantum_ring")
@@ -34,7 +34,7 @@ ServerEvents.recipes((event) => {
 			"ae2:quartz_glass",
 			Mechanisms.COMPUTE.COM,
 			"4x #forge:plates/silicon_carbide",
-			"2x #forge:plates/superconducting_mercury",
+			"2x #forge:plates/energized_superconductive",
 			"2x #forge:gems/energized_fluix_crystal"
 		])
 		.id("ae2:network/blocks/quantum_link")

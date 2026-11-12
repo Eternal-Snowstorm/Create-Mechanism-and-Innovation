@@ -133,4 +133,52 @@ ServerEvents.recipes((event) => {
 		])
 		.energy(2000)
 		.id("extendedae_plus:circuit_cutter_plus")
+
+	// 大型集成工作站外壳
+	neoecoae.integrated_working_station()
+		.itemOutput("neoecoae:large_integrated_working_station_casing")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 400))
+		.inputItems([
+			"neoecoae:cryogenic_aluminum_alloy_casing",
+			"2x #forge:plates/energized_superconductive",
+			"ae2:sky_stone_tank",
+			"4x #forge:gems/energized_fluix_crystal"
+		])
+		.id("neoecoae:large_integrated_working_station_casing")
+
+	// 流体输入
+	neoecoae.integrated_working_station()
+		.itemOutput("neoecoae:large_integrated_working_station_input_hatch")
+		.inputFluid(Fluid.of("cmi:glacious_cryotheum", 1000))
+		.inputItems([
+			"neoecoae:large_integrated_working_station_casing",
+			Mechanisms.COPPER.COM,
+			"neoecoae:phase_change_air_cooler",
+			"ae2:annihilation_core"
+		])
+		.id("neoecoae:large_integrated_working_station_input_hatch")
+
+	// 流体输出
+	neoecoae.integrated_working_station()
+		.itemOutput("neoecoae:large_integrated_working_station_output_hatch")
+		.inputFluid(Fluid.of("cmi:glacious_cryotheum", 1000))
+		.inputItems([
+			"neoecoae:large_integrated_working_station_casing",
+			Mechanisms.COPPER.COM,
+			"neoecoae:phase_change_air_cooler",
+			"ae2:formation_core"
+		])
+		.id("neoecoae:large_integrated_working_station_output_hatch")
+
+	// 通讯方块
+	neoecoae.integrated_working_station()
+		.itemOutput("neoecoae:large_integrated_working_station_interface")
+		.inputFluid(Fluid.of("cmi:silicon_rubber", 400))
+		.inputItems([
+			"neoecoae:large_integrated_working_station_casing",
+			"8x #forge:wires/fluix",
+			"#ae2:glass_cable",
+			Mechanisms.COMPUTE.COM
+		])
+		.id("neoecoae:large_integrated_working_station_interface")
 })
