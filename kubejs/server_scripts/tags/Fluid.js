@@ -15,12 +15,10 @@ ServerEvents.tags("fluid", (event) => {
 
 	// Ada燃油
 	// 高效率燃油
-	event.get("ad_astra:efficient_fuel")
-		.removeAll()
+	removeTagAllId("ad_astra:efficient_fuel")
 
 	// T1
-	event.get("ad_astra:tier_1_rocket_fuel")
-		.removeAll()
+	removeTagAllId("ad_astra:tier_1_rocket_fuel")
 		.add([
 			"ad_astra:fuel",
 			"cmi:hydrogen_oxygen_fuel",
@@ -29,8 +27,7 @@ ServerEvents.tags("fluid", (event) => {
 		])
 
 	// T2
-	event.get("ad_astra:tier_2_rocket_fuel")
-		.removeAll()
+	removeTagAllId("ad_astra:tier_2_rocket_fuel")
 		.add([
 			"cmi:hydrogen_oxygen_fuel",
 			"cmi:methane_fuel",
@@ -38,16 +35,14 @@ ServerEvents.tags("fluid", (event) => {
 		])
 
 	// T3
-	event.get("ad_astra:tier_3_rocket_fuel")
-		.removeAll()
+	removeTagAllId("ad_astra:tier_3_rocket_fuel")
 		.add([
 			"cmi:methane_fuel",
 			"cmi:hydrazines_fuel"
 		])
 
 	// T4
-	event.get("ad_astra:tier_4_rocket_fuel")
-		.removeAll()
+	removeTagAllId("ad_astra:tier_4_rocket_fuel")
 		.add([
 			"cmi:hydrazines_fuel"
 		])
