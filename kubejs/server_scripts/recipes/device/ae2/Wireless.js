@@ -86,9 +86,9 @@ ServerEvents.recipes((event) => {
 		.inputFluid(Fluid.of("cmi:silicon_rubber", 500))
 		.inputItems([
 			"8x #forge:plates/platinum",
-			"2x #forge:plates/polyolefin",
+			"2x #forge:plates/aluminum_alloy",
 			"4x #forge:plates/silicon_carbide",
-			"4x neoecoae:energized_superconductive_ingot",
+			"4x cmi:magnetic_contact",
 			"2x #forge:gems/energized_fluix_crystal",
 			Mechanisms.COMPUTE.COM
 		])
