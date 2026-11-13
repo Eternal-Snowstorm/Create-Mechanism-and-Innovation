@@ -1,5 +1,7 @@
 ServerEvents.recipes((event) => {
-	let { thermal, cmi } = event.getRecipes()
+	let { thermal, cmi, steam_letters } = event.getRecipes()
+
+	steam_letters.fluid_fuel
 
 	// 末影合金
 	thermal.smelter("thermal:enderium_ingot", [
@@ -131,4 +133,16 @@ ServerEvents.recipes((event) => {
 		.inputItems("cmi:tungsten_mixture")
 		.outputItems("cmi:tungsten_ingot")
 		.duration(20 * 3)
+
+	// 钢
+	cmi.electronic_blast_furnace()
+		.outputItems("cmi:steel_ingot")
+		.inputItems([
+			"#forge:dusts/cast_iron",
+			"#forge:dusts/lime"
+		])
+		.duration(20 * 3)
+		.perTick((recipe) => {
+			recipe.inputFE(10000 / (20 * 3))
+		})
 })
