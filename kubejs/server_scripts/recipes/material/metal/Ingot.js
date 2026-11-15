@@ -1,5 +1,5 @@
 ServerEvents.recipes((event) => {
-	let { thermal, cmi, steam_letters } = event.getRecipes()
+	let { thermal, cmi } = event.getRecipes()
 
 	// 末影合金
 	thermal.smelter("thermal:enderium_ingot", [
