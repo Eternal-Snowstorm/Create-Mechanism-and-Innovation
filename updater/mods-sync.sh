@@ -19,7 +19,14 @@
 #       有失败时用中文提示玩家把该日志发送给开发者
 #
 #  用法:
-#    bash updater/mods-sync.sh [--dry-run]
+#    bash updater/mods-sync.sh [--dry-run] [--proxy <url>] [--no-mirror]
+#
+#  网络容错(2026-11-15 玩家日志 curl 退出码 6 事故后加入):
+#    - CurseForge 官方 CDN 有两个等价域名(edge.forgecdn.net / mediafilez.forgecdn.net),
+#      原地址失败会自动切换备用域名; --no-mirror 可关闭该行为(排障用).
+#    - 下载前先做域名解析预检, 预检全部失败时直接中止, 不移动本地任何文件.
+#    - 支持代理: --proxy 参数, 或 http(s)_proxy 环境变量(curl 自动读取).
+#    - 失败时打印 curl 退出码的中文含义, 以及可手动下载的项目页地址.
 #
 #  安全: 只操作 mods/ config/ kubejs/ defaultconfigs/ resourcepacks/,
 #        绝不触碰 saves, options.txt 与服务器数据. 
@@ -34,7 +41,32 @@ LOG_DIR="$ROOT/updater/logs"
 BACKUP_ROOT="$ROOT/updater/.rollback"
 
 DRY_RUN=0
-[ "${1:-}" = "--dry-run" ] && DRY_RUN=1
+NO_MIRROR=0
+PROXY_URL=""
+PROXY_FROM=""
+# 环境变量代理: curl 自身会读取, 这里额外记录来源用于日志提示
+for _pn in HTTPS_PROXY https_proxy HTTP_PROXY http_proxy ALL_PROXY all_proxy; do
+  eval "_pv=\"${_pn:-}\""
+  if [ -n "$_pv" ]; then PROXY_URL="$_pv"; PROXY_FROM="环境变量"; break; fi
+done
+unset _pn _pv 2>/dev/null || true
+
+while [ $# -gt 0 ]; do
+  case "$1" in
+    --dry-run)   DRY_RUN=1 ;;
+    --no-mirror) NO_MIRROR=1 ;;
+    --proxy)     shift; PROXY_URL="${1:-}"; PROXY_FROM="命令行 --proxy" ;;
+    --proxy=*)   PROXY_URL="${1#*=}"; PROXY_FROM="命令行 --proxy" ;;
+    -h|--help)   echo "用法: bash updater/mods-sync.sh [--dry-run] [--proxy <url>] [--no-mirror]"; exit 0 ;;
+  esac
+  shift
+done
+
+# 只有命令行显式指定的代理才加 --proxy; 环境变量代理交给 curl 自己处理(以尊重 NO_PROXY)
+CURL_PROXY=()
+case "$PROXY_FROM" in
+  命令行*) CURL_PROXY=(--proxy "$PROXY_URL") ;;
+esac
 
 cd "$ROOT" || exit 1
 
@@ -65,7 +97,142 @@ warn() {
   return 0
 }
 
+# --- 代理日志 -----------------------------------------------------------
+if [ -n "$PROXY_FROM" ]; then
+  log "[mods] 代理: $PROXY_FROM $PROXY_URL"
+else
+  log "[mods] 代理: 未检测到(直连)"
+fi
+
 # --- 工具函数 -----------------------------------------------------------
+# 取 URL 的主机名(去掉协议/路径/端口)
+url_host() {
+  local u="$1"
+  u="${u#*://}"
+  u="${u%%/*}"
+  u="${u%%:*}"
+  printf '%s' "$u"
+}
+
+# 内建备用域名: 只对 CurseForge 官方 CDN 生效(Modrinth 无公开镜像).
+# mediafilez.forgecdn.net 与 edge.forgecdn.net 指向同一批文件, 实测 sha1 一致.
+host_mirror() {
+  case "$1" in
+    edge.forgecdn.net)       printf '%s' "mediafilez.forgecdn.net" ;;
+    mediafilez.forgecdn.net) printf '%s' "edge.forgecdn.net" ;;
+    *)                       printf '' ;;
+  esac
+}
+
+# 输出该地址的候选列表(每行一个): 原地址在前, 备用域名在后
+build_candidates() {
+  local u="$1" h m esc
+  printf '%s\n' "$u"
+  [ "$NO_MIRROR" = "1" ] && return 0
+  h="$(url_host "$u")"
+  [ -n "$h" ] || return 0
+  m="$(host_mirror "$h")"
+  [ -n "$m" ] || return 0
+  esc="$(printf '%s' "$h" | sed 's/\./\\./g')"
+  printf '%s\n' "$(printf '%s' "$u" | sed "s|//$esc/|//$m/|")"
+  return 0
+}
+
+# 域名解析预检: 只判定"主机名能否解析", 不做 TCP 连接
+probe_host() {
+  local h="$1" rc=0 out=""
+  if command -v getent >/dev/null 2>&1; then
+    if getent hosts "$h" >/dev/null 2>&1; then printf 'ok'; else printf 'dns-fail'; fi
+    return 0
+  fi
+  if command -v nslookup >/dev/null 2>&1; then
+    # 注意: Windows 的 nslookup 对 NXDOMAIN 仍返回退出码 0, 必须看输出文本,
+    # 否则"域名不存在"会被误判为可解析(实测 2026-11-15).
+    out="$(nslookup "$h" 2>&1)"
+    if printf '%s' "$out" | grep -qiE "can't find|NXDOMAIN|non-existent|找不到|不存在"; then
+      printf 'dns-fail'
+    elif printf '%s' "$out" | grep -qiE "timed out|no servers could be reached|超时|无法访问"; then
+      printf 'net-fail'
+    else
+      printf 'ok'
+    fi
+    return 0
+  fi
+  curl -s -o /dev/null --connect-timeout 8 --max-time 15 ${CURL_PROXY[@]+"${CURL_PROXY[@]}"} "https://$h/" >/dev/null 2>&1
+  rc=$?
+  if [ "$rc" -eq 6 ]; then printf 'dns-fail'; elif [ "$rc" -ne 0 ]; then printf 'net-fail'; else printf 'ok'; fi
+  return 0
+}
+
+# curl 退出码 -> 中文含义
+curl_err_text() {
+  case "$1" in
+    1)  printf '%s' '不支持的协议' ;;
+    2)  printf '%s' '初始化失败' ;;
+    3)  printf '%s' '下载地址格式不正确' ;;
+    5)  printf '%s' '无法解析代理服务器地址(代理设置有误)' ;;
+    6)  printf '%s' '无法解析下载域名(网络断开 / DNS 被干扰 / 需要代理)' ;;
+    7)  printf '%s' '无法连接下载服务器(网络不通或被防火墙拦截)' ;;
+    18) printf '%s' '下载内容不完整(连接被中途断开)' ;;
+    22) printf '%s' '服务器返回错误状态(文件可能已下架, 或该平台限流)' ;;
+    23) printf '%s' '写入文件失败(磁盘空间不足或文件被占用)' ;;
+    28) printf '%s' '连接超时(网络过慢或被拦截)' ;;
+    35) printf '%s' 'TLS 握手失败(可能被网络中间设备干扰)' ;;
+    51) printf '%s' '服务器证书校验失败' ;;
+    52) printf '%s' '服务器返回空响应' ;;
+    55) printf '%s' '发送数据失败' ;;
+    56) printf '%s' '接收数据失败(连接被重置)' ;;
+    60) printf '%s' 'HTTPS 证书校验失败(系统时间或证书链有问题)' ;;
+    *)  printf '%s' '下载出错' ;;
+  esac
+}
+
+# 失败时给玩家一条"可以自己动手"的路: 项目页 + 手动放置说明
+manual_hint() {
+  local u="$1" proj="$2" mid="" kind=""
+  case "$proj" in
+    modrinth:*) mid="${proj#modrinth:}"; [ -n "$mid" ] && kind="modrinth" ;;
+  esac
+  if [ -z "$kind" ]; then
+    case "$u" in
+      *'/data/'*)
+        mid="$(printf '%s' "$u" | sed -n 's|.*/data/\([^/]*\)/.*|\1|p')"
+        [ -n "$mid" ] && kind="modrinth"
+        ;;
+    esac
+  fi
+  if [ -z "$kind" ]; then
+    case "$proj" in
+      curseforge:*) mid="${proj#curseforge:}"; [ -n "$mid" ] && kind="curseforge" ;;
+    esac
+  fi
+  case "$kind" in
+    modrinth)   printf '%s\n' "项目页   : https://modrinth.com/project/$mid" ;;
+    curseforge) printf '%s\n' "项目页   : https://www.curseforge.com/projects/$mid  (浏览器打开, 可能需要人机验证)" ;;
+    *)          return 0 ;;
+  esac
+  printf '%s\n' "手动更新 : 在项目页下载同名 jar, 放入 mods/ 目录(先删掉旧的同名文件)"
+  return 0
+}
+
+# 统一的失败输出: 原因 / 地址 / 备用地址 / 手动下载入口
+report_fail() {
+  local p="$1" u="$2" proj="$3" why="$4" tlist="$5" cu hl hint
+  warn "[mods] 失败(下载出错): $p"
+  warn "       原因     : $why"
+  warn "       下载地址 : $u"
+  while IFS= read -r cu; do
+    [ -n "$cu" ] || continue
+    [ "$cu" = "$u" ] && continue
+    warn "       备用地址 : $cu"
+  done <<< "$tlist"
+  hint="$(manual_hint "$u" "$proj")"
+  if [ -n "$hint" ]; then
+    while IFS= read -r hl; do warn "       $hl"; done <<< "$hint"
+  fi
+  return 0
+}
+
 sha1_file() {
   if command -v sha1sum >/dev/null 2>&1; then
     sha1sum "$1" | awk '{print $1}'
@@ -132,12 +299,19 @@ if [ ! -f "$MANIFEST" ]; then
   exit 0
 fi
 
-M_HASH=(); M_PATH=(); M_URL=(); M_REPS=()
+M_HASH=(); M_PATH=(); M_URL=(); M_PROJ=(); M_REPS=()
 while IFS=$'\t' read -r h p u proj reps || [ -n "$p" ]; do
-  h="$(trim "$h")"; p="$(trim "$p")"; u="$(trim "$u")"; reps="$(trim "$reps")"
+  # 若 sha1 列为空(read 会吞掉行首制表符), 后续列会整体左移一位, 这里补回来,
+  # 否则该条目会被误当成"路径是 http://..."而整条丢弃.
+  case "$p" in
+    http://*|https://*)
+      _t_p="$h"; _t_u="$p"; _t_proj="$u"; _t_reps="$proj"
+      h=""; p="$_t_p"; u="$_t_u"; proj="$_t_proj"; reps="$_t_reps" ;;
+  esac
+  h="$(trim "$h")"; p="$(trim "$p")"; u="$(trim "$u")"; proj="$(trim "$proj")"; reps="$(trim "$reps")"
   [ -n "$p" ] || continue
   safe_path "$p" || continue
-  M_HASH+=("$h"); M_PATH+=("$p"); M_URL+=("$u"); M_REPS+=("$reps")
+  M_HASH+=("$h"); M_PATH+=("$p"); M_URL+=("$u"); M_PROJ+=("$proj"); M_REPS+=("$reps")
 done < "$MANIFEST"
 
 if [ "${#M_PATH[@]}" -eq 0 ]; then
@@ -208,6 +382,55 @@ rm -f "$LIST_KEYS" 2>/dev/null || true
 
 sort -u "$PENDING" -o "$PENDING"
 
+# --- 2d. 网络预检 -------------------------------------------------------
+# 在动任何本地文件之前, 先确认本次要用的下载域名能否解析.
+# 若所有域名都解析失败(典型场景: 玩家网络无法访问 CurseForge), 直接中止,
+# 避免"旧版本已被移出但新版本下不回来"的破坏性结果.
+HOSTS_FILE="$(mktemp)"; : > "$HOSTS_FILE"
+BAD_HOSTS="$(mktemp)"; : > "$BAD_HOSTS"
+for i in "${!M_PATH[@]}"; do
+  u="${M_URL[i]}"
+  [ -n "$u" ] || continue
+  _h="$(url_host "$u")"
+  [ -n "$_h" ] && printf '%s\n' "$_h" >> "$HOSTS_FILE"
+  if [ "$NO_MIRROR" != "1" ]; then
+    _hm="$(host_mirror "$_h")"
+    [ -n "$_hm" ] && printf '%s\n' "$_hm" >> "$HOSTS_FILE"
+  fi
+done
+sort -u "$HOSTS_FILE" -o "$HOSTS_FILE"
+
+HOST_TOTAL=0; HOST_BAD=0
+while IFS= read -r h; do
+  [ -n "$h" ] || continue
+  HOST_TOTAL=$((HOST_TOTAL+1))
+  if [ "$(probe_host "$h")" = "dns-fail" ]; then
+    printf '%s\n' "$h" >> "$BAD_HOSTS"
+    HOST_BAD=$((HOST_BAD+1))
+  fi
+done < "$HOSTS_FILE"
+
+if [ "$HOST_TOTAL" -gt 0 ]; then
+  if [ "$HOST_BAD" -eq 0 ]; then
+    log "[mods] 网络预检: $HOST_TOTAL 个下载域名均可解析"
+  else
+    log ""
+    log "[mods] 网络预检: $HOST_TOTAL 个下载域名中 $HOST_BAD 个无法解析"
+    while IFS= read -r h; do
+      [ -n "$h" ] && warn "       无法解析: $h"
+    done < "$BAD_HOSTS"
+    log "       可能原因: 网络未连接 / DNS 解析被干扰 / 需要代理或加速器"
+    log "       有备用域名的会自动切换; 若仍然失败, 请开启代理后重新运行"
+  fi
+fi
+if [ "$HOST_TOTAL" -gt 0 ] && [ "$HOST_BAD" -eq "$HOST_TOTAL" ] && [ "$DRY_RUN" = "0" ]; then
+  log ""
+  warn "[mods] 所有下载域名都无法解析, 本次未改动任何本地文件."
+  warn "       请检查网络连接, 或开启代理后重试(支持 --proxy 参数 / http(s)_proxy 环境变量)."
+  rm -f "$HOSTS_FILE" "$BAD_HOSTS" 2>/dev/null || true
+  exit 1
+fi
+
 # --- 3. 备份待删除的旧 jar ---------------------------------------------
 BACKUP_DIR="$BACKUP_ROOT/$STAMP"
 BK_COUNT=0
@@ -232,11 +455,12 @@ if [ -s "$PENDING" ]; then
 fi
 
 # --- 4. 按清单下载缺失 / 校验不符的 jar ---------------------------------
-total=0; skipped=0; downloaded=0; failed=0; nosource=0
+total=0; skipped=0; downloaded=0; failed=0; nosource=0; NET_FAIL=0
 FAIL_TABLE="$(mktemp)"; : > "$FAIL_TABLE"
+ERR_FILE="$(mktemp)"; : > "$ERR_FILE"
 
 for i in "${!M_PATH[@]}"; do
-  h="${M_HASH[$i]}"; p="${M_PATH[$i]}"; u="${M_URL[$i]}"; reps="${M_REPS[$i]}"
+  h="${M_HASH[$i]}"; p="${M_PATH[$i]}"; u="${M_URL[$i]}"; proj="${M_PROJ[$i]}"; reps="${M_REPS[$i]}"
   total=$((total+1))
   dest="$ROOT/$p"
 
@@ -269,42 +493,62 @@ for i in "${!M_PATH[@]}"; do
 
   log "[mods] 下载: $p"
   log "       <- $u"
-  if curl -L --fail --retry 3 --retry-delay 2 --connect-timeout 20 -o "$tmp" "$u"; then
+
+  # 候选地址(原地址 + 内建备用域名); 预检判为不可解析的域名直接跳过
+  cands="$(build_candidates "$u")"
+  try_list=""
+  while IFS= read -r cu; do
+    [ -n "$cu" ] || continue
+    ch="$(url_host "$cu")"
+    if [ -n "$ch" ] && grep -qxF "$ch" "$BAD_HOSTS" 2>/dev/null; then continue; fi
+    try_list="${try_list}${cu}"$'\n'
+  done <<< "$cands"
+  if [ -z "$try_list" ]; then try_list="$cands"; fi
+
+  ok=0; why=""; is_net=0; ntry=0; http_code=""
+  while IFS= read -r cu; do
+    [ -n "$cu" ] || continue
+    ntry=$((ntry+1))
+    if [ "$ntry" -gt 1 ]; then log "       <- 改用备用地址: $cu"; fi
+    rm -f "$tmp" 2>/dev/null || true
+    http_code="$(curl -L --fail -s -S --retry 2 --retry-delay 2 --connect-timeout 20 ${CURL_PROXY[@]+"${CURL_PROXY[@]}"} -w '%{http_code}' -o "$tmp" "$cu" 2>"$ERR_FILE")"
+    rc=$?
+    if [ "$http_code" = "429" ]; then
+      is_net=1; why="服务器限流(HTTP 429, 请求过于频繁)"; continue
+    fi
+    if [ "$rc" -ne 0 ]; then
+      is_net=0
+      case "$rc" in 5|6|7|18|28|35|52|56) is_net=1 ;; esac
+      why="curl 退出码 $rc ($(curl_err_text "$rc"))"
+      emsg="$(tr '\n' ' ' < "$ERR_FILE" 2>/dev/null | sed 's/  */ /g' | cut -c1-300)"
+      if [ -n "$emsg" ]; then why="$why - $emsg"; fi
+      continue
+    fi
     got="$(sha1_file "$tmp" 2>/dev/null || true)"
     if [ -n "$h" ] && [ "$got" != "$h" ]; then
-      warn "[mods] 失败(sha1 不匹配): $p"
-      warn "       期望 sha1: $h"
-      warn "       实际 sha1: $got"
-      warn "       下载地址 : $u"
-      rm -f "$tmp" 2>/dev/null || true
-      failed=$((failed+1))
-      printf '%s\t%s\t%s\n' "$p" "$reps" "$u" >> "$FAIL_TABLE"
-    else
-      if mv -f "$tmp" "$dest" 2>/dev/null; then
-        downloaded=$((downloaded+1))
-        log "[mods] 完成: $p"
-      else
-        warn "[mods] 失败(无法写入目标文件, 可能被游戏占用): $p"
-        rm -f "$tmp" 2>/dev/null || true
-        failed=$((failed+1))
-        printf '%s\t%s\t%s\n' "$p" "$reps" "$u" >> "$FAIL_TABLE"
-      fi
+      is_net=0; why="sha1 不匹配(期望 $h, 实际 $got)"; continue
     fi
-  else
-    rc=$?
-    warn "[mods] 失败(下载出错, curl 退出码 $rc): $p"
-    warn "       下载地址 : $u"
+    if mv -f "$tmp" "$dest" 2>/dev/null; then
+      downloaded=$((downloaded+1)); ok=1; log "[mods] 完成: $p"; break
+    else
+      is_net=0; why="无法写入目标文件(可能被游戏占用)"
+    fi
+  done <<< "$try_list"
+
+  if [ "$ok" != "1" ]; then
     rm -f "$tmp" 2>/dev/null || true
+    report_fail "$p" "$u" "$proj" "$why" "$try_list"
     failed=$((failed+1))
+    if [ "$is_net" = "1" ]; then NET_FAIL=$((NET_FAIL+1)); fi
     printf '%s\t%s\t%s\n' "$p" "$reps" "$u" >> "$FAIL_TABLE"
   fi
 done
 
 # --- 5. 下载失败的 mod: 恢复它被替换掉的旧版本 --------------------------
-RESTORED=0
-if [ "$failed" -gt 0 ] && [ "$DRY_RUN" = "0" ] && [ -d "$BACKUP_DIR" ]; then
+RESTORED=0; MISSING=0
+if [ "$failed" -gt 0 ] && [ "$DRY_RUN" = "0" ]; then
   log ""
-  log "[mods] 检测到 $failed 个 mod 更新失败, 正在恢复它们的旧版本 ..."
+  log "[mods] 检测到 $failed 个 mod 更新失败, 正在检查可恢复的旧版本 ..."
   while IFS=$'\t' read -r fp freps furl; do
     [ -n "$fp" ] || continue
     restored_this=0
@@ -345,6 +589,7 @@ if [ "$failed" -gt 0 ] && [ "$DRY_RUN" = "0" ] && [ -d "$BACKUP_DIR" ]; then
     fi
 
     if [ "$restored_this" = "0" ]; then
+      MISSING=$((MISSING+1))
       log "[mods] 该 mod 没有可恢复的旧版本(本就是新增文件), 保持缺失: $fp"
     fi
   done < "$FAIL_TABLE"
@@ -365,7 +610,7 @@ if [ "$DRY_RUN" = "0" ] && [ -d "$BACKUP_DIR" ]; then
   fi
 fi
 
-rm -f "$PROTECTED" "$PENDING" "$FAIL_TABLE" 2>/dev/null || true
+rm -f "$PROTECTED" "$PENDING" "$FAIL_TABLE" "${HOSTS_FILE:-}" "${BAD_HOSTS:-}" "${ERR_FILE:-}" 2>/dev/null || true
 
 # --- 7. 汇总与中文提示 --------------------------------------------------
 log ""
@@ -379,8 +624,16 @@ if [ "$failed" -gt 0 ]; then
   log ""
   log "============================================================"
   log "[提示] 本次有 $failed 个 mod 没能更新成功. "
+  if [ "$MISSING" -gt 0 ]; then
+    log "       其中 $MISSING 个 mod 本地没有旧版本可恢复, 缺失会导致游戏启动失败, 请务必补上. "
+  fi
   if [ "$RESTORED" -gt 0 ]; then
     log "       相关 mod 的旧版本已自动恢复($RESTORED 个文件), 游戏仍可正常启动. "
+  fi
+  if [ "$NET_FAIL" -gt 0 ]; then
+    log "       $NET_FAIL 个属于网络类失败(域名解析失败/连接中断/超时/服务器限流). "
+    log "       排查顺序: 1) 检查本机网络连接 2) 开启代理或加速器后重新运行"
+    log "                 3) 也可用 --proxy 参数, 或按上面的「项目页」地址手动下载"
   fi
   log "       请把下面这个日志文件发送给开发者, 以便我们排查原因:"
   log "       $LOG_FILE"

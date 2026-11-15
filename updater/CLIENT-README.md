@@ -167,6 +167,20 @@ Remove-Item Env:GIT_CONFIG_COUNT,Env:GIT_CONFIG_KEY_0,Env:GIT_CONFIG_VALUE_0
 5. **写日志的 cmdlet 记得带 `-ErrorAction`**: 默认 `Continue` 下「日志目录不可写」
    并不是终止错误, `try/catch` 抓不住, 会退化成每条提示都刷一次英文报错. 
 
+6. **mod 下载的四层容错不要退化成"一条 curl 打天下"**: `mods-sync.ps1` / `mods-sync.sh` 的
+   下载路径现在是「内建备用域名 + 下载前域名预检 + 代理支持 + 手动项目页兜底」。改动时注意:
+   - 备用域名映射集中在 `$script:CfMirrors`(`.sh` 里是 `host_mirror`), 只对 CurseForge CDN 成立
+     (`edge.forgecdn.net` ↔ `mediafilez.forgecdn.net`, 实测同文件 sha1 一致), Modrinth 没有公开镜像, 不要瞎加;
+   - 域名预检必须在**第 3 节备份之前**执行 —— 预检全部失败时要 `exit 1` 且**不移动任何本地文件**,
+     否则会出现"旧版本已被移出、新版本又下不回来"的破坏性结果;
+   - 预检在 Windows 上不能用 `nslookup` 的退出码判断: 它对 NXDOMAIN 依然返回 0, 必须看输出文本
+     (`can't find` / `NXDOMAIN` / `Non-existent`); PowerShell 侧用 `[System.Net.Dns]::GetHostAddresses` 最稳;
+   - `Invoke-CurlFetch` 里临时把 `$ErrorActionPreference` 降为 `Continue` 是关键(见上一条), 不要改回
+     裸的 `& curl.exe ... 2>$null`; 代理只在**命令行显式指定**时才传 `--proxy`, 环境变量交给 curl 自己处理
+     (否则会破坏 `NO_PROXY`);
+   - 失败条目必须打印「下载地址 + 备用地址 + 项目页 + 手动放置说明」, 并统计"本地无旧版本可恢复"的条数 ——
+     这类缺失会直接导致游戏起不来, 是玩家最需要看到的信息.
+
 ## 八, 常见问题
 
 | 现象 | 处理 |
@@ -177,4 +191,7 @@ Remove-Item Env:GIT_CONFIG_COUNT,Env:GIT_CONFIG_KEY_0,Env:GIT_CONFIG_VALUE_0
 | 提示「GitHub 与 Gitee 镜像都连不上」 | 两个源都不通: 先确认浏览器能打开 github.com 或 gitee.com；需要代理时开好再运行 |
 | 提示「从远程仓库下载失败」 | 两个源下载都断流: 检查网络 / 代理, 或换个时间再试；把日志发给开发组 |
 | 更新后游戏缺 mod / 崩溃 | 看 `updater/logs/` 下最新的两个日志, 把失败的条目发给开发组 |
+| mod 下载失败并提示"网络预检: ... 无法解析" | 网络连不上 CurseForge; 脚本会自动换备用域名, 仍失败就开代理或加速器重跑 |
+| 想用代理下载 mod | Windows 开系统代理即自动生效; 命令行可 `Update-CMI.bat -Proxy http://127.0.0.1:7890`, 或设 `HTTPS_PROXY` 环境变量 |
+| 想要某个 mod 自己下 | 日志里每条失败都写了项目页地址与文件名: 项目页下载同名 jar 放进 `mods/`, 删掉旧的同名文件 |
 | 想回到更新前的版本 | 日志末尾会打印更新前的 commit；在整合包目录执行 `git reset --hard <那个 commit>`, 个人改动见 `updater\.rollback\` 备份 |

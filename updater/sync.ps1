@@ -2,7 +2,9 @@
   [ValidateSet('setup', 'update')]
   [string]$Mode = 'update',
   [ValidateSet('auto', 'github', 'gitee')]
-  [string]$Source = 'auto'
+  [string]$Source = 'auto',
+  [string]$Proxy = '',
+  [switch]$NoMirror
 )
 $ErrorActionPreference = 'Stop'
 
@@ -322,13 +324,17 @@ if (-not $usedSource) {
 # --- 3. 按清单同步 mods ------------------------------------------------------
 Write-Host ''
 Write-Host '正在按更新清单下载 / 校验 mods [第三方直链] ...'
-& powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $UpdaterDir 'mods-sync.ps1')
+# 透传代理 / 备用域名开关给 mods-sync.ps1
+$modsArgs = @()
+if ($Proxy) { $modsArgs += @('-Proxy', $Proxy) }
+if ($NoMirror) { $modsArgs += '-NoMirror' }
+& powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $UpdaterDir 'mods-sync.ps1') @modsArgs
 $modsRc = $LASTEXITCODE
 
 if ($modsRc -ne 0) {
   Write-Host ''
   Write-Host '[提示] 本次有部分 mod 没能更新成功. '
-  Write-Host '       失败的 mod 已自动恢复为旧版本, 游戏仍可正常启动. '
+  Write-Host '       本地有旧版本的已自动恢复; 没有旧版本可恢复的会保持缺失(详见日志). '
   Write-Host '       请把 updater\logs\ 目录下最新的那个日志文件发送给开发者, 以便排查;'
   Write-Host '       也可以直接重新运行本脚本重试 [只会重新下载失败的那几个 mod]. '
   exit 1

@@ -29,6 +29,8 @@
     -RemoteUrl <仓库地址>   覆盖远程仓库地址
     -Branch <分支名>        覆盖分支名(默认自动探测 GitHub 的默认分支)
     -DryRun                 只做检查与拉取, 不写入任何内容(开发组自测用)
+    -Proxy <url>            下载 mod 时走代理, 例如 http://127.0.0.1:7890
+    -NoMirror               关闭 mod 下载的备用域名自动切换(排障用)
 #>
 [CmdletBinding()]
 param(
@@ -36,7 +38,9 @@ param(
   [string]$RemoteUrl = 'https://github.com/Eternal-Snowstorm/Create-Mechanism-and-Innovation.git',
   [string]$Branch = '',
   [string]$ScriptDir = '',
-  [switch]$DryRun
+  [switch]$DryRun,
+  [string]$Proxy = '',
+  [switch]$NoMirror
 )
 
 # 本脚本所在目录:
@@ -612,7 +616,11 @@ if (-not (Test-Path -LiteralPath $modsSync -PathType Leaf)) {
 } elseif ($DryRun) {
   Write-Log '       [试运行] 这里会按 update.tsv 下载 / 校验 mods(已跳过). '
 } else {
-  & powershell -NoProfile -ExecutionPolicy Bypass -File $modsSync
+  # 透传代理 / 备用域名开关给 mods-sync.ps1(玩家入口 Update-CMI.bat 也会把参数传进来)
+  $modsArgs = @()
+  if ($Proxy) { $modsArgs += @('-Proxy', $Proxy) }
+  if ($NoMirror) { $modsArgs += '-NoMirror' }
+  & powershell -NoProfile -ExecutionPolicy Bypass -File $modsSync @modsArgs
   $modsRc = $LASTEXITCODE
 }
 

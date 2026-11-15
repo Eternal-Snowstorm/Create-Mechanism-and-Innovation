@@ -77,7 +77,10 @@ if errorlevel 1 (
   exit /b 1
 )
 
-powershell -NoProfile -ExecutionPolicy Bypass -Command "$src = Get-Content -LiteralPath '%~dp0update-cmi.ps1' -Raw -Encoding UTF8; & ([scriptblock]::Create($src)) -ScriptDir '%~dp0'"
+rem  Command-line extras (optional): this batch forwards its own arguments to
+rem  update-cmi.ps1, e.g. "Update-CMI.bat -Proxy http://127.0.0.1:7890" or
+rem  "Update-CMI.bat -NoMirror". Double-click passes nothing, which is the normal case.
+powershell -NoProfile -ExecutionPolicy Bypass -Command "$src = Get-Content -LiteralPath '%~dp0update-cmi.ps1' -Raw -Encoding UTF8; & ([scriptblock]::Create($src)) -ScriptDir '%~dp0' %*"
 set "RC=%ERRORLEVEL%"
 
 echo.
