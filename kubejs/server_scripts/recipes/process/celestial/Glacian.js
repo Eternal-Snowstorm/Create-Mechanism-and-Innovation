@@ -45,7 +45,7 @@ ServerEvents.recipes((event) => {
 			"cmi:culture_medium"
 		])
 		.outputFluids(Fluid.of("cmi:copy_enzyme_solution", 50))
-		.inputFE(1000000)
+		.inputFE(100000)
 		.duration(20 * 5)
 
 	// 复制
@@ -53,6 +53,6 @@ ServerEvents.recipes((event) => {
 		.inputFluids(Fluid.of("cmi:copy_enzyme_solution", 100))
 		.inputItems("mekanism:pellet_antimatter")
 		.outputItems("2x mekanism:pellet_antimatter")
-		.inputFE(10000000)
+		.inputFE(100000)
 		.duration(20 * 10)
 })
