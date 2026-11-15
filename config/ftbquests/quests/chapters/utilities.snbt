@@ -573,6 +573,21 @@
 			x: 2.0d
 			y: 5.0d
 		}
+		{
+			dependencies: ["714D1AC6D07BEEC0"]
+			hide_dependency_lines: true
+			hide_dependent_lines: true
+			id: "531B040688E8A067"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "现在熔岩可以无限生成，就像2x2无限水一样"
+			tasks: [{
+				id: "40241CF549DD6F68"
+				item: "minecraft:lava_bucket"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 7.0d
+		}
 	]
 	title: "实用工具"
 }

@@ -1,0 +1,1348 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "controlpanel"
+	group: "6A6C7C5BAEF247E2"
+	id: "356981181CC0BE93"
+	images: [
+		{
+			click: "command:reload"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/reload.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -11.0d
+			y: -4.5d
+		}
+		{
+			click: "command:kjs reload client_scripts"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/reload_client.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -11.0d
+			y: -3.5d
+		}
+		{
+			click: "command:kjs reload startup_scripts"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/reload_server.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -11.0d
+			y: -2.5d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:default重新加载(Server)"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 2.75d
+			x: -9.24831158462316d
+			y: -4.48837531497653d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:default重新加载(Client)"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 2.75d
+			x: -9.247505619497979d
+			y: -3.4757989154674434d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:default重新加载(Startup)"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 2.75d
+			x: -9.247505619497979d
+			y: -2.4757989154674434d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -9.0d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -8.5d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -11.0d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -10.5d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -10.0d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -9.5d
+			y: -5.0d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:default调试"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 2.75d
+			x: -11.0d
+			y: -6.0d
+		}
+		{
+			click: "file:/"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/folder_mc.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -6.5d
+			y: -4.5d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:default版本文件夹"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.75d
+			x: -5.0d
+			y: -4.5d
+		}
+		{
+			click: "file:\\\\\\"
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -6.5d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -6.0d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -5.0d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -5.5d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.0d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.0d
+			y: -4.5d
+		}
+		{
+			click: "file:/"
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.0d
+			y: -4.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.0d
+			y: -3.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.0d
+			y: -3.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.0d
+			y: -2.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.0d
+			y: -5.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.0d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.0d
+			y: -2.0d
+		}
+		{
+			click: "file:saves"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/folder_saves.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -6.5d
+			y: -3.5d
+		}
+		{
+			click: "file:screenshots"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/folder_screenshots.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -6.5d
+			y: -2.5d
+		}
+		{
+			click: "file:shaderpacks"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/folder_shader.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -6.5d
+			y: -0.5d
+		}
+		{
+			click: "file:mods"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/folder_mod.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -6.5d
+			y: 0.5d
+		}
+		{
+			click: "file:crash-reports"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/folder_log.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -6.5d
+			y: 3.5d
+		}
+		{
+			click: "file:kubejs"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/folder_kubejs.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -6.5d
+			y: 1.5d
+		}
+		{
+			click: "file:config/paxi/resourcepacks"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/folder_openloader.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -6.5d
+			y: 2.5d
+		}
+		{
+			click: "file:resourcepacks"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/folder_res.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -6.5d
+			y: -1.5d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:default存档文件夹"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.75d
+			x: -5.0d
+			y: -3.5d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:default资源包文件夹"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 2.0833333333333335d
+			x: -4.845540899306862d
+			y: -1.5061182266009965d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.0d
+			y: -1.5d
+		}
+		{
+			click: "file:resourcepacks"
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.0d
+			y: -1.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.0d
+			y: -0.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.0d
+			y: 0.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			click: "file:kubejs"
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.0d
+			y: 1.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.0d
+			y: 2.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.0d
+			y: 2.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.0d
+			y: 3.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.0d
+			y: 3.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.0d
+			y: 4.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -4.5d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -4.0d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -3.5d
+			y: -5.0d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:default截图文件夹"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.75d
+			x: -5.0d
+			y: -2.5d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:default光影文件夹"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.75d
+			x: -5.0d
+			y: -0.5d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:default模组文件夹"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.75d
+			x: -5.0d
+			y: 0.5d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:defaultKubeJS文件夹"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 2.0833333333333335d
+			x: -4.840438858490529d
+			y: 1.5015348346234987d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:default内置资源包文件夹"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 2.75d
+			x: -4.590438858490529d
+			y: 2.5372491203377834d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:default日志文件夹"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.75d
+			x: -5.0d
+			y: 3.5d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:default文件夹"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 2.75d
+			x: -6.368630638754027d
+			y: -5.986345722816701d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: -5.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: -4.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: -4.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: -3.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: -3.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: -2.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: -2.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: -1.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: -1.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: -0.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: 0.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: 1.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: 2.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: 3.5d
+		}
+		{
+			click: "file:C:/Windows/System32/calc.exe"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/calc.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -1.5d
+			y: -4.5d
+		}
+		{
+			click: "file:C:/Windows/System32/notepad.exe"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/notepad.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -1.5d
+			y: -3.5d
+		}
+		{
+			click: "file:C:/Windows/System32/taskmgr.exe"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/taskmgr.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -1.5d
+			y: -2.5d
+		}
+		{
+			click: "file:C:/Windows/System32/cmd.exe"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/cmd.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			click: "file:C:/Windows/System32/winver.exe"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/winver.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -1.5d
+			y: -0.5d
+		}
+		{
+			click: "file:C:/Windows/System32/SlideToShutdown.exe"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/shutdown.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -1.5d
+			y: 0.5d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:default计算器"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.75d
+			x: 0.0d
+			y: -4.5d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:default记事本"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.75d
+			x: 0.0d
+			y: -3.5d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:default任务管理器"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.75d
+			x: 0.253572502735814d
+			y: -2.4790751718034016d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:default终端"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.75d
+			x: -0.1749989258356024d
+			y: -1.4790751718033945d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:defaultWINVER"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.75d
+			x: 0.0d
+			y: -0.5d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:default关闭计算机"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.75d
+			x: 0.1821439313072588d
+			y: 0.5209248281965984d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -1.5d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -1.0d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: -0.5d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 0.0d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 0.5d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 1.0d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 1.5d
+			y: -5.0d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:default实用组件"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 2.75d
+			x: -1.222645046286118d
+			y: -5.998418717846679d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.0d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.0d
+			y: -5.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.0d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.0d
+			y: -4.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.0d
+			y: -4.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.0d
+			y: -3.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.0d
+			y: -3.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.0d
+			y: -2.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.0d
+			y: -2.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.0d
+			y: -1.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.0d
+			y: -0.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.0d
+			y: 0.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.0d
+			y: 1.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.0d
+			y: 2.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.0d
+			y: 2.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.0d
+			y: 3.5d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/udr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.0d
+			y: 4.0d
+		}
+		{
+			click: "file:kubejs/assets/cmi/texts/cmi.txt"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/cmi.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.5d
+			y: -4.5d
+		}
+		{
+			click: "https://www.curseforge.com/minecraft/modpacks/create-mechanism-and-innovation"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/cf.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.5d
+			y: -3.5d
+		}
+		{
+			click: "https://github.com/Eternal-Snowstorm/Create-Mechanism-and-Innovation"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/git.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.5d
+			y: -2.5d
+		}
+		{
+			click: "https://space.bilibili.com/3461572013853145"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/bili.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.5d
+			y: -1.5d
+		}
+		{
+			click: "https://ifdian.net/a/cim_se_2"
+			height: 1.0d
+			image: "nebula_libs:textures/icon/aifadian.png"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.5d
+			y: -0.5d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:default机械动力:构件与革新"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 3.25d
+			x: 5.5d
+			y: -4.5d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:defaultCurseforge"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.75d
+			x: 4.880948279582597d
+			y: -3.4075961349454147d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:defaultGithub"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0833333333333333d
+			x: 4.63094827958259d
+			y: -2.4075961349454147d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:defaultBilibili"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.4166666666666667d
+			x: 4.738091136725451d
+			y: -1.479024706373984d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:default爱发电"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0833333333333333d
+			x: 4.63094827958259d
+			y: -0.4433104206596994d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.5d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 4.0d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 4.5d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 5.0d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 5.5d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 6.0d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 6.5d
+			y: -5.0d
+		}
+		{
+			height: 1.0d
+			image: "tconstruct:block/clear_glass/dlr"
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 1.0d
+			x: 7.0d
+			y: -5.0d
+		}
+		{
+			click: "quest_enhance:text_v3:1.0:17:minecraft:default关于"
+			height: 0.4583333333333333d
+			image: ""
+			quest_enhance_exclude_from_box_selection: false
+			rotation: 0.0d
+			width: 2.75d
+			x: 3.5d
+			y: -6.0d
+		}
+	]
+	order_index: 3
+	quest_enhance_decorative_lines: [ ]
+	quest_enhance_hidden_dependency_lines: [ ]
+	quest_links: [ ]
+	quests: [{
+		id: "2AB5A43E48813145"
+		quest_enhance_disable_scroll_paging: false
+		tasks: [{
+			id: "642527B283A6C145"
+			title: "1"
+			type: "checkmark"
+		}]
+		x: -12.0d
+		y: -6.0d
+	}]
+	title: "ControlPanel"
+}
