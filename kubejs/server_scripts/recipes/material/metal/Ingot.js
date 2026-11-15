@@ -1,8 +1,6 @@
 ServerEvents.recipes((event) => {
 	let { thermal, cmi, steam_letters } = event.getRecipes()
 
-	steam_letters.fluid_fuel
-
 	// 末影合金
 	thermal.smelter("thermal:enderium_ingot", [
 		"#forge:dusts/diamond",
