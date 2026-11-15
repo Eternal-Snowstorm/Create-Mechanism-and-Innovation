@@ -313,5 +313,6 @@ ServerEvents.recipes((event) => {
 
 	CmiGlobal.DYE_COLOR_GROUP.forEach((color) => {
 		removeRecipe(event, `createdeco:${color}_shipping_container`)
+		removeRecipe(event, `vintageimprovements:centrifugation/${color}_dye`)
 	})
 })
