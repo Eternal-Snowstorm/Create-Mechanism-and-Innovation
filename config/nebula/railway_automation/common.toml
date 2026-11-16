@@ -1,0 +1,36 @@
+
+#Turn placement settings of the track placer.
+#All settings below will only take effect after restarting the server or client.
+[track_placer]
+	#Largest height difference (blocks) that may be climbed with a single gentle curve.
+	#Above this difference the climb switches to a 45 degree slope flanked by two transition curves,
+	#so a target higher than this value is still usable as long as the horizontal distance is large enough.
+	#type: int
+	#default: 32
+	#Range: 8 ~ 64
+	maxVerticalRise = 32
+	#Upper bound of the horizontal length (blocks) of each of the two curves that join a 45 degree slope.
+	#The vertical rise of such a curve is always half of this value, which keeps a 1:2 ratio.
+	#When the horizontal distance is short the curves are shortened automatically (4 blocks at the minimum),
+	#so the slope still fits instead of the position becoming unusable.
+	#type: int
+	#default: 16
+	#Range: 2 ~ 32
+	slopeCurveLength = 16
+	#Largest slope ratio (height difference divided by horizontal distance) of a gentle climb.
+	#When the configured target is long enough to keep the slope below this ratio, the whole climb becomes
+	#a single gentle curve instead of a 45 degree slope with transition curves, which keeps the train fast.
+	#0.225 equals about 12.7 degrees and matches the curve exemption of Create navigation.
+	#type: double
+	#default: 0.225
+	#Range: 0.05 ~ 1.0
+	gentleSlopeRatio = 0.225
+	#Height difference (blocks) above which a 45 degree slope is inserted into a climb.
+	#A target above this difference always uses the 45 degree slope with transition curves.
+	#At or below this difference a gentle curve is preferred; the nearer the difference is to zero the more
+	#horizontal distance the placer is willing to spend on the curve instead of the slope.
+	#type: int
+	#default: 16
+	#Range: 4 ~ 64
+	slopeInsertRise = 16
+
