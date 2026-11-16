@@ -57,7 +57,7 @@ replay*
 /mods*.zip
 /mods.zip
 /patchouli_books
-config/ftbquests/qusets/chapters/control*
+/config/ftbquests/qusets/chapters/control*
 /removed_kjs
 CMI Dev.jar
 CMI Dev.json
