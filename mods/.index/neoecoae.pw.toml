@@ -1,20 +1,20 @@
-filename = 'neoecoae-20.5.6.jar'
+filename = 'neoecoae-20.5.8.jar'
 name = 'Neo ECO AE Extension'
 side = ''
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = '20.5.6'
+x-prismlauncher-version-number = '20.5.8'
 
 [download]
-hash = '33c816b6eaa71b9f3bdff5c78db2459764faf1a3288f9971ce9ce2af9c5be4c1f5a5e17b15acc59e376449eea647e8723d3ae37bb0d4db60c5d0003e33d31207'
+hash = 'ecd10b34b8573e1d665d473dd136f6e7609a1d52f079b954dd85a42680b17e1a3b00de69e3fe27277f239bba1e4dc98c3622385434803e05a9c3c5b37bdfaa17'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/udZtKfzP/versions/uQ9xkrMx/neoecoae-20.5.6.jar'
+url = 'https://cdn.modrinth.com/data/udZtKfzP/versions/45JvHzOl/neoecoae-20.5.8.jar'
 
 [update.modrinth]
 mod-id = 'udZtKfzP'
-version = 'uQ9xkrMx'
+version = '45JvHzOl'
 
 [[x-prismlauncher-dependencies]]
 addonId = 'oMgZ004U'
@@ -25,11 +25,11 @@ addonId = 'ERXg8PW9'
 type = 'OPTIONAL'
 
 [[x-prismlauncher-dependencies]]
-addonId = 'B1CBVXHX'
+addonId = 'Ck4E7v7R'
 type = 'REQUIRED'
 
 [[x-prismlauncher-dependencies]]
-addonId = 'Ck4E7v7R'
+addonId = 'B1CBVXHX'
 type = 'REQUIRED'
 
 [[x-prismlauncher-dependencies]]

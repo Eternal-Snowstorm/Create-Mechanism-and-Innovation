@@ -1,18 +1,18 @@
-filename = 'immersive_melodies-0.8.2-1.20.1-forge.jar'
+filename = 'immersive_melodies-0.8.4-1.20.1-forge.jar'
 name = 'Immersive Melodies'
 side = 'server'
 x-prismlauncher-dependencies = []
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = '[Forge 1.20.1] Immersive Melodies - 0.8.2'
+x-prismlauncher-version-number = '[Forge 1.20.1] Immersive Melodies - 0.8.4'
 
 [download]
-hash = '4ddb31b4a78bea11dc61927242e9373e11a3b494'
+hash = '8b7aef05d1d1bea6141c43d87fd6fc5bed5e67eb'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 9364410
+file-id = 9653075
 project-id = 904471

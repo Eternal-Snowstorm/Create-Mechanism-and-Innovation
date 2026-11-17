@@ -1,18 +1,18 @@
-filename = 'OctoLib-FORGE-0.5.0.1+1.20.1.jar'
-name = 'ShatterLib | OctoLib'
+filename = 'CreativeCore_FORGE_v2.12.42_mc1.20.1.jar'
+name = 'CreativeCore'
 side = 'server'
 x-prismlauncher-dependencies = []
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'OctoLib-FORGE-0.5.0.1+1.20.1.jar'
+x-prismlauncher-version-number = 'CreativeCore_FORGE_v2.12.42_mc1.20.1.jar'
 
 [download]
-hash = '9eab28baff36942e1c924489e34753df10f40208'
+hash = '1df289c0ac3ffb4b924eb73dc3d673af961479a8'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 6274623
-project-id = 916747
+file-id = 9542632
+project-id = 257814
