@@ -12,14 +12,6 @@ StartupEvents.registry("creative_mode_tab", (event) => {
 		return builder
 	}
 
-	addCreativeTab("io_block")
-		.icon(() => {
-			return Item.of("cmi:ponder_thermal_input")
-		})
-		.content(() => {
-			return Ingredient.of("#cmi:io_debug_block").getItemIds()
-		})
-
 	addCreativeTab("materials")
 		.icon(() => {
 			return Item.of("cmi:cast_iron_ingot")
