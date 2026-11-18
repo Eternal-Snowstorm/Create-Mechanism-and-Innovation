@@ -59,8 +59,8 @@
   "jadeaddons.create": {
     "filter": true,
     "backtank_capacity": true,
-    "goggles.requires_goggles": true,
-    "goggles": true,
+    "goggles.requires_goggles": false,
+    "goggles": false,
     "blaze_burner": true,
     "exact_block": true,
     "goggles.detailed": false,

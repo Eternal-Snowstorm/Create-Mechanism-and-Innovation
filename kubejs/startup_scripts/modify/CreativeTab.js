@@ -29,7 +29,9 @@
 			"create:shadow_steel",
 			"create:refined_radiance",
 			"create:shadow_steel_casing",
-			"create:refined_radiance_casing"
+			"create:refined_radiance_casing",
+			"createsimpleschematic:simple_schematic",
+			"createsimpleschematic:simple_packer"
 		])
 	})
 
@@ -125,7 +127,7 @@
 	/**
 	 * 
 	 * @param {Internal.CreativeTabEvent_} event 
-	 * @param {Internal.Ingredient_} ingredient 
+	 * @param {Internal.Ingredient} ingredient 
 	 * @returns {Internal.CreativeTabEvent_}
 	 */
 	function addIngredientToCreativeTab(event, ingredient) {

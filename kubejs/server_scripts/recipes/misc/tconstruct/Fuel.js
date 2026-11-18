@@ -29,7 +29,7 @@ ServerEvents.recipes((event) => {
 
 		if (temperature > 2000) {
 			steam_letters.fluid_fuel(fluid, (temperature / 2))
-				.superheated(true)
+				.superheated()
 		} else {
 			steam_letters.fluid_fuel(fluid, (temperature / 2))
 		}
