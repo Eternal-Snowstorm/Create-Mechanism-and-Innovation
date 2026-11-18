@@ -1,4 +1,4 @@
-filename = '[]spark-1.10.53-forge.jar'
+filename = 'spark-1.10.53-forge.jar'
 name = 'spark'
 side = ''
 x-prismlauncher-dependencies = []

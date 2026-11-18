@@ -67,7 +67,7 @@
     { "path": "mods/drippyloadingscreen_forge_3.1.5_MC_1.20.1.jar", "sha1": "a33d48809db8a2f1eb3667fe140d7a4104d80dca", "url": "https://edge.forgecdn.net/files/8552/902/drippyloadingscreen_forge_3.1.5_MC_1.20.1.jar", "project": "curseforge:511770", "replaces": "" },
     { "path": "mods/EdenRing-20.0.2.jar", "sha1": "db51d129cef4ad8da10f02b325db3b48666fd854", "url": "https://edge.forgecdn.net/files/7788/701/EdenRing-20.0.2.jar", "project": "curseforge:1489521", "replaces": "" },
     { "path": "mods/embeddium-0.3.31+mc1.20.1.jar", "sha1": "bb2fa8f3e493af16af9160d049f96c614a1faf2f", "url": "https://edge.forgecdn.net/files/5681/725/embeddium-0.3.31%2Bmc1.20.1.jar", "project": "curseforge:908741", "replaces": "" },
-    { "path": "mods/entityculling-forge-1.11.3-mc1.20.1.jar", "sha1": "d3c513e88ef9f5cdd7e27d17d923d4dca69c6d55", "url": "https://edge.forgecdn.net/files/9100/267/entityculling-forge-1.11.3-mc1.20.1.jar", "project": "curseforge:448233", "replaces": "" },
+    { "path": "mods/entityculling-forge-1.12.1-mc1.20.1.jar", "sha1": "571a91dc42a266a70e44b6b459f996a0f7876c29", "url": "https://edge.forgecdn.net/files/9594/18/entityculling-forge-1.12.1-mc1.20.1.jar", "project": "curseforge:448233", "replaces": "mods/entityculling-forge-1.11.3-mc1.20.1.jar" },
     { "path": "mods/EventJS-1.20.1-1.4.3.jar", "sha1": "2a667cf12d598060271afeb3a83b5fec7594297c", "url": "https://edge.forgecdn.net/files/7143/82/EventJS-1.20.1-1.4.3.jar", "project": "curseforge:1132802", "replaces": "" },
     { "path": "mods/ExtendedAE-1.20-1.4.22-forge.jar", "sha1": "3b008bf1731497bb7f3c5c7160264ae7cf5d6f54", "url": "https://edge.forgecdn.net/files/9304/849/ExtendedAE-1.20-1.4.22-forge.jar", "project": "curseforge:892005", "replaces": "" },
     { "path": "mods/ExplorersCompass-1.20.1-1.4.0-forge.jar", "sha1": "23b7544ab3ebd1ab9c88255434ff9dc7f217766b", "url": "https://edge.forgecdn.net/files/7892/927/ExplorersCompass-1.20.1-1.4.0-forge.jar", "project": "curseforge:491794", "replaces": "" },
@@ -190,8 +190,9 @@
     { "path": "mods/sophisticatedbackpacks-1.20.1-3.26.20.2248.jar", "sha1": "09f0e3093ab5fcc0f2f7b0e962c2b80c01003f59", "url": "https://edge.forgecdn.net/files/9524/801/sophisticatedbackpacks-1.20.1-3.26.20.2248.jar", "project": "curseforge:422301", "replaces": "" },
     { "path": "mods/sophisticatedcore-1.20.1-1.5.36.2483.jar", "sha1": "d6678cee4c8830dd1ab6c5f5fd1ebb39371f16b6", "url": "https://edge.forgecdn.net/files/9651/546/sophisticatedcore-1.20.1-1.5.36.2483.jar", "project": "curseforge:618298", "replaces": "" },
     { "path": "mods/SophisticatedSorter-forge-1.20.1-1.1.1.jar", "sha1": "b4d4caae7a79ad13f10ad1948e48b17fabae90a4", "url": "https://edge.forgecdn.net/files/8879/811/SophisticatedSorter-forge-1.20.1-1.1.1.jar", "project": "curseforge:1375092", "replaces": "" },
+    { "path": "mods/spark-1.10.53-forge.jar", "sha1": "231fb325368c0660954f47bfb03493f5246fa4d1", "url": "https://edge.forgecdn.net/files/4738/952/spark-1.10.53-forge.jar", "project": "curseforge:361579", "replaces": "" },
     { "path": "mods/solcarrot-1.20.1-1.15.1.jar", "sha1": "f7fa1fd0c633b10f98d7f0f97766b95aac1a2dc0", "url": "https://edge.forgecdn.net/files/4888/575/solcarrot-1.20.1-1.15.1.jar", "project": "curseforge:277616", "replaces": "" },
-    { "path": "mods/Steam-Letters-2.1.0-1.20.1-forge.jar", "sha1": "f9191cdc886d326e6be3730ad975edc4411bacb8", "url": "https://edge.forgecdn.net/files/9651/202/Steam-Letters-2.1.0-1.20.1-forge.jar", "project": "curseforge:1650746", "replaces": "" },
+    { "path": "mods/Steam-Letters-2.1.1-1.20.1-forge.jar", "sha1": "eafa9a51ee8122968a263491471e9c4bcd13258f", "url": "https://edge.forgecdn.net/files/9667/684/Steam-Letters-2.1.1-1.20.1-forge.jar", "project": "curseforge:1650746", "replaces": "mods/Steam-Letters-2.1.0-1.20.1-forge.jar" },
     { "path": "mods/supermartijn642configlib-1.1.8-forge-mc1.20.jar", "sha1": "f80f9eed728966adcfbcc848633e789645057281", "url": "https://edge.forgecdn.net/files/4715/408/supermartijn642configlib-1.1.8-forge-mc1.20.jar", "project": "curseforge:438332", "replaces": "" },
     { "path": "mods/supermartijn642corelib-1.1.26a-forge-mc1.20.1.jar", "sha1": "60137bb03fe7dec06dad5ad88d729e993c619df4", "url": "https://edge.forgecdn.net/files/9446/926/supermartijn642corelib-1.1.26a-forge-mc1.20.1.jar", "project": "curseforge:454372", "replaces": "" },
     { "path": "mods/tconstruct_js-1.0.6.jar", "sha1": "ec567d383778b35f8f5c85f0bc55ecf389682336", "url": "https://edge.forgecdn.net/files/8352/452/tconstruct_js-1.0.6.jar", "project": "curseforge:1210790", "replaces": "" },
@@ -227,5 +228,5 @@
     { "path": "mods/YungsApi-1.20-Forge-4.0.6.jar", "sha1": "af584b690f5646c6032002b58abc4591beed3833", "url": "https://edge.forgecdn.net/files/5769/971/YungsApi-1.20-Forge-4.0.6.jar", "project": "curseforge:421850", "replaces": "" }
   ],
   "delete": [],
-  "changelog": "https://raw.githubusercontent.com/Eternal-Snowstorm/Create-Mechanism-and-Innovation/main/UpdateLogs.md"
+  "changelog": "https://gitee.com/eternalsnowstorm/mechanism-and-innovation/raw/master/UpdateLogs.md"
 }
