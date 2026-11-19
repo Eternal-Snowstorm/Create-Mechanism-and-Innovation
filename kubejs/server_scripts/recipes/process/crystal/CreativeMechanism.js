@@ -1,6 +1,6 @@
 // UNCERTAIN_PLAN
 ServerEvents.recipes((event) => {
-	let { kubejs, tconstruct, cmi, create, neoecoae } = event.getRecipes()
+	let { kubejs, tconstruct, cmi, create, neoecoae, mekanism } = event.getRecipes()
 
 	// CMI 图标
 	kubejs.shaped("cmi:cmi_icon", [
@@ -12,6 +12,13 @@ ServerEvents.recipes((event) => {
 		B: "cmi:dreamcore_wire",
 		C: "cmi:mechanium_ingot"
 	})
+
+	// 反相石
+	mekanism.nucleosynthesizing(
+		"64x #forge:stone",
+		MekType.Gas.of("mekanism:antimatter", 20),
+		"64x cmi:antistone"
+	).duration(20 * 30)
 
 	// 幻晶线
 	tconstruct.casting_table(Material.Dreamcores.WIRE.withCount(2))
