@@ -349,14 +349,6 @@ ServerEvents.tags("block", (event) => {
 			"create:layered_deepslate"
 		])
 
-	// 遍历木头列表
-	WoodMaterials.forEach((wood) => {
-		let { STRIPPED_LOG, STRIPPED_WOOD } = wood
-
-		event.get("treetap:tappable")
-			.add([STRIPPED_LOG, STRIPPED_WOOD])
-	})
-
 	// 可取树液
 	removeTagAllId("treetap:tappable")
 		.add([

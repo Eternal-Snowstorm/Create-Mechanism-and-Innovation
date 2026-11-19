@@ -431,5 +431,82 @@ let WoodMaterials = [
 	Wood.RUBBERWOOD,
 	Wood.GREENHEART,
 	Wood.SKYROOT,
-	Wood.ENDERBARK
+	Wood.ENDERBARK,
+	Wood.CRIMSON,
+	Wood.WARPED
 ]
+
+// 抽屉
+const Drawers = Object.freeze({
+	// 种类
+	WOODS: Object.freeze([
+		{
+			id: "functionalstorage:oak",
+			wood: "oak"
+		},
+		{
+			id: "functionalstorage:spruce",
+			wood: "spruce"
+		},
+		{
+			id: "functionalstorage:birch",
+			wood: "birch"
+		},
+		{
+			id: "functionalstorage:jungle",
+			wood: "jungle"
+		},
+		{
+			id: "functionalstorage:acacia",
+			wood: "acacia"
+		},
+		{
+			id: "functionalstorage:dark_oak",
+			wood: "dark_oak"
+		},
+		{
+			id: "functionalstorage:mangrove",
+			wood: "mangrove"
+		},
+		{
+			id: "functionalstorage:crimson",
+			wood: "crimson"
+		},
+		{
+			id: "functionalstorage:warped",
+			wood: "warped"
+		},
+		{
+			id: "functionalstorage:cherry",
+			wood: "cherry"
+		},
+		{
+			id: "cmi:rubberwood",
+			wood: "rubberwood"
+		}
+	]),
+	// 格数
+	TYPES: Object.freeze([
+		1,
+		2,
+		4
+	]),
+	// 配方模板
+	PATTERNS: Object.freeze({
+		1: Object.freeze([
+			"AAA",
+			"ABA",
+			"AAA"
+		]),
+		2: Object.freeze([
+			"ABA",
+			"AAA",
+			"ABA"
+		]),
+		4: Object.freeze([
+			"ABA",
+			"BAB",
+			"ABA"
+		])
+	})
+})
