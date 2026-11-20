@@ -21,6 +21,8 @@ NebulaEvents.registerMaterial((event) => {
 		.ingot()
 		.plate()
 		.nugget()
+		.dust()
+		.rod()
 		.block()
 
 	// 不锈钢

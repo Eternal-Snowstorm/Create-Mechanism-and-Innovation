@@ -14,8 +14,9 @@ StartupEvents.registry("block", (event) => {
 		.capacity(16000)
 
 	event.create("cmi:cast_iron_boiler", "steam_letters:boiler")
+		.largeProduction(24)
 		.material(Materials.getCastIron())
-		.production(24.0)
+		.production(24)
 		.capacity(16000)
 
 	event.create("cmi:cast_iron_solid_burner", "steam_letters:solid_burner")
@@ -37,8 +38,9 @@ StartupEvents.registry("block", (event) => {
 		.capacity(32000)
 
 	event.create("cmi:steel_boiler", "steam_letters:boiler")
+		.largeProduction(48)
 		.material(Materials.getSteel())
-		.production(48.0)
+		.production(48)
 		.capacity(32000)
 
 	event.create("cmi:steel_solid_burner", "steam_letters:solid_burner")

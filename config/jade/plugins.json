@@ -60,7 +60,7 @@
     "filter": true,
     "backtank_capacity": true,
     "goggles.requires_goggles": false,
-    "goggles": false,
+    "goggles": true,
     "blaze_burner": true,
     "exact_block": true,
     "goggles.detailed": false,

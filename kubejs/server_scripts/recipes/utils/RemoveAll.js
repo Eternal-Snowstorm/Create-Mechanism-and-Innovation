@@ -258,10 +258,10 @@ ServerEvents.recipes((event) => {
 		"steam_letters:crafting/shaped/bronze/advanced_spout",
 		"functionalstorage:configuration_tool_2",
 		"meplacementtool:prism_core",
-		// 由于模组本身问题造成的 warn, 有点强迫症所以删掉
 		"nethersdelight:cutting/hoglin_sausage_alt",
 		"farmersrespite:chilidog_alt",
-		"moreburners:item_application/heat_converter"
+		"moreburners:item_application/heat_converter",
+		"createaddition:liquid_burning/biodiesel"
 	])
 
 	let removedMods = [

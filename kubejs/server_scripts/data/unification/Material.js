@@ -263,12 +263,12 @@ ServerEvents.highPriorityData((event) => {
 
 	// 青铜
 	new MaterialUnification("bronze")
-		.replaceIngot("thermal:bronze_ingot")
-		.replaceDust("thermal:bronze_dust")
-		.replaceNugget("thermal:bronze_nugget")
-		.replaceBlock("thermal:bronze_block")
-		.replacePlate("thermal:bronze_plate")
-		.replaceRod("thermal_extra:bronze_rod")
+		.replaceIngot("cmi:bronze_ingot")
+		.replaceDust("cmi:bronze_dust")
+		.replaceNugget("cmi:bronze_nugget")
+		.replaceBlock("cmi:bronze_block")
+		.replacePlate("cmi:bronze_plate")
+		.replaceRod("cmi:bronze_rod")
 
 	// 钻石
 	new MaterialUnification("diamond")
