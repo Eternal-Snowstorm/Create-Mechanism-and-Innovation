@@ -48,7 +48,7 @@ BlockEvents.rightClicked((event) => {
 
 	if (block.getId() === "cmi:impact_pile" && hasWrench) {
 		let below = level.getBlock(pos.below())
-		if (below.getId() !== "create:mechanical_drill" || below.properties.facing !== "down") {
+		if (below.getId() !== "create:mechanical_drill") {
 			return
 		}
 
