@@ -129,10 +129,6 @@ ServerEvents.tags("fluid", (event) => {
 			.add(`thermalconstruct:molten_${material}`)
 	})
 
-	// 高温蒸汽
-	event.get("forge:high_temperature_steam")
-		.remove("minecraft:lava")
-
 	// 柴油
 	event.get("forge:diesel")
 		.add("thermal_extra:diesel")
