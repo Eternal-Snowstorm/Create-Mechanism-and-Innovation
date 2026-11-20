@@ -5,14 +5,12 @@
 IEEvents.multiblockForm((event) => {
 	let { player, multiblock } = event
 
-	let Namespace = Object.freeze({
+	const Namespace = Object.freeze({
 		IE: "immersiveengineering",
-		II: "immersiveindustry",
-		// 不排除后面会添加新机器啦..
-		CMI: "cmi"
+		II: "immersiveindustry"
 	})
 
-	let Multiblocks = Object.freeze({
+	const Multiblocks = Object.freeze({
 		IE: Object.freeze({
 			ALLOT_SMELTER: "alloy_smelter",
 			ASSEMBLER: "assembler",
@@ -58,10 +56,9 @@ IEEvents.multiblockForm((event) => {
 		)
 
 		if (multiblock === multiblockId) {
-			let tranKey =
-				Component.translatable("message.cmi.disabled_multiblock")
-					.red()
-					.bold()
+			let tranKey = Component.translatable("message.cmi.disabled_multiblock")
+				.red()
+				.bold()
 			player.displayClientMessage(tranKey, true)
 
 			event.cancel()
