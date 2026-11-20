@@ -332,7 +332,7 @@ ServerEvents.recipes((event) => {
 	new ModifierRecipeBuilder("nebula_tinker:converge")
 		.allowCrystal(true)
 		.tools("#tconstruct:modifiable/ranged")
-		.level(1, 3)
+		.level(1, 5)
 		.slots("upgrades", 1)
 		.inputs([
 			"thermal:rf_coil",
