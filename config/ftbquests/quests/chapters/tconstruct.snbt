@@ -1,0 +1,236 @@
+{
+	always_invisible: true
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "tconstruct"
+	group: "050255AE19A93344"
+	id: "06EA4014B2578D31"
+	order_index: 8
+	quest_enhance_decorative_lines: [ ]
+	quest_enhance_hidden_dependency_lines: [ ]
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["060CE1F140832373"]
+			description: ["工作站可以读取附近容器的内容来进行合成"]
+			id: "1C87D5AAC9DFF606"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "3BC47905149FAC93"
+				item: "craftingstationjei:crafting_station"
+				type: "item"
+			}]
+			x: 0.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["060CE1F140832373"]
+			description: ["消耗模具可以制造工具部件"]
+			id: "7DA5871CF2E66F10"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "5505A86CCBC22855"
+				item: "tconstruct:part_builder"
+				type: "item"
+			}]
+			x: 4.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["4E56A00869658583"]
+			description: ["使用部件来制作初级工具(高级工具用工匠砧)"]
+			id: "060CE1F140832373"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "2100D0F1C70A5AAA"
+				item: "tconstruct:tinker_station"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["060CE1F140832373"]
+			description: ["用来存储模具和注模"]
+			id: "17E0DC295D597426"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "5F62AF81E9ECCB8C"
+				item: "tconstruct:cast_chest"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["060CE1F140832373"]
+			description: ["使用部件制作所有的工具（除了做不了的）"]
+			id: "6FEE63C3D045CF70"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "045B99FA9C47F97C"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "tconstruct:tinkers_anvil"
+					}
+				}
+				title: "Any #tconstruct:tinkers_anvil"
+				type: "item"
+			}]
+			title: "工匠砧"
+			x: 4.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["060CE1F140832373"]
+			description: ["第一台熔炼炉，一次最多只能熔炼三个物品"]
+			id: "2A1A7BFD925717F6"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "60A3BD283A4D3532"
+				item: "tconstruct:seared_melter"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["2A1A7BFD925717F6"]
+			description: ["焦黑加热器只能燃烧固体燃料来提供冶炼炉工作的热量，最多只能提供937摄氏度，只能熔炼一些熔点较低的金属"]
+			id: "7DC41931E5B228B6"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "0A6A257C38149BDF"
+				item: "tconstruct:seared_heater"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["2A1A7BFD925717F6"]
+			description: [
+				"用来装载冶炼炉的液体燃料，基本都是使用液体燃料来进行冶炼。"
+				"利用本包的无限岩浆可以熔炼大多数金属"
+				"具体金属熔点可以看对应金属，下面都会写熔点"
+			]
+			id: "4AE3E0ABC87407D1"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "73B6885246D301DE"
+				item: "tconstruct:seared_fuel_tank"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["4AE3E0ABC87407D1"]
+			description: ["除了卡科技的金属基本都能融化（大概"]
+			id: "5F270039A542B87A"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "5BCE1D5B59E222AE"
+				item: "minecraft:lava_bucket"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 3.5d
+		}
+		{
+			description: [
+				"工匠大百科里面详细记载了："
+				"  匠魂的材料属性和特殊能力；"
+				"  武器，工具与盔甲;"
+				"  各种升级的详细属性和能力。"
+				"只要仔细翻翻就能找到最适合的。"
+				""
+				"下面就只介绍一点工匠大百科里没写的装配台和熔炼炉(详细记载在《入门熔炼术》，《大师熔炼术》和《奇异熔铸术》里)"
+				""
+				"之后的任务仅做指导，会玩的可以不用完成"
+			]
+			hide_dependent_lines: true
+			icon: {
+				Count: 1
+				id: "tconstruct:encyclopedia"
+				tag: {
+					mantle: {
+						book: {
+							current_page: ""
+						}
+					}
+				}
+			}
+			id: "4E56A00869658583"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "匠魂材料大百科"
+			tasks: [
+				{
+					id: "3BD9A6EE70A0C21B"
+					item: {
+						Count: 1
+						id: "tconstruct:encyclopedia"
+						tag: {
+							mantle: {
+								book: {
+									current_page: ""
+								}
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "101C7F25F090C15A"
+					type: "checkmark"
+				}
+			]
+			x: 2.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["2A1A7BFD925717F6"]
+			description: ["简单来说就是大号合金炉，可以把金属都融成液态并且在符合配方的情况下进行合金"]
+			id: "2152DD07041EA829"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "71186151988A8DA6"
+				item: "tconstruct:smeltery_controller"
+				type: "item"
+			}]
+			title: "焦黑熔炼炉"
+			x: 2.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["2152DD07041EA829"]
+			description: ["更高级的熔炼炉(?),里面熔炼的金属不会自己合金(带熔炼功能的焦黑储罐)"]
+			id: "6C9C3E1E3D8B3079"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "0C2ABA6E36BBAC5C"
+				item: "tconstruct:foundry_controller"
+				type: "item"
+			}]
+			title: "焦褐熔铸炉"
+			x: 2.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["5F270039A542B87A"]
+			description: ["有了它就可以熔炼铁了"]
+			id: "2A8B6256D48EC25A"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "27AD25974814CBE5"
+				item: "immersiveengineering:biodiesel_bucket"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 5.5d
+		}
+	]
+	title: "tconstruct"
+}

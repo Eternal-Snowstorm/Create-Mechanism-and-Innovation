@@ -409,6 +409,34 @@
 			x: 10.0d
 			y: 2.0d
 		}
+		{
+			dependencies: ["575D0E9BC127BF1C"]
+			id: "3A56C98FA4442897"
+			quest_enhance_disable_scroll_paging: false
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "122667E67BE23202"
+				item: "immersiveindustry:car_kiln"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["3A56C98FA4442897"]
+			description: ["虽然炼锇锭可以不用车窑，但是下一章任务要用，所以还是推荐做一个。"]
+			id: "735D7AA1C1ACEBC1"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "坚固金属"
+			tasks: [{
+				id: "16DAC49F4E1FCFCE"
+				item: "mekanism:ingot_osmium"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 3.0d
+		}
 	]
 	title: "机器迭代(WIP)"
 }

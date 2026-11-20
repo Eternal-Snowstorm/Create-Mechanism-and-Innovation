@@ -5,7 +5,7 @@
 	filename: "qwq"
 	group: "050255AE19A93344"
 	id: "42D2EA9CFCAB4BB9"
-	order_index: 6
+	order_index: 7
 	quest_enhance_decorative_lines: [ ]
 	quest_enhance_hidden_dependency_lines: [ ]
 	quest_links: [ ]
@@ -199,404 +199,9 @@
 			y: -3.0d
 		}
 		{
-			dependencies: [
-				"78AA95E3CA8606A0"
-				"630B4C81E08F7B82"
-			]
-			id: "2D4B0D1E342A2BE1"
-			quest_enhance_disable_scroll_paging: false
-			quest_enhance_quest_background: "kaleidoscope_cookery:textures/advancement/background.png"
-			shape: "gear"
-			size: 2.0d
-			tasks: [{
-				id: "1FB16AF5EB50B323"
-				item: "cmi:basic_mekanism_mechanism"
-				type: "item"
-			}]
-			x: 15.0d
-			y: 0.5d
-		}
-		{
-			dependencies: [
-				"402808BF06429750"
-				"592BCA21F18F2269"
-			]
-			id: "78AA95E3CA8606A0"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "7EFA868AB1385E5C"
-				item: "mekanism:basic_control_circuit"
-				type: "item"
-			}]
-			x: 13.0d
-			y: -0.5d
-		}
-		{
-			dependencies: ["07FEB9EEE11846D3"]
-			id: "402808BF06429750"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "0EFD0095DED266D8"
-				item: "neoecoae:crystal_matrix"
-				type: "item"
-			}]
-			x: 13.0d
-			y: -2.5d
-		}
-		{
-			dependencies: ["48BE5E7913CB16BC"]
-			id: "5968FDE57690B0B5"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "74ECF635167AC3A8"
-				item: "neoecoae:energized_crystal_dust"
-				type: "item"
-			}]
-			x: 11.0d
-			y: -5.5d
-		}
-		{
-			dependencies: ["5968FDE57690B0B5"]
-			id: "07FEB9EEE11846D3"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "0C65132138933C6C"
-				item: "neoecoae:crystal_ingot"
-				type: "item"
-			}]
-			x: 11.0d
-			y: -3.5d
-		}
-		{
-			dependencies: ["21D270C51E152805"]
-			id: "48BE5E7913CB16BC"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "1ACCE4F00BD52770"
-				item: "neoecoae:energized_crystal"
-				type: "item"
-			}]
-			x: 13.0d
-			y: -6.5d
-		}
-		{
-			dependencies: [
-				"38C4F70ADD8A2584"
-				"5C91A6B0EEF0E16A"
-			]
-			id: "592BCA21F18F2269"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "6FFA9245C634B7E8"
-				item: "cmi:basic_electronic_components"
-				type: "item"
-			}]
-			x: 11.0d
-			y: -1.5d
-		}
-		{
-			dependencies: [
-				"077007A321AACB43"
-				"15856673CC935E11"
-			]
-			id: "38C4F70ADD8A2584"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "5CEB07C33604BE16"
-				item: "cmi:osmium_wafer"
-				type: "item"
-			}]
-			x: 9.0d
-			y: -0.5d
-		}
-		{
-			dependencies: ["7C4610039C4583C2"]
-			id: "5C91A6B0EEF0E16A"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "060959689F3FC3A4"
-				item: "cmi:enriched_alloy"
-				type: "item"
-			}]
-			x: 9.0d
-			y: -2.5d
-		}
-		{
-			dependencies: ["2A2D5B5398B014C5"]
-			id: "7C4610039C4583C2"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "5C0115459A74A346"
-				item: "mekanism:metallurgic_infuser"
-				type: "item"
-			}]
-			x: 9.0d
-			y: -4.5d
-		}
-		{
-			dependencies: ["402F78E7DF1743FC"]
-			id: "077007A321AACB43"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "087891EE81E6084E"
-				item: "cmi:enriched_osmium_crystal"
-				type: "item"
-			}]
-			x: 7.0d
-			y: -1.5d
-		}
-		{
-			dependencies: ["21D270C51E152805"]
-			id: "402F78E7DF1743FC"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "53F7F0560311B8B1"
-				item: "cmi:pure_semi_molten_osmium"
-				type: "item"
-			}]
-			x: 7.0d
-			y: -3.5d
-		}
-		{
-			dependencies: ["21D270C51E152805"]
-			id: "15856673CC935E11"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "4DD8AA7842ED3901"
-				item: "expatternprovider:circuit_cutter"
-				type: "item"
-			}]
-			x: 7.0d
-			y: 0.5d
-		}
-		{
-			dependencies: ["202DA7D1421AC3BD"]
-			id: "4F64A9DFD0711010"
-			quest_enhance_disable_scroll_paging: false
-			shape: "hexagon"
-			tasks: [{
-				id: "6268E615985B6D91"
-				item: "cmi:electrolyzer"
-				type: "item"
-			}]
-			x: 17.0d
-			y: -2.5d
-		}
-		{
-			dependencies: [
-				"2D4B0D1E342A2BE1"
-				"4F64A9DFD0711010"
-			]
-			id: "1AEB8A6ACA26FC36"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "302512B92A4DAE8B"
-				item: "cmi:chromeplated_steel_gear"
-				type: "item"
-			}]
-			x: 15.0d
-			y: -1.5d
-		}
-		{
-			dependencies: [
-				"481552A49309F9D9"
-				"5E3BE7A051CD0E78"
-			]
-			description: ["电镀液使用后会变回硫酸, 不会消耗"]
-			id: "202DA7D1421AC3BD"
-			quest_enhance_disable_scroll_paging: false
-			subtitle: "循环使用"
-			tasks: [{
-				id: "479ACC8BCB041CB7"
-				item: "cmi:plating_solution_bucket"
-				type: "item"
-			}]
-			x: 15.0d
-			y: -3.5d
-		}
-		{
-			dependencies: ["40C1F0F504964026"]
-			id: "481552A49309F9D9"
-			quest_enhance_disable_scroll_paging: false
-			subtitle: "第一桶硫酸！"
-			tasks: [{
-				id: "2E987A84953EEED0"
-				item: "mekanism:sulfuric_acid_bucket"
-				type: "item"
-			}]
-			x: 15.0d
-			y: -5.5d
-		}
-		{
-			dependencies: ["21D270C51E152805"]
-			id: "5E3BE7A051CD0E78"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "05D061C4D26F5CF6"
-				item: "cmi:chromium_dust"
-				type: "item"
-			}]
-			x: 13.0d
-			y: -4.5d
-		}
-		{
-			dependencies: ["5128AEA2002411D9"]
-			icon: "mekanism:sulfur_trioxide_bucket"
-			id: "40C1F0F504964026"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "51B074C2D90C37A2"
-				type: "checkmark"
-			}]
-			title: "三氧化硫"
-			x: 17.0d
-			y: -6.5d
-		}
-		{
-			dependencies: ["54605A0BC5E7BAB4"]
-			icon: "mekanism:sulfur_dioxide_bucket"
-			id: "5128AEA2002411D9"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "50446939C6EAFFEA"
-				type: "checkmark"
-			}]
-			title: "二氧化硫"
-			x: 19.0d
-			y: -5.5d
-		}
-		{
-			dependencies: ["21D270C51E152805"]
-			id: "54605A0BC5E7BAB4"
-			quest_enhance_disable_scroll_paging: false
-			shape: "hexagon"
-			subtitle: "热解硫粉"
-			tasks: [{
-				id: "056D6D28A919A195"
-				item: "thermal:machine_pyrolyzer"
-				type: "item"
-			}]
-			x: 17.0d
-			y: -4.5d
-		}
-		{
-			dependencies: ["177B11EF53B286AA"]
-			id: "630B4C81E08F7B82"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "101FD930356CA499"
-				item: "cmi:silicon_rubber_plate"
-				type: "item"
-			}]
-			x: 17.0d
-			y: -0.5d
-		}
-		{
-			dependencies: ["1E5AE69BBC7AA5CF"]
-			id: "177B11EF53B286AA"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "19002BB855A0A609"
-				item: "cmi:silicon_rubber_bucket"
-				type: "item"
-			}]
-			x: 19.0d
-			y: -1.5d
-		}
-		{
-			dependencies: ["0653A33CE9A4C9DB"]
-			id: "1E5AE69BBC7AA5CF"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "2245AB29311EAE50"
-				item: "cmi:polysilicone_ether_bucket"
-				type: "item"
-			}]
-			x: 19.0d
-			y: -3.5d
-		}
-		{
-			dependencies: ["3FACF1F2E75FE4B9"]
-			id: "0653A33CE9A4C9DB"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "3377F42E0FDAEF5D"
-				item: "cmi:light_silicone_ether_bucket"
-				type: "item"
-			}]
-			x: 21.0d
-			y: -4.5d
-		}
-		{
-			dependencies: ["79461202D5061059"]
-			id: "3FACF1F2E75FE4B9"
-			quest_enhance_disable_scroll_paging: false
-			shape: "hexagon"
-			size: 2.0d
-			tasks: [{
-				id: "1D3CD2978AA7BA8A"
-				item: "cmi:chemical_reactor"
-				type: "item"
-			}]
-			x: 21.0d
-			y: -2.5d
-		}
-		{
-			dependencies: [
-				"108276FAC1946E3F"
-				"6190E940F1BF2D16"
-			]
-			id: "2A2D5B5398B014C5"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "7CE7DE3D20FDBDD3"
-				item: "cmi:blitz_unit"
-				type: "item"
-			}]
-			x: 9.0d
-			y: -6.5d
-		}
-		{
-			dependencies: ["21D270C51E152805"]
-			id: "6190E940F1BF2D16"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "310B3F1B9876FA37"
-				item: "thermalconstruct:blitz_blood_bucket"
-				type: "item"
-			}]
-			x: 11.0d
-			y: -7.5d
-		}
-		{
-			dependencies: ["21D270C51E152805"]
-			id: "108276FAC1946E3F"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "6E0DADD45A07ABA5"
-				item: "thermal:machine_bottler"
-				type: "item"
-			}]
-			x: 7.0d
-			y: -5.5d
-		}
-		{
-			description: ["链接本任务的任务的前置还未链接, 暂时链接于此"]
-			hide_dependency_lines: false
-			id: "21D270C51E152805"
-			quest_enhance_disable_scroll_paging: false
-			subtitle: "注意"
-			tasks: [{
-				id: "423A0E7ED2B4027D"
-				title: "点击开始mek任务线"
-				type: "checkmark"
-			}]
-			x: 11.5d
-			y: 0.5d
-		}
-		{
 			dependencies: ["4A878E92E1DB07B7"]
 			id: "6686E71A943DBE99"
+			optional: true
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "另一条线"
 			tasks: [{
@@ -610,6 +215,7 @@
 		{
 			dependencies: ["7C3428E9D5F8696F"]
 			id: "4A878E92E1DB07B7"
+			optional: true
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "不是砖"
 			tasks: [{
@@ -623,6 +229,7 @@
 		{
 			dependencies: ["402B55C12A4ED522"]
 			id: "7C3428E9D5F8696F"
+			optional: true
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "5D66062C9C4358F7"
@@ -635,6 +242,7 @@
 		{
 			dependencies: ["0693C9D0C0185844"]
 			id: "402B55C12A4ED522"
+			optional: true
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "4FB02D3FD739D5F6"
@@ -647,6 +255,7 @@
 		{
 			dependencies: ["62C926D671A9DB11"]
 			id: "0693C9D0C0185844"
+			optional: true
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "51139BAB305D1812"
@@ -659,6 +268,7 @@
 		{
 			dependencies: ["639D08D2B1E91748"]
 			id: "62C926D671A9DB11"
+			optional: true
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "7F4410D119628533"
@@ -671,6 +281,7 @@
 		{
 			dependencies: ["6A128F7C271B4579"]
 			id: "639D08D2B1E91748"
+			optional: true
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
 				id: "5B3AAE07B910769E"
@@ -792,130 +403,16 @@
 			y: 5.5d
 		}
 		{
-			dependencies: ["75976F12CFFBC1F3"]
-			description: [
-				"&a团藻块&r通常成群悬浮于&e伊甸星环&r的半空中, 形成规模不一的群落. 它们的内部储存着大量水分, 似乎是为了应对不时之需. (尽管这些水呈现出绿色, 但实际上并不存在任何问题)"
-				""
-				"在伊甸这样一个长期缺乏阳光的环境中, 它们进化出了惊人的光合作用能力. 经过简单加工, 便能从中提取出大量&b光合反应液&r."
-				""
-				"以现有的科技水平, 我们仍然无法完全理解它们的繁衍方式与生存机制. 而与它们共同生存的&a悬生藤&r, &a藻衣&r和&a共生霉菌&r, 似乎都在它们的繁衍与生长过程中扮演着某种重要角色."
-				""
-				"或许在&b未来&r, 我们终有机会揭开这些谜团."
-				"{image:cmi:textures/images/eden/volvox_ball.png width:1 height:1 align:center fit:true}"
-			]
-			id: "642E22913AC26E70"
-			quest_enhance_disable_scroll_paging: false
-			subtitle: "光合作用最强之人"
-			tasks: [{
-				id: "10B60D22F178A257"
-				item: {
-					Count: 1
-					id: "itemfilters:or"
-					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "edenring:volvox_block"
-							}
-							{
-								Count: 1b
-								id: "edenring:volvox_block_dense"
-							}
-						]
-					}
-				}
-				title: "团藻块"
-				type: "item"
-			}]
-			title: "团藻"
-			x: 19.5d
-			y: 3.5d
-		}
-		{
-			dependencies: ["75976F12CFFBC1F3"]
-			id: "48482A7ED327492E"
-			quest_enhance_disable_scroll_paging: false
-			subtitle: "一个当前时期可以被动生产的方式"
-			tasks: [
-				{
-					id: "17C80620798CE021"
-					item: {
-						Count: 1
-						id: "itemfilters:tag"
-						tag: {
-							value: "forge:dusts/glowstone"
-						}
-					}
-					title: "荧石粉"
-					type: "item"
-				}
-				{
-					count: 16L
-					id: "5BB7FAC35C9E19D8"
-					item: {
-						Count: 1
-						id: "itemfilters:or"
-						tag: {
-							items: [
-								{
-									Count: 1b
-									id: "itemfilters:tag"
-									tag: {
-										value: "minecraft:saplings"
-									}
-								}
-								{
-									Count: 1b
-									id: "itemfilters:tag"
-									tag: {
-										value: "minecraft:leaves"
-									}
-								}
-							]
-						}
-					}
-					title: "植物原料"
-					type: "item"
-				}
-				{
-					count: 16L
-					id: "4BD557970495AAE6"
-					item: { Count: 16, id: "createaddition:biomass" }
-					type: "item"
-				}
-			]
-			x: 22.5d
-			y: 3.5d
-		}
-		{
-			dependencies: ["3FACF1F2E75FE4B9"]
-			id: "75976F12CFFBC1F3"
-			quest_enhance_disable_scroll_paging: false
-			shape: "gear"
-			size: 2.0d
-			tasks: [{
-				id: "20B760C6AE3B3868"
-				item: "cmi:reinforced_chemical_reactor"
-				type: "item"
-			}]
-			x: 21.0d
-			y: 0.5d
-		}
-		{
-			dependencies: [
-				"642E22913AC26E70"
-				"48482A7ED327492E"
-			]
-			dependency_requirement: "one_completed"
-			id: "1C91019F4B632C30"
+			description: ["高级mek  月球后"]
+			id: "4546CC0C4547690B"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
-				id: "1903C23E022E8BA7"
-				item: "cmi:photosyn_fluid_bucket"
-				type: "item"
+				id: "21C388E0B7F1DA4A"
+				title: "流程"
+				type: "checkmark"
 			}]
-			x: 21.0d
-			y: 6.5d
+			x: 3.0d
+			y: 3.0d
 		}
 	]
 	title: "qwq"
