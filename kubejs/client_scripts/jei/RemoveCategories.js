@@ -7,6 +7,8 @@ JEIEvents.removeCategories((event) => {
 
 	event.remove([
 		"alexscaves:spelunkery_table",
-		"alexscaves:nuclear_furnace"
+		"alexscaves:nuclear_furnace",
+		// 暂时隐藏mbtool的JEICategory
+		"mbtool:multiblock_structure"
 	])
 })
