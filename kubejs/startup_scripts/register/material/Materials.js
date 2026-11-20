@@ -14,6 +14,15 @@ NebulaEvents.registerMaterial((event) => {
 		.nugget()
 		.molten()
 
+	// 青铜
+	event.register("bronze", MiningLevels.STONE)
+		.color(0xFFC370, 0x806752)
+		.isMetal()
+		.ingot()
+		.plate()
+		.nugget()
+		.block()
+
 	// 不锈钢
 	event.register("stainless_steel", MiningLevels.DIAMOND)
 		.color(0x647280, 0x4C5661)
