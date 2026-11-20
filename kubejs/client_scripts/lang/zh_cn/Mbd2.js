@@ -6,7 +6,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	 */
 	function addMBDLang(key, name) {
 		event.add(`block.${Cmi.MODID}.${key}`, name)
-		event.add(`mbtool.structure.cmi_${key}`, `构件与革新: ${name}`)
+		event.add(`mbtool.structure.${key}`, `构件与革新: ${name}`)
 
 		event.add(`block.${Cmi.MODID}.${key}_input_bus`, `${name}输入总线`)
 		event.add(`block.${Cmi.MODID}.${key}_output_bus`, `${name}输出总线`)
