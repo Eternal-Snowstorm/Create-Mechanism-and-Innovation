@@ -136,7 +136,7 @@
 			return
 		}
 
-		let itemIds = ingredient.getItemIds()["toArray(java.lang.Object[])"]([""])
+		let itemIds = ingredient.getItemIds()
 
 		itemIds.forEach((item) => {
 			event.add(item)
@@ -144,4 +144,4 @@
 
 		return event
 	}
-})()
+})()	
