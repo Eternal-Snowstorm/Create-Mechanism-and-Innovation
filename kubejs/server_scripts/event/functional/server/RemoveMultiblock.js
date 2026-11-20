@@ -39,6 +39,7 @@ MbtoolKJSEvents.InitMbtoolStructures((event) => {
 	removeStructure("solar_tower")
 	removeStructure("solid_burner")
 	removeStructure("steel_fluid_tank")
+	removeStructure("tconstruct_smeltery")
 
 	/**
 	 * 
