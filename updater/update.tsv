@@ -46,7 +46,7 @@ c19280d8433f6b855ab2ca4160fd991dde218df8	mods/createcoolingfan-forge-1.20.1-1.4.
 416ea3d5c1190246369bbcfa32e5e86597402264	mods/createdieselgenerators-1.20.1-1.3.12.jar	https://edge.forgecdn.net/files/7932/785/createdieselgenerators-1.20.1-1.3.12.jar	curseforge:869316	
 cb249347ad15914619a81371b4cfa35f74f575ed	mods/CreateDragonsPlus-1.11.9.jar	https://edge.forgecdn.net/files/8937/74/CreateDragonsPlus-1.11.9.jar	curseforge:1216624	
 87612feace11044eb257e4dedb443ce66b57b4d5	mods/create-enchantment-industry-2.5.4b.jar	https://edge.forgecdn.net/files/9104/689/create-enchantment-industry-2.5.4b.jar	curseforge:688768	
-6af03df385f8bb14dd01b862615c5febdff7e6dc	mods/fluidlogistics-1.3.3-mc1.20.1.jar	https://edge.forgecdn.net/files/9712/725/fluidlogistics-1.3.3-mc1.20.1.jar	curseforge:1475079	mods/fluidlogistics-1.3.2-mc1.20.1.jar
+6af03df385f8bb14dd01b862615c5febdff7e6dc	mods/fluidlogistics-1.3.3-mc1.20.1.jar	https://edge.forgecdn.net/files/9712/725/fluidlogistics-1.3.3-mc1.20.1.jar	curseforge:1475079	
 799b1ad1be700000bcc1630eb4c8a9f08be4b80d	mods/interlocked-1.1.jar	https://edge.forgecdn.net/files/8829/48/interlocked-1.1.jar	curseforge:1600362	
 066572eef380c5d3d34138110cf0c70c55c487bd	mods/create_jetpack-forge-4.4.6.jar	https://edge.forgecdn.net/files/7285/444/create_jetpack-forge-4.4.6.jar	curseforge:655608	
 9212f66f7e602abd02e20611b3a629689df4f684	mods/Railway-Automation-1.20.1-1.1.jar	https://edge.forgecdn.net/files/9649/703/Railway-Automation-1.20.1-1.1.jar	curseforge:1657925	
@@ -137,6 +137,8 @@ e44a12eb51813b16faaab89b8073ec63c746c1b0	mods/lmft-1.0.4+1.20.1-forge.jar	https:
 56ac9a6d0ffa84443f95ec798ccfbee80023a6ab	mods/MekanismPipezFix-1.20.1-1.0.1.jar	https://edge.forgecdn.net/files/7661/925/MekanismPipezFix-1.20.1-1.0.1.jar	curseforge:1233861	
 b7f12ae710888b01746507a0aa8cb375f5897158	mods/Mekanism-1.20.1-10.4.16.80.jar	https://edge.forgecdn.net/files/6552/911/Mekanism-1.20.1-10.4.16.80.jar	curseforge:268560	
 e0942d396a70c09038e6c2e5e1da6505178249b8	mods/melody_forge_1.0.3_MC_1.20.1-1.20.4.jar	https://edge.forgecdn.net/files/5109/692/melody_forge_1.0.3_MC_1.20.1-1.20.4.jar	curseforge:938643	
+10e5446b633bd264e5e61de8e115f6dac4d8062d	mods/mezz_config-1.20.1-forge-0.7.1.jar	https://edge.forgecdn.net/files/9527/933/mezz_config-1.20.1-forge-0.7.1.jar	curseforge:1689768	
+abcb9a27071e527f0acd624a6093189659923af6	mods/mezz_config_gui-1.20.1-forge-mc1.20.1-0.5.11.jar	https://edge.forgecdn.net/files/9218/382/mezz_config_gui-1.20.1-forge-mc1.20.1-0.5.11.jar	curseforge:1700987	
 5bdda0781bf9dfb5f992a7aa2bee64d5d3fe0b84	mods/modelfix-1.15.jar	https://edge.forgecdn.net/files/5200/949/modelfix-1.15.jar	curseforge:676136	
 fcebe51e3c2ca34793f9b132fa05b5494ffc76a4	mods/ModernUI-Forge-1.20.1-3.12.0.1-universal.jar	https://edge.forgecdn.net/files/6956/345/ModernUI-Forge-1.20.1-3.12.0.1-universal.jar	curseforge:352491	
 252d5cd8ce7f96cfdf26585ef532c7a5a8b7bdc2	mods/modernfix-forge-5.28.0-mc1.20.1.jar	https://edge.forgecdn.net/files/9685/369/modernfix-forge-5.28.0-mc1.20.1.jar	curseforge:790626	

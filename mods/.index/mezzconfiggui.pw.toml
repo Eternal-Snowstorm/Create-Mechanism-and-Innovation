@@ -1,0 +1,21 @@
+filename = 'mezz_config_gui-1.20.1-forge-mc1.20.1-0.5.11.jar'
+name = 'MezzConfigGUI'
+side = 'server'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'beta'
+x-prismlauncher-version-number = 'MezzConfig GUI mc1.20.1-0.5.11 for Forge'
+
+[download]
+hash = 'abcb9a27071e527f0acd624a6093189659923af6'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9218382
+project-id = 1700987
+
+[[x-prismlauncher-dependencies]]
+addonId = '1689768'
+type = 'REQUIRED'
