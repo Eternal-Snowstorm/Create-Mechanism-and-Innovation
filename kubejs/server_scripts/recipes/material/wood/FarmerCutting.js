@@ -4,6 +4,10 @@ ServerEvents.recipes((event) => {
 	WoodMaterials.forEach((wood) => {
 		let { SAPLING, LEAVE } = wood
 
+		if (LEAVE.endsWith("_wart_block")) {
+			return
+		}
+
 		farmersdelight.cutting([
 			LEAVE,
 			Item.of("minecraft:dead_bush")

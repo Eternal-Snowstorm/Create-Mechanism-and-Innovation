@@ -58,6 +58,10 @@ ServerEvents.recipes((event) => {
 	WoodMaterials.forEach((wood) => {
 		let { SAPLING, LEAVE } = wood
 
+		if (LEAVE.endsWith("_wart_block")) {
+			return
+		}
+
 		create.cutting([
 			LEAVE,
 			Item.of("minecraft:stick", 2)

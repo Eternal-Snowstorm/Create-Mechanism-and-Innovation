@@ -1,0 +1,18 @@
+filename = 'mezz_config-1.20.1-forge-0.7.1.jar'
+name = 'MezzConfig'
+side = 'server'
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'beta'
+x-prismlauncher-version-number = 'MezzConfig 0.7.1 for Forge 1.20.1'
+
+[download]
+hash = '10e5446b633bd264e5e61de8e115f6dac4d8062d'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9527933
+project-id = 1689768

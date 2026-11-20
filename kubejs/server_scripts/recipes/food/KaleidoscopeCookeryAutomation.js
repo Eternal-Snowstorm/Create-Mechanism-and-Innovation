@@ -2,28 +2,28 @@ ServerEvents.recipes((event) => {
 	let { create } = event.getRecipes()
 
 	create.cutting([
-		"3x kaleidoscope_cookery:raw_cut_small_meat",
+		"3x kaleidoscope_cookery:raw_cut_small_meats",
 		"minecraft:bone"
 	], [
 		"1x minecraft:chicken"
 	]).id("kaleidoscopecookery_automation:chicken")
 
 	create.cutting([
-		"3x kaleidoscope_cookery:raw_cut_small_meat",
+		"3x kaleidoscope_cookery:raw_cut_small_meats",
 		"minecraft:bone"
 	], [
 		"1x minecraft:rabbit"
 	]).id("kaleidoscopecookery_automation:rabbit")
 
 	create.cutting([
-		"3x kaleidoscope_cookery:cooked_cut_small_meat",
+		"3x kaleidoscope_cookery:cooked_cut_small_meats",
 		"minecraft:bone"
 	], [
 		"1x minecraft:cooked_chicken"
 	])
 
 	create.cutting([
-		"3x kaleidoscope_cookery:cooked_cut_small_meat",
+		"3x kaleidoscope_cookery:cooked_cut_small_meats",
 		"minecraft:bone"
 	], [
 		"1x minecraft:cooked_rabbit"

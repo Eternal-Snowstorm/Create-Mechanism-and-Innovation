@@ -1,6 +1,6 @@
 // priority: 11
 ServerEvents.tags("item", (event) => {
-	// 添加标签
+	// 高级添加标签
 	let add = advancedAdd.bind(event)
 
 	// 放射性物品
@@ -13,12 +13,6 @@ ServerEvents.tags("item", (event) => {
 	// 木板变体
 	event.get("tconstruct:wood_variants/planks")
 		.add("thermal:rubberwood_planks")
-
-	event.get("minecraft:planks/crimson")
-	.add("minecraft:crimson_planks")
-
-	event.get("minecraft:planks/warped")
-	.add("minecraft:warped_planks")
 
 	// 构件
 	add("create:mechanisms/precision", "create:precision_mechanism")
@@ -219,6 +213,7 @@ ServerEvents.tags("item", (event) => {
 		.add("#functionalstorage:item_drawer")
 		.add("functionalstorage:ender_drawer")
 
+	// 物品抽屉
 	event.get("functionalstorage:item_drawer")
 		.add("#functionalstorage:drawer/wood")
 		.add("#functionalstorage:compacting_drawer")
@@ -226,53 +221,34 @@ ServerEvents.tags("item", (event) => {
 		.add("functionalstorage:framed_2")
 		.add("functionalstorage:framed_4")
 
+	// 流体抽屉
 	event.get("functionalstorage:fluid_drawer")
 		.add("functionalstorage:fluid_1")
 		.add("functionalstorage:fluid_2")
 		.add("functionalstorage:fluid_4")
 
+	// 压缩抽屉
 	event.get("functionalstorage:compacting_drawer")
 		.add("functionalstorage:compacting_drawer")
 		.add("functionalstorage:simple_compacting_drawer")
 		.add("functionalstorage:compacting_framed_drawer")
 		.add("functionalstorage:framed_simple_compacting_drawer")
 
-	event.get("functionalstorage:drawers/rubberwood_1")
-		.add("functional_storage_js:rubberwood_1")
+	// 木质抽屉
+	Drawers.WOODS.forEach((drawer) => {
+		Drawers.TYPES.forEach((type) => {
+			// 拼接物品 id
+			let drawerId = `${drawer.id}_${type}`
 
-	event.get("functionalstorage:drawers/rubberwood_2")
-		.add("functional_storage_js:rubberwood_2")
-
-	event.get("functionalstorage:drawers/rubberwood_4")
-		.add("functional_storage_js:rubberwood_4")
-
-	let drawerMaterialWoods = [
-		"oak",
-		"spruce",
-		"birch",
-		"jungle",
-		"acacia",
-		"dark_oak",
-		"cherry",
-		"mangrove",
-		"crimson",
-		"warped",
-		"cmi:rubberwood"
-	]
-	drawerMaterialWoods.forEach((woodName) => {
-		let woodId = woodName.includes(":")
-			? woodName
-			: `functionalstorage:${woodName}`
-
-		let woodType = woodName.split(":").pop()
-
-		let drawerType = [1, 2, 4]
-
-		drawerType.forEach((type) => {
-			let drawerId = `${woodId}_${type}`
-			event.get(`functionalstorage:drawers/${woodType}/${type}`)
+			// 单种木材的抽屉 tag
+			event.get(`functionalstorage:drawers/${drawer.wood}/${type}`)
 				.add(drawerId)
 
+			// 同格数全部木材的汇总 tag, 供镶框配方使用
+			event.get(`functionalstorage:drawers/${type}`)
+				.add(drawerId)
+
+			// 全部木质抽屉的汇总 tag
 			event.get("functionalstorage:drawer/wood")
 				.add(drawerId)
 		})
