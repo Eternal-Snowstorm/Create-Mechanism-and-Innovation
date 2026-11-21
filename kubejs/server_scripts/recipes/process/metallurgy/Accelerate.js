@@ -202,12 +202,12 @@ ServerEvents.recipes((event) => {
 	])
 
 	// 蒸汽构件
-	addRecipe("cmi:bronze_mechanism", "minecraft:stone", [
+	addRecipe("steam_letters:steam_mechanism", "minecraft:stone", [
 		setOutput("minecraft:copper_ore", 0.1),
 		setOutput("thermal:tin_ore", 0.1),
 		setOutput("create:veridium", 0.1)
 	])
-	addRecipe("cmi:bronze_mechanism", "minecraft:deepslate", [
+	addRecipe("steam_letters:steam_mechanism", "minecraft:deepslate", [
 		setOutput("minecraft:deepslate_copper_ore", 0.05),
 		setOutput("thermal:deepslate_tin_ore", 0.05),
 		setOutput("create:veridium", 0.05),

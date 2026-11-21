@@ -146,19 +146,14 @@
 				"有点烫手, 拿在手上有一点火热🥵"
 				"青铜构件是蒸汽设备的通用核心, 蒸汽机, 锅炉, 锻锤都要靠它"
 			]
-			icon: "cmi:bronze_mechanism"
+			icon: "steam_letters:steam_mechanism"
 			id: "7E5C1B2E00000005"
 			shape: "gear"
 			size: 2.0d
 			tasks: [
 				{
 					id: "7E5C5B2E00000501"
-					item: "cmi:bronze_mechanism"
-					type: "item"
-				}
-				{
-					id: "7E5C5B2E00000502"
-					item: "cmi:bronze_mechanism_augment"
+					item: "steam_letters:steam_mechanism"
 					type: "item"
 				}
 			]

@@ -323,7 +323,7 @@
 			subtitle: "有点烫手, 拿在手上有一点火热🥵"
 			tasks: [{
 				id: "76B962C480950865"
-				item: "cmi:bronze_mechanism"
+				item: "steam_letters:steam_mechanism"
 				type: "item"
 			}]
 			x: -0.5d

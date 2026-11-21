@@ -103,7 +103,7 @@ ServerEvents.recipes((event) => {
 	], [
 		create.deploying(Inc.ENGINE, [
 			Inc.ENGINE,
-			"cmi:bronze_mechanism"
+			Mechanisms.STEAM.COM
 		]),
 		create.cutting(Inc.ENGINE, [
 			Inc.ENGINE

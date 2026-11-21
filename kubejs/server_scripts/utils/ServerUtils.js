@@ -46,8 +46,8 @@ const Mechanisms = Object.freeze({
 	}),
 	// C2
 	STEAM: Object.freeze({
-		COM: Item.of("cmi:bronze_mechanism"),
-		INC: Item.of("cmi:incomplete_bronze_mechanism")
+		COM: Item.of("steam_letters:steam_mechanism"),
+		INC: Item.of("steam_letters:incomplete_steam_mechanism")
 	}),
 	RAILWAY: Object.freeze({
 		COM: Item.of("cmi:railway_mechanism"),

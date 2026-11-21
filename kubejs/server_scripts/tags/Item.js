@@ -19,12 +19,15 @@ ServerEvents.tags("item", (event) => {
 
 	add("create:mechanisms/redstone", "vintageimprovements:redstone_module")
 
+	add("create:mechanisms/bronze", "steam_letters:steam_mechanism")
+
 	add("create:mechanisms/nuclear", "cmi:nuclear_mechanism")
 
 	// 构件半成品
 	event.get("create:incomplete_mechanisms")
 		.add("create:incomplete_precision_mechanism")
 		.add("vintageimprovements:incomplete_redstone_module")
+		.add("steam_letters:incomplete_steam_mechanism")
 		.add("cmi:incomplete_nuclear_mechanism")
 
 	// ad流体管道
