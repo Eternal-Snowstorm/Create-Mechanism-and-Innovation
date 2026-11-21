@@ -110,6 +110,13 @@
 		addIngredientToCreativeTab(event, Ingredient.of("#cmi:mechanism_parts"))
 	})
 
+	StartupEvents.modifyCreativeTab("steam_letters:basic", (event) => {
+		event.addAfter("steam_letters:bronze_whisk", [
+			"cmi:steam_steel_upgrade",
+			"cmi:steam_cast_iron_upgrade"
+		])
+	})
+
 	/**
 	 * 
 	 * @param {Internal.CreativeTabEvent_} event 
@@ -125,23 +132,24 @@
 	}
 
 	/**
-	 * 
-	 * @param {Internal.CreativeTabEvent_} event 
-	 * @param {Internal.Ingredient} ingredient 
+	 * @param {Internal.CreativeTabEvent_} event
+	 * @param {Internal.Ingredient} ingredient
 	 * @returns {Internal.CreativeTabEvent_}
 	 */
 	function addIngredientToCreativeTab(event, ingredient) {
-		if (!ingredient.checkInvalidation()) {
-			console.warn("Invalid Ingredient!")
-			return
+		if (typeof ingredient === "string") {
+			ingredient = Ingredient.of(ingredient)
 		}
 
-		let itemIds = ingredient.getItemIds()
+		if (!ingredient || !ingredient.checkInvalidation()) {
+			console.warn("Invalid Ingredient!")
+			return event
+		}
 
-		itemIds.forEach((item) => {
+		ingredient.getItemIds().forEach((item) => {
 			event.add(item)
 		})
 
 		return event
 	}
-})()	
+})()
