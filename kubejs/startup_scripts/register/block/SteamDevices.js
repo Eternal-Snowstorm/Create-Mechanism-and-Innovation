@@ -1,10 +1,10 @@
 StartupEvents.registry("block", (event) => {
 	const Materials = {
 		getCastIron() {
-			return SlApis.loadResource("cast_iron")
+			return Cmi.loadResource("cast_iron")
 		},
 		getSteel() {
-			return SlApis.loadResource("steel")
+			return Cmi.loadResource("steel")
 		}
 	}
 
