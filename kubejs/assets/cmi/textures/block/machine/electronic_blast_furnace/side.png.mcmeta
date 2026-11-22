@@ -2,25 +2,25 @@
 	"ctm": {
 		"ctm_version": 1,
 		"type": "CTM",
-		"layer": "SOLID",
+		"layer": "CUTOUT",
 		"textures": [
 			"cmi:block/machine/electronic_blast_furnace/side_ctm"
 		],
-	"extra": {
-		"connect_to": [
-			{
-				"block": "cmi:stainless_steel_input_bus"
-			},
-			{
-				"block": "cmi:stainless_steel_output_bus"
-			},
-			{
-				"block": "cmi:electronic_blast_furnace"
-			},
-			{
-				"block": "mekanism:steel_casing"
-			}
-		]
-	}
+		"extra": {
+			"connect_to": [
+				{
+					"block": "cmi:stainless_steel_input_bus"
+				},
+				{
+					"block": "cmi:stainless_steel_output_bus"
+				},
+				{
+					"block": "cmi:electronic_blast_furnace"
+				},
+				{
+					"block": "mekanism:steel_casing"
+				}
+			]
+		}
 	}
 }

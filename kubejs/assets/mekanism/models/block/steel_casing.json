@@ -1,0 +1,7 @@
+{
+	"loader": "ctm:ctm",
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "mekanism:block/steel_casing"
+	}
+}
