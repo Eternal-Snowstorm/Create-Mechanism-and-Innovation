@@ -9,72 +9,92 @@
 		{
 			click: "file:kubejs/assets/cmi/texts/cmi.txt"
 			height: 1.0d
+			hover: ["关于"]
 			image: "nebula_libs:textures/icon/cmi.png"
 			quest_enhance_exclude_from_box_selection: false
 			rotation: 0.0d
 			width: 1.0d
-			x: 9.0d
-			y: -7.0d
+			x: 1.5d
+			y: -1.0d
 		}
 		{
 			click: "https://www.curseforge.com/minecraft/modpacks/create-mechanism-and-innovation"
 			height: 1.0d
+			hover: ["Curseforge"]
 			image: "nebula_libs:textures/icon/cf.png"
 			quest_enhance_exclude_from_box_selection: false
 			rotation: 0.0d
 			width: 1.0d
-			x: 9.0d
-			y: -6.0d
+			x: 2.5d
+			y: -1.0d
 		}
 		{
 			click: "https://github.com/Eternal-Snowstorm/Create-Mechanism-and-Innovation"
 			height: 1.0d
+			hover: ["Github"]
 			image: "nebula_libs:textures/icon/git.png"
 			quest_enhance_exclude_from_box_selection: false
 			rotation: 0.0d
 			width: 1.0d
-			x: 9.0d
-			y: -5.0d
+			x: 3.5d
+			y: -1.0d
 		}
 		{
 			click: "https://space.bilibili.com/3461572013853145"
 			height: 1.0d
+			hover: [
+				"Bilibili"
+				"Re_Construction"
+			]
 			image: "nebula_libs:textures/icon/bili.png"
 			quest_enhance_exclude_from_box_selection: false
 			rotation: 0.0d
 			width: 1.0d
-			x: 9.0d
-			y: -4.0d
+			x: 4.5d
+			y: -1.0d
 		}
 		{
 			click: "https://ifdian.net/a/cim_se_2"
 			height: 1.0d
+			hover: [
+				"爱发电"
+				"Re_Construction"
+			]
 			image: "nebula_libs:textures/icon/aifadian.png"
 			quest_enhance_exclude_from_box_selection: false
 			rotation: 0.0d
 			width: 1.0d
-			x: 9.0d
-			y: -3.0d
+			x: 5.5d
+			y: -1.0d
 		}
 		{
 			click: "file:config/paxi/resourcepacks"
 			height: 1.0d
+			hover: [
+				"强制加载的资源包"
+				"config/paxi/resourcepacks"
+				"你可以修改或删除你不喜欢的项"
+			]
 			image: "nebula_libs:textures/icon/folder_openloader.png"
 			quest_enhance_exclude_from_box_selection: false
 			rotation: 0.0d
 			width: 1.0d
-			x: 10.0d
-			y: -6.0d
+			x: 7.5d
+			y: -4.5d
 		}
 		{
-			click: "file:C:/Windows/System32/notepad.exe"
+			click: "file:kubejs/assets/cmi/texts/doc.txt"
 			height: 1.0d
+			hover: [
+				"文档"
+				"常见问题的处理方案"
+			]
 			image: "nebula_libs:textures/icon/notepad.png"
 			quest_enhance_exclude_from_box_selection: false
 			rotation: 0.0d
 			width: 1.0d
-			x: 10.0d
-			y: -7.0d
+			x: 7.5d
+			y: -5.5d
 		}
 	]
 	order_index: 0
