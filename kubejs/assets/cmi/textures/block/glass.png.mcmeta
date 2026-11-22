@@ -1,0 +1,17 @@
+{
+	"ctm": {
+		"ctm_version": 1,
+		"type": "CTM",
+		"layer": "CUTOUT",
+		"textures": [
+			"cmi:block/glass_ctm"
+		]
+	},
+	"extra": {
+		"connect_to": [
+			{
+				"block": "minecraft:glass"
+			}
+		]
+	}
+}

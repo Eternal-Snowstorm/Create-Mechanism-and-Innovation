@@ -309,6 +309,14 @@ StartupEvents.registry("block", (event) => {
 		.resistance(3600000)
 		.noDrops()
 
+	// 革新晶块
+	// UNCERTAIN_PLAN
+	addBlock("glass")
+		.hardness(0.3)
+		.resistance(0.3)
+		.requiresTool(true)
+		.soundType(SoundType.GLASS)
+
 	// 反相石
 	// UNCERTAIN_PLAN
 	addBlock("antistone")
