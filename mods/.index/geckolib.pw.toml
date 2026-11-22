@@ -1,18 +1,18 @@
-filename = 'geckolib-forge-1.20.1-4.8.4.jar'
-name = 'GeckoLib'
-side = ''
+filename = 'geckolib-forge-1.20.1-4.8.5.jar'
+name = 'GeckoLib 4'
+side = 'server'
 x-prismlauncher-dependencies = []
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'geckolib-forge-1.20.1-4.8.4.jar'
+x-prismlauncher-version-number = 'geckolib-forge-1.20.1-4.8.5.jar'
 
 [download]
-hash = '81982cc287f80ffabb2fd36d22cc95e4255c739d'
+hash = 'a117dc87ce46a5ea0da0f549199d2e80e81a26fe'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 8285794
+file-id = 9730442
 project-id = 388172

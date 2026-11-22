@@ -1,25 +1,25 @@
-filename = 'Steam-Letters-2.1.2-1.20.1-forge.jar'
+filename = 'Steam-Letters-2.1.3-1.20.1-forge.jar'
 name = "Create: Letter's in Steam"
 side = 'server'
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'Steam-Letters-2.1.2-1.20.1-forge.jar'
+x-prismlauncher-version-number = 'Steam-Letters-2.1.3-1.20.1-forge.jar'
 
 [download]
-hash = '9e725530d93a867aa5dea59def05695181f18d44'
+hash = '9f9ae445812fba4e16d0423dc95fc1bfd2e76fa8'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 9716706
+file-id = 9747934
 project-id = 1650746
-
-[[x-prismlauncher-dependencies]]
-addonId = '328085'
-type = 'REQUIRED'
 
 [[x-prismlauncher-dependencies]]
 addonId = '238086'
 type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '328085'
+type = 'REQUIRED'

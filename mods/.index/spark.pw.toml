@@ -1,0 +1,18 @@
+filename = 'spark-1.10.53-forge.jar'
+name = 'spark'
+side = ''
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20', '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '1.10.53 (Forge 1.20.1)'
+
+[download]
+hash = '231fb325368c0660954f47bfb03493f5246fa4d1'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 4738952
+project-id = 361579

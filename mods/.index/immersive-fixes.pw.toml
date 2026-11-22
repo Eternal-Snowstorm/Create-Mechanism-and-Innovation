@@ -1,0 +1,21 @@
+filename = 'immersivefixes-1.9.0.jar'
+name = 'Immersive Fixes'
+side = 'server'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'immersivefixes-1.9.0.jar'
+
+[download]
+hash = '87e9f0c36435023b8f8b7a3c4d0862c3c977cd53'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9687325
+project-id = 1326199
+
+[[x-prismlauncher-dependencies]]
+addonId = '231951'
+type = 'REQUIRED'
