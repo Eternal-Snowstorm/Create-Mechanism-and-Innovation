@@ -10,12 +10,12 @@ ServerEvents.recipes((event) => {
 
 	// 控制器
 	kubejs.shaped("ae2:controller", [
-		"MSM",
-		"SCS",
-		"MSM"
+		"ABA",
+		"BCB",
+		"ABA"
 	], {
-		M: Mechanisms.SMART.COM,
-		S: "ae2:sky_dust",
+		A: Mechanisms.SMART.COM,
+		B: "ae2:sky_dust",
 		C: Casing.SMART
 	}).id("ae2:network/blocks/controller")
 

@@ -25,22 +25,22 @@ ServerEvents.recipes((event) => {
 
 	// 铁机械零件
 	kubejs.shaped("2x immersiveengineering:component_iron", [
-		"P P",
-		" G ",
-		"P P"
+		"A A",
+		" B ",
+		"A A"
 	], {
-		P: "#forge:plates/iron",
-		G: "#forge:gears/copper"
+		A: "#forge:plates/iron",
+		B: "#forge:gears/copper"
 	}).id("immersiveengineering:crafting/component_iron")
 
 	// 钢机械零件
 	kubejs.shaped("2x immersiveengineering:component_steel", [
-		"P P",
-		" G ",
-		"P P"
+		"A A",
+		" B ",
+		"A A"
 	], {
-		P: "#forge:plates/steel",
-		G: "#forge:gears/electrum"
+		A: "#forge:plates/steel",
+		B: "#forge:gears/electrum"
 	}).id("immersiveengineering:crafting/component_steel")
 
 	// 水车部件

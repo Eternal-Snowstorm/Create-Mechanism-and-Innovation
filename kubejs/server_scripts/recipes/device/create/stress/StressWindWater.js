@@ -3,13 +3,13 @@ ServerEvents.recipes((event) => {
 
 	// 风车轴承
 	kubejs.shaped("create:windmill_bearing", [
-		"X",
-		"C",
-		"M"
+		"A",
+		"B",
+		"C"
 	], {
-		M: Mechanisms.ANDESITE.COM,
-		C: Casing.ANDESITE,
-		X: "#forge:plates/stone",
+		A: "#forge:plates/stone",
+		B: Casing.ANDESITE,
+		C: Mechanisms.ANDESITE.COM,
 	}).id("create:crafting/kinetics/windmill_bearing")
 
 	// 水车

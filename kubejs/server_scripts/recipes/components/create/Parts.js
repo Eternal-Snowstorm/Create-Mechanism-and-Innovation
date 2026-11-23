@@ -63,13 +63,13 @@ ServerEvents.recipes((event) => {
 
 	// 红石发信器
 	kubejs.shaped("4x create:transmitter", [
-		" M ",
-		"RRR",
-		"WWW"
+		" A ",
+		"BBB",
+		"CCC"
 	], {
-		M: Mechanisms.REDSTONE.COM,
-		R: "#forge:rods/copper",
-		W: "#forge:wires/copper"
+		A: Mechanisms.REDSTONE.COM,
+		B: "#forge:rods/copper",
+		C: "#forge:wires/copper"
 	}).id("create:crafting/materials/transmitter")
 
 	// 黄铜手
@@ -125,13 +125,13 @@ ServerEvents.recipes((event) => {
 	// 激光发射器
 	kubejs.shaped("vintageimprovements:laser_item", [
 		" A ",
-		"BDB",
-		" E "
+		"BCB",
+		" D "
 	], {
 		A: "#forge:dusts/redstone",
 		B: "#forge:plates/copper",
-		D: "createaddition:capacitor",
-		E: Mechanisms.PHOTO.COM
+		C: "createaddition:capacitor",
+		D: Mechanisms.PHOTO.COM
 	}).id("vintageimprovements:mechanical_crafting/laser")
 
 	// 卷簧轮

@@ -7,8 +7,8 @@ ServerEvents.recipes((event) => {
 		"ABA",
 		"AAA"
 	], {
-		B: "ae2:fluix_crystal",
-		A: "cmi:optical_fiber"
+		A: "cmi:optical_fiber",
+		B: "ae2:fluix_crystal"
 	}).id("ae2:network/cables/glass_fluix")
 
 	kubejs.shaped("4x ae2:fluix_glass_cable", [

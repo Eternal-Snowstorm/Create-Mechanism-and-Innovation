@@ -16,35 +16,35 @@ ServerEvents.recipes((event) => {
 
 	// 水井
 	kubejs.shaped("cmi:water_well", [
-		"ACA",
 		"ABA",
+		"ACA",
 		"AAA"
 	], {
 		A: "#forge:treated_wood",
-		B: Mechanisms.COPPER.COM,
-		C: "#forge:plates/iron"
+		B: "#forge:plates/iron",
+		C: Mechanisms.COPPER.COM
 	})
 
 	// 熔岩井
 	kubejs.shaped("cmi:lava_well", [
-		"ACA",
 		"ABA",
+		"ACA",
 		"AAA"
 	], {
 		A: "tconstruct:nahuatl",
-		B: Mechanisms.NETHER.COM,
-		C: "#forge:plates/iron"
+		B: "#forge:plates/iron",
+		C: Mechanisms.NETHER.COM
 	})
 
 	// 烈焰血井
 	kubejs.shaped("cmi:blazing_blood_well", [
-		"ACA",
 		"ABA",
+		"ACA",
 		"AAA"
 	], {
 		A: "tconstruct:blazewood",
-		B: Mechanisms.NETHER.COM,
-		C: "#forge:plates/iron"
+		B: "#forge:plates/iron",
+		C: Mechanisms.NETHER.COM
 	})
 
 	// 钻井机冷却液端口

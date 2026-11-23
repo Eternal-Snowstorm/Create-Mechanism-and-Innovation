@@ -18,13 +18,13 @@ ServerEvents.recipes((event) => {
 
 	// 充能器
 	kubejs.shaped("ae2:charger", [
-		"PAP",
-		" G ",
-		"PAP"
+		"ABA",
+		" C ",
+		"ABA"
 	], {
-		P: "#forge:plates/iron",
-		G: "#forge:gears/signalum",
-		A: "#forge:gems/amethyst"
+		A: "#forge:plates/iron",
+		B: "#forge:gems/amethyst",
+		C: "#forge:gears/signalum"
 	}).id("ae2:network/blocks/crystal_processing_charger")
 
 	// 物质聚合器
@@ -37,11 +37,11 @@ ServerEvents.recipes((event) => {
 	// 能源接收器
 	kubejs.shaped("ae2:energy_acceptor", [
 		" AA",
-		"AC ",
+		"AB ",
 		" AA"
 	], {
 		A: "#forge:wires/copper",
-		C: Casing.SMART
+		B: Casing.SMART
 	}).id("ae2:network/blocks/energy_energy_acceptor")
 
 	// ME IO端口

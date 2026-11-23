@@ -3,23 +3,23 @@ ServerEvents.recipes((event) => {
 
 	// 背包
 	kubejs.shaped("sophisticatedbackpacks:backpack", [
-		"XYX",
-		"XMX",
-		"YYY"
+		"ABA",
+		"ACA",
+		"BBB"
 	], {
-		M: Mechanisms.WOODEN.COM,
-		X: "#forge:string",
-		Y: ["#forge:leather", "tconstruct:silky_cloth"]
+		A: "#forge:string",
+		B: ["#forge:leather", "tconstruct:silky_cloth"],
+		C: Mechanisms.WOODEN.COM
 	}).id("sophisticatedbackpacks:backpack")
 
 	// 空白升级
 	kubejs.shaped("sophisticatedbackpacks:upgrade_base", [
-		"XYX",
-		"YMY",
-		"XYX"
+		"ABA",
+		"BCB",
+		"ABA"
 	], {
-		M: Mechanisms.WOODEN.COM,
-		X: "#forge:rods/andesite",
-		Y: ["#forge:leather", "tconstruct:silky_cloth"]
+		A: "#forge:rods/andesite",
+		B: ["#forge:leather", "tconstruct:silky_cloth"],
+		C: Mechanisms.WOODEN.COM
 	}).id("sophisticatedbackpacks:upgrade_base")
 })

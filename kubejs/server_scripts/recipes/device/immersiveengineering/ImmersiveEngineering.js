@@ -80,22 +80,22 @@ ServerEvents.recipes((event) => {
 	}).id("immersiveengineering:crafting/blastbrick")
 
 	kubejs.shaped("2x immersiveindustry:car_kiln_brick", [
-		"BBB",
-		"ABA",
-		"PPP"
+		"AAA",
+		"BAB",
+		"CCC"
 	], {
-		A: "moreburners:nickel_coil",
-		B: "immersiveindustry:refractory_kiln_brick",
-		P: "#forge:plates/steel"
+		A: "immersiveindustry:refractory_kiln_brick",
+		B: "moreburners:nickel_coil",
+		C: "#forge:plates/steel"
 	}).id("immersiveindustry:crafting/car_kiln_brick")
 
 	kubejs.shaped("2x immersiveindustry:rotary_kiln_cylinder", [
 		"AAA",
 		"BBB",
-		"PPP"
+		"CCC"
 	], {
 		A: "immersiveindustry:refractory_kiln_brick",
 		B: "tconstruct:scorched_brick",
-		P: "#forge:plates/steel"
+		C: "#forge:plates/steel"
 	}).id("immersiveindustry:crafting/rotary_kiln_cylinder")
 })

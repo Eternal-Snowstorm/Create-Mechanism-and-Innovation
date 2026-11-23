@@ -23,13 +23,13 @@ ServerEvents.recipes((event) => {
 
 	// 萤石流明管道
 	kubejs.shaped("2x cmi:glowstone_lumen_tube", [
-		"CAB",
-		"A A",
-		"BAC"
+		"ABC",
+		"B B",
+		"CBA"
 	], {
-		A: "#forge:wires/lumium",
-		B: "#forge:rods/cobalt",
-		C: "#forge:plates/cobalt"
+		A: "#forge:plates/cobalt",
+		B: "#forge:wires/lumium",
+		C: "#forge:rods/cobalt"
 	})
 
 	// 繁星核心
@@ -56,15 +56,15 @@ ServerEvents.recipes((event) => {
 
 	// 冲压头
 	kubejs.shaped("cmi:hammer_head", [
-		"PPP",
-		"III",
-		"PPP"
+		"AAA",
+		"BBB",
+		"AAA"
 	], {
-		P: [
+		A: [
 			"#forge:plates/iron",
 			"#forge:plates/andesite_alloy"
 		],
-		I: [
+		B: [
 			"#forge:ingots/iron",
 			"#forge:ingots/andesite_alloy"
 		]

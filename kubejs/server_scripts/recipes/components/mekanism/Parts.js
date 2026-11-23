@@ -4,13 +4,13 @@ ServerEvents.recipes((event) => {
 	// 太阳能板
 	kubejs.shaped("mekanismgenerators:solar_panel", [
 		"ABA",
-		"CMC",
+		"CDC",
 		" C "
 	], {
 		A: "#forge:glass_panes",
 		B: "#forge:plates/silicon",
 		C: "#forge:plates/copper",
-		M: Mechanisms.PHOTO.COM
+		D: Mechanisms.PHOTO.COM
 	}).id("mekanismgenerators:solar_panel")
 
 	// 能量板

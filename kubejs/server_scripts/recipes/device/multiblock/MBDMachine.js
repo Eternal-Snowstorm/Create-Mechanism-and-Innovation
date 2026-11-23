@@ -4,13 +4,13 @@ ServerEvents.recipes((event) => {
 	// 高级焦炉
 	kubejs.shaped("cmi:reinforced_coke_oven", [
 		"AAA",
-		"BMB",
-		"CCC"
+		"BCB",
+		"DDD"
 	], {
 		A: "tconstruct:seared_bricks",
 		B: "tconstruct:scorched_brick",
-		C: "tconstruct:scorched_bricks",
-		M: Mechanisms.NETHER.COM
+		C: Mechanisms.NETHER.COM,
+		D: "tconstruct:scorched_bricks"
 	})
 
 	// 橡胶提取器

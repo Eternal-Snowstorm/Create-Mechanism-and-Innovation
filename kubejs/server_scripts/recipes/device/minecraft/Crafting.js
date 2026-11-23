@@ -109,17 +109,17 @@ ServerEvents.recipes((event) => {
 
 	// 工业铁方块
 	kubejs.shaped("6x cmi:industrial_iron_slab", [
-		"XXX"
+		"AAA"
 	], {
-		X: "create:industrial_iron_block"
+		A: "create:industrial_iron_block"
 	})
 
 	kubejs.shaped("4x cmi:industrial_iron_stairs", [
-		"X  ",
-		"XX ",
-		"XXX"
+		"A  ",
+		"AA ",
+		"AAA"
 	], {
-		X: "create:industrial_iron_block"
+		A: "create:industrial_iron_block"
 	})
 
 	// 玻璃

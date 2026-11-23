@@ -24,24 +24,24 @@ ServerEvents.recipes((event) => {
 	// 太阳能电池
 	kubejs.shaped("ad_astra:photovoltaic_etrium_cell", [
 		"ABA",
-		"CMC",
+		"CDC",
 		" C "
 	], {
 		A: "#forge:glass_panes",
 		B: "#forge:plates/silicon",
 		C: "#forge:plates/etrium",
-		M: Mechanisms.PHOTO.COM
+		D: Mechanisms.PHOTO.COM
 	}).id("ad_astra:photovoltaic_etrium_cell")
 
 	kubejs.shaped("ad_astra:photovoltaic_vesnium_cell", [
 		"ABA",
-		"CMC",
+		"CDC",
 		" C "
 	], {
 		A: "#forge:glass_panes",
 		B: "#forge:plates/silicon",
 		C: "#forge:plates/silver",
-		M: Mechanisms.PHOTO.COM
+		D: Mechanisms.PHOTO.COM
 	}).id("ad_astra:photovoltaic_vesnium_cell")
 
 	// 车轮

@@ -43,25 +43,25 @@ ServerEvents.recipes((event) => {
 
 	// 简易压缩抽屉
 	kubejs.shaped("functionalstorage:simple_compacting_drawer", [
-		"PAP",
-		" M ",
-		"PAP"
+		"ABA",
+		" C ",
+		"ABA"
 	], {
-		P: "#forge:plates/stone",
-		A: "tconstruct:pattern",
-		M: Mechanisms.WOODEN.COM
+		A: "#forge:plates/stone",
+		B: "tconstruct:pattern",
+		C: Mechanisms.WOODEN.COM
 	}).id("functionalstorage:simple_compacting_drawer")
 
 	// 压缩抽屉
 	kubejs.shaped("functionalstorage:compacting_drawer", [
-		"PAP",
-		"MIM",
-		"PAP"
+		"ABA",
+		"CDC",
+		"ABA"
 	], {
-		P: "#forge:plates/stone",
-		A: "tconstruct:pattern",
-		M: Mechanisms.WOODEN.COM,
-		I: Mechanisms.IRON.COM
+		A: "#forge:plates/stone",
+		B: "tconstruct:pattern",
+		C: Mechanisms.WOODEN.COM,
+		D: Mechanisms.IRON.COM
 	}).id("functionalstorage:compacting_drawer")
 
 	// 镶框压缩抽屉

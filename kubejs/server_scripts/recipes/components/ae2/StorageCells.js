@@ -11,35 +11,35 @@ ServerEvents.recipes((event) => {
 
 	// ME物品元件外壳
 	kubejs.shaped("2x ae2:item_cell_housing", [
-		"XYX",
-		"YMY",
-		"XYX"
+		"ABA",
+		"BCB",
+		"ABA"
 	], {
-		M: Mechanisms.WOODEN.COM,
-		X: "#forge:plates/iron",
-		Y: "ae2:quartz_glass",
+		A: "#forge:plates/iron",
+		B: "ae2:quartz_glass",
+		C: Mechanisms.WOODEN.COM,
 	}).id("ae2:network/cells/item_cell_housing")
 
 	// ME流体元件外壳
 	kubejs.shaped("2x ae2:fluid_cell_housing", [
-		"XYX",
-		"YMY",
-		"XYX"
+		"ABA",
+		"BCB",
+		"ABA"
 	], {
-		M: Mechanisms.COPPER.COM,
-		X: "#forge:plates/copper",
-		Y: "ae2:quartz_glass"
+		A: "#forge:plates/copper",
+		B: "ae2:quartz_glass",
+		C: Mechanisms.COPPER.COM
 	}).id("ae2:network/cells/fluid_cell_housing")
 
 	// ME化学元件外壳
 	kubejs.shaped("2x appmek:chemical_cell_housing", [
-		"PAP",
-		"AMA",
-		"PAP"
+		"ABA",
+		"BCB",
+		"ABA"
 	], {
-		P: "#forge:plates/osmium",
-		A: "ae2:quartz_glass",
-		M: Mechanisms.AIR.COM
+		A: "#forge:plates/osmium",
+		B: "ae2:quartz_glass",
+		C: Mechanisms.AIR.COM
 	}).id("appmek:chemical_cell_housing")
 
 	// ECO物品元件外壳

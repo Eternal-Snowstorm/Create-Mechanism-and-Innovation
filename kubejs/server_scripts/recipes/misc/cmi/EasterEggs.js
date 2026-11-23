@@ -30,16 +30,16 @@ ServerEvents.recipes((event) => {
 	}).noMirror().id("cmi:minecraft/shaped/love_manual_only")
 
 	create.mechanical_crafting(Item.of("minecraft:rotten_flesh", 81), [
-		"XXXXXXXXX",
-		"XXXXXXXXX",
-		"XXXXXXXXX",
-		"XXXXXXXXX",
-		"XXXXXXXXX",
-		"XXXXXXXXX",
-		"XXXXXXXXX",
-		"XXXXXXXXX",
-		"XXXXXXXXX"
+		"AAAAAAAAA",
+		"AAAAAAAAA",
+		"AAAAAAAAA",
+		"AAAAAAAAA",
+		"AAAAAAAAA",
+		"AAAAAAAAA",
+		"AAAAAAAAA",
+		"AAAAAAAAA",
+		"AAAAAAAAA"
 	], {
-		X: "minecraft:rotten_flesh"
+		A: "minecraft:rotten_flesh"
 	}).id("cmi:what_the_fvvk_is_that")
 })

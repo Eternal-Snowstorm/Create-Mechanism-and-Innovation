@@ -15,23 +15,23 @@ ServerEvents.recipes((event) => {
 	kubejs.shaped("immersive_aircraft:boiler", [
 		"AAA",
 		"A A",
-		"AMA"
+		"ABA"
 	], {
 		A: "#forge:plates/copper",
-		M: Mechanisms.STONE.COM
+		B: Mechanisms.STONE.COM
 	}).id("immersive_aircraft:boiler")
 
 	// 发动机
 	kubejs.shaped("immersive_aircraft:engine", [
-		"PIP",
-		"IMI",
-		"ABA"
+		"ABA",
+		"BCB",
+		"DED"
 	], {
-		A: "#forge:plates/andesite_alloy",
-		B: "immersive_aircraft:boiler",
-		I: "#forge:plates/industrial_iron",
-		M: Mechanisms.ANDESITE.COM,
-		P: "createdieselgenerators:engine_piston"
+		A: "createdieselgenerators:engine_piston",
+		B: "#forge:plates/industrial_iron",
+		C: Mechanisms.ANDESITE.COM,
+		D: "#forge:plates/andesite_alloy",
+		E: "immersive_aircraft:boiler"
 	}).id("immersive_aircraft:engine")
 
 	// 机身

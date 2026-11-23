@@ -1,5 +1,5 @@
 ServerEvents.recipes((event) => {
-	let { kubejs, create } = event.getRecipes()
+	let { kubejs } = event.getRecipes()
 
 	// 置物台
 	kubejs.shapeless("create:depot", [
@@ -35,48 +35,48 @@ ServerEvents.recipes((event) => {
 
 	// 升降机滑轮
 	kubejs.shaped("create:elevator_pulley", [
-		"C",
+		"A",
 		"B",
-		"M"
+		"C"
 	], {
-		C: Casing.BRASS,
+		A: Casing.BRASS,
 		B: "thermal:cured_rubber_block",
-		M: Mechanisms.ANDESITE.COM
+		C: Mechanisms.ANDESITE.COM
 	}).id("create:crafting/kinetics/elevator_pulley")
 
 	// 控制器
 	kubejs.shaped("create:contraption_controls", [
 		"A",
-		"C",
-		"M"
+		"B",
+		"C"
 	], {
 		A: "create_connected:control_chip",
-		C: Casing.ANDESITE,
-		M: Mechanisms.ANDESITE.COM
+		B: Casing.ANDESITE,
+		C: Mechanisms.ANDESITE.COM
 	}).id("create:crafting/kinetics/contraption_controls")
 
 	// 动力臂
 	kubejs.shaped("create:mechanical_arm", [
-		"APK",
-		"PS ",
-		"MC "
+		"ABC",
+		"BD ",
+		"EF "
 	], {
 		A: "#forge:ingots/andesite_alloy",
-		P: "#forge:plates/brass",
-		S: "#vintageimprovements:small_springs/bronze",
-		K: Mechanisms.ANDESITE.COM,
-		M: Mechanisms.PRECISION.COM,
-		C: Casing.BRASS
+		B: "#forge:plates/brass",
+		C: Mechanisms.ANDESITE.COM,
+		D: "#vintageimprovements:small_springs/bronze",
+		E: Mechanisms.PRECISION.COM,
+		F: Casing.BRASS
 	}).id("create:crafting/kinetics/mechanical_arm")
 
 	// 动力合成器
 	kubejs.shaped("3x create:mechanical_crafter", [
-		"M",
-		"C",
-		"B"
+		"A",
+		"B",
+		"C"
 	], {
-		M: Mechanisms.PRECISION.COM,
-		C: Casing.BRASS,
-		B: "create:crafting_blueprint"
+		A: Mechanisms.PRECISION.COM,
+		B: Casing.BRASS,
+		C: "create:crafting_blueprint"
 	}).id("create:crafting/kinetics/mechanical_crafter")
 })

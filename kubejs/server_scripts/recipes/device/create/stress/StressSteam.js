@@ -40,12 +40,12 @@ ServerEvents.recipes((event) => {
 		// 锅炉
 		kubejs.shaped(`${namespace}:${id}_boiler`, [
 			"AAA",
-			"ACA",
-			"ABA"
+			"ABA",
+			"ACA"
 		], {
 			A: [`#forge:plates/${id}`, `#forge:ingots/${id}`],
-			B: "create:fluid_pipe",
-			C: "create:fluid_tank"
+			B: "create:fluid_tank",
+			C: "create:fluid_pipe"
 		})
 
 		// 固体燃烧室
@@ -72,28 +72,28 @@ ServerEvents.recipes((event) => {
 
 		// 蒸汽引擎
 		kubejs.shaped(`${namespace}:${id}_steam_engine`, [
-			"ABE",
-			"MCF",
-			"ABE"
+			"ABC",
+			"DEF",
+			"ABC"
 		], {
 			A: `#forge:plates/${id}`,
 			B: `#forge:ingots/${id}`,
-			C: Casing.BRONZE,
-			M: Mechanisms.STEAM.COM,
-			E: "create:andesite_alloy",
+			C: "create:andesite_alloy",
+			D: Mechanisms.STEAM.COM,
+			E: Casing.BRONZE,
 			F: "create:shaft"
 		})
 
 		// 飞轮
 		kubejs.shaped(`${namespace}:${id}_steam_flywheel`, [
 			"AB ",
-			"CFB",
+			"CDB",
 			"AB "
 		], {
 			A: "createdieselgenerators:engine_piston",
 			B: `#forge:plates/${id}`,
 			C: Casing.BRONZE,
-			F: "create:flywheel"
+			D: "create:flywheel"
 		})
 	})
 

@@ -100,38 +100,38 @@ ServerEvents.recipes((event) => {
 	// 对称之杖
 	create.mechanical_crafting("create:wand_of_symmetry", [
 		" A ",
-		"ARA",
-		" M ",
-		" B ",
-		" H "
+		"ABA",
+		" C ",
+		" D ",
+		" E "
 	], {
 		A: "#forge:plates/andesite_alloy",
-		R: "#forge:ingots/refined_radiance",
-		M: Mechanisms.PRECISION.COM,
-		B: "#forge:ingots/brass",
-		H: "#forge:ingots/hepatizon"
+		B: "#forge:ingots/refined_radiance",
+		C: Mechanisms.PRECISION.COM,
+		D: "#forge:ingots/brass",
+		E: "#forge:ingots/hepatizon"
 	}).id("create:mechanical_crafting/wand_of_symmetry")
 
 	// 指挥棒
 	create.mechanical_crafting("fluidlogistics:hand_pointer", [
 		" A ",
-		"ARA",
-		" M ",
-		" B ",
-		" H "
+		"ABA",
+		" C ",
+		" D ",
+		" E "
 	], {
 		A: "#forge:plates/andesite_alloy",
-		R: "create:brass_hand",
-		M: Mechanisms.PRECISION.COM,
-		B: "#forge:ingots/brass",
-		H: "#forge:ingots/hepatizon"
+		B: "create:brass_hand",
+		C: Mechanisms.PRECISION.COM,
+		D: "#forge:ingots/brass",
+		E: "#forge:ingots/hepatizon"
 	})
 	
 	// 地图定位器
 	kubejs.shaped("railway_automation:map_locator", [
-		" A ",
-		" B ",
-		" C "
+		"A",
+		"B",
+		"C"
 	], {
 		A: "#forge:ingots/andesite_alloy",
 		B: "minecraft:map",

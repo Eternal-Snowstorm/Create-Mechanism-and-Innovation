@@ -4,22 +4,22 @@ ServerEvents.recipes((event) => {
 	// 车站
 	kubejs.shaped("2x create:track_station", [
 		"A",
-		"C",
-		"M"
+		"B",
+		"C"
 	], {
 		A: "#ad_astra:flags",
-		C: Casing.RAILWAY,
-		M: Mechanisms.RAILWAY.COM
+		B: Casing.RAILWAY,
+		C: Mechanisms.RAILWAY.COM
 	}).id("create:crafting/kinetics/track_station")
 
 	// 燃料储罐
 	kubejs.shaped("2x railways:fuel_tank", [
-		" P ",
-		"PGP",
-		" P "
+		" A ",
+		"ABA",
+		" A "
 	], {
-		P: "#forge:plates/obsidian",
-		G: "#forge:glass"
+		A: "#forge:plates/obsidian",
+		B: "#forge:glass"
 	}).id("railways:crafting/fuel_tank")
 
 	// 燃料接口
@@ -32,45 +32,45 @@ ServerEvents.recipes((event) => {
 	// 侦测器
 	kubejs.shaped("2x create:track_observer", [
 		"A",
-		"C",
-		"M"
+		"B",
+		"C"
 	], {
 		A: "minecraft:comparator",
-		C: Casing.RAILWAY,
-		M: Mechanisms.RAILWAY.COM
+		B: Casing.RAILWAY,
+		C: Mechanisms.RAILWAY.COM
 	}).id("create:crafting/kinetics/track_observer")
 
 	// 信号机
 	kubejs.shaped("2x create:track_signal", [
 		"A",
-		"C",
-		"M"
+		"B",
+		"C"
 	], {
 		A: "create:transmitter",
-		C: Casing.RAILWAY,
-		M: Mechanisms.RAILWAY.COM
+		B: Casing.RAILWAY,
+		C: Mechanisms.RAILWAY.COM
 	}).id("create:crafting/kinetics/track_signal")
 
 	// 连挂器
 	kubejs.shaped("2x railways:track_coupler", [
 		"A",
-		"C",
-		"M"
+		"B",
+		"C"
 	], {
 		A: "create:minecart_coupling",
-		C: Casing.RAILWAY,
-		M: Mechanisms.RAILWAY.COM
+		B: Casing.RAILWAY,
+		C: Mechanisms.RAILWAY.COM
 	}).id("railways:crafting/track_coupler")
 
 	// 控制器
 	kubejs.shaped("create:controls", [
 		"A",
-		"C",
-		"M"
+		"B",
+		"C"
 	], {
 		A: "create_connected:control_chip",
-		C: Casing.RAILWAY,
-		M: Mechanisms.RAILWAY.COM
+		B: Casing.RAILWAY,
+		C: Mechanisms.RAILWAY.COM
 	}).id("create:crafting/kinetics/controls")
 
 	// 机械眼
@@ -83,26 +83,26 @@ ServerEvents.recipes((event) => {
 	// 邮箱
 	CmiGlobal.DYE_COLOR_GROUP.forEach((color) => {
 		kubejs.shaped(`2x create:${color}_postbox`, [
-			"D",
+			"A",
 			"B",
-			"M"
+			"C"
 		], {
-			D: `#forge:dyes/${color}`,
+			A: `#forge:dyes/${color}`,
 			B: "minecraft:barrel",
-			M: Mechanisms.RAILWAY.COM
+			C: Mechanisms.RAILWAY.COM
 		}).id(`create:crafting/logistics/${color}_postbox`)
 	})
 
 	// 铁路放置器
 	kubejs.shaped("railway_automation:track_placer", [
-		" M ",
-		"ECE",
-		"PRP"
+		" A ",
+		"BCB",
+		"DED"
 	], {
-		M: Mechanisms.RAILWAY.COM,
-		E: "create:transmitter",
+		A: Mechanisms.RAILWAY.COM,
+		B: "create:transmitter",
 		C: Casing.RAILWAY,
-		P: "#forge:plates/iron",
-		R: "#create:tracks"
+		D: "#forge:plates/iron",
+		E: "#create:tracks"
 	}).id("railway_automation:track_placer")
 })

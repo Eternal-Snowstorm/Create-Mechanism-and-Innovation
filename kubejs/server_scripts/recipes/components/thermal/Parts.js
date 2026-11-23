@@ -24,33 +24,33 @@ ServerEvents.recipes((event) => {
 
 	// 红石通量线圈
 	kubejs.shaped("2x thermal:rf_coil", [
-		"BAC",
-		"A A",
-		"CAB"
+		"ABC",
+		"B B",
+		"CBA"
 	], {
-		A: "#forge:wires/signalum",
-		B: "#forge:rods/gold",
+		A: "#forge:rods/gold",
+		B: "#forge:wires/signalum",
 		C: "#forge:plates/gold"
 	}).id("thermal:rf_coil")
 
 	// 锯片
 	kubejs.shaped("thermal:saw_blade", [
-		" X ",
-		"XYX",
-		" X "
+		" A ",
+		"ABA",
+		" A "
 	], {
-		X: "#forge:plates/iron",
-		Y: "#forge:plates/andesite_alloy"
+		A: "#forge:plates/iron",
+		B: "#forge:plates/andesite_alloy"
 	}).id("thermal:saw_blade")
 
 	// 钻头
 	kubejs.shaped("thermal:drill_head", [
-		"YY ",
-		"Y X",
-		" XX"
+		"AA ",
+		"A B",
+		" BB"
 	], {
-		X: "#forge:plates/iron",
-		Y: "#forge:plates/andesite_alloy"
+		A: "#forge:plates/andesite_alloy",
+		B: "#forge:plates/iron"
 	}).id("thermal:drill_head")
 
 	// 红宝石齿轮

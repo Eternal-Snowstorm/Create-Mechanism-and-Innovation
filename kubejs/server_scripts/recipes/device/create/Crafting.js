@@ -14,15 +14,15 @@ ServerEvents.recipes((event) => {
 
 	// 背罐
 	kubejs.shaped("create:copper_backtank", [
-		"AMA",
-		"CBC",
-		"PPP"
+		"ABA",
+		"CDC",
+		"EEE"
 	], {
 		A: "#forge:plates/andesite_alloy",
-		M: Mechanisms.STEAM.COM,
-		B: Casing.BRONZE,
+		B: Mechanisms.STEAM.COM,
 		C: "thermal:cured_rubber",
-		P: "#forge:plates/bronze"
+		D: Casing.BRONZE,
+		E: "#forge:plates/bronze"
 	}).id("create:crafting/appliances/copper_backtank")
 
 	// 吸管
@@ -124,34 +124,34 @@ ServerEvents.recipes((event) => {
 
 	// 升级
 	kubejs.shaped("cmi:steam_cast_iron_upgrade", [
-		" P ",
-		"PGP",
-		" P "
+		" A ",
+		"ABA",
+		" A "
 	], {
 
-		P: "#forge:plates/cast_iron",
-		G: "#forge:gears/bronze"
+		A: "#forge:plates/cast_iron",
+		B: "#forge:gears/bronze"
 	})
 
 	kubejs.shaped("cmi:steam_steel_upgrade", [
-		" P ",
-		"PGP",
-		" P "
+		" A ",
+		"ABA",
+		" A "
 	], {
-		P: "#forge:plates/steel",
-		G: "#forge:gears/cast_iron"
+		A: "#forge:plates/steel",
+		B: "#forge:gears/cast_iron"
 	})
 
 	// 暂时修复蒸汽锻锤配方
 	kubejs.shaped("steam_letters:steam_hammer", [
 		"ABA",
-		"DCD",
+		"CDC",
 		" E "
 	], {
 		A: "#forge:plates/bronze",
 		B: Casing.BRONZE,
-		C: "create:mechanical_press",
-		D: Mechanisms.STEAM.COM,
+		C: Mechanisms.STEAM.COM,
+		D: "create:mechanical_press",
 		E: "#forge:storage_blocks/bronze"
 	}).id("steam_letters:crafting/shaped/bronze/steam_hammer")
 })

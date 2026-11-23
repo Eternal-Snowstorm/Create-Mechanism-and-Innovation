@@ -1,122 +1,121 @@
-// Create · 加工设备(辊压/搅拌/鼓风/磨盘/锯/钻/离心等)
 ServerEvents.recipes((event) => {
 	let { kubejs, create } = event.getRecipes()
 
 	// 动力辊压机
 	verticalDevice(kubejs, "create:mechanical_press", "create:crafting/kinetics/mechanical_press", {
-		M: Mechanisms.ANDESITE.COM,
-		C: Casing.ANDESITE,
-		X: "cmi:hammer_head"
+		A: Mechanisms.ANDESITE.COM,
+		B: Casing.ANDESITE,
+		C: "cmi:hammer_head"
 	})
 
 	// 动力搅拌器
 	verticalDevice(kubejs, "create:mechanical_mixer", "create:crafting/kinetics/mechanical_mixer", {
-		M: Mechanisms.ANDESITE.COM,
-		C: Casing.ANDESITE,
-		X: "create:whisk",
+		A: Mechanisms.ANDESITE.COM,
+		B: Casing.ANDESITE,
+		C: "create:whisk",
 	})
 
 	// 鼓风机
 	verticalDevice(kubejs, "create:encased_fan", "create:crafting/kinetics/encased_fan", {
-		M: Mechanisms.ANDESITE.COM,
-		C: Casing.ANDESITE,
-		X: "create:propeller",
+		A: Mechanisms.ANDESITE.COM,
+		B: Casing.ANDESITE,
+		C: "create:propeller",
 	})
 
 	// 石磨
 	verticalDevice(kubejs, "create:millstone", "create:crafting/kinetics/millstone", {
-		M: Mechanisms.ANDESITE.COM,
-		C: Casing.ANDESITE,
-		X: "#forge:stone",
+		A: Mechanisms.ANDESITE.COM,
+		B: Casing.ANDESITE,
+		C: "#forge:stone",
 	})
 
 	// 动力收割机
 	kubejs.shaped("create:mechanical_harvester", [
-		"XXX",
-		" C ",
-		" M "
+		"AAA",
+		" B ",
+		" C "
 	], {
-		M: Mechanisms.ANDESITE.COM,
-		C: Casing.ANDESITE,
-		X: "#forge:rods/andesite",
+		A: "#forge:rods/andesite",
+		B: Casing.ANDESITE,
+		C: Mechanisms.ANDESITE.COM,
 	}).id("create:crafting/kinetics/mechanical_harvester")
 
 	// 动力犁
 	kubejs.shaped("create:mechanical_plough", [
-		"XXX",
-		" C ",
-		" M "
+		"AAA",
+		" B ",
+		" C "
 	], {
-		M: Mechanisms.ANDESITE.COM,
-		C: Casing.ANDESITE,
-		X: "#forge:plates/andesite_alloy",
+		A: "#forge:plates/andesite_alloy",
+		B: Casing.ANDESITE,
+		C: Mechanisms.ANDESITE.COM,
 	}).id("create:crafting/kinetics/mechanical_plough")
 
 	// 动力压路机
 	kubejs.shaped("2x create:mechanical_roller", [
-		"CX ",
-		"XMX",
-		" X "
+		"AB ",
+		"BCB",
+		" B "
 	], {
-		M: Mechanisms.ANDESITE.COM,
-		C: Casing.ANDESITE,
-		X: "#forge:plates/andesite_alloy",
+		A: Casing.ANDESITE,
+		B: "#forge:plates/andesite_alloy",
+		C: Mechanisms.ANDESITE.COM,
 	}).id("create:crafting/kinetics/mechanical_roller")
 
 	// 振动台
 	kubejs.shaped("vintageimprovements:vibrating_table", [
-		" Y ",
-		"XMX",
-		" C "
+		" A ",
+		"BCB",
+		" D "
 	], {
-		M: Mechanisms.ANDESITE.COM,
-		C: Casing.ANDESITE,
-		X: "#vintageimprovements:springs/andesite",
-		Y: "#minecraft:planks",
+		A: "#minecraft:planks",
+		B: "#vintageimprovements:springs/andesite",
+		C: Mechanisms.ANDESITE.COM,
+		D: Casing.ANDESITE,
 	}).id("vintageimprovements:craft/vibrating_table")
 
 	// 轧机
 	kubejs.shaped("createaddition:rolling_mill", [
-		" M ",
-		"XYX",
-		" C "
+		" A ",
+		"BCB",
+		" D "
 	], {
-		M: Mechanisms.ANDESITE.COM,
-		C: Casing.ANDESITE,
-		X: "#forge:plates/andesite_alloy",
-		Y: "#create:shaft",
+		A: Mechanisms.ANDESITE.COM,
+		B: "#forge:plates/andesite_alloy",
+		C: "#create:shaft",
+		D: Casing.ANDESITE,
 	}).id("createaddition:crafting/rolling_mill")
 
 	// 卷簧机
 	kubejs.shaped("vintageimprovements:spring_coiling_machine", [
-		"X",
-		"C",
-		"M"
+		"A",
+		"B",
+		"C"
 	], {
-		M: Mechanisms.ANDESITE.COM,
-		C: Casing.ANDESITE,
-		X: "vintageimprovements:spring_coiling_machine_wheel",
+		A: "vintageimprovements:spring_coiling_machine_wheel",
+		B: Casing.ANDESITE,
+		C: Mechanisms.ANDESITE.COM,
 	}).id("vintageimprovements:craft/spring_coiling_machine")
 
 	// 冲压机
 	verticalDevice(kubejs, "vintageimprovements:curving_press", "vintageimprovements:craft/curving_press", {
-		M: Mechanisms.ANDESITE.COM,
-		C: Casing.ANDESITE,
-		X: ["#forge:plates/iron", "#forge:plates/andesite_alloy"]
+		A: Mechanisms.ANDESITE.COM,
+		B: Casing.ANDESITE,
+		C: ["#forge:plates/iron", "#forge:plates/andesite_alloy"]
 	})
 
 	// 动力锯
 	verticalDevice(kubejs, "create:mechanical_saw", "create:crafting/kinetics/mechanical_saw", {
-		M: Mechanisms.ANDESITE.COM,
-		C: Casing.ANDESITE,
-		X: "thermal:saw_blade"
+		A: Mechanisms.ANDESITE.COM,
+		B: Casing.ANDESITE,
+		C: "thermal:saw_blade"
 	})
 
 	// 动力钻头
 	verticalDevice(kubejs, "create:mechanical_drill", "create:crafting/kinetics/mechanical_drill", {
-		M: Mechanisms.ANDESITE.COM,
-		C: Casing.ANDESITE,
-		X: "thermal:drill_head"
+		A: Mechanisms.ANDESITE.COM,
+		B: Casing.ANDESITE,
+		C: "thermal:drill_head"
 	})
 
 	// 粉碎轮
@@ -134,93 +133,93 @@ ServerEvents.recipes((event) => {
 
 	// 离心机
 	kubejs.shaped("vintageimprovements:centrifuge", [
-		"P P",
-		"LML",
-		"SCS"
+		"A A",
+		"BCB",
+		"DED"
 	], {
-		P: "#forge:plates/andesite_alloy",
-		L: "#minecraft:logs",
-		M: Mechanisms.ANDESITE.COM,
-		S: "#vintageimprovements:springs/andesite",
-		C: Casing.ANDESITE
+		A: "#forge:plates/andesite_alloy",
+		B: "#minecraft:logs",
+		C: Mechanisms.ANDESITE.COM,
+		D: "#vintageimprovements:springs/andesite",
+		E: Casing.ANDESITE
 	}).id("vintageimprovements:craft/centrifuge")
 
 	// 压缩机
 	kubejs.shaped("vintageimprovements:vacuum_chamber", [
-		" M ",
-		"YCY",
-		" X "
+		" A ",
+		"BCB",
+		" D "
 	], {
-		M: Mechanisms.STEAM.COM,
+		A: Mechanisms.STEAM.COM,
+		B: "#vintageimprovements:springs/bronze",
 		C: Casing.BRONZE,
-		X: "create:mechanical_pump",
-		Y: "#vintageimprovements:springs/bronze"
+		D: "create:mechanical_pump"
 	}).id("vintageimprovements:craft/vacuum_chamber")
 
 	// 可控燃烧室
 	kubejs.shaped("createdieselgenerators:burner", [
-		" B ",
-		"AMA",
-		" C "
+		" A ",
+		"BCB",
+		" D "
 	], {
-		A: "#forge:plates/andesite_alloy",
-		B: "#forge:plates/brass",
-		M: Mechanisms.NETHER.COM,
-		C: "create:empty_blaze_burner"
+		A: "#forge:plates/brass",
+		B: "#forge:plates/andesite_alloy",
+		C: Mechanisms.NETHER.COM,
+		D: "create:empty_blaze_burner"
 	}).id("createdieselgenerators:crafting/burner")
 
 	// 特斯拉线圈
 	create.mechanical_crafting("createaddition:tesla_coil", [
-		"PAP",
-		" I ",
-		"BMB",
-		"VCV"
+		"ABA",
+		" C ",
+		"DED",
+		"FGF"
 	], {
-		P: "#forge:plates/copper",
-		A: "immersiveengineering:coil_lv",
-		I: "#forge:ingots/andesite_alloy",
-		B: "#forge:plates/brass",
-		M: Mechanisms.COIL.COM,
-		V: "#forge:plates/vanadium",
-		C: Casing.BRASS
+		A: "#forge:plates/copper",
+		B: "immersiveengineering:coil_lv",
+		C: "#forge:ingots/andesite_alloy",
+		D: "#forge:plates/brass",
+		E: Mechanisms.COIL.COM,
+		F: "#forge:plates/vanadium",
+		G: Casing.BRASS
 	}).id("createaddition:mechanical_crafting/tesla_coil")
 
 	// 激光雕刻机
 	create.mechanical_crafting("vintageimprovements:laser", [
-		"VCV",
-		"RMR",
-		" G ",
-		"PLP"
+		"ABA",
+		"CDC",
+		" E ",
+		"FGF"
 	], {
-		V: "#forge:plates/vanadium",
-		C: Casing.BRASS,
-		R: "thermal:rf_coil",
-		M: Mechanisms.PRECISION.COM,
-		G: "#forge:gears/iron",
-		P: "#forge:plates/industrial_iron",
-		L: "vintageimprovements:laser_item"
+		A: "#forge:plates/vanadium",
+		B: Casing.BRASS,
+		C: "thermal:rf_coil",
+		D: Mechanisms.PRECISION.COM,
+		E: "#forge:gears/iron",
+		F: "#forge:plates/industrial_iron",
+		G: "vintageimprovements:laser_item"
 	}).id("vintageimprovements:craft/laser")
 
 	// 磨砂机
 	kubejs.shaped("cmi:mechanical_belt_grinder", [
+		"A",
 		"B",
-		"C",
-		"M"
+		"C"
 	], {
-		B: "vintageimprovements:grinder_belt",
-		C: Casing.BRASS,
-		M: Mechanisms.PRECISION.COM
+		A: "vintageimprovements:grinder_belt",
+		B: Casing.BRASS,
+		C: Mechanisms.PRECISION.COM
 	})
 
 	// 马达
 	kubejs.shaped("cmi:accelerator_motor", [
-		"S",
-		"C",
-		"M"
+		"A",
+		"B",
+		"C"
 	], {
-		S: "#create:shaft",
-		C: Casing.ANDESITE,
-		M: Mechanisms.ANDESITE.COM
+		A: "#create:shaft",
+		B: Casing.ANDESITE,
+		C: Mechanisms.ANDESITE.COM
 	})
 
 	// 交流发电机

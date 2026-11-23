@@ -42,6 +42,7 @@ ItemEvents.tooltip((event) => {
 	addCommonTooltip("cmi:steam_steel_upgrade")
 	addCommonTooltip("#cmi:clay_molds")
 	addCommonTooltip("cmi:creative_mechanism")
+	addCommonTooltip("cmi:bucket")
 
 	/**
 	 * 

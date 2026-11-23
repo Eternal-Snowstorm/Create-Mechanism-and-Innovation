@@ -35,13 +35,13 @@ ServerEvents.recipes((event) => {
 	// 旗帜
 	CmiGlobal.DYE_COLOR_GROUP.forEach((color) => {
 		kubejs.shaped(`ad_astra:${color}_flag`, [
-			"RFF",
-			"RFF",
-			"RD "
+			"ABB",
+			"ABB",
+			"AC "
 		], {
-			R: "#forge:rods/iron",
-			F: "#forge:fabric_hemp",
-			D: `#forge:dyes/${color}`
+			A: "#forge:rods/iron",
+			B: "#forge:fabric_hemp",
+			C: `#forge:dyes/${color}`
 		}).id(`ad_astra:${color}_flag`)
 	})
 

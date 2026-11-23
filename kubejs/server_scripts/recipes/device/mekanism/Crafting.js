@@ -38,12 +38,12 @@ ServerEvents.recipes((event) => {
 
 	// 涡轮转子
 	kubejs.shaped("mekanismgenerators:turbine_rotor", [
-		"BAB",
-		"A A",
-		"BAB"
+		"ABA",
+		"B B",
+		"ABA"
 	], {
-		A: "#create:shaft",
-		B: "#forge:ingots/black_tungsten_alloy"
+		A: "#forge:ingots/black_tungsten_alloy",
+		B: "#create:shaft"
 	}).id("mekanismgenerators:turbine/rotor")
 
 	// 流体储罐
@@ -122,11 +122,11 @@ ServerEvents.recipes((event) => {
 
 	// 太阳能板
 	kubejs.shaped("mekanismgenerators:solar_generator", [
-		"BAB",
+		"ABA",
 		"CDC"
 	], {
-		A: "mekanismgenerators:solar_panel",
-		B: "#forge:glass",
+		A: "#forge:glass",
+		B: "mekanismgenerators:solar_panel",
 		C: "#forge:plates/industrial_iron",
 		D: "#forge:plates/vanadium"
 	}).id("mekanismgenerators:generator/solar")

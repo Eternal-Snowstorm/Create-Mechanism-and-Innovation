@@ -3,12 +3,12 @@ ServerEvents.recipes((event) => {
 
 	// 炸弹系列
 	kubejs.shaped("4x thermal:explosive_grenade", [
-		"BAB",
 		"ABA",
-		"BAB"
+		"BAB",
+		"ABA"
 	], {
-		A: "cmi:trinitrotoluene",
-		B: "#forge:nuggets/iron"
+		A: "#forge:nuggets/iron",
+		B: "cmi:trinitrotoluene"
 	}).id("thermal:explosive_grenade_4")
 
 	replaceBombRecipe("minecraft:ender_pearl", "ender")
@@ -36,13 +36,13 @@ ServerEvents.recipes((event) => {
 		}).id(`thermal:${bombname}_tnt`)
 
 		kubejs.shaped(`4x thermal:${bombname}_grenade`, [
-			"CAC",
 			"ABA",
-			"CAC"
+			"BCB",
+			"ABA"
 		], {
-			A: input,
-			B: "cmi:trinitrotoluene",
-			C: "#forge:nuggets/iron"
+			A: "#forge:nuggets/iron",
+			B: input,
+			C: "cmi:trinitrotoluene"
 		}).id(`thermal:${bombname}_grenade_4`)
 	}
 })

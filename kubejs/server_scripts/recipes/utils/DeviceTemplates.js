@@ -21,16 +21,16 @@ function addComponRecipe(thermal_extra, output, inputs) {
 }
 
 /**
- * 三行竖排设备模板: M(机制本体)/ C(机壳)/ X(功能件)
+ * 三行竖排设备模板: A(机制本体)/ B(机壳)/ C(功能件)
  *
  * 用于 Create, Thermal 系绝大多数单方块设备的统一外形, 避免每个设备重复写 6 行 keys. 
  *
  * @param {Internal.RecipeType_} kubejs event 解构出的 kubejs 配方命名空间
  * @param {string} output 输出物品(含数量前缀, 如 "2x create:xxx")
  * @param {string} id 配方 id(通常沿用原 mod 的配方路径)
- * @param {Object} keys M/C/X 的取值表
+ * @param {Object} keys A/B/C 的取值表
  */
 function verticalDevice(kubejs, output, id, keys) {
-	return kubejs.shaped(output, ["M", "C", "X"], keys)
+	return kubejs.shaped(output, ["A", "B", "C"], keys)
 		.id(id)
 }

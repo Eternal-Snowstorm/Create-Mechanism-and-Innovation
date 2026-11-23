@@ -26,20 +26,20 @@ ServerEvents.recipes((event) => {
 
 	// 分液池
 	kubejs.shaped("create:item_drain", [
-		"X",
-		"M",
+		"A",
+		"B",
 		"C"
 	], {
-		M: Mechanisms.COPPER.COM,
-		X: "minecraft:iron_bars",
+		A: "minecraft:iron_bars",
+		B: Mechanisms.COPPER.COM,
 		C: Casing.COPPER
 	}).id("create:crafting/kinetics/item_drain")
 
 	// 注液器
 	verticalDevice(kubejs, "create:spout", "create:crafting/kinetics/spout", {
-		M: Mechanisms.COPPER.COM,
-		X: "thermal:cured_rubber",
-		C: Casing.COPPER
+		A: Mechanisms.COPPER.COM,
+		B: Casing.COPPER,
+		C: "thermal:cured_rubber"
 	})
 
 	// 高级注液器
@@ -57,47 +57,47 @@ ServerEvents.recipes((event) => {
 
 	// 智能管道
 	kubejs.shaped("2x create:smart_fluid_pipe", [
+		"A",
 		"B",
-		"P",
-		"M"
+		"C"
 	], {
-		B: "#forge:plates/brass",
-		P: "create:fluid_pipe",
-		M: Mechanisms.COPPER.COM
+		A: "#forge:plates/brass",
+		B: "create:fluid_pipe",
+		C: Mechanisms.COPPER.COM
 	}).id("create:crafting/kinetics/smart_fluid_pipe")
 
 	// 阀门
 	kubejs.shaped("2x create:fluid_valve", [
-		"I",
-		"P",
-		"M"
+		"A",
+		"B",
+		"C"
 	], {
-		I: "#forge:plates/iron",
-		P: "create:fluid_pipe",
-		M: Mechanisms.COPPER.COM
+		A: "#forge:plates/iron",
+		B: "create:fluid_pipe",
+		C: Mechanisms.COPPER.COM
 	}).id("create:crafting/kinetics/fluid_valve")
 
 	// 软管滑轮
 	kubejs.shaped("create:hose_pulley", [
-		"C",
-		"X",
-		"M"
+		"A",
+		"B",
+		"C"
 	], {
-		M: Mechanisms.COPPER.COM,
-		X: "thermal:cured_rubber_block",
-		C: Casing.COPPER
+		A: Casing.COPPER,
+		B: "thermal:cured_rubber_block",
+		C: Mechanisms.COPPER.COM
 	}).id("create:crafting/kinetics/hose_pulley")
 
 	// 抽油机油泵
 	kubejs.shaped("createdieselgenerators:pumpjack_hole", [
-		" M ",
+		" A ",
 		"BCB",
-		" A "
+		" D "
 	], {
-		M: Mechanisms.COPPER.COM,
-		C: Casing.COPPER,
+		A: Mechanisms.COPPER.COM,
 		B: "minecraft:chain",
-		A: "create:fluid_pipe"
+		C: Casing.COPPER,
+		D: "create:fluid_pipe"
 	}).id("createdieselgenerators:crafting/pumpjack_hole")
 
 	// 智能龙头
@@ -120,12 +120,12 @@ ServerEvents.recipes((event) => {
 	// 流体漏斗
 	kubejs.shaped("fluidlogistics:smart_hopper", [
 		"A A",
-		"BMB",
+		"BCB",
 		" A "
 	], {
 		A: "#forge:plates/copper",
 		B: "#forge:plates/brass",
-		M: Mechanisms.COPPER.COM
+		C: Mechanisms.COPPER.COM
 	}).id("fluidlogistics:smart_hopper")
 
 	// 流体溜槽
@@ -151,12 +151,12 @@ ServerEvents.recipes((event) => {
 	// 流体接口
 	kubejs.shaped("fluidlogistics:multi_fluid_access_port", [
 		" A ",
-		"AMI",
+		"ABC",
 		" A "
 	], {
 		A: "#forge:plates/brass",
-		I: "#forge:plates/industrial_iron",
-		M: Mechanisms.COPPER.COM
+		B: Mechanisms.COPPER.COM,
+		C: "#forge:plates/industrial_iron"
 	}).id("fluidlogistics:multi_fluid_access_port")
 
     // 黄铜管道

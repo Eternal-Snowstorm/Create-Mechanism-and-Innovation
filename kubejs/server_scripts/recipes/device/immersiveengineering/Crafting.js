@@ -37,64 +37,64 @@ ServerEvents.recipes((event) => {
 
 	// 蓝图
 	addBlueprintRecipe(BlueprintMolds.MOLD, [
-		" C ",
-		" B ",
-		" A "
+		"A",
+		"B",
+		"C"
 	], {
-		A: ["#forge:ingots/industrial_iron", "#forge:plates/industrial_iron"],
+		A: "minecraft:paper",
 		B: "#forge:nuggets/iron",
-		C: "minecraft:paper"
+		C: ["#forge:ingots/industrial_iron", "#forge:plates/industrial_iron"]
 	})
 
 	// 蓝图
 	addBlueprintRecipe(BlueprintMolds.ELECTRODE, [
-		" C ",
-		" B ",
-		" A "
+		"A",
+		"B",
+		"C"
 	], {
-		A: "#forge:ingots/hop_graphite",
+		A: "#forge:nuggets/iron",
 		B: "minecraft:paper",
-		C: "#forge:nuggets/iron"
+		C: "#forge:ingots/hop_graphite"
 	})
 
 	addBlueprintRecipe(BlueprintMolds.BANNERPATTERN, [
-		" C ",
-		" B ",
-		" A "
+		"A",
+		"B",
+		"C"
 	], {
-		A: "#minecraft:wool",
+		A: "#forge:nuggets/iron",
 		B: "minecraft:paper",
-		C: "#forge:nuggets/iron"
+		C: "#minecraft:wool"
 	})
 
 	addBlueprintRecipe(BlueprintMolds.COMPONENTS, [
-		" C ",
-		" B ",
-		" A "
+		"A",
+		"B",
+		"C"
 	], {
-		A: "#forge:gears",
+		A: "#forge:nuggets/iron",
 		B: "minecraft:paper",
-		C: "#forge:nuggets/iron"
+		C: "#forge:gears"
 	})
 
 	addBlueprintRecipe(BlueprintMolds.SPECIAL_BULLET, [
-		" C ",
-		" B ",
-		" A "
+		"A",
+		"B",
+		"C"
 	], {
-		A: "cmi:nitrocellulose",
+		A: "#forge:nuggets/iron",
 		B: "minecraft:paper",
-		C: "#forge:nuggets/iron"
+		C: "cmi:nitrocellulose"
 	})
 
 	addBlueprintRecipe(BlueprintMolds.BULLET, [
-		" C ",
-		" B ",
-		" A "
+		"A",
+		"B",
+		"C"
 	], {
-		A: "minecraft:gunpowder",
+		A: "#forge:nuggets/iron",
 		B: "minecraft:paper",
-		C: "#forge:nuggets/iron"
+		C: "minecraft:gunpowder"
 	})
 
 	// 风帆
@@ -108,15 +108,15 @@ ServerEvents.recipes((event) => {
 
 	// 电解机
 	kubejs.shaped("immersiveindustry:electrolyzer", [
-		"NPN",
-		"CMD",
-		"PEP"
+		"ABA",
+		"CDE",
+		"BFB"
 	], {
-		N: "#forge:rods/cast_iron",
+		A: "#forge:rods/cast_iron",
+		B: "#forge:plates/cast_iron",
 		C: "#forge:rods/tin",
-		D: "#forge:rods/electrum",
-		M: Mechanisms.COIL.COM,
-		P: "#forge:plates/cast_iron",
-		E: "create:wooden_bracket"
+		D: Mechanisms.COIL.COM,
+		E: "#forge:rods/electrum",
+		F: "immersiveengineering:treated_fence"
 	}).id("immersiveindustry:crafting/electrolyzer")
 })

@@ -3,40 +3,40 @@ ServerEvents.recipes((event) => {
 
 	// 打包机
 	kubejs.shaped("2x create:packager", [
-		"PMP",
-		"IBI",
-		"PCP"
+		"ABA",
+		"CDC",
+		"AEA"
 	], {
-		P: "#forge:plates/andesite_alloy",
-		M: Mechanisms.ANDESITE.COM,
-		I: "#forge:plates/industrial_iron",
-		B: "create:cardboard_block",
-		C: Casing.ANDESITE
+		A: "#forge:plates/andesite_alloy",
+		B: Mechanisms.ANDESITE.COM,
+		C: "#forge:plates/industrial_iron",
+		D: "create:cardboard_block",
+		E: Casing.ANDESITE
 	}).id("create:crafting/logistics/packager")
 
 	// 流体打包机
 	kubejs.shaped("2x fluidlogistics:fluid_packager", [
-		"PMP",
-		"IBI",
-		"PCP"
+		"ABA",
+		"CDC",
+		"AEA"
 	], {
-		P: "#forge:plates/copper",
-		M: Mechanisms.COPPER.COM,
-		I: "#forge:plates/industrial_iron",
-		B: "fluidlogistics:waterproof_cardboard_block",
-		C: Casing.COPPER
+		A: "#forge:plates/copper",
+		B: Mechanisms.COPPER.COM,
+		C: "#forge:plates/industrial_iron",
+		D: "fluidlogistics:waterproof_cardboard_block",
+		E: Casing.COPPER
 	}).id("fluidlogistics:fluid_packager")
 
 	// 蛙港
 	kubejs.shaped("create:package_frogport", [
-		"PP ",
-		"BMS",
-		" C "
+		"AA ",
+		"BCD",
+		" E "
 	], {
-		P: "#forge:plates/industrial_iron",
+		A: "#forge:plates/industrial_iron",
 		B: "#forge:slimeballs",
-		M: Mechanisms.ANDESITE.COM,
-		S: "#vintageimprovements:springs/andesite",
-		C: Casing.ANDESITE
+		C: Mechanisms.ANDESITE.COM,
+		D: "#vintageimprovements:springs/andesite",
+		E: Casing.ANDESITE
 	}).id("create:crafting/logistics/package_frogport")
 })

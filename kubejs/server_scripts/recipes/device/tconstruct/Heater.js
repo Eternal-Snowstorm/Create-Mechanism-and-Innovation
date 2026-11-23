@@ -5,22 +5,22 @@ ServerEvents.recipes((event) => {
 
 	// 焦黑融化器
 	kubejs.shaped("tconstruct:seared_melter", [
-		"BXB",
-		"BMB"
+		"ABA",
+		"ACA"
 	], {
-		M: Mechanisms.STONE.COM,
-		B: BRICK,
-		X: "#tconstruct:seared_tanks"
+		A: BRICK,
+		B: "#tconstruct:seared_tanks",
+		C: Mechanisms.STONE.COM
 	}).id("tconstruct:smeltery/seared/melter")
 
 	// 焦黑加热器
 	kubejs.shaped("tconstruct:seared_heater", [
-		"BBB",
-		"BMB",
-		"BBB"
+		"AAA",
+		"ABA",
+		"AAA"
 	], {
-		M: Mechanisms.STONE.COM,
-		B: BRICK
+		A: BRICK,
+		B: Mechanisms.STONE.COM
 	}).id("tconstruct:smeltery/seared/heater")
 
 	// 冶炼炉控制器
@@ -38,22 +38,22 @@ ServerEvents.recipes((event) => {
 
 	// 焦黑燃料储罐
 	kubejs.shaped("tconstruct:seared_fuel_tank", [
-		" B ",
-		"BPB",
-		" B "
+		" A ",
+		"ABA",
+		" A "
 	], {
-		P: PRISM,
-		B: BRICK
+		A: BRICK,
+		B: PRISM
 	}).id("tconstruct:smeltery/seared/fuel_tank")
 
 	// 焦黑材料储罐
 	kubejs.shaped("tconstruct:seared_ingot_tank", [
-		"B B",
-		" P ",
-		"B B"
+		"A A",
+		" B ",
+		"A A"
 	], {
-		P: PRISM,
-		B: BRICK
+		A: BRICK,
+		B: PRISM
 	}).id("tconstruct:smeltery/seared/ingot_tank")
 
 	// 焦黑燃料量器
@@ -77,31 +77,31 @@ ServerEvents.recipes((event) => {
 	// 焦褐合金炉
 	kubejs.shaped("tconstruct:scorched_alloyer", [
 		"ABA",
-		"AMA"
+		"ACA"
 	], {
 		A: "tconstruct:scorched_brick",
 		B: "#tconstruct:scorched_tanks",
-		M: Mechanisms.NETHER.COM
+		C: Mechanisms.NETHER.COM
 	}).id("tconstruct:smeltery/scorched/alloyer")
 
 	// 焦褐燃料储罐
 	kubejs.shaped("tconstruct:scorched_fuel_tank", [
-		" B ",
-		"BPB",
-		" B "
+		" A ",
+		"ABA",
+		" A "
 	], {
-		P: "#forge:glass",
-		B: "tconstruct:scorched_brick"
+		A: "tconstruct:scorched_brick",
+		B: "#forge:glass"
 	}).id("tconstruct:smeltery/scorched/fuel_tank")
 
 	// 焦褐材料储罐
 	kubejs.shaped("tconstruct:scorched_ingot_tank", [
-		"B B",
-		" P ",
-		"B B"
+		"A A",
+		" B ",
+		"A A"
 	], {
-		P: "#forge:glass",
-		B: "tconstruct:scorched_brick"
+		A: "tconstruct:scorched_brick",
+		B: "#forge:glass"
 	}).id("tconstruct:smeltery/scorched/ingot_tank")
 
 	// 焦褐燃料量器
@@ -124,14 +124,14 @@ ServerEvents.recipes((event) => {
 
 	// 铸模箱
 	kubejs.shaped("tconstruct:cast_chest", [
-		"BXB",
-		"BYB",
-		"BMB"
+		"ABA",
+		"ACA",
+		"ADA"
 	], {
-		M: Mechanisms.STONE.COM,
-		B: BRICK,
-		X: "#tconstruct:patterns/reusable",
-		Y: "#forge:chests"
+		A: BRICK,
+		B: "#tconstruct:patterns/reusable",
+		C: "#forge:chests",
+		D: Mechanisms.STONE.COM
 	}).id("tconstruct:tables/cast_chest")
 
 	// 空烈焰人燃烧室
@@ -148,12 +148,12 @@ ServerEvents.recipes((event) => {
 	// 烈焰人燃烧室
 	kubejs.shaped("create:blaze_burner", [
 		"ABA",
-		"ADA",
-		"CCC"
+		"ACA",
+		"DDD"
 	], {
 		A: "#forge:plates/iron",
 		B: Mechanisms.IRON.COM,
-		C: "minecraft:nether_bricks",
-		D: Mechanisms.NETHER.COM
+		C: Mechanisms.NETHER.COM,
+		D: "minecraft:nether_bricks"
 	}).id("create:crafting/kinetics/blaze_burner")
 })

@@ -3,12 +3,12 @@ ServerEvents.recipes((event) => {
 
     // 漏斗
     kubejs.shaped("3x minecraft:hopper", [
-        "X X",
-        "XMX",
-        " X "
+        "A A",
+        "ABA",
+        " A "
     ], {
-        M: Mechanisms.WOODEN.COM,
-        X: ["#forge:plates/tin", "#forge:plates/iron"],
+        A: ["#forge:plates/tin", "#forge:plates/iron"],
+        B: Mechanisms.WOODEN.COM,
     }).id("minecraft:hopper")
 
 	// 传送带
@@ -21,22 +21,22 @@ ServerEvents.recipes((event) => {
 
 	// 溜槽
 	kubejs.shaped("16x create:chute", [
-		"X X",
-		" M ",
-		"X X"
+		"A A",
+		" B ",
+		"A A"
 	], {
-		X: "#forge:plates/industrial_iron",
-		M: Mechanisms.WOODEN.COM
+		A: "#forge:plates/industrial_iron",
+		B: Mechanisms.WOODEN.COM
 	})
 
 	// 黄铜溜槽
 	kubejs.shaped("16x create_connected:brass_chute", [
-		"X X",
-		" M ",
-		"X X"
+		"A A",
+		" B ",
+		"A A"
 	], {
-		X: "#forge:plates/brass",
-		M: Mechanisms.WOODEN.COM
+		A: "#forge:plates/brass",
+		B: Mechanisms.WOODEN.COM
 	})
 
 	// 物品舱口
@@ -48,18 +48,18 @@ ServerEvents.recipes((event) => {
 	// 物品保险库
 	kubejs.shaped("create:item_vault", [
 		"A",
-		"M",
+		"B",
 		"A"
 	], {
 		A: "#forge:plates/industrial_iron",
-		M: Mechanisms.WOODEN.COM
+		B: Mechanisms.WOODEN.COM
 	}).id('create:crafting/kinetics/item_vault')
 
 	kubejs.shaped("create_connected:item_silo", [
-		"AMA"
+		"ABA"
 	], {
 		A: "#forge:plates/industrial_iron",
-		M: Mechanisms.WOODEN.COM
+		B: Mechanisms.WOODEN.COM
 	}).id("create_connected:crafting/kinetics/item_silo")
 
 	// 移动式存储接口
@@ -125,11 +125,11 @@ ServerEvents.recipes((event) => {
 	// 物流接口
 	kubejs.shaped("create_connected:inventory_access_port", [
 		" A ",
-		"AMI",
+		"ABC",
 		" A "
 	], {
 		A: "#forge:plates/brass",
-		I: "#forge:plates/industrial_iron",
-		M: Mechanisms.WOODEN.COM
+		B: Mechanisms.WOODEN.COM,
+		C: "#forge:plates/industrial_iron"
 	}).id("create_connected:crafting/kinetics/inventory_access_port")
 })

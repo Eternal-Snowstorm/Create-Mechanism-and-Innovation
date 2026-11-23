@@ -25,13 +25,13 @@ ServerEvents.recipes((event) => {
 
 	// 内存卡
 	kubejs.shaped("ae2:memory_card", [
-		"PMP",
-		"WEW"
+		"ABA",
+		"CDC"
 	], {
-		P: "#forge:plates/iron",
-		M: Mechanisms.SMART.COM,
-		W: "#forge:wires/signalum",
-		E: "#forge:plates/electrum"
+		A: "#forge:plates/iron",
+		B: Mechanisms.SMART.COM,
+		C: "#forge:wires/signalum",
+		D: "#forge:plates/electrum"
 	}).id("ae2:tools/network_memory_card")
 
 	// 网络工具
