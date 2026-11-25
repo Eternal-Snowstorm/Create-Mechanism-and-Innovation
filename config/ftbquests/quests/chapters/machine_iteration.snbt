@@ -15,6 +15,7 @@
 				"0CD54F7B95129990"
 				"4E3F0997BCE2FCD4"
 			]
+			description: ["重型工程构件由重工程组件装配, 支撑大型机械与高压设备."]
 			id: "1A5E08FD7A606C72"
 			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
@@ -29,6 +30,7 @@
 		}
 		{
 			dependencies: ["1311CB2F207423BB"]
+			description: ["强化构件是中期主力构件, 用于高压与精密设备, 建议批量生产."]
 			id: "3FAF92A93ACD3FEB"
 			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
@@ -43,6 +45,7 @@
 		}
 		{
 			dependencies: ["3994F9957791D4AC"]
+			description: ["重工程组件是重工程构件的装配材料, 需与构件配套生产."]
 			id: "0CD54F7B95129990"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -55,6 +58,7 @@
 		}
 		{
 			dependencies: ["1628C208DB18AE01"]
+			description: ["强化组件是强化构件的装配材料, 需轻工程构件作为前置."]
 			id: "1311CB2F207423BB"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -67,6 +71,7 @@
 		}
 		{
 			dependencies: ["16FAD51B29F98F9A"]
+			description: ["润滑油已到手, 可投入精密机械与后续化工线, 建议留出储备."]
 			icon: "thermal_extra:lubricant_bucket"
 			id: "4E3F0997BCE2FCD4"
 			quest_enhance_disable_scroll_paging: false
@@ -83,6 +88,7 @@
 				"5D62371137D6E236"
 				"67973D226A60F4DE"
 			]
+			description: ["流明管是发光与显示元件, 也是钴构件的组件, 建议多备."]
 			id: "1628C208DB18AE01"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -95,6 +101,7 @@
 		}
 		{
 			dependencies: ["79461202D5061059"]
+			description: ["流明锭由萤石与金属熔合, 用于照明与光敏设备."]
 			id: "5D62371137D6E236"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -114,6 +121,7 @@
 		}
 		{
 			dependencies: ["6AF99714DB316303"]
+			description: ["钴用于高温合金与耐热部件, 是重型机械与构件的材料."]
 			id: "67973D226A60F4DE"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -133,9 +141,10 @@
 		}
 		{
 			dependencies: ["79461202D5061059"]
+			description: ["钴矿位于塔尔塔罗斯, 开采需耐热装备与氧气供应, 注意防护."]
 			id: "6AF99714DB316303"
 			quest_enhance_disable_scroll_paging: false
-			subtitle: "在下界哦"
+			subtitle: "在塔尔塔罗斯哦"
 			tasks: [{
 				id: "221BD7EEB579C0B4"
 				item: {
@@ -148,11 +157,12 @@
 				title: "粗钴"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 12.0d
 			y: 5.0d
 		}
 		{
 			dependencies: ["7AADB534F537AA83"]
+			description: ["钢部件是重型工程结构件的基材, 由钢锭加工成型."]
 			id: "3994F9957791D4AC"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -165,6 +175,7 @@
 		}
 		{
 			dependencies: ["1A5E08FD7A606C72"]
+			description: ["重型工程蓝图解锁大型机器与结构件配方, 建议优先解锁."]
 			id: "575D0E9BC127BF1C"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -177,6 +188,7 @@
 		}
 		{
 			dependencies: ["575D0E9BC127BF1C"]
+			description: ["电弧炉可熔炼高熔点合金, 是高级冶金设备, 需大功率供电."]
 			id: "6DA19D412E820D7E"
 			quest_enhance_disable_scroll_paging: false
 			shape: "hexagon"
@@ -192,6 +204,7 @@
 		}
 		{
 			dependencies: ["575D0E9BC127BF1C"]
+			description: ["金属压印机可批量成型板与齿轮, 替代浇铸, 效率更高."]
 			id: "648B1410429417EE"
 			quest_enhance_disable_scroll_paging: false
 			shape: "hexagon"
@@ -207,6 +220,7 @@
 		}
 		{
 			dependencies: ["575D0E9BC127BF1C"]
+			description: ["精炼机可分离石油馏分, 是石化产线的核心, 需配蒸馏控制器."]
 			id: "6040D5F545A9AF4E"
 			quest_enhance_disable_scroll_paging: false
 			shape: "hexagon"
@@ -222,6 +236,7 @@
 		}
 		{
 			dependencies: ["575D0E9BC127BF1C"]
+			description: ["电解槽可分解化合物制取纯金属与气体, 建议接入直流电源."]
 			id: "1BC323FEFD8563EE"
 			quest_enhance_disable_scroll_paging: false
 			shape: "hexagon"
@@ -237,6 +252,7 @@
 		}
 		{
 			dependencies: ["1BC323FEFD8563EE"]
+			description: ["铝可由电解直接获取, 用于轻结构与导线, 建议批量生产."]
 			id: "2198F6546DFD10CE"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "直接电解！"
@@ -257,6 +273,7 @@
 		}
 		{
 			dependencies: ["6DA19D412E820D7E"]
+			description: ["不锈钢耐蚀, 适合化工与食品设备, 是高压容器的材料."]
 			id: "40C98CCFB238D7F4"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "真的不会锈"
@@ -277,7 +294,7 @@
 		}
 		{
 			dependencies: ["3FAF92A93ACD3FEB"]
-			description: ["制冰机(更快的浇筑台?)"]
+			description: ["冷却器可快速定型材料, 也可制冰, 是结晶与橡胶线的配套."]
 			id: "5968CB2295B8464D"
 			quest_enhance_disable_scroll_paging: false
 			shape: "hexagon"
@@ -293,6 +310,7 @@
 		}
 		{
 			dependencies: ["3FAF92A93ACD3FEB"]
+			description: ["培养机, 流体混合器, 压印机与坩埚可补齐工艺链, 按需选配."]
 			id: "14A9BE3930DB9A7F"
 			optional: true
 			quest_enhance_disable_scroll_paging: false
@@ -325,6 +343,7 @@
 		}
 		{
 			dependencies: ["3FAF92A93ACD3FEB"]
+			description: ["低温干燥机可脱水制粉, 用于钨等材料, 建议与酸洗线并排."]
 			id: "6D23F6076CEF75A4"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -354,6 +373,7 @@
 		}
 		{
 			dependencies: ["3FAF92A93ACD3FEB"]
+			description: ["高级精炼机提升收率, 适合重油处理, 建议后期替换普通精炼机."]
 			id: "0951D03AB81B63C9"
 			quest_enhance_disable_scroll_paging: false
 			shape: "hexagon"
@@ -369,7 +389,7 @@
 		}
 		{
 			dependencies: ["3FAF92A93ACD3FEB"]
-			description: ["制作一些高精尖材料"]
+			description: ["热解炉可将有机物碳化, 产出焦炭与油, 是煤化工的入口."]
 			id: "3BAF24E7D930B0E8"
 			quest_enhance_disable_scroll_paging: false
 			shape: "hexagon"
@@ -385,6 +405,7 @@
 		}
 		{
 			dependencies: ["5968CB2295B8464D"]
+			description: ["通透玻璃由熔融玻璃浇铸, 用于观察窗与结构装饰."]
 			id: "789B06331E701479"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "更方便的制作"
@@ -398,6 +419,7 @@
 		}
 		{
 			dependencies: ["6D23F6076CEF75A4"]
+			description: ["钨反应物是钨冶炼的原料, 需脱水与酸处理, 建议连续投料."]
 			id: "463224731EF080C5"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "钨制造"
@@ -411,6 +433,7 @@
 		}
 		{
 			dependencies: ["575D0E9BC127BF1C"]
+			description: ["车窑可烧制耐火与陶瓷件, 也可炼锇, 是高温工艺设备."]
 			id: "3A56C98FA4442897"
 			quest_enhance_disable_scroll_paging: false
 			shape: "hexagon"
@@ -425,7 +448,7 @@
 		}
 		{
 			dependencies: ["3A56C98FA4442897"]
-			description: ["虽然炼锇锭可以不用车窑，但是下一章任务要用，所以还是推荐做一个。"]
+			description: ["锇是坚固金属, 下一阶段的关键材料, 建议优先储备."]
 			id: "735D7AA1C1ACEBC1"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "坚固金属"
@@ -436,6 +459,20 @@
 			}]
 			x: 14.0d
 			y: 3.0d
+		}
+		{
+			dependencies: ["1628C208DB18AE01"]
+			description: ["钴构件由钴与流明管装配, 支撑高温设备与重型机械."]
+			id: "05455B4F8CD3EBD8"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "2DEAA08FCD6BBC14"
+				item: "cmi:cobalt_mechanism"
+				type: "item"
+			}]
+			title: "钴构件"
+			x: 8.0d
+			y: 5.0d
 		}
 	]
 	title: "机器迭代(WIP)"

@@ -17,6 +17,7 @@
 	quest_links: [ ]
 	quests: [
 		{
+			description: ["本组汇集非主线实用工具, 可按需求取用, 建议先做存储与传输."]
 			icon: "create:wrench"
 			id: "714D1AC6D07BEEC0"
 			quest_enhance_disable_scroll_paging: false
@@ -36,7 +37,7 @@
 		}
 		{
 			dependencies: ["714D1AC6D07BEEC0"]
-			description: ["建筑手杖是一种可以快速搭建方块的工具, 搭建冶炼炉或地板时可以发挥大用"]
+			description: ["建筑手杖可快速铺设方块, 搭建冶炼炉或地板时效率极高."]
 			hide_dependency_lines: true
 			id: "794382603730734B"
 			quest_enhance_disable_scroll_paging: false
@@ -188,7 +189,7 @@
 				"714D1AC6D07BEEC0"
 				"4CCF561EE0B2C3A6"
 			]
-			description: ["连接工具需要和存储控制器搭配使用, 和存储控制器连接过的抽屉可以在控制器中查看并调用"]
+			description: ["连接工具需配合存储控制器, 已连接的抽屉可在控制器中调用."]
 			hide_dependency_lines: true
 			icon: {
 				Count: 1
@@ -397,7 +398,7 @@
 				"4CCF561EE0B2C3A6"
 				"714D1AC6D07BEEC0"
 			]
-			description: ["搭配输出输入升级使用有奇效"]
+			description: ["流体抽屉配合输入输出升级可在前期替代管道与泵."]
 			hide_dependency_lines: true
 			id: "15080FCC44C718DD"
 			quest_enhance_disable_scroll_paging: false
@@ -419,7 +420,7 @@
 		}
 		{
 			dependencies: ["714D1AC6D07BEEC0"]
-			description: ["灌注液态超经验获得无限耐久!"]
+			description: ["灌注液态超经验可获得无限耐久, 适合长期使用."]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "553F8AFDC9BAC40F"
@@ -442,7 +443,7 @@
 		}
 		{
 			dependencies: ["714D1AC6D07BEEC0"]
-			description: ["灌注液态超经验获得无限耐久!"]
+			description: ["灌注液态超经验可获得无限耐久, 适合采集与战斗."]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "0D920683691D237D"
@@ -464,10 +465,7 @@
 		}
 		{
 			dependencies: ["714D1AC6D07BEEC0"]
-			description: [
-				"物品栏左上角有一个按钮"
-				"可以选择禁用一些声音"
-			]
+			description: ["物品栏左上角按钮可禁用部分声音, 需要安静环境时使用."]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			icon: "immersiveengineering:earmuffs"
@@ -516,6 +514,7 @@
 		}
 		{
 			dependencies: ["714D1AC6D07BEEC0"]
+			description: ["训练假人可承受攻击并显示伤害数值, 用于武器与附魔测试."]
 			hide_dependency_lines: true
 			id: "3DD175AC87EB32EA"
 			quest_enhance_disable_scroll_paging: false
@@ -554,6 +553,7 @@
 		}
 		{
 			dependencies: ["714D1AC6D07BEEC0"]
+			description: ["太阳能锅炉无需燃料, 可低负荷持续产汽, 适合偏远设备供电."]
 			hide_dependency_lines: true
 			id: "0E0683A73BB85ABC"
 			quest_enhance_disable_scroll_paging: false
@@ -575,6 +575,7 @@
 		}
 		{
 			dependencies: ["714D1AC6D07BEEC0"]
+			description: ["熔岩可无限生成, 如同 2x2 无限水, 是稳定的热源与燃料."]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "531B040688E8A067"

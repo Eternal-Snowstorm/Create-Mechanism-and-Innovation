@@ -6,7 +6,11 @@
 	id: "7AD7DBA07C1C3161"
 	order_index: 6
 	quest_enhance_decorative_lines: [ ]
-	quest_enhance_hidden_dependency_lines: [ ]
+	quest_enhance_hidden_dependency_lines: [{
+		dependency: "q:7c4610039c4583c2"
+		reveal_on_hover: 0b
+		source: "q:4ce7d8732b600da4"
+	}]
 	quest_links: [ ]
 	quests: [
 		{
@@ -14,6 +18,7 @@
 				"78AA95E3CA8606A0"
 				"630B4C81E08F7B82"
 			]
+			description: ["基础通用构件是 MK1 设备的核心件. 建议先备齐基座与电子部件, 再一次性装配成型."]
 			id: "2D4B0D1E342A2BE1"
 			quest_enhance_disable_scroll_paging: false
 			quest_enhance_quest_background: "kaleidoscope_cookery:textures/advancement/background.png"
@@ -32,6 +37,7 @@
 				"402808BF06429750"
 				"592BCA21F18F2269"
 			]
+			description: ["控制电路是 MEK 机器的逻辑核心. 建议按产线数量预留备用, 避免装配时断料."]
 			id: "78AA95E3CA8606A0"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -44,6 +50,7 @@
 		}
 		{
 			dependencies: ["07FEB9EEE11846D3"]
+			description: ["水晶矩阵用于 AE2 计算与存储结构. 可用水晶块与红石酸在切割机上批量制作."]
 			id: "402808BF06429750"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -56,6 +63,7 @@
 		}
 		{
 			dependencies: ["48BE5E7913CB16BC"]
+			description: ["充能水晶粉由晶体研磨并充能而成. 是充能水晶与元件的中间料, 建议批量处理."]
 			id: "5968FDE57690B0B5"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -68,6 +76,7 @@
 		}
 		{
 			dependencies: ["5968FDE57690B0B5"]
+			description: ["水晶锭用于 AE2 高级结构与机壳. 由充能水晶熔炼成型, 建议按建筑规模备料."]
 			id: "07FEB9EEE11846D3"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -80,6 +89,7 @@
 		}
 		{
 			dependencies: ["21D270C51E152805"]
+			description: ["充能水晶是 AE2 元件的能量媒介. 可由充能水晶粉压制, 用于电路与存储部件."]
 			id: "48BE5E7913CB16BC"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -95,6 +105,7 @@
 				"38C4F70ADD8A2584"
 				"5C91A6B0EEF0E16A"
 			]
+			description: ["基础电子元件是处理器与构件的基础件. 用锇晶圆在刻蚀机中加工, 建议量产备用."]
 			id: "592BCA21F18F2269"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -110,6 +121,7 @@
 				"077007A321AACB43"
 				"15856673CC935E11"
 			]
+			description: ["锇晶圆用于蚀刻处理器基板. 需先将半熔锇压片, 再进入切割与刻蚀工序."]
 			id: "38C4F70ADD8A2584"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -122,6 +134,7 @@
 		}
 		{
 			dependencies: ["7C4610039C4583C2"]
+			description: ["富集合金由锇与红石灌注制得. 是 MK1 构件与电路的材料, 建议稳定供应."]
 			id: "5C91A6B0EEF0E16A"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -134,6 +147,7 @@
 		}
 		{
 			dependencies: ["2A2D5B5398B014C5"]
+			description: ["冶金灌注机可向金属注入红石与碳等介质. 是 MEK 体系的入口设备, 建议优先搭建."]
 			id: "7C4610039C4583C2"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -146,6 +160,7 @@
 		}
 		{
 			dependencies: ["402F78E7DF1743FC"]
+			description: ["富集锇晶体用于锇系元件. 由半熔锇与富集合金灌注而成, 是晶圆的前体."]
 			id: "077007A321AACB43"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -158,6 +173,7 @@
 		}
 		{
 			dependencies: ["21D270C51E152805"]
+			description: ["纯半熔锇是锇元件的前体, 需高温处理. 建议在车窑与灌注机之间规划短流程."]
 			id: "402F78E7DF1743FC"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -170,6 +186,7 @@
 		}
 		{
 			dependencies: ["21D270C51E152805"]
+			description: ["电路切割机可切割晶圆为电路板. 是 AE2 与 MEK 电路线的共用设备, 建议配足电力."]
 			id: "15856673CC935E11"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -182,6 +199,7 @@
 		}
 		{
 			dependencies: ["202DA7D1421AC3BD"]
+			description: ["电解槽是制硫酸与铬的关键设备. 通入直流电即可分解溶液, 建议与化工线并排布置."]
 			id: "4F64A9DFD0711010"
 			quest_enhance_disable_scroll_paging: false
 			shape: "hexagon"
@@ -198,6 +216,7 @@
 				"2D4B0D1E342A2BE1"
 				"4F64A9DFD0711010"
 			]
+			description: ["镀铬钢齿轮耐磨, 用于高负荷传动. 由钢齿轮经电镀液处理而成, 建议批量生产."]
 			id: "1AEB8A6ACA26FC36"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -213,7 +232,7 @@
 				"481552A49309F9D9"
 				"5E3BE7A051CD0E78"
 			]
-			description: ["电镀液使用后会变回硫酸, 不会消耗"]
+			description: ["电镀液使用后还原为硫酸, 可循环使用. 无需反复配制, 只需补充损耗."]
 			id: "202DA7D1421AC3BD"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "循环使用"
@@ -227,6 +246,7 @@
 		}
 		{
 			dependencies: ["40C1F0F504964026"]
+			description: ["硫酸由二氧化硫氧化制得, 是化工基础酸. 可用于铬精炼, 电镀与酸洗."]
 			id: "481552A49309F9D9"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "第一桶硫酸！"
@@ -240,6 +260,7 @@
 		}
 		{
 			dependencies: ["1C1EAC4C12A9B287"]
+			description: ["红宝石精炼可得铬粉, 用于镀铬与合金. 是铝合金与镀铬线的共同原料."]
 			id: "5E3BE7A051CD0E78"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "精炼"
@@ -253,6 +274,7 @@
 		}
 		{
 			dependencies: ["5128AEA2002411D9"]
+			description: ["三氧化硫溶于水即得硫酸. 建议在密闭管线中转化, 避免酸性气体逸散."]
 			icon: "mekanism:sulfur_trioxide_bucket"
 			id: "40C1F0F504964026"
 			quest_enhance_disable_scroll_paging: false
@@ -266,6 +288,7 @@
 		}
 		{
 			dependencies: ["3BAF24E7D930B0E8"]
+			description: ["二氧化硫由硫或硫化物氧化产生. 是硫酸链的第一步, 需稳定供氧与热源."]
 			icon: "mekanism:sulfur_dioxide_bucket"
 			id: "5128AEA2002411D9"
 			quest_enhance_disable_scroll_paging: false
@@ -279,6 +302,7 @@
 		}
 		{
 			dependencies: ["177B11EF53B286AA"]
+			description: ["硅橡胶板用于密封与绝缘. 由硅橡胶浇铸或压延成型, 建议按设备规格裁切."]
 			id: "630B4C81E08F7B82"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -291,6 +315,7 @@
 		}
 		{
 			dependencies: ["1E5AE69BBC7AA5CF"]
+			description: ["硅橡胶液体可浇铸为板与件. 是气密构件的材料, 需保持恒温储存."]
 			id: "177B11EF53B286AA"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -303,6 +328,7 @@
 		}
 		{
 			dependencies: ["0653A33CE9A4C9DB"]
+			description: ["聚硅醚是硅橡胶的中间体. 由轻质硅醚聚合而成, 建议连续投料以稳定产量."]
 			id: "1E5AE69BBC7AA5CF"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -315,6 +341,7 @@
 		}
 		{
 			dependencies: ["3FACF1F2E75FE4B9"]
+			description: ["轻质硅醚由轻烯烃与硅烷反应. 是硅橡胶链的上游, 需稳定的烯烃供应."]
 			id: "0653A33CE9A4C9DB"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -327,6 +354,7 @@
 		}
 		{
 			dependencies: ["79461202D5061059"]
+			description: ["化学反应器支持多步反应, 是化工产线中枢. 建议按反应顺序串联布置."]
 			id: "3FACF1F2E75FE4B9"
 			quest_enhance_disable_scroll_paging: false
 			shape: "hexagon"
@@ -344,6 +372,7 @@
 				"6190E940F1BF2D16"
 				"3BAF24E7D930B0E8"
 			]
+			description: ["暴雪单元提供低温环境, 用于冷却与凝结. 可替代部分制冷设备, 适合集中供冷."]
 			id: "2A2D5B5398B014C5"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -356,6 +385,7 @@
 		}
 		{
 			dependencies: ["21D270C51E152805"]
+			description: ["暴雪血液可用于低温合成与冷却. 采集时注意保温, 避免常温挥发."]
 			id: "6190E940F1BF2D16"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "一把抓住，顷刻炼化"
@@ -368,7 +398,7 @@
 			y: -3.5d
 		}
 		{
-			description: ["链接本任务的任务的前置还未链接, 暂时链接于此"]
+			description: ["该任务为占位节点, 前置链仍在补全. 完成条件满足后可忽略其提示."]
 			hide_dependency_lines: false
 			id: "21D270C51E152805"
 			quest_enhance_disable_scroll_paging: false
@@ -382,17 +412,8 @@
 			y: -3.5d
 		}
 		{
-			dependencies: ["75976F12CFFBC1F3"]
-			description: [
-				"&a团藻块&r通常成群悬浮于&e伊甸星环&r的半空中, 形成规模不一的群落. 它们的内部储存着大量水分, 似乎是为了应对不时之需. (尽管这些水呈现出绿色, 但实际上并不存在任何问题)"
-				""
-				"在伊甸这样一个长期缺乏阳光的环境中, 它们进化出了惊人的光合作用能力. 经过简单加工, 便能从中提取出大量&b光合反应液&r."
-				""
-				"以现有的科技水平, 我们仍然无法完全理解它们的繁衍方式与生存机制. 而与它们共同生存的&a悬生藤&r, &a藻衣&r和&a共生霉菌&r, 似乎都在它们的繁衍与生长过程中扮演着某种重要角色."
-				""
-				"或许在&b未来&r, 我们终有机会揭开这些谜团."
-				"{image:cmi:textures/images/eden/volvox_ball.png width:1 height:1 align:center fit:true}"
-			]
+			dependencies: ["3FACF1F2E75FE4B9"]
+			description: ["伊甸星环的团藻可提取光合反应液. 需简单加工, 建议集中采集后统一处理."]
 			id: "642E22913AC26E70"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "光合作用最强之人"
@@ -418,11 +439,12 @@
 				type: "item"
 			}]
 			title: "团藻"
-			x: 4.5d
-			y: 7.5d
+			x: 8.0d
+			y: 2.5d
 		}
 		{
-			dependencies: ["75976F12CFFBC1F3"]
+			dependencies: ["3FACF1F2E75FE4B9"]
+			description: ["萤石粉与生物质可被动产出光合反应液. 适合作为稳定但低效的补充来源."]
 			id: "48482A7ED327492E"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "一个当前时期可以被动生产的方式"
@@ -474,11 +496,12 @@
 					type: "item"
 				}
 			]
-			x: 7.5d
-			y: 7.5d
+			x: 8.0d
+			y: 0.5d
 		}
 		{
 			dependencies: ["3FACF1F2E75FE4B9"]
+			description: ["强化反应器可承受更高压力, 支撑后期化工. 由钢机壳与强化构件装配."]
 			id: "75976F12CFFBC1F3"
 			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
@@ -489,7 +512,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 4.5d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -497,6 +520,7 @@
 				"48482A7ED327492E"
 			]
 			dependency_requirement: "one_completed"
+			description: ["光合反应液是生物化工的原料. 可用于有机合成与营养液, 建议低温保存."]
 			id: "1C91019F4B632C30"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -504,11 +528,12 @@
 				item: "cmi:photosyn_fluid_bucket"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 10.5d
+			x: 10.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["0AB684109B909C24"]
+			description: ["铬粉与硫酸反应后可精炼为可用形态. 注意控制酸浓度与反应温度."]
 			icon: "cmi:chromium_solution_bucket"
 			id: "1C1EAC4C12A9B287"
 			quest_enhance_disable_scroll_paging: false
@@ -523,6 +548,7 @@
 		}
 		{
 			dependencies: ["0B3CB687C57A86D7"]
+			description: ["红宝石研磨得粉, 可精炼出铬. 建议先在粉碎轮中粗碎再进入研磨."]
 			id: "0AB684109B909C24"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "磨粉"
@@ -539,6 +565,7 @@
 				"19842C87ECE5D85B"
 				"56A638DF7B8C736C"
 			]
+			description: ["红宝石是铬的主要来源. 登月前可作为铬矿替代, 建议优先采集并储存."]
 			id: "0B3CB687C57A86D7"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -551,7 +578,7 @@
 		}
 		{
 			dependencies: ["3FAF92A93ACD3FEB"]
-			description: ["如果运气不好可以用这个方法产红宝石"]
+			description: ["硝化点火器与黑石源可替代红宝石产出铬. 适合矿点稀少时的备用路线."]
 			icon: "thermal_extra:nitratic_igniter"
 			id: "19842C87ECE5D85B"
 			optional: true
@@ -574,7 +601,7 @@
 		}
 		{
 			dependencies: ["3FAF92A93ACD3FEB"]
-			description: ["在上月球之后你才能挖到铬矿，所以现在红宝石矿就是你的铬矿"]
+			description: ["登月之前, 红宝石矿即当作铬矿使用. 建议在矿点附近就地处理以减轻运输."]
 			id: "56A638DF7B8C736C"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "铬处理来喽"
@@ -585,6 +612,78 @@
 			}]
 			x: 2.0d
 			y: -2.5d
+		}
+		{
+			dependencies: ["3DD168286382BEED"]
+			description: ["航空构件由航空基座与材料装配, 支撑火箭制造. 是一级火箭的直接前置."]
+			id: "146736658C4B765F"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "6E6BDABB201958CD"
+				item: "cmi:aeronautic_mechanism"
+				type: "item"
+			}]
+			title: "航空构件"
+			x: 0.0d
+			y: 6.5d
+		}
+		{
+			dependencies: [
+				"146736658C4B765F"
+				"4CE7D8732B600DA4"
+				"3DD168286382BEED"
+				"4BBBC59E1EF97670"
+			]
+			description: ["一级火箭是本章目标, 可载人进入近地轨道. 装配前请确认燃料与结构件齐备."]
+			id: "237CFBC1BCB8A435"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "274EED13BCFBD1FD"
+				item: "ad_astra:tier_1_rocket"
+				type: "item"
+			}]
+			title: "一级航天火箭"
+			x: 2.0d
+			y: 5.5d
+		}
+		{
+			description: ["铝合金由铝与铬在电弧炉中熔炼. 轻质耐蚀, 用于机壳与航天结构."]
+			id: "3DD168286382BEED"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "4029F35A0945ADF2"
+				item: "cmi:aluminum_alloy_ingot"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["7C4610039C4583C2"]
+			description: ["钨钢由钨铸碳熔合, 耐高温. 是高温设备与火箭发动机的材料."]
+			hide_dependency_lines: true
+			id: "4CE7D8732B600DA4"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "598660C083EBC588"
+				item: "cmi:tungsten_steel_ingot"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4CE7D8732B600DA4"]
+			description: ["复合钨钢板用于火箭发动机与高温结构. 由钨钢板与锇复合压制, 建议批量备料."]
+			id: "4BBBC59E1EF97670"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "6E5DB15A12942219"
+				item: "cmi:composite_tungsten_steel_plate"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 6.5d
 		}
 	]
 	title: "通用机械(WIP)"

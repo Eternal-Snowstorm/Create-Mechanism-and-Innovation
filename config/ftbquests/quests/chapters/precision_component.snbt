@@ -18,6 +18,7 @@
 				"27A9E301280210E8"
 				"14470BD1A85DE01D"
 			]
+			description: ["线圈构件是电力与磁场设备的核心, 由铜族材料绕制装配, 建议与磁铁配套."]
 			id: "662A1304331857B0"
 			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
@@ -36,10 +37,7 @@
 				"6865ED5A1D93E5EA"
 				"17DC0AE5C56048CF"
 			]
-			description: [
-				"电动机, 非常优秀的动力源．我们可以把它与&9磁铁&r一起放进设备里进行驱动, 从而有效的将部分设备&6小型化&r"
-				"当然, 将电动机与其他设备零件结合制作成&e构件&r可以适配更多的应用场景"
-			]
+			description: ["转子与磁铁配合可驱动设备, 使部分机械小型化, 是电动设备的关键件."]
 			id: "534E0D3A9FB9955E"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "电磁感应的实际应用"
@@ -53,10 +51,7 @@
 		}
 		{
 			dependencies: ["04004B46385E2AF2"]
-			description: [
-				"将铁进行&6进一步熔锻&r, 清除其中的杂质后, 一种更加柔韧的材料就出现了"
-				"工业铁的可塑性和韧性极佳, 是一种理想的&a冲压模具&r与&a设备外壳&r材料"
-			]
+			description: ["铁经熔锻去杂后更柔韧, 适合冲压模具与设备外壳, 建议稳定供应."]
 			id: "17DC0AE5C56048CF"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "世界其实是铁做的"
@@ -83,11 +78,7 @@
 				"0FD5009A9709ACE5"
 				"52AE29C9BB2B6F00"
 			]
-			description: [
-				"将&e金&r和&b银&r混合后, &e琥珀金&r就出现了"
-				"作为一种&6导电性能还不错&r的合金材料, 琥珀金被大量用于&9电力传输&r与&9用电器制造&r"
-				"&4多准备一点&r琥珀金, 你很快就知道为什么了"
-			]
+			description: ["金银合金, 导电性良好, 大量用于电力传输与用电器制造."]
 			id: "5F0BB5EE6AFEE840"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "低电阻合金"
@@ -113,6 +104,7 @@
 				"1EF0004B28066AF0"
 				"7C2DCC26298ACC51"
 			]
+			description: ["红石酸可作冷却与蚀刻介质, 也可用于部分合成与清洗工艺."]
 			id: "6CDA351D1F52C170"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "铁傀儡也许会喜欢这种饮料"
@@ -127,6 +119,7 @@
 		}
 		{
 			dependencies: ["04004B46385E2AF2"]
+			description: ["熔融铅用于浇铸与辐射屏蔽类部件, 也用于部分合金调配."]
 			id: "7C2DCC26298ACC51"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "老罗马风味"
@@ -140,6 +133,7 @@
 		}
 		{
 			dependencies: ["04004B46385E2AF2"]
+			description: ["红石粉是电路与信号元件的基础原料, 建议长期储备."]
 			id: "1EF0004B28066AF0"
 			quest_enhance_disable_scroll_paging: false
 			shape: "pentagon"
@@ -164,16 +158,7 @@
 				"68A82E2E7552EF90"
 				"7B311FB3BDA3F3DD"
 			]
-			description: [
-				"使用&6自动化工程师装配台&r可以自动化处理&6工程师装配台&r内的蓝图配方. 只需要选择配方后通上电并且源源不断往里输入原料便可实现自动化"
-				""
-				"同时在本整合包中, &6沉浸工程&r的大部分机器的&b工作时间&r都被调整为原版的&c30%&r"
-				""
-				"这意味着这些设备的&d处理速度&r相比原版得到了&6显著提升&r, 大多数配方都可以在更短的时间内完成"
-				""
-				"换句话说, 你现在使用&6沉浸工程&r的机器时, 将会获得大约&b3.3倍&r的处理效率, 从而更快地推进你的&6自动化生产&r"
-				"{image:cmi:textures/images/ie/auto_workbench.png width:163 height:151 align:center}"
-			]
+			description: ["自动化装配台可处理蓝图配方, 沉浸工程机器工时已缩短至原版三成."]
 			icon: "immersiveengineering:auto_workbench"
 			icon_scale: 2.0d
 			id: "6ED98C2148C69BD7"
@@ -192,6 +177,7 @@
 		}
 		{
 			dependencies: ["66F1898DB743301D"]
+			description: ["真空管是信号放大与逻辑元件, 电子设备的基础件, 建议量产."]
 			id: "68A82E2E7552EF90"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "不会爆炸"
@@ -205,6 +191,7 @@
 		}
 		{
 			dependencies: ["5F0BB5EE6AFEE840"]
+			description: ["琥珀金压制板, 用于电路基板与导线, 是电子件的前体."]
 			id: "27A9E301280210E8"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -224,6 +211,7 @@
 		}
 		{
 			dependencies: ["211642A0702308A1"]
+			description: ["镍是合金与耐蚀材料的中介金属, 与铜, 铁组合出多种合金."]
 			id: "66F1898DB743301D"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -246,6 +234,7 @@
 				"68A82E2E7552EF90"
 				"6CCEECDF932F5041"
 			]
+			description: ["构件的通用机械零件, 用于工程类构件装配, 建议批量备料."]
 			id: "14470BD1A85DE01D"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -261,10 +250,7 @@
 				"66F1898DB743301D"
 				"52AE29C9BB2B6F00"
 			]
-			description: [
-				"将&6铜&r与&e镍&r按照&b1:1&r的比例放入&6冶炼炉&r中进行合金, 即可得到新的合金材料"
-				"这种合金在工业生产中用途广泛, 是许多&6机械部件&r与&d高级材料&r的重要原料"
-			]
+			description: ["铜镍按 1:1 冶炼而成, 电阻稳定, 适合电热与精密元件."]
 			id: "6CCEECDF932F5041"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "又是一种合金"
@@ -285,6 +271,7 @@
 		}
 		{
 			dependencies: ["541572E2CD225DD7"]
+			description: ["钒系材料可用于电解与发电设备, 建议优先建立稳定供电."]
 			id: "10FE6C8E2FB59714"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -338,10 +325,7 @@
 		}
 		{
 			dependencies: ["10FE6C8E2FB59714"]
-			description: [
-				"整合包修改了蓄电池的容量, 单个蓄电池的存储量可达到4194303 FE"
-				"而多方块蓄电池组最大为8*8*8, 因此512的蓄电池可存储2147483136 FE"
-			]
+			description: ["单体储电约 419 万 FE, 8x8x8 组阵可达 21 亿 FE, 适合中后期储能."]
 			id: "7B311FB3BDA3F3DD"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -362,6 +346,7 @@
 		}
 		{
 			dependencies: ["211642A0702308A1"]
+			description: ["钒用于电解与高强度合金, 是本阶段的关键金属, 建议优先开采."]
 			id: "541572E2CD225DD7"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -384,6 +369,7 @@
 				"1EF0004B28066AF0"
 				"20227AC2A1D37ED9"
 			]
+			description: ["红石与石英熔合所得, 可用于信号与光学元件, 是电子管的前体."]
 			id: "1B38A75357F7EF12"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -411,6 +397,7 @@
 				"4D6A6FE3DAF7BBB8"
 				"12610CFD86470A7D"
 			]
+			description: ["沙子经分液与研磨提纯所得, 用于光学与电子件, 建议批量处理."]
 			id: "20227AC2A1D37ED9"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -437,6 +424,7 @@
 		}
 		{
 			dependencies: ["343FF83E544BCB9D"]
+			description: ["石英研磨粉, 是纯净石英的前体, 也是玻璃与陶瓷的原料."]
 			id: "4D6A6FE3DAF7BBB8"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "其实就是很努力的沙子"
@@ -457,6 +445,7 @@
 		}
 		{
 			dependencies: ["597C6E45B2C2B855"]
+			description: ["沙子在分液池处理后得到纯净沙, 可提纯石英与玻璃."]
 			id: "12610CFD86470A7D"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "沙子在分液池上走一圈"
@@ -470,6 +459,7 @@
 		}
 		{
 			dependencies: ["04004B46385E2AF2"]
+			description: ["石英晶体可用于光学与电子元件, 也是玫瑰石英的原料."]
 			id: "343FF83E544BCB9D"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -489,6 +479,7 @@
 		}
 		{
 			dependencies: ["04004B46385E2AF2"]
+			description: ["海滩沙储量丰富, 是石英与玻璃线的原料, 建议就近设加工点."]
 			id: "597C6E45B2C2B855"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "海滩上一大堆"
@@ -512,6 +503,7 @@
 				"20227AC2A1D37ED9"
 				"095B15FB9AA8B9AB"
 			]
+			description: ["光敏构件用于光电与传感设备, 由光敏元件装配, 是自动化感知的前置."]
 			id: "44F9F9937CF8A987"
 			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
@@ -526,6 +518,7 @@
 		}
 		{
 			dependencies: ["1B38A75357F7EF12"]
+			description: ["玫瑰石英抛光后可用于精密元件, 是电子管与光敏件的材料."]
 			id: "3E77FFA67682D3E5"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "这个吃起来像玫瑰糖"
@@ -539,6 +532,7 @@
 		}
 		{
 			dependencies: ["3E77FFA67682D3E5"]
+			description: ["电子管是早期信号元件, 用于放大与逻辑, 建议与精密构件配套."]
 			id: "095B15FB9AA8B9AB"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "这个...算了这个麻嘴"
@@ -556,6 +550,7 @@
 				"2E5B74230C1BCE67"
 				"73251C27B7403CF9"
 			]
+			description: ["精密构件由多种精密零件装配, 是自动化的核心件, 建议大量生产."]
 			id: "1570B04A1D692BCC"
 			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
@@ -570,6 +565,7 @@
 		}
 		{
 			dependencies: ["04004B46385E2AF2"]
+			description: ["大齿轮需多道装配, 木质方案最省料, 也可改用其他材料."]
 			id: "2E5B74230C1BCE67"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "或许木头是最方便的"
@@ -590,6 +586,7 @@
 		}
 		{
 			dependencies: ["04004B46385E2AF2"]
+			description: ["银是导电与合金材料, 与金合成琥珀金, 是电子件的基础."]
 			id: "5BE72CC5C35C3BF0"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -609,6 +606,7 @@
 		}
 		{
 			dependencies: ["04004B46385E2AF2"]
+			description: ["金导电性优, 与银合成琥珀金, 也是耐蚀导体材料."]
 			id: "0FD5009A9709ACE5"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -628,6 +626,7 @@
 		}
 		{
 			dependencies: ["04004B46385E2AF2"]
+			description: ["铜锌合金, 用于机壳, 齿轮与精密件, 是中期结构材料."]
 			id: "73251C27B7403CF9"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [
@@ -662,11 +661,7 @@
 		}
 		{
 			dependencies: ["5F0BB5EE6AFEE840"]
-			description: [
-				"结构搭建好后使用右键中心的伊甸水晶就可以开启传送门, 传送门开启时会有5道落雷, 还请小心！"
-				""
-				"{image:cmi:textures/images/eden/portal.png width:138 height:114 align:center}"
-			]
+			description: ["搭建传送门框架后右键伊甸水晶即可开启, 开场有 5 道落雷, 请远离边缘."]
 			icon: "cmi:eden_crystal"
 			id: "30665E701364CEE8"
 			quest_enhance_disable_scroll_paging: false
@@ -720,7 +715,7 @@
 		}
 		{
 			dependencies: ["10FE6C8E2FB59714"]
-			description: ["{image:cmi:textures/images/cmi/improved_rubber_extractor.png width:140 height:202 align:center}"]
+			description: ["改进型橡胶提取器可提高割胶效率, 需工业铁结构件, 建议替换旧设备."]
 			icon: "cmi:improved_rubber_extractor"
 			id: "3AF743212C028BEE"
 			quest_enhance_disable_scroll_paging: false
@@ -787,10 +782,7 @@
 		}
 		{
 			dependencies: ["30665E701364CEE8"]
-			description: [
-				"炼钢的必要材料，用来做炉子的"
-				"{image:cmi:textures/images/ore_node/gaolingtu.png width:199 height:189 align:center fit:true}"
-			]
+			description: ["高岭土是炼钢炉的耐火材料, 建议按矿点采集并就地烧制."]
 			id: "71CAA61984378CFA"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "你需要这个"

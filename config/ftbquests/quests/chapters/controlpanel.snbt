@@ -1334,6 +1334,7 @@
 	quest_enhance_hidden_dependency_lines: [ ]
 	quest_links: [ ]
 	quests: [{
+		description: ["控制面板用于重载数据与脚本, 仅开发与调试时使用."]
 		id: "2AB5A43E48813145"
 		quest_enhance_disable_scroll_paging: false
 		tasks: [{
