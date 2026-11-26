@@ -1,18 +1,18 @@
-filename = 'kotlinforforge-4.12.0-all.jar'
+filename = 'kotlinforforge-4.13.0-all.jar'
 name = 'Kotlin for Forge'
 side = 'server'
 x-prismlauncher-dependencies = []
 x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
 x-prismlauncher-mc-versions = [ '1.19.3', '1.19.4', '1.20', '1.20.1', '1.20.2', '1.20.3', '1.20.4' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'Kotlin for Forge 4.12.0'
+x-prismlauncher-version-number = 'Kotlin for Forge 4.13.0'
 
 [download]
-hash = '962fdb760409d6d71cbf079235f1ca94e3863a22'
+hash = 'f751c96d858698ddf944cdf45badd0065ddf7e8d'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 7291067
+file-id = 9695363
 project-id = 351264

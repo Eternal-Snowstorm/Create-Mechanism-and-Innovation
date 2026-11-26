@@ -119,6 +119,7 @@ S:global_slider_label_base_color = '';
 B:global_button_label_underline_on_hover = 'false';
 I:global_button_background_nine_slice_border_right = '5';
 I:global_slider_background_nine_slice_border_top = '5';
+S:global_button_label_alignment = 'centered';
 I:global_slider_handle_nine_slice_border_top = '5';
 I:global_slider_handle_nine_slice_border_bottom = '5';
 F:global_button_label_scale = '1.0';
@@ -143,11 +144,13 @@ B:show_achievement_toasts = 'true';
 B:seamless_world_loading = 'false';
 F:global_button_click_sound_volume = '1.0';
 B:global_slider_background_transparent = 'false';
+S:global_slider_label_alignment = 'centered';
 S:global_slider_handle_normal = '';
 I:global_slider_background_nine_slice_border_right = '5';
 S:global_background_panorama = '';
 I:global_slider_handle_nine_slice_border_left = '5';
 S:global_menu_background_texture = '';
+B:global_menu_background_preserve_aspect_ratio = 'true';
 
 
 ##[dev]
