@@ -106,6 +106,12 @@ ServerEvents.recipes((event) => {
 			minecraft.stonecutting(mold, "#cmi:clay_molds")
 		})
 
+	// 红石组件
+	kubejs.shapeless("4x cmi:redstone_component", [
+		Mechanisms.REDSTONE.COM,
+		"#forge:plates/stone"
+	])
+
 	// 红石二极管基底
 	minecraft.stonecutting("2x cmi:redstone_diode_base", "minecraft:smooth_stone_slab")
 })

@@ -159,7 +159,7 @@ ServerEvents.recipes((event) => {
 		.input("#forge:plates/lead")
 		.deploying("minecraft:redstone")
 		.cutting()
-		.deploying("minecraft:redstone")
+		.deploying("create_rns:redstone_small_dust")
 		.deploying("minecraft:redstone_torch")
 		.deploying(Mechanisms.PART.BASIC)
 		.build()

@@ -163,6 +163,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	addItemLang("copper_casing_framework", "铜机壳框架")
 
 	// 电子元件
+	addItemLang("redstone_component", "红石组件")
 	addItemLang("thermal_unit", "热力通量单元")
 	addItemLang("basalz_unit", "大地震撼单元")
 	addItemLang("blaze_unit", "烈焰燃烧单元")

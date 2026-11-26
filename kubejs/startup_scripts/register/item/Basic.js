@@ -53,6 +53,9 @@ StartupEvents.registry("item", (event) => {
 			.glow(true)
 	})
 
+	// 红石组件
+	addItem("redstone_component")
+
 	// 黏血球
 	addItem("blood_slime_ball")
 		.texture(Cmi.loadResource("item/material/blood_slime_ball"))
