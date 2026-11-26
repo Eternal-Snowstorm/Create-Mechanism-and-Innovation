@@ -1,19 +1,19 @@
-filename = 'AdvancedCoreInfo-forge-1.20.1-1.5.0.jar'
-name = 'Advanced Core Info (ACI)'
+filename = 'AdvancedCoreInfo-forge-1.20.1-1.6.0.jar'
+name = 'AdvancedCoreInfo'
 side = 'server'
 x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'beta'
-x-prismlauncher-version-number = 'AdvancedCoreInfo-forge-1.20.1-1.5.0.jar'
+x-prismlauncher-version-number = 'AdvancedCoreInfo-forge-1.20.1-1.6.0.jar'
 
 [download]
-hash = 'e5f2fc98333fe203b06ee089f9afe351c2667dab'
+hash = 'de52d91e78d17ca443170f3d454bb7710e835099'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 9208458
+file-id = 9817090
 project-id = 1661923
 
 [[x-prismlauncher-dependencies]]

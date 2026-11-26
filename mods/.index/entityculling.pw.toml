@@ -1,18 +1,18 @@
-filename = 'entityculling-forge-1.12.1-mc1.20.1.jar'
+filename = 'entityculling-forge-1.12.2-mc1.20.1.jar'
 name = 'Entity Culling Fabric/Forge'
 side = ''
 x-prismlauncher-dependencies = []
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = '1.12.1-1.20.1 - Forge'
+x-prismlauncher-version-number = '1.12.2-1.20.1 - Forge'
 
 [download]
-hash = '571a91dc42a266a70e44b6b459f996a0f7876c29'
+hash = 'f8f6564ad5a3861fbf6751438e8fd830c3da88d9'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 9594018
+file-id = 9752253
 project-id = 448233

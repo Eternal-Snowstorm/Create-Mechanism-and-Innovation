@@ -1,19 +1,19 @@
-filename = 'AdvancedLootInfo-forge-1.20.1-2.5.0.jar'
-name = 'Advanced Loot Info (ALI)'
+filename = 'AdvancedLootInfo-forge-1.20.1-2.6.0.jar'
+name = 'AdvancedLootInfo'
 side = 'server'
 x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'beta'
-x-prismlauncher-version-number = 'AdvancedLootInfo-forge-1.20.1-2.5.0.jar'
+x-prismlauncher-version-number = 'AdvancedLootInfo-forge-1.20.1-2.6.0.jar'
 
 [download]
-hash = '0d090579cfd1385e17823ddd4fac1829e9116706'
+hash = 'bda582ac4ed71569e2f3c914c538b97ab5b31e47'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 9208463
+file-id = 9817093
 project-id = 1205426
 
 [[x-prismlauncher-dependencies]]
@@ -25,13 +25,13 @@ addonId = '1661923'
 type = 'REQUIRED'
 
 [[x-prismlauncher-dependencies]]
-addonId = '580555'
-type = 'OPTIONAL'
-
-[[x-prismlauncher-dependencies]]
 addonId = '238222'
 type = 'OPTIONAL'
 
 [[x-prismlauncher-dependencies]]
 addonId = '1700110'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '580555'
 type = 'OPTIONAL'

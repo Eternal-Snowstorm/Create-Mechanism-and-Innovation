@@ -66,7 +66,7 @@
     "hex": "#5D616466"
   },
   "ui_blur_interface_input_field_border_color_focused": {
-    "hex": "#5D616466"
+    "hex": "#64A5ECC8"
   },
   "ui_blur_interface_input_field_text_color_normal": {
     "hex": "#CEDDEDFF"
@@ -141,7 +141,7 @@
     "hex": "#3B3B3BFF"
   },
   "ui_interface_input_field_border_color_focused": {
-    "hex": "#3B3B3BFF"
+    "hex": "#64A5ECFF"
   },
   "ui_interface_input_field_text_color_normal": {
     "hex": "#CEDDEDFF"

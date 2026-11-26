@@ -1,19 +1,19 @@
-filename = 'ALICompat-forge-1.20.1-1.3.0.jar'
-name = 'ALI Compat'
+filename = 'ALICompat-forge-1.20.1-1.3.1.jar'
+name = 'ALICompat'
 side = 'server'
 x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'beta'
-x-prismlauncher-version-number = 'ALICompat-forge-1.20.1-1.3.0.jar'
+x-prismlauncher-version-number = 'ALICompat-forge-1.20.1-1.3.1.jar'
 
 [download]
-hash = 'a624d99f22ac7c8b81cf621e9b26a9936e0ad28b'
+hash = '28a74f952ceb80106f0aac021e22f746a761a4d0'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 9208471
+file-id = 9817098
 project-id = 1700110
 
 [[x-prismlauncher-dependencies]]
