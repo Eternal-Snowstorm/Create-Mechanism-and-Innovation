@@ -101,7 +101,7 @@
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
-			description: ["射频线圈是热力机器的关键件, 兼作金构件的组件, 建议批量绕制."]
+			description: ["RF线圈是热力机器的关键件, 兼作金构件的组件, 建议批量绕制."]
 			id: "490BA0C159C3FF63"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1592,7 +1592,7 @@
 		}
 		{
 			dependencies: ["490BA0C159C3FF63"]
-			description: ["金构件由射频线圈与零件装配, 支撑精密电气设备, 是热力线的前置."]
+			description: ["金构件由RF线圈与零件装配, 支撑精密电气设备, 是热力线的前置."]
 			id: "04E3B1B01E08FC52"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
