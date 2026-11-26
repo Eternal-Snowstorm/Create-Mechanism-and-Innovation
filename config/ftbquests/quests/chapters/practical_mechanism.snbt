@@ -46,7 +46,7 @@
 				item: "cmi:pig_iron_mechanism"
 				type: "item"
 			}]
-			x: 1.0d
+			x: 2.0d
 			y: -2.0d
 		}
 		{
@@ -60,7 +60,7 @@
 				item: "cmi:colorful_mechanism"
 				type: "item"
 			}]
-			x: -1.0d
+			x: -2.0d
 			y: -2.0d
 		}
 		{
@@ -116,6 +116,18 @@
 			}]
 			x: 2.0d
 			y: 2.0d
+		}
+		{
+			dependencies: ["5AF90A54B8D29AE1"]
+			id: "5DF918465F2602A8"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "46EE4AB39FB4FE14"
+				item: "cmi:nutrition_syringe"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.5d
 		}
 	]
 	title: "实用构件"
