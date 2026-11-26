@@ -12,7 +12,7 @@
 	quests: [
 		{
 			dependencies: ["060CE1F140832373"]
-			description: ["工作站可读取附近容器的内容进行合成, 建议紧靠仓库布置."]
+			description: ["工作站可以读取附近容器的内容来进行合成"]
 			id: "1C87D5AAC9DFF606"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -25,7 +25,7 @@
 		}
 		{
 			dependencies: ["060CE1F140832373"]
-			description: ["消耗模具可制造工具部件, 是工具定型的核心工位."]
+			description: ["消耗模具可以制造工具部件"]
 			id: "7DA5871CF2E66F10"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -38,7 +38,7 @@
 		}
 		{
 			dependencies: ["4E56A00869658583"]
-			description: ["使用部件制作初级工具, 高级工具需改用工匠砧."]
+			description: ["使用部件来制作初级工具(高级工具用工匠砧)"]
 			id: "060CE1F140832373"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -51,7 +51,7 @@
 		}
 		{
 			dependencies: ["060CE1F140832373"]
-			description: ["用于存储模具与注模, 建议放在部件制造台旁."]
+			description: ["用来存储模具和注模"]
 			id: "17E0DC295D597426"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -64,7 +64,7 @@
 		}
 		{
 			dependencies: ["060CE1F140832373"]
-			description: ["使用部件制作全部工具, 除少数无法制作的类型."]
+			description: ["使用部件制作所有的工具（除了做不了的）"]
 			id: "6FEE63C3D045CF70"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -85,7 +85,7 @@
 		}
 		{
 			dependencies: ["060CE1F140832373"]
-			description: ["第一台熔炼炉, 一次最多熔炼三个物品, 适合小批量试产."]
+			description: ["第一台熔炼炉，一次最多只能熔炼三个物品"]
 			id: "2A1A7BFD925717F6"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -94,7 +94,7 @@
 				type: "item"
 			}]
 			x: 2.5d
-			y: 2.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["2A1A7BFD925717F6"]
@@ -107,7 +107,7 @@
 				type: "item"
 			}]
 			x: 0.5d
-			y: 3.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["2A1A7BFD925717F6"]
@@ -123,12 +123,12 @@
 				item: "tconstruct:seared_fuel_tank"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 3.0d
+			x: 6.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["4AE3E0ABC87407D1"]
-			description: ["熔岩是本包无限热源, 除高熔点金属外基本都能熔化."]
+			description: ["除了卡科技的金属基本都能融化（大概"]
 			id: "5F270039A542B87A"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -136,8 +136,8 @@
 				item: "minecraft:lava_bucket"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 5.0d
+			x: 9.0d
+			y: 3.5d
 		}
 		{
 			description: [
@@ -192,7 +192,7 @@
 		}
 		{
 			dependencies: ["2A1A7BFD925717F6"]
-			description: ["大号合金炉, 可将金属熔为液体并按配方合金, 建议早建."]
+			description: ["简单来说就是大号合金炉，可以把金属都融成液态并且在符合配方的情况下进行合金"]
 			id: "2152DD07041EA829"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -202,11 +202,11 @@
 			}]
 			title: "焦黑熔炼炉"
 			x: 2.5d
-			y: 4.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["2152DD07041EA829"]
-			description: ["熔铸炉内金属不会自行合金, 适合需要保留成分的熔炼."]
+			description: ["更高级的熔炼炉(?),里面熔炼的金属不会自己合金(带熔炼功能的焦黑储罐)"]
 			id: "6C9C3E1E3D8B3079"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -215,12 +215,12 @@
 				type: "item"
 			}]
 			title: "焦褐熔铸炉"
-			x: 0.5d
-			y: 5.0d
+			x: 2.5d
+			y: 9.0d
 		}
 		{
 			dependencies: ["5F270039A542B87A"]
-			description: ["生物柴油炉温更高, 有了它即可熔化铁, 是铁器线的门槛."]
+			description: ["有了它就可以熔炼铁了"]
 			id: "2A8B6256D48EC25A"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -228,8 +228,8 @@
 				item: "immersiveengineering:biodiesel_bucket"
 				type: "item"
 			}]
-			x: 2.5d
-			y: 6.0d
+			x: 9.0d
+			y: 5.5d
 		}
 	]
 	title: "tconstruct"

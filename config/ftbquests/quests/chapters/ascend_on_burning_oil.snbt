@@ -11,11 +11,7 @@
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: [
-				"16854FB39C805578"
-				"4C8029998338398E"
-			]
-			description: ["零件装配台可把基础零件组合成构件部件, 是构件产线的中枢, 建议优先量产."]
+			dependencies: ["16854FB39C805578"]
 			id: "4FB2832A045C402D"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "把一堆零件变成更复杂的零件"
@@ -32,7 +28,6 @@
 				"3B5279119699AECC"
 				"161C0524EEDE5FC5"
 			]
-			description: ["热力构件由热力组件与零件装配, 支撑热力机器普及, 建议按机器数量备料."]
 			id: "16854FB39C805578"
 			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
@@ -47,7 +42,6 @@
 		}
 		{
 			dependencies: ["588CB73822918D10"]
-			description: ["铁镍合金, 热膨胀系数极低, 适合精密与耐热部件, 由铁与镍冶炼而成."]
 			id: "135EED5D795BB2D5"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "因瓦合金(笑)"
@@ -63,11 +57,11 @@
 		}
 		{
 			dependencies: [
+				"3CDC0B1303B8785C"
 				"490BA0C159C3FF63"
 				"4A054CCC2FFE7258"
 				"1CE6C98F16861ADB"
 			]
-			description: ["热力组件是热力构件的装配材料, 由精密零件制成, 需与热力构件配套生产."]
 			id: "3B5279119699AECC"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -80,7 +74,6 @@
 		}
 		{
 			dependencies: ["6CCEECDF932F5041"]
-			description: ["康铜齿轮用于精密传动与电热设备, 由康铜板压制后装配成型."]
 			id: "4A054CCC2FFE7258"
 			quest_enhance_disable_scroll_paging: false
 			require_sequential_tasks: false
@@ -101,7 +94,18 @@
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
-			description: ["RF线圈是热力机器的关键件, 兼作金构件的组件, 建议批量绕制."]
+			id: "3CDC0B1303B8785C"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "4F829018AC64858A"
+				item: "thermal:redstone_servo"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["1570B04A1D692BCC"]
 			id: "490BA0C159C3FF63"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -114,7 +118,6 @@
 		}
 		{
 			dependencies: ["541572E2CD225DD7"]
-			description: ["钒板用于高强度与耐热结构, 由钒锭压制, 是反应器与构件的材料."]
 			id: "1CE6C98F16861ADB"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -133,11 +136,7 @@
 			y: 8.0d
 		}
 		{
-			dependencies: [
-				"16854FB39C805578"
-				"4C8029998338398E"
-			]
-			description: ["结晶器可将溶液析出晶体, 用于宝石与晶体生产, 建议接入溶液管线."]
+			dependencies: ["16854FB39C805578"]
 			id: "68D40E9E67F5C986"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -154,7 +153,6 @@
 				"19422BB1CF729FC7"
 				"0468B914C2718A62"
 			]
-			description: ["纯净石英棱镜用于光学与激光设备, 由纯净石英打磨成型."]
 			id: "6A57D13406E9D6AA"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -174,7 +172,6 @@
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
-			description: ["晶体催化剂可加速晶体生长, 是结晶工艺的耗材, 建议批量备货."]
 			id: "19422BB1CF729FC7"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -187,7 +184,6 @@
 		}
 		{
 			dependencies: ["20227AC2A1D37ED9"]
-			description: ["纯净石英粉用于光学与电子元件, 由沙子提纯后研磨所得."]
 			id: "0468B914C2718A62"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -207,7 +203,6 @@
 		}
 		{
 			dependencies: ["6A57D13406E9D6AA"]
-			description: ["激光二极管用于光刻与切割设备, 是电路与光学线的关键件."]
 			id: "7986071E20EEF73C"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -220,7 +215,6 @@
 		}
 		{
 			dependencies: ["7986071E20EEF73C"]
-			description: ["电子部件是沉浸工程电路的核心件, 由工程师装配台制作."]
 			id: "6E87F1A6C2A966BD"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -233,7 +227,6 @@
 		}
 		{
 			dependencies: ["042CA25C2CE9F78C"]
-			description: ["轻工程构件由电子部件与零件装配, 支撑中压设备, 是精智元件的过渡件."]
 			icon: "cmi:light_engineering_mechanism"
 			id: "79461202D5061059"
 			quest_enhance_disable_scroll_paging: false
@@ -249,7 +242,6 @@
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
-			description: ["铁部件是沉浸工程结构件的基材, 用于机壳, 支架与设备框架."]
 			id: "6B467317FA711CD2"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -266,7 +258,6 @@
 				"4FB2832A045C402D"
 				"7986071E20EEF73C"
 			]
-			description: ["轻工程组件是轻工程构件的装配材料, 需与轻工程构件同时生产."]
 			id: "042CA25C2CE9F78C"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -282,7 +273,7 @@
 				"79461202D5061059"
 				"7AADB534F537AA83"
 			]
-			description: ["驴头为前臂, 曲柄为后臂, 长度 20/4 时效率最高, 建议按此比例搭建."]
+			description: ["以&6抽油机驴头&f所在端为前臂, &6抽油机曲柄&f所在端为后臂, 前后臂长度分别为&620/4&r时, 抽油机效率最高(1000mb/次)"]
 			icon: "createdieselgenerators:pumpjack_crank"
 			icon_scale: 2.0d
 			id: "3640CEE4D21C8BB5"
@@ -324,7 +315,6 @@
 		}
 		{
 			dependencies: ["3B2F46F5F77D366F"]
-			description: ["钢由熔融铁与焦煤粉在压缩与高温下炼制, 是结构件与机壳的主材."]
 			id: "7AADB534F537AA83"
 			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
@@ -350,7 +340,6 @@
 				"6DB900D5F5AF7298"
 				"7E4CDE7C3CBA9410"
 			]
-			description: ["熔融钢可浇铸为钢锭或直接参与合金, 建议与铸造盆配套使用."]
 			id: "3B2F46F5F77D366F"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "熔融钢是不得不吃的一环"
@@ -368,7 +357,6 @@
 				"037CEC7A15BC0B2F"
 				"1CFE963288EAA71A"
 			]
-			description: ["铁坯经锻打与压缩后得到可加工的铸铁, 是钢的前体材料."]
 			id: "6DB900D5F5AF7298"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "生铁?"
@@ -382,7 +370,6 @@
 		}
 		{
 			dependencies: ["0CCAD3D0E6741560"]
-			description: ["石灰粉是炼钢造渣与化工的原料, 由石灰石或骨粉研磨得到."]
 			id: "3279F199633ED633"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -402,7 +389,6 @@
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
-			description: ["铸铁可进一步加工为钢, 是冶金链的中介材料, 建议保留余量."]
 			id: "0CCAD3D0E6741560"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -434,7 +420,6 @@
 		}
 		{
 			dependencies: ["78250BAEED3506BA"]
-			description: ["真空处理设备, 用于脱气与部分材料合成, 是橡胶与化工线的配套."]
 			id: "7E4CDE7C3CBA9410"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -455,7 +440,10 @@
 				"7E4CDE7C3CBA9410"
 				"0FA1A601134C5105"
 			]
-			description: ["熔融铁与焦煤粉在压缩机中加热加压, 得熔融铸铁, 再冷却成铸铁."]
+			description: [
+				"将&4熔融铁&r与&8焦煤粉&r一同放入&6压缩机&r中, 在&c加热&r与&b高压&r的作用下进行处理, 即可得到&7熔融铸铁&r"
+				"随后将&7熔融铸铁&r进行&b冷却&r处理, 便可以得到可用于加工的&7铸铁&r材料"
+			]
 			id: "037CEC7A15BC0B2F"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "铁Plus"
@@ -491,7 +479,6 @@
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
-			description: ["焦煤粉是炼铁与炼钢的还原剂, 由焦炭研磨, 需求量大."]
 			id: "0FA1A601134C5105"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -511,7 +498,15 @@
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
-			description: ["高炉砖, 燃烧室与坩埚底座构成多方块, 装预热器可提高炉温."]
+			description: [
+				"&l炼钢坩埚结构说明&r"
+				"你需要使用&7高炉砖&r, &c燃烧室&r以及&7坩埚底座&r来搭建完整的多方块结构, 并在指定位置安装&6高炉预热器&r以提高温度"
+				""
+				"&l预热器安装&r"
+				"在坩埚侧面安装&6高炉预热器&r, 并为其提供&d能量&r"
+				"预热器能够显著提升坩埚的&c工作温度&r, 从而使炼钢过程顺利进行"
+				"{image:cmi:textures/images/ie/crucible.png width:115 height:137 align:center}"
+			]
 			icon: "immersiveindustry:crucible"
 			icon_scale: 2.0d
 			id: "1CFE963288EAA71A"
@@ -562,7 +557,6 @@
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
-			description: ["镍与银原矿, 是合金与导电材料的前置, 建议在矿点就地粗炼."]
 			id: "588CB73822918D10"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [
@@ -596,11 +590,64 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"6095C38E6A48D0AE"
-				"0EFFE55DBD8B510F"
+			dependencies: ["0FA1A601134C5105"]
+			description: ["{image:cmi:textures/images/ie/squeezer.png width:142 height:139 align:center}"]
+			icon: "immersiveengineering:squeezer"
+			icon_scale: 2.0d
+			id: "6ED3E5867F2A90AB"
+			quest_enhance_disable_scroll_paging: false
+			rewards: [
+				{
+					count: 4
+					id: "08E05DF4AA1FCE73"
+					item: "immersiveengineering:wooden_barrel"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "2516EA6F8C9E6720"
+					item: "immersiveengineering:steel_fence"
+					type: "item"
+				}
 			]
-			description: ["智能构件由智能组件与零件装配, 支撑自动化与传感, 是中期智能存储设备的核心."]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "256C2818587F03D3"
+					item: "minecraft:piston"
+					type: "item"
+				}
+				{
+					count: 6L
+					id: "640B6571C9AD405C"
+					item: "immersiveengineering:steel_scaffolding_standard"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "6F8789CD10BF490D"
+					item: "immersiveengineering:light_engineering"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "3C1D04F6F829A78E"
+					item: "immersiveengineering:fluid_pipe"
+					type: "item"
+				}
+				{
+					id: "09E80A8EF681B8AC"
+					item: "immersiveengineering:rs_engineering"
+					type: "item"
+				}
+			]
+			title: "工业挤压机"
+			x: 18.0d
+			y: 12.75d
+		}
+		{
+			dependencies: ["6095C38E6A48D0AE"]
 			icon: "cmi:smart_mechanism"
 			id: "54B7DF3F4B9BD3A4"
 			quest_enhance_disable_scroll_paging: false
@@ -875,7 +922,6 @@
 		}
 		{
 			dependencies: ["59831FBE15050279"]
-			description: ["硅板是电子与光伏元件的基材, 由硅锭切割或压延成型."]
 			id: "050A77C0A80CFE30"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -895,7 +941,6 @@
 		}
 		{
 			dependencies: ["2902DA1D51BD15F5"]
-			description: ["硅是半导体与光伏产业的起点, 由硅混合物提纯得到."]
 			id: "59831FBE15050279"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -919,7 +964,6 @@
 				"28AFE3C3BEFB431A"
 				"507D9B36A230C6E4"
 			]
-			description: ["智能组件是智能构件的装配材料, 需处理器类零件, 建议同步生产."]
 			id: "6095C38E6A48D0AE"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -932,7 +976,6 @@
 		}
 		{
 			dependencies: ["0FA1A601134C5105"]
-			description: ["硅混合物经提纯后可得工业硅, 是半导体链的起点."]
 			icon: "cmi:silicon_mixture"
 			id: "2902DA1D51BD15F5"
 			quest_enhance_disable_scroll_paging: false
@@ -970,7 +1013,6 @@
 		}
 		{
 			dependencies: ["16854FB39C805578"]
-			description: ["精炼机可将重油与煤油等分离提纯, 是石脑油与烯烃链的核心."]
 			hide_dependency_lines: true
 			hide_until_deps_complete: false
 			id: "00C55399CC674B4A"
@@ -985,7 +1027,7 @@
 		}
 		{
 			dependencies: ["3640CEE4D21C8BB5"]
-			description: ["每个区块都会生成无限原油, 无需勘探特定油田, 抽油机即可稳定供料."]
+			description: ["本整合包修改了原油生成机制, 现在每个区块都会生成无限量的原油, 因此无需再四处勘探或寻找特定油田"]
 			hide_dependency_lines: true
 			icon: "createdieselgenerators:crude_oil_bucket"
 			id: "7CE3BF3F7F7FC1D9"
@@ -1006,11 +1048,10 @@
 				}
 			]
 			x: 8.0d
-			y: 18.0d
+			y: 19.0d
 		}
 		{
 			dependencies: ["7CE3BF3F7F7FC1D9"]
-			description: ["原油分馏可得汽油, 煤油, 柴油, 润滑油, 石脑油与沥青, 建议按需分流."]
 			id: "7FA0A97798CCF465"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [
@@ -1051,7 +1092,6 @@
 		}
 		{
 			dependencies: ["7FA0A97798CCF465"]
-			description: ["重油可再精炼为汽油与润滑油, 是精炼塔的中段产物."]
 			id: "7686008595B8C539"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1067,7 +1107,6 @@
 				"7686008595B8C539"
 				"00C55399CC674B4A"
 			]
-			description: ["润滑油用于机械与精密设备, 也可作为化工裂解原料."]
 			id: "16FAD51B29F98F9A"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1083,7 +1122,6 @@
 				"7686008595B8C539"
 				"00C55399CC674B4A"
 			]
-			description: ["汽油是高热值燃料, 也可作化工原料, 建议先满足发电与载具."]
 			id: "25726C8061FF0AB3"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1096,7 +1134,6 @@
 		}
 		{
 			dependencies: ["7FA0A97798CCF465"]
-			description: ["柴油含硫需脱硫, 处理后可作燃料, 硫磺可回收再用."]
 			id: "11B2066810421699"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1109,7 +1146,6 @@
 		}
 		{
 			dependencies: ["7FA0A97798CCF465"]
-			description: ["煤油可裂化制汽油, 也是航空燃料的前体, 建议保留储备."]
 			id: "2916D3E15559DF0C"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1122,7 +1158,6 @@
 		}
 		{
 			dependencies: ["11B2066810421699"]
-			description: ["硫磺粉用于脱硫与酸类生产, 由硫矿或含硫气体收集."]
 			id: "55A9C7A7B27A8822"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1142,7 +1177,6 @@
 		}
 		{
 			dependencies: ["11B2066810421699"]
-			description: ["柴油是高密度燃料, 适合发电与重型机械, 脱硫后品质更高."]
 			id: "19F77A03547567E0"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1158,7 +1192,6 @@
 				"19F77A03547567E0"
 				"2916D3E15559DF0C"
 			]
-			description: ["石脑油是裂化制烯烃与芳烃的原料, 是化工链的枢纽."]
 			id: "0E3481D80180E00C"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1171,7 +1204,6 @@
 		}
 		{
 			dependencies: ["0E3481D80180E00C"]
-			description: ["轻烯烃是聚合与合成橡胶的单体, 建议直接送入聚合线."]
 			id: "77C1F236B853FAAE"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1184,7 +1216,6 @@
 		}
 		{
 			dependencies: ["77C1F236B853FAAE"]
-			description: ["轻质硅醚是硅橡胶合成的中间体, 需稳定的轻烯烃供应."]
 			id: "5E07A1EE010AE757"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1197,7 +1228,6 @@
 		}
 		{
 			dependencies: ["2B95E0E6947D013C"]
-			description: ["聚硅醚经处理可得硅橡胶, 是气密构件的上游材料."]
 			id: "693C6976F07FA0F5"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1214,7 +1244,6 @@
 				"2809F6E25BE835B0"
 				"05D42E0B78A3982E"
 			]
-			description: ["硅橡胶耐温耐蚀, 是密封与构件的关键材料, 建议浇铸成板备用."]
 			id: "5D4F15DF8FB903D5"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [
@@ -1241,7 +1270,6 @@
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
-			description: ["冷却器用于低温工艺与材料定型, 是结晶与橡胶线的配套."]
 			id: "2809F6E25BE835B0"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1257,7 +1285,6 @@
 				"762D51AFDCA86F29"
 				"5DE46B617DB0CEC6"
 			]
-			description: ["醋酸用于化工合成与清洗, 由醋蒸馏提纯得到."]
 			id: "05D42E0B78A3982E"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1270,7 +1297,6 @@
 		}
 		{
 			dependencies: ["664B44589F807708"]
-			description: ["醋可蒸馏提纯为醋酸, 是食品与化工的共用中间品."]
 			id: "762D51AFDCA86F29"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1283,7 +1309,6 @@
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
-			description: ["蒸馏控制器是原油分馏的核心设备, 决定各馏分的产出比例."]
 			id: "5DE46B617DB0CEC6"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1296,7 +1321,6 @@
 		}
 		{
 			dependencies: ["2916D3E15559DF0C"]
-			description: ["裂化汽油可再加工为苯与烯烃, 是芳烃链的原料."]
 			id: "6F36365885BD89B1"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1305,11 +1329,10 @@
 				type: "item"
 			}]
 			x: 8.0d
-			y: 22.0d
+			y: 21.0d
 		}
 		{
 			dependencies: ["3D5497B8DC0ED5B6"]
-			description: ["蒸汽可用于裂化与驱动设备, 建议由锅炉集中供应."]
 			id: "3B09C0DEB5D3ECB2"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1318,14 +1341,13 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 22.0d
+			y: 23.0d
 		}
 		{
 			dependencies: [
 				"3B09C0DEB5D3ECB2"
 				"6F36365885BD89B1"
 			]
-			description: ["裂化汽油是苯与轻烯烃的前体, 需控制裂化温度."]
 			id: "654FBA59B16DF4C6"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1333,12 +1355,11 @@
 				item: "cmi:cracked_gasoline_bucket"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 4.0d
 			y: 21.0d
 		}
 		{
 			dependencies: ["654FBA59B16DF4C6"]
-			description: ["轻烯烃可聚合为聚烯烃, 是塑料与橡胶的单体."]
 			id: "5B786D0B9FC5A444"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1347,14 +1368,13 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 23.0d
+			y: 22.0d
 		}
 		{
 			dependencies: [
 				"654FBA59B16DF4C6"
 				"660DD436C6CEFCBD"
 			]
-			description: ["苯是芳烃与合成材料的原料, 建议在密闭管线中储存."]
 			id: "0FF8EDFBF1C6AF7A"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1363,14 +1383,13 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 20.0d
+			y: 19.0d
 		}
 		{
 			dependencies: [
 				"654FBA59B16DF4C6"
 				"7CE3BF3F7F7FC1D9"
 			]
-			description: ["石脑油可裂化为轻烯烃, 是聚合链的入口."]
 			id: "660DD436C6CEFCBD"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1378,7 +1397,7 @@
 				item: "thermal_extra:naphtha_bucket"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 6.0d
 			y: 20.0d
 		}
 		{
@@ -1386,7 +1405,6 @@
 				"7CE3BF3F7F7FC1D9"
 				"0FF8EDFBF1C6AF7A"
 			]
-			description: ["苯酚用于树脂与化工合成, 由苯经氧化制得."]
 			id: "27CAE5D991F9DC02"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1395,11 +1413,10 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 19.0d
+			y: 18.0d
 		}
 		{
 			dependencies: ["135EED5D795BB2D5"]
-			description: ["殷钢板用于精密与耐热部件, 由殷钢锭压制得到."]
 			id: "161C0524EEDE5FC5"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1407,12 +1424,16 @@
 				item: "thermal:invar_plate"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 4.0d
+			x: 10.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["16854FB39C805578"]
-			description: ["热力组件以倍率提升设备速率, 2x 至 10x 同产线可制, 建议先做高倍率."]
+			description: [
+				"热力添加的整合组件可以以一定的倍率提高设备运行速率"
+				"除了热力及其附属注册的2x-6x速率整合组件以外, 我们还注册了7x-10x速率的整合组件"
+				"所有整合组件都以非常便宜的序列组装配方制作, 而且结构完全相同, 可以使用同一条生产线制作"
+			]
 			icon: "thermal:upgrade_augment_1"
 			id: "49A04F3F89F58A31"
 			quest_enhance_disable_scroll_paging: false
@@ -1427,12 +1448,11 @@
 				title: "如果你觉得设备运行太慢..."
 				type: "checkmark"
 			}]
-			x: 6.0d
-			y: 5.0d
+			x: 8.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["6229FE133326F148"]
-			description: ["逻辑处理器是 AE2 计算元件, 由印刷电路刻制, 建议批量生产."]
 			id: "28AFE3C3BEFB431A"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1445,7 +1465,6 @@
 		}
 		{
 			dependencies: ["6229FE133326F148"]
-			description: ["计算处理器用于 AE2 存储与运算, 是存储系统的关键件."]
 			hide_dependent_lines: true
 			id: "3DFED24F6C44D5E5"
 			quest_enhance_disable_scroll_paging: false
@@ -1463,7 +1482,6 @@
 				"1019BCBAAF646D37"
 				"668328B9C89163F6"
 			]
-			description: ["工程处理器用于 AE2 设备与自动化, 由铭刻硅蚀刻得到."]
 			id: "507D9B36A230C6E4"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1476,7 +1494,6 @@
 		}
 		{
 			dependencies: ["050A77C0A80CFE30"]
-			description: ["铭刻硅是处理器的基板, 由硅板蚀刻线路得到."]
 			id: "6229FE133326F148"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1489,7 +1506,6 @@
 		}
 		{
 			dependencies: ["575444E3A9FA8314"]
-			description: ["蓝宝石是铝矿副产物, 可用于光学与工具, 建议随铝线收集."]
 			id: "1019BCBAAF646D37"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1502,7 +1518,6 @@
 		}
 		{
 			dependencies: ["6681D48E57C00D0D"]
-			description: ["蓝宝石粉用于研磨与晶体生长, 由蓝宝石研磨得到."]
 			id: "575444E3A9FA8314"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "铝矿副产物"
@@ -1516,7 +1531,6 @@
 		}
 		{
 			dependencies: ["6681D48E57C00D0D"]
-			description: ["埃忒恩是异星金属, 用于航天结构件, 需在伊甸星环开采."]
 			id: "668328B9C89163F6"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1529,7 +1543,6 @@
 		}
 		{
 			dependencies: ["1570B04A1D692BCC"]
-			description: ["铝与埃忒恩原矿, 是航天与轻结构材料的前置, 建议优先开采."]
 			id: "6681D48E57C00D0D"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [
@@ -1550,7 +1563,6 @@
 		}
 		{
 			dependencies: ["5E07A1EE010AE757"]
-			description: ["化学反应器支持加压与高温反应, 是化工产线的核心, 建议多台并联."]
 			id: "2B95E0E6947D013C"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "月饼+西瓜(笑"
@@ -1561,151 +1573,6 @@
 			}]
 			x: 14.0d
 			y: 25.0d
-		}
-		{
-			dependencies: ["7AADB534F537AA83"]
-			description: ["钢机壳用于高压与高温设备封装, 由钢构件压制."]
-			id: "2F952A2C1A4236E2"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "472B06C0658E9E69"
-				item: "cmi:steel_casing"
-				type: "item"
-			}]
-			title: "钢机壳"
-			x: 18.0d
-			y: 5.0d
-		}
-		{
-			dependencies: ["161C0524EEDE5FC5"]
-			description: ["热力机器框架是热力系列机器的通用外壳, 建议批量压制."]
-			id: "4C8029998338398E"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "176BBA51B80B7D19"
-				item: "thermal:machine_frame"
-				type: "item"
-			}]
-			title: "热力机器框架"
-			x: 10.0d
-			y: 5.0d
-		}
-		{
-			dependencies: ["490BA0C159C3FF63"]
-			description: ["金构件由RF线圈与零件装配, 支撑精密电气设备, 是热力线的前置."]
-			id: "04E3B1B01E08FC52"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "046F4E7703DD409D"
-				item: "cmi:gold_mechanism"
-				type: "item"
-			}]
-			title: "金构件"
-			x: 6.0d
-			y: 11.0d
-		}
-		{
-			dependencies: [
-				"356DE55EA4589A5B"
-				"075AD48E1329EB5C"
-			]
-			description: ["光纤用于高速信号与光学传输, 是 AE2 与计算系统的布线材料."]
-			id: "584CAED3B41C1DA5"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "7203441A17E6FB15"
-				item: "cmi:optical_fiber"
-				type: "item"
-			}]
-			title: "光纤"
-			x: 6.0d
-			y: 15.0d
-		}
-		{
-			dependencies: [
-				"584CAED3B41C1DA5"
-				"75BE27DBB06214C5"
-			]
-			description: ["福鲁伊克斯线是 AE2 网络的导线, 可延伸为线缆."]
-			id: "1EBE693ECCC6B925"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "5D0DFCCD0AFFFF4B"
-				item: "cmi:fluix_wire"
-				type: "item"
-			}]
-			title: "福鲁伊克斯线"
-			x: 6.0d
-			y: 17.0d
-		}
-		{
-			description: ["赛特斯石英是 AE2 元件的基础材料, 可以使用催生器催生快速生长并采集."]
-			id: "075AD48E1329EB5C"
-			quest_enhance_disable_scroll_paging: false
-			subtitle: "总线的基础"
-			tasks: [{
-				id: "06D756DB25ADDA38"
-				item: "ae2:certus_quartz_crystal"
-				type: "item"
-			}]
-			x: 4.0d
-			y: 14.0d
-		}
-		{
-			dependencies: ["4E736C983C8BEB91"]
-			description: ["将玻璃拉长为线缆, 其折射率差异可形成全反射, 成为光纤的基础材料."]
-			id: "356DE55EA4589A5B"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "2BC4FAE7F1588A01"
-				item: "cmi:glass_wire"
-				type: "item"
-			}]
-			title: "玻璃导线"
-			x: 6.0d
-			y: 13.0d
-		}
-		{
-			description: ["玻璃杆用于光学与结构件, 由玻璃熔融拉制得到."]
-			id: "4E736C983C8BEB91"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "3BD94AAC655B8FB7"
-				item: "cmi:glass_rod"
-				type: "item"
-			}]
-			title: "玻璃杆"
-			x: 4.0d
-			y: 12.0d
-		}
-		{
-			dependencies: [
-				"584CAED3B41C1DA5"
-				"75BE27DBB06214C5"
-			]
-			description: ["福鲁伊克斯线缆可传输信号与能量, 是 AE2 网络的主干."]
-			id: "0EFFE55DBD8B510F"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "3668D1F73749CFF4"
-				item: "ae2:fluix_glass_cable"
-				type: "item"
-			}]
-			x: 8.0d
-			y: 16.0d
-		}
-		{
-			dependencies: ["075AD48E1329EB5C"]
-			description: ["福鲁伊克斯水晶由赛特斯石英与红石制成, 是 AE2 元件的基础."]
-			id: "75BE27DBB06214C5"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "4FBCB33250976839"
-				item: "ae2:fluix_crystal"
-				type: "item"
-			}]
-			x: 4.0d
-			y: 16.0d
 		}
 	]
 	title: "油燃而升"

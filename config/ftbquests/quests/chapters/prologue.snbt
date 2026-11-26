@@ -163,7 +163,6 @@
 			y: -2.5d
 		}
 		{
-			description: ["当前分析数据库为预发行版本, 部分条目仍在校准, 请以实测结果为准."]
 			disable_toast: true
 			icon: "create:steam_engine"
 			id: "1970EFE7924032F0"
@@ -550,7 +549,6 @@
 			y: -2.5d
 		}
 		{
-			description: ["开拓者身份已登记, 本单元将随行分析星球资源并提供物资使用建议."]
 			icon: "create:goggles"
 			id: "405D0556F11BCE2C"
 			quest_enhance_disable_scroll_paging: false
@@ -572,7 +570,6 @@
 			y: -7.0d
 		}
 		{
-			description: ["音频诊断节点, 正式版将移除, 当前仅用于验证提示系统."]
 			id: "09E1B57B8D35ED4E"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "正式版删除"
@@ -586,7 +583,6 @@
 			y: -7.0d
 		}
 		{
-			description: ["权限校验: 需先完成阶段任务, 方可解除地形改写限制."]
 			id: "550330A6594D1E98"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{

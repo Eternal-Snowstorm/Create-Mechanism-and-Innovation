@@ -18,7 +18,7 @@
 	quests: [
 		{
 			dependencies: ["26DFF62383774404"]
-			description: ["常见火山岩, 储量充足, 是安山合金与早期建材的基础原料, 建议先采一批."]
+			description: ["随处可见的岩石...它能开启&6工业时代"]
 			icon: "minecraft:andesite"
 			id: "46858C4B5052EC0C"
 			quest_enhance_disable_scroll_paging: false
@@ -45,7 +45,10 @@
 				"3942E154F0734013"
 				"331EF47BF4AFEA01"
 			]
-			description: ["将熔融锌浇筑在安山岩粉上可得, 是全部动力设备的结构基材, 建议量产."]
+			description: [
+				"工业的起点, 有了它, 我就可以制作各种&6动力设备"
+				"将熔融锌浇筑在安山岩粉上就可以制作出第一份安山合金"
+			]
 			id: "65F2C054D52EB96B"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -72,7 +75,7 @@
 		}
 		{
 			dependencies: ["23C01A41EBA593FC"]
-			description: ["生物柴油炉温足以熔化铁, 建议先建好燃料供应再尝试冶炼."]
+			description: ["拥有了生物柴油后, 你就可以在匠魂炉中融化铁了"]
 			icon: "tconstruct:molten_iron_bucket"
 			id: "06012DC3A4BBF58B"
 			quest_enhance_disable_scroll_paging: false
@@ -87,7 +90,6 @@
 		}
 		{
 			dependencies: ["73D78755B4430729"]
-			description: ["含糖植物可榨汁熬糖, 是发酵与食品线的起点, 建议种植成片."]
 			hide_dependency_lines: true
 			id: "0498E2991294B14D"
 			quest_enhance_disable_scroll_paging: false
@@ -108,7 +110,6 @@
 		}
 		{
 			dependencies: ["46858C4B5052EC0C"]
-			description: ["安山岩研磨产物, 与锌熔液反应生成安山合金, 是合金的前体."]
 			id: "331EF47BF4AFEA01"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -128,7 +129,7 @@
 		}
 		{
 			dependencies: ["46858C4B5052EC0C"]
-			description: ["低熔点金属, 与安山岩粉熔融可制第一批安山合金, 建议优先采集."]
+			description: ["一种低熔点金属, 我可以用它做出第一份&6安山合金"]
 			id: "3942E154F0734013"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -148,7 +149,6 @@
 		}
 		{
 			dependencies: ["65F2C054D52EB96B"]
-			description: ["安山构件是首批动力构件, 由安山合金与基座装配而成, 建议早建."]
 			id: "0D502CA40E47F832"
 			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
@@ -164,7 +164,6 @@
 		}
 		{
 			dependencies: ["65F2C054D52EB96B"]
-			description: ["轴, 齿轮与安山机壳是传动网络的最小单元, 建议批量预备以免缺件."]
 			id: "04357F14C006EAAF"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [
@@ -247,7 +246,6 @@
 		}
 		{
 			dependencies: ["0D502CA40E47F832"]
-			description: ["搅拌, 压印与轧制设备构成第一套工作母机, 是全部材料加工的起点."]
 			id: "6865ED5A1D93E5EA"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [
@@ -298,7 +296,10 @@
 		}
 		{
 			dependencies: ["6865ED5A1D93E5EA"]
-			description: ["用沙子制作齿轮铸模后浇铸可得, 是粉碎与传动的关键件."]
+			description: [
+				"我可以在&6部件制造台&f上用沙子制作&6齿轮铸模&f, 浇铸后就能得到铁齿轮"
+				"或者也可以制作一个&b木质齿轮&r来作为制造铸模的材料"
+			]
 			id: "580C6E604C71F620"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "粉碎的上一步"
@@ -319,7 +320,7 @@
 		}
 		{
 			dependencies: ["580C6E604C71F620"]
-			description: ["粉碎轮应力消耗较大, 建议配足动力并控制转速, 避免过载停机."]
+			description: ["应力消耗大户, 注意控制转速"]
 			id: "63BF49635AEF3AF8"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -341,7 +342,6 @@
 				"295BF991FD7133DF"
 				"24FD90B8F1474193"
 			]
-			description: ["铁粉在搅拌机中加热可制工业铁, 是后续机壳与构件的材料."]
 			icon: "createdieselgenerators:biodiesel_bucket"
 			id: "23C01A41EBA593FC"
 			quest_enhance_disable_scroll_paging: false
@@ -355,7 +355,6 @@
 		}
 		{
 			dependencies: ["649CAA93BB644BF3"]
-			description: ["甘蔗或甜菜加工所得, 可用于发酵与食品, 也能进一步制糖浆."]
 			id: "295BF991FD7133DF"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -368,7 +367,6 @@
 		}
 		{
 			dependencies: ["0498E2991294B14D"]
-			description: ["糖浆是发酵制醋与食品加工的中间液体, 建议低温储存."]
 			id: "649CAA93BB644BF3"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -381,7 +379,7 @@
 		}
 		{
 			dependencies: ["21B1DA369A461281"]
-			description: ["先建焦炉, 才能稳定获得杂酚油与焦炭, 是防腐木线的前置."]
+			description: ["想要杂酚油, 我必须先做一台焦炉 "]
 			hide_dependency_lines: true
 			id: "2CCDB1390C34C80A"
 			quest_enhance_disable_scroll_paging: false
@@ -407,7 +405,11 @@
 		}
 		{
 			dependencies: ["2CCDB1390C34C80A"]
-			description: ["3x3x3 冶炼炉砖结构, 用工程师锤敲四面中心即可成型, 建议先备砖."]
+			description: [
+				"结构是一个3*3*3的冶炼炉砖块立方体, 在结构搭建好后使用工程师锤对着任意4个面的中心右键即可完成构造"
+				""
+				"{image:cmi:textures/images/ie/coke_oven.png width:142 height:160 align:center}"
+			]
 			icon: "immersiveengineering:coke_oven"
 			id: "12A2C0FB29927390"
 			quest_enhance_disable_scroll_paging: false
@@ -426,7 +428,6 @@
 		}
 		{
 			dependencies: ["12A2C0FB29927390"]
-			description: ["焦炉副产杂酚油, 可用于防腐木与燃料, 也有防腐用途."]
 			id: "24FD90B8F1474193"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "喝!"
@@ -439,8 +440,7 @@
 			y: 12.0d
 		}
 		{
-			dependencies: ["0A7ACD83404B2AFA"]
-			description: ["铁构件由工与基座装配, 具备一定的磁性, 可以将热量, 矿物等进行富集, 支撑中期的加工与发电设备."]
+			dependencies: ["06012DC3A4BBF58B"]
 			id: "6FE26470A8A3B7B1"
 			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
@@ -456,7 +456,6 @@
 		}
 		{
 			dependencies: ["6FE26470A8A3B7B1"]
-			description: ["下界砖为其提供环境, 装入烈焰人后可作高温热源, 用于锅炉."]
 			id: "6B1F2EFF4DAC1814"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "下界砖为烈焰人提供了熟悉的环境"
@@ -465,12 +464,11 @@
 				item: "create:empty_blaze_burner"
 				type: "item"
 			}]
-			x: -4.5d
+			x: -3.5d
 			y: 14.0d
 		}
 		{
 			dependencies: ["26DFF62383774404"]
-			description: ["橡胶树可割取胶乳, 是橡胶与密封件的来源, 建议成片种植."]
 			id: "00A42257F183E046"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -491,7 +489,6 @@
 		}
 		{
 			dependencies: ["00A42257F183E046"]
-			description: ["软木, 可用作密封与建材, 也能加工为切割原料."]
 			id: "71AB4DF031ED3CB4"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "软木, 可用作密封"
@@ -505,7 +502,6 @@
 		}
 		{
 			dependencies: ["71AB4DF031ED3CB4"]
-			description: ["发酵设备配件, 用于醋与生物柴油工艺, 需配合发酵盆使用."]
 			id: "2DDCBAC1D7AF08AE"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -521,7 +517,6 @@
 				"2DDCBAC1D7AF08AE"
 				"7DD1547C967EDD20"
 			]
-			description: ["粮食与水发酵所得, 可用于化工与食品, 也能蒸馏为醋酸."]
 			icon: "cmi:vinegar_bucket"
 			id: "664B44589F807708"
 			quest_enhance_disable_scroll_paging: false
@@ -538,7 +533,7 @@
 		{
 			dependencies: ["3D4750217EE8ECD1"]
 			dependency_requirement: "one_completed"
-			description: ["熔融硫化橡胶浇铸到铸件台可得, 气密与耐磨性极佳, 是密封件的核心."]
+			description: ["制作熔融硫化橡胶浇筑到铸件台上"]
 			id: "43FFB9DB898EA83A"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "气密性绝佳且不易磨损的材料"
@@ -552,7 +547,7 @@
 		}
 		{
 			dependencies: ["46858C4B5052EC0C"]
-			description: ["挖掘硫矿或研磨煤炭可得, 是橡胶硫化与酸类原料, 需求稳定."]
+			description: ["可以通过挖掘硫矿打粉后获得, 也可以通过磨煤炭获得"]
 			hide_dependency_lines: true
 			id: "14FCB2B036726682"
 			quest_enhance_disable_scroll_paging: false
@@ -567,7 +562,7 @@
 		}
 		{
 			dependencies: ["2DDCBAC1D7AF08AE"]
-			description: ["湿地池塘有野生稻, 驯化后可持续供粮, 也是酿醋的原料."]
+			description: ["我应该能在&6湿地的池塘&f找到一些野生稻米, 之后就可以自己种植了"]
 			hide_dependency_lines: true
 			id: "7DD1547C967EDD20"
 			quest_enhance_disable_scroll_paging: false
@@ -589,7 +584,6 @@
 		}
 		{
 			dependencies: ["5D40D5E4A4DC395D"]
-			description: ["橡胶压制板, 用于密封与构件, 可裁切为垫片使用."]
 			id: "50B5CFD57763580A"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -602,7 +596,6 @@
 		}
 		{
 			dependencies: ["29ACEBA79B437ADD"]
-			description: ["胶乳凝固产物, 可加工为板与桶, 是密封件的原料."]
 			id: "5D40D5E4A4DC395D"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -619,7 +612,6 @@
 				"45EFA2C8267E8293"
 				"551A2E50E2232A77"
 			]
-			description: ["铜构件由铜与基座装配, 支撑流体与热工设备, 建议早建."]
 			id: "24384207DB9668D9"
 			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
@@ -635,7 +627,6 @@
 		}
 		{
 			dependencies: ["24384207DB9668D9"]
-			description: ["可从无限流体池持续抽取液体, 建议配合储罐与管线使用."]
 			id: "590FBD1F501100AE"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "无限流体池来咯"
@@ -649,7 +640,6 @@
 		}
 		{
 			dependencies: ["26DFF62383774404"]
-			description: ["割胶副产物, 可研磨成橡胶粉回收利用, 不建议丢弃."]
 			icon: "cmi:rubber_tree_bark"
 			id: "795C395B35395809"
 			optional: true
@@ -682,7 +672,6 @@
 		}
 		{
 			dependencies: ["795C395B35395809"]
-			description: ["橡胶边角料研磨所得, 可再加工利用, 也可作为填充料."]
 			id: "2EE13016985061C5"
 			optional: true
 			quest_enhance_disable_scroll_paging: false
@@ -703,7 +692,6 @@
 		}
 		{
 			dependencies: ["24384207DB9668D9"]
-			description: ["用于清空物品上的液体, 便于灌装与清洗, 常与注液器配对."]
 			id: "3CB9E200952C9D9F"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -716,7 +704,6 @@
 		}
 		{
 			dependencies: ["24384207DB9668D9"]
-			description: ["向物品灌注流体, 是灌装与涂层工序的核心, 建议接入产线."]
 			id: "3B5ADA1051DE6F9A"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -729,7 +716,15 @@
 		}
 		{
 			dependencies: ["24FD90B8F1474193"]
-			description: ["焦炉上装浇筑口, 下方放铸造盆, 浇入杂酚油即可防腐, 建议批量."]
+			description: [
+				"在制作防腐木板时可以使用下图的方式:"
+				" - 在焦炉上放置一个{[tconstruct:seared_faucet, tconstruct:scorched_faucet], 1}浇筑口"
+				" - 浇筑口下放置一个{[tconstruct:seared_basin, tconstruct:scorched_basin], 1}铸造盆"
+				""
+				"在制作时将{#minecraft:planks, 1}木板放入{[tconstruct:seared_basin, tconstruct:scorched_basin], 1}铸造盆内浇筑即可"
+				""
+				"{image:cmi:textures/images/ie/coke_oven_use.png width:104 height:122 align:center}"
+			]
 			id: "45F48FA80A7D0340"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -756,7 +751,10 @@
 		}
 		{
 			dependencies: ["63BF49635AEF3AF8"]
-			description: ["粗矿经粉碎轮破碎后水洗分离, 最终得到矿粉, 是工业铁的前体."]
+			description: [
+				"开采得到的&a粗矿&r需要先经过粉碎轮处理, 破碎后形成粒度更细的&b粉碎矿&r"
+				"随后对&b粉碎矿&r进行水洗处理, 通过清洗与分离最终获得&c矿粉&r"
+			]
 			id: "0A7ACD83404B2AFA"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "搭配磁铁非常好玩"
@@ -778,7 +776,7 @@
 		}
 		{
 			dependencies: ["4B3C8BED0FFCD6AB"]
-			description: ["铁进一步熔锻去除杂质, 可塑性与韧性极佳, 是模具与外壳材料."]
+			description: ["制作各种类型的冲压模具时, 都需要使用到这种材料"]
 			id: "6FB78C12B3941053"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -805,7 +803,6 @@
 		}
 		{
 			dependencies: ["0A7ACD83404B2AFA"]
-			description: ["铁粉在搅拌机中加热后成为工业铁, 建议连续投料以稳定产量."]
 			icon: "cmi:molten_industrial_iron_bucket"
 			id: "4B3C8BED0FFCD6AB"
 			quest_enhance_disable_scroll_paging: false
@@ -820,7 +817,6 @@
 		}
 		{
 			dependencies: ["45F48FA80A7D0340"]
-			description: ["蓝图与装配在此完成, 是沉浸工程体系的入口, 建议尽早搭建."]
 			icon: "immersiveengineering:workbench"
 			id: "24FBD0678ECC293A"
 			quest_enhance_disable_scroll_paging: false
@@ -856,7 +852,6 @@
 		}
 		{
 			dependencies: ["24FBD0678ECC293A"]
-			description: ["构件形状的压印模具, 可批量制作构件基材, 建议多做几套."]
 			id: "2CE848599231C333"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -876,7 +871,6 @@
 		}
 		{
 			dependencies: ["65F2C054D52EB96B"]
-			description: ["水车, 风车或手摇曲柄都可提供初始应力, 按地形选择."]
 			icon: "create:large_water_wheel"
 			id: "010A13B6C2954C69"
 			quest_enhance_disable_scroll_paging: false
@@ -904,7 +898,6 @@
 		}
 		{
 			dependencies: ["3B5ADA1051DE6F9A"]
-			description: ["注液速度更快, 适合高吞吐产线, 建议在主线替换使用."]
 			id: "46163FE283604AC6"
 			invisible: true
 			optional: true
@@ -923,7 +916,10 @@
 				"3B5ADA1051DE6F9A"
 				"28DFB902C00FCB4D"
 			]
-			description: ["空白铸模可浇铸 180mB 熔融工业铁, 比合成更省料, 推荐浇筑路线."]
+			description: [
+				"空白铸模可以使用4个工业铁板在工作台上合成, 也可以浇筑180mB熔融工业铁制作"
+				"这里比较推荐使用后者配方, 虽然麻烦点, 但是便宜"
+			]
 			id: "60111BA1F94FFBB5"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "铸模浇筑"
@@ -964,7 +960,6 @@
 		}
 		{
 			dependencies: ["6FB78C12B3941053"]
-			description: ["冲压工业铁锭所得, 是模具与外壳的材料, 建议批量压制."]
 			id: "28DFB902C00FCB4D"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -984,7 +979,18 @@
 		}
 		{
 			dependencies: ["28DFB902C00FCB4D"]
-			description: ["多方块流体储罐, 最小 3x3x3 即可存 4.32 亿 mB, 适合中后期储液."]
+			description: [
+				"动态储罐是一种多方块流体储存结构, 其容量会根据结构规模自动变化."
+				""
+				"动态储罐的容量非常恐怖, 哪怕是最小的结构都可以存储 432,000,000 mB 流体"
+				""
+				"搭建要求:"
+				" - 结构最小尺寸为 3×3×3"
+				" - 储罐内部必须保持 中空"
+				" - 至少在任意一个外侧面安装1个{mekanism:dynamic_valve, 1}动态储罐阀门"
+				" - 储罐的框架需使用有效的动态储罐方块构成. "
+				"{@pagebreak}"
+			]
 			icon: "mekanism:dynamic_valve"
 			id: "71449F7653BC203B"
 			quest_enhance_disable_scroll_paging: false
@@ -1021,7 +1027,10 @@
 		}
 		{
 			dependencies: ["45F48FA80A7D0340"]
-			description: ["防腐木建材方块可全部由切石机切割防腐木板获得, 省料省时."]
+			description: [
+				"大部分防腐木建筑方块都可以通过切石机切割防腐木板获得"
+				"{image:cmi:textures/images/ie/treated_wood_components.png width:185 height:72 align:center}"
+			]
 			icon: "immersiveengineering:treated_fence"
 			id: "47356A22BB2F191E"
 			quest_enhance_disable_scroll_paging: false
@@ -1041,7 +1050,10 @@
 		}
 		{
 			dependencies: ["28DFB902C00FCB4D"]
-			description: ["3x3x6 时发酵速度最高, 建议按此比例搭建, 供醋与柴油线共用."]
+			description: [
+				"{image:cmi:textures/images/create/bulk_fermenter.png width:113 height:128 align:center}"
+				"尺寸为3*3*6时, 发酵速度最大"
+			]
 			icon: "createdieselgenerators:bulk_fermenter"
 			id: "7E097A0AFDB21208"
 			quest_enhance_disable_scroll_paging: false
@@ -1066,7 +1078,6 @@
 		}
 		{
 			dependencies: ["6865ED5A1D93E5EA"]
-			description: ["容量更大的铸造盆, 用于大批量浇铸, 建议替换普通铸造盆."]
 			id: "7B308F2171EB91AD"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "容量更大"
@@ -1080,7 +1091,6 @@
 		}
 		{
 			dependencies: ["3CB9E200952C9D9F"]
-			description: ["小型粉碎设备, 可研磨附魔与矿物, 是附魔工业的配套."]
 			id: "7B40AD53E7A35CC9"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -1099,7 +1109,11 @@
 		}
 		{
 			dependencies: ["46858C4B5052EC0C"]
-			description: ["安山岩洞窟储量极大, 可用生物群系指南针定位, 适合大批开采."]
+			description: [
+				"安山岩洞窟是一种由大量安山岩构成的洞穴, 在那里可以大量获取安山岩, 获取的量足够支撑很久"
+				""
+				"你可以使用生物群系指南针辅助寻找, 这是一种专门用于定位生物群系的指南针"
+			]
 			icon: "minecraft:andesite"
 			id: "0427BA147EFE77D7"
 			quest_enhance_disable_scroll_paging: false
@@ -1134,7 +1148,12 @@
 		}
 		{
 			dependencies: ["28DFB902C00FCB4D"]
-			description: ["早期发电设备, 可为工匠工作台与物品充电, 建议先接入."]
+			description: [
+				"这是一台早期的发电机, 虽然发电效率低下, 却能够为设备提供基础的充电服务"
+				""
+				"在发电机内部放入燃料即可发电. 将工匠工作台紧贴发电机放置, 即可为工匠工作台充电"
+				"将需要充电的物品放入工匠工作台电力条下方的物品槽中, 即可为物品充电"
+			]
 			id: "0F6D17B7AF1897C4"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -1153,7 +1172,13 @@
 		}
 		{
 			dependencies: ["00A42257F183E046"]
-			description: ["装在去皮橡胶原木上, 用桶或碗收集胶乳, 注意周围留空."]
+			description: [
+				"将树液漏斗放置在&6去皮的橡胶原木&r上, 用桶/碗右键漏斗即可缓慢收集胶乳"
+				"它的效率计算规则有点复杂...如果你不想研究, 可以直接翻页查看&6最小最省密堆单元&r"
+				"{@pagebreak}"
+				"{image:cmi:textures/images/example/rubber.png width:199 height:112 align:center fit:true}"
+				"去皮橡胶原木周围26格内(以其为中心, 边长3格的正方体范围内)&4不要&r放第二个去皮橡胶原木, 会扣效率"
+			]
 			id: "29ACEBA79B437ADD"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -1172,7 +1197,6 @@
 		}
 		{
 			dependencies: ["29C10567663F027F"]
-			description: ["铜构件的装配基座, 是铜构件的前置, 需要铜与工业铁."]
 			id: "45EFA2C8267E8293"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1185,7 +1209,6 @@
 		}
 		{
 			dependencies: ["29C10567663F027F"]
-			description: ["流体输送基础件, 连接设备与储罐, 建议按线路规划布置."]
 			id: "551A2E50E2232A77"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -1203,7 +1226,6 @@
 				"664B44589F807708"
 				"14FCB2B036726682"
 			]
-			description: ["橡胶加工链已打通, 可进入下一阶段, 建议保留胶乳储备."]
 			icon: "cmi:cured_rubber_bucket"
 			id: "3D4750217EE8ECD1"
 			quest_enhance_disable_scroll_paging: false
@@ -1217,7 +1239,10 @@
 		}
 		{
 			dependencies: ["29ACEBA79B437ADD"]
-			description: ["胶乳需用浇筑口导出, 再接入流体管道, 否则无法取出."]
+			description: [
+				"把桶/碗放在树液漏斗下面之后会发现只能收集植物胶乳但是取不出来, 因为这个玩意就是收集用的, 需要用其他方式把胶乳导出来. 这个时候就可以&6用浇筑口&r把液体输出出来, 等后面就可以用流体管道输出了. "
+				"{image:cmi:textures/images/example/shuyedaochu.png width:199 height:204 align:center fit:true}"
+			]
 			hide_dependency_lines: true
 			hide_until_deps_complete: true
 			icon: "tconstruct:seared_faucet"
@@ -1231,20 +1256,6 @@
 			title: "一点冷知识"
 			x: -17.5d
 			y: 18.5d
-		}
-		{
-			dependencies: ["6FE26470A8A3B7B1"]
-			description: ["铁板材压制的外壳, 用于设备封装, 是铁壳机器的通用件."]
-			id: "10E02BE6F8966B1D"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "7427AA191BC3C425"
-				item: "cmi:iron_casing"
-				type: "item"
-			}]
-			title: "铁机壳"
-			x: -5.5d
-			y: 12.0d
 		}
 	]
 	title: "巧械奇工"

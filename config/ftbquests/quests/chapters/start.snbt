@@ -13,7 +13,6 @@
 	quests: [
 		{
 			dependencies: ["2613E62AF5BCD9AC"]
-			description: ["匠魂材料库可查询全部材料属性与工具数据, 建议选定材料前先查阅对比."]
 			icon: "tconstruct:encyclopedia"
 			id: "5D0FEBD3FC3443C6"
 			quest_enhance_disable_scroll_paging: false
@@ -55,7 +54,7 @@
 		}
 		{
 			dependencies: ["21ED583750523195"]
-			description: ["地表树木是首批可徒手采集的结构材料, 建议优先储备原木并保留树苗."]
+			description: ["这是我为数不多能徒手挖掘的材料"]
 			id: "5DC78DC9A01883A1"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -82,7 +81,7 @@
 		}
 		{
 			dependencies: ["1231A867DC253AAA"]
-			description: ["基础热加工设备, 可将低熔点金属与矿石熔炼成型, 是第一台产线设备."]
+			description: ["我可以用它来熔炼一些&6熔点较低&f的金属"]
 			id: "562C10B7F3C07DCF"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -103,7 +102,6 @@
 		}
 		{
 			dependencies: ["4EAFBA3A19526127"]
-			description: ["工具部件模板, 配合部件制造台可批量复制造型, 建议多做几套备用."]
 			icon: "tconstruct:pattern"
 			id: "73153E1AFAD14636"
 			quest_enhance_disable_scroll_paging: false
@@ -120,7 +118,6 @@
 		}
 		{
 			dependencies: ["5DC78DC9A01883A1"]
-			description: ["原木加工产物, 可作建筑与合成基材, 也可在熔炉中充当燃料."]
 			id: "4EAFBA3A19526127"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "原木分解出的基础材料"
@@ -142,7 +139,11 @@
 		}
 		{
 			dependencies: ["76DD35F7BAB2AF34"]
-			description: ["首个自制构件, 能促进树苗生长且不消耗自身, 可用于建立可再生木材来源."]
+			description: [
+				"能让树苗立刻生长且不消耗"
+				""
+				"扳手在前面的初始套件中有赠送, 不需要担心制作时会消耗"
+			]
 			id: "0849A3B5EAAE4E14"
 			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
@@ -159,7 +160,7 @@
 		}
 		{
 			dependencies: ["2613E62AF5BCD9AC"]
-			description: ["整合镐, 斧, 锹功能的多用工具, 覆盖绝大多数挖掘需求, 适合作为主力工具."]
+			description: ["它兼备&6镐&f, &6斧&f和&6锹&f的功能, 几乎能满足所有的挖掘需求. 唯一的缺点就是没有攻击力"]
 			icon: {
 				Count: 1
 				id: "cmi:paxel"
@@ -266,7 +267,6 @@
 		}
 		{
 			dependencies: ["07FD61829D499994"]
-			description: ["黏土, 砂与砾石的混合料, 是焦黑砖的前体, 建议按批量配比制备."]
 			id: "17AEC8F5B7867AFE"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "&m原本叫水泥来着&r"
@@ -281,7 +281,6 @@
 		}
 		{
 			dependencies: ["3A4EA6A20A0727AA"]
-			description: ["本地常见岩石, 储量丰富, 可作建筑与研磨原料, 建议采集一批备用."]
 			id: "1231A867DC253AAA"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "原神, 启动!"
@@ -302,7 +301,6 @@
 		}
 		{
 			dependencies: ["3A4EA6A20A0727AA"]
-			description: ["铜矿石原矿, 可熔炼为铜锭, 用于早期导线与工具部件."]
 			id: "637C1318E278B73E"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -323,7 +321,7 @@
 		}
 		{
 			dependencies: ["17AEC8F5B7867AFE"]
-			description: ["焦黑砖是耐热熔炼设备的主体材料, 建议足量烧制, 炉体扩建消耗较大."]
+			description: ["有了焦黑砖, 我就能制作熔炼更高熔点金属的设备"]
 			id: "21B1DA369A461281"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -346,7 +344,6 @@
 				"21B1DA369A461281"
 				"799329AFB898606F"
 			]
-			description: ["石制构件, 可支撑早期热加工与研磨工序, 是后续构件的过渡件."]
 			id: "73D78755B4430729"
 			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
@@ -362,7 +359,7 @@
 		}
 		{
 			dependencies: ["2613E62AF5BCD9AC"]
-			description: ["当前采集效率偏低, 可制作更快的铲或镐, 以缩短资源周转时间."]
+			description: ["做把锹能让我更快地收集材料...或者还有&6更快的选择&f?"]
 			icon: {
 				Count: 1
 				id: "minecraft:stone_shovel"
@@ -383,7 +380,6 @@
 		}
 		{
 			dependencies: ["4840B337A93659FC"]
-			description: ["黏土, 砂, 砾石与燧石是砖泥与研磨工艺的基础原料, 建议按比例备料."]
 			id: "07FD61829D499994"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [
@@ -435,7 +431,11 @@
 				"73153E1AFAD14636"
 				"76DD35F7BAB2AF34"
 			]
-			description: ["工作站可读取相连容器并切换匠魂工作方块, 是本阶段从保险库取物的唯一通道."]
+			description: [
+				"工作站可以读取&6相连的容器&f, 也可以在UI内快捷切换到&6相连的其他匠魂工作方块&f(如&6部件制造台&f等)"
+				""
+				"并且它十分重要, 是你目前阶段&c唯一&r可以从保险库中取出东西的方式"
+			]
 			id: "2613E62AF5BCD9AC"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "我曾经是一枚工匠！"
@@ -462,7 +462,10 @@
 		}
 		{
 			dependencies: ["29C10567663F027F"]
-			description: ["铜制部件可在部件制造台加工, 其他材料未必适用, 建议先以铜验证工艺."]
+			description: [
+				"我应该可以在部件制造台直接用&6铜&f做出对应部件...其他材料就不一定行得通了"
+				"{image:cmi:textures/images/tconstruct/copper_pickaxe.png width:647 height:296 align:center fit:true}"
+			]
 			id: "5FB6FC064E4EECAB"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "有了这些 就能做挖掘等级更高的工具了"
@@ -486,7 +489,6 @@
 		{
 			dependencies: ["3A4EA6A20A0727AA"]
 			dependency_requirement: "one_completed"
-			description: ["扫描到石英矿脉, 主世界亦有分布, 可用于光学与电子元件的原料."]
 			id: "5DEF00C4138EE4FB"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "主世界也有啦"
@@ -505,7 +507,10 @@
 		}
 		{
 			dependencies: ["13884F7A75B4D36D"]
-			description: ["手持石英右键深板岩或圆石, 有 30% 概率获得抛光石英, 建议多试."]
+			description: [
+				"手持石英右键{minecraft:deepslate, 1}深板岩或{minecraft:cobbled_deepslate, 1}深板岩圆石会有30%的"
+				"概率获取"
+			]
 			id: "3D854C186FF6E897"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "打制石器吗"
@@ -526,7 +531,6 @@
 		}
 		{
 			dependencies: ["5DEF00C4138EE4FB"]
-			description: ["石英晶体, 可用于元件与研磨, 建议储备一批, 亦可制玻璃."]
 			id: "13884F7A75B4D36D"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -549,7 +553,11 @@
 				"73D78755B4430729"
 				"3D854C186FF6E897"
 			]
-			description: ["简易熔炼设备, 可熔化低熔点金属, 是冶金产线的起点, 思索中有结构示意."]
+			description: [
+				"有了这些, 我就能搭出一套简易的熔炼设备, &6思索&f应该能提供帮助..."
+				"一个完整的固体燃料熔化炉结构:"
+				"{image:cmi:textures/images/tconstruct/seared_melter_1.png width:133 height:115 align:center}"
+			]
 			icon: "tconstruct:seared_melter"
 			id: "26DFF62383774404"
 			quest_enhance_disable_scroll_paging: false
@@ -609,7 +617,6 @@
 				"562C10B7F3C07DCF"
 				"637C1318E278B73E"
 			]
-			description: ["铜锭质地较软, 易塑形, 适合制作导线与早期工具部件."]
 			id: "29C10567663F027F"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "一种质地较软的金属 似乎很容易塑形"
@@ -631,7 +638,6 @@
 		}
 		{
 			dependencies: ["4EAFBA3A19526127"]
-			description: ["基础合成台, 多数配方在此展开, 建议尽早搭建并靠近仓库."]
 			id: "76DD35F7BAB2AF34"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -644,7 +650,6 @@
 		}
 		{
 			dependencies: ["76DD35F7BAB2AF34"]
-			description: ["便携合成终端, 可在野外直接展开配方操作, 减少往返基地的时间."]
 			hide_dependency_lines: true
 			id: "256C6C201607525D"
 			quest_enhance_disable_scroll_paging: false
@@ -659,7 +664,6 @@
 		}
 		{
 			dependencies: ["07FD61829D499994"]
-			description: ["锤类工具可替代部分锻造工序, 是早期金属加工的关键工具."]
 			id: "23E3A74C5D9EEEBF"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -686,7 +690,6 @@
 		}
 		{
 			dependencies: ["23E3A74C5D9EEEBF"]
-			description: ["石板由石料压制, 可用于构件与模具, 建议批量压制备用."]
 			id: "799329AFB898606F"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -706,7 +709,10 @@
 		}
 		{
 			dependencies: ["26DFF62383774404"]
-			description: ["流体燃料可提供更高炉温, 固体燃料不足时建议改用."]
+			description: [
+				"一个完整的流体燃料熔化炉结构:"
+				"{image:cmi:textures/images/tconstruct/seared_melter_2.png width:133 height:115 align:center}"
+			]
 			id: "7C35ECF218BDC872"
 			optional: true
 			quest_enhance_disable_scroll_paging: false
@@ -723,9 +729,11 @@
 		{
 			dependencies: ["21ED583750523195"]
 			description: [
-				"地层中检测到发光晶体, 表面能量波动明显, 推测可通过特殊机械结构将其能量引出."
-				"..."
-				"深度分析完成, 本矿物正式定名为\"幻晶\", 并完成能量利用设备\"构件\"的初步设计"
+				"在星球地层里发现了一种特殊的晶体矿物"
+				"它的表面上一直浮动着奇怪的光辉, 似乎蕴含着能量"
+				"手上暂时没有什么鉴定材料, 但是我有一种直觉, 我可以用特殊的结构把它的能量激发出来"
+				"我需要给这种用于激发晶体能量的结构起一个名字"
+				"就叫...构件吧"
 			]
 			id: "79EF51A3C7D8075C"
 			quest_enhance_disable_scroll_paging: false
@@ -751,19 +759,11 @@
 		}
 		{
 			description: [
-				"本节点是开荒引导系统 L-01 的首次接入记录. 从此刻起, 你看到的每一条任务, 都来自本单元的分析与建议."
-				""
-				"&l叙述视角&r: 你, 开拓者. 本单元只提供判定, 数据与备选方案, 不替你下决定."
-				""
-				"&l任务口吻&r: 本单元. 结论在前, 建议在后. 出现&c危险&r或&c异常&r时直接标注, 不做修饰."
-				""
-				"&l你的身份&r: 本星系第一批开拓者. 落地时仅携带基础工具与初始套件, 没有补给, 也没有后援."
-				""
-				"&l你的职责&r: 勘察地表, 采集资源, 建立第一条能运转的产线, 直到这片营地可以自持."
-				""
-				"&l本单元的职责&r: 持续分析星球环境与到手物资, 判定其类型与用途, 并给出下一步建议."
-				""
-				"按住 &e[W]&r 查看思索, 使用 &e[R]&r 与 &e[U]&r 查询配方, 任务节点会随进度自动解锁."
+				"妈的, 烧的真他妈充分."
+				"要不是紧急逃生仓, 我怕是也和这船体一样支离破碎了. "
+				"空气含氧量34%, 地表重力加速度10.28m*s^-2, 有地球生物存活...啊, 这就是伊甸了. "
+				"重力, 我操的只是略不正常, 比上次那个巴...巴兰尼科夫先生发现的星球好太多了."
+				"既然这样, 得赶紧想办法活下去, 才能争取与地球的通讯..."
 			]
 			disable_toast: true
 			icon: {
@@ -781,21 +781,22 @@
 			}]
 			shape: "gear"
 			size: 1.8d
-			subtitle: "开拓者已抵达"
+			subtitle: "紧急求助!紧急求助!"
 			tasks: [{
 				id: "22D0220F20C29089"
-				title: "落地当前行星"
+				title: "从航天事故生还"
 				type: "checkmark"
 			}]
-			title: "落地第一日"
+			title: "劫后余生"
 			x: -9.0d
 			y: 14.5d
 		}
 		{
 			dependencies: ["21ED583750523195"]
 			description: [
-				"检测到本行星表面存在生命, 以地球生物与本地生物混杂, 部分生物带有明显攻击性. "
-				"本机提供有基础远程防卫装备, 以紫水晶为弹药, 可应对具备远程攻击的本地生物."
+				"这是一把很普通的弓, 它的韧性和柔度较好, 可以快速拉满射出紫水晶晶簇, 为您提供基础的防身. "
+				"如果您碰到由热力系列(指名道姓&c狂风人&r和&c岩石人&r)添加的拥有远程攻击能力的怪物, 就用它进行反击吧. "
+				"橡胶木板可以用于修复这把弓, 请一定要活下去. "
 			]
 			hide_dependency_lines: true
 			icon: {
@@ -870,7 +871,6 @@
 		}
 		{
 			dependencies: ["79EF51A3C7D8075C"]
-			description: ["构件通用零件, 是各类构件的共同基材, 建议多备以支撑后续装配."]
 			id: "40A3953BD0E4AB68"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -883,7 +883,7 @@
 		}
 		{
 			dependencies: ["26DFF62383774404"]
-			description: ["扫描到村庄聚落, 工匠房内存有大量冶炼炉元件, 可作为快速起步点."]
+			description: ["村庄的工匠小屋中有大量的&6冶炼炉元件&r, 或许可以帮助你快速发展"]
 			id: "35D993D8B21B6A08"
 			quest_enhance_disable_scroll_paging: false
 			size: 1.5d
@@ -900,7 +900,6 @@
 		}
 		{
 			dependencies: ["21ED583750523195"]
-			description: ["切割台可将原木去皮并加工食材, 是木材与食物两条线的共用设备."]
 			id: "1EBE557E214AC530"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -913,7 +912,6 @@
 		}
 		{
 			dependencies: ["1EBE557E214AC530"]
-			description: ["原木在砧板上用斧削皮可得树皮, 是部分合成与燃料原料."]
 			id: "219F885BCE038EA1"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "原木放在砧板上用斧削皮"
@@ -935,7 +933,7 @@
 		}
 		{
 			dependencies: ["35D993D8B21B6A08"]
-			description: ["工匠砧可制作更多工具与特殊功能工具, 建议尽早搭建."]
+			description: ["工匠砧可以制作更多工具, 以及一些具有&4特殊功能&r的工具"]
 			id: "6AF60377F2DAB309"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "你应该能找到"
@@ -949,7 +947,7 @@
 		}
 		{
 			dependencies: ["6AF60377F2DAB309"]
-			description: ["重型锤具, 适合大量挖掘与锻打, 完成基础工具链后即可制作."]
+			description: ["                  这是你应得的"]
 			hide_dependency_lines: true
 			icon: {
 				Count: 1
@@ -1029,7 +1027,7 @@
 		}
 		{
 			dependencies: ["6AF60377F2DAB309"]
-			description: ["板斧适合大片伐木, 能显著提升木材采集效率, 建议早期制作."]
+			description: ["                  这是你应得的"]
 			hide_dependency_lines: true
 			icon: {
 				Count: 1
@@ -1106,7 +1104,11 @@
 		}
 		{
 			dependencies: ["6AF60377F2DAB309"]
-			description: ["矿脉锤可连锁挖掘周围 16 格同类方块, 不含斜角, 适合矿脉开采."]
+			description: [
+				"                  这是你应得的"
+				""
+				"现在矿脉锤连锁时会寻找周边16个相同的方块连锁挖掘, 值得注意的是, 不计算斜角连接"
+			]
 			hide_dependency_lines: true
 			icon: {
 				Count: 1
@@ -1183,7 +1185,7 @@
 		}
 		{
 			dependencies: ["6AF60377F2DAB309"]
-			description: ["开掘铲适合大范围挖掘沙土与砾石, 处理松散地层效率较高."]
+			description: ["                  这是你应得的"]
 			hide_dependency_lines: true
 			icon: {
 				Count: 1

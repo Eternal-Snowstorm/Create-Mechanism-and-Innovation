@@ -11,7 +11,6 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["本组为不在主线上的实用构件, 可按需制作, 建议优先自然与末影系."]
 			id: "5561A14A949F42B6"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -24,7 +23,6 @@
 		}
 		{
 			dependencies: ["5561A14A949F42B6"]
-			description: ["自然构件可促进作物与植物生长, 适合配套农场与树场."]
 			id: "7022767445259A4A"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -37,7 +35,7 @@
 		}
 		{
 			dependencies: ["5561A14A949F42B6"]
-			description: ["猪铁构件可持续产出食物, 注意勿投入营养液化机, 否则会被消耗."]
+			description: ["注意不要放进营养液化机(会消耗！)"]
 			id: "5AF90A54B8D29AE1"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "吃不完的食物"
@@ -51,7 +49,6 @@
 		}
 		{
 			dependencies: ["5561A14A949F42B6"]
-			description: ["彩色构件可产出十六色染料, 适合建材与装饰需求."]
 			id: "02F1C89456918D3A"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "无限16色染料！"
@@ -65,7 +62,7 @@
 		}
 		{
 			dependencies: ["5561A14A949F42B6"]
-			description: ["药水构件可调制无负面效果的药剂, 建议按需切换配方."]
+			description: ["没有debuff版"]
 			id: "492D7D91934E1D82"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "狂乱鸡尾酒"
@@ -79,7 +76,7 @@
 		}
 		{
 			dependencies: ["5561A14A949F42B6"]
-			description: ["附魔构件配合动力砂轮可产液态经验, 是附魔工业的关键."]
+			description: ["可以用动力砂轮打磨出液态经验(无限经验！)"]
 			id: "50EEB0A4ECFCEBA3"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -92,7 +89,7 @@
 		}
 		{
 			dependencies: ["5561A14A949F42B6"]
-			description: ["幽匿构件可产出回响与经验相关物资, 适合深层探索后制作."]
+			description: ["哈！"]
 			id: "677A1A18F7E0955E"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "哈！"
@@ -106,7 +103,6 @@
 		}
 		{
 			dependencies: ["5561A14A949F42B6"]
-			description: ["末影构件可提供传送与末影相关功能, 建议在基地间布置."]
 			id: "230DBA1D29242001"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{

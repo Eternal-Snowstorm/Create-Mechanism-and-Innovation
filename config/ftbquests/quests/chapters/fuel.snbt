@@ -11,7 +11,6 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["燃料是开荒期最紧缺的物资, 建议先建立稳定来源, 再扩展生产."]
 			icon: "minecraft:coal"
 			id: "2D245A409C2C190B"
 			quest_enhance_disable_scroll_paging: false
@@ -31,7 +30,6 @@
 		}
 		{
 			dependencies: ["2D245A409C2C190B"]
-			description: ["原木可直接燃烧, 是最基础的燃料, 也是建材与合成原料."]
 			id: "55952D9B9D8E8F21"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -56,7 +54,6 @@
 		}
 		{
 			dependencies: ["55952D9B9D8E8F21"]
-			description: ["原木粉碎可得锯末, 压缩后作燃料, 也用于生物质与造纸."]
 			id: "4930FB8565659CF5"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -75,7 +72,6 @@
 		}
 		{
 			dependencies: ["4930FB8565659CF5"]
-			description: ["锯末压缩成块, 燃烧时间更长, 适合熔炉与锅炉使用."]
 			id: "5A90B92B1CCF14B8"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -94,7 +90,6 @@
 		}
 		{
 			dependencies: ["5A90B92B1CCF14B8"]
-			description: ["再压缩一次, 热值进一步提高, 适合长途携带与长期储备."]
 			id: "727E544121C1E389"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -113,7 +108,6 @@
 		}
 		{
 			dependencies: ["727E544121C1E389"]
-			description: ["与杂酚油混合压缩, 是高效固体燃料, 也有防水防蛀效果."]
 			id: "494A3AF72096707C"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -132,7 +126,6 @@
 		}
 		{
 			dependencies: ["55952D9B9D8E8F21"]
-			description: ["木炭热值高于原木, 适合冶炼, 建议用窑批量烧制."]
 			id: "0CE693D306C1B691"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -158,7 +151,6 @@
 		}
 		{
 			dependencies: ["0CE693D306C1B691"]
-			description: ["木炭磨粉后燃烧更充分, 也用于过滤与化工配料."]
 			id: "4E1C39C56CD52564"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -185,7 +177,7 @@
 		}
 		{
 			dependencies: ["2D245A409C2C190B"]
-			description: ["泥炭产于沼泽, 产量受时运影响, 是早期高热值燃料."]
+			description: ["泥炭块只会在红树林沼泽和沼泽群系生成, 挖掘时掉落的泥炭数量受工具的时运效果影响"]
 			id: "7AC1116B656361E6"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [
@@ -227,7 +219,7 @@
 		}
 		{
 			dependencies: ["2D245A409C2C190B"]
-			description: ["煤炭可烧成焦炭, 热值更高, 是炼钢的还原剂."]
+			description: ["煤炭也可以烧成焦炭"]
 			id: "12FAE452591719C6"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{

@@ -12,7 +12,6 @@
 	quests: [
 		{
 			dependencies: ["52AE29C9BB2B6F00"]
-			description: ["冶炼炉可熔炼铜锡制青铜, 铜锌制黄铜, 是蒸汽设备的基材, 建议批量冶炼."]
 			id: "2F00DD29F68238BA"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "使用冶炼炉制作合金"
@@ -51,7 +50,7 @@
 		{
 			dependencies: ["2E72074B83610585"]
 			description: [
-				"标准单层冶炼炉结构如下, 控制器, 排液口与燃料罐为核心部件:"
+				"一个完整的单层冶炼炉结构:"
 				"{image:cmi:textures/images/tconstruct/smeltery.png width:143 height:125 align:center}"
 			]
 			icon: "tconstruct:smeltery_controller"
@@ -93,7 +92,6 @@
 				"25B06B6489D3FB78"
 				"2CE848599231C333"
 			]
-			description: ["铁路构件的装配产物, 是列车网络的前置, 建议与机壳配套生产."]
 			id: "6BA8D6727D497F84"
 			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
@@ -109,7 +107,6 @@
 		}
 		{
 			dependencies: ["2FE21275DACCE692"]
-			description: ["黑曜石板经压缩而成, 强度更高, 用于列车与结构件, 建议先备料."]
 			id: "25B06B6489D3FB78"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -136,7 +133,6 @@
 		}
 		{
 			dependencies: ["2E72074B83610585"]
-			description: ["黑曜石压制板, 可作耐热与耐磨部件, 是致密黑曜石板的前体."]
 			id: "2FE21275DACCE692"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -163,7 +159,6 @@
 		}
 		{
 			dependencies: ["6FE26470A8A3B7B1"]
-			description: ["列车与线路材料已备齐, 可进入线路建设, 建议先规划站点间距."]
 			icon: "create:track_station"
 			id: "2E72074B83610585"
 			quest_enhance_disable_scroll_paging: false
@@ -177,7 +172,6 @@
 		}
 		{
 			dependencies: ["6BA8D6727D497F84"]
-			description: ["连接器, 站点, 控制与信号构成列车运行的最小套件, 建议成套搭建."]
 			icon: "create:controls"
 			id: "58F03784745D9151"
 			quest_enhance_disable_scroll_paging: false
@@ -222,7 +216,6 @@
 		}
 		{
 			dependencies: ["2FE21275DACCE692"]
-			description: ["列车需要司机或烈焰人燃烧室才能自动运行, 建议尽早配置."]
 			id: "7C2BCD18D1BCEEC9"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "你需要一只生物, 烈焰人燃烧室也可以"
@@ -240,17 +233,17 @@
 				"7C2BCD18D1BCEEC9"
 			]
 			description: [
-				"&e镍矿&r, &b银矿&r与&c钒矿&r 已停止自然生成, 需在野外寻找对应矿点获取"
+				"&e镍矿&r, &b银矿&r与&c钒矿&r将&l&6不再自然生成&r&r. 你需要在野外寻找它们对应的矿点来获取资源"
 				""
-				"可开采的矿藏位于矿点下方, 挖开顶层即可看到矿点"
+				"而可用于开采的矿藏则位于矿点下方, 将顶层挖开就可以看到矿点"
 				""
-				"矿点与基地距离较远, 建议搭建&d列车网络&r运输"
+				"由于矿点与你的基地之间距离较远, 你需要搭建&d列车网络&r来运输这些矿产资源"
 				""
-				"条件允许时可在&a主世界&r寻找&6油页岩&r矿点, 其&5沥青&r产物可作列车燃料"
+				"如果运气不错, 你还能在&a主世界&r发现&6油页岩&r矿点; 该矿点会产出&5沥青&r, 而&5沥青&r可以作为列车的燃料使用"
 				""
-				"&b{create_rns:deposit_scanner, 1}矿藏扫描仪&r用于定位矿藏"
+				"&b{create_rns:deposit_scanner, 1}矿藏扫描仪&r用于寻找矿藏"
 				""
-				"&l&b后续页面附各矿点图片&r&r"
+				"&l&b向后翻页可以查看这些矿点的图片&r&r"
 				""
 				"{@pagebreak}"
 				"在&6森林&r中的&e镍矿矿点&r"
@@ -323,7 +316,6 @@
 		}
 		{
 			dependencies: ["2F00DD29F68238BA"]
-			description: ["蒸汽构件的装配产物, 支撑蒸汽时代设备, 是铁路线的关键件."]
 			id: "5BB078BA5116FE68"
 			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
@@ -340,8 +332,8 @@
 		{
 			dependencies: ["5BB078BA5116FE68"]
 			description: [
-				"在&c燃烧室&r内投入燃料, 向&b锅炉&r注水, 稍候即可产出&6蒸汽&r"
-				"&6蒸汽&r可用管道导出, 输送至其他设备使用"
+				"在&c燃烧室&r内放入燃料, 并在上方的&b锅炉&r内注入水. 等待片刻后&b锅炉&r便会开始产生&6蒸汽&r"
+				"你可以使用管道将&6蒸汽&r导出并输送到其他设备中使用"
 			]
 			id: "12CEF39F02D4EB3A"
 			quest_enhance_disable_scroll_paging: false
@@ -385,8 +377,8 @@
 		{
 			dependencies: ["12CEF39F02D4EB3A"]
 			description: [
-				"向&6蒸汽引擎&r泵入蒸汽, 可带动前方两格内的&b蒸汽飞轮&r旋转并&d产生应力&r"
-				"该方式应力量可观, 在解锁&e大型蒸汽锅炉&r与&c燃油引擎&r之前最为实用"
+				"向&6蒸汽引擎&r中泵入蒸汽, 可以带动其前方两格内的&b蒸汽飞轮&r旋转并&d产生应力&r"
+				"这种方式能够提供&d非常可观&r的应力量, 在解锁&e大型蒸汽锅炉&r和&c燃油引擎&r之前尤为实用"
 				"{image:cmi:textures/images/create/burner_and_flywheel.png width:196 height:104 align:center}"
 			]
 			id: "5227B74E4F8FF3F5"
@@ -425,14 +417,14 @@
 		{
 			dependencies: ["5BB078BA5116FE68"]
 			description: [
-				"&l&4塔尔塔罗斯的环境与埃律西昂截然不同&r&r, 无可呼吸氧气, 炙热稀薄的大气无法维持生命"
+				"&l&4下界的环境与主世界截然不同&r&r. 那里没有可供呼吸的氧气, 炽热而稀薄的空气无法维持生命. 如果贸然进入, 很快就会因缺氧而窒息而亡"
 				""
-				"在塔尔塔罗斯自由活动需装备&b&l潜水头盔&r与&c&l背罐&r"
+				"若想在下界自由活动, 你需要装备&b&l潜水头盔&r与&c&l背罐&r"
 				""
-				"&e背罐顶部传入应力&r可持续压缩并补充气体, 供佩戴者呼吸"
-				"该装置支持&4塔尔塔罗斯&r活动, 也适用于&b水下&r长时间作业"
+				"&e背罐顶部传入应力&r可以持续压缩并补充内部气体, 从而为佩戴者提供可呼吸的空气"
+				"借助这套装置, 你不仅可以在&4下界&r中安全呼吸, 也能够在&b水中&r长时间活动"
 				""
-				"单个背罐仅可支撑&c&l20分钟&r&r, 建议随身携带两个&e背罐&r以应对&c紧急情况&r"
+				"由于一个背罐只能够支撑&c&l20分钟&r&r, 因此如果有条件还是&l&b非常建议&r&r携带两个&e背罐&r在身上用于处理&c紧急情况&r"
 			]
 			id: "08A35C2D450B20F3"
 			quest_enhance_disable_scroll_paging: false
@@ -481,7 +473,6 @@
 		}
 		{
 			dependencies: ["08A35C2D450B20F3"]
-			description: ["检测到通往灼热维度的入口, 请备好氧气与耐热装备后再进入."]
 			id: "667B8EFCF3ACD51D"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -501,7 +492,7 @@
 					}
 				}
 				id: "6421E2122AF59746"
-				title: "前往塔尔塔罗斯"
+				title: "前往下界维度"
 				type: "dimension"
 			}]
 			x: 4.5d
@@ -509,7 +500,6 @@
 		}
 		{
 			dependencies: ["667B8EFCF3ACD51D"]
-			description: ["岩浆块与下界岩是耐热结构与熔铸炉的材料, 建议大量采集."]
 			id: "2802F9503EB14965"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [
@@ -558,7 +548,6 @@
 		}
 		{
 			dependencies: ["2802F9503EB14965"]
-			description: ["下界灰浆与焦褐砖是熔铸炉的构件, 建议大批烧制备用."]
 			id: "470156018DA261F4"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "收集114514个碎片即可解锁"
@@ -580,7 +569,6 @@
 		}
 		{
 			dependencies: ["470156018DA261F4"]
-			description: ["下界构件可承受极端温度, 用于熔铸与高温设备, 建议早建."]
 			id: "4A19D6FEC975D2B9"
 			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
@@ -600,7 +588,7 @@
 				"470156018DA261F4"
 			]
 			description: [
-				"标准单层熔铸炉结构如下, 可熔化并合金高温金属:"
+				"一个完整的单层熔铸炉结构:"
 				"{image:cmi:textures/images/tconstruct/foundry.png width:147 height:120 align:center}"
 			]
 			icon: "tconstruct:foundry_controller"
@@ -650,7 +638,6 @@
 		}
 		{
 			dependencies: ["4A19D6FEC975D2B9"]
-			description: ["高温热源, 需装填烈焰人, 用于熔炼炉与蒸汽锅炉, 建议常备一个."]
 			id: "04004B46385E2AF2"
 			quest_enhance_disable_scroll_paging: false
 			size: 1.0d
@@ -664,7 +651,6 @@
 		}
 		{
 			dependencies: ["12CEF39F02D4EB3A"]
-			description: ["蒸汽可储存为流体, 用于驱动蒸汽设备或参与合成, 便于调度."]
 			id: "3D5497B8DC0ED5B6"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -678,7 +664,6 @@
 		}
 		{
 			dependencies: ["6FE26470A8A3B7B1"]
-			description: ["硫磺粉用于橡胶硫化与酸类生产, 是化工线的原料, 建议储备."]
 			id: "354FD58AE7B802BC"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -698,7 +683,6 @@
 		}
 		{
 			dependencies: ["5BB078BA5116FE68"]
-			description: ["真空处理设备, 可用于脱气与部分材料合成, 是橡胶线的配套."]
 			id: "78250BAEED3506BA"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -715,7 +699,6 @@
 				"3D5497B8DC0ED5B6"
 				"78250BAEED3506BA"
 			]
-			description: ["硫与橡胶在加热下硫化, 提高气密与耐磨性, 建议批量处理."]
 			id: "4C2F1D5F0FAA50F3"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "更高效的方式"
@@ -729,7 +712,6 @@
 		}
 		{
 			dependencies: ["4C2F1D5F0FAA50F3"]
-			description: ["硫化橡胶是密封件与构件的关键材料, 建议浇铸成板备用."]
 			id: "74A6E21C20513CEE"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -742,7 +724,6 @@
 		}
 		{
 			dependencies: ["12CEF39F02D4EB3A"]
-			description: ["太阳能锅炉无需燃料, 适合低负荷持续产汽, 建议作为备用热源."]
 			id: "3426EEB10B251CA4"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "♻️环保模式♻️"
@@ -765,11 +746,11 @@
 		{
 			dependencies: ["470156018DA261F4"]
 			description: [
-				"高级焦炉首次工作时长为普通焦炉的4倍, 随运行次数增加逐步缩短并提升并行. 建议先跑短时间配方, 再换长时间配方提速"
+				"高级焦炉首次工作时间为普通焦炉的4倍, 随着配方运行次数的增加逐步减少所需时间并提高并行数量. 因此可以先用高级焦炉去运行时间短的配方, 再把原料换成长时间的配方, 通过这样的方式可以尽快的提升高级焦炉的效率"
 				""
-				"当该设备完成搭建后, 无需再堆叠大量普通焦炉, 即可获得相当于8台普通焦炉的持续产能"
+				"因此无需堆叠大量普通焦炉, 即可获得相当于8台普通焦炉的持续产能, 使工业产线更加紧凑与高效"
 				""
-				"一台高级焦炉至少需要一个输入总线与输出总线, IO仅限接口正面, 结构可在JEI查看"
+				"一台高级焦炉至少需要一个输入总线和输出总线, 并且IO只能在接口的正面进行, 具体可以在JEI内查看结构"
 				"{image:cmi:textures/images/cmi/reinforced_coke_oven.png width:113 height:117 align:center}"
 			]
 			icon: "cmi:reinforced_coke_oven"
@@ -826,7 +807,6 @@
 		}
 		{
 			dependencies: ["2F00DD29F68238BA"]
-			description: ["本阶段的流体管道便于跨设备输送, 建议按线路规划并预留接口."]
 			id: "6859E72B22446793"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -854,9 +834,9 @@
 		{
 			dependencies: ["5227B74E4F8FF3F5"]
 			description: [
-				"锅炉升级组件用于提升锅炉材质等级"
-				"手持组件右键锅炉部件即可消耗一个完成升级"
-				"升级会保留当前锅炉状态, 最大程度避免影响生产"
+				"锅炉升级组件是一种用于对锅炉材质进行升级的工具"
+				"手持锅炉升级组件右键锅炉部件即可消耗一个组件将其升级"
+				"对锅炉进行升级会保留当前锅炉的状态, 从而最大程度避免影响生产"
 			]
 			id: "23EED5BF56818EA1"
 			quest_enhance_disable_scroll_paging: false
@@ -879,7 +859,6 @@
 		}
 		{
 			dependencies: ["2F00DD29F68238BA"]
-			description: ["蒸汽泵只能输送蒸汽, 适合锅炉与引擎之间的短距输送."]
 			id: "371E3D200A96A15A"
 			quest_enhance_disable_scroll_paging: false
 			rewards: [{
@@ -899,7 +878,6 @@
 		}
 		{
 			dependencies: ["6BA8D6727D497F84"]
-			description: ["可自动铺设铁轨, 大幅缩短长距离线路的施工时间, 建议批量使用."]
 			icon: "railway_automation:track_placer"
 			id: "09E6EA6DD3C19844"
 			quest_enhance_disable_scroll_paging: false

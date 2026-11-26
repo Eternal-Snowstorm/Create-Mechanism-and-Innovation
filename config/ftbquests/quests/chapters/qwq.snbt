@@ -19,7 +19,6 @@
 				"6686E71A943DBE99"
 				"78AA95E3CA8606A0"
 			]
-			description: ["集成工作站是生态 AE 的多方块核心, 支撑集成生产, 建议优先搭建."]
 			id: "2E6485B21A9B2D5F"
 			quest_enhance_disable_scroll_paging: false
 			shape: "hexagon"
@@ -33,7 +32,6 @@
 		}
 		{
 			dependencies: ["6FD9AF607E3B28C4"]
-			description: ["超导处理器是高性能计算元件, 用于生态 AE 计算系统, 建议批量生产."]
 			id: "3B59B7BE633B96F0"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -46,7 +44,6 @@
 		}
 		{
 			dependencies: ["67F2E2E94632ECFE"]
-			description: ["印刷板经电路切割机由超导材料刻出, 是超导处理器的前体."]
 			id: "6FD9AF607E3B28C4"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -59,7 +56,6 @@
 		}
 		{
 			dependencies: ["6A128F7C271B4579"]
-			description: ["充能超导锭用于超导处理器与线缆, 需充能水晶与金属熔合."]
 			id: "67F2E2E94632ECFE"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -75,7 +71,6 @@
 				"442FA9A18D8BF15D"
 				"213018551E4F6AD6"
 			]
-			description: ["256k 合成存储是 AE2 合成系统的大容量单元, 建议按合成规模配置."]
 			id: "08BF20777263045E"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -88,7 +83,6 @@
 		}
 		{
 			dependencies: ["54B400BED13946E3"]
-			description: ["合成单元是 AE2 自动合成的基础方块, 可堆叠扩展."]
 			id: "213018551E4F6AD6"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -101,7 +95,6 @@
 		}
 		{
 			dependencies: ["689B395BBB6866C6"]
-			description: ["存储元件 2^8 叠进, 提供 256k 容量, 适合大规模物资存储."]
 			id: "442FA9A18D8BF15D"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "2^8"
@@ -115,7 +108,6 @@
 		}
 		{
 			dependencies: ["6A128F7C271B4579"]
-			description: ["1k 存储元件是 AE2 网络的起步容量, 建议先建基础存储."]
 			id: "689B395BBB6866C6"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -127,7 +119,7 @@
 			y: -3.0d
 		}
 		{
-			description: ["该任务为占位节点, 前置链仍在补全, 完成后可忽略其提示."]
+			description: ["链接本任务的任务的前置还未链接, 暂时链接于此"]
 			id: "6A128F7C271B4579"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "注意"
@@ -141,7 +133,6 @@
 		}
 		{
 			dependencies: ["6A128F7C271B4579"]
-			description: ["智能机壳由铁, 银与赛特斯石英制成, 用于 AE2 设备与气密结构."]
 			id: "54B400BED13946E3"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -157,7 +148,6 @@
 				"3437CB77F8CEE51D"
 				"4303200761CA17EF"
 			]
-			description: ["铝合金机壳用于生态 AE 设备封装, 由铝合金板压制."]
 			id: "03DB1A952C437224"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -170,7 +160,7 @@
 		}
 		{
 			dependencies: ["6A128F7C271B4579"]
-			description: ["两铝一铬一石英粉在电弧炉中熔炼成铝合金, 轻质耐蚀."]
+			description: ["两铝一铬一赛特斯石英粉在电弧炉里烧(不知道为什么看来源没有"]
 			id: "4303200761CA17EF"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -183,7 +173,6 @@
 		}
 		{
 			dependencies: ["6A128F7C271B4579"]
-			description: ["水晶锭由充能水晶与金属熔合, 用于 AE2 结构与机壳."]
 			id: "3437CB77F8CEE51D"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -199,7 +188,6 @@
 				"6A128F7C271B4579"
 				"54B400BED13946E3"
 			]
-			description: ["刻印器可压制处理器印刷电路, 是 AE2 处理器的核心设备."]
 			id: "6E79B3C83BF06BEF"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -212,7 +200,6 @@
 		}
 		{
 			dependencies: ["4A878E92E1DB07B7"]
-			description: ["钢机壳也可用于 MEK 设备, 是另一条封装路线, 按材料选择."]
 			id: "6686E71A943DBE99"
 			optional: true
 			quest_enhance_disable_scroll_paging: false
@@ -222,12 +209,11 @@
 				item: "mekanism:steel_casing"
 				type: "item"
 			}]
-			x: -1.0d
+			x: 0.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["7C3428E9D5F8696F"]
-			description: ["锇砖用于耐蚀与重型结构, 是锇系设备的建材."]
 			id: "4A878E92E1DB07B7"
 			optional: true
 			quest_enhance_disable_scroll_paging: false
@@ -242,7 +228,6 @@
 		}
 		{
 			dependencies: ["402B55C12A4ED522"]
-			description: ["结构塑料由苯酚与甲醛缩合, 用于机壳与结构件."]
 			id: "7C3428E9D5F8696F"
 			optional: true
 			quest_enhance_disable_scroll_paging: false
@@ -256,7 +241,6 @@
 		}
 		{
 			dependencies: ["0693C9D0C0185844"]
-			description: ["聚乙烯醇由醋酸乙烯水解制得, 用于胶黏与涂层."]
 			id: "402B55C12A4ED522"
 			optional: true
 			quest_enhance_disable_scroll_paging: false
@@ -270,7 +254,6 @@
 		}
 		{
 			dependencies: ["62C926D671A9DB11"]
-			description: ["醋酸乙烯是聚合制 PVA 的单体, 需稳定供应."]
 			id: "0693C9D0C0185844"
 			optional: true
 			quest_enhance_disable_scroll_paging: false
@@ -284,7 +267,6 @@
 		}
 		{
 			dependencies: ["639D08D2B1E91748"]
-			description: ["乙炔由裂化气制得, 是化工合成的起点, 可用于树脂与橡胶."]
 			id: "62C926D671A9DB11"
 			optional: true
 			quest_enhance_disable_scroll_paging: false
@@ -298,7 +280,6 @@
 		}
 		{
 			dependencies: ["6A128F7C271B4579"]
-			description: ["裂化柴油可再加工为乙炔与芳烃, 是重质油的高值路线."]
 			id: "639D08D2B1E91748"
 			optional: true
 			quest_enhance_disable_scroll_paging: false
@@ -316,7 +297,6 @@
 				"43925D3BD829A358"
 				"59A28A0E79B017AD"
 			]
-			description: ["气密构件用于真空与气密设备, 是ECO高等计算机与后期机器的前置."]
 			id: "2159FE1180EFBED8"
 			quest_enhance_disable_scroll_paging: false
 			shape: "gear"
@@ -329,7 +309,6 @@
 			y: 8.5d
 		}
 		{
-			description: ["聚烯烃链前置已备齐, 可继续合成, 建议保留乙烯储备."]
 			id: "3FD126EFABFB9480"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -345,7 +324,6 @@
 				"2159FE1180EFBED8"
 				"3FD126EFABFB9480"
 			]
-			description: ["蒸汽容器用于储存与运输蒸汽, 适合跨设备供汽."]
 			id: "542564DC1EC9F219"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -358,7 +336,6 @@
 		}
 		{
 			dependencies: ["4157E48DBF2C0F3B"]
-			description: ["聚烯烃板用于耐蚀与绝缘结构, 是机壳与管线的材料."]
 			id: "28321E91F5739CBF"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -371,7 +348,6 @@
 		}
 		{
 			dependencies: ["39A8D6D82997EB8D"]
-			description: ["石英玻璃耐热透明, 用于光学件与高等级智能设备."]
 			id: "43925D3BD829A358"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -384,7 +360,6 @@
 		}
 		{
 			dependencies: ["3FD126EFABFB9480"]
-			description: ["熔炼炉可熔炼金属与合金, 是通用冶金设备, 建议早建."]
 			id: "39A8D6D82997EB8D"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -400,7 +375,6 @@
 				"3FD126EFABFB9480"
 				"28321E91F5739CBF"
 			]
-			description: ["气密构件基座是气密构件的前置, 需聚烯烃与锇材料."]
 			id: "59A28A0E79B017AD"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -413,7 +387,10 @@
 		}
 		{
 			dependencies: ["3FD126EFABFB9480"]
-			description: ["液态乙烯与铝板在炼油厂炼制, 或润滑油裂化后精炼, 两条路线均可."]
+			description: [
+				"液态乙烯+铝板在炼油厂里炼"
+				"或者润滑油加蒸汽裂化后精炼"
+			]
 			icon: "thermal_extra:polyolefin_bucket"
 			id: "4157E48DBF2C0F3B"
 			quest_enhance_disable_scroll_paging: false
@@ -426,7 +403,7 @@
 			y: 5.5d
 		}
 		{
-			description: ["高级 MEK 内容将在登月后开放, 当前先稳定基础产线."]
+			description: ["高级mek  月球后"]
 			id: "4546CC0C4547690B"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -436,20 +413,6 @@
 			}]
 			x: 3.0d
 			y: 3.0d
-		}
-		{
-			dependencies: ["2159FE1180EFBED8"]
-			description: ["气密机壳由气密构件与智能机壳装配, 用于真空与气密设备."]
-			id: "375AFFE728FF2E65"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "50C6D5B5555E383E"
-				item: "cmi:airtight_casing"
-				type: "item"
-			}]
-			title: "气密机壳"
-			x: -7.0d
-			y: 9.5d
 		}
 	]
 	title: "qwq"
