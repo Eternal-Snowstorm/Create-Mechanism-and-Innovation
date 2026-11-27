@@ -14,7 +14,7 @@ ClientEvents.lang("zh_cn", (event) => {
 	 * @param {string} name 
 	 */
 	function addPonderThermalBlockLang(key, name) {
-		event.add(`block.${Cmi.MODID}.ponder_thermal_${key}`, `§aPonder 假方块 §8[热力]§0 - §r${name}`)
+		event.add(`block.${Cmi.MODID}.ponder_thermal_${key}`, `§aPonder 假方块 §c[热力]§8 - §r${name}`)
 	}
 
 	/**
@@ -39,14 +39,12 @@ ClientEvents.lang("zh_cn", (event) => {
 	/**
 	 * 
 	 * @param {string} key 
-	 * @param {string} name 
-	 * @param {boolean} button
+	 * @param {string} name
 	 */
-	function addPonderThermalButtonBlockLang(key, name, button) {
-		addPonderThermalBlockLang(`${key}${button ? "_button" : ""}_off`, `${name}按钮 §7(关)§r`)
-		addPonderThermalBlockLang(`${key}${button ? "_button" : ""}_on`, `${name}按钮 §7(开)§r`)
+	function addPonderThermalButtonBlockLang(key, name) {
+		addPonderThermalBlockLang(`${key}_button_off`, `${name}按钮 §7(关)§r`)
+		addPonderThermalBlockLang(`${key}_button_on`, `${name}按钮 §7(开)§r`)
 	}
-
 
 	/**
 	 * 
@@ -54,9 +52,8 @@ ClientEvents.lang("zh_cn", (event) => {
 	 * @param {string} name 
 	 */
 	function addPonderAe2BlockLang(key, name) {
-		event.add(`block.${Cmi.MODID}.ponder_ae2_${key}`, `§aPonder 假方块 §b[AE2]§0 - §r${name}`)
+		event.add(`block.${Cmi.MODID}.ponder_ae2_${key}`, `§aPonder 假方块 §b[AE2]§8 - §r${name}`)
 	}
-
 
 	// 普通方块
 	addBlockLang("gui_block", "GUI 方块")
@@ -71,8 +68,8 @@ ClientEvents.lang("zh_cn", (event) => {
 	addPonderThermalPanelBlockLang("information", "信息")
 	addPonderThermalPanelBlockLang("energy", "RF")
 
-	addPonderThermalButtonBlockLang("auto_input", "自动输入", true)
-	addPonderThermalButtonBlockLang("auto_output", "自动输出", true)
+	addPonderThermalButtonBlockLang("auto_input", "自动输入")
+	addPonderThermalButtonBlockLang("auto_output", "自动输出")
 	addPonderThermalButtonBlockLang("redstone", "红石")
 	addPonderThermalButtonBlockLang("low_rs_touch", "低红石电平")
 	addPonderThermalButtonBlockLang("high_rs_touch", "高红石电平")
