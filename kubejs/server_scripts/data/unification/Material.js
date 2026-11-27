@@ -259,7 +259,7 @@ ServerEvents.highPriorityData((event) => {
 		.replaceNugget("cmi:uranium_nugget")
 		.replaceBlock("cmi:uranium_block")
 		.replaceRawOreBlock("immersiveengineering:raw_block_uranium")
-		.replaceRawOre("alexscaves:uranium")
+		.replaceRawOre("cmi:raw_uranium")
 
 	// 青铜
 	new MaterialUnification("bronze")
