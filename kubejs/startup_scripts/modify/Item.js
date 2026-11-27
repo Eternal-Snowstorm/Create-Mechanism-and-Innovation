@@ -1,4 +1,6 @@
-// requires: alexscaves
+let $ACItemRegistry = 
+	Java.loadClass("com.github.alexmodguy.alexscaves.server.item.ACItemRegistry")
+
 ItemEvents.modification((event) => {
 	/**
 	 *
@@ -104,9 +106,13 @@ ItemEvents.modification((event) => {
 	})
 
 	// 扳手
-	event.modify("create:wrench", (modify) => {
-		modify.setRarity("alexscaves:rainbow")
-	})
+	try {
+		event.modify("create:wrench", (modify) => {
+			modify.setRarity($ACItemRegistry.RARITY_RAINBOW)
+		})
+	} catch (error) {
+		console.log("Cannot set wrench's rarity to rainbow: ", error)
+	}
 
 	if (FestivalUtils.isAprilFoolsDay()) {
 		event.modify("mekanism:alloy_infused", (modify) => {
