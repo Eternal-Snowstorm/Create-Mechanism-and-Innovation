@@ -187,10 +187,6 @@ ClientEvents.lang("zh_cn", (event) => {
 	addBlockLang("sergei", "谢尔盖")
 	addBlockLang("lirx_owo", "栗子")
 
-	// GUI 方块
-	addBlockLang("gui_block", "GUI 方块")
-	addBlockLang("green_screen", "绿幕")
-
 	// 建筑方块
 	addBuildLang("brass", "黄铜")
 	addBuildLang("industrial_iron", "工业铁")
