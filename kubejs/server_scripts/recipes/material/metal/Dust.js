@@ -37,4 +37,13 @@ ServerEvents.recipes((event) => {
 		"3x #forge:dusts/tin",
 		"4x #forge:dusts/glowstone"
 	]).id("thermal:lumium_dust_4")
+
+	// 铀粉
+	create.crushing([
+		Item.of("cmi:uranium_dust"),
+		Item.of("cmi:uranium_dust").withChance(0.5),
+		Item.of("alexscaves:uranium_shard").withChance(0.3)
+	], [
+		Item.of("alexscaves:uranium")
+	])
 })
