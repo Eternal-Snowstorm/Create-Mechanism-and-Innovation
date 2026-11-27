@@ -1,6 +1,10 @@
 ServerEvents.recipes((event) => {
 	let { kubejs } = event.getRecipes()
 
+    event.remove({
+        output:"immersiveengineering:blueprint"
+    })
+
 	let BlueprintMolds = Object.freeze({
 		MOLD: "molds",
 		ELECTRODE: "electrode",
@@ -31,7 +35,6 @@ ServerEvents.recipes((event) => {
 	 */
 	function addBlueprintRecipe(type, pattern, key) {
 		let recipe = kubejs.shaped(getMold(type), pattern, key)
-		recipe.id(`immersiveengineering:crafting/blueprint_${type}`)
 		return recipe
 	}
 
