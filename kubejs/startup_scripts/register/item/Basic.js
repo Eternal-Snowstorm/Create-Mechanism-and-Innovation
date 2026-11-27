@@ -54,7 +54,18 @@ StartupEvents.registry("item", (event) => {
 	})
 
 	// 红石组件
-	addItem("redstone_component")
+	{(() => {
+		let builder = addItem("redstone_component", "smithing_template")
+
+		builder.addAppliesToSlotIcon(Cmi.loadResource("item/empty_slot/redstone_diode"))
+		builder.addAppliesToSlotIcon(Cmi.loadResource("item/empty_slot/logic_diode"))
+		builder.addAppliesToSlotIcon(Cmi.loadResource("item/empty_slot/furnace"))
+		
+		builder.ingredientsText = Component.translatable(`item.${Cmi.MODID}.redstone_component.ingredients`)
+		builder.appliesToText = Component.translatable(`item.${Cmi.MODID}.redstone_component.applies_to`)
+		builder.ingredientSlotDescriptionText = Component.translatable(`item.${Cmi.MODID}.redstone_component.ingredients_slot`)
+		builder.appliesToSlotDescriptionText = Component.translatable(`item.${Cmi.MODID}.redstone_component.applies_to_slot`)
+	})()}
 
 	// 黏血球
 	addItem("blood_slime_ball")

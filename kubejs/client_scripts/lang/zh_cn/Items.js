@@ -164,6 +164,10 @@ ClientEvents.lang("zh_cn", (event) => {
 
 	// 电子元件
 	addItemLang("redstone_component", "红石组件")
+	addItemLang("redstone_component.ingredients", "红石元件")
+	addItemLang("redstone_component.applies_to", "二极管或熔炉")
+	addItemLang("redstone_component.ingredients_slot", "需要加装的红石元件")
+	addItemLang("redstone_component.applies_to_slot", "放入二极管或熔炉")
 	addItemLang("thermal_unit", "热力通量单元")
 	addItemLang("basalz_unit", "大地震撼单元")
 	addItemLang("blaze_unit", "烈焰燃烧单元")

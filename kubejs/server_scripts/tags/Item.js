@@ -875,6 +875,12 @@ ServerEvents.tags("item", (event) => {
 	add("forge:coins/copper", "createdeco:copper_coin")
 
 	// 粗矿
+	event.get("forge:raw_materials")
+		.remove("alexscaves:uranium")
+
+	event.get("forge:raw_materials/uranium")
+		.remove("alexscaves:uranium")
+
 	event.get("forge:raw_materials/desh_scrap")
 		.add("ad_astra:raw_desh")
 
@@ -976,8 +982,6 @@ ServerEvents.tags("item", (event) => {
 	rawNuggetMetals.forEach((metal) => {
 		add(`forge:raw_nuggets/${metal}`, `thermal_extra:${metal}_ore_chunk`)
 	})
-
-	add("forge:raw_nuggets/uranium", "alexscaves:uranium_shard")
 
 	// 遍历装备
 	let armorTypes = [
