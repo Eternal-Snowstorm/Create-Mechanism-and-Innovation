@@ -239,7 +239,6 @@
  - 修改了`热力造石机`的配方
  - 多方块水泵重做
 
-
 ## Beta 1.6.0
 
 ### 删除内容
@@ -838,6 +837,7 @@
  - 拆分`PackResource.zip`, 并移除里面的冗余内容
  - `GTM-RubberWood.zip`
  - `Better Create Glass Pipes.zip`
+ - `Ponder`移植`Core`并进行优化
 
 ### 新增内容
  - 三种加工用的`锤子`
@@ -897,6 +897,7 @@
  - `neoecoae`
  - `Functional Storage JS`
  - `One Enough`系列
+ - `Multiblocked2`
 
 ### 删除内容
  - `Jade theme`
@@ -915,5 +916,4 @@
  - `EFM`
  - `FTB Ultimine`
  - `Masterful Machinary`
- - `mbd2`
  - `AAE`
