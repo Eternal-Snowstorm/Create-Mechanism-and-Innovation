@@ -913,6 +913,9 @@
  - `营养注射器`
  - `玻璃纤维`与AE2线缆产线
  - `手持工作台`
+ - 标题栏标语
+ - 物品栏整理
+ - 更多抽屉升级
 
  **mod**
  - `拓展转向架`
@@ -926,9 +929,7 @@
  - `机械动力: 燃烧室附加`
  - `伊甸星环`
  - `森罗物语`及其部分附属
- - `机械动力`的部分附属
  - `生活调味料 - 胡萝卜版`
- - `测试假人`
  - `Lootr`
  - `扫描器`
  - `多方块建造器`
@@ -939,6 +940,48 @@
  - `Functional Storage JS`
  - `One Enough`系列
  - `Multiblocked2`
+ - `Ad-Astra-Giselle-Addon`
+ - `Asteor的状态栏和血量显示`
+ - `更好的进度`
+ - `经验机制改革`
+ - `合成站`
+ - `赛博护目镜`
+ - `create_rns`
+ - `冷却鼓风机`
+ - `龙+`
+ - `create simple schematic`
+ - `准星摇晃`
+ - `easyrepair`
+ - `伊甸星环`
+ - `extendedae_plus`
+ - `ExtendedAE`
+ - `流体物流`
+ - `通量网络`
+ - `FunctionalStorageJS`
+ - `匍匐前进`
+ - `沉浸式飞机`
+ - `沉浸式机械`
+ - `沉浸式奏乐`
+ - `连锁机壳`
+ - `JEIGuess`
+ - `Leawind 的第三人称`
+ - `ME光束`
+ - `ME放置工具`
+ - `更多燃烧室`
+ - `Nebula Tinker`
+ - `Neo Eco AE`
+ - `oculus`
+ - `OneEnoughBlock`
+ - `OneEnoughFluid`
+ - `Paxi`
+ - `铁道智行`
+ - `智能动态结构存储`
+ - `spark`
+ - `热力农业`
+ - `垃圾桶`
+ - `TreeChop`
+ - `来自蒸汽的信`
+
 
 ### 删除内容
  - `Jade theme`
@@ -960,3 +1003,19 @@
  - `FTB Ultimine`
  - `Masterful Machinary`
  - `AAE`
+ - `信雅互联`
+ - `continuity-3.0.0+1.20.1.forge`
+ - `齿轮与麦穗`
+ - `晶莹剔透`
+ - `CustomMachinery`
+ - `fabric-api`
+ - `FpsReducer2`
+ - `fusion`
+ - `OpenLoader`
+ - `ponderjs`
+ - `RePortality`
+ - `3D皮肤层`
+ - `sliceanddice`
+ - `初始结构`
+ - `蒸汽动力`
+ - `thermalendergy`
