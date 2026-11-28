@@ -37,6 +37,10 @@ let metals = {
 		t: 1024,
 		n: "c"
 	},
+	black_tungsten: {
+		t: 3410,
+		n: "c"
+	},
 	brass: {
 		t: 930,
 		n: "v"
@@ -84,6 +88,10 @@ let metals = {
 	electrum: {
 		t: 1060,
 		n: "v"
+	},
+	energized_superconductive_alloy: {
+		t: 2048,
+		n: "c"
 	},
 	enderium: {
 		t: 1501,

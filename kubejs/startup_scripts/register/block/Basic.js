@@ -73,7 +73,10 @@ StartupEvents.registry("block", (event) => {
 
 	// 背景
 	addBlock("green_screen")
-		.lightLevel(15)
+		.createProperties()
+		.lightLevel((state) => {
+			return 15
+		})
 
 	// 锇砖瓦
 	addBlock("osmium_tile")
@@ -280,10 +283,10 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiMiningLevel.STONE.tag())
 		.box(0, 0, 0, 16, 2, 16)
 		.modelJson = {
-			parent: "cmi:block/redstone_diode",
-			textures: {
-				"diode": "minecraft:block/smooth_stone"
-			}
+		parent: "cmi:block/redstone_diode",
+		textures: {
+			"diode": "minecraft:block/smooth_stone"
+		}
 	}
 
 	// 黄铜二极管底座
@@ -294,10 +297,10 @@ StartupEvents.registry("block", (event) => {
 		.tagBlock(CmiMiningLevel.STONE.tag())
 		.box(0, 0, 0, 16, 2, 16)
 		.modelJson = {
-			parent: "cmi:block/redstone_diode",
-			textures: {
-				"diode": "create:block/diodes/brass_diode_base"
-			}
+		parent: "cmi:block/redstone_diode",
+		textures: {
+			"diode": "create:block/diodes/brass_diode_base"
+		}
 	}
 
 	// 虚设蜂箱漏斗

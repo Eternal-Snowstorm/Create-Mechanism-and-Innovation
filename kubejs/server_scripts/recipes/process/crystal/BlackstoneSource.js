@@ -16,14 +16,17 @@ ServerEvents.recipes((event) => {
 		Fluid.of("cmi:crystal_catalyt", 100),
 		"cmi:alpha_blackstone_source"
 	])
+
 	// 磨制
 	cmi.grinding("thermal:ruby", [
 		"cmi:source_ruby"
 	])
+
 	// 磨粉
 	thermal.pulverizer("thermal:ruby_dust", [
 		"#forge:gems/ruby"
 	])
+
 	// 搓块
 	kubejs.shaped("thermal:ruby_block", [
 		"AAA",
@@ -32,15 +35,19 @@ ServerEvents.recipes((event) => {
 	], {
 		A: "#forge:gems/ruby"
 	})
+
 	// 分解
 	kubejs.shapeless("9x thermal:ruby", [
 		"#forge:storage_blocks/ruby"
 	])
+
 	// 溶解
-	create.mixing(Fluid.of("cmi:chromium_solution", 200), [
-		Fluid.of("mekanism:sulfuric_acid", 200),
-		"#forge:dusts/ruby"
-	])
+	cmi.chemical_reactor()
+		.outputFluids(Fluid.of("cmi:chromium_solution", 200))
+		.inputItems("#forge:dusts/ruby")
+		.inputFluids(Fluid.of("mekanism:sulfuric_acid", 200))
+		.inputFE(2000)
+
 	// 精炼
 	thermal.refinery([
 		"cmi:chromium_dust",
@@ -61,14 +68,17 @@ ServerEvents.recipes((event) => {
 		Fluid.of("cmi:crystal_catalyt", 100),
 		"cmi:beta_blackstone_source"
 	])
+
 	// 磨制
 	cmi.grinding("thermal:sapphire", [
 		"cmi:source_sapphire"
 	])
+
 	// 磨粉
 	thermal.pulverizer("thermal:sapphire_dust", [
 		"#forge:gems/sapphire"
 	])
+
 	// 搓块
 	kubejs.shaped("thermal:sapphire_block", [
 		"AAA",
@@ -77,6 +87,7 @@ ServerEvents.recipes((event) => {
 	], {
 		A: "#forge:gems/sapphire"
 	})
+
 	// 分解
 	kubejs.shapeless("9x thermal:sapphire", [
 		"#forge:storage_blocks/sapphire"
@@ -88,15 +99,18 @@ ServerEvents.recipes((event) => {
 		Fluid.of("cmi:crystal_catalyt", 100),
 		"cmi:gamma_blackstone_source"
 	])
+
 	// 磨制
 	cmi.grinding("minecraft:emerald", [
 		"cmi:source_emeraid"
 	])
+
 	//溶解
 	create.mixing(Fluid.of("cmi:cobalt_solution", 200), [
 		Fluid.of("mekanism:sulfuric_acid", 200),
 		"#forge:dusts/emerald"
 	])
+
 	// 精炼
 	thermal.refinery([
 		"thermalconstruct:cobalt_dust",

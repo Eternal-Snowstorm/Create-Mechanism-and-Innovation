@@ -319,14 +319,13 @@ ServerEvents.highPriorityData((event) => {
 
 	// 高岭土
 	addOreGeneratingType("kaolinite", "overworld", 32)
-		.eden(2)
+		.eden(8)
 
 	// 方铅加压铁矿石
-	addOreGeneratingType("compressed_iron_ore", "galena", 6)
-		.galena(4)
+	addOreGeneratingType("compressed_iron_ore", "galena", 16)
+		.galena(12)
 
 	// 方铅钛矿石
-	addOreGeneratingType("titanium_ore", "galena", 5)
-		.galena(3)
-
+	addOreGeneratingType("titanium_ore", "galena", 18)
+		.galena(14)
 })
