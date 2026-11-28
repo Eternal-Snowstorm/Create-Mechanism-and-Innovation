@@ -469,10 +469,6 @@ ServerEvents.tags("item", (event) => {
 		.add("tconstruct:seared_fuel_gauge")
 		.add("tconstruct:seared_ingot_gauge")
 
-	// 氧化铝
-	event.get("cmi:aluminum_oxide")
-		.add("cmi:aluminum_oxide")
-
 	// 压印模板
 	event.get("ae2:inscriber_presses")
 		.add("cmi:concurrent_processor_press")

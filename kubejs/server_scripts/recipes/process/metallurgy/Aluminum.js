@@ -9,7 +9,7 @@ ServerEvents.recipes((event) => {
 
 	// 铝粉
 	cmi.electrolyzer()
-		.inputItems("#cmi:aluminum_oxide")
-		.outputItems("immersiveengineering:dust_aluminum")
+		.inputItems("cmi:red_mud")
+		.outputItems("neoecoae:aluminum_dust")
 		.duration(20 * 10)
 })
