@@ -5,8 +5,7 @@ ServerEvents.recipes((event) => {
 	create.crushing([
 		"2x cmi:asurine_dust",
 		Item.of("cmi:asurine_dust").withChance(0.5)
-	], "#create:stone_types/asurine"
-	)
+	], "#create:stone_types/asurine")
 
 	vintageimprovements.vacuumizing([
 		"thermal_extra:zinc_ore_chunk",
@@ -21,8 +20,7 @@ ServerEvents.recipes((event) => {
 	create.crushing([
 		"2x cmi:crimsite_dust",
 		Item.of("cmi:crimsite_dust").withChance(0.5)
-	], "#create:stone_types/crimsite"
-	)
+	], "#create:stone_types/crimsite")
 
 	vintageimprovements.vacuumizing([
 		"thermal_extra:iron_ore_chunk",
@@ -52,8 +50,7 @@ ServerEvents.recipes((event) => {
 	create.crushing([
 		"2x cmi:veridium_dust",
 		Item.of("cmi:veridium_dust").withChance(0.5)
-	], "#create:stone_types/veridium"
-	)
+	], "#create:stone_types/veridium")
 
 	vintageimprovements.vacuumizing([
 		"thermal_extra:copper_ore_chunk",
