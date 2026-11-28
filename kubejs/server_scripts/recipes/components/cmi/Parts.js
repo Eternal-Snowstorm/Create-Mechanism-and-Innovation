@@ -43,16 +43,18 @@ ServerEvents.recipes((event) => {
 		C: "#forge:gems/charged_amethyst"
 	})
 
-	// 电容
+	// 简易电池
 	kubejs.shaped("cmi:simple_battery", [
-		" A ",
-		"BBB",
-		" C "
+		"ABA",
+		"CDC",
+		"CEC"
 	], {
-		A: "#forge:plates/copper",
-		B: "#forge:dusts/redstone",
-		C: "#forge:plates/zinc"
-	}).id("createaddition:crafting/capacitor_1")
+		A: "#forge:wires/copper",
+		B: "#forge:plates/copper",
+		C: "#forge:dusts/redstone",
+		D: "thermal:cured_rubber",
+		E: "#forge:plates/zinc"
+	})
 
 	// 冲压头
 	kubejs.shaped("cmi:hammer_head", [

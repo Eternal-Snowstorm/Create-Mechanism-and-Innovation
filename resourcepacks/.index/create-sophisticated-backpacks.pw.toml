@@ -1,36 +1,21 @@
-filename = 'CreateSophisticatedBackpacks.zip'
+filename = 'CreateSophBackpacks.zip'
 name = 'Create Style Sophisticated Backpacks'
 side = ''
-x-prismlauncher-dependencies = []
 x-prismlauncher-loaders = []
-x-prismlauncher-mc-versions = [
-    '1.16.3',
-    '1.16.4',
-    '1.16.5',
-    '1.17.1',
-    '1.18',
-    '1.18.1',
-    '1.18.2',
-    '1.19',
-    '1.19.1',
-    '1.19.2',
-    '1.20.1',
-    '1.20.4',
-    '1.21',
-    '1.21.1',
-    '1.21.2',
-    '1.21.3',
-    '1.21.4'
-]
+x-prismlauncher-mc-versions = [ '1.20.1', '1.21.1', '1.21.4', '1.21.5', '1.21.8', '1.21.10', '1.21.11' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'CreateSophisticatedBackpacks'
+x-prismlauncher-version-number = 'CreateSophBackpacks'
 
 [download]
-hash = '0a119ab68a6b2cb824d545c0dc2dc44b1339cc94'
+hash = '0c834a3a13d3d597b6d1273375d2bd049fc3d728'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 6157360
+file-id = 7707479
 project-id = 899330
+
+[[x-prismlauncher-dependencies]]
+addonId = '422301'
+type = 'REQUIRED'

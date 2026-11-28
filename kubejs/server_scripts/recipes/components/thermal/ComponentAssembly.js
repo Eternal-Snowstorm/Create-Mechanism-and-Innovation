@@ -125,8 +125,7 @@ ServerEvents.recipes((event) => {
 			"#forge:plates/cobalt"
 		],
 		"immersiveengineering:component_electronic",
-		"#forge:gears/rose_gold",
-		"#forge:gears/rose_gold"
+		"2x #forge:gears/rose_gold"
 	]).energy(ENERGY)
 
 	// 并行升级 +4 流体配方虽然麻烦, 但是相对应的造价更便宜
@@ -146,4 +145,20 @@ ServerEvents.recipes((event) => {
 		Mechanisms.COLOR.COM,
 		"ae2:basic_card"
 	]).energy(ENERGY).id("meplacementtool:key_of_spectrum")
+
+	// 简易电池
+	thermal_extra.component_assembly("4x cmi:simple_battery", [
+		Fluid.of("thermal:redstone", 400),
+		"4x #forge:wires/copper",
+		"2x #forge:plates/copper",
+		"2x #forge:plates/zinc"
+	]).energy(ENERGY)
+
+	// 蓄电池
+	thermal_extra.component_assembly("2x createaddition:modular_accumulator", [
+		Fluid.of("cmi:cured_rubber", 180),
+		"4x #forge:plates/brass",
+		"#forge:plates/vanadium",
+		"#forge:rods/copper"
+	]).energy(ENERGY)
 })

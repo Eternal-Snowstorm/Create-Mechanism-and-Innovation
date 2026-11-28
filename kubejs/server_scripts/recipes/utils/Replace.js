@@ -82,6 +82,22 @@ ServerEvents.recipes((event) => {
 		})
 	})
 
+	// 线轴
+	event.forEachRecipe({
+		output: "#createaddition:spools"
+	}, (recipe) => {
+		let json = recipe.json
+
+		if (json.has("result")) {
+			let result = json.getAsJsonObject("result")
+
+			result["addProperty(java.lang.String,java.lang.Number)"](
+				"count",
+				4
+			)
+		}
+	})
+
 	event.replaceInput({
 		mod: "ad_astra"
 	}, "ad_astra:steel_rod", "#forge:rods/steel")

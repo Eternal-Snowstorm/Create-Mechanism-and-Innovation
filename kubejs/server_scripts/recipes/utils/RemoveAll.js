@@ -261,7 +261,9 @@ ServerEvents.recipes((event) => {
 		"nethersdelight:cutting/hoglin_sausage_alt",
 		"farmersrespite:chilidog_alt",
 		"moreburners:item_application/heat_converter",
-		"createaddition:liquid_burning/biodiesel"
+		"createaddition:liquid_burning/biodiesel",
+		"createaddition:crafting/capacitor_1",
+		"createaddition:crafting/modular_accumulator_electrum"
 	])
 
 	let removedMods = [

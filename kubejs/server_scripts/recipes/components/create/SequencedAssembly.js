@@ -167,10 +167,11 @@ ServerEvents.recipes((event) => {
 		).loops(loops).transitionalItem(transit)
 	}
 
-	let Seq = {
+	const Seq = {
 		FLYWHEEL: seqItems("create:flywheel", "#create:shaft", "cmi:incomplete_flywheel"),
 		GIZMO: seqItems("alexscaves:notor_gizmo", "#forge:plates/aluminum", "cmi:incomplete_notor_gizmo"),
 		E_TUBE: seqItems("create:electron_tube", "#forge:plates/iron", "cmi:incomplete_electron_tube"),
+		SIMPLE_BATTERT: seqItems("2x cmi:simple_battery", "#forge:plates/copper", "cmi:incomplete_simple_battery"),
 		R_TUBE: seqItems("cmi:resonant_tube", "#forge:plates/brass", "cmi:incomplete_resonant_tube"),
 		CAPACITOR: seqItems("ad_astra:etrionic_capacitor", "#forge:plates/steel", "ad_astra:etrionic_core"),
 		COOLER: seqItems("cmi:nuke_cooler", "#forge:plates/stainless_steel", "cmi:incomplete_nuke_cooler"),
@@ -187,7 +188,7 @@ ServerEvents.recipes((event) => {
 		SUPERCONDUCTING: seqItems("neoecoae:superconducting_processor", "neoecoae:energized_superconductive_ingot", "cmi:incomplete_superconducting_processor")
 	}
 
-	let Upgrades = [
+	const Upgrades = [
 		seqItems("thermal:upgrade_augment_1", "#forge:plates/invar", "cmi:incomplete_upgrade_augment_1"),
 		seqItems("thermal:upgrade_augment_2", "#forge:plates/electrum", "cmi:incomplete_upgrade_augment_2"),
 		seqItems("thermal:upgrade_augment_3", "#forge:plates/enderium", "cmi:incomplete_upgrade_augment_3"),
@@ -211,6 +212,14 @@ ServerEvents.recipes((event) => {
 		.deploying("create:polished_rose_quartz")
 		.build()
 		.id("create:crafting/materials/electron_tube")
+
+	// 简易电池
+	new SequencedAssemblyRecipe(Seq.SIMPLE_BATTERT)
+		.filling(Fluid.of("thermal:redstone", (100 * 3) / 2))
+		.deploying("#forge:plates/zinc")
+		.deploying("#forge:wires/copper")
+		.loop(2)
+		.build()
 
 	// 共振管
 	new SequencedAssemblyRecipe(Seq.R_TUBE)

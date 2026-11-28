@@ -202,6 +202,8 @@ ClientEvents.lang("zh_cn", (event) => {
 	addIncompleteLang("cast_iron_large_cogwheel", "铸铁大齿轮")
 	addIncompleteLang("steel_large_cogwheel", "钢大齿轮")
 
+	addIncompleteLang("simple_battery", "简易电池")
+
 	addIncompleteLang("advanced_control_circuit", "高级控制电路")
 	addIncompleteLang("elite_control_circuit", "精英控制电路")
 	addIncompleteLang("ultimate_control_circuit", "终极控制电路")

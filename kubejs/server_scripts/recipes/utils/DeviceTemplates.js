@@ -12,8 +12,8 @@
  * 统一固化能量消耗 4000 RF, 避免各文件重复声明. 
  *
  * @param {Internal.RecipeType_} thermal_extra event 解构出的 thermal_extra 配方命名空间
- * @param {string} output 输出物品
- * @param {Array} inputs 输入物品与流体
+ * @param {Internal.Ingredient_} output 输出物品
+ * @param {Internal.Ingredient_ | Internal.Ingredient_[]} inputs 输入物品与流体
  */
 function addComponRecipe(thermal_extra, output, inputs) {
 	return thermal_extra.component_assembly(output, inputs)
@@ -31,6 +31,9 @@ function addComponRecipe(thermal_extra, output, inputs) {
  * @param {Object} keys A/B/C 的取值表
  */
 function verticalDevice(kubejs, output, id, keys) {
-	return kubejs.shaped(output, ["A", "B", "C"], keys)
-		.id(id)
+	return kubejs.shaped(output, [
+		"A",
+		"B",
+		"C"
+	], keys).id(id)
 }

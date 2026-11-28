@@ -142,16 +142,17 @@ ServerEvents.recipes((event) => {
 		B: "#forge:gears/cast_iron"
 	})
 
-	// 暂时修复蒸汽锻锤配方
-	kubejs.shaped("steam_letters:steam_hammer", [
+	// 蓄电池
+	kubejs.shaped("createaddition:modular_accumulator", [
 		"ABA",
 		"CDC",
-		" E "
+		"EFE"
 	], {
-		A: "#forge:plates/bronze",
-		B: Casing.BRONZE,
-		C: Mechanisms.STEAM.COM,
-		D: "create:mechanical_press",
-		E: "#forge:storage_blocks/bronze"
-	}).id("steam_letters:crafting/shaped/bronze/steam_hammer")
+		A: "thermal:cured_rubber",
+		B: "#forge:rods/copper",
+		C: "cmi:simple_battery",
+		D: Casing.BRASS,
+		E: "#forge:plates/brass",
+		F: "#forge:plates/vanadium"
+	}).id("createaddition:crafting/modular_accumulator_gold")
 })

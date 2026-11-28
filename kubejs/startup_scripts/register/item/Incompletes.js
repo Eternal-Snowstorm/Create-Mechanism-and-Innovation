@@ -43,9 +43,9 @@ StartupEvents.registry("item", (event) => {
 		"nuke_cooler",
 		"notor_gizmo",
 		"motor_rotor",
-		"thermal_mechanism_augment"
+		"thermal_mechanism_augment",
+		"simple_battery"
 	]
-
 	incompleteItems.forEach((name) => {
 		addIncomplete(name)
 	})

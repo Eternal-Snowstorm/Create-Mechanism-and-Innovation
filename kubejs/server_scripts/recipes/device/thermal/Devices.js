@@ -1,5 +1,5 @@
 ServerEvents.recipes((event) => {
-	let { kubejs } = event.getRecipes()
+	let { kubejs, thermal_extra } = event.getRecipes()
 
 	// 树脂提取
 	verticalDevice(kubejs, "thermal:device_tree_extractor", "thermal:device_tree_extractor", {
