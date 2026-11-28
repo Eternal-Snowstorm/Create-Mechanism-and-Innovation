@@ -24,7 +24,7 @@
 				item: "cmi:heavy_engineering_mechanism"
 				type: "item"
 			}]
-			x: 14.0d
+			x: 16.5d
 			y: -3.0d
 		}
 		{
@@ -50,7 +50,7 @@
 				item: "cmi:heavy_engineering_mechanism_augment"
 				type: "item"
 			}]
-			x: 16.0d
+			x: 18.5d
 			y: -4.0d
 		}
 		{
@@ -75,7 +75,7 @@
 				type: "checkmark"
 			}]
 			title: "润滑油"
-			x: 12.0d
+			x: 14.5d
 			y: -4.0d
 		}
 		{
@@ -160,7 +160,7 @@
 				item: "immersiveengineering:component_steel"
 				type: "item"
 			}]
-			x: 14.0d
+			x: 16.5d
 			y: -5.0d
 		}
 		{
@@ -172,7 +172,7 @@
 				item: "immersiveengineering:heavy_engineering"
 				type: "item"
 			}]
-			x: 14.0d
+			x: 16.5d
 			y: -1.0d
 		}
 		{
@@ -187,7 +187,7 @@
 				item: "immersiveengineering:arc_furnace"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 14.5d
 			y: 0.0d
 		}
 		{
@@ -202,7 +202,7 @@
 				item: "immersiveengineering:metal_press"
 				type: "item"
 			}]
-			x: 16.0d
+			x: 18.5d
 			y: -2.0d
 		}
 		{
@@ -217,7 +217,7 @@
 				item: "immersiveengineering:refinery"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 14.5d
 			y: -2.0d
 		}
 		{
@@ -232,7 +232,7 @@
 				item: "cmi:electrolyzer"
 				type: "item"
 			}]
-			x: 16.0d
+			x: 18.5d
 			y: 0.0d
 		}
 		{
@@ -252,7 +252,7 @@
 				title: "铝锭"
 				type: "item"
 			}]
-			x: 16.0d
+			x: 18.5d
 			y: 2.0d
 		}
 		{
@@ -272,7 +272,7 @@
 				title: "不锈钢锭"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 14.5d
 			y: 2.0d
 		}
 		{
@@ -420,7 +420,7 @@
 				item: "immersiveindustry:car_kiln"
 				type: "item"
 			}]
-			x: 14.0d
+			x: 16.5d
 			y: 1.0d
 		}
 		{
@@ -434,7 +434,7 @@
 				item: "mekanism:ingot_osmium"
 				type: "item"
 			}]
-			x: 14.0d
+			x: 16.5d
 			y: 3.0d
 		}
 	]

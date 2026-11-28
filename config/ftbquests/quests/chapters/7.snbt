@@ -79,7 +79,7 @@
 			y: 0.5d
 		}
 		{
-			dependencies: ["21D270C51E152805"]
+			dependencies: ["3FAF92A93ACD3FEB"]
 			id: "48BE5E7913CB16BC"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -157,7 +157,7 @@
 			y: 2.5d
 		}
 		{
-			dependencies: ["21D270C51E152805"]
+			dependencies: ["652F56525A5CEDC3"]
 			id: "402F78E7DF1743FC"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -169,7 +169,7 @@
 			y: 0.5d
 		}
 		{
-			dependencies: ["21D270C51E152805"]
+			dependencies: ["3FAF92A93ACD3FEB"]
 			id: "15856673CC935E11"
 			quest_enhance_disable_scroll_paging: false
 			tasks: [{
@@ -355,7 +355,7 @@
 			y: -2.5d
 		}
 		{
-			dependencies: ["21D270C51E152805"]
+			dependencies: ["3FAF92A93ACD3FEB"]
 			id: "6190E940F1BF2D16"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "一把抓住, 顷刻炼化"
@@ -365,20 +365,6 @@
 				type: "item"
 			}]
 			x: -4.0d
-			y: -3.5d
-		}
-		{
-			description: ["链接本任务的任务的前置还未链接, 暂时链接于此"]
-			hide_dependency_lines: false
-			id: "21D270C51E152805"
-			quest_enhance_disable_scroll_paging: false
-			subtitle: "注意"
-			tasks: [{
-				id: "423A0E7ED2B4027D"
-				title: "点击开始mek任务线"
-				type: "checkmark"
-			}]
-			x: -8.0d
 			y: -3.5d
 		}
 		{
@@ -470,7 +456,7 @@
 				{
 					count: 16L
 					id: "4BD557970495AAE6"
-					item: { Count: 16, id: "createaddition:biomass" }
+					item: "createaddition:biomass"
 					type: "item"
 				}
 			]
@@ -585,6 +571,112 @@
 			}]
 			x: 2.0d
 			y: -2.5d
+		}
+		{
+			dependencies: [
+				"3BAF24E7D930B0E8"
+				"43925D3BD829A358"
+				"59A28A0E79B017AD"
+			]
+			id: "2159FE1180EFBED8"
+			quest_enhance_disable_scroll_paging: false
+			shape: "gear"
+			tasks: [{
+				id: "6A3CE9B923D4A7F5"
+				item: "cmi:air_tight_mechanism"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["2159FE1180EFBED8"]
+			id: "542564DC1EC9F219"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "19CFCCDB8EEF0247"
+				item: "steam_letters:empty_steam_container"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 8.5d
+		}
+		{
+			dependencies: ["4157E48DBF2C0F3B"]
+			id: "28321E91F5739CBF"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "20AD84E5CF2D35C2"
+				item: "thermal_extra:polyolefin_plate"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["39A8D6D82997EB8D"]
+			id: "43925D3BD829A358"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "4D49842E46524A59"
+				item: "ae2:quartz_glass"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 9.5d
+		}
+		{
+			dependencies: ["3FAF92A93ACD3FEB"]
+			id: "39A8D6D82997EB8D"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "01B6EE21A8D06356"
+				item: "thermal:machine_smelter"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["28321E91F5739CBF"]
+			id: "59A28A0E79B017AD"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "7391404F7EC956AA"
+				item: "cmi:air_tight_mechanism_basement"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 9.5d
+		}
+		{
+			dependencies: ["3FAF92A93ACD3FEB"]
+			description: [
+				"液态乙烯+铝板在炼油厂里炼"
+				"或者润滑油加蒸汽裂化后精炼"
+			]
+			icon: "thermal_extra:polyolefin_bucket"
+			id: "4157E48DBF2C0F3B"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "086788478E0D2DF5"
+				type: "checkmark"
+			}]
+			title: "聚烯烃"
+			x: -5.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["3FAF92A93ACD3FEB"]
+			id: "652F56525A5CEDC3"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "144CE9BB982558C7"
+				item: "mekanism:raw_osmium"
+				type: "item"
+			}]
+			x: -8.0d
+			y: -1.5d
 		}
 	]
 	title: "通用机械(WIP)"

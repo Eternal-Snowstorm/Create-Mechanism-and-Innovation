@@ -292,117 +292,6 @@
 			y: -3.0d
 		}
 		{
-			dependencies: [
-				"3BAF24E7D930B0E8"
-				"43925D3BD829A358"
-				"59A28A0E79B017AD"
-			]
-			id: "2159FE1180EFBED8"
-			quest_enhance_disable_scroll_paging: false
-			shape: "gear"
-			tasks: [{
-				id: "6A3CE9B923D4A7F5"
-				item: "cmi:air_tight_mechanism"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 8.5d
-		}
-		{
-			id: "3FD126EFABFB9480"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "6ED4AFD913550B30"
-				title: "点击开始气密构件任务"
-				type: "checkmark"
-			}]
-			x: -5.0d
-			y: 4.5d
-		}
-		{
-			dependencies: [
-				"2159FE1180EFBED8"
-				"3FD126EFABFB9480"
-			]
-			id: "542564DC1EC9F219"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "19CFCCDB8EEF0247"
-				item: "steam_letters:empty_steam_container"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 6.5d
-		}
-		{
-			dependencies: ["4157E48DBF2C0F3B"]
-			id: "28321E91F5739CBF"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "20AD84E5CF2D35C2"
-				item: "thermal_extra:polyolefin_plate"
-				type: "item"
-			}]
-			x: -1.0d
-			y: 6.5d
-		}
-		{
-			dependencies: ["39A8D6D82997EB8D"]
-			id: "43925D3BD829A358"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "4D49842E46524A59"
-				item: "ae2:quartz_glass"
-				type: "item"
-			}]
-			x: -7.0d
-			y: 7.5d
-		}
-		{
-			dependencies: ["3FD126EFABFB9480"]
-			id: "39A8D6D82997EB8D"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "01B6EE21A8D06356"
-				item: "thermal:machine_smelter"
-				type: "item"
-			}]
-			x: -7.0d
-			y: 5.5d
-		}
-		{
-			dependencies: [
-				"3FD126EFABFB9480"
-				"28321E91F5739CBF"
-			]
-			id: "59A28A0E79B017AD"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "7391404F7EC956AA"
-				item: "cmi:air_tight_mechanism_basement"
-				type: "item"
-			}]
-			x: -3.0d
-			y: 7.5d
-		}
-		{
-			dependencies: ["3FD126EFABFB9480"]
-			description: [
-				"液态乙烯+铝板在炼油厂里炼"
-				"或者润滑油加蒸汽裂化后精炼"
-			]
-			icon: "thermal_extra:polyolefin_bucket"
-			id: "4157E48DBF2C0F3B"
-			quest_enhance_disable_scroll_paging: false
-			tasks: [{
-				id: "086788478E0D2DF5"
-				type: "checkmark"
-			}]
-			title: "聚烯烃"
-			x: -3.0d
-			y: 5.5d
-		}
-		{
 			description: ["高级mek  月球后"]
 			id: "4546CC0C4547690B"
 			quest_enhance_disable_scroll_paging: false
@@ -411,8 +300,237 @@
 				title: "流程"
 				type: "checkmark"
 			}]
-			x: 3.0d
+			x: 2.5d
 			y: 3.0d
+		}
+		{
+			id: "39758CA8D8BF9F7A"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "3B51EDFD2A40DB24"
+				title: "点击开始航空构件任务"
+				type: "checkmark"
+			}]
+			x: 6.5d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"4BB1A7BF03196888"
+				"127B833166D02AC4"
+				"5A908E8B7A5BC6D3"
+				"47760C24C17BB522"
+				"7D1E9640B8BA1A85"
+			]
+			id: "63859A5E1B54A8F1"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "09B9D2C9564A87D1"
+				item: "cmi:aeronautic_mechanism"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 8.5d
+		}
+		{
+			dependencies: ["39758CA8D8BF9F7A"]
+			id: "4BB1A7BF03196888"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "上太空总得呼吸吧"
+			tasks: [{
+				id: "3608586D4825804D"
+				item: "ad_astra:oxygen_gear"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 9.5d
+		}
+		{
+			dependencies: ["47A15374CDA67B63"]
+			id: "127B833166D02AC4"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "0755A81ED0DFCB5A"
+				item: "cmi:fluix_wire"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 7.5d
+		}
+		{
+			dependencies: [
+				"35BFF59187B4358D"
+				"7C14803C74F3D077"
+			]
+			id: "5A908E8B7A5BC6D3"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "46CF3739E5C63985"
+				item: "cmi:structural_plastic_bucket"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["0F94082016719B48"]
+			id: "47760C24C17BB522"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "195E449ED3764F8C"
+				item: { Count: 64, id: "cmi:aluminum_alloy_plate" }
+				type: "item"
+			}]
+			x: 10.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["43DB062C7E3E5B3D"]
+			id: "7D1E9640B8BA1A85"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "64B44315E0E2A87E"
+				item: "cmi:space_mechanism_part"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 9.5d
+		}
+		{
+			dependencies: ["39758CA8D8BF9F7A"]
+			id: "47A15374CDA67B63"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "手搓光纤来"
+			tasks: [{
+				id: "539C6B785572798D"
+				item: "cmi:optical_fiber"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 8.5d
+		}
+		{
+			dependencies: ["39758CA8D8BF9F7A"]
+			id: "75FA4CA154216088"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "764767177FCFCFF2"
+				item: "cmi:cracked_diesel_bucket"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["75FA4CA154216088"]
+			id: "65FE7F59515637F1"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "6746018D152DD497"
+				item: "cmi:acetylene_bucket"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["65FE7F59515637F1"]
+			id: "7C14803C74F3D077"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "251B3009067B2C85"
+				item: "cmi:polyvinyl_alcohol_bucket"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["75FA4CA154216088"]
+			id: "35BFF59187B4358D"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "6C64E2036E7D039F"
+				item: "cmi:light_aldehyde_bucket"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["39758CA8D8BF9F7A"]
+			description: [
+				"铝+铬+盈能水晶粉"
+				"2:1:2"
+			]
+			id: "0F94082016719B48"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "10B764FD0561285B"
+				item: "cmi:aluminum_alloy_ingot"
+				type: "item"
+			}]
+			x: 12.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["39758CA8D8BF9F7A"]
+			description: ["物质聚合器放64k就够了"]
+			id: "43DB062C7E3E5B3D"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "16EA84027DA5C0E4"
+				item: "ae2:singularity"
+				type: "item"
+			}]
+			x: 12.5d
+			y: 8.5d
+		}
+		{
+			dependencies: ["39758CA8D8BF9F7A"]
+			id: "2128D59FA7064E31"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "这个NASA这么厉害？！"
+			tasks: [{
+				id: "2603F0DBECB81F94"
+				item: "ad_astra:nasa_workbench"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 11.5d
+		}
+		{
+			dependencies: ["63859A5E1B54A8F1"]
+			id: "702629B11EF05D70"
+			quest_enhance_disable_scroll_paging: false
+			tasks: [{
+				id: "0A9C75213582CF62"
+				item: "cmi:tier_1_rocket_nose_cone"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 10.5d
+		}
+		{
+			dependencies: [
+				"702629B11EF05D70"
+				"2128D59FA7064E31"
+			]
+			description: ["有了这个我就可以进行航天了, 不过这个火箭只能去一些比较近的星球"]
+			id: "23BB012D81200647"
+			quest_enhance_disable_scroll_paging: false
+			subtitle: "初始火箭"
+			tasks: [{
+				id: "195EB45B0632D2B6"
+				item: {
+					Count: 1
+					id: "ad_astra:tier_1_rocket"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 8.5d
+			y: 13.0d
 		}
 	]
 	title: "qwq"
