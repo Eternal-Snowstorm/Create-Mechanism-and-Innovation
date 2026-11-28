@@ -425,7 +425,7 @@
 		}
 		{
 			dependencies: ["3A56C98FA4442897"]
-			description: ["虽然炼锇锭可以不用车窑，但是下一章任务要用，所以还是推荐做一个。"]
+			description: ["虽然炼锇锭可以不用车窑, 但是下一章任务要用, 所以还是推荐做一个。"]
 			id: "735D7AA1C1ACEBC1"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "坚固金属"

@@ -788,7 +788,7 @@
 		{
 			dependencies: ["30665E701364CEE8"]
 			description: [
-				"炼钢的必要材料，用来做炉子的"
+				"炼钢的必要材料, 用来做炉子的"
 				"{image:cmi:textures/images/ore_node/gaolingtu.png width:199 height:189 align:center fit:true}"
 			]
 			id: "71CAA61984378CFA"

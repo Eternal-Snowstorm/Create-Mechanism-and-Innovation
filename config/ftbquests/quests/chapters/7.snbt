@@ -358,7 +358,7 @@
 			dependencies: ["21D270C51E152805"]
 			id: "6190E940F1BF2D16"
 			quest_enhance_disable_scroll_paging: false
-			subtitle: "一把抓住，顷刻炼化"
+			subtitle: "一把抓住, 顷刻炼化"
 			tasks: [{
 				id: "310B3F1B9876FA37"
 				item: "thermalconstruct:blitz_blood_bucket"
@@ -574,7 +574,7 @@
 		}
 		{
 			dependencies: ["3FAF92A93ACD3FEB"]
-			description: ["在上月球之后你才能挖到铬矿，所以现在红宝石矿就是你的铬矿"]
+			description: ["在上月球之后你才能挖到铬矿, 所以现在红宝石矿就是你的铬矿"]
 			id: "56A638DF7B8C736C"
 			quest_enhance_disable_scroll_paging: false
 			subtitle: "铬处理来喽"
